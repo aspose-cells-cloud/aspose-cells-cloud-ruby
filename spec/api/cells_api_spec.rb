@@ -612,6 +612,27 @@ describe 'CellsApi' do
     end
   end
 
+  # unit tests for cells_get_cell_html_string
+  # Set htmlstring value into cell
+  # 
+  # @param name Workbook name.
+  # @param sheet_name Worksheet name.
+  # @param cell_name The cell name.
+  # @option opts [String] :folder The workbook folder.
+  # @option opts [String] :storage storage name.
+  # @return [CellResponse]
+  describe 'cells_get_cell_html_string test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET1
+      cell_name = $CellName
+      folder = $TEMPFOLDER
+      storage = nil
+      @instance.cells_get_cell_html_string(name, sheet_name, cell_name,  { :folder=>folder})
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for cells_post_set_cell_html_string
   # Set htmlstring value into cell
   # 

@@ -260,6 +260,78 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Read cell html string by cell .
+    # 
+    # @param name Document name.
+    # @param sheet_name Worksheet name.
+    # @param cell_name The cell&#39;s  name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage storage name.
+    # @return [Object]
+    def cells_get_cell_html_string(name, sheet_name, cell_name, opts = {})
+      data, _status_code, _headers = cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts)
+      return data
+    end
+
+    # Read cell data by cell&#39;s name.
+    # 
+    # @param name Document name.
+    # @param sheet_name Worksheet name.
+    # @param cell_name The cell&#39;s  name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage storage name.
+    # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
+    def cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_get_cell_html_string ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_get_cell_html_string"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_get_cell_html_string"
+      end
+      # verify the required parameter 'cell_name' is set
+      if @api_client.config.client_side_validation && cell_name.nil?
+        fail ArgumentError, "Missing the required parameter 'cell_name' when calling CellsApi.cells_get_cell_html_string"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/cells/{cellName}/htmlstring".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'cellName' + '}', cell_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Object')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_get_cell_html_string\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Read cell data by cell's name.
     # 
     # @param name Document name.
