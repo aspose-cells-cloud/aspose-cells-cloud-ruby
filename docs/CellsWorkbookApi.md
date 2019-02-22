@@ -1275,7 +1275,7 @@ No authorization required
 
 
 # **cells_workbook_put_convert_workbook**
-> File cells_workbook_put_convert_workbook(opts)
+> File cells_workbook_put_convert_workbook(workbook, opts)
 
 Convert workbook from request content to some format.
 
@@ -1286,6 +1286,8 @@ require 'aspose_cells_cloud'
 
 api_instance = AsposeCellsCloud::CellsWorkbookApi.new
 
+workbook = "B" # String | 
+
 opts = { 
   format: "format_example", # String | The format to convert.
   password: "password_example", # String | The workbook password.
@@ -1294,7 +1296,7 @@ opts = {
 
 begin
   #Convert workbook from request content to some format.
-  result = api_instance.cells_workbook_put_convert_workbook(opts)
+  result = api_instance.cells_workbook_put_convert_workbook(workbook, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
   puts "Exception when calling CellsWorkbookApi->cells_workbook_put_convert_workbook: #{e}"
@@ -1305,6 +1307,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **workbook** | **String**|  | 
  **format** | **String**| The format to convert. | [optional] 
  **password** | **String**| The workbook password. | [optional] 
  **out_path** | **String**| Path to save result | [optional] 

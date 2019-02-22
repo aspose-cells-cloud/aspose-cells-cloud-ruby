@@ -395,10 +395,13 @@ describe 'CellsWorkbookApi' do
   # @return [File]
   describe 'cells_workbook_put_convert_workbook test' do
     it "should work" do
-      format = 'xlsx'
+      format = 'pdf'
       password = nil
       out_path = nil
-      @instance.cells_workbook_put_convert_workbook({:format=>format})
+      aFile = File.new('/home/roywang/asposecellscloudsdk/data/Book1.xlsx', 'r')
+      book = aFile.sysread(aFile.size)
+      aFile.close
+      @instance.cells_workbook_put_convert_workbook(book,{:format=>format})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

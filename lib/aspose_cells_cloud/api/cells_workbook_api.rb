@@ -1539,26 +1539,32 @@ module AsposeCellsCloud
 
     # Convert workbook from request content to some format.
     # 
+    # @param workbook 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The format to convert.
     # @option opts [String] :password The workbook password.
     # @option opts [String] :out_path Path to save result
     # @return [File]
-    def cells_workbook_put_convert_workbook(opts = {})
-      data, _status_code, _headers = cells_workbook_put_convert_workbook_with_http_info(opts)
+    def cells_workbook_put_convert_workbook(workbook, opts = {})
+      data, _status_code, _headers = cells_workbook_put_convert_workbook_with_http_info(workbook, opts)
       return data
     end
 
     # Convert workbook from request content to some format.
     # 
+    # @param workbook 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The format to convert.
     # @option opts [String] :password The workbook password.
     # @option opts [String] :out_path Path to save result
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
-    def cells_workbook_put_convert_workbook_with_http_info(opts = {})
+    def cells_workbook_put_convert_workbook_with_http_info(workbook, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsWorkbookApi.cells_workbook_put_convert_workbook ..."
+      end
+      # verify the required parameter 'workbook' is set
+      if @api_client.config.client_side_validation && workbook.nil?
+        fail ArgumentError, "Missing the required parameter 'workbook' when calling CellsWorkbookApi.cells_workbook_put_convert_workbook"
       end
       # resource path
       local_var_path = "/cells/convert"
@@ -1580,7 +1586,7 @@ module AsposeCellsCloud
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(workbook)
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
