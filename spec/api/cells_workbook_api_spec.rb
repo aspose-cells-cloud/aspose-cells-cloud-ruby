@@ -70,6 +70,34 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
+  
+  # unit tests for cells_workbook_get_workbook
+  # Read workbook info or export.
+  # 
+  # @param name The document name.
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :password The document password.
+  # @option opts [String] :format The exported file format.
+  # @option opts [BOOLEAN] :is_auto_fit Set document rows to be autofit.
+  # @option opts [BOOLEAN] :only_save_table Only save table data.
+  # @option opts [String] :folder The document folder.
+  # @option opts [String] :storage storage name.
+  # @option opts [String] :out_path The document output folder.
+  # @return [File]
+  describe 'cells_workbook_get_workbook MD  test' do
+    it "should work" do
+      name = $BOOK1
+      password = nil
+      format = 'markdown'
+      is_auto_fit = true
+      only_save_table = true
+      folder = $TEMPFOLDER
+      
+      out_path = nil
+      @instance.cells_workbook_get_workbook(name,  { :password=>password, :format=>format,:folder=>folder, :out_path=>out_path})
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 
   # unit tests for cells_workbook_get_workbook_default_style
   # Read workbook default style info.

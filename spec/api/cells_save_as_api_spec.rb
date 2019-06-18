@@ -68,5 +68,30 @@ describe 'CellsSaveAsApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  
+  # unit tests for cells_save_as_post_document_save_as 
+  # Convert document and save result to storage.
+  # 
+  # @param name The document name.
+  # @param [Hash] opts the optional parameters
+  # @option opts [SaveOptions] :save_options Save options.
+  # @option opts [String] :newfilename The new file name.
+  # @option opts [BOOLEAN] :is_auto_fit_rows Autofit rows.
+  # @option opts [BOOLEAN] :is_auto_fit_columns Autofit columns.
+  # @option opts [String] :folder The document folder.
+  # @option opts [String] :storage storage name.
+  # @return [SaveResponse]
+  describe 'cells_save_as_post_document_save_as md format test' do
+    it "should work" do
+      name = $BOOK1
+      save_options = nil
+      newfilename = 'newbook.xls.md'
+      is_auto_fit_rows = true
+      is_auto_fit_columns = true
+      folder = $TEMPFOLDER
+      
+      @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>newfilename, :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end

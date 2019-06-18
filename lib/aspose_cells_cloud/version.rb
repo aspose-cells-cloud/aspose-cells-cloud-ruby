@@ -11,5 +11,5 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 module AsposeCellsCloud
-  VERSION = "19.2.1"
+  VERSION = "19.6"
 end
