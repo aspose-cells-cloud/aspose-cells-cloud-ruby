@@ -18,31 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsApi' do
   before do
-    # run before each test
-	if $access_token == nil then
-		conf = AsposeCellsCloud::Configuration.new
-	    conf.base_path = ""
-		instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-	    $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-	client = AsposeCellsCloud::ApiClient.new(conf)
-	client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsApi.new(client)
-
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsApi' do
-    it 'should create an instance of CellsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsApi)
-    end
-  end
 
   # unit tests for cells_delete_worksheet_columns
   # Delete worksheet columns.
@@ -65,6 +47,7 @@ describe 'CellsApi' do
       update_reference = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -79,7 +62,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_delete_worksheet_row test' do
     it "should work" do
       name = $BOOK1
@@ -87,6 +70,7 @@ describe 'CellsApi' do
       row_index = 100
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_delete_worksheet_row(name, sheet_name, row_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -103,7 +87,7 @@ describe 'CellsApi' do
   # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets.
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_delete_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -113,6 +97,7 @@ describe 'CellsApi' do
       update_reference = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_delete_worksheet_rows(name, sheet_name, startrow,   { :total_rows=>total_rows, :update_reference=>update_reference,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -135,6 +120,7 @@ describe 'CellsApi' do
       cell_or_method_name = 'firstcell'
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_cell(name, sheet_name, cell_or_method_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -157,6 +143,7 @@ describe 'CellsApi' do
       cell_name = 'C1'
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_cell_style(name, sheet_name, cell_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -181,6 +168,7 @@ describe 'CellsApi' do
       count = 3
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_cells(name, sheet_name,   {:offest=>offest, :count=>count, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -203,6 +191,7 @@ describe 'CellsApi' do
       column_index = 100
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_column(name, sheet_name, column_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -223,6 +212,7 @@ describe 'CellsApi' do
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_columns(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -245,6 +235,7 @@ describe 'CellsApi' do
       row_index = 100
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_row(name, sheet_name, row_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -265,6 +256,7 @@ describe 'CellsApi' do
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_worksheet_rows(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -280,7 +272,7 @@ describe 'CellsApi' do
   # @option opts [CalculationOptions] :options 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_cell_calculate test' do
     it "should work" do
       name = $BOOK1
@@ -289,6 +281,7 @@ describe 'CellsApi' do
       options = AsposeCellsCloud::CalculationOptions.new({Recursive:true,IgnoreError:true})
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_cell_calculate(name, sheet_name, cell_name, { :options=>options,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -304,7 +297,7 @@ describe 'CellsApi' do
   # @option opts [Array<FontSetting>] :options 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_cell_characters test' do
     it "should work" do
       name = $BOOK1
@@ -313,6 +306,7 @@ describe 'CellsApi' do
       options = nil
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_cell_characters(name, sheet_name, cell_name,   { :options=>options,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -331,7 +325,7 @@ describe 'CellsApi' do
   # @option opts [Integer] :end_column The end column.
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_clear_contents test' do
     it "should work" do
       name = $BOOK1
@@ -343,6 +337,7 @@ describe 'CellsApi' do
       end_column = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_clear_contents(name, sheet_name,   {:range=>range, :start_row=>start_row, :start_column=>start_column, :end_row=>end_row, :end_column=>end_column, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -361,7 +356,7 @@ describe 'CellsApi' do
   # @option opts [Integer] :end_column The end column.
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_clear_formats test' do
     it "should work" do
       name = $BOOK1
@@ -373,6 +368,7 @@ describe 'CellsApi' do
       end_column = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_clear_formats(name, sheet_name, {:range=>range, :start_row=>start_row, :start_column=>start_column, :end_row=>end_row, :end_column=>end_column,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -388,7 +384,7 @@ describe 'CellsApi' do
   # @option opts [Style] :style Style dto
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_column_style test' do
     it "should work" do
       name = $BOOK1
@@ -397,6 +393,7 @@ describe 'CellsApi' do
       style = AsposeCellsCloud::Style.new
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_column_style(name, sheet_name, column_index,  { :style=>style,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -415,7 +412,7 @@ describe 'CellsApi' do
   # @option opts [Integer] :column Source column
   # @option opts [String] :folder Folder name
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_copy_cell_into_cell test' do
     it "should work" do
       name = $BOOK1
@@ -427,6 +424,7 @@ describe 'CellsApi' do
       column = 1
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_copy_cell_into_cell(name, dest_cell_name, sheet_name, worksheet,   {:cellname=>cellname, :row=>row, :column=>column, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -444,7 +442,7 @@ describe 'CellsApi' do
   # @option opts [String] :worksheet The Worksheet
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_copy_worksheet_columns test' do
     it "should work" do
       name = $BOOK1
@@ -455,6 +453,7 @@ describe 'CellsApi' do
       worksheet = $SHEET2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_copy_worksheet_columns(name, sheet_name, source_column_index, destination_column_index, column_number,   { :worksheet=>worksheet,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -472,7 +471,7 @@ describe 'CellsApi' do
   # @option opts [String] :worksheet worksheet
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_copy_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -483,6 +482,7 @@ describe 'CellsApi' do
       worksheet = $SHEET2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_copy_worksheet_rows(name, sheet_name, source_row_index, destination_row_index, row_number,   {:worksheet=>worksheet, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -499,7 +499,7 @@ describe 'CellsApi' do
   # @option opts [BOOLEAN] :hide columns visible state
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_group_worksheet_columns test' do
     it "should work" do
       name = $BOOK1
@@ -509,6 +509,7 @@ describe 'CellsApi' do
       hide = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_group_worksheet_columns(name, sheet_name, first_index, last_index,  { :hide=>hide, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -525,7 +526,7 @@ describe 'CellsApi' do
   # @option opts [BOOLEAN] :hide rows visible state
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_group_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -535,6 +536,7 @@ describe 'CellsApi' do
       hide = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_group_worksheet_rows(name, sheet_name, first_index, last_index,  {:hide=>hide,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -550,7 +552,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_hide_worksheet_columns test' do
     it "should work" do
       name = $BOOK1
@@ -559,6 +561,7 @@ describe 'CellsApi' do
       total_columns = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_hide_worksheet_columns(name, sheet_name, start_column, total_columns,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -574,7 +577,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_hide_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -583,6 +586,7 @@ describe 'CellsApi' do
       total_rows = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_hide_worksheet_rows(name, sheet_name, startrow, total_rows,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -598,7 +602,7 @@ describe 'CellsApi' do
   # @option opts [Style] :style Style dto
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_row_style test' do
     it "should work" do
       name = $BOOK1
@@ -607,6 +611,7 @@ describe 'CellsApi' do
       style = AsposeCellsCloud::Style.new
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_row_style(name, sheet_name, row_index, { :style=>style,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -628,6 +633,7 @@ describe 'CellsApi' do
       cell_name = $CellName
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_get_cell_html_string(name, sheet_name, cell_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -651,6 +657,7 @@ describe 'CellsApi' do
       folder = $TEMPFOLDER
       storage = nil
       @instance.cells_post_set_cell_html_string(name, sheet_name, cell_name,  { :folder=>folder})
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -666,7 +673,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Folder name
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_set_cell_range_value test' do
     it "should work" do
       name = $BOOK1
@@ -676,6 +683,7 @@ describe 'CellsApi' do
       type = 'string'
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_set_cell_range_value(name, sheet_name, cellarea, value, type,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -700,6 +708,7 @@ describe 'CellsApi' do
       width = 10
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_set_worksheet_column_width(name, sheet_name, column_index, width,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -715,7 +724,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_ungroup_worksheet_columns test' do
     it "should work" do
       name = $BOOK1
@@ -724,6 +733,7 @@ describe 'CellsApi' do
       last_index = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_ungroup_worksheet_columns(name, sheet_name, first_index, last_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -740,7 +750,7 @@ describe 'CellsApi' do
   # @option opts [BOOLEAN] :is_all Is all row to be operated
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_ungroup_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -750,6 +760,7 @@ describe 'CellsApi' do
       is_all = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_ungroup_worksheet_rows(name, sheet_name, first_index, last_index,  { :is_all=>is_all, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -766,7 +777,7 @@ describe 'CellsApi' do
   # @option opts [Float] :width The new column width.
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_unhide_worksheet_columns test' do
     it "should work" do
       name = $BOOK1
@@ -776,6 +787,7 @@ describe 'CellsApi' do
       width = 10
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_unhide_worksheet_columns(name, sheet_name, startcolumn, total_columns,  { :width=>width, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -792,7 +804,7 @@ describe 'CellsApi' do
   # @option opts [Float] :height The new row height.
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_unhide_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -802,6 +814,7 @@ describe 'CellsApi' do
       height = 10
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_unhide_worksheet_rows(name, sheet_name, startrow, total_rows,   {:height=>height, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -826,6 +839,7 @@ describe 'CellsApi' do
       style = AsposeCellsCloud::Style.new
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_update_worksheet_cell_style(name, sheet_name, cell_name,{ :style=>style, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -841,7 +855,7 @@ describe 'CellsApi' do
   # @option opts [Style] :style with update style settings.
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_update_worksheet_range_style test' do
     it "should work" do
       name = $BOOK1
@@ -850,6 +864,7 @@ describe 'CellsApi' do
       style = AsposeCellsCloud::Style.new
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_update_worksheet_range_style(name, sheet_name, range,{ :style=>style,   :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -874,6 +889,7 @@ describe 'CellsApi' do
       height = 10
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_update_worksheet_row(name, sheet_name, row_index,   { :height=>height,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -902,6 +918,7 @@ describe 'CellsApi' do
       formula = nil
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_worksheet_cell_set_value(name, sheet_name, cell_name,   {:value=>value, :type=>type,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -919,7 +936,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_worksheet_merge test' do
     it "should work" do
       name = $BOOK1
@@ -930,6 +947,7 @@ describe 'CellsApi' do
       total_columns = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_worksheet_merge(name, sheet_name, start_row, start_column, total_rows, total_columns,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -947,7 +965,7 @@ describe 'CellsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_post_worksheet_unmerge test' do
     it "should work" do
       name = $BOOK1
@@ -958,6 +976,7 @@ describe 'CellsApi' do
       total_columns = 2
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_post_worksheet_unmerge(name, sheet_name, start_row, start_column, total_rows, total_columns,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -984,6 +1003,7 @@ describe 'CellsApi' do
       update_reference = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_put_insert_worksheet_columns(name, sheet_name, column_index, columns,   {:update_reference=>update_reference, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -1006,6 +1026,7 @@ describe 'CellsApi' do
       row_index = 100
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_put_insert_worksheet_row(name, sheet_name, row_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -1022,7 +1043,7 @@ describe 'CellsApi' do
   # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets.
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_put_insert_worksheet_rows test' do
     it "should work" do
       name = $BOOK1
@@ -1032,6 +1053,7 @@ describe 'CellsApi' do
       update_reference = true
       folder = $TEMPFOLDER
       storage = nil
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_put_insert_worksheet_rows(name, sheet_name, startrow,  { :total_rows=>total_rows, :update_reference=>update_reference, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

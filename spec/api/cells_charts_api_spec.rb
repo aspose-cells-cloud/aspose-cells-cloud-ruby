@@ -18,30 +18,14 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsChartsApi' do
   before do
-    # run before each test
-    	if $access_token == nil then
-		conf = AsposeCellsCloud::Configuration.new
-	    conf.base_path = ""
-		instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-	    $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-	client = AsposeCellsCloud::ApiClient.new(conf)
-	client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsChartsApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsChartsApi' do
-    it 'should create an instance of CellsChartsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsChartsApi)
-    end
-  end
+
 
   # unit tests for cells_charts_delete_worksheet_chart_legend
   # Hide legend in chart
@@ -52,14 +36,14 @@ describe 'CellsChartsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_charts_delete_worksheet_chart_legend test' do
     it "should work" do
       name = $MYDOC
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -164,7 +148,7 @@ describe 'CellsChartsApi' do
   # @option opts [Chart] :chart 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_charts_post_worksheet_chart test' do
     it "should work" do
       name = $MYDOC
@@ -260,7 +244,7 @@ describe 'CellsChartsApi' do
       is_auto_get_serial_name = nil
       title = nil
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, { :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :area=>area, :is_vertical=>is_vertical,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -275,14 +259,14 @@ describe 'CellsChartsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_charts_put_worksheet_chart_legend test' do
     it "should work" do
       name = $MYDOC
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -306,7 +290,7 @@ describe 'CellsChartsApi' do
       chart_index = 0
       title = AsposeCellsCloud::Title.new
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, {:title=>title,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -320,14 +304,14 @@ describe 'CellsChartsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_charts_delete_worksheet_chart_title test' do
     it "should work" do
       name = $MYDOC
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -349,7 +333,7 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -363,13 +347,13 @@ describe 'CellsChartsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_charts_delete_worksheet_clear_charts test' do
     it "should work" do
       name = $MYDOC
       sheet_name = $SHEET3
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_charts_delete_worksheet_clear_charts(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

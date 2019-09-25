@@ -18,30 +18,10 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPageBreaksApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-
-    @instance = AsposeCellsCloud::CellsPageBreaksApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
-
   after do
     # run after each test
-  end
-
-  describe 'test an instance of CellsPageBreaksApi' do
-    it 'should create an instance of CellsPageBreaksApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsPageBreaksApi)
-    end
   end
 
   # unit tests for cells_page_breaks_get_horizontal_page_break
@@ -60,7 +40,7 @@ describe 'CellsPageBreaksApi' do
       sheet_name = $SHEET1
       index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -80,7 +60,7 @@ describe 'CellsPageBreaksApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -102,7 +82,7 @@ describe 'CellsPageBreaksApi' do
       sheet_name = $SHEET1
       index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_breaks_get_vertical_page_break(name, sheet_name, index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -141,7 +121,7 @@ describe 'CellsPageBreaksApi' do
   # @option opts [Integer] :end_column 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_put_horizontal_page_break test' do
     it "should work" do
       name = $BOOK1
@@ -171,7 +151,7 @@ describe 'CellsPageBreaksApi' do
   # @option opts [Integer] :end_row 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_put_vertical_page_break test' do
     it "should work" do
       name = $BOOK1
@@ -197,7 +177,7 @@ describe 'CellsPageBreaksApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_delete_horizontal_page_break test' do
     it "should work" do
       name = $BOOK1
@@ -219,7 +199,7 @@ describe 'CellsPageBreaksApi' do
   # @option opts [Integer] :row 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_delete_horizontal_page_breaks test' do
     it "should work" do
       name = $BOOK1
@@ -241,7 +221,7 @@ describe 'CellsPageBreaksApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_delete_vertical_page_break test' do
     it "should work" do
       name = $BOOK1
@@ -263,14 +243,14 @@ describe 'CellsPageBreaksApi' do
   # @option opts [Integer] :column 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_breaks_delete_vertical_page_breaks test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       column = 1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_breaks_delete_vertical_page_breaks(name, sheet_name,  { :column=>column,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

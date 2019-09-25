@@ -18,31 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsRangesApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-
-    @instance = AsposeCellsCloud::CellsRangesApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsRangesApi' do
-    it 'should create an instance of CellsRangesApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsRangesApi)
-    end
-  end
 
   # unit tests for cells_ranges_get_worksheet_cells_range_value
   # Get cells list in a range by range name or row column indexes  
@@ -68,7 +50,7 @@ describe 'CellsRangesApi' do
       row_count = 3
       column_count = 2
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_get_worksheet_cells_range_value(name, sheet_name, {  :namerange=>namerange, :first_row=>first_row, :first_column=>first_column, :row_count=>row_count, :column_count=>column_count,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -84,7 +66,7 @@ describe 'CellsRangesApi' do
   # @option opts [Range] :range 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_column_width test' do
     it "should work" do
       name = $BOOK1
@@ -92,7 +74,7 @@ describe 'CellsRangesApi' do
       value = 10.01
       range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:ColumnWidth=>10.01,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_column_width(name, sheet_name, value, {:range=>range,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -107,14 +89,14 @@ describe 'CellsRangesApi' do
   # @option opts [Range] :range range in worksheet 
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_merge test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:ColumnWidth=>10.01,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_merge(name, sheet_name, { :range=>range, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -131,7 +113,7 @@ describe 'CellsRangesApi' do
   # @option opts [Range] :range range in worksheet 
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_move_to test' do
     it "should work" do
       name = $BOOK1
@@ -140,7 +122,7 @@ describe 'CellsRangesApi' do
       dest_column = 1
       range =  AsposeCellsCloud::Range.new({:ColumnCount=>1,:ColumnWidth=>10.01,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_move_to(name, sheet_name, dest_row, dest_column, { :range=>range, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -155,7 +137,7 @@ describe 'CellsRangesApi' do
   # @option opts [RangeSetOutlineBorderRequest] :range_operate Range Set OutlineBorder Request 
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_outline_border test' do
     it "should work" do
       name = $BOOK1
@@ -164,7 +146,7 @@ describe 'CellsRangesApi' do
 	  range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       range_operate = AsposeCellsCloud::RangeSetOutlineBorderRequest.new({:borderEdge=>'LeftBorder',:borderStyle=>'Dotted',:borderColor=>color,:Range=>range })
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name, { :range_operate=>range_operate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -180,7 +162,7 @@ describe 'CellsRangesApi' do
   # @option opts [Range] :range 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_row_height test' do
     it "should work" do
       name = $BOOK1
@@ -188,7 +170,7 @@ describe 'CellsRangesApi' do
       value = 10.01
       range =  AsposeCellsCloud::Range.new({:ColumnCount=>1,:ColumnWidth=>10.01,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_row_height(name, sheet_name, value, { :range=>range, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -203,14 +185,14 @@ describe 'CellsRangesApi' do
   # @option opts [RangeSetStyleRequest] :range_operate Range Set Style Request 
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_style test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       range_operate = AsposeCellsCloud::RangeSetStyleRequest.new({:Range=>AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10} ), :Style=>AsposeCellsCloud::Style.new()})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_style(name, sheet_name,  {:range_operate=>range_operate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -225,14 +207,14 @@ describe 'CellsRangesApi' do
   # @option opts [Range] :range range in worksheet 
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_unmerge test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       range =  AsposeCellsCloud::Range.new({:ColumnCount=>1,:ColumnWidth=>10.01,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_unmerge(name, sheet_name, {:range=>range,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -250,7 +232,7 @@ describe 'CellsRangesApi' do
   # @option opts [BOOLEAN] :set_style True: set the number format to cell&#39;s style when converting to other data type
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_range_value test' do
     it "should work" do
       name = $BOOK1
@@ -260,7 +242,7 @@ describe 'CellsRangesApi' do
       is_converted = true
       set_style = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_range_value(name, sheet_name, value,  {:range=>range, :is_converted=>is_converted, :set_style=>set_style, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -275,14 +257,14 @@ describe 'CellsRangesApi' do
   # @option opts [RangeCopyRequest] :range_operate copydata,copystyle,copyto,copyvalue
   # @option opts [String] :folder Workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ranges_post_worksheet_cells_ranges test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       range_operate = AsposeCellsCloud::RangeCopyRequest.new({:Operate=>'copydata',:PasteOptions=>AsposeCellsCloud::PasteOptions.new({:OnlyVisibleCells=>true}),:Source=>AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10}),:Target=>AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>11,:FirstRow=>11,:RowCount=>10})})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ranges_post_worksheet_cells_ranges(name, sheet_name, { :range_operate=>range_operate ,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

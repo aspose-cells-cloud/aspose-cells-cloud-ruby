@@ -18,29 +18,11 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsHypelinksApi' do
   before do
-    # run before each test
-    	if $access_token == nil then
-		conf = AsposeCellsCloud::Configuration.new
-	    conf.base_path = ""
-		instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-	    $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-	client = AsposeCellsCloud::ApiClient.new(conf)
-	client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsHypelinksApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
-  end
-
-  describe 'test an instance of CellsHypelinksApi' do
-    it 'should create an instance of CellsHypelinksApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsHypelinksApi)
-    end
   end
 
   # unit tests for cells_hypelinks_get_worksheet_hyperlink
@@ -59,7 +41,7 @@ describe 'CellsHypelinksApi' do
       sheet_name = $SHEET1
       hyperlink_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_hypelinks_get_worksheet_hyperlink(name, sheet_name, hyperlink_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -79,7 +61,7 @@ describe 'CellsHypelinksApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -103,7 +85,7 @@ describe 'CellsHypelinksApi' do
       hyperlink_index = 0
       hyperlink = AsposeCellsCloud::Hyperlink.new({:Address=>'www.aspose.com'})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlink_index, { :hyperlink=>hyperlink, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -133,7 +115,7 @@ describe 'CellsHypelinksApi' do
       total_columns = 2
       address = 'www.aspose.com'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_hypelinks_put_worksheet_hyperlink(name, sheet_name, first_row, first_column, total_rows, total_columns, address, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -148,7 +130,7 @@ describe 'CellsHypelinksApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_hypelinks_delete_worksheet_hyperlink test' do
     it "should work" do
       name = $BOOK1
@@ -169,7 +151,7 @@ describe 'CellsHypelinksApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_hypelinks_delete_worksheet_hyperlinks test' do
     it "should work" do
       name = $BOOK1

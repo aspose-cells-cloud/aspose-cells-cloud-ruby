@@ -18,31 +18,14 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPropertiesApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-
-    @instance = AsposeCellsCloud::CellsPropertiesApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsPropertiesApi' do
-    it 'should create an instance of CellsPropertiesApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsPropertiesApi)
-    end
-  end
+
 
   # unit tests for cells_properties_delete_document_properties
   # Delete all custom document properties and clean built-in ones.
@@ -56,7 +39,7 @@ describe 'CellsPropertiesApi' do
     it "should work" do
       name = $BOOK1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_properties_delete_document_properties(name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -136,7 +119,7 @@ describe 'CellsPropertiesApi' do
       property_name = 'Author'
       property = AsposeCellsCloud::CellsDocumentProperty.new({:Name=>'Author',:Value=>'roy'})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_properties_put_document_property(name, property_name, { :property=>property,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -22,17 +22,11 @@ describe 'OAuthApi' do
 	@configure = AsposeCellsCloud::Configuration.new
 	@configure.base_path = ""
 	@client = AsposeCellsCloud::ApiClient.new(@configure)
-    @instance = AsposeCellsCloud::OAuthApi.new(@client)
+    @instance = AsposeCellsCloud::CellsApi.new(@client)
   end
 
   after do
     # run after each test
-  end
-
-  describe 'test an instance of OAuthApi' do
-    it 'should create an instance of OAuthApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::OAuthApi)
-    end
   end
 
   # unit tests for o_auth_post

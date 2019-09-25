@@ -13,8 +13,8 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 # load the gem
 require 'aspose_cells_cloud'
   $grant_type = 'client_credentials' # replace NULL with a proper value
-  $client_id = 'xxxxx-xxxx-xxxx-xxxx-545961673EC1' # replace NULL with a proper value
-  $client_secret =  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' # replace NULL with a proper value
+  $client_id = '66164C51-693E-4904-A121-545961673EC1' # '66164C51-693E-4904-A121-545961673EC1' # replace NULL with a proper value
+  $client_secret = '536e76768419db9585afdd37bb5f7533' # '536e76768419db9585afdd37bb5f7533' # replace NULL with a proper value
   $access_token
   $BOOK1 = "Book1.xlsx"
   $MYDOC = "myDocument.xlsx"

@@ -18,31 +18,12 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsAutoFilterApi' do
   before do
-    # run before each test
-	if $access_token == nil then
-		conf = AsposeCellsCloud::Configuration.new
-	    conf.base_path = ""
-		instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-	    $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsAutoFilterApi.new(client)
+   @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
-
-  describe 'test an instance of CellsAutoFilterApi' do
-    it 'should create an instance of CellsAutoFilterApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsAutoFilterApi)
-    end
-  end
-
 
   # unit tests for cells_auto_filter_get_worksheet_auto_filter
   # Get Auto filter Description
@@ -58,7 +39,7 @@ describe 'CellsAutoFilterApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_get_worksheet_auto_filter(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -72,13 +53,13 @@ describe 'CellsAutoFilterApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_post_worksheet_auto_filter_refresh test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -93,14 +74,14 @@ describe 'CellsAutoFilterApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_post_worksheet_match_blanks test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       field_index = 0
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -115,14 +96,14 @@ describe 'CellsAutoFilterApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_post_worksheet_match_non_blanks test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       field_index = 0
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -141,7 +122,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_color_filter test' do
     it "should work" do
       name = $BOOK1
@@ -154,7 +135,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index,  { :color_filter=>color_filter, :match_blanks=>match_blanks, :refresh=>refresh,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -177,7 +158,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_custom_filter test' do
     it "should work" do
       name = $BOOK1
@@ -192,7 +173,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, {:is_and=>is_and, :operator_type2=>operator_type2, :criteria2=>criteria2, :match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -217,7 +198,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_date_filter test' do
     it "should work" do
       name = $BOOK1
@@ -234,7 +215,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, {:year=>year, :month=>month, :day=>day, :hour=>hour, :minute=>minute, :second=>second, :match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -253,7 +234,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_dynamic_filter test' do
     it "should work" do
       name = $BOOK1
@@ -264,7 +245,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, {:match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -283,7 +264,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_filter test' do
     it "should work" do
       name = $BOOK1
@@ -294,7 +275,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria,  {:match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -315,7 +296,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_filter_top10 test' do
     it "should work" do
       name = $BOOK1
@@ -328,7 +309,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, {:match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -348,7 +329,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [BOOLEAN] :refresh 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_put_worksheet_icon_filter test' do
     it "should work" do
       name = $BOOK1
@@ -360,7 +341,7 @@ describe 'CellsAutoFilterApi' do
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id,  {:match_blanks=>match_blanks, :refresh=>refresh,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -381,7 +362,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [Integer] :second 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_delete_worksheet_date_filter test' do
     it "should work" do
       name = $BOOK1
@@ -395,7 +376,7 @@ describe 'CellsAutoFilterApi' do
       minute = 1
       second = 1
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, {:year=>year, :month=>month, :day=>day, :hour=>hour, :minute=>minute, :second=>second, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -411,7 +392,7 @@ describe 'CellsAutoFilterApi' do
   # @option opts [String] :criteria 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_auto_filter_delete_worksheet_filter test' do
     it "should work" do
       name = $BOOK1
@@ -419,7 +400,7 @@ describe 'CellsAutoFilterApi' do
       field_index = 1
       criteria = 'test'
       folder = $TEMPFOLDER
-
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, {:criteria=>criteria,   :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

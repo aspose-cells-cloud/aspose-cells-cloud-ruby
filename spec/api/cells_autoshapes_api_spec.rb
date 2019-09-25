@@ -18,30 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsAutoshapesApi' do
   before do
-    # run before each test
-    	if $access_token == nil then
-		conf = AsposeCellsCloud::Configuration.new
-	    conf.base_path = ""
-		instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-	    $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-	client = AsposeCellsCloud::ApiClient.new(conf)
-	client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsAutoshapesApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsAutoshapesApi' do
-    it 'should create an instance of CellsAutoshapesApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsAutoshapesApi)
-    end
-  end
 
   # unit tests for cells_autoshapes_get_worksheet_autoshape
   # Get autoshape info.
@@ -61,7 +44,7 @@ describe 'CellsAutoshapesApi' do
       autoshape_number = 4
       format = 'PNG'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number,  {  :format=>format,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -81,7 +64,7 @@ describe 'CellsAutoshapesApi' do
       name = $MYDOC
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_autoshapes_get_worksheet_autoshapes(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

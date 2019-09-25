@@ -18,31 +18,14 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPicturesApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-
-    @instance = AsposeCellsCloud::CellsPicturesApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsPicturesApi' do
-    it 'should create an instance of CellsPicturesApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsPicturesApi)
-    end
-  end
+
 
   # unit tests for cells_pictures_get_worksheet_picture
   # GRead worksheet picture by number.
@@ -62,7 +45,7 @@ describe 'CellsPicturesApi' do
       picture_index = 0
       format = 'PNG'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pictures_get_worksheet_picture(name, sheet_name, picture_index,  {:format=>format,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -82,7 +65,7 @@ describe 'CellsPicturesApi' do
       name = $BOOK1
       sheet_name = $SHEET6
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pictures_get_worksheet_pictures(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -138,7 +121,7 @@ describe 'CellsPicturesApi' do
       lower_right_column = 10
       picture_path = 'WaterMark.png'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pictures_put_worksheet_add_picture(name, sheet_name,   {:picture=>picture, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :picture_path=>picture_path, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -153,14 +136,14 @@ describe 'CellsPicturesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pictures_delete_worksheet_picture test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET6
       picture_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -174,13 +157,13 @@ describe 'CellsPicturesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The document folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pictures_delete_worksheet_pictures test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET6
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pictures_delete_worksheet_pictures(name, sheet_name,  { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -18,30 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsListObjectsApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-	end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token    
-    @instance = AsposeCellsCloud::CellsListObjectsApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsListObjectsApi' do
-    it 'should create an instance of CellsListObjectsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsListObjectsApi)
-    end
-  end
 
   # unit tests for cells_list_objects_get_worksheet_list_object
   # Get worksheet list object info by index.
@@ -59,7 +42,7 @@ describe 'CellsListObjectsApi' do
       sheet_name = $SHEET7
       listobjectindex = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_list_objects_get_worksheet_list_object(name, sheet_name, listobjectindex, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -79,7 +62,7 @@ describe 'CellsListObjectsApi' do
       name = $BOOK1
       sheet_name = $SHEET7
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_list_objects_get_worksheet_list_objects(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -95,7 +78,7 @@ describe 'CellsListObjectsApi' do
   # @option opts [ListObject] :list_object listObject dto in request body.
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_post_worksheet_list_object test' do
     it "should work" do
       name = $BOOK1
@@ -118,7 +101,7 @@ describe 'CellsListObjectsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_post_worksheet_list_object_convert_to_range test' do
     it "should work" do
       name = $BOOK1
@@ -141,7 +124,7 @@ describe 'CellsListObjectsApi' do
   # @option opts [DataSorter] :data_sorter 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_post_worksheet_list_object_sort_table test' do
     it "should work" do
       name = $BOOK1
@@ -149,7 +132,7 @@ describe 'CellsListObjectsApi' do
       list_object_index = 0
       data_sorter = AsposeCellsCloud::DataSorter.new({:'CaseSensitive'=>true})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_list_objects_post_worksheet_list_object_sort_table(name, sheet_name, list_object_index,  {:data_sorter=>data_sorter, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -166,7 +149,7 @@ describe 'CellsListObjectsApi' do
   # @option opts [CreatePivotTableRequest] :request 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table test' do
     it "should work" do
       name = $BOOK1
@@ -175,7 +158,7 @@ describe 'CellsListObjectsApi' do
       destsheet_name = $SHEET7
       request = AsposeCellsCloud::CreatePivotTableRequest.new({:DestCellName=>'C1',:Name=>'testp',:PivotFieldColumns=>[2],:PivotFieldData=>[1],:PivotFieldRows=>[0],:SourceData=>'=Sheet2!A1:E8',:UseSameSource=>true})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table(name, sheet_name, list_object_index, destsheet_name,  {:request=>request, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -220,7 +203,7 @@ describe 'CellsListObjectsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_delete_worksheet_list_object test' do
     it "should work" do
       name = $BOOK1
@@ -241,7 +224,7 @@ describe 'CellsListObjectsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_list_objects_delete_worksheet_list_objects test' do
     it "should work" do
       name = $BOOK1

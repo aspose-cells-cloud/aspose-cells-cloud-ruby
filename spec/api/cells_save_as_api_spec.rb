@@ -18,30 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsSaveAsApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsSaveAsApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsSaveAsApi' do
-    it 'should create an instance of CellsSaveAsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsSaveAsApi)
-    end
-  end
 
   # unit tests for cells_save_as_post_document_save_as
   # Convert document and save result to storage.
@@ -63,7 +46,7 @@ describe 'CellsSaveAsApi' do
       is_auto_fit_rows = true
       is_auto_fit_columns = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>newfilename, :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -89,7 +72,7 @@ describe 'CellsSaveAsApi' do
       is_auto_fit_rows = true
       is_auto_fit_columns = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>newfilename, :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

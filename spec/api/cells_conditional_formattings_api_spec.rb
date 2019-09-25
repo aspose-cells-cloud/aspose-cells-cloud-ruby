@@ -18,30 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsConditionalFormattingsApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsConditionalFormattingsApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsConditionalFormattingsApi' do
-    it 'should create an instance of CellsConditionalFormattingsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsConditionalFormattingsApi)
-    end
-  end
 
   # unit tests for cells_conditional_formattings_get_worksheet_conditional_formatting
   # Get conditional formatting
@@ -59,7 +42,7 @@ describe 'CellsConditionalFormattingsApi' do
       sheet_name = $SHEET1
       index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name, index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -79,7 +62,7 @@ describe 'CellsConditionalFormattingsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -95,7 +78,7 @@ describe 'CellsConditionalFormattingsApi' do
   # @option opts [FormatCondition] :formatcondition 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_put_worksheet_conditional_formatting test' do
     it "should work" do
       name = $BOOK1
@@ -103,7 +86,7 @@ describe 'CellsConditionalFormattingsApi' do
       cell_area = $CELLAREA
       formatcondition = AsposeCellsCloud::FormatCondition.new({:'Type'=> 'CellValue', :'Operator'=>'Between',:'Formula1'=>'v1',:'Formula2'=>'v1'})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area,  {:formatcondition=>formatcondition, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -123,7 +106,7 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_put_worksheet_format_condition test' do
     it "should work" do
       name = $BOOK1
@@ -135,7 +118,7 @@ describe 'CellsConditionalFormattingsApi' do
       formula1 = 'v1'
       formula2 = 'v2'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -151,7 +134,7 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_put_worksheet_format_condition_area test' do
     it "should work" do
       name = $BOOK1
@@ -159,7 +142,7 @@ describe 'CellsConditionalFormattingsApi' do
       index = 0
       cell_area = $CELLAREA
       folder = $TEMPFOLDER
-      
+       @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })     
       @instance.cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cell_area, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -178,7 +161,7 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_put_worksheet_format_condition_condition test' do
     it "should work" do
       name = $BOOK1
@@ -189,7 +172,7 @@ describe 'CellsConditionalFormattingsApi' do
       formula1 = 'v1'
       formula2 = 'v2'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index, type, operator_type, formula1, formula2, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -203,14 +186,14 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_delete_worksheet_conditional_formatting test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name, index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -228,7 +211,7 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_delete_worksheet_conditional_formatting_area test' do
     it "should work" do
       name = $BOOK1
@@ -238,7 +221,7 @@ describe 'CellsConditionalFormattingsApi' do
       total_rows = 4
       total_columns = 6
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name, start_row, start_column, total_rows, total_columns, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -252,13 +235,13 @@ describe 'CellsConditionalFormattingsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_conditional_formattings_delete_worksheet_conditional_formattings test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
       @instance.cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

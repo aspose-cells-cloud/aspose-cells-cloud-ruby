@@ -18,30 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPivotTablesApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsPivotTablesApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
 
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsPivotTablesApi' do
-    it 'should create an instance of CellsPivotTablesApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsPivotTablesApi)
-    end
-  end
 
   # unit tests for cells_pivot_tables_get_pivot_table_field
   # Get pivot field into into pivot table
@@ -63,7 +46,7 @@ describe 'CellsPivotTablesApi' do
       pivot_field_index = 0
       pivot_field_type = 'row'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })     
       @instance.cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -85,7 +68,7 @@ describe 'CellsPivotTablesApi' do
       sheet_name = $SHEET4
       pivottable_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -107,7 +90,7 @@ describe 'CellsPivotTablesApi' do
       sheet_name = $SHEET4
       pivot_table_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -127,7 +110,7 @@ describe 'CellsPivotTablesApi' do
       name = $PivTestFile
       sheet_name = $SHEET4
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -146,7 +129,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_pivot_table_cell_style test' do
     it "should work" do
       name = $PivTestFile
@@ -157,7 +140,7 @@ describe 'CellsPivotTablesApi' do
       style = AsposeCellsCloud::Style.new({:Custom=>'p'})
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })            
       @instance.cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row,  {:style=>style, :need_re_calculate=>need_re_calculate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -177,7 +160,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_pivot_table_field_hide_item test' do
     it "should work" do
       name = $PivTestFile
@@ -189,7 +172,7 @@ describe 'CellsPivotTablesApi' do
       is_hide = true
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide,  { :need_re_calculate=>need_re_calculate,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -207,7 +190,7 @@ describe 'CellsPivotTablesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_pivot_table_field_move_to test' do
     it "should work" do
       name = $PivTestFile
@@ -217,7 +200,7 @@ describe 'CellsPivotTablesApi' do
       from = 'Row'
       to = 'Column'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, from, to, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -234,7 +217,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_pivot_table_style test' do
     it "should work" do
       name = $PivTestFile
@@ -243,7 +226,7 @@ describe 'CellsPivotTablesApi' do
       style =  AsposeCellsCloud::Style.new({:Custom=>'p'})
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index,  { :style=>style, :need_re_calculate=>need_re_calculate,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -258,14 +241,14 @@ describe 'CellsPivotTablesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_worksheet_pivot_table_calculate test' do
     it "should work" do
       name = $PivTestFile
       sheet_name = $SHEET4
       pivot_table_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -283,7 +266,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [String] :dest_cell_name 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_post_worksheet_pivot_table_move test' do
     it "should work" do
       name = $PivTestFile
@@ -293,7 +276,7 @@ describe 'CellsPivotTablesApi' do
       column = 1
       dest_cell_name = 'C10'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, { :row=>row, :column=>column, :dest_cell_name=>dest_cell_name, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -311,7 +294,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_put_pivot_table_field test' do
     it "should work" do
       name = $PivTestFile
@@ -321,7 +304,7 @@ describe 'CellsPivotTablesApi' do
       request = AsposeCellsCloud::PivotTableFieldRequest.new({:Data=>[1]})
       need_re_calculate = nil
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type,  {:request=>request, :need_re_calculate=>need_re_calculate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -347,7 +330,7 @@ describe 'CellsPivotTablesApi' do
       sheet_name = $SHEET4
       request = AsposeCellsCloud::CreatePivotTableRequest.new({:Name=>'TestPivot',:DestCellName=>'C1',:SourceData =>'Sheet1!C6:E13',:UseSameSource=>true})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       source_data = 'Sheet1!C6:E13'
       dest_cell_name = 'C1'
       table_name = 'TestPivot'
@@ -368,45 +351,22 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
-  describe 'cells_pivot_tables_put_worksheet_pivot_table_filter test' do
+  # @return [CellsCloudResponse]
+  describe 'cells_pivot_tables_put_worksheet_pivot_table_filter and cells_pivot_tables_get_worksheet_pivot_table_filter test' do
     it "should work" do
       name = $PivTestFile
       sheet_name = $SHEET4
       pivot_table_index = 0
-	  top10Filter = AsposeCellsCloud::Top10Filter.new({:Items=>1 ,:IsTop=>true,:IsPercent=>false})
-	  filterColumn = AsposeCellsCloud::FilterColumn.new({:FilterType=>'Top10',:FieldIndex=>0,:Top10Filter=>top10Filter})
-	  autoFilter = AsposeCellsCloud::AutoFilter.new({:FilterColumns=>[filterColumn]})
+      top10Filter = AsposeCellsCloud::Top10Filter.new({:Items=>1 ,:IsTop=>true,:IsPercent=>false})
+      filterColumn = AsposeCellsCloud::FilterColumn.new({:FilterType=>'Top10',:FieldIndex=>0,:Top10Filter=>top10Filter})
+      autoFilter = AsposeCellsCloud::AutoFilter.new({:FilterColumns=>[filterColumn]})
       filter = AsposeCellsCloud::PivotFilter.new({:FieldIndex=>1,:FilterType=>'Count',:AutoFilter=>autoFilter})
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      filter_index =0
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, { :filter=>filter, :need_re_calculate=>need_re_calculate, :folder=>folder})
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for cells_pivot_tables_get_worksheet_pivot_table_filter
-  # 
-  # 
-  # @param name 
-  # @param sheet_name 
-  # @param pivot_table_index 
-  # @param filter_index 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :folder 
-  # @option opts [String] :storage storage name.
-  # @return [PivotFilterResponse]
-  describe 'cells_pivot_tables_get_worksheet_pivot_table_filter test' do
-    it "should work" do
-      name = $PivTestFile
-      sheet_name = $SHEET4
-      pivot_table_index = 0
-      filter_index = 0
-      folder = $TEMPFOLDER
-      
       @instance.cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, { :folder=>folder})
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
@@ -421,7 +381,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [PivotTableFieldRequest] :request Dto that conrains field indexes
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_delete_pivot_table_field test' do
     it "should work" do
       name = $PivTestFile
@@ -430,7 +390,7 @@ describe 'CellsPivotTablesApi' do
       pivot_field_type = 'Row'
       request = AsposeCellsCloud::PivotTableFieldRequest.new({:Data=>[1]})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type,  { :request=>request,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -445,14 +405,14 @@ describe 'CellsPivotTablesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_delete_worksheet_pivot_table test' do
     it "should work" do
       name = $PivTestFile
       sheet_name = $SHEET4
       pivot_table_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -469,7 +429,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_delete_worksheet_pivot_table_filter test' do
     it "should work" do
       name = $PivTestFile
@@ -478,7 +438,7 @@ describe 'CellsPivotTablesApi' do
       field_index = 0
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index,  {:need_re_calculate=>need_re_calculate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -494,7 +454,7 @@ describe 'CellsPivotTablesApi' do
   # @option opts [BOOLEAN] :need_re_calculate 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_delete_worksheet_pivot_table_filters test' do
     it "should work" do
       name = $PivTestFile
@@ -502,7 +462,7 @@ describe 'CellsPivotTablesApi' do
       pivot_table_index = 0
       need_re_calculate = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index,  {:need_re_calculate=>need_re_calculate, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -516,13 +476,13 @@ describe 'CellsPivotTablesApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder Document&#39;s folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_pivot_tables_delete_worksheet_pivot_tables test' do
     it "should work" do
       name = $PivTestFile
       sheet_name = $SHEET4
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

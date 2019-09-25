@@ -18,30 +18,12 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsOleObjectsApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-    @instance = AsposeCellsCloud::CellsOleObjectsApi.new(client)
+    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
-
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsOleObjectsApi' do
-    it 'should create an instance of CellsOleObjectsApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsOleObjectsApi)
-    end
-  end
 
   # unit tests for cells_ole_objects_get_worksheet_ole_object
   # Get OLE object info.
@@ -61,7 +43,7 @@ describe 'CellsOleObjectsApi' do
       object_number = 0
       format = 'PNG'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number,  {:format=>format, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -81,7 +63,7 @@ describe 'CellsOleObjectsApi' do
       name = $BOOK1
       sheet_name = $SHEET6
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -97,7 +79,7 @@ describe 'CellsOleObjectsApi' do
   # @option opts [OleObject] :ole Ole Object
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ole_objects_post_update_worksheet_ole_object test' do
     it "should work" do
       name = $BOOK1
@@ -105,7 +87,7 @@ describe 'CellsOleObjectsApi' do
       ole_object_index = 0
       ole = AsposeCellsCloud::OleObject.new({:Left=>10,:Right=>10,:Height=>100,:Width=>90})
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index,  { :ole=>ole,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -139,7 +121,7 @@ describe 'CellsOleObjectsApi' do
       ole_file = 'OLEDoc.docx'
       image_file = 'word.jpg'
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, {  :ole_object=>ole_object, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :height=>height, :width=>width, :ole_file=>ole_file, :image_file=>image_file,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -154,14 +136,14 @@ describe 'CellsOleObjectsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ole_objects_delete_worksheet_ole_object test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET6
       ole_object_index = 0
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -175,13 +157,13 @@ describe 'CellsOleObjectsApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder The workbook folder.
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_ole_objects_delete_worksheet_ole_objects test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET6
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

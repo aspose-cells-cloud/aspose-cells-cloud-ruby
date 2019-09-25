@@ -18,31 +18,13 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPageSetupApi' do
   before do
-    # run before each test
-    if $access_token == nil then
-        conf = AsposeCellsCloud::Configuration.new
-        conf.base_path = ""
-        instance = AsposeCellsCloud::OAuthApi.new(AsposeCellsCloud::ApiClient.new(conf))
-        $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-    end
-  
-    conf = AsposeCellsCloud::Configuration.new
-    conf.access_token = $access_token	
-    client = AsposeCellsCloud::ApiClient.new(conf)
-    client.default_headers["Authorization"] ="Bearer " + $access_token
-
-    @instance = AsposeCellsCloud::CellsPageSetupApi.new(client)
+   @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
   end
-
   after do
     # run after each test
   end
 
-  describe 'test an instance of CellsPageSetupApi' do
-    it 'should create an instance of CellsPageSetupApi' do
-      expect(@instance).to be_instance_of(AsposeCellsCloud::CellsPageSetupApi)
-    end
-  end
+
 
   # unit tests for cells_page_setup_delete_header_footer
   # clear header footer
@@ -52,13 +34,13 @@ describe 'CellsPageSetupApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_setup_delete_header_footer test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_setup_delete_header_footer(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -135,7 +117,7 @@ describe 'CellsPageSetupApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_setup_post_footer test' do
     it "should work" do
       name = $BOOK1
@@ -161,7 +143,7 @@ describe 'CellsPageSetupApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_setup_post_header test' do
     it "should work" do
       name = $BOOK1
@@ -170,7 +152,7 @@ describe 'CellsPageSetupApi' do
       script = 'tret'
       is_first_page = true
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_setup_post_header(name, sheet_name, section, script, is_first_page, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -185,14 +167,14 @@ describe 'CellsPageSetupApi' do
   # @option opts [PageSetup] :page_setup 
   # @option opts [String] :folder 
   # @option opts [String] :storage storage name.
-  # @return [SaaSposeResponse]
+  # @return [CellsCloudResponse]
   describe 'cells_page_setup_post_page_setup test' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
       page_setup = AsposeCellsCloud::PageSetup.new
       folder = $TEMPFOLDER
-      
+      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_page_setup_post_page_setup(name, sheet_name,  {:page_setup=>page_setup, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
