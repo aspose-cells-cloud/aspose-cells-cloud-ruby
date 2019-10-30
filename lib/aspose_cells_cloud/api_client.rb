@@ -422,7 +422,11 @@ module AsposeCellsCloud
 
       # resource path
       local_var_path = "/connect/token"
-      url = build_request_url(local_var_path).gsub('/v3.0', '')
+      if @config.api_version === "v1.1"
+        local_var_path ="/oauth2/token"
+      end
+      url = build_request_url(local_var_path).gsub('/'+config.api_version, '')
+      #url = build_request_url(local_var_path).gsub('/v3.0', '')
 
       # header parameters
       header_params = {}

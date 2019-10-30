@@ -198,6 +198,7 @@ Method | HTTP request | Description
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
+[**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
 [**cells_worksheet_validations_get_worksheet_validation**](CellsApi.md#cells_worksheet_validations_get_worksheet_validation) | **GET** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Get worksheet validation by index.
 [**cells_worksheet_validations_get_worksheet_validations**](CellsApi.md#cells_worksheet_validations_get_worksheet_validations) | **GET** /cells/{name}/worksheets/{sheetName}/validations | Get worksheet validations.
 [**cells_worksheet_validations_post_worksheet_validation**](CellsApi.md#cells_worksheet_validations_post_worksheet_validation) | **POST** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Update worksheet validation by index.
@@ -2511,7 +2512,7 @@ sheet_name = 'sheet_name_example' # String |
 cell_area = 'cell_area_example' # String | 
 
 opts = { 
-  formatcondition: AsposeCellsCloud::FormatCondition.new, # FormatCondition | 
+  format_condition: AsposeCellsCloud::FormatCondition.new, # FormatCondition | 
   folder: 'folder_example', # String | 
   storage: 'storage_example' # String | storage name.
 }
@@ -2532,7 +2533,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **cell_area** | **String**|  | 
- **formatcondition** | [**FormatCondition**](FormatCondition.md)|  | [optional] 
+ **format_condition** | [**FormatCondition**](FormatCondition.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
  **storage** | **String**| storage name. | [optional] 
 
@@ -7883,7 +7884,7 @@ No authorization required
 
 
 # **cells_post_set_cell_html_string**
-> CellResponse cells_post_set_cell_html_string(name, sheet_name, cell_name, opts)
+> CellResponse cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts)
 
 Set htmlstring value into cell
 
@@ -7900,6 +7901,8 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 cell_name = 'cell_name_example' # String | The cell name.
 
+html_string = 'B' # String | 
+
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
   storage: 'storage_example' # String | storage name.
@@ -7907,7 +7910,7 @@ opts = {
 
 begin
   #Set htmlstring value into cell
-  result = api_instance.cells_post_set_cell_html_string(name, sheet_name, cell_name, opts)
+  result = api_instance.cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
   puts "Exception when calling CellsApi->cells_post_set_cell_html_string: #{e}"
@@ -7921,6 +7924,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Workbook name. | 
  **sheet_name** | **String**| Worksheet name. | 
  **cell_name** | **String**| The cell name. | 
+ **html_string** | **String**|  | 
  **folder** | **String**| The workbook folder. | [optional] 
  **storage** | **String**| storage name. | [optional] 
 
@@ -10921,7 +10925,7 @@ No authorization required
 
 
 # **cells_workbook_post_import_data**
-> CellsCloudResponse cells_workbook_post_import_data(name, importdata, opts)
+> CellsCloudResponse cells_workbook_post_import_data(name, import_data, opts)
 
 
 
@@ -10934,7 +10938,7 @@ api_instance = AsposeCellsCloud::CellsApi.new
 
 name = 'name_example' # String | 
 
-importdata = AsposeCellsCloud::ImportOption.new # ImportOption | 
+import_data = AsposeCellsCloud::ImportOption.new # ImportOption | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -10942,7 +10946,7 @@ opts = {
 }
 
 begin
-  result = api_instance.cells_workbook_post_import_data(name, importdata, opts)
+  result = api_instance.cells_workbook_post_import_data(name, import_data, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
   puts "Exception when calling CellsApi->cells_workbook_post_import_data: #{e}"
@@ -10954,7 +10958,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | 
- **importdata** | [**ImportOption**](ImportOption.md)|  | 
+ **import_data** | [**ImportOption**](ImportOption.md)|  | 
  **folder** | **String**|  | [optional] 
  **storage** | **String**| storage name. | [optional] 
 
@@ -11621,6 +11625,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValidationResponse**](ValidationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_worksheet_validations_delete_worksheet_validations**
+> CellsCloudResponse cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, opts)
+
+Clear all validation in worksheet.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | Document name.
+
+sheet_name = 'sheet_name_example' # String | Worksheet name.
+
+opts = { 
+  folder: 'folder_example', # String | Document's folder.
+  storage: 'storage_example' # String | storage name.
+}
+
+begin
+  #Clear all validation in worksheet.
+  result = api_instance.cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_worksheet_validations_delete_worksheet_validations: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| Document name. | 
+ **sheet_name** | **String**| Worksheet name. | 
+ **folder** | **String**| Document&#39;s folder. | [optional] 
+ **storage** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 

@@ -18,7 +18,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsChartsApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
   end
 
   after do
@@ -43,8 +43,10 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -68,8 +70,10 @@ describe 'CellsChartsApi' do
       chart_number = 0
       format = 'PNG'
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, {:format=>format,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_get_worksheet_chart(name, sheet_name, chart_number, {:format=>format,  :folder=>folder})
+      # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -90,8 +94,10 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -112,8 +118,10 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -132,8 +140,10 @@ describe 'CellsChartsApi' do
       name = $MYDOC
       sheet_name = $SHEET3
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_get_worksheet_charts(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_get_worksheet_charts(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -156,8 +166,10 @@ describe 'CellsChartsApi' do
       chart_index = 0
       chart = AsposeCellsCloud::Chart.new
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_post_worksheet_chart(name, sheet_name, chart_index,  { :chart=>chart,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_post_worksheet_chart(name, sheet_name, chart_index,  { :chart=>chart,:folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -180,8 +192,10 @@ describe 'CellsChartsApi' do
       chart_index = 0
       legend = AsposeCellsCloud::Legend.new
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, { :legend=>legend, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, { :legend=>legend, :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -204,8 +218,10 @@ describe 'CellsChartsApi' do
       chart_index = 0
       title = AsposeCellsCloud::Title.new
       folder = $TEMPFOLDER
-      
-      @instance.cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index,  { :title=>title, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index,  { :title=>title, :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -244,8 +260,10 @@ describe 'CellsChartsApi' do
       is_auto_get_serial_name = nil
       title = nil
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, { :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :area=>area, :is_vertical=>is_vertical,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = result = @instance.cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, { :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :area=>area, :is_vertical=>is_vertical,  :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -266,8 +284,9 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -290,8 +309,10 @@ describe 'CellsChartsApi' do
       chart_index = 0
       title = AsposeCellsCloud::Title.new
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, {:title=>title,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, {:title=>title,  :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -311,8 +332,10 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -333,8 +356,10 @@ describe 'CellsChartsApi' do
       sheet_name = $SHEET3
       chart_index = 0
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -353,8 +378,10 @@ describe 'CellsChartsApi' do
       name = $MYDOC
       sheet_name = $SHEET3
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_charts_delete_worksheet_clear_charts(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_charts_delete_worksheet_clear_charts(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

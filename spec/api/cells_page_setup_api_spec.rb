@@ -18,7 +18,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPageSetupApi' do
   before do
-   @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
+   @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
   end
   after do
     # run after each test
@@ -40,8 +40,10 @@ describe 'CellsPageSetupApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_page_setup_delete_header_footer(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_delete_header_footer(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -60,8 +62,10 @@ describe 'CellsPageSetupApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
-      @instance.cells_page_setup_get_footer(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_get_footer(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -80,8 +84,10 @@ describe 'CellsPageSetupApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
-      @instance.cells_page_setup_get_header(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_get_header(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -100,8 +106,10 @@ describe 'CellsPageSetupApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      
-      @instance.cells_page_setup_get_page_setup(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_get_page_setup(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -126,8 +134,10 @@ describe 'CellsPageSetupApi' do
       script = 'test'
       is_first_page = true
       folder = $TEMPFOLDER
-      
-      @instance.cells_page_setup_post_footer(name, sheet_name, section, script, is_first_page, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_post_footer(name, sheet_name, section, script, is_first_page, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -152,8 +162,10 @@ describe 'CellsPageSetupApi' do
       script = 'tret'
       is_first_page = true
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_page_setup_post_header(name, sheet_name, section, script, is_first_page, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_post_header(name, sheet_name, section, script, is_first_page, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -174,8 +186,10 @@ describe 'CellsPageSetupApi' do
       sheet_name = $SHEET1
       page_setup = AsposeCellsCloud::PageSetup.new
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_page_setup_post_page_setup(name, sheet_name,  {:page_setup=>page_setup, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_page_setup_post_page_setup(name, sheet_name,  {:page_setup=>page_setup, :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

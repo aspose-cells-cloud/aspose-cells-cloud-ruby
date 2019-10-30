@@ -37,6 +37,9 @@ module AsposeCellsCloud
     # Defines url host
     attr_accessor :host
 
+    # Defines api version
+    attr_accessor :api_version
+
     # Defines the access token (Bearer) used with OAuth2.
     attr_accessor :access_token
 
@@ -118,6 +121,7 @@ module AsposeCellsCloud
     def initialize
       @scheme = 'https'
       @host = 'api.aspose.cloud'
+      @api_version = 'v3.0'
       @timeout = 5 * 60
       @client_side_validation = true
       @verify_ssl = true
@@ -153,7 +157,8 @@ module AsposeCellsCloud
     end
 
     def base_url
-      url = "#{scheme}://#{[host, '/v3.0'].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
+      #url = "#{scheme}://#{[host, '/v3.0'].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
+      url = "#{scheme}://#{[host, '/'+ api_version ].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
       URI.encode(url)
     end
 

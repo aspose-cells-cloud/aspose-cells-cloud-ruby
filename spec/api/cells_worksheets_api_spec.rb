@@ -18,7 +18,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsWorksheetsApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new("66164C51-693E-4904-A121-545961673EC1","536e76768419db9585afdd37bb5f7533")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
   end
 
   after do
@@ -44,8 +44,10 @@ describe 'CellsWorksheetsApi' do
       png = aFile.sysread(aFile.size)
       aFile.close
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -63,8 +65,10 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_delete_worksheet_background(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheet_background(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -85,8 +89,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       cell_name = 'C1'
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -105,8 +111,9 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_delete_worksheet_comments(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheet_comments(name, sheet_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -133,8 +140,9 @@ describe 'CellsWorksheetsApi' do
       freezed_rows = 2
       freezed_columns = 2
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -151,8 +159,10 @@ describe 'CellsWorksheetsApi' do
     it "should work" do
       name = $BOOK1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_named_ranges(name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_named_ranges(name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -177,8 +187,10 @@ describe 'CellsWorksheetsApi' do
       vertical_resolution = 100
       horizontal_resolution = 90
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet(name, sheet_name,  {:format=>format, :vertical_resolution=>vertical_resolution, :horizontal_resolution=>horizontal_resolution, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet(name, sheet_name,  {:format=>format, :vertical_resolution=>vertical_resolution, :horizontal_resolution=>horizontal_resolution, :folder=>folder})
+      # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -199,8 +211,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       formula = '=NOW()'
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -221,8 +235,10 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_comments(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_comments(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -243,8 +259,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       merged_cell_index = 1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -263,8 +281,10 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_merged_cells(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_merged_cells(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -283,8 +303,10 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_text_items(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_text_items(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -301,8 +323,10 @@ describe 'CellsWorksheetsApi' do
     it "should work" do
       name = $BOOK1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheets(name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheets(name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -331,8 +355,9 @@ describe 'CellsWorksheetsApi' do
       first_row = 1
       last_row = 10
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column,  {:auto_fitter_options=>auto_fitter_options, :first_row=>first_row, :last_row=>last_row, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column,  {:auto_fitter_options=>auto_fitter_options, :first_row=>first_row, :last_row=>last_row, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -359,8 +384,9 @@ describe 'CellsWorksheetsApi' do
       last_column = 10
       auto_fitter_options = AsposeCellsCloud::AutoFitterOptions.new({:AutoFitMergedCells=>true})
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column,  { :auto_fitter_options=>auto_fitter_options,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column,  { :auto_fitter_options=>auto_fitter_options,:folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -387,8 +413,9 @@ describe 'CellsWorksheetsApi' do
       end_row = 10
       only_auto = true
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_autofit_worksheet_rows(name, sheet_name,  {:auto_fitter_options=>auto_fitter_options, :start_row=>start_row, :end_row=>end_row, :only_auto=>only_auto, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_autofit_worksheet_rows(name, sheet_name,  {:auto_fitter_options=>auto_fitter_options, :start_row=>start_row, :end_row=>end_row, :only_auto=>only_auto, :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -415,9 +442,12 @@ describe 'CellsWorksheetsApi' do
       source_workbook = $BOOK1
       source_folder = $TEMPFOLDER
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.upload_file( folder+"/"+source_workbook,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +source_workbook,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet,{  :options=>options,  :source_workbook=>source_workbook, :source_folder=>source_folder,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.upload_file( folder+"/"+source_workbook,  ::File.open(File.expand_path("data/"+source_workbook),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet,{  :options=>options,  :source_workbook=>source_workbook, :source_folder=>source_folder,:folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -438,8 +468,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       moving = AsposeCellsCloud::WorksheetMovingRequest.new({:DestinationWorksheet=>$SHEET3,:Position=>'after'})
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_move_worksheet(name, sheet_name,  { :moving=>moving,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_move_worksheet(name, sheet_name,  { :moving=>moving,:folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -459,8 +491,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       value = 1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -483,8 +517,10 @@ describe 'CellsWorksheetsApi' do
       cell_area = $CELLAREA
       data_sorter = AsposeCellsCloud::DataSorter.new(:CaseSensitive=>true)
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, {:data_sorter=>data_sorter,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, {:data_sorter=>data_sorter,  :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -505,8 +541,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       text = '123456'
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_worksheet_text_search(name, sheet_name, text, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_worksheet_text_search(name, sheet_name, text, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -529,8 +567,10 @@ describe 'CellsWorksheetsApi' do
       old_value = '123'
       new_value = '123456'
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -551,8 +591,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       sheet = AsposeCellsCloud::Worksheet.new({:IsGridlinesVisible=>true})
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_update_worksheet_property(name, sheet_name,  { :sheet=>sheet,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_update_worksheet_property(name, sheet_name,  { :sheet=>sheet,:folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -596,8 +638,9 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       cell_name = 'B3'
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, { :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -619,8 +662,10 @@ describe 'CellsWorksheetsApi' do
       cell_name = 'B3'
       comment = AsposeCellsCloud::Comment.new({:Author=>'Roy'})
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, {:comment=>comment,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, {:comment=>comment,  :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -646,8 +691,10 @@ describe 'CellsWorksheetsApi' do
       freezed_rows = 10
       freezed_columns = 10
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -667,8 +714,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       protect_parameter = AsposeCellsCloud::ProtectSheetParameter.new({:ProtectionType=>'All',:Password=>'123456'})
       folder = $TEMPFOLDER
-      
-      @instance.cells_worksheets_put_protect_worksheet(name, sheet_name,  { :protect_parameter=>protect_parameter,:folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_put_protect_worksheet(name, sheet_name,  { :protect_parameter=>protect_parameter,:folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -688,8 +737,9 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       protect_parameter = AsposeCellsCloud::ProtectSheetParameter.new({:Password=>'123456',:ProtectionType=>'All'})
       folder = $TEMPFOLDER
-      
-      @instance.cells_worksheets_delete_unprotect_worksheet(name, sheet_name, {:protect_parameter=>protect_parameter,  :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_unprotect_worksheet(name, sheet_name, {:protect_parameter=>protect_parameter,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -709,8 +759,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       newname = 'renametest'
       folder = $TEMPFOLDER
-      
-      @instance.cells_worksheets_post_rename_worksheet(name, sheet_name, newname, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_post_rename_worksheet(name, sheet_name, newname, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -733,8 +785,10 @@ describe 'CellsWorksheetsApi' do
       position = 1
       sheettype = 'VB'
       folder = $TEMPFOLDER
-      
-      @instance.cells_worksheets_put_add_new_worksheet(name, sheet_name,  {:position=>position, :sheettype=>sheettype, :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_put_add_new_worksheet(name, sheet_name,  {:position=>position, :sheettype=>sheettype, :folder=>folder})
+      expect(result.code).to eql(201)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -755,8 +809,10 @@ describe 'CellsWorksheetsApi' do
       sheet_name = $SHEET1
       is_visible = true
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -775,8 +831,10 @@ describe 'CellsWorksheetsApi' do
       name = $BOOK1
       sheet_name = $SHEET1
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
-      @instance.cells_worksheets_delete_worksheet(name, sheet_name, { :folder=>folder})
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheet(name, sheet_name, { :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

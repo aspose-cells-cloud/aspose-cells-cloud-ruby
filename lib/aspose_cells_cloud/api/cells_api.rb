@@ -26,10 +26,11 @@ module AsposeCellsCloud
   class CellsApi
     attr_accessor :api_client
 
-    def initialize(app_sid,app_key,  api_client = ApiClient.default)
+    def initialize(app_sid,app_key, app_version = 'v3.0',  api_client = ApiClient.default)
       @api_client = api_client
       @api_client.config.app_key = app_key
       @api_client.config.app_sid = app_sid
+      @api_client.config.api_version = app_version
     end
 
     # Removes a date filter.             
@@ -3064,7 +3065,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param cell_area 
     # @param [Hash] opts the optional parameters
-    # @option opts [FormatCondition] :formatcondition 
+    # @option opts [FormatCondition] :format_condition 
     # @option opts [String] :folder 
     # @option opts [String] :storage storage name.
     # @return [CellsCloudResponse]
@@ -3079,7 +3080,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param cell_area 
     # @param [Hash] opts the optional parameters
-    # @option opts [FormatCondition] :formatcondition 
+    # @option opts [FormatCondition] :format_condition 
     # @option opts [String] :folder 
     # @option opts [String] :storage storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
@@ -3120,7 +3121,7 @@ module AsposeCellsCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(opts[:'formatcondition'])
+      post_body = @api_client.object_to_http_body(opts[:'format_condition'])
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -10285,12 +10286,13 @@ module AsposeCellsCloud
     # @param name Workbook name.
     # @param sheet_name Worksheet name.
     # @param cell_name The cell name.
+    # @param html_string 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage storage name.
     # @return [CellResponse]
-    def cells_post_set_cell_html_string(name, sheet_name, cell_name, opts = {})
-      data, _status_code, _headers = cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, opts)
+    def cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts = {})
+      data, _status_code, _headers = cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts)
       return data
     end
 
@@ -10299,11 +10301,12 @@ module AsposeCellsCloud
     # @param name Workbook name.
     # @param sheet_name Worksheet name.
     # @param cell_name The cell name.
+    # @param html_string 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage storage name.
     # @return [Array<(CellResponse, Fixnum, Hash)>] CellResponse data, response status code and response headers
-    def cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, opts = {})
+    def cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_cell_html_string ..."
       end
@@ -10319,6 +10322,10 @@ module AsposeCellsCloud
       # verify the required parameter 'cell_name' is set
       if @api_client.config.client_side_validation && cell_name.nil?
         fail ArgumentError, "Missing the required parameter 'cell_name' when calling CellsApi.cells_post_set_cell_html_string"
+      end
+      # verify the required parameter 'html_string' is set
+      if @api_client.config.client_side_validation && html_string.nil?
+        fail ArgumentError, "Missing the required parameter 'html_string' when calling CellsApi.cells_post_set_cell_html_string"
       end
       # resource path
       local_var_path = "/cells/{name}/worksheets/{sheetName}/cells/{cellName}/htmlstring".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'cellName' + '}', cell_name.to_s)
@@ -10339,7 +10346,7 @@ module AsposeCellsCloud
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(html_string)
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -14269,25 +14276,25 @@ module AsposeCellsCloud
     # 
     # 
     # @param name 
-    # @param importdata 
+    # @param import_data 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
     # @option opts [String] :storage storage name.
     # @return [CellsCloudResponse]
-    def cells_workbook_post_import_data(name, importdata, opts = {})
-      data, _status_code, _headers = cells_workbook_post_import_data_with_http_info(name, importdata, opts)
+    def cells_workbook_post_import_data(name, import_data, opts = {})
+      data, _status_code, _headers = cells_workbook_post_import_data_with_http_info(name, import_data, opts)
       return data
     end
 
     # 
     # 
     # @param name 
-    # @param importdata 
+    # @param import_data 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
     # @option opts [String] :storage storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
-    def cells_workbook_post_import_data_with_http_info(name, importdata, opts = {})
+    def cells_workbook_post_import_data_with_http_info(name, import_data, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_import_data ..."
       end
@@ -14296,9 +14303,9 @@ module AsposeCellsCloud
       if @api_client.config.client_side_validation && name.nil?
         fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_workbook_post_import_data"
       end
-      # verify the required parameter 'importdata' is set
-      if @api_client.config.client_side_validation && importdata.nil?
-        fail ArgumentError, "Missing the required parameter 'importdata' when calling CellsApi.cells_workbook_post_import_data"
+      # verify the required parameter 'import_data' is set
+      if @api_client.config.client_side_validation && import_data.nil?
+        fail ArgumentError, "Missing the required parameter 'import_data' when calling CellsApi.cells_workbook_post_import_data"
       end
       # resource path
       local_var_path = "/cells/{name}/importdata".sub('{' + 'name' + '}', name.to_s)
@@ -14319,7 +14326,7 @@ module AsposeCellsCloud
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(importdata)
+      post_body = @api_client.object_to_http_body(import_data)
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
@@ -14942,12 +14949,13 @@ module AsposeCellsCloud
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
+
       # form parameters
       form_params = {}
 
       # http body (model)
-      post_body =workbook
+      # post_body = @api_client.object_to_http_body(workbook)
+      post_body = workbook
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -15168,6 +15176,75 @@ module AsposeCellsCloud
         :return_type => 'ValidationResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_worksheet_validations_delete_worksheet_validation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Clear all validation in worksheet.
+    # 
+    # @param name Document name.
+    # @param sheet_name Worksheet name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage storage name.
+    # @return [CellsCloudResponse]
+    def cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, opts = {})
+      data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts)
+      return data
+    end
+
+    # Clear all validation in worksheet.
+    # 
+    # @param name Document name.
+    # @param sheet_name Worksheet name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_delete_worksheet_validations ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_worksheet_validations_delete_worksheet_validations"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_worksheet_validations_delete_worksheet_validations"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/validations".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_worksheet_validations_delete_worksheet_validations\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -18922,7 +18999,7 @@ module AsposeCellsCloud
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
       # form parameters
       form_params = {}
-#      form_params["File"] = file
+      # form_params["File"] = file
 
       # http body (model)
       post_body = file
