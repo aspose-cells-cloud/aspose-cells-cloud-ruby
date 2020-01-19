@@ -126,9 +126,15 @@ describe 'CellsAutoFilterApi' do
       sheet_name = $SHEET1
       range = $RANGE
       field_index = 0
-      color = AsposeCellsCloud::Color.new
-	  foregroundcolor = AsposeCellsCloud::CellsColor.new({:Color=>color})
-      color_filter = AsposeCellsCloud::ColorFilterRequest.new({:ForegroundColor=>foregroundcolor,:Pattern=>'Solid'})
+      color = AsposeCellsCloud::Color.new({:A=>255,:B=>255,:R=>0,:G=>255})
+      themeColor = AsposeCellsCloud::ThemeColor.new({:Tint=>'1.0',:ColorType=>'Text2'})
+      foregroundcolor = AsposeCellsCloud::CellsColor.new({:Color=>color,:Type=>'Automatic',:ThemeColor=>themeColor})
+
+      color1 = AsposeCellsCloud::Color.new({:A=>0,:B=>0,:R=>255,:G=>255})
+      themeColor1 = AsposeCellsCloud::ThemeColor.new({:Tint=>'1.0',:ColorType=>'Text2'})
+      backgroundcolor = AsposeCellsCloud::CellsColor.new({:Color=>color1,:Type=>'Automatic',:ThemeColor=>themeColor1})
+      
+      color_filter = AsposeCellsCloud::ColorFilterRequest.new({:ForegroundColor=>foregroundcolor,:Pattern=>'Solid',:BackgroundColor=>backgroundcolor})
       match_blanks = true
       refresh = true
       folder = $TEMPFOLDER

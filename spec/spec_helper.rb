@@ -19,7 +19,7 @@ require 'aspose_cells_cloud'
   $BOOK1 = "Book1.xlsx"
   $MYDOC = "myDocument.xlsx"
   $PivTestFile = "TestCase.xlsx"
-  $TEMPFOLDER = "Temp"
+  $TEMPFOLDER = "RubyTest"
   $SHEET1 = "Sheet1"
   $SHEET2 = "Sheet2"
   $SHEET3 = "Sheet3"
