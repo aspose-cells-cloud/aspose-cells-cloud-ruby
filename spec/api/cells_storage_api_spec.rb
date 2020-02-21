@@ -37,20 +37,20 @@ describe 'CellsTaskApi' do
     it "should work" do
         name ="ReportData.xml"
         folder = $TEMPFOLDER
-#        stream = File.read("/home/roywang/asposecellscloudsdk/data/"  << name)
+#        stream = File.read("data/"  << name)
 #        @instance.object_exists(name)
 #        @instance.storage_exists("Default App");
 #        filename = folder +"/" + name
-#        aFile = File.new("/home/roywang/asposecellscloudsdk/data/" +name , 'rb')
+#        aFile = File.new("data/" +name , 'rb')
 #        stream = aFile.sysread(aFile.size)
 #        aFile.close
-#        binary_file = File.open("/home/roywang/asposecellscloudsdk/data/" +name, "rb")
+#        binary_file = File.open("data/" +name, "rb")
 #        data = [
 #        [ "import[sync]","false" ],
 #        [ "import[name]", stream, { filename: "Book1.xlsx"} ]
 #        ]
-#        stream = File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) }
-        @instance.upload_file( "Temp/ReportData.xml",  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
+#        stream = File.open("data/" +name,"r") {|io| io.read(io.size) }
+        @instance.upload_file( "Temp/ReportData.xml",  ::File.open("data/" +name,"r") {|io| io.read(io.size) })
 #        @instance.copy_file(name , folder +"/1"+ name)
 #        @instance.copy_folder(folder, folder + "2");
 #        @instance.move_folder(folder+ "2", folder + "3");

@@ -435,7 +435,7 @@ describe 'CellsWorkbookApi' do
       format = 'pdf'
       password = nil
       out_path = "Tdd.pdf"
-      result =  @instance.cells_workbook_put_convert_workbook(::File.open("/home/roywang/asposecellscloudsdk/data/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
+      result =  @instance.cells_workbook_put_convert_workbook(::File.open("data/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
       # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

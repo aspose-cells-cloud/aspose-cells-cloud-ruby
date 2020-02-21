@@ -31,18 +31,17 @@ describe 'CellsApi' do
       folder = $TEMPFOLDER
       @instance.create_folder("ruby")
       @instance.copy_folder("ruby","ruby1")
-      @instance.delete_folder("ruby")
       @instance.move_folder("ruby1","ruby")
-      @instance.upload_file( "ruby/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })      
+      @instance.upload_file( "ruby/"+name,  ::File.open("data/" +name,"r") {|io| io.read(io.size) })      
       @instance.copy_file("ruby/"+name,"ruby/1"+name)
       @instance.delete_file("ruby/"+name)
       @instance.move_file("ruby/1"+name,"ruby/"+name)
       @instance.download_file("ruby/"+name)
-#      @instance.delete_file("ruby/"+name)
-#      @instance.delete_folder("ruby")
+      @instance.delete_file("ruby/"+name)
+      @instance.delete_folder("ruby")
       
 
-      #@instance.cells_workbook_put_convert_workbook(::File.open("/home/roywang/asposecellscloudsdk/data/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
+      #@instance.cells_workbook_put_convert_workbook(::File.open("data/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

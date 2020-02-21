@@ -14949,7 +14949,7 @@ module AsposeCellsCloud
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
       # form parameters
       form_params = {}
 
@@ -15015,7 +15015,8 @@ module AsposeCellsCloud
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
       # form parameters
       form_params = {}
 

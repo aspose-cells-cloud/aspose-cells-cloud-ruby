@@ -39,6 +39,7 @@ module AsposeCellsCloud
     # @return [Hash]
     attr_accessor :default_headers
 
+    attr_accessor :get_access_token_time
     # Initializes the ApiClient
     # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
@@ -415,9 +416,14 @@ module AsposeCellsCloud
 
     # Request access and refresh tokens if needed
     def request_token_if_needed
+     
       # check token exists
       if @config.access_token
-        return
+        now = Time.now 
+        time_difference = now - $get_access_token_time
+        if time_difference < 86300
+          return
+        end
       end
 
       # resource path
@@ -471,6 +477,8 @@ module AsposeCellsCloud
       data = JSON.parse("[#{response.body}]", :symbolize_names => true)[0]
 
       @config.access_token = data[:access_token]
+
+      $get_access_token_time = Time.now
     end
 
     # Adds OAuth2.0 token

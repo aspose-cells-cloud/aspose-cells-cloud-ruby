@@ -40,7 +40,7 @@ describe 'CellsWorksheetsApi' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
-      aFile = File.new('/home/roywang/asposecellscloudsdk/data/WaterMark.png', 'r')
+      aFile = File.new('data/WaterMark.png', 'r')
       png = aFile.sysread(aFile.size)
       aFile.close
       folder = $TEMPFOLDER
@@ -617,7 +617,7 @@ describe 'CellsWorksheetsApi' do
       cell_name = 'C1'
       comment = AsposeCellsCloud::Comment.new({:Author=>'Roy'})
       folder = $TEMPFOLDER
-      @instance.upload_file( folder+"/"+name,  ::File.open("/home/roywang/asposecellscloudsdk/data/" +name,"r") {|io| io.read(io.size) })
+      @instance.upload_file( folder+"/"+name,  ::File.open("data/" +name,"r") {|io| io.read(io.size) })
       @instance.cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, {:comment=>comment,  :folder=>folder})
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
