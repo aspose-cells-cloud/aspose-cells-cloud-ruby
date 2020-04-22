@@ -1,4 +1,4 @@
-# .NET REST API for Spreadsheet Processing in Cloud
+Ruby REST API for Spreadsheet Processing in Cloud
 
 This Cloud SDK enhances your Ruby cloud-based apps to [process & manipulate Microsoft Excel spreadsheets](https://products.aspose.cloud/cells/ruby) in the cloud, without MS Office.
 
