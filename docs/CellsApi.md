@@ -174,6 +174,7 @@ Method | HTTP request | Description
 [**cells_workbook_delete_decrypt_document**](CellsApi.md#cells_workbook_delete_decrypt_document) | **DELETE** /cells/{name}/encryption | Decrypt document.
 [**cells_workbook_delete_document_unprotect_from_changes**](CellsApi.md#cells_workbook_delete_document_unprotect_from_changes) | **DELETE** /cells/{name}/writeProtection | Unprotect document from changes.
 [**cells_workbook_delete_unprotect_document**](CellsApi.md#cells_workbook_delete_unprotect_document) | **DELETE** /cells/{name}/protection | Unprotect document.
+[**cells_workbook_delete_workbook_background**](CellsApi.md#cells_workbook_delete_workbook_background) | **DELETE** /cells/{name}/background | Set worksheet background image.
 [**cells_workbook_delete_workbook_name**](CellsApi.md#cells_workbook_delete_workbook_name) | **DELETE** /cells/{name}/names/{nameName} | Clean workbook&#39;s names.
 [**cells_workbook_delete_workbook_names**](CellsApi.md#cells_workbook_delete_workbook_names) | **DELETE** /cells/{name}/names | Clean workbook&#39;s names.
 [**cells_workbook_get_workbook**](CellsApi.md#cells_workbook_get_workbook) | **GET** /cells/{name} | Read workbook info or export.
@@ -196,6 +197,7 @@ Method | HTTP request | Description
 [**cells_workbook_post_workbooks_text_search**](CellsApi.md#cells_workbook_post_workbooks_text_search) | **POST** /cells/{name}/findText | Search text.
 [**cells_workbook_put_convert_workbook**](CellsApi.md#cells_workbook_put_convert_workbook) | **PUT** /cells/convert | Convert workbook from request content to some format.
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
+[**cells_workbook_put_workbook_background**](CellsApi.md#cells_workbook_put_workbook_background) | **PUT** /cells/{name}/background | Set workbook background image.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
 [**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
@@ -10334,6 +10336,57 @@ No authorization required
 
 
 
+# **cells_workbook_delete_workbook_background**
+> CellsCloudResponse cells_workbook_delete_workbook_background(name, opts)
+
+Set worksheet background image.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage: 'storage_example' # String | storage name.
+}
+
+begin
+  #Set worksheet background image.
+  result = api_instance.cells_workbook_delete_workbook_background(name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_workbook_delete_workbook_background: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **cells_workbook_delete_workbook_name**
 > CellsCloudResponse cells_workbook_delete_workbook_name(name, name_name, opts)
 
@@ -11214,6 +11267,7 @@ opts = {
   horizontal_resolution: 0, # Integer | Image horizontal resolution.
   vertical_resolution: 0, # Integer | Image vertical resolution.
   folder: 'folder_example', # String | The workbook folder.
+  out_folder: 'out_folder_example', # String | out Folder.
   storage: 'storage_example' # String | storage name.
 }
 
@@ -11237,6 +11291,7 @@ Name | Type | Description  | Notes
  **horizontal_resolution** | **Integer**| Image horizontal resolution. | [optional] [default to 0]
  **vertical_resolution** | **Integer**| Image vertical resolution. | [optional] [default to 0]
  **folder** | **String**| The workbook folder. | [optional] 
+ **out_folder** | **String**| out Folder. | [optional] 
  **storage** | **String**| storage name. | [optional] 
 
 ### Return type
@@ -11431,7 +11486,7 @@ require 'aspose_cells_cloud'
 
 api_instance = AsposeCellsCloud::CellsApi.new
 
-workbook = 'B' # String | 
+workbook = File.new('/path/to/file.txt') # File | 
 
 opts = { 
   format: 'format_example', # String | The format to convert.
@@ -11452,7 +11507,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workbook** | **String**|  | 
+ **workbook** | **File**|  | 
  **format** | **String**| The format to convert. | [optional] 
  **password** | **String**| The workbook password. | [optional] 
  **out_path** | **String**| Path to save result | [optional] 
@@ -11525,6 +11580,60 @@ No authorization required
 
 
 
+# **cells_workbook_put_workbook_background**
+> CellsCloudResponse cells_workbook_put_workbook_background(name, png, opts)
+
+Set workbook background image.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+png = 'B' # String | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage: 'storage_example' # String | storage name.
+}
+
+begin
+  #Set workbook background image.
+  result = api_instance.cells_workbook_put_workbook_background(name, png, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_workbook_put_workbook_background: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **png** | **String**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **cells_workbook_put_workbook_create**
 > WorkbookResponse cells_workbook_put_workbook_create(name, opts)
 
@@ -11542,6 +11651,7 @@ name = 'name_example' # String | The new document name.
 opts = { 
   template_file: 'template_file_example', # String | The template file, if the data not provided default workbook is created.
   data_file: 'data_file_example', # String | Smart marker data file, if the data not provided the request content is checked for the data.
+  is_write_over: true, # BOOLEAN | write over file.
   folder: 'folder_example', # String | The new document folder.
   storage: 'storage_example' # String | storage name.
 }
@@ -11562,6 +11672,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The new document name. | 
  **template_file** | **String**| The template file, if the data not provided default workbook is created. | [optional] 
  **data_file** | **String**| Smart marker data file, if the data not provided the request content is checked for the data. | [optional] 
+ **is_write_over** | **BOOLEAN**| write over file. | [optional] 
  **folder** | **String**| The new document folder. | [optional] 
  **storage** | **String**| storage name. | [optional] 
 
@@ -12331,6 +12442,8 @@ opts = {
   format: 'format_example', # String | The exported file format.
   vertical_resolution: 0, # Integer | Image vertical resolution.
   horizontal_resolution: 0, # Integer | Image horizontal resolution.
+  area: 'area_example', # String | Exported area.
+  page_index: 56, # Integer | Exported page index.
   folder: 'folder_example', # String | The document folder.
   storage: 'storage_example' # String | storage name.
 }
@@ -12353,6 +12466,8 @@ Name | Type | Description  | Notes
  **format** | **String**| The exported file format. | [optional] 
  **vertical_resolution** | **Integer**| Image vertical resolution. | [optional] [default to 0]
  **horizontal_resolution** | **Integer**| Image horizontal resolution. | [optional] [default to 0]
+ **area** | **String**| Exported area. | [optional] 
+ **page_index** | **Integer**| Exported page index. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
  **storage** | **String**| storage name. | [optional] 
 

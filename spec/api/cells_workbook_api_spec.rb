@@ -634,5 +634,26 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  describe 'cells_workbook_delete_workbook_background test' do
+    it "should work" do
+      name = $BOOK1
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,   ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_delete_workbook_background(name,  {:folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+  describe 'cells_workbook_put_workbook_background test' do
+    it "should work" do
+      name = $BOOK1
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,   ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_put_workbook_background(name,  ::File.open(File.expand_path("data/WaterMark.png"),"r") {|io| io.read(io.size) } ,{:folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end

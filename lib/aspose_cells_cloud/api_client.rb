@@ -130,7 +130,6 @@ module AsposeCellsCloud
 
       add_o_auth_token(req_opts)
 
-
       conn = Faraday.new url, {:params => query_params, :headers => header_params} do |f|
       f.request :multipart
       f.request :url_encoded
@@ -144,7 +143,7 @@ module AsposeCellsCloud
       case http_method
         when :post
           return conn.post url, req_opts[:body]
-        when :put
+        when :put          
           return conn.put url, req_opts[:body]
         when :get
           return conn.get url, req_opts[:body]

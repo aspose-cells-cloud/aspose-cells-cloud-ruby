@@ -13534,6 +13534,69 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Set worksheet background image.
+    # 
+    # @param name 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage storage name.
+    # @return [CellsCloudResponse]
+    def cells_workbook_delete_workbook_background(name, opts = {})
+      data, _status_code, _headers = cells_workbook_delete_workbook_background_with_http_info(name, opts)
+      return data
+    end
+
+    # Set worksheet background image.
+    # 
+    # @param name 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_workbook_delete_workbook_background_with_http_info(name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_workbook_background ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_workbook_delete_workbook_background"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/background".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_workbook_delete_workbook_background\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Clean workbook's names.
     # 
     # @param name The workbook name.
@@ -14619,6 +14682,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :horizontal_resolution Image horizontal resolution. (default to 0)
     # @option opts [Integer] :vertical_resolution Image vertical resolution. (default to 0)
     # @option opts [String] :folder The workbook folder.
+    # @option opts [String] :out_folder out Folder.
     # @option opts [String] :storage storage name.
     # @return [SplitResultResponse]
     def cells_workbook_post_workbook_split(name, opts = {})
@@ -14636,6 +14700,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :horizontal_resolution Image horizontal resolution.
     # @option opts [Integer] :vertical_resolution Image vertical resolution.
     # @option opts [String] :folder The workbook folder.
+    # @option opts [String] :out_folder out Folder.
     # @option opts [String] :storage storage name.
     # @return [Array<(SplitResultResponse, Fixnum, Hash)>] SplitResultResponse data, response status code and response headers
     def cells_workbook_post_workbook_split_with_http_info(name, opts = {})
@@ -14658,6 +14723,7 @@ module AsposeCellsCloud
       query_params[:'horizontalResolution'] = opts[:'horizontal_resolution'] if !opts[:'horizontal_resolution'].nil?
       query_params[:'verticalResolution'] = opts[:'vertical_resolution'] if !opts[:'vertical_resolution'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'outFolder'] = opts[:'out_folder'] if !opts[:'out_folder'].nil?
       query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
 
       # header parameters
@@ -14949,12 +15015,12 @@ module AsposeCellsCloud
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
+
       # form parameters
       form_params = {}
 
       # http body (model)
-      # post_body = @api_client.object_to_http_body(workbook)
+#      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
       post_body = workbook
       #auth_names = []
       auth_names = ['JWT']
@@ -15015,8 +15081,7 @@ module AsposeCellsCloud
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
+
       # form parameters
       form_params = {}
 
@@ -15037,12 +15102,82 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Set workbook background image.
+    # 
+    # @param name 
+    # @param png 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage storage name.
+    # @return [CellsCloudResponse]
+    def cells_workbook_put_workbook_background(name, png, opts = {})
+      data, _status_code, _headers = cells_workbook_put_workbook_background_with_http_info(name, png, opts)
+      return data
+    end
+
+    # Set workbook background image.
+    # 
+    # @param name 
+    # @param png 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_workbook_put_workbook_background_with_http_info(name, png, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_workbook_background ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_workbook_put_workbook_background"
+      end
+      # verify the required parameter 'png' is set
+      if @api_client.config.client_side_validation && png.nil?
+        fail ArgumentError, "Missing the required parameter 'png' when calling CellsApi.cells_workbook_put_workbook_background"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/background".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(png)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_workbook_put_workbook_background\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Create new workbook using deferent methods.
     # 
     # @param name The new document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :template_file The template file, if the data not provided default workbook is created.
     # @option opts [String] :data_file Smart marker data file, if the data not provided the request content is checked for the data.
+    # @option opts [BOOLEAN] :is_write_over write over file.
     # @option opts [String] :folder The new document folder.
     # @option opts [String] :storage storage name.
     # @return [WorkbookResponse]
@@ -15057,6 +15192,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :template_file The template file, if the data not provided default workbook is created.
     # @option opts [String] :data_file Smart marker data file, if the data not provided the request content is checked for the data.
+    # @option opts [BOOLEAN] :is_write_over write over file.
     # @option opts [String] :folder The new document folder.
     # @option opts [String] :storage storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
@@ -15076,6 +15212,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'templateFile'] = opts[:'template_file'] if !opts[:'template_file'].nil?
       query_params[:'dataFile'] = opts[:'data_file'] if !opts[:'data_file'].nil?
+      query_params[:'isWriteOver'] = opts[:'is_write_over'] if !opts[:'is_write_over'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
 
@@ -16066,6 +16203,8 @@ module AsposeCellsCloud
     # @option opts [String] :format The exported file format.
     # @option opts [Integer] :vertical_resolution Image vertical resolution. (default to 0)
     # @option opts [Integer] :horizontal_resolution Image horizontal resolution. (default to 0)
+    # @option opts [String] :area Exported area.
+    # @option opts [Integer] :page_index Exported page index.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage storage name.
     # @return [File]
@@ -16082,6 +16221,8 @@ module AsposeCellsCloud
     # @option opts [String] :format The exported file format.
     # @option opts [Integer] :vertical_resolution Image vertical resolution.
     # @option opts [Integer] :horizontal_resolution Image horizontal resolution.
+    # @option opts [String] :area Exported area.
+    # @option opts [Integer] :page_index Exported page index.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
@@ -16106,6 +16247,8 @@ module AsposeCellsCloud
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'verticalResolution'] = opts[:'vertical_resolution'] if !opts[:'vertical_resolution'].nil?
       query_params[:'horizontalResolution'] = opts[:'horizontal_resolution'] if !opts[:'horizontal_resolution'].nil?
+      query_params[:'area'] = opts[:'area'] if !opts[:'area'].nil?
+      query_params[:'pageIndex'] = opts[:'page_index'] if !opts[:'page_index'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
 
@@ -19000,7 +19143,6 @@ module AsposeCellsCloud
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/octet-stream'])
       # form parameters
       form_params = {}
-      # form_params["File"] = file
 
       # http body (model)
       post_body = file
