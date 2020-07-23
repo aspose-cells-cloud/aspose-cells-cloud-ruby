@@ -47,7 +47,7 @@ describe 'CellsTaskApi' do
 #  taskData.setTasks(tasks);
 #  taskData.getTasks().add(task1);
       
-	  param1 = AsposeCellsCloud::SplitWorkbookTaskParameter.new({:DestinationFileFormat=>'xlsx' ,:DestinationFilePosition=> AsposeCellsCloud::FileSource.new({:FilePath=>$TEMPFOLDER,:FileSourceType=>'CloudFileSystem'}),:SplitNameRule=>'sheetname',:Workbook=>AsposeCellsCloud::FileSource.new({:FilePath=>$TEMPFOLDER +'\\' + $BOOK1,:FileSourceType=>'CloudFileSystem'})})
+	  param1 = AsposeCellsCloud::SplitWorkbookTaskParameter.new({:DestinationFileFormat=>'xlsx' ,:DestinationFilePosition=> AsposeCellsCloud::FileSource.new({:FileSourceType=>'CloudFileSystem'}),:SplitNameRule=>'sheetname',:Workbook=>AsposeCellsCloud::FileSource.new({:FilePath=>$TEMPFOLDER +'\\' + $BOOK1,:FileSourceType=>'CloudFileSystem'})})
 	  task1 =AsposeCellsCloud::TaskDescription.new({:TaskType=>'SplitWorkbook',:TaskParameter=>param1})
 	  task_data = AsposeCellsCloud::TaskData.new(:Tasks=>[task1])
     result = @instance.cells_task_post_run_task(task_data)

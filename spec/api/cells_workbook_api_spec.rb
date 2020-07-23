@@ -294,8 +294,9 @@ describe 'CellsWorkbookApi' do
       folder = $TEMPFOLDER
       out_path = nil
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      result = @instance.upload_file( folder+"/"+xml_file,  ::File.open(File.expand_path("data/"+xml_file),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0      
-      result = @instance.cells_workbook_post_workbook_get_smart_marker_result(name,  { :xml_file=>xml_file,:folder=>folder})
+      result = @instance.cells_workbook_post_workbook_get_smart_marker_result(name,  { :xml_file=>(folder+"/"+xml_file),:folder=>folder})
       # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -368,8 +369,9 @@ describe 'CellsWorkbookApi' do
       merge_with = 'myDocument.xlsx'
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      result = @instance.upload_file( folder+"/"+merge_with,  ::File.open(File.expand_path("data/"+merge_with),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_workbook_post_workbooks_merge(name, merge_with, { :folder=>folder})
+      result = @instance.cells_workbook_post_workbooks_merge(name,(folder+"/"+ merge_with), { :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -435,7 +437,7 @@ describe 'CellsWorkbookApi' do
       format = 'pdf'
       password = nil
       out_path = "Tdd.pdf"
-      result =  @instance.cells_workbook_put_convert_workbook(::File.open("data/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
+      result =  @instance.cells_workbook_put_convert_workbook(::File.open("/home/roy/aspose/cells/cloud/sdk/TestData/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
       # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -634,26 +636,5 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-  describe 'cells_workbook_delete_workbook_background test' do
-    it "should work" do
-      name = $BOOK1
-      folder = $TEMPFOLDER
-      result = @instance.upload_file( folder+"/"+name,   ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_workbook_delete_workbook_background(name,  {:folder=>folder})
-      expect(result.code).to eql(200)
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-  describe 'cells_workbook_put_workbook_background test' do
-    it "should work" do
-      name = $BOOK1
-      folder = $TEMPFOLDER
-      result = @instance.upload_file( folder+"/"+name,   ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_workbook_put_workbook_background(name,  ::File.open(File.expand_path("data/WaterMark.png"),"r") {|io| io.read(io.size) } ,{:folder=>folder})
-      expect(result.code).to eql(200)
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
+
 end

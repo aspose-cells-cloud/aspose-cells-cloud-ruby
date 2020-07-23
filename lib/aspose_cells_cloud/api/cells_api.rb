@@ -26,11 +26,12 @@ module AsposeCellsCloud
   class CellsApi
     attr_accessor :api_client
 
-    def initialize(app_sid,app_key, app_version = 'v3.0',  api_client = ApiClient.default)
+    def initialize(app_sid,app_key, app_version = 'v3.0', app_host = 'api.aspose.cloud', api_client = ApiClient.default)
       @api_client = api_client
       @api_client.config.app_key = app_key
       @api_client.config.app_sid = app_sid
       @api_client.config.api_version = app_version
+      @api_client.config.host = app_host
     end
 
     # Removes a date filter.             

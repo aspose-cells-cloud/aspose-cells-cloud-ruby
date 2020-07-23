@@ -116,8 +116,9 @@ describe 'CellsPicturesApi' do
       picture_path = 'WaterMark.png'
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      result = @instance.upload_file( folder+"/"+picture_path,  ::File.open(File.expand_path("data/"+picture_path),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_pictures_put_worksheet_add_picture(name, sheet_name,   {:picture=>picture, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :picture_path=>picture_path, :folder=>folder})
+      result = @instance.cells_pictures_put_worksheet_add_picture(name, sheet_name,   {:picture=>picture, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :lower_right_row=>lower_right_row, :lower_right_column=>lower_right_column, :picture_path=>(folder+"/"+picture_path), :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
