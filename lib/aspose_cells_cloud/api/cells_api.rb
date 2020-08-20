@@ -26,7 +26,7 @@ module AsposeCellsCloud
   class CellsApi
     attr_accessor :api_client
 
-    def initialize(app_sid,app_key, app_version = 'v3.0', app_host = 'api.aspose.cloud', api_client = ApiClient.default)
+    def initialize(app_sid,app_key, app_version = 'v3.0', app_host = 'api.aspose.cloud',  api_client = ApiClient.default)
       @api_client = api_client
       @api_client.config.app_key = app_key
       @api_client.config.app_sid = app_sid
@@ -48,7 +48,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :minute  (default to 0)
     # @option opts [Integer] :second  (default to 0)
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, opts = {})
       data, _status_code, _headers = cells_auto_filter_delete_worksheet_date_filter_with_http_info(name, sheet_name, field_index, date_time_grouping_type, opts)
@@ -69,7 +69,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :minute 
     # @option opts [Integer] :second 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_delete_worksheet_date_filter_with_http_info(name, sheet_name, field_index, date_time_grouping_type, opts = {})
       if @api_client.config.debugging
@@ -106,7 +106,7 @@ module AsposeCellsCloud
       query_params[:'minute'] = opts[:'minute'] if !opts[:'minute'].nil?
       query_params[:'second'] = opts[:'second'] if !opts[:'second'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -143,7 +143,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :criteria 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, opts = {})
       data, _status_code, _headers = cells_auto_filter_delete_worksheet_filter_with_http_info(name, sheet_name, field_index, opts)
@@ -158,7 +158,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :criteria 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_delete_worksheet_filter_with_http_info(name, sheet_name, field_index, opts = {})
       if @api_client.config.debugging
@@ -185,7 +185,7 @@ module AsposeCellsCloud
       query_params[:'fieldIndex'] = field_index
       query_params[:'criteria'] = opts[:'criteria'] if !opts[:'criteria'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -220,7 +220,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [AutoFilterResponse]
     def cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_auto_filter_get_worksheet_auto_filter_with_http_info(name, sheet_name, opts)
@@ -233,7 +233,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(AutoFilterResponse, Fixnum, Hash)>] AutoFilterResponse data, response status code and response headers
     def cells_auto_filter_get_worksheet_auto_filter_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -254,7 +254,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -289,7 +289,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info(name, sheet_name, opts)
@@ -302,7 +302,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -323,7 +323,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -359,7 +359,7 @@ module AsposeCellsCloud
     # @param field_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, opts = {})
       data, _status_code, _headers = cells_auto_filter_post_worksheet_match_blanks_with_http_info(name, sheet_name, field_index, opts)
@@ -373,7 +373,7 @@ module AsposeCellsCloud
     # @param field_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_match_blanks_with_http_info(name, sheet_name, field_index, opts = {})
       if @api_client.config.debugging
@@ -399,7 +399,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'fieldIndex'] = field_index
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -435,7 +435,7 @@ module AsposeCellsCloud
     # @param field_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, opts = {})
       data, _status_code, _headers = cells_auto_filter_post_worksheet_match_non_blanks_with_http_info(name, sheet_name, field_index, opts)
@@ -449,7 +449,7 @@ module AsposeCellsCloud
     # @param field_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_match_non_blanks_with_http_info(name, sheet_name, field_index, opts = {})
       if @api_client.config.debugging
@@ -475,7 +475,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'fieldIndex'] = field_index
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -515,7 +515,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_color_filter_with_http_info(name, sheet_name, range, field_index, opts)
@@ -533,7 +533,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_color_filter_with_http_info(name, sheet_name, range, field_index, opts = {})
       if @api_client.config.debugging
@@ -566,7 +566,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -610,7 +610,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_custom_filter_with_http_info(name, sheet_name, range, field_index, operator_type1, criteria1, opts)
@@ -632,7 +632,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_custom_filter_with_http_info(name, sheet_name, range, field_index, operator_type1, criteria1, opts = {})
       if @api_client.config.debugging
@@ -678,7 +678,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -724,7 +724,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_date_filter_with_http_info(name, sheet_name, range, field_index, date_time_grouping_type, opts)
@@ -748,7 +748,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_date_filter_with_http_info(name, sheet_name, range, field_index, date_time_grouping_type, opts = {})
       if @api_client.config.debugging
@@ -792,7 +792,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -832,7 +832,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_dynamic_filter_with_http_info(name, sheet_name, range, field_index, dynamic_filter_type, opts)
@@ -850,7 +850,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_dynamic_filter_with_http_info(name, sheet_name, range, field_index, dynamic_filter_type, opts = {})
       if @api_client.config.debugging
@@ -888,7 +888,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -928,7 +928,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_filter_with_http_info(name, sheet_name, range, field_index, criteria, opts)
@@ -946,7 +946,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_filter_with_http_info(name, sheet_name, range, field_index, criteria, opts = {})
       if @api_client.config.debugging
@@ -984,7 +984,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1026,7 +1026,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_filter_top10_with_http_info(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts)
@@ -1046,7 +1046,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_filter_top10_with_http_info(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts = {})
       if @api_client.config.debugging
@@ -1094,7 +1094,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1135,7 +1135,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, opts = {})
       data, _status_code, _headers = cells_auto_filter_put_worksheet_icon_filter_with_http_info(name, sheet_name, range, field_index, icon_set_type, icon_id, opts)
@@ -1154,7 +1154,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :match_blanks 
     # @option opts [BOOLEAN] :refresh 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_icon_filter_with_http_info(name, sheet_name, range, field_index, icon_set_type, icon_id, opts = {})
       if @api_client.config.debugging
@@ -1197,7 +1197,7 @@ module AsposeCellsCloud
       query_params[:'matchBlanks'] = opts[:'match_blanks'] if !opts[:'match_blanks'].nil?
       query_params[:'refresh'] = opts[:'refresh'] if !opts[:'refresh'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1234,7 +1234,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format Exported format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, opts = {})
       data, _status_code, _headers = cells_autoshapes_get_worksheet_autoshape_with_http_info(name, sheet_name, autoshape_number, opts)
@@ -1249,7 +1249,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format Exported format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_autoshapes_get_worksheet_autoshape_with_http_info(name, sheet_name, autoshape_number, opts = {})
       if @api_client.config.debugging
@@ -1275,7 +1275,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1310,7 +1310,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [AutoShapesResponse]
     def cells_autoshapes_get_worksheet_autoshapes(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_autoshapes_get_worksheet_autoshapes_with_http_info(name, sheet_name, opts)
@@ -1323,7 +1323,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(AutoShapesResponse, Fixnum, Hash)>] AutoShapesResponse data, response status code and response headers
     def cells_autoshapes_get_worksheet_autoshapes_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -1344,7 +1344,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1380,7 +1380,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ChartAreaResponse]
     def cells_chart_area_get_chart_area(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_chart_area_get_chart_area_with_http_info(name, sheet_name, chart_index, opts)
@@ -1394,7 +1394,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartAreaResponse, Fixnum, Hash)>] ChartAreaResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1419,7 +1419,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1455,7 +1455,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [LineResponse]
     def cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_chart_area_get_chart_area_border_with_http_info(name, sheet_name, chart_index, opts)
@@ -1469,7 +1469,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(LineResponse, Fixnum, Hash)>] LineResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_border_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1494,7 +1494,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1530,7 +1530,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [FillFormatResponse]
     def cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_chart_area_get_chart_area_fill_format_with_http_info(name, sheet_name, chart_index, opts)
@@ -1544,7 +1544,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(FillFormatResponse, Fixnum, Hash)>] FillFormatResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_fill_format_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1569,7 +1569,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1605,7 +1605,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_delete_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
@@ -1619,7 +1619,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1644,7 +1644,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1680,7 +1680,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_delete_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
@@ -1694,7 +1694,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1719,7 +1719,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1754,7 +1754,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_clear_charts(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_charts_delete_worksheet_clear_charts_with_http_info(name, sheet_name, opts)
@@ -1767,7 +1767,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_clear_charts_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -1788,7 +1788,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1824,7 +1824,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ChartsResponse]
     def cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts)
@@ -1838,7 +1838,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
     def cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -1863,7 +1863,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1900,7 +1900,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported file format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_charts_get_worksheet_chart(name, sheet_name, chart_number, opts = {})
       data, _status_code, _headers = cells_charts_get_worksheet_chart_with_http_info(name, sheet_name, chart_number, opts)
@@ -1915,7 +1915,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported file format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_charts_get_worksheet_chart_with_http_info(name, sheet_name, chart_number, opts = {})
       if @api_client.config.debugging
@@ -1941,7 +1941,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -1977,7 +1977,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [LegendResponse]
     def cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_get_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
@@ -1991,7 +1991,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(LegendResponse, Fixnum, Hash)>] LegendResponse data, response status code and response headers
     def cells_charts_get_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2016,7 +2016,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2052,7 +2052,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TitleResponse]
     def cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_get_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
@@ -2066,7 +2066,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
     def cells_charts_get_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2091,7 +2091,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2126,7 +2126,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ChartsResponse]
     def cells_charts_get_worksheet_charts(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_charts_get_worksheet_charts_with_http_info(name, sheet_name, opts)
@@ -2139,7 +2139,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
     def cells_charts_get_worksheet_charts_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -2160,7 +2160,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2197,7 +2197,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Chart] :chart 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_post_worksheet_chart_with_http_info(name, sheet_name, chart_index, opts)
@@ -2212,7 +2212,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Chart] :chart 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2237,7 +2237,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2274,7 +2274,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Legend] :legend 
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [LegendResponse]
     def cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
@@ -2289,7 +2289,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Legend] :legend 
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(LegendResponse, Fixnum, Hash)>] LegendResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2314,7 +2314,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2351,7 +2351,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Title] :title Chart title
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TitleResponse]
     def cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
@@ -2366,7 +2366,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Title] :title Chart title
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2391,7 +2391,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2436,7 +2436,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_get_serial_name Specifies whether auto update serial name.  (default to true)
     # @option opts [String] :title Specifies chart title name.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ChartsResponse]
     def cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts)
@@ -2459,7 +2459,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_get_serial_name Specifies whether auto update serial name. 
     # @option opts [String] :title Specifies chart title name.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
     def cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts = {})
       if @api_client.config.debugging
@@ -2494,7 +2494,7 @@ module AsposeCellsCloud
       query_params[:'isAutoGetSerialName'] = opts[:'is_auto_get_serial_name'] if !opts[:'is_auto_get_serial_name'].nil?
       query_params[:'title'] = opts[:'title'] if !opts[:'title'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2530,7 +2530,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
@@ -2544,7 +2544,7 @@ module AsposeCellsCloud
     # @param chart_index The chart index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2569,7 +2569,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2606,7 +2606,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Title] :title Chart title.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TitleResponse]
     def cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
@@ -2621,7 +2621,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Title] :title Chart title.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
     def cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
@@ -2646,7 +2646,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2682,7 +2682,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts)
@@ -2696,7 +2696,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -2721,7 +2721,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2760,7 +2760,7 @@ module AsposeCellsCloud
     # @param total_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
@@ -2777,7 +2777,7 @@ module AsposeCellsCloud
     # @param total_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       if @api_client.config.debugging
@@ -2818,7 +2818,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = total_rows
       query_params[:'totalColumns'] = total_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2853,7 +2853,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts)
@@ -2866,7 +2866,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -2887,7 +2887,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2923,7 +2923,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ConditionalFormattingResponse]
     def cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts)
@@ -2937,7 +2937,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ConditionalFormattingResponse, Fixnum, Hash)>] ConditionalFormattingResponse data, response status code and response headers
     def cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -2962,7 +2962,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -2997,7 +2997,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ConditionalFormattingsResponse]
     def cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts)
@@ -3010,7 +3010,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ConditionalFormattingsResponse, Fixnum, Hash)>] ConditionalFormattingsResponse data, response status code and response headers
     def cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -3031,7 +3031,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3068,7 +3068,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [FormatCondition] :format_condition 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info(name, sheet_name, cell_area, opts)
@@ -3083,7 +3083,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [FormatCondition] :format_condition 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info(name, sheet_name, cell_area, opts = {})
       if @api_client.config.debugging
@@ -3109,7 +3109,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'cellArea'] = cell_area
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3150,7 +3150,7 @@ module AsposeCellsCloud
     # @param formula2 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_with_http_info(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts)
@@ -3169,7 +3169,7 @@ module AsposeCellsCloud
     # @param formula2 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_with_http_info(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts = {})
       if @api_client.config.debugging
@@ -3219,7 +3219,7 @@ module AsposeCellsCloud
       query_params[:'formula1'] = formula1
       query_params[:'formula2'] = formula2
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3256,7 +3256,7 @@ module AsposeCellsCloud
     # @param cell_area 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cell_area, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info(name, sheet_name, index, cell_area, opts)
@@ -3271,7 +3271,7 @@ module AsposeCellsCloud
     # @param cell_area 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info(name, sheet_name, index, cell_area, opts = {})
       if @api_client.config.debugging
@@ -3301,7 +3301,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'cellArea'] = cell_area
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3341,7 +3341,7 @@ module AsposeCellsCloud
     # @param formula2 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index, type, operator_type, formula1, formula2, opts = {})
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info(name, sheet_name, index, type, operator_type, formula1, formula2, opts)
@@ -3359,7 +3359,7 @@ module AsposeCellsCloud
     # @param formula2 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info(name, sheet_name, index, type, operator_type, formula1, formula2, opts = {})
       if @api_client.config.debugging
@@ -3404,7 +3404,7 @@ module AsposeCellsCloud
       query_params[:'formula1'] = formula1
       query_params[:'formula2'] = formula2
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3442,7 +3442,7 @@ module AsposeCellsCloud
     # @param update_reference The update reference.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ColumnsResponse]
     def cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, opts = {})
       data, _status_code, _headers = cells_delete_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, update_reference, opts)
@@ -3458,7 +3458,7 @@ module AsposeCellsCloud
     # @param update_reference The update reference.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnsResponse, Fixnum, Hash)>] ColumnsResponse data, response status code and response headers
     def cells_delete_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, update_reference, opts = {})
       if @api_client.config.debugging
@@ -3493,7 +3493,7 @@ module AsposeCellsCloud
       query_params[:'columns'] = columns
       query_params[:'updateReference'] = update_reference
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3529,7 +3529,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_delete_worksheet_row(name, sheet_name, row_index, opts = {})
       data, _status_code, _headers = cells_delete_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
@@ -3543,7 +3543,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_delete_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
       if @api_client.config.debugging
@@ -3568,7 +3568,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3606,7 +3606,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :total_rows Number of rows to be operated. (default to 1)
     # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets. (default to true)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_delete_worksheet_rows(name, sheet_name, startrow, opts = {})
       data, _status_code, _headers = cells_delete_worksheet_rows_with_http_info(name, sheet_name, startrow, opts)
@@ -3622,7 +3622,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :total_rows Number of rows to be operated.
     # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_delete_worksheet_rows_with_http_info(name, sheet_name, startrow, opts = {})
       if @api_client.config.debugging
@@ -3650,7 +3650,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = opts[:'total_rows'] if !opts[:'total_rows'].nil?
       query_params[:'updateReference'] = opts[:'update_reference'] if !opts[:'update_reference'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3686,7 +3686,7 @@ module AsposeCellsCloud
     # @param cell_name The cell&#39;s  name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_get_cell_html_string(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts)
@@ -3700,7 +3700,7 @@ module AsposeCellsCloud
     # @param cell_name The cell&#39;s  name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -3725,7 +3725,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3761,7 +3761,7 @@ module AsposeCellsCloud
     # @param cell_or_method_name The cell&#39;s or method name. (Method name like firstcell, endcell etc.)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_get_worksheet_cell(name, sheet_name, cell_or_method_name, opts = {})
       data, _status_code, _headers = cells_get_worksheet_cell_with_http_info(name, sheet_name, cell_or_method_name, opts)
@@ -3775,7 +3775,7 @@ module AsposeCellsCloud
     # @param cell_or_method_name The cell&#39;s or method name. (Method name like firstcell, endcell etc.)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_get_worksheet_cell_with_http_info(name, sheet_name, cell_or_method_name, opts = {})
       if @api_client.config.debugging
@@ -3800,7 +3800,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3836,7 +3836,7 @@ module AsposeCellsCloud
     # @param cell_name Cell&#39;s name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_get_worksheet_cell_style(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_get_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts)
@@ -3850,7 +3850,7 @@ module AsposeCellsCloud
     # @param cell_name Cell&#39;s name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_get_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -3875,7 +3875,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3912,7 +3912,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :offest Begginig offset. (default to 0)
     # @option opts [Integer] :count Maximum amount of cells in the response. (default to 0)
     # @option opts [String] :folder Document&#39;s folder name.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsResponse]
     def cells_get_worksheet_cells(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_get_worksheet_cells_with_http_info(name, sheet_name, opts)
@@ -3927,7 +3927,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :offest Begginig offset.
     # @option opts [Integer] :count Maximum amount of cells in the response.
     # @option opts [String] :folder Document&#39;s folder name.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsResponse, Fixnum, Hash)>] CellsResponse data, response status code and response headers
     def cells_get_worksheet_cells_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -3950,7 +3950,7 @@ module AsposeCellsCloud
       query_params[:'offest'] = opts[:'offest'] if !opts[:'offest'].nil?
       query_params[:'count'] = opts[:'count'] if !opts[:'count'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -3986,7 +3986,7 @@ module AsposeCellsCloud
     # @param column_index The column index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ColumnResponse]
     def cells_get_worksheet_column(name, sheet_name, column_index, opts = {})
       data, _status_code, _headers = cells_get_worksheet_column_with_http_info(name, sheet_name, column_index, opts)
@@ -4000,7 +4000,7 @@ module AsposeCellsCloud
     # @param column_index The column index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnResponse, Fixnum, Hash)>] ColumnResponse data, response status code and response headers
     def cells_get_worksheet_column_with_http_info(name, sheet_name, column_index, opts = {})
       if @api_client.config.debugging
@@ -4025,7 +4025,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4060,7 +4060,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workdook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ColumnsResponse]
     def cells_get_worksheet_columns(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_get_worksheet_columns_with_http_info(name, sheet_name, opts)
@@ -4073,7 +4073,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workdook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnsResponse, Fixnum, Hash)>] ColumnsResponse data, response status code and response headers
     def cells_get_worksheet_columns_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4094,7 +4094,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4130,7 +4130,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RowResponse]
     def cells_get_worksheet_row(name, sheet_name, row_index, opts = {})
       data, _status_code, _headers = cells_get_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
@@ -4144,7 +4144,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RowResponse, Fixnum, Hash)>] RowResponse data, response status code and response headers
     def cells_get_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
       if @api_client.config.debugging
@@ -4169,7 +4169,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4204,7 +4204,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workdook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RowsResponse]
     def cells_get_worksheet_rows(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_get_worksheet_rows_with_http_info(name, sheet_name, opts)
@@ -4217,7 +4217,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workdook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RowsResponse, Fixnum, Hash)>] RowsResponse data, response status code and response headers
     def cells_get_worksheet_rows_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4238,7 +4238,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4274,7 +4274,7 @@ module AsposeCellsCloud
     # @param hyperlink_index The hyperlink&#39;s index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_delete_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
       data, _status_code, _headers = cells_hypelinks_delete_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
@@ -4288,7 +4288,7 @@ module AsposeCellsCloud
     # @param hyperlink_index The hyperlink&#39;s index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_delete_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
       if @api_client.config.debugging
@@ -4313,7 +4313,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4348,7 +4348,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_delete_worksheet_hyperlinks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_hypelinks_delete_worksheet_hyperlinks_with_http_info(name, sheet_name, opts)
@@ -4361,7 +4361,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_delete_worksheet_hyperlinks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4382,7 +4382,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4418,7 +4418,7 @@ module AsposeCellsCloud
     # @param hyperlink_index The hyperlink&#39;s index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HyperlinkResponse]
     def cells_hypelinks_get_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
       data, _status_code, _headers = cells_hypelinks_get_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
@@ -4432,7 +4432,7 @@ module AsposeCellsCloud
     # @param hyperlink_index The hyperlink&#39;s index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
     def cells_hypelinks_get_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
       if @api_client.config.debugging
@@ -4457,7 +4457,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4492,7 +4492,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HyperlinksResponse]
     def cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_hypelinks_get_worksheet_hyperlinks_with_http_info(name, sheet_name, opts)
@@ -4505,7 +4505,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinksResponse, Fixnum, Hash)>] HyperlinksResponse data, response status code and response headers
     def cells_hypelinks_get_worksheet_hyperlinks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4526,7 +4526,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4563,7 +4563,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Hyperlink] :hyperlink Hyperlink object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HyperlinkResponse]
     def cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
       data, _status_code, _headers = cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
@@ -4578,7 +4578,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Hyperlink] :hyperlink Hyperlink object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
     def cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
       if @api_client.config.debugging
@@ -4603,7 +4603,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4643,7 +4643,7 @@ module AsposeCellsCloud
     # @param address 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HyperlinkResponse]
     def cells_hypelinks_put_worksheet_hyperlink(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
       data, _status_code, _headers = cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts)
@@ -4661,7 +4661,7 @@ module AsposeCellsCloud
     # @param address 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
     def cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
       if @api_client.config.debugging
@@ -4707,7 +4707,7 @@ module AsposeCellsCloud
       query_params[:'totalColumns'] = total_columns
       query_params[:'address'] = address
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4743,7 +4743,7 @@ module AsposeCellsCloud
     # @param list_object_index List object index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_delete_worksheet_list_object(name, sheet_name, list_object_index, opts = {})
       data, _status_code, _headers = cells_list_objects_delete_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts)
@@ -4757,7 +4757,7 @@ module AsposeCellsCloud
     # @param list_object_index List object index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_delete_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts = {})
       if @api_client.config.debugging
@@ -4782,7 +4782,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4817,7 +4817,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_delete_worksheet_list_objects(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_list_objects_delete_worksheet_list_objects_with_http_info(name, sheet_name, opts)
@@ -4830,7 +4830,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_delete_worksheet_list_objects_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4851,7 +4851,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4887,7 +4887,7 @@ module AsposeCellsCloud
     # @param listobjectindex list object index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ListObjectResponse]
     def cells_list_objects_get_worksheet_list_object(name, sheet_name, listobjectindex, opts = {})
       data, _status_code, _headers = cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts)
@@ -4901,7 +4901,7 @@ module AsposeCellsCloud
     # @param listobjectindex list object index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ListObjectResponse, Fixnum, Hash)>] ListObjectResponse data, response status code and response headers
     def cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts = {})
       if @api_client.config.debugging
@@ -4926,7 +4926,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -4961,7 +4961,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ListObjectsResponse]
     def cells_list_objects_get_worksheet_list_objects(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_list_objects_get_worksheet_list_objects_with_http_info(name, sheet_name, opts)
@@ -4974,7 +4974,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ListObjectsResponse, Fixnum, Hash)>] ListObjectsResponse data, response status code and response headers
     def cells_list_objects_get_worksheet_list_objects_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -4995,7 +4995,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5032,7 +5032,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ListObject] :list_object listObject dto in request body.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object(name, sheet_name, list_object_index, opts = {})
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts)
@@ -5047,7 +5047,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ListObject] :list_object listObject dto in request body.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts = {})
       if @api_client.config.debugging
@@ -5072,7 +5072,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5108,7 +5108,7 @@ module AsposeCellsCloud
     # @param list_object_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_convert_to_range(name, sheet_name, list_object_index, opts = {})
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info(name, sheet_name, list_object_index, opts)
@@ -5122,7 +5122,7 @@ module AsposeCellsCloud
     # @param list_object_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info(name, sheet_name, list_object_index, opts = {})
       if @api_client.config.debugging
@@ -5147,7 +5147,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5184,7 +5184,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [DataSorter] :data_sorter 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_sort_table(name, sheet_name, list_object_index, opts = {})
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_sort_table_with_http_info(name, sheet_name, list_object_index, opts)
@@ -5199,7 +5199,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [DataSorter] :data_sorter 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_sort_table_with_http_info(name, sheet_name, list_object_index, opts = {})
       if @api_client.config.debugging
@@ -5224,7 +5224,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5262,7 +5262,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CreatePivotTableRequest] :request 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table(name, sheet_name, list_object_index, destsheet_name, opts = {})
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info(name, sheet_name, list_object_index, destsheet_name, opts)
@@ -5278,7 +5278,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CreatePivotTableRequest] :request 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info(name, sheet_name, list_object_index, destsheet_name, opts = {})
       if @api_client.config.debugging
@@ -5308,7 +5308,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'destsheetName'] = destsheet_name
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5349,7 +5349,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :has_headers Whether the range has headers. (default to true)
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ListObjectResponse]
     def cells_list_objects_put_worksheet_list_object(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
       data, _status_code, _headers = cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts)
@@ -5368,7 +5368,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :has_headers Whether the range has headers.
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ListObjectResponse, Fixnum, Hash)>] ListObjectResponse data, response status code and response headers
     def cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
       if @api_client.config.debugging
@@ -5410,7 +5410,7 @@ module AsposeCellsCloud
       query_params[:'endColumn'] = end_column
       query_params[:'hasHeaders'] = opts[:'has_headers'] if !opts[:'has_headers'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5446,7 +5446,7 @@ module AsposeCellsCloud
     # @param ole_object_index Ole object index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, opts = {})
       data, _status_code, _headers = cells_ole_objects_delete_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts)
@@ -5460,7 +5460,7 @@ module AsposeCellsCloud
     # @param ole_object_index Ole object index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_delete_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts = {})
       if @api_client.config.debugging
@@ -5485,7 +5485,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5520,7 +5520,7 @@ module AsposeCellsCloud
     # @param sheet_name The worsheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ole_objects_delete_worksheet_ole_objects_with_http_info(name, sheet_name, opts)
@@ -5533,7 +5533,7 @@ module AsposeCellsCloud
     # @param sheet_name The worsheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_delete_worksheet_ole_objects_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -5554,7 +5554,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5591,7 +5591,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported object format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, opts = {})
       data, _status_code, _headers = cells_ole_objects_get_worksheet_ole_object_with_http_info(name, sheet_name, object_number, opts)
@@ -5606,7 +5606,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported object format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_ole_objects_get_worksheet_ole_object_with_http_info(name, sheet_name, object_number, opts = {})
       if @api_client.config.debugging
@@ -5632,7 +5632,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5667,7 +5667,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [OleObjectsResponse]
     def cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ole_objects_get_worksheet_ole_objects_with_http_info(name, sheet_name, opts)
@@ -5680,7 +5680,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(OleObjectsResponse, Fixnum, Hash)>] OleObjectsResponse data, response status code and response headers
     def cells_ole_objects_get_worksheet_ole_objects_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -5701,7 +5701,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5738,7 +5738,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [OleObject] :ole Ole Object
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, opts = {})
       data, _status_code, _headers = cells_ole_objects_post_update_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts)
@@ -5753,7 +5753,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [OleObject] :ole Ole Object
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_post_update_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts = {})
       if @api_client.config.debugging
@@ -5778,7 +5778,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5820,7 +5820,7 @@ module AsposeCellsCloud
     # @option opts [String] :ole_file OLE filename
     # @option opts [String] :image_file Image filename
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [OleObjectResponse]
     def cells_ole_objects_put_worksheet_ole_object(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts)
@@ -5840,7 +5840,7 @@ module AsposeCellsCloud
     # @option opts [String] :ole_file OLE filename
     # @option opts [String] :image_file Image filename
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(OleObjectResponse, Fixnum, Hash)>] OleObjectResponse data, response status code and response headers
     def cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -5867,7 +5867,7 @@ module AsposeCellsCloud
       query_params[:'oleFile'] = opts[:'ole_file'] if !opts[:'ole_file'].nil?
       query_params[:'imageFile'] = opts[:'image_file'] if !opts[:'image_file'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5903,7 +5903,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_page_breaks_delete_horizontal_page_break_with_http_info(name, sheet_name, index, opts)
@@ -5917,7 +5917,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_horizontal_page_break_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -5942,7 +5942,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -5978,7 +5978,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_delete_horizontal_page_breaks_with_http_info(name, sheet_name, opts)
@@ -5992,7 +5992,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_horizontal_page_breaks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6014,7 +6014,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'row'] = opts[:'row'] if !opts[:'row'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6050,7 +6050,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_page_breaks_delete_vertical_page_break_with_http_info(name, sheet_name, index, opts)
@@ -6064,7 +6064,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_vertical_page_break_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -6089,7 +6089,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6125,7 +6125,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :column 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_delete_vertical_page_breaks_with_http_info(name, sheet_name, opts)
@@ -6139,7 +6139,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :column 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_vertical_page_breaks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6161,7 +6161,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'column'] = opts[:'column'] if !opts[:'column'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6197,7 +6197,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HorizontalPageBreakResponse]
     def cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_page_breaks_get_horizontal_page_break_with_http_info(name, sheet_name, index, opts)
@@ -6211,7 +6211,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HorizontalPageBreakResponse, Fixnum, Hash)>] HorizontalPageBreakResponse data, response status code and response headers
     def cells_page_breaks_get_horizontal_page_break_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -6236,7 +6236,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6271,7 +6271,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [HorizontalPageBreaksResponse]
     def cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_get_horizontal_page_breaks_with_http_info(name, sheet_name, opts)
@@ -6284,7 +6284,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(HorizontalPageBreaksResponse, Fixnum, Hash)>] HorizontalPageBreaksResponse data, response status code and response headers
     def cells_page_breaks_get_horizontal_page_breaks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6305,7 +6305,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6341,7 +6341,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [VerticalPageBreakResponse]
     def cells_page_breaks_get_vertical_page_break(name, sheet_name, index, opts = {})
       data, _status_code, _headers = cells_page_breaks_get_vertical_page_break_with_http_info(name, sheet_name, index, opts)
@@ -6355,7 +6355,7 @@ module AsposeCellsCloud
     # @param index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(VerticalPageBreakResponse, Fixnum, Hash)>] VerticalPageBreakResponse data, response status code and response headers
     def cells_page_breaks_get_vertical_page_break_with_http_info(name, sheet_name, index, opts = {})
       if @api_client.config.debugging
@@ -6380,7 +6380,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6415,7 +6415,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [VerticalPageBreaksResponse]
     def cells_page_breaks_get_vertical_page_breaks(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_get_vertical_page_breaks_with_http_info(name, sheet_name, opts)
@@ -6428,7 +6428,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(VerticalPageBreaksResponse, Fixnum, Hash)>] VerticalPageBreaksResponse data, response status code and response headers
     def cells_page_breaks_get_vertical_page_breaks_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6449,7 +6449,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6489,7 +6489,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :start_column 
     # @option opts [Integer] :end_column 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_put_horizontal_page_break(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_put_horizontal_page_break_with_http_info(name, sheet_name, opts)
@@ -6507,7 +6507,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :start_column 
     # @option opts [Integer] :end_column 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_put_horizontal_page_break_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6533,7 +6533,7 @@ module AsposeCellsCloud
       query_params[:'startColumn'] = opts[:'start_column'] if !opts[:'start_column'].nil?
       query_params[:'endColumn'] = opts[:'end_column'] if !opts[:'end_column'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6573,7 +6573,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :start_row 
     # @option opts [Integer] :end_row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_put_vertical_page_break(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_breaks_put_vertical_page_break_with_http_info(name, sheet_name, opts)
@@ -6591,7 +6591,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :start_row 
     # @option opts [Integer] :end_row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_put_vertical_page_break_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6617,7 +6617,7 @@ module AsposeCellsCloud
       query_params[:'startRow'] = opts[:'start_row'] if !opts[:'start_row'].nil?
       query_params[:'endRow'] = opts[:'end_row'] if !opts[:'end_row'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6652,7 +6652,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_delete_header_footer(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_setup_delete_header_footer_with_http_info(name, sheet_name, opts)
@@ -6665,7 +6665,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_delete_header_footer_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6686,7 +6686,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6721,7 +6721,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PageSectionsResponse]
     def cells_page_setup_get_footer(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_setup_get_footer_with_http_info(name, sheet_name, opts)
@@ -6734,7 +6734,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSectionsResponse, Fixnum, Hash)>] PageSectionsResponse data, response status code and response headers
     def cells_page_setup_get_footer_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6755,7 +6755,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6790,7 +6790,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PageSectionsResponse]
     def cells_page_setup_get_header(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_setup_get_header_with_http_info(name, sheet_name, opts)
@@ -6803,7 +6803,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSectionsResponse, Fixnum, Hash)>] PageSectionsResponse data, response status code and response headers
     def cells_page_setup_get_header_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6824,7 +6824,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6859,7 +6859,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PageSetupResponse]
     def cells_page_setup_get_page_setup(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_setup_get_page_setup_with_http_info(name, sheet_name, opts)
@@ -6872,7 +6872,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSetupResponse, Fixnum, Hash)>] PageSetupResponse data, response status code and response headers
     def cells_page_setup_get_page_setup_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -6893,7 +6893,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -6931,7 +6931,7 @@ module AsposeCellsCloud
     # @param is_first_page 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_footer(name, sheet_name, section, script, is_first_page, opts = {})
       data, _status_code, _headers = cells_page_setup_post_footer_with_http_info(name, sheet_name, section, script, is_first_page, opts)
@@ -6947,7 +6947,7 @@ module AsposeCellsCloud
     # @param is_first_page 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_footer_with_http_info(name, sheet_name, section, script, is_first_page, opts = {})
       if @api_client.config.debugging
@@ -6983,7 +6983,7 @@ module AsposeCellsCloud
       query_params[:'script'] = script
       query_params[:'isFirstPage'] = is_first_page
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7021,7 +7021,7 @@ module AsposeCellsCloud
     # @param is_first_page 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_header(name, sheet_name, section, script, is_first_page, opts = {})
       data, _status_code, _headers = cells_page_setup_post_header_with_http_info(name, sheet_name, section, script, is_first_page, opts)
@@ -7037,7 +7037,7 @@ module AsposeCellsCloud
     # @param is_first_page 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_header_with_http_info(name, sheet_name, section, script, is_first_page, opts = {})
       if @api_client.config.debugging
@@ -7073,7 +7073,7 @@ module AsposeCellsCloud
       query_params[:'script'] = script
       query_params[:'isFirstPage'] = is_first_page
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7109,7 +7109,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PageSetup] :page_setup 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_page_setup(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_page_setup_post_page_setup_with_http_info(name, sheet_name, opts)
@@ -7123,7 +7123,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PageSetup] :page_setup 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_page_setup_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -7144,7 +7144,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7180,7 +7180,7 @@ module AsposeCellsCloud
     # @param picture_index Picture index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, opts = {})
       data, _status_code, _headers = cells_pictures_delete_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
@@ -7194,7 +7194,7 @@ module AsposeCellsCloud
     # @param picture_index Picture index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_delete_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
       if @api_client.config.debugging
@@ -7219,7 +7219,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7254,7 +7254,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_delete_worksheet_pictures(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pictures_delete_worksheet_pictures_with_http_info(name, sheet_name, opts)
@@ -7267,7 +7267,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_delete_worksheet_pictures_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -7288,7 +7288,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7325,7 +7325,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported object format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_pictures_get_worksheet_picture(name, sheet_name, picture_index, opts = {})
       data, _status_code, _headers = cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
@@ -7340,7 +7340,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format The exported object format.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
       if @api_client.config.debugging
@@ -7366,7 +7366,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7401,7 +7401,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PicturesResponse]
     def cells_pictures_get_worksheet_pictures(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pictures_get_worksheet_pictures_with_http_info(name, sheet_name, opts)
@@ -7414,7 +7414,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PicturesResponse, Fixnum, Hash)>] PicturesResponse data, response status code and response headers
     def cells_pictures_get_worksheet_pictures_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -7435,7 +7435,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7472,7 +7472,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Picture] :picture Picture object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PictureResponse]
     def cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, opts = {})
       data, _status_code, _headers = cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
@@ -7487,7 +7487,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Picture] :picture Picture object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PictureResponse, Fixnum, Hash)>] PictureResponse data, response status code and response headers
     def cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
       if @api_client.config.debugging
@@ -7512,7 +7512,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7553,7 +7553,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :lower_right_column The image low right column. (default to 0)
     # @option opts [String] :picture_path The picture path, if not provided the picture data is inspected in the request body.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PicturesResponse]
     def cells_pictures_put_worksheet_add_picture(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts)
@@ -7572,7 +7572,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :lower_right_column The image low right column.
     # @option opts [String] :picture_path The picture path, if not provided the picture data is inspected in the request body.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PicturesResponse, Fixnum, Hash)>] PicturesResponse data, response status code and response headers
     def cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -7598,7 +7598,7 @@ module AsposeCellsCloud
       query_params[:'lowerRightColumn'] = opts[:'lower_right_column'] if !opts[:'lower_right_column'].nil?
       query_params[:'picturePath'] = opts[:'picture_path'] if !opts[:'picture_path'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7636,7 +7636,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PivotTableFieldRequest] :request Dto that conrains field indexes
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
       data, _status_code, _headers = cells_pivot_tables_delete_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts)
@@ -7652,7 +7652,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PivotTableFieldRequest] :request Dto that conrains field indexes
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
       if @api_client.config.debugging
@@ -7682,7 +7682,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'pivotFieldType'] = pivot_field_type
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7718,7 +7718,7 @@ module AsposeCellsCloud
     # @param pivot_table_index Pivot table index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -7732,7 +7732,7 @@ module AsposeCellsCloud
     # @param pivot_table_index Pivot table index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -7757,7 +7757,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7795,7 +7795,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, field_index, opts)
@@ -7811,7 +7811,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, field_index, opts = {})
       if @api_client.config.debugging
@@ -7841,7 +7841,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7878,7 +7878,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -7893,7 +7893,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -7919,7 +7919,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -7954,7 +7954,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info(name, sheet_name, opts)
@@ -7967,7 +7967,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -7988,7 +7988,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8026,7 +8026,7 @@ module AsposeCellsCloud
     # @param pivot_field_type The fields area type.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PivotFieldResponse]
     def cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts = {})
       data, _status_code, _headers = cells_pivot_tables_get_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts)
@@ -8042,7 +8042,7 @@ module AsposeCellsCloud
     # @param pivot_field_type The fields area type.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFieldResponse, Fixnum, Hash)>] PivotFieldResponse data, response status code and response headers
     def cells_pivot_tables_get_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts = {})
       if @api_client.config.debugging
@@ -8077,7 +8077,7 @@ module AsposeCellsCloud
       query_params[:'pivotFieldIndex'] = pivot_field_index
       query_params[:'pivotFieldType'] = pivot_field_type
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8113,7 +8113,7 @@ module AsposeCellsCloud
     # @param pivottable_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PivotTableResponse]
     def cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_with_http_info(name, sheet_name, pivottable_index, opts)
@@ -8127,7 +8127,7 @@ module AsposeCellsCloud
     # @param pivottable_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotTableResponse, Fixnum, Hash)>] PivotTableResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_with_http_info(name, sheet_name, pivottable_index, opts = {})
       if @api_client.config.debugging
@@ -8152,7 +8152,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8189,7 +8189,7 @@ module AsposeCellsCloud
     # @param filter_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PivotFilterResponse]
     def cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, filter_index, opts)
@@ -8204,7 +8204,7 @@ module AsposeCellsCloud
     # @param filter_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFilterResponse, Fixnum, Hash)>] PivotFilterResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, filter_index, opts = {})
       if @api_client.config.debugging
@@ -8233,7 +8233,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8269,7 +8269,7 @@ module AsposeCellsCloud
     # @param pivot_table_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PivotFiltersResponse]
     def cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -8283,7 +8283,7 @@ module AsposeCellsCloud
     # @param pivot_table_index 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFiltersResponse, Fixnum, Hash)>] PivotFiltersResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -8308,7 +8308,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8343,7 +8343,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [PivotTablesResponse]
     def cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_tables_with_http_info(name, sheet_name, opts)
@@ -8356,7 +8356,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotTablesResponse, Fixnum, Hash)>] PivotTablesResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_tables_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -8377,7 +8377,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8417,7 +8417,7 @@ module AsposeCellsCloud
     # @option opts [Style] :style Style dto in request body.
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_cell_style_with_http_info(name, sheet_name, pivot_table_index, column, row, opts)
@@ -8435,7 +8435,7 @@ module AsposeCellsCloud
     # @option opts [Style] :style Style dto in request body.
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_cell_style_with_http_info(name, sheet_name, pivot_table_index, column, row, opts = {})
       if @api_client.config.debugging
@@ -8471,7 +8471,7 @@ module AsposeCellsCloud
       query_params[:'row'] = row
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8512,7 +8512,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts)
@@ -8531,7 +8531,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts = {})
       if @api_client.config.debugging
@@ -8577,7 +8577,7 @@ module AsposeCellsCloud
       query_params[:'isHide'] = is_hide
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8616,7 +8616,7 @@ module AsposeCellsCloud
     # @param to 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, from, to, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_field_move_to_with_http_info(name, sheet_name, pivot_table_index, field_index, from, to, opts)
@@ -8633,7 +8633,7 @@ module AsposeCellsCloud
     # @param to 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_field_move_to_with_http_info(name, sheet_name, pivot_table_index, field_index, from, to, opts = {})
       if @api_client.config.debugging
@@ -8673,7 +8673,7 @@ module AsposeCellsCloud
       query_params[:'from'] = from
       query_params[:'to'] = to
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8711,7 +8711,7 @@ module AsposeCellsCloud
     # @option opts [Style] :style Style dto in request body.
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_style_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -8727,7 +8727,7 @@ module AsposeCellsCloud
     # @option opts [Style] :style Style dto in request body.
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_style_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -8753,7 +8753,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8789,7 +8789,7 @@ module AsposeCellsCloud
     # @param pivot_table_index Pivot table index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -8803,7 +8803,7 @@ module AsposeCellsCloud
     # @param pivot_table_index Pivot table index
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -8828,7 +8828,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8867,7 +8867,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :column 
     # @option opts [String] :dest_cell_name 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -8884,7 +8884,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :column 
     # @option opts [String] :dest_cell_name 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -8912,7 +8912,7 @@ module AsposeCellsCloud
       query_params[:'column'] = opts[:'column'] if !opts[:'column'].nil?
       query_params[:'destCellName'] = opts[:'dest_cell_name'] if !opts[:'dest_cell_name'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8951,7 +8951,7 @@ module AsposeCellsCloud
     # @option opts [PivotTableFieldRequest] :request Dto that conrains field indexes
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
       data, _status_code, _headers = cells_pivot_tables_put_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts)
@@ -8968,7 +8968,7 @@ module AsposeCellsCloud
     # @option opts [PivotTableFieldRequest] :request Dto that conrains field indexes
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
       if @api_client.config.debugging
@@ -8999,7 +8999,7 @@ module AsposeCellsCloud
       query_params[:'pivotFieldType'] = pivot_field_type
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9035,7 +9035,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CreatePivotTableRequest] :request CreatePivotTableRequest dto in request body.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :source_data The data for the new PivotTable cache.
     # @option opts [String] :dest_cell_name The cell in the upper-left corner of the PivotTable report&#39;s destination range.
     # @option opts [String] :table_name The name of the new PivotTable report.
@@ -9053,7 +9053,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CreatePivotTableRequest] :request CreatePivotTableRequest dto in request body.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :source_data The data for the new PivotTable cache.
     # @option opts [String] :dest_cell_name The cell in the upper-left corner of the PivotTable report&#39;s destination range.
     # @option opts [String] :table_name The name of the new PivotTable report.
@@ -9078,7 +9078,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'sourceData'] = opts[:'source_data'] if !opts[:'source_data'].nil?
       query_params[:'destCellName'] = opts[:'dest_cell_name'] if !opts[:'dest_cell_name'].nil?
       query_params[:'tableName'] = opts[:'table_name'] if !opts[:'table_name'].nil?
@@ -9120,7 +9120,7 @@ module AsposeCellsCloud
     # @option opts [PivotFilter] :filter 
     # @option opts [BOOLEAN] :need_re_calculate  (default to false)
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, opts = {})
       data, _status_code, _headers = cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, opts)
@@ -9136,7 +9136,7 @@ module AsposeCellsCloud
     # @option opts [PivotFilter] :filter 
     # @option opts [BOOLEAN] :need_re_calculate 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, opts = {})
       if @api_client.config.debugging
@@ -9162,7 +9162,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9199,7 +9199,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CalculationOptions] :options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_cell_calculate(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_post_cell_calculate_with_http_info(name, sheet_name, cell_name, opts)
@@ -9214,7 +9214,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CalculationOptions] :options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_cell_calculate_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -9239,7 +9239,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9276,7 +9276,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Array<FontSetting>] :options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_cell_characters(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_post_cell_characters_with_http_info(name, sheet_name, cell_name, opts)
@@ -9291,7 +9291,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Array<FontSetting>] :options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_cell_characters_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -9316,7 +9316,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9356,7 +9356,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row The end row.
     # @option opts [Integer] :end_column The end column.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_clear_contents(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_post_clear_contents_with_http_info(name, sheet_name, opts)
@@ -9374,7 +9374,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row The end row.
     # @option opts [Integer] :end_column The end column.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_clear_contents_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -9400,7 +9400,7 @@ module AsposeCellsCloud
       query_params[:'endRow'] = opts[:'end_row'] if !opts[:'end_row'].nil?
       query_params[:'endColumn'] = opts[:'end_column'] if !opts[:'end_column'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9440,7 +9440,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row The end row.
     # @option opts [Integer] :end_column The end column.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_clear_formats(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_post_clear_formats_with_http_info(name, sheet_name, opts)
@@ -9458,7 +9458,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row The end row.
     # @option opts [Integer] :end_column The end column.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_clear_formats_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -9484,7 +9484,7 @@ module AsposeCellsCloud
       query_params[:'endRow'] = opts[:'end_row'] if !opts[:'end_row'].nil?
       query_params[:'endColumn'] = opts[:'end_column'] if !opts[:'end_column'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9521,7 +9521,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style Style dto
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_column_style(name, sheet_name, column_index, opts = {})
       data, _status_code, _headers = cells_post_column_style_with_http_info(name, sheet_name, column_index, opts)
@@ -9536,7 +9536,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style Style dto
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_column_style_with_http_info(name, sheet_name, column_index, opts = {})
       if @api_client.config.debugging
@@ -9561,7 +9561,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9601,7 +9601,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :row Source row
     # @option opts [Integer] :column Source column
     # @option opts [String] :folder Folder name
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_cell_into_cell(name, dest_cell_name, sheet_name, worksheet, opts = {})
       data, _status_code, _headers = cells_post_copy_cell_into_cell_with_http_info(name, dest_cell_name, sheet_name, worksheet, opts)
@@ -9619,7 +9619,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :row Source row
     # @option opts [Integer] :column Source column
     # @option opts [String] :folder Folder name
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_cell_into_cell_with_http_info(name, dest_cell_name, sheet_name, worksheet, opts = {})
       if @api_client.config.debugging
@@ -9652,7 +9652,7 @@ module AsposeCellsCloud
       query_params[:'row'] = opts[:'row'] if !opts[:'row'].nil?
       query_params[:'column'] = opts[:'column'] if !opts[:'column'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9691,7 +9691,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :worksheet The Worksheet (default to )
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_worksheet_columns(name, sheet_name, source_column_index, destination_column_index, column_number, opts = {})
       data, _status_code, _headers = cells_post_copy_worksheet_columns_with_http_info(name, sheet_name, source_column_index, destination_column_index, column_number, opts)
@@ -9708,7 +9708,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :worksheet The Worksheet
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_worksheet_columns_with_http_info(name, sheet_name, source_column_index, destination_column_index, column_number, opts = {})
       if @api_client.config.debugging
@@ -9745,7 +9745,7 @@ module AsposeCellsCloud
       query_params[:'columnNumber'] = column_number
       query_params[:'worksheet'] = opts[:'worksheet'] if !opts[:'worksheet'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9784,7 +9784,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :worksheet worksheet
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_worksheet_rows(name, sheet_name, source_row_index, destination_row_index, row_number, opts = {})
       data, _status_code, _headers = cells_post_copy_worksheet_rows_with_http_info(name, sheet_name, source_row_index, destination_row_index, row_number, opts)
@@ -9801,7 +9801,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :worksheet worksheet
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_worksheet_rows_with_http_info(name, sheet_name, source_row_index, destination_row_index, row_number, opts = {})
       if @api_client.config.debugging
@@ -9838,7 +9838,7 @@ module AsposeCellsCloud
       query_params[:'rowNumber'] = row_number
       query_params[:'worksheet'] = opts[:'worksheet'] if !opts[:'worksheet'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9876,7 +9876,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :hide columns visible state
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_group_worksheet_columns(name, sheet_name, first_index, last_index, opts = {})
       data, _status_code, _headers = cells_post_group_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts)
@@ -9892,7 +9892,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :hide columns visible state
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_group_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts = {})
       if @api_client.config.debugging
@@ -9924,7 +9924,7 @@ module AsposeCellsCloud
       query_params[:'lastIndex'] = last_index
       query_params[:'hide'] = opts[:'hide'] if !opts[:'hide'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -9962,7 +9962,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :hide rows visible state
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_group_worksheet_rows(name, sheet_name, first_index, last_index, opts = {})
       data, _status_code, _headers = cells_post_group_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts)
@@ -9978,7 +9978,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :hide rows visible state
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_group_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts = {})
       if @api_client.config.debugging
@@ -10010,7 +10010,7 @@ module AsposeCellsCloud
       query_params[:'lastIndex'] = last_index
       query_params[:'hide'] = opts[:'hide'] if !opts[:'hide'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10047,7 +10047,7 @@ module AsposeCellsCloud
     # @param total_columns Number of columns to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_hide_worksheet_columns(name, sheet_name, start_column, total_columns, opts = {})
       data, _status_code, _headers = cells_post_hide_worksheet_columns_with_http_info(name, sheet_name, start_column, total_columns, opts)
@@ -10062,7 +10062,7 @@ module AsposeCellsCloud
     # @param total_columns Number of columns to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_hide_worksheet_columns_with_http_info(name, sheet_name, start_column, total_columns, opts = {})
       if @api_client.config.debugging
@@ -10093,7 +10093,7 @@ module AsposeCellsCloud
       query_params[:'startColumn'] = start_column
       query_params[:'totalColumns'] = total_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10130,7 +10130,7 @@ module AsposeCellsCloud
     # @param total_rows Number of rows to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_hide_worksheet_rows(name, sheet_name, startrow, total_rows, opts = {})
       data, _status_code, _headers = cells_post_hide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts)
@@ -10145,7 +10145,7 @@ module AsposeCellsCloud
     # @param total_rows Number of rows to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_hide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts = {})
       if @api_client.config.debugging
@@ -10176,7 +10176,7 @@ module AsposeCellsCloud
       query_params[:'startrow'] = startrow
       query_params[:'totalRows'] = total_rows
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10213,7 +10213,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style Style dto
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_row_style(name, sheet_name, row_index, opts = {})
       data, _status_code, _headers = cells_post_row_style_with_http_info(name, sheet_name, row_index, opts)
@@ -10228,7 +10228,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style Style dto
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_row_style_with_http_info(name, sheet_name, row_index, opts = {})
       if @api_client.config.debugging
@@ -10253,7 +10253,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10290,7 +10290,7 @@ module AsposeCellsCloud
     # @param html_string 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellResponse]
     def cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts = {})
       data, _status_code, _headers = cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts)
@@ -10305,7 +10305,7 @@ module AsposeCellsCloud
     # @param html_string 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellResponse, Fixnum, Hash)>] CellResponse data, response status code and response headers
     def cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts = {})
       if @api_client.config.debugging
@@ -10334,7 +10334,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10372,7 +10372,7 @@ module AsposeCellsCloud
     # @param type Value data type (like \&quot;int\&quot;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Folder name
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_set_cell_range_value(name, sheet_name, cellarea, value, type, opts = {})
       data, _status_code, _headers = cells_post_set_cell_range_value_with_http_info(name, sheet_name, cellarea, value, type, opts)
@@ -10388,7 +10388,7 @@ module AsposeCellsCloud
     # @param type Value data type (like \&quot;int\&quot;)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Folder name
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_set_cell_range_value_with_http_info(name, sheet_name, cellarea, value, type, opts = {})
       if @api_client.config.debugging
@@ -10424,7 +10424,7 @@ module AsposeCellsCloud
       query_params[:'value'] = value
       query_params[:'type'] = type
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10461,7 +10461,7 @@ module AsposeCellsCloud
     # @param width The width.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ColumnResponse]
     def cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, opts = {})
       data, _status_code, _headers = cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, opts)
@@ -10476,7 +10476,7 @@ module AsposeCellsCloud
     # @param width The width.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnResponse, Fixnum, Hash)>] ColumnResponse data, response status code and response headers
     def cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, opts = {})
       if @api_client.config.debugging
@@ -10506,7 +10506,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'width'] = width
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10543,7 +10543,7 @@ module AsposeCellsCloud
     # @param last_index The last column index to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_ungroup_worksheet_columns(name, sheet_name, first_index, last_index, opts = {})
       data, _status_code, _headers = cells_post_ungroup_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts)
@@ -10558,7 +10558,7 @@ module AsposeCellsCloud
     # @param last_index The last column index to be operated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_ungroup_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts = {})
       if @api_client.config.debugging
@@ -10589,7 +10589,7 @@ module AsposeCellsCloud
       query_params[:'firstIndex'] = first_index
       query_params[:'lastIndex'] = last_index
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10627,7 +10627,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :is_all Is all row to be operated
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_ungroup_worksheet_rows(name, sheet_name, first_index, last_index, opts = {})
       data, _status_code, _headers = cells_post_ungroup_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts)
@@ -10643,7 +10643,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :is_all Is all row to be operated
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_ungroup_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts = {})
       if @api_client.config.debugging
@@ -10675,7 +10675,7 @@ module AsposeCellsCloud
       query_params[:'lastIndex'] = last_index
       query_params[:'isAll'] = opts[:'is_all'] if !opts[:'is_all'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10713,7 +10713,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :width The new column width. (default to 50.0)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_unhide_worksheet_columns(name, sheet_name, startcolumn, total_columns, opts = {})
       data, _status_code, _headers = cells_post_unhide_worksheet_columns_with_http_info(name, sheet_name, startcolumn, total_columns, opts)
@@ -10729,7 +10729,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :width The new column width.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_unhide_worksheet_columns_with_http_info(name, sheet_name, startcolumn, total_columns, opts = {})
       if @api_client.config.debugging
@@ -10761,7 +10761,7 @@ module AsposeCellsCloud
       query_params[:'totalColumns'] = total_columns
       query_params[:'width'] = opts[:'width'] if !opts[:'width'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10799,7 +10799,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height. (default to 15.0)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_unhide_worksheet_rows(name, sheet_name, startrow, total_rows, opts = {})
       data, _status_code, _headers = cells_post_unhide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts)
@@ -10815,7 +10815,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_unhide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts = {})
       if @api_client.config.debugging
@@ -10847,7 +10847,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = total_rows
       query_params[:'height'] = opts[:'height'] if !opts[:'height'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10884,7 +10884,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style with update style settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_post_update_worksheet_cell_style(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_post_update_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts)
@@ -10899,7 +10899,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style with update style settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_post_update_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -10924,7 +10924,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -10961,7 +10961,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style with update style settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_update_worksheet_range_style(name, sheet_name, range, opts = {})
       data, _status_code, _headers = cells_post_update_worksheet_range_style_with_http_info(name, sheet_name, range, opts)
@@ -10976,7 +10976,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Style] :style with update style settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_update_worksheet_range_style_with_http_info(name, sheet_name, range, opts = {})
       if @api_client.config.debugging
@@ -11002,7 +11002,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'range'] = range
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11039,7 +11039,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height. (default to 0.0)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RowResponse]
     def cells_post_update_worksheet_row(name, sheet_name, row_index, opts = {})
       data, _status_code, _headers = cells_post_update_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
@@ -11054,7 +11054,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RowResponse, Fixnum, Hash)>] RowResponse data, response status code and response headers
     def cells_post_update_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
       if @api_client.config.debugging
@@ -11080,7 +11080,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'height'] = opts[:'height'] if !opts[:'height'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11119,7 +11119,7 @@ module AsposeCellsCloud
     # @option opts [String] :type The value type.
     # @option opts [String] :formula Formula for cell
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellResponse]
     def cells_post_worksheet_cell_set_value(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_post_worksheet_cell_set_value_with_http_info(name, sheet_name, cell_name, opts)
@@ -11136,7 +11136,7 @@ module AsposeCellsCloud
     # @option opts [String] :type The value type.
     # @option opts [String] :formula Formula for cell
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellResponse, Fixnum, Hash)>] CellResponse data, response status code and response headers
     def cells_post_worksheet_cell_set_value_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -11164,7 +11164,7 @@ module AsposeCellsCloud
       query_params[:'type'] = opts[:'type'] if !opts[:'type'].nil?
       query_params[:'formula'] = opts[:'formula'] if !opts[:'formula'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11203,7 +11203,7 @@ module AsposeCellsCloud
     # @param total_columns The total columns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_worksheet_merge(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       data, _status_code, _headers = cells_post_worksheet_merge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
@@ -11220,7 +11220,7 @@ module AsposeCellsCloud
     # @param total_columns The total columns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_worksheet_merge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       if @api_client.config.debugging
@@ -11261,7 +11261,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = total_rows
       query_params[:'totalColumns'] = total_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11300,7 +11300,7 @@ module AsposeCellsCloud
     # @param total_columns The total columns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_worksheet_unmerge(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       data, _status_code, _headers = cells_post_worksheet_unmerge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
@@ -11317,7 +11317,7 @@ module AsposeCellsCloud
     # @param total_columns The total columns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_worksheet_unmerge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
       if @api_client.config.debugging
@@ -11358,7 +11358,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = total_rows
       query_params[:'totalColumns'] = total_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11392,7 +11392,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertiesResponse]
     def cells_properties_delete_document_properties(name, opts = {})
       data, _status_code, _headers = cells_properties_delete_document_properties_with_http_info(name, opts)
@@ -11404,7 +11404,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
     def cells_properties_delete_document_properties_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -11421,7 +11421,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11456,7 +11456,7 @@ module AsposeCellsCloud
     # @param property_name The property name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertiesResponse]
     def cells_properties_delete_document_property(name, property_name, opts = {})
       data, _status_code, _headers = cells_properties_delete_document_property_with_http_info(name, property_name, opts)
@@ -11469,7 +11469,7 @@ module AsposeCellsCloud
     # @param property_name The property name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
     def cells_properties_delete_document_property_with_http_info(name, property_name, opts = {})
       if @api_client.config.debugging
@@ -11490,7 +11490,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11524,7 +11524,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertiesResponse]
     def cells_properties_get_document_properties(name, opts = {})
       data, _status_code, _headers = cells_properties_get_document_properties_with_http_info(name, opts)
@@ -11536,7 +11536,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
     def cells_properties_get_document_properties_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -11553,7 +11553,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11588,7 +11588,7 @@ module AsposeCellsCloud
     # @param property_name The property name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertyResponse]
     def cells_properties_get_document_property(name, property_name, opts = {})
       data, _status_code, _headers = cells_properties_get_document_property_with_http_info(name, property_name, opts)
@@ -11601,7 +11601,7 @@ module AsposeCellsCloud
     # @param property_name The property name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertyResponse, Fixnum, Hash)>] CellsDocumentPropertyResponse data, response status code and response headers
     def cells_properties_get_document_property_with_http_info(name, property_name, opts = {})
       if @api_client.config.debugging
@@ -11622,7 +11622,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11658,7 +11658,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CellsDocumentProperty] :property with new property value.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertyResponse]
     def cells_properties_put_document_property(name, property_name, opts = {})
       data, _status_code, _headers = cells_properties_put_document_property_with_http_info(name, property_name, opts)
@@ -11672,7 +11672,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [CellsDocumentProperty] :property with new property value.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertyResponse, Fixnum, Hash)>] CellsDocumentPropertyResponse data, response status code and response headers
     def cells_properties_put_document_property_with_http_info(name, property_name, opts = {})
       if @api_client.config.debugging
@@ -11693,7 +11693,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11731,7 +11731,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :update_reference The update reference. (default to true)
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ColumnsResponse]
     def cells_put_insert_worksheet_columns(name, sheet_name, column_index, columns, opts = {})
       data, _status_code, _headers = cells_put_insert_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, opts)
@@ -11747,7 +11747,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :update_reference The update reference.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnsResponse, Fixnum, Hash)>] ColumnsResponse data, response status code and response headers
     def cells_put_insert_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, opts = {})
       if @api_client.config.debugging
@@ -11778,7 +11778,7 @@ module AsposeCellsCloud
       query_params[:'columns'] = columns
       query_params[:'updateReference'] = opts[:'update_reference'] if !opts[:'update_reference'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11814,7 +11814,7 @@ module AsposeCellsCloud
     # @param row_index The new row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RowResponse]
     def cells_put_insert_worksheet_row(name, sheet_name, row_index, opts = {})
       data, _status_code, _headers = cells_put_insert_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
@@ -11828,7 +11828,7 @@ module AsposeCellsCloud
     # @param row_index The new row index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RowResponse, Fixnum, Hash)>] RowResponse data, response status code and response headers
     def cells_put_insert_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
       if @api_client.config.debugging
@@ -11853,7 +11853,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11891,7 +11891,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :total_rows Number of rows to be operated. (default to 1)
     # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets. (default to true)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_put_insert_worksheet_rows(name, sheet_name, startrow, opts = {})
       data, _status_code, _headers = cells_put_insert_worksheet_rows_with_http_info(name, sheet_name, startrow, opts)
@@ -11907,7 +11907,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :total_rows Number of rows to be operated.
     # @option opts [BOOLEAN] :update_reference Indicates if update references in other worksheets.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_put_insert_worksheet_rows_with_http_info(name, sheet_name, startrow, opts = {})
       if @api_client.config.debugging
@@ -11935,7 +11935,7 @@ module AsposeCellsCloud
       query_params[:'totalRows'] = opts[:'total_rows'] if !opts[:'total_rows'].nil?
       query_params[:'updateReference'] = opts[:'update_reference'] if !opts[:'update_reference'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -11975,7 +11975,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :row_count the count of rows in the range
     # @option opts [Integer] :column_count the count of columns in the range
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RangeValueResponse]
     def cells_ranges_get_worksheet_cells_range_value(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, opts)
@@ -11993,7 +11993,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :row_count the count of rows in the range
     # @option opts [Integer] :column_count the count of columns in the range
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RangeValueResponse, Fixnum, Hash)>] RangeValueResponse data, response status code and response headers
     def cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12019,7 +12019,7 @@ module AsposeCellsCloud
       query_params[:'rowCount'] = opts[:'row_count'] if !opts[:'row_count'].nil?
       query_params[:'columnCount'] = opts[:'column_count'] if !opts[:'column_count'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12056,7 +12056,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_column_width(name, sheet_name, value, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_column_width_with_http_info(name, sheet_name, value, opts)
@@ -12071,7 +12071,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_column_width_with_http_info(name, sheet_name, value, opts = {})
       if @api_client.config.debugging
@@ -12097,7 +12097,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'value'] = value
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12133,7 +12133,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_merge(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_merge_with_http_info(name, sheet_name, opts)
@@ -12147,7 +12147,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_merge_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12168,7 +12168,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12206,7 +12206,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_move_to(name, sheet_name, dest_row, dest_column, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_move_to_with_http_info(name, sheet_name, dest_row, dest_column, opts)
@@ -12222,7 +12222,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_move_to_with_http_info(name, sheet_name, dest_row, dest_column, opts = {})
       if @api_client.config.debugging
@@ -12253,7 +12253,7 @@ module AsposeCellsCloud
       query_params[:'destRow'] = dest_row
       query_params[:'destColumn'] = dest_column
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12289,7 +12289,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeSetOutlineBorderRequest] :range_operate Range Set OutlineBorder Request 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_outline_border_with_http_info(name, sheet_name, opts)
@@ -12303,7 +12303,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeSetOutlineBorderRequest] :range_operate Range Set OutlineBorder Request 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_outline_border_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12324,7 +12324,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12361,7 +12361,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_row_height(name, sheet_name, value, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_row_height_with_http_info(name, sheet_name, value, opts)
@@ -12376,7 +12376,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_row_height_with_http_info(name, sheet_name, value, opts = {})
       if @api_client.config.debugging
@@ -12402,7 +12402,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'value'] = value
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12438,7 +12438,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeSetStyleRequest] :range_operate Range Set Style Request 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_style(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_style_with_http_info(name, sheet_name, opts)
@@ -12452,7 +12452,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeSetStyleRequest] :range_operate Range Set Style Request 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_style_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12473,7 +12473,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12509,7 +12509,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_unmerge(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_unmerge_with_http_info(name, sheet_name, opts)
@@ -12523,7 +12523,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Range] :range range in worksheet 
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_unmerge_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12544,7 +12544,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12583,7 +12583,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_converted True: converted to other data type if appropriate. (default to false)
     # @option opts [BOOLEAN] :set_style True: set the number format to cell&#39;s style when converting to other data type (default to false)
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_value(name, sheet_name, value, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_value_with_http_info(name, sheet_name, value, opts)
@@ -12600,7 +12600,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_converted True: converted to other data type if appropriate.
     # @option opts [BOOLEAN] :set_style True: set the number format to cell&#39;s style when converting to other data type
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_value_with_http_info(name, sheet_name, value, opts = {})
       if @api_client.config.debugging
@@ -12628,7 +12628,7 @@ module AsposeCellsCloud
       query_params[:'isConverted'] = opts[:'is_converted'] if !opts[:'is_converted'].nil?
       query_params[:'setStyle'] = opts[:'set_style'] if !opts[:'set_style'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12664,7 +12664,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeCopyRequest] :range_operate copydata,copystyle,copyto,copyvalue
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_ranges(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_ranges_with_http_info(name, sheet_name, opts)
@@ -12678,7 +12678,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [RangeCopyRequest] :range_operate copydata,copystyle,copyto,copyvalue
     # @option opts [String] :folder Workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_ranges_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12699,7 +12699,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12737,7 +12737,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit_rows Autofit rows. (default to false)
     # @option opts [BOOLEAN] :is_auto_fit_columns Autofit columns. (default to false)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [SaveResponse]
     def cells_save_as_post_document_save_as(name, opts = {})
       data, _status_code, _headers = cells_save_as_post_document_save_as_with_http_info(name, opts)
@@ -12753,7 +12753,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit_rows Autofit rows.
     # @option opts [BOOLEAN] :is_auto_fit_columns Autofit columns.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(SaveResponse, Fixnum, Hash)>] SaveResponse data, response status code and response headers
     def cells_save_as_post_document_save_as_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -12773,7 +12773,7 @@ module AsposeCellsCloud
       query_params[:'isAutoFitRows'] = opts[:'is_auto_fit_rows'] if !opts[:'is_auto_fit_rows'].nil?
       query_params[:'isAutoFitColumns'] = opts[:'is_auto_fit_columns'] if !opts[:'is_auto_fit_columns'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12809,7 +12809,7 @@ module AsposeCellsCloud
     # @param shapeindex shape index in worksheet shapes.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_delete_worksheet_shape(name, sheet_name, shapeindex, opts = {})
       data, _status_code, _headers = cells_shapes_delete_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
@@ -12823,7 +12823,7 @@ module AsposeCellsCloud
     # @param shapeindex shape index in worksheet shapes.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_delete_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
       if @api_client.config.debugging
@@ -12848,7 +12848,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12883,7 +12883,7 @@ module AsposeCellsCloud
     # @param sheet_name worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_delete_worksheet_shapes(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_shapes_delete_worksheet_shapes_with_http_info(name, sheet_name, opts)
@@ -12896,7 +12896,7 @@ module AsposeCellsCloud
     # @param sheet_name worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_delete_worksheet_shapes_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -12917,7 +12917,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -12953,7 +12953,7 @@ module AsposeCellsCloud
     # @param shapeindex shape index in worksheet shapes.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ShapeResponse]
     def cells_shapes_get_worksheet_shape(name, sheet_name, shapeindex, opts = {})
       data, _status_code, _headers = cells_shapes_get_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
@@ -12967,7 +12967,7 @@ module AsposeCellsCloud
     # @param shapeindex shape index in worksheet shapes.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ShapeResponse, Fixnum, Hash)>] ShapeResponse data, response status code and response headers
     def cells_shapes_get_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
       if @api_client.config.debugging
@@ -12992,7 +12992,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13027,7 +13027,7 @@ module AsposeCellsCloud
     # @param sheet_name worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ShapesResponse]
     def cells_shapes_get_worksheet_shapes(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_shapes_get_worksheet_shapes_with_http_info(name, sheet_name, opts)
@@ -13040,7 +13040,7 @@ module AsposeCellsCloud
     # @param sheet_name worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ShapesResponse, Fixnum, Hash)>] ShapesResponse data, response status code and response headers
     def cells_shapes_get_worksheet_shapes_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -13061,7 +13061,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13098,7 +13098,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Shape] :dto 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_post_worksheet_shape(name, sheet_name, shapeindex, opts = {})
       data, _status_code, _headers = cells_shapes_post_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
@@ -13113,7 +13113,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Shape] :dto 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_post_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
       if @api_client.config.debugging
@@ -13138,7 +13138,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13171,19 +13171,20 @@ module AsposeCellsCloud
     # 
     # @param name document name.
     # @param sheet_name worksheet name.
-    # @param drawing_type shape object type
-    # @param upper_left_row Upper left row index.
-    # @param upper_left_column Upper left column index.
-    # @param top Represents the vertical offset of Spinner from its left row, in unit of pixel.
-    # @param left Represents the horizontal offset of Spinner from its left column, in unit of pixel.
-    # @param width Represents the height of Spinner, in unit of pixel.
-    # @param height Represents the width of Spinner, in unit of pixel.
     # @param [Hash] opts the optional parameters
+    # @option opts [Shape] :shape_dto 
+    # @option opts [String] :drawing_type shape object type
+    # @option opts [Integer] :upper_left_row Upper left row index.
+    # @option opts [Integer] :upper_left_column Upper left column index.
+    # @option opts [Integer] :top Represents the vertical offset of Spinner from its left row, in unit of pixel.
+    # @option opts [Integer] :left Represents the horizontal offset of Spinner from its left column, in unit of pixel.
+    # @option opts [Integer] :width Represents the height of Spinner, in unit of pixel.
+    # @option opts [Integer] :height Represents the width of Spinner, in unit of pixel.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ShapeResponse]
-    def cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, opts = {})
-      data, _status_code, _headers = cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, opts)
+    def cells_shapes_put_worksheet_shape(name, sheet_name, opts = {})
+      data, _status_code, _headers = cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts)
       return data
     end
 
@@ -13191,18 +13192,19 @@ module AsposeCellsCloud
     # 
     # @param name document name.
     # @param sheet_name worksheet name.
-    # @param drawing_type shape object type
-    # @param upper_left_row Upper left row index.
-    # @param upper_left_column Upper left column index.
-    # @param top Represents the vertical offset of Spinner from its left row, in unit of pixel.
-    # @param left Represents the horizontal offset of Spinner from its left column, in unit of pixel.
-    # @param width Represents the height of Spinner, in unit of pixel.
-    # @param height Represents the width of Spinner, in unit of pixel.
     # @param [Hash] opts the optional parameters
+    # @option opts [Shape] :shape_dto 
+    # @option opts [String] :drawing_type shape object type
+    # @option opts [Integer] :upper_left_row Upper left row index.
+    # @option opts [Integer] :upper_left_column Upper left column index.
+    # @option opts [Integer] :top Represents the vertical offset of Spinner from its left row, in unit of pixel.
+    # @option opts [Integer] :left Represents the horizontal offset of Spinner from its left column, in unit of pixel.
+    # @option opts [Integer] :width Represents the height of Spinner, in unit of pixel.
+    # @option opts [Integer] :height Represents the width of Spinner, in unit of pixel.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ShapeResponse, Fixnum, Hash)>] ShapeResponse data, response status code and response headers
-    def cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, opts = {})
+    def cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_put_worksheet_shape ..."
       end
@@ -13215,48 +13217,20 @@ module AsposeCellsCloud
       if @api_client.config.client_side_validation && sheet_name.nil?
         fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_shapes_put_worksheet_shape"
       end
-      # verify the required parameter 'drawing_type' is set
-      if @api_client.config.client_side_validation && drawing_type.nil?
-        fail ArgumentError, "Missing the required parameter 'drawing_type' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'upper_left_row' is set
-      if @api_client.config.client_side_validation && upper_left_row.nil?
-        fail ArgumentError, "Missing the required parameter 'upper_left_row' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'upper_left_column' is set
-      if @api_client.config.client_side_validation && upper_left_column.nil?
-        fail ArgumentError, "Missing the required parameter 'upper_left_column' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'top' is set
-      if @api_client.config.client_side_validation && top.nil?
-        fail ArgumentError, "Missing the required parameter 'top' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'left' is set
-      if @api_client.config.client_side_validation && left.nil?
-        fail ArgumentError, "Missing the required parameter 'left' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'width' is set
-      if @api_client.config.client_side_validation && width.nil?
-        fail ArgumentError, "Missing the required parameter 'width' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
-      # verify the required parameter 'height' is set
-      if @api_client.config.client_side_validation && height.nil?
-        fail ArgumentError, "Missing the required parameter 'height' when calling CellsApi.cells_shapes_put_worksheet_shape"
-      end
       # resource path
       local_var_path = "/cells/{name}/worksheets/{sheetName}/shapes".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
 
       # query parameters
       query_params = {}
-      query_params[:'DrawingType'] = drawing_type
-      query_params[:'upperLeftRow'] = upper_left_row
-      query_params[:'upperLeftColumn'] = upper_left_column
-      query_params[:'top'] = top
-      query_params[:'left'] = left
-      query_params[:'width'] = width
-      query_params[:'height'] = height
+      query_params[:'DrawingType'] = opts[:'drawing_type'] if !opts[:'drawing_type'].nil?
+      query_params[:'upperLeftRow'] = opts[:'upper_left_row'] if !opts[:'upper_left_row'].nil?
+      query_params[:'upperLeftColumn'] = opts[:'upper_left_column'] if !opts[:'upper_left_column'].nil?
+      query_params[:'top'] = opts[:'top'] if !opts[:'top'].nil?
+      query_params[:'left'] = opts[:'left'] if !opts[:'left'].nil?
+      query_params[:'width'] = opts[:'width'] if !opts[:'width'].nil?
+      query_params[:'height'] = opts[:'height'] if !opts[:'height'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13269,7 +13243,7 @@ module AsposeCellsCloud
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(opts[:'shape_dto'])
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
@@ -13348,7 +13322,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookEncryptionRequest] :encryption Encryption settings, only password can be specified.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_decrypt_document(name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_decrypt_document_with_http_info(name, opts)
@@ -13361,7 +13335,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookEncryptionRequest] :encryption Encryption settings, only password can be specified.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_decrypt_document_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13378,7 +13352,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13412,7 +13386,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_document_unprotect_from_changes(name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_document_unprotect_from_changes_with_http_info(name, opts)
@@ -13424,7 +13398,7 @@ module AsposeCellsCloud
     # @param name The document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_document_unprotect_from_changes_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13441,7 +13415,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13476,7 +13450,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookProtectionRequest] :protection Protection settings, only password can be specified.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_unprotect_document(name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_unprotect_document_with_http_info(name, opts)
@@ -13489,7 +13463,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookProtectionRequest] :protection Protection settings, only password can be specified.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_unprotect_document_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13506,7 +13480,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13540,7 +13514,7 @@ module AsposeCellsCloud
     # @param name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_background(name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_workbook_background_with_http_info(name, opts)
@@ -13552,7 +13526,7 @@ module AsposeCellsCloud
     # @param name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_background_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13569,7 +13543,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13604,7 +13578,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_name(name, name_name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_workbook_name_with_http_info(name, name_name, opts)
@@ -13617,7 +13591,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_name_with_http_info(name, name_name, opts = {})
       if @api_client.config.debugging
@@ -13638,7 +13612,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13672,7 +13646,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_names(name, opts = {})
       data, _status_code, _headers = cells_workbook_delete_workbook_names_with_http_info(name, opts)
@@ -13684,7 +13658,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_names_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13701,7 +13675,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13739,7 +13713,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit Set document rows to be autofit. (default to false)
     # @option opts [BOOLEAN] :only_save_table Only save table data. (default to false)
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path The document output folder.
     # @return [File]
     def cells_workbook_get_workbook(name, opts = {})
@@ -13756,7 +13730,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit Set document rows to be autofit.
     # @option opts [BOOLEAN] :only_save_table Only save table data.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path The document output folder.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_get_workbook_with_http_info(name, opts = {})
@@ -13778,7 +13752,7 @@ module AsposeCellsCloud
       query_params[:'isAutoFit'] = opts[:'is_auto_fit'] if !opts[:'is_auto_fit'].nil?
       query_params[:'onlySaveTable'] = opts[:'only_save_table'] if !opts[:'only_save_table'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
 
       # header parameters
@@ -13813,7 +13787,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_workbook_get_workbook_default_style(name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_default_style_with_http_info(name, opts)
@@ -13825,7 +13799,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_workbook_get_workbook_default_style_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13842,7 +13816,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13877,7 +13851,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [NameResponse]
     def cells_workbook_get_workbook_name(name, name_name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_name_with_http_info(name, name_name, opts)
@@ -13890,7 +13864,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(NameResponse, Fixnum, Hash)>] NameResponse data, response status code and response headers
     def cells_workbook_get_workbook_name_with_http_info(name, name_name, opts = {})
       if @api_client.config.debugging
@@ -13911,7 +13885,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -13946,7 +13920,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RangeValueResponse]
     def cells_workbook_get_workbook_name_value(name, name_name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_name_value_with_http_info(name, name_name, opts)
@@ -13959,7 +13933,7 @@ module AsposeCellsCloud
     # @param name_name The name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RangeValueResponse, Fixnum, Hash)>] RangeValueResponse data, response status code and response headers
     def cells_workbook_get_workbook_name_value_with_http_info(name, name_name, opts = {})
       if @api_client.config.debugging
@@ -13980,7 +13954,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14014,7 +13988,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [NamesResponse]
     def cells_workbook_get_workbook_names(name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_names_with_http_info(name, opts)
@@ -14026,7 +14000,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(NamesResponse, Fixnum, Hash)>] NamesResponse data, response status code and response headers
     def cells_workbook_get_workbook_names_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14043,7 +14017,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14077,7 +14051,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorkbookSettingsResponse]
     def cells_workbook_get_workbook_settings(name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_settings_with_http_info(name, opts)
@@ -14089,7 +14063,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookSettingsResponse, Fixnum, Hash)>] WorkbookSettingsResponse data, response status code and response headers
     def cells_workbook_get_workbook_settings_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14106,7 +14080,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14140,7 +14114,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_workbook_get_workbook_text_items(name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_text_items_with_http_info(name, opts)
@@ -14152,7 +14126,7 @@ module AsposeCellsCloud
     # @param name The workbook name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_workbook_get_workbook_text_items_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14169,7 +14143,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14207,7 +14181,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row End row.
     # @option opts [BOOLEAN] :only_auto Only auto. (default to false)
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_autofit_workbook_rows(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_autofit_workbook_rows_with_http_info(name, opts)
@@ -14223,7 +14197,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row End row.
     # @option opts [BOOLEAN] :only_auto Only auto.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_autofit_workbook_rows_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14243,7 +14217,7 @@ module AsposeCellsCloud
       query_params[:'endRow'] = opts[:'end_row'] if !opts[:'end_row'].nil?
       query_params[:'onlyAuto'] = opts[:'only_auto'] if !opts[:'only_auto'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14278,7 +14252,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookEncryptionRequest] :encryption Encryption parameters.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_encrypt_document(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_encrypt_document_with_http_info(name, opts)
@@ -14291,7 +14265,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookEncryptionRequest] :encryption Encryption parameters.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_encrypt_document_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14308,7 +14282,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14343,7 +14317,7 @@ module AsposeCellsCloud
     # @param import_data 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_import_data(name, import_data, opts = {})
       data, _status_code, _headers = cells_workbook_post_import_data_with_http_info(name, import_data, opts)
@@ -14356,7 +14330,7 @@ module AsposeCellsCloud
     # @param import_data 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_import_data_with_http_info(name, import_data, opts = {})
       if @api_client.config.debugging
@@ -14377,7 +14351,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14412,7 +14386,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookProtectionRequest] :protection The protection settings.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_protect_document(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_protect_document_with_http_info(name, opts)
@@ -14425,7 +14399,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookProtectionRequest] :protection The protection settings.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_protect_document_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14442,7 +14416,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14478,7 +14452,7 @@ module AsposeCellsCloud
     # @option opts [CalculationOptions] :options Calculation Options.
     # @option opts [BOOLEAN] :ignore_error ignore Error.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_workbook_calculate_formula(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbook_calculate_formula_with_http_info(name, opts)
@@ -14492,7 +14466,7 @@ module AsposeCellsCloud
     # @option opts [CalculationOptions] :options Calculation Options.
     # @option opts [BOOLEAN] :ignore_error ignore Error.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_workbook_calculate_formula_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14510,7 +14484,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'ignoreError'] = opts[:'ignore_error'] if !opts[:'ignore_error'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14545,7 +14519,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :xml_file The xml file full path, if empty the data is read from request body.
     # @option opts [String] :folder The workbook folder full path.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path Path to save result
     # @return [File]
     def cells_workbook_post_workbook_get_smart_marker_result(name, opts = {})
@@ -14559,7 +14533,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :xml_file The xml file full path, if empty the data is read from request body.
     # @option opts [String] :folder The workbook folder full path.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path Path to save result
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, opts = {})
@@ -14578,7 +14552,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'xmlFile'] = opts[:'xml_file'] if !opts[:'xml_file'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
 
       # header parameters
@@ -14614,7 +14588,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookSettings] :settings Workbook Setting DTO
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_workbook_settings(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbook_settings_with_http_info(name, opts)
@@ -14627,7 +14601,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorkbookSettings] :settings Workbook Setting DTO
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_workbook_settings_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14644,7 +14618,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14684,7 +14658,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :vertical_resolution Image vertical resolution. (default to 0)
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :out_folder out Folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [SplitResultResponse]
     def cells_workbook_post_workbook_split(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbook_split_with_http_info(name, opts)
@@ -14702,7 +14676,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :vertical_resolution Image vertical resolution.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :out_folder out Folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(SplitResultResponse, Fixnum, Hash)>] SplitResultResponse data, response status code and response headers
     def cells_workbook_post_workbook_split_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14725,7 +14699,7 @@ module AsposeCellsCloud
       query_params[:'verticalResolution'] = opts[:'vertical_resolution'] if !opts[:'vertical_resolution'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'outFolder'] = opts[:'out_folder'] if !opts[:'out_folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14760,7 +14734,7 @@ module AsposeCellsCloud
     # @param merge_with The workbook to merge with.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Source workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorkbookResponse]
     def cells_workbook_post_workbooks_merge(name, merge_with, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts)
@@ -14773,7 +14747,7 @@ module AsposeCellsCloud
     # @param merge_with The workbook to merge with.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Source workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
     def cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts = {})
       if @api_client.config.debugging
@@ -14795,7 +14769,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'mergeWith'] = merge_with
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14831,7 +14805,7 @@ module AsposeCellsCloud
     # @param new_value The new value.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorkbookReplaceResponse]
     def cells_workbook_post_workbooks_text_replace(name, old_value, new_value, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbooks_text_replace_with_http_info(name, old_value, new_value, opts)
@@ -14845,7 +14819,7 @@ module AsposeCellsCloud
     # @param new_value The new value.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookReplaceResponse, Fixnum, Hash)>] WorkbookReplaceResponse data, response status code and response headers
     def cells_workbook_post_workbooks_text_replace_with_http_info(name, old_value, new_value, opts = {})
       if @api_client.config.debugging
@@ -14872,7 +14846,7 @@ module AsposeCellsCloud
       query_params[:'oldValue'] = old_value
       query_params[:'newValue'] = new_value
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14907,7 +14881,7 @@ module AsposeCellsCloud
     # @param text Text sample.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_workbook_post_workbooks_text_search(name, text, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbooks_text_search_with_http_info(name, text, opts)
@@ -14920,7 +14894,7 @@ module AsposeCellsCloud
     # @param text Text sample.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_workbook_post_workbooks_text_search_with_http_info(name, text, opts = {})
       if @api_client.config.debugging
@@ -14942,7 +14916,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'text'] = text
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15044,7 +15018,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PasswordRequest] :password Modification password.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_put_document_protect_from_changes(name, opts = {})
       data, _status_code, _headers = cells_workbook_put_document_protect_from_changes_with_http_info(name, opts)
@@ -15057,7 +15031,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [PasswordRequest] :password Modification password.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_document_protect_from_changes_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -15074,7 +15048,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15109,7 +15083,7 @@ module AsposeCellsCloud
     # @param png 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_put_workbook_background(name, png, opts = {})
       data, _status_code, _headers = cells_workbook_put_workbook_background_with_http_info(name, png, opts)
@@ -15122,7 +15096,7 @@ module AsposeCellsCloud
     # @param png 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_workbook_background_with_http_info(name, png, opts = {})
       if @api_client.config.debugging
@@ -15143,7 +15117,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15180,7 +15154,7 @@ module AsposeCellsCloud
     # @option opts [String] :data_file Smart marker data file, if the data not provided the request content is checked for the data.
     # @option opts [BOOLEAN] :is_write_over write over file.
     # @option opts [String] :folder The new document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorkbookResponse]
     def cells_workbook_put_workbook_create(name, opts = {})
       data, _status_code, _headers = cells_workbook_put_workbook_create_with_http_info(name, opts)
@@ -15195,7 +15169,7 @@ module AsposeCellsCloud
     # @option opts [String] :data_file Smart marker data file, if the data not provided the request content is checked for the data.
     # @option opts [BOOLEAN] :is_write_over write over file.
     # @option opts [String] :folder The new document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
     def cells_workbook_put_workbook_create_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -15215,7 +15189,7 @@ module AsposeCellsCloud
       query_params[:'dataFile'] = opts[:'data_file'] if !opts[:'data_file'].nil?
       query_params[:'isWriteOver'] = opts[:'is_write_over'] if !opts[:'is_write_over'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15249,7 +15223,7 @@ module AsposeCellsCloud
     # @param name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [TextWaterMarkerRequest] :text_water_marker_request The text water marker request.
     # @return [CellsCloudResponse]
     def cells_workbook_put_workbook_water_marker(name, opts = {})
@@ -15262,7 +15236,7 @@ module AsposeCellsCloud
     # @param name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @option opts [TextWaterMarkerRequest] :text_water_marker_request The text water marker request.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_workbook_water_marker_with_http_info(name, opts = {})
@@ -15280,7 +15254,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15316,7 +15290,7 @@ module AsposeCellsCloud
     # @param validation_index The validation index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
@@ -15330,7 +15304,7 @@ module AsposeCellsCloud
     # @param validation_index The validation index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
       if @api_client.config.debugging
@@ -15355,7 +15329,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15390,7 +15364,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts)
@@ -15403,7 +15377,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15424,7 +15398,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15460,7 +15434,7 @@ module AsposeCellsCloud
     # @param validation_index The validation index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_get_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
@@ -15474,7 +15448,7 @@ module AsposeCellsCloud
     # @param validation_index The validation index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_get_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
       if @api_client.config.debugging
@@ -15499,7 +15473,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15534,7 +15508,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ValidationsResponse]
     def cells_worksheet_validations_get_worksheet_validations(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_get_worksheet_validations_with_http_info(name, sheet_name, opts)
@@ -15547,7 +15521,7 @@ module AsposeCellsCloud
     # @param sheet_name Worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationsResponse, Fixnum, Hash)>] ValidationsResponse data, response status code and response headers
     def cells_worksheet_validations_get_worksheet_validations_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15568,7 +15542,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15605,7 +15579,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Validation] :validation 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_post_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
@@ -15620,7 +15594,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Validation] :validation 
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_post_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
       if @api_client.config.debugging
@@ -15645,7 +15619,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15682,7 +15656,7 @@ module AsposeCellsCloud
     # @option opts [String] :range Specified cells area
     # @option opts [Validation] :validation validation
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_put_worksheet_validation(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_put_worksheet_validation_with_http_info(name, sheet_name, opts)
@@ -15697,7 +15671,7 @@ module AsposeCellsCloud
     # @option opts [String] :range Specified cells area
     # @option opts [Validation] :validation validation
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_put_worksheet_validation_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15719,7 +15693,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'range'] = opts[:'range'] if !opts[:'range'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15755,7 +15729,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings. Only password is used here.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetResponse]
     def cells_worksheets_delete_unprotect_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts)
@@ -15769,7 +15743,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings. Only password is used here.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
     def cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15790,7 +15764,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15825,7 +15799,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetsResponse]
     def cells_worksheets_delete_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_worksheet_with_http_info(name, sheet_name, opts)
@@ -15838,7 +15812,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetsResponse, Fixnum, Hash)>] WorksheetsResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15859,7 +15833,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15894,7 +15868,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_background(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_worksheet_background_with_http_info(name, sheet_name, opts)
@@ -15907,7 +15881,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_background_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -15928,7 +15902,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15964,7 +15938,7 @@ module AsposeCellsCloud
     # @param cell_name The cell name
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
@@ -15978,7 +15952,7 @@ module AsposeCellsCloud
     # @param cell_name The cell name
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -16003,7 +15977,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16038,7 +16012,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_comments(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_worksheet_comments_with_http_info(name, sheet_name, opts)
@@ -16051,7 +16025,7 @@ module AsposeCellsCloud
     # @param sheet_name 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_comments_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -16072,7 +16046,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16111,7 +16085,7 @@ module AsposeCellsCloud
     # @param freezed_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts)
@@ -16128,7 +16102,7 @@ module AsposeCellsCloud
     # @param freezed_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
       if @api_client.config.debugging
@@ -16169,7 +16143,7 @@ module AsposeCellsCloud
       query_params[:'freezedRows'] = freezed_rows
       query_params[:'freezedColumns'] = freezed_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16203,7 +16177,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [RangesResponse]
     def cells_worksheets_get_named_ranges(name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_named_ranges_with_http_info(name, opts)
@@ -16215,7 +16189,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(RangesResponse, Fixnum, Hash)>] RangesResponse data, response status code and response headers
     def cells_worksheets_get_named_ranges_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -16232,7 +16206,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16272,7 +16246,7 @@ module AsposeCellsCloud
     # @option opts [String] :area Exported area.
     # @option opts [Integer] :page_index Exported page index.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_worksheets_get_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_with_http_info(name, sheet_name, opts)
@@ -16290,7 +16264,7 @@ module AsposeCellsCloud
     # @option opts [String] :area Exported area.
     # @option opts [Integer] :page_index Exported page index.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_worksheets_get_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -16316,7 +16290,7 @@ module AsposeCellsCloud
       query_params[:'area'] = opts[:'area'] if !opts[:'area'].nil?
       query_params[:'pageIndex'] = opts[:'page_index'] if !opts[:'page_index'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16352,7 +16326,7 @@ module AsposeCellsCloud
     # @param formula The formula.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [SingleValueResponse]
     def cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_calculate_formula_with_http_info(name, sheet_name, formula, opts)
@@ -16366,7 +16340,7 @@ module AsposeCellsCloud
     # @param formula The formula.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(SingleValueResponse, Fixnum, Hash)>] SingleValueResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_calculate_formula_with_http_info(name, sheet_name, formula, opts = {})
       if @api_client.config.debugging
@@ -16392,7 +16366,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'formula'] = formula
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16428,7 +16402,7 @@ module AsposeCellsCloud
     # @param cell_name The cell name
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CommentResponse]
     def cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
@@ -16442,7 +16416,7 @@ module AsposeCellsCloud
     # @param cell_name The cell name
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentResponse, Fixnum, Hash)>] CommentResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -16467,7 +16441,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16502,7 +16476,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CommentsResponse]
     def cells_worksheets_get_worksheet_comments(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_comments_with_http_info(name, sheet_name, opts)
@@ -16515,7 +16489,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentsResponse, Fixnum, Hash)>] CommentsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_comments_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -16536,7 +16510,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16572,7 +16546,7 @@ module AsposeCellsCloud
     # @param merged_cell_index Merged cell index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [MergedCellResponse]
     def cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_merged_cell_with_http_info(name, sheet_name, merged_cell_index, opts)
@@ -16586,7 +16560,7 @@ module AsposeCellsCloud
     # @param merged_cell_index Merged cell index.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(MergedCellResponse, Fixnum, Hash)>] MergedCellResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_merged_cell_with_http_info(name, sheet_name, merged_cell_index, opts = {})
       if @api_client.config.debugging
@@ -16611,7 +16585,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16646,7 +16620,7 @@ module AsposeCellsCloud
     # @param sheet_name The workseet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [MergedCellsResponse]
     def cells_worksheets_get_worksheet_merged_cells(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_merged_cells_with_http_info(name, sheet_name, opts)
@@ -16659,7 +16633,7 @@ module AsposeCellsCloud
     # @param sheet_name The workseet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(MergedCellsResponse, Fixnum, Hash)>] MergedCellsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_merged_cells_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -16680,7 +16654,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16715,7 +16689,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_worksheets_get_worksheet_text_items(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheet_text_items_with_http_info(name, sheet_name, opts)
@@ -16728,7 +16702,7 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_text_items_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -16749,7 +16723,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16783,7 +16757,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetsResponse]
     def cells_worksheets_get_worksheets(name, opts = {})
       data, _status_code, _headers = cells_worksheets_get_worksheets_with_http_info(name, opts)
@@ -16795,7 +16769,7 @@ module AsposeCellsCloud
     # @param name Document name.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetsResponse, Fixnum, Hash)>] WorksheetsResponse data, response status code and response headers
     def cells_worksheets_get_worksheets_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -16812,7 +16786,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16852,7 +16826,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :first_row 
     # @option opts [Integer] :last_row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, opts = {})
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_columns_with_http_info(name, sheet_name, first_column, last_column, opts)
@@ -16870,7 +16844,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :first_row 
     # @option opts [Integer] :last_row 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_columns_with_http_info(name, sheet_name, first_column, last_column, opts = {})
       if @api_client.config.debugging
@@ -16903,7 +16877,7 @@ module AsposeCellsCloud
       query_params[:'firstRow'] = opts[:'first_row'] if !opts[:'first_row'].nil?
       query_params[:'lastRow'] = opts[:'last_row'] if !opts[:'last_row'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16942,7 +16916,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [AutoFitterOptions] :auto_fitter_options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, opts = {})
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_row_with_http_info(name, sheet_name, row_index, first_column, last_column, opts)
@@ -16959,7 +16933,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [AutoFitterOptions] :auto_fitter_options 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_row_with_http_info(name, sheet_name, row_index, first_column, last_column, opts = {})
       if @api_client.config.debugging
@@ -16995,7 +16969,7 @@ module AsposeCellsCloud
       query_params[:'firstColumn'] = first_column
       query_params[:'lastColumn'] = last_column
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17034,7 +17008,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row End row.
     # @option opts [BOOLEAN] :only_auto Only auto. (default to false)
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_rows_with_http_info(name, sheet_name, opts)
@@ -17051,7 +17025,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :end_row End row.
     # @option opts [BOOLEAN] :only_auto Only auto.
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_rows_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -17075,7 +17049,7 @@ module AsposeCellsCloud
       query_params[:'endRow'] = opts[:'end_row'] if !opts[:'end_row'].nil?
       query_params[:'onlyAuto'] = opts[:'only_auto'] if !opts[:'only_auto'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17114,7 +17088,7 @@ module AsposeCellsCloud
     # @option opts [String] :source_workbook 
     # @option opts [String] :source_folder 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, opts = {})
       data, _status_code, _headers = cells_worksheets_post_copy_worksheet_with_http_info(name, sheet_name, source_sheet, opts)
@@ -17131,7 +17105,7 @@ module AsposeCellsCloud
     # @option opts [String] :source_workbook 
     # @option opts [String] :source_folder 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_copy_worksheet_with_http_info(name, sheet_name, source_sheet, opts = {})
       if @api_client.config.debugging
@@ -17159,7 +17133,7 @@ module AsposeCellsCloud
       query_params[:'sourceWorkbook'] = opts[:'source_workbook'] if !opts[:'source_workbook'].nil?
       query_params[:'sourceFolder'] = opts[:'source_folder'] if !opts[:'source_folder'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17195,7 +17169,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorksheetMovingRequest] :moving with moving parameters.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetsResponse]
     def cells_worksheets_post_move_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_post_move_worksheet_with_http_info(name, sheet_name, opts)
@@ -17209,7 +17183,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [WorksheetMovingRequest] :moving with moving parameters.
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetsResponse, Fixnum, Hash)>] WorksheetsResponse data, response status code and response headers
     def cells_worksheets_post_move_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -17230,7 +17204,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17266,7 +17240,7 @@ module AsposeCellsCloud
     # @param newname 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_rename_worksheet(name, sheet_name, newname, opts = {})
       data, _status_code, _headers = cells_worksheets_post_rename_worksheet_with_http_info(name, sheet_name, newname, opts)
@@ -17280,7 +17254,7 @@ module AsposeCellsCloud
     # @param newname 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_rename_worksheet_with_http_info(name, sheet_name, newname, opts = {})
       if @api_client.config.debugging
@@ -17306,7 +17280,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'newname'] = newname
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17342,7 +17316,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Worksheet] :sheet 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetResponse]
     def cells_worksheets_post_update_worksheet_property(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts)
@@ -17356,7 +17330,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Worksheet] :sheet 
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
     def cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -17377,7 +17351,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17413,7 +17387,7 @@ module AsposeCellsCloud
     # @param value 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, opts = {})
       data, _status_code, _headers = cells_worksheets_post_update_worksheet_zoom_with_http_info(name, sheet_name, value, opts)
@@ -17427,7 +17401,7 @@ module AsposeCellsCloud
     # @param value 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_update_worksheet_zoom_with_http_info(name, sheet_name, value, opts = {})
       if @api_client.config.debugging
@@ -17453,7 +17427,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'value'] = value
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17490,7 +17464,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Comment] :comment Comment object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_worksheets_post_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
@@ -17505,7 +17479,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Comment] :comment Comment object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -17530,7 +17504,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17567,7 +17541,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [DataSorter] :data_sorter with sorting settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, opts = {})
       data, _status_code, _headers = cells_worksheets_post_worksheet_range_sort_with_http_info(name, sheet_name, cell_area, opts)
@@ -17582,7 +17556,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [DataSorter] :data_sorter with sorting settings.
     # @option opts [String] :folder The workbook folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_range_sort_with_http_info(name, sheet_name, cell_area, opts = {})
       if @api_client.config.debugging
@@ -17608,7 +17582,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'cellArea'] = cell_area
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17644,7 +17618,7 @@ module AsposeCellsCloud
     # @param text Text to search.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_worksheets_post_worksheet_text_search(name, sheet_name, text, opts = {})
       data, _status_code, _headers = cells_worksheets_post_worksheet_text_search_with_http_info(name, sheet_name, text, opts)
@@ -17658,7 +17632,7 @@ module AsposeCellsCloud
     # @param text Text to search.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_text_search_with_http_info(name, sheet_name, text, opts = {})
       if @api_client.config.debugging
@@ -17684,7 +17658,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'text'] = text
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17721,7 +17695,7 @@ module AsposeCellsCloud
     # @param new_value The new text to replace by.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetReplaceResponse]
     def cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, opts = {})
       data, _status_code, _headers = cells_worksheets_post_worsheet_text_replace_with_http_info(name, sheet_name, old_value, new_value, opts)
@@ -17736,7 +17710,7 @@ module AsposeCellsCloud
     # @param new_value The new text to replace by.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetReplaceResponse, Fixnum, Hash)>] WorksheetReplaceResponse data, response status code and response headers
     def cells_worksheets_post_worsheet_text_replace_with_http_info(name, sheet_name, old_value, new_value, opts = {})
       if @api_client.config.debugging
@@ -17767,7 +17741,7 @@ module AsposeCellsCloud
       query_params[:'oldValue'] = old_value
       query_params[:'newValue'] = new_value
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17804,7 +17778,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :position The new sheet position.
     # @option opts [String] :sheettype The new sheet type.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetsResponse]
     def cells_worksheets_put_add_new_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_put_add_new_worksheet_with_http_info(name, sheet_name, opts)
@@ -17819,7 +17793,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :position The new sheet position.
     # @option opts [String] :sheettype The new sheet type.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetsResponse, Fixnum, Hash)>] WorksheetsResponse data, response status code and response headers
     def cells_worksheets_put_add_new_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -17842,7 +17816,7 @@ module AsposeCellsCloud
       query_params[:'position'] = opts[:'position'] if !opts[:'position'].nil?
       query_params[:'sheettype'] = opts[:'sheettype'] if !opts[:'sheettype'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17878,7 +17852,7 @@ module AsposeCellsCloud
     # @param is_visible New worksheet visibility value.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetResponse]
     def cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, opts = {})
       data, _status_code, _headers = cells_worksheets_put_change_visibility_worksheet_with_http_info(name, sheet_name, is_visible, opts)
@@ -17892,7 +17866,7 @@ module AsposeCellsCloud
     # @param is_visible New worksheet visibility value.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
     def cells_worksheets_put_change_visibility_worksheet_with_http_info(name, sheet_name, is_visible, opts = {})
       if @api_client.config.debugging
@@ -17918,7 +17892,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'isVisible'] = is_visible
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -17954,7 +17928,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [WorksheetResponse]
     def cells_worksheets_put_protect_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts)
@@ -17968,7 +17942,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings.
     # @option opts [String] :folder Document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
     def cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
@@ -17989,7 +17963,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -18025,7 +17999,7 @@ module AsposeCellsCloud
     # @param png 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_worksheet_background(name, sheet_name, png, opts = {})
       data, _status_code, _headers = cells_worksheets_put_worksheet_background_with_http_info(name, sheet_name, png, opts)
@@ -18039,7 +18013,7 @@ module AsposeCellsCloud
     # @param png 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_background_with_http_info(name, sheet_name, png, opts = {})
       if @api_client.config.debugging
@@ -18064,7 +18038,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -18101,7 +18075,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Comment] :comment Comment object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CommentResponse]
     def cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, opts = {})
       data, _status_code, _headers = cells_worksheets_put_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
@@ -18116,7 +18090,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [Comment] :comment Comment object
     # @option opts [String] :folder The document folder.
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentResponse, Fixnum, Hash)>] CommentResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
       if @api_client.config.debugging
@@ -18141,7 +18115,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -18180,7 +18154,7 @@ module AsposeCellsCloud
     # @param freezed_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
       data, _status_code, _headers = cells_worksheets_put_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts)
@@ -18197,7 +18171,7 @@ module AsposeCellsCloud
     # @param freezed_columns 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder 
-    # @option opts [String] :storage storage name.
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
       if @api_client.config.debugging
@@ -18238,7 +18212,7 @@ module AsposeCellsCloud
       query_params[:'freezedRows'] = freezed_rows
       query_params[:'freezedColumns'] = freezed_columns
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
-      query_params[:'storage'] = opts[:'storage'] if !opts[:'storage'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}

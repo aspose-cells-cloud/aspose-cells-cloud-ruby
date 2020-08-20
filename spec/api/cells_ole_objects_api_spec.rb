@@ -118,10 +118,8 @@ describe 'CellsOleObjectsApi' do
       image_file = 'word.jpg'
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      result = @instance.upload_file( folder+"/"+ole_file,  ::File.open(File.expand_path("data/"+ole_file),"r") {|io| io.read(io.size) })
-      result = @instance.upload_file( folder+"/"+image_file,  ::File.open(File.expand_path("data/"+image_file),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, {  :ole_object=>ole_object, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :height=>height, :width=>width, :ole_file=> (folder+"/"+ole_file), :image_file=> (folder+"/"+image_file),:folder=>folder})
+      result = @instance.cells_ole_objects_put_worksheet_ole_object(name, sheet_name, {  :ole_object=>ole_object, :upper_left_row=>upper_left_row, :upper_left_column=>upper_left_column, :height=>height, :width=>width, :ole_file=>ole_file, :image_file=>image_file,:folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

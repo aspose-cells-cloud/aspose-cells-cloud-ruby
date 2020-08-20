@@ -199,6 +199,7 @@ Method | HTTP request | Description
 [**cells_workbook_put_document_protect_from_changes**](CellsApi.md#cells_workbook_put_document_protect_from_changes) | **PUT** /cells/{name}/writeProtection | Protect document from changes.
 [**cells_workbook_put_workbook_background**](CellsApi.md#cells_workbook_put_workbook_background) | **PUT** /cells/{name}/background | Set workbook background image.
 [**cells_workbook_put_workbook_create**](CellsApi.md#cells_workbook_put_workbook_create) | **PUT** /cells/{name} | Create new workbook using deferent methods.
+[**cells_workbook_put_workbook_water_marker**](CellsApi.md#cells_workbook_put_workbook_water_marker) | **PUT** /cells/{name}/watermarker | Set workbook background image.
 [**cells_worksheet_validations_delete_worksheet_validation**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validation) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Delete worksheet validation by index.
 [**cells_worksheet_validations_delete_worksheet_validations**](CellsApi.md#cells_worksheet_validations_delete_worksheet_validations) | **DELETE** /cells/{name}/worksheets/{sheetName}/validations | Clear all validation in worksheet.
 [**cells_worksheet_validations_get_worksheet_validation**](CellsApi.md#cells_worksheet_validations_get_worksheet_validation) | **GET** /cells/{name}/worksheets/{sheetName}/validations/{validationIndex} | Get worksheet validation by index.
@@ -271,7 +272,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 date_time_grouping_type = 'date_time_grouping_type_example' # String | 
 
@@ -283,7 +284,7 @@ opts = {
   minute: 0, # Integer | 
   second: 0, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -310,7 +311,7 @@ Name | Type | Description  | Notes
  **minute** | **Integer**|  | [optional] [default to 0]
  **second** | **Integer**|  | [optional] [default to 0]
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -343,12 +344,12 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 opts = { 
   criteria: 'criteria_example', # String | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -369,7 +370,7 @@ Name | Type | Description  | Notes
  **field_index** | **Integer**|  | 
  **criteria** | **String**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -404,7 +405,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -423,7 +424,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -458,7 +459,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -476,7 +477,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -509,11 +510,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -533,7 +534,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **field_index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -566,11 +567,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -590,7 +591,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **field_index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -625,14 +626,14 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 opts = { 
   color_filter: AsposeCellsCloud::ColorFilterRequest.new, # ColorFilterRequest | 
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -655,7 +656,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -690,7 +691,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 operator_type1 = 'operator_type1_example' # String | 
 
@@ -703,7 +704,7 @@ opts = {
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -731,7 +732,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -766,7 +767,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 date_time_grouping_type = 'date_time_grouping_type_example' # String | 
 
@@ -780,7 +781,7 @@ opts = {
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -810,7 +811,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -845,7 +846,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 dynamic_filter_type = 'dynamic_filter_type_example' # String | 
 
@@ -853,7 +854,7 @@ opts = {
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -876,7 +877,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -911,7 +912,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 criteria = 'criteria_example' # String | 
 
@@ -919,7 +920,7 @@ opts = {
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -943,7 +944,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -978,19 +979,19 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 is_top = true # BOOLEAN | 
 
 is_percent = true # BOOLEAN | 
 
-item_count = 56 # Integer | 
+item_count = 789 # Integer | 
 
 opts = { 
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1016,7 +1017,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1051,17 +1052,17 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 icon_set_type = 'icon_set_type_example' # String | 
 
-icon_id = 56 # Integer | 
+icon_id = 789 # Integer | 
 
 opts = { 
   match_blanks: true, # BOOLEAN | 
   refresh: true, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1086,7 +1087,7 @@ Name | Type | Description  | Notes
  **match_blanks** | **BOOLEAN**|  | [optional] 
  **refresh** | **BOOLEAN**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1119,12 +1120,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-autoshape_number = 56 # Integer | The autoshape number.
+autoshape_number = 789 # Integer | The autoshape number.
 
 opts = { 
   format: 'format_example', # String | Exported format.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1145,7 +1146,7 @@ Name | Type | Description  | Notes
  **autoshape_number** | **Integer**| The autoshape number. | 
  **format** | **String**| Exported format. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1180,7 +1181,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1199,7 +1200,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1232,11 +1233,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1256,7 +1257,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1289,11 +1290,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1313,7 +1314,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1346,11 +1347,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1370,7 +1371,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1403,11 +1404,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1427,7 +1428,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1460,11 +1461,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1484,7 +1485,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1519,7 +1520,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1538,7 +1539,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Workbook name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1571,11 +1572,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1595,7 +1596,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1628,12 +1629,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_number = 56 # Integer | The chart number.
+chart_number = 789 # Integer | The chart number.
 
 opts = { 
   format: 'format_example', # String | The exported file format.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1654,7 +1655,7 @@ Name | Type | Description  | Notes
  **chart_number** | **Integer**| The chart number. | 
  **format** | **String**| The exported file format. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1687,11 +1688,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1711,7 +1712,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1744,11 +1745,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1768,7 +1769,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1803,7 +1804,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1822,7 +1823,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1855,12 +1856,12 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-chart_index = 56 # Integer | 
+chart_index = 789 # Integer | 
 
 opts = { 
   chart: AsposeCellsCloud::Chart.new, # Chart | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1881,7 +1882,7 @@ Name | Type | Description  | Notes
  **chart_index** | **Integer**|  | 
  **chart** | [**Chart**](Chart.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1914,12 +1915,12 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   legend: AsposeCellsCloud::Legend.new, # Legend | 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1940,7 +1941,7 @@ Name | Type | Description  | Notes
  **chart_index** | **Integer**| The chart index. | 
  **legend** | [**Legend**](Legend.md)|  | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -1973,12 +1974,12 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   title: AsposeCellsCloud::Title.new, # Title | Chart title
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -1999,7 +2000,7 @@ Name | Type | Description  | Notes
  **chart_index** | **Integer**| The chart index. | 
  **title** | [**Title**](Title.md)| Chart title | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2045,7 +2046,7 @@ opts = {
   is_auto_get_serial_name: true, # BOOLEAN | Specifies whether auto update serial name. 
   title: 'title_example', # String | Specifies chart title name.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2074,7 +2075,7 @@ Name | Type | Description  | Notes
  **is_auto_get_serial_name** | **BOOLEAN**| Specifies whether auto update serial name.  | [optional] [default to true]
  **title** | **String**| Specifies chart title name. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2107,11 +2108,11 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2131,7 +2132,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **chart_index** | **Integer**| The chart index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2164,12 +2165,12 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 56 # Integer | The chart index.
+chart_index = 789 # Integer | The chart index.
 
 opts = { 
   title: AsposeCellsCloud::Title.new, # Title | Chart title.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2190,7 +2191,7 @@ Name | Type | Description  | Notes
  **chart_index** | **Integer**| The chart index. | 
  **title** | [**Title**](Title.md)| Chart title. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2223,11 +2224,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2247,7 +2248,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2280,17 +2281,17 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-start_row = 56 # Integer | 
+start_row = 789 # Integer | 
 
-start_column = 56 # Integer | 
+start_column = 789 # Integer | 
 
-total_rows = 56 # Integer | 
+total_rows = 789 # Integer | 
 
-total_columns = 56 # Integer | 
+total_columns = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2313,7 +2314,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**|  | 
  **total_columns** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2348,7 +2349,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2367,7 +2368,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2400,11 +2401,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2424,7 +2425,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2459,7 +2460,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2478,7 +2479,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2516,7 +2517,7 @@ cell_area = 'cell_area_example' # String |
 opts = { 
   format_condition: AsposeCellsCloud::FormatCondition.new, # FormatCondition | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2537,7 +2538,7 @@ Name | Type | Description  | Notes
  **cell_area** | **String**|  | 
  **format_condition** | [**FormatCondition**](FormatCondition.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2570,7 +2571,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 cell_area = 'cell_area_example' # String | 
 
@@ -2584,7 +2585,7 @@ formula2 = 'formula2_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2609,7 +2610,7 @@ Name | Type | Description  | Notes
  **formula1** | **String**|  | 
  **formula2** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2642,13 +2643,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 cell_area = 'cell_area_example' # String | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2669,7 +2670,7 @@ Name | Type | Description  | Notes
  **index** | **Integer**|  | 
  **cell_area** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2702,7 +2703,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 type = 'type_example' # String | 
 
@@ -2714,7 +2715,7 @@ formula2 = 'formula2_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2738,7 +2739,7 @@ Name | Type | Description  | Notes
  **formula1** | **String**|  | 
  **formula2** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2771,15 +2772,15 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 56 # Integer | The column index.
+column_index = 789 # Integer | The column index.
 
-columns = 56 # Integer | The columns.
+columns = 789 # Integer | The columns.
 
 update_reference = true # BOOLEAN | The update reference.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2801,7 +2802,7 @@ Name | Type | Description  | Notes
  **columns** | **Integer**| The columns. | 
  **update_reference** | **BOOLEAN**| The update reference. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2834,11 +2835,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet bame.
 
-row_index = 56 # Integer | The row index.
+row_index = 789 # Integer | The row index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2858,7 +2859,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet bame. | 
  **row_index** | **Integer**| The row index. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2891,13 +2892,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet bame.
 
-startrow = 56 # Integer | The begin row index to be operated.
+startrow = 789 # Integer | The begin row index to be operated.
 
 opts = { 
   total_rows: 1, # Integer | Number of rows to be operated.
   update_reference: true, # BOOLEAN | Indicates if update references in other worksheets.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2919,7 +2920,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| Number of rows to be operated. | [optional] [default to 1]
  **update_reference** | **BOOLEAN**| Indicates if update references in other worksheets. | [optional] [default to true]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -2956,7 +2957,7 @@ cell_name = 'cell_name_example' # String | The cell's  name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -2976,7 +2977,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **cell_name** | **String**| The cell&#39;s  name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3013,7 +3014,7 @@ cell_or_method_name = 'cell_or_method_name_example' # String | The cell's or met
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3033,7 +3034,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **cell_or_method_name** | **String**| The cell&#39;s or method name. (Method name like firstcell, endcell etc.) | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3070,7 +3071,7 @@ cell_name = 'cell_name_example' # String | Cell's name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3090,7 +3091,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **cell_name** | **String**| Cell&#39;s name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3127,7 +3128,7 @@ opts = {
   offest: 0, # Integer | Begginig offset.
   count: 0, # Integer | Maximum amount of cells in the response.
   folder: 'folder_example', # String | Document's folder name.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3148,7 +3149,7 @@ Name | Type | Description  | Notes
  **offest** | **Integer**| Begginig offset. | [optional] [default to 0]
  **count** | **Integer**| Maximum amount of cells in the response. | [optional] [default to 0]
  **folder** | **String**| Document&#39;s folder name. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3181,11 +3182,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 56 # Integer | The column index.
+column_index = 789 # Integer | The column index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3205,7 +3206,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **column_index** | **Integer**| The column index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3240,7 +3241,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The workdook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3259,7 +3260,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| The workdook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3292,11 +3293,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 56 # Integer | The row index.
+row_index = 789 # Integer | The row index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3316,7 +3317,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **row_index** | **Integer**| The row index. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3351,7 +3352,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The workdook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3370,7 +3371,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| The workdook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3403,11 +3404,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 56 # Integer | The hyperlink's index.
+hyperlink_index = 789 # Integer | The hyperlink's index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3427,7 +3428,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **hyperlink_index** | **Integer**| The hyperlink&#39;s index. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3462,7 +3463,7 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3481,7 +3482,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| Worksheet name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3514,11 +3515,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 56 # Integer | The hyperlink's index.
+hyperlink_index = 789 # Integer | The hyperlink's index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3538,7 +3539,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **hyperlink_index** | **Integer**| The hyperlink&#39;s index. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3573,7 +3574,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3592,7 +3593,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3625,12 +3626,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 56 # Integer | The hyperlink's index.
+hyperlink_index = 789 # Integer | The hyperlink's index.
 
 opts = { 
   hyperlink: AsposeCellsCloud::Hyperlink.new, # Hyperlink | Hyperlink object
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3651,7 +3652,7 @@ Name | Type | Description  | Notes
  **hyperlink_index** | **Integer**| The hyperlink&#39;s index. | 
  **hyperlink** | [**Hyperlink**](Hyperlink.md)| Hyperlink object | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3684,19 +3685,19 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-first_row = 56 # Integer | 
+first_row = 789 # Integer | 
 
-first_column = 56 # Integer | 
+first_column = 789 # Integer | 
 
-total_rows = 56 # Integer | 
+total_rows = 789 # Integer | 
 
-total_columns = 56 # Integer | 
+total_columns = 789 # Integer | 
 
 address = 'address_example' # String | 
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3720,7 +3721,7 @@ Name | Type | Description  | Notes
  **total_columns** | **Integer**|  | 
  **address** | **String**|  | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3753,11 +3754,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-list_object_index = 56 # Integer | List object index
+list_object_index = 789 # Integer | List object index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3777,7 +3778,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **list_object_index** | **Integer**| List object index | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3812,7 +3813,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3831,7 +3832,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3864,11 +3865,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-listobjectindex = 56 # Integer | list object index.
+listobjectindex = 789 # Integer | list object index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3888,7 +3889,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **listobjectindex** | **Integer**| list object index. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3923,7 +3924,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -3942,7 +3943,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -3975,12 +3976,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-list_object_index = 56 # Integer | list Object index
+list_object_index = 789 # Integer | list Object index
 
 opts = { 
   list_object: AsposeCellsCloud::ListObject.new, # ListObject | listObject dto in request body.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4001,7 +4002,7 @@ Name | Type | Description  | Notes
  **list_object_index** | **Integer**| list Object index | 
  **list_object** | [**ListObject**](ListObject.md)| listObject dto in request body. | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4034,11 +4035,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 56 # Integer | 
+list_object_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4057,7 +4058,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **list_object_index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4090,12 +4091,12 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 56 # Integer | 
+list_object_index = 789 # Integer | 
 
 opts = { 
   data_sorter: AsposeCellsCloud::DataSorter.new, # DataSorter | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4115,7 +4116,7 @@ Name | Type | Description  | Notes
  **list_object_index** | **Integer**|  | 
  **data_sorter** | [**DataSorter**](DataSorter.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4148,14 +4149,14 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 56 # Integer | 
+list_object_index = 789 # Integer | 
 
 destsheet_name = 'destsheet_name_example' # String | 
 
 opts = { 
   request: AsposeCellsCloud::CreatePivotTableRequest.new, # CreatePivotTableRequest | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4176,7 +4177,7 @@ Name | Type | Description  | Notes
  **destsheet_name** | **String**|  | 
  **request** | [**CreatePivotTableRequest**](CreatePivotTableRequest.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4209,19 +4210,19 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 56 # Integer | The start row of the list range.
+start_row = 789 # Integer | The start row of the list range.
 
-start_column = 56 # Integer | The start row of the list range.
+start_column = 789 # Integer | The start row of the list range.
 
-end_row = 56 # Integer | The start row of the list range.
+end_row = 789 # Integer | The start row of the list range.
 
-end_column = 56 # Integer | The start row of the list range.
+end_column = 789 # Integer | The start row of the list range.
 
 opts = { 
   has_headers: true, # BOOLEAN | Whether the range has headers.
   list_object: AsposeCellsCloud::ListObject.new, # ListObject | List Object
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4246,7 +4247,7 @@ Name | Type | Description  | Notes
  **has_headers** | **BOOLEAN**| Whether the range has headers. | [optional] [default to true]
  **list_object** | [**ListObject**](ListObject.md)| List Object | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4279,11 +4280,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-ole_object_index = 56 # Integer | Ole object index
+ole_object_index = 789 # Integer | Ole object index
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4303,7 +4304,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worsheet name. | 
  **ole_object_index** | **Integer**| Ole object index | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4338,7 +4339,7 @@ sheet_name = 'sheet_name_example' # String | The worsheet name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4357,7 +4358,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **sheet_name** | **String**| The worsheet name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4390,12 +4391,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-object_number = 56 # Integer | The object number.
+object_number = 789 # Integer | The object number.
 
 opts = { 
   format: 'format_example', # String | The exported object format.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4416,7 +4417,7 @@ Name | Type | Description  | Notes
  **object_number** | **Integer**| The object number. | 
  **format** | **String**| The exported object format. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4451,7 +4452,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4470,7 +4471,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4503,12 +4504,12 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-ole_object_index = 56 # Integer | Ole object index
+ole_object_index = 789 # Integer | Ole object index
 
 opts = { 
   ole: AsposeCellsCloud::OleObject.new, # OleObject | Ole Object
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4529,7 +4530,7 @@ Name | Type | Description  | Notes
  **ole_object_index** | **Integer**| Ole object index | 
  **ole** | [**OleObject**](OleObject.md)| Ole Object | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4571,7 +4572,7 @@ opts = {
   ole_file: 'ole_file_example', # String | OLE filename
   image_file: 'image_file_example', # String | Image filename
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4597,7 +4598,7 @@ Name | Type | Description  | Notes
  **ole_file** | **String**| OLE filename | [optional] 
  **image_file** | **String**| Image filename | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4630,11 +4631,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4653,7 +4654,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4687,9 +4688,9 @@ name = 'name_example' # String |
 sheet_name = 'sheet_name_example' # String | 
 
 opts = { 
-  row: 56, # Integer | 
+  row: 789, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4708,7 +4709,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **row** | **Integer**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4741,11 +4742,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4764,7 +4765,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4798,9 +4799,9 @@ name = 'name_example' # String |
 sheet_name = 'sheet_name_example' # String | 
 
 opts = { 
-  column: 56, # Integer | 
+  column: 789, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4819,7 +4820,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **column** | **Integer**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4852,11 +4853,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4875,7 +4876,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4910,7 +4911,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4928,7 +4929,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -4961,11 +4962,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 56 # Integer | 
+index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -4984,7 +4985,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5019,7 +5020,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5037,7 +5038,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5072,12 +5073,12 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   cellname: 'cellname_example', # String | 
-  row: 56, # Integer | 
-  column: 56, # Integer | 
-  start_column: 56, # Integer | 
-  end_column: 56, # Integer | 
+  row: 789, # Integer | 
+  column: 789, # Integer | 
+  start_column: 789, # Integer | 
+  end_column: 789, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5100,7 +5101,7 @@ Name | Type | Description  | Notes
  **start_column** | **Integer**|  | [optional] 
  **end_column** | **Integer**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5135,12 +5136,12 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   cellname: 'cellname_example', # String | 
-  column: 56, # Integer | 
-  row: 56, # Integer | 
-  start_row: 56, # Integer | 
-  end_row: 56, # Integer | 
+  column: 789, # Integer | 
+  row: 789, # Integer | 
+  start_row: 789, # Integer | 
+  end_row: 789, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5163,7 +5164,7 @@ Name | Type | Description  | Notes
  **start_row** | **Integer**|  | [optional] 
  **end_row** | **Integer**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5198,7 +5199,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5217,7 +5218,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5252,7 +5253,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5271,7 +5272,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5306,7 +5307,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5325,7 +5326,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5360,7 +5361,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5379,7 +5380,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5412,7 +5413,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-section = 56 # Integer | 
+section = 789 # Integer | 
 
 script = 'script_example' # String | 
 
@@ -5420,7 +5421,7 @@ is_first_page = true # BOOLEAN |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5442,7 +5443,7 @@ Name | Type | Description  | Notes
  **script** | **String**|  | 
  **is_first_page** | **BOOLEAN**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5475,7 +5476,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-section = 56 # Integer | 
+section = 789 # Integer | 
 
 script = 'script_example' # String | 
 
@@ -5483,7 +5484,7 @@ is_first_page = true # BOOLEAN |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5505,7 +5506,7 @@ Name | Type | Description  | Notes
  **script** | **String**|  | 
  **is_first_page** | **BOOLEAN**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5541,7 +5542,7 @@ sheet_name = 'sheet_name_example' # String |
 opts = { 
   page_setup: AsposeCellsCloud::PageSetup.new, # PageSetup | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5561,7 +5562,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **page_setup** | [**PageSetup**](PageSetup.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5594,11 +5595,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-picture_index = 56 # Integer | Picture index
+picture_index = 789 # Integer | Picture index
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5618,7 +5619,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worsheet name. | 
  **picture_index** | **Integer**| Picture index | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5653,7 +5654,7 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5672,7 +5673,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| Worksheet name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5705,12 +5706,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-picture_index = 56 # Integer | The picture index.
+picture_index = 789 # Integer | The picture index.
 
 opts = { 
   format: 'format_example', # String | The exported object format.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5731,7 +5732,7 @@ Name | Type | Description  | Notes
  **picture_index** | **Integer**| The picture index. | 
  **format** | **String**| The exported object format. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5766,7 +5767,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5785,7 +5786,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5818,12 +5819,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-picture_index = 56 # Integer | The picture's index.
+picture_index = 789 # Integer | The picture's index.
 
 opts = { 
   picture: AsposeCellsCloud::Picture.new, # Picture | Picture object
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5844,7 +5845,7 @@ Name | Type | Description  | Notes
  **picture_index** | **Integer**| The picture&#39;s index. | 
  **picture** | [**Picture**](Picture.md)| Picture object | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5885,7 +5886,7 @@ opts = {
   lower_right_column: 0, # Integer | The image low right column.
   picture_path: 'picture_path_example', # String | The picture path, if not provided the picture data is inspected in the request body.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5910,7 +5911,7 @@ Name | Type | Description  | Notes
  **lower_right_column** | **Integer**| The image low right column. | [optional] [default to 0]
  **picture_path** | **String**| The picture path, if not provided the picture data is inspected in the request body. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -5943,14 +5944,14 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
 opts = { 
   request: AsposeCellsCloud::PivotTableFieldRequest.new, # PivotTableFieldRequest | Dto that conrains field indexes
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -5972,7 +5973,7 @@ Name | Type | Description  | Notes
  **pivot_field_type** | **String**| The fields area type. | 
  **request** | [**PivotTableFieldRequest**](PivotTableFieldRequest.md)| Dto that conrains field indexes | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6005,11 +6006,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6029,7 +6030,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **pivot_table_index** | **Integer**| Pivot table index | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6062,14 +6063,14 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 opts = { 
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6091,7 +6092,7 @@ Name | Type | Description  | Notes
  **field_index** | **Integer**|  | 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6124,12 +6125,12 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
 opts = { 
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6150,7 +6151,7 @@ Name | Type | Description  | Notes
  **pivot_table_index** | **Integer**|  | 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6185,7 +6186,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6204,7 +6205,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6237,15 +6238,15 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
-pivot_field_index = 56 # Integer | The field index in the base fields.
+pivot_field_index = 789 # Integer | The field index in the base fields.
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6267,7 +6268,7 @@ Name | Type | Description  | Notes
  **pivot_field_index** | **Integer**| The field index in the base fields. | 
  **pivot_field_type** | **String**| The fields area type. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6300,11 +6301,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivottable_index = 56 # Integer | 
+pivottable_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6324,7 +6325,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **pivottable_index** | **Integer**|  | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6357,13 +6358,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
-filter_index = 56 # Integer | 
+filter_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6383,7 +6384,7 @@ Name | Type | Description  | Notes
  **pivot_table_index** | **Integer**|  | 
  **filter_index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6416,11 +6417,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6439,7 +6440,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **pivot_table_index** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6474,7 +6475,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6493,7 +6494,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6526,17 +6527,17 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
-column = 56 # Integer | 
+column = 789 # Integer | 
 
-row = 56 # Integer | 
+row = 789 # Integer | 
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto in request body.
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6560,7 +6561,7 @@ Name | Type | Description  | Notes
  **style** | [**Style**](Style.md)| Style dto in request body. | [optional] 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6593,20 +6594,20 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
 pivot_field_type = 'pivot_field_type_example' # String | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
-item_index = 56 # Integer | 
+item_index = 789 # Integer | 
 
 is_hide = true # BOOLEAN | 
 
 opts = { 
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6630,7 +6631,7 @@ Name | Type | Description  | Notes
  **is_hide** | **BOOLEAN**|  | 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6663,9 +6664,9 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
-field_index = 56 # Integer | 
+field_index = 789 # Integer | 
 
 from = 'from_example' # String | 
 
@@ -6673,7 +6674,7 @@ to = 'to_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6695,7 +6696,7 @@ Name | Type | Description  | Notes
  **from** | **String**|  | 
  **to** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6728,13 +6729,13 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto in request body.
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6756,7 +6757,7 @@ Name | Type | Description  | Notes
  **style** | [**Style**](Style.md)| Style dto in request body. | [optional] 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6789,11 +6790,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6813,7 +6814,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **pivot_table_index** | **Integer**| Pivot table index | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6846,14 +6847,14 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
 opts = { 
-  row: 56, # Integer | 
-  column: 56, # Integer | 
+  row: 789, # Integer | 
+  column: 789, # Integer | 
   dest_cell_name: 'dest_cell_name_example', # String | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6875,7 +6876,7 @@ Name | Type | Description  | Notes
  **column** | **Integer**|  | [optional] 
  **dest_cell_name** | **String**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6908,7 +6909,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 56 # Integer | Pivot table index
+pivot_table_index = 789 # Integer | Pivot table index
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
@@ -6916,7 +6917,7 @@ opts = {
   request: AsposeCellsCloud::PivotTableFieldRequest.new, # PivotTableFieldRequest | Dto that conrains field indexes
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -6939,7 +6940,7 @@ Name | Type | Description  | Notes
  **request** | [**PivotTableFieldRequest**](PivotTableFieldRequest.md)| Dto that conrains field indexes | [optional] 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -6975,7 +6976,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 opts = { 
   request: AsposeCellsCloud::CreatePivotTableRequest.new, # CreatePivotTableRequest | CreatePivotTableRequest dto in request body.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example', # String | storage name.
+  storage_name: 'storage_name_example', # String | storage name.
   source_data: 'source_data_example', # String | The data for the new PivotTable cache.
   dest_cell_name: 'dest_cell_name_example', # String | The cell in the upper-left corner of the PivotTable report's destination range.
   table_name: 'table_name_example', # String | The name of the new PivotTable report.
@@ -6999,7 +7000,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **request** | [**CreatePivotTableRequest**](CreatePivotTableRequest.md)| CreatePivotTableRequest dto in request body. | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
  **source_data** | **String**| The data for the new PivotTable cache. | [optional] 
  **dest_cell_name** | **String**| The cell in the upper-left corner of the PivotTable report&#39;s destination range. | [optional] 
  **table_name** | **String**| The name of the new PivotTable report. | [optional] 
@@ -7036,13 +7037,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 56 # Integer | 
+pivot_table_index = 789 # Integer | 
 
 opts = { 
   filter: AsposeCellsCloud::PivotFilter.new, # PivotFilter | 
   need_re_calculate: false, # BOOLEAN | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7064,7 +7065,7 @@ Name | Type | Description  | Notes
  **filter** | [**PivotFilter**](PivotFilter.md)|  | [optional] 
  **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7102,7 +7103,7 @@ cell_name = 'cell_name_example' # String |
 opts = { 
   options: AsposeCellsCloud::CalculationOptions.new, # CalculationOptions | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7123,7 +7124,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**|  | 
  **options** | [**CalculationOptions**](CalculationOptions.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7161,7 +7162,7 @@ cell_name = 'cell_name_example' # String |
 opts = { 
   options: [AsposeCellsCloud::FontSetting.new], # Array<FontSetting> | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7182,7 +7183,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**|  | 
  **options** | [**Array&lt;FontSetting&gt;**](FontSetting.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7217,12 +7218,12 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   range: 'range_example', # String | The range.
-  start_row: 56, # Integer | The start row.
-  start_column: 56, # Integer | The start column.
-  end_row: 56, # Integer | The end row.
-  end_column: 56, # Integer | The end column.
+  start_row: 789, # Integer | The start row.
+  start_column: 789, # Integer | The start column.
+  end_row: 789, # Integer | The end row.
+  end_column: 789, # Integer | The end column.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7246,7 +7247,7 @@ Name | Type | Description  | Notes
  **end_row** | **Integer**| The end row. | [optional] 
  **end_column** | **Integer**| The end column. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7281,12 +7282,12 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   range: 'range_example', # String | The range.
-  start_row: 56, # Integer | The start row.
-  start_column: 56, # Integer | The start column.
-  end_row: 56, # Integer | The end row.
-  end_column: 56, # Integer | The end column.
+  start_row: 789, # Integer | The start row.
+  start_column: 789, # Integer | The start column.
+  end_row: 789, # Integer | The end row.
+  end_column: 789, # Integer | The end column.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7310,7 +7311,7 @@ Name | Type | Description  | Notes
  **end_row** | **Integer**| The end row. | [optional] 
  **end_column** | **Integer**| The end column. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7343,12 +7344,12 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 56 # Integer | The column index.
+column_index = 789 # Integer | The column index.
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7369,7 +7370,7 @@ Name | Type | Description  | Notes
  **column_index** | **Integer**| The column index. | 
  **style** | [**Style**](Style.md)| Style dto | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7408,10 +7409,10 @@ worksheet = 'worksheet_example' # String | Source worksheet name.
 
 opts = { 
   cellname: 'cellname_example', # String | Source cell name
-  row: 56, # Integer | Source row
-  column: 56, # Integer | Source column
+  row: 789, # Integer | Source row
+  column: 789, # Integer | Source column
   folder: 'folder_example', # String | Folder name
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7435,7 +7436,7 @@ Name | Type | Description  | Notes
  **row** | **Integer**| Source row | [optional] 
  **column** | **Integer**| Source column | [optional] 
  **folder** | **String**| Folder name | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7468,16 +7469,16 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-source_column_index = 56 # Integer | Source column index
+source_column_index = 789 # Integer | Source column index
 
-destination_column_index = 56 # Integer | Destination column index
+destination_column_index = 789 # Integer | Destination column index
 
-column_number = 56 # Integer | The copied column number
+column_number = 789 # Integer | The copied column number
 
 opts = { 
   worksheet: '', # String | The Worksheet
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7500,7 +7501,7 @@ Name | Type | Description  | Notes
  **column_number** | **Integer**| The copied column number | 
  **worksheet** | **String**| The Worksheet | [optional] [default to ]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7533,16 +7534,16 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-source_row_index = 56 # Integer | Source row index
+source_row_index = 789 # Integer | Source row index
 
-destination_row_index = 56 # Integer | Destination row index
+destination_row_index = 789 # Integer | Destination row index
 
-row_number = 56 # Integer | The copied row number
+row_number = 789 # Integer | The copied row number
 
 opts = { 
   worksheet: 'worksheet_example', # String | worksheet
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7565,7 +7566,7 @@ Name | Type | Description  | Notes
  **row_number** | **Integer**| The copied row number | 
  **worksheet** | **String**| worksheet | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7598,14 +7599,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 56 # Integer | The first column index to be operated.
+first_index = 789 # Integer | The first column index to be operated.
 
-last_index = 56 # Integer | The last column index to be operated.
+last_index = 789 # Integer | The last column index to be operated.
 
 opts = { 
   hide: true, # BOOLEAN | columns visible state
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7627,7 +7628,7 @@ Name | Type | Description  | Notes
  **last_index** | **Integer**| The last column index to be operated. | 
  **hide** | **BOOLEAN**| columns visible state | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7660,14 +7661,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 56 # Integer | The first row index to be operated.
+first_index = 789 # Integer | The first row index to be operated.
 
-last_index = 56 # Integer | The last row index to be operated.
+last_index = 789 # Integer | The last row index to be operated.
 
 opts = { 
   hide: true, # BOOLEAN | rows visible state
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7689,7 +7690,7 @@ Name | Type | Description  | Notes
  **last_index** | **Integer**| The last row index to be operated. | 
  **hide** | **BOOLEAN**| rows visible state | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7722,13 +7723,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_column = 56 # Integer | The begin column index to be operated.
+start_column = 789 # Integer | The begin column index to be operated.
 
-total_columns = 56 # Integer | Number of columns to be operated.
+total_columns = 789 # Integer | Number of columns to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7749,7 +7750,7 @@ Name | Type | Description  | Notes
  **start_column** | **Integer**| The begin column index to be operated. | 
  **total_columns** | **Integer**| Number of columns to be operated. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7782,13 +7783,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 56 # Integer | The begin row index to be operated.
+startrow = 789 # Integer | The begin row index to be operated.
 
-total_rows = 56 # Integer | Number of rows to be operated.
+total_rows = 789 # Integer | Number of rows to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7809,7 +7810,7 @@ Name | Type | Description  | Notes
  **startrow** | **Integer**| The begin row index to be operated. | 
  **total_rows** | **Integer**| Number of rows to be operated. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7842,12 +7843,12 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 56 # Integer | The row index.
+row_index = 789 # Integer | The row index.
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7868,7 +7869,7 @@ Name | Type | Description  | Notes
  **row_index** | **Integer**| The row index. | 
  **style** | [**Style**](Style.md)| Style dto | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7907,7 +7908,7 @@ html_string = 'B' # String |
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7928,7 +7929,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**| The cell name. | 
  **html_string** | **String**|  | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -7969,7 +7970,7 @@ type = 'type_example' # String | Value data type (like \"int\")
 
 opts = { 
   folder: 'folder_example', # String | Folder name
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -7991,7 +7992,7 @@ Name | Type | Description  | Notes
  **value** | **String**| Range value | 
  **type** | **String**| Value data type (like \&quot;int\&quot;) | 
  **folder** | **String**| Folder name | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8024,13 +8025,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 56 # Integer | The column index.
+column_index = 789 # Integer | The column index.
 
 width = 1.2 # Float | The width.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8051,7 +8052,7 @@ Name | Type | Description  | Notes
  **column_index** | **Integer**| The column index. | 
  **width** | **Float**| The width. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8084,13 +8085,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 56 # Integer | The first column index to be operated.
+first_index = 789 # Integer | The first column index to be operated.
 
-last_index = 56 # Integer | The last column index to be operated.
+last_index = 789 # Integer | The last column index to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8111,7 +8112,7 @@ Name | Type | Description  | Notes
  **first_index** | **Integer**| The first column index to be operated. | 
  **last_index** | **Integer**| The last column index to be operated. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8144,14 +8145,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 56 # Integer | The first row index to be operated.
+first_index = 789 # Integer | The first row index to be operated.
 
-last_index = 56 # Integer | The last row index to be operated.
+last_index = 789 # Integer | The last row index to be operated.
 
 opts = { 
   is_all: true, # BOOLEAN | Is all row to be operated
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8173,7 +8174,7 @@ Name | Type | Description  | Notes
  **last_index** | **Integer**| The last row index to be operated. | 
  **is_all** | **BOOLEAN**| Is all row to be operated | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8206,14 +8207,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startcolumn = 56 # Integer | The begin column index to be operated.
+startcolumn = 789 # Integer | The begin column index to be operated.
 
-total_columns = 56 # Integer | Number of columns to be operated.
+total_columns = 789 # Integer | Number of columns to be operated.
 
 opts = { 
   width: 50.0, # Float | The new column width.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8235,7 +8236,7 @@ Name | Type | Description  | Notes
  **total_columns** | **Integer**| Number of columns to be operated. | 
  **width** | **Float**| The new column width. | [optional] [default to 50.0]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8268,14 +8269,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 56 # Integer | The begin row index to be operated.
+startrow = 789 # Integer | The begin row index to be operated.
 
-total_rows = 56 # Integer | Number of rows to be operated.
+total_rows = 789 # Integer | Number of rows to be operated.
 
 opts = { 
   height: 15.0, # Float | The new row height.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8297,7 +8298,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| Number of rows to be operated. | 
  **height** | **Float**| The new row height. | [optional] [default to 15.0]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8335,7 +8336,7 @@ cell_name = 'cell_name_example' # String | The cell name.
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | with update style settings.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8356,7 +8357,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**| The cell name. | 
  **style** | [**Style**](Style.md)| with update style settings. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8394,7 +8395,7 @@ range = 'range_example' # String | The range.
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | with update style settings.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8415,7 +8416,7 @@ Name | Type | Description  | Notes
  **range** | **String**| The range. | 
  **style** | [**Style**](Style.md)| with update style settings. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8448,12 +8449,12 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 56 # Integer | The row index.
+row_index = 789 # Integer | The row index.
 
 opts = { 
   height: 0.0, # Float | The new row height.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8474,7 +8475,7 @@ Name | Type | Description  | Notes
  **row_index** | **Integer**| The row index. | 
  **height** | **Float**| The new row height. | [optional] [default to 0.0]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8514,7 +8515,7 @@ opts = {
   type: 'type_example', # String | The value type.
   formula: 'formula_example', # String | Formula for cell
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8537,7 +8538,7 @@ Name | Type | Description  | Notes
  **type** | **String**| The value type. | [optional] 
  **formula** | **String**| Formula for cell | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8570,17 +8571,17 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 56 # Integer | The start row.
+start_row = 789 # Integer | The start row.
 
-start_column = 56 # Integer | The start column.
+start_column = 789 # Integer | The start column.
 
-total_rows = 56 # Integer | The total rows
+total_rows = 789 # Integer | The total rows
 
-total_columns = 56 # Integer | The total columns.
+total_columns = 789 # Integer | The total columns.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8603,7 +8604,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| The total rows | 
  **total_columns** | **Integer**| The total columns. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8636,17 +8637,17 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 56 # Integer | The start row.
+start_row = 789 # Integer | The start row.
 
-start_column = 56 # Integer | The start column.
+start_column = 789 # Integer | The start column.
 
-total_rows = 56 # Integer | The total rows
+total_rows = 789 # Integer | The total rows
 
-total_columns = 56 # Integer | The total columns.
+total_columns = 789 # Integer | The total columns.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8669,7 +8670,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| The total rows | 
  **total_columns** | **Integer**| The total columns. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8702,7 +8703,7 @@ name = 'name_example' # String | The document name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8720,7 +8721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The document name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8755,7 +8756,7 @@ property_name = 'property_name_example' # String | The property name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8774,7 +8775,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **property_name** | **String**| The property name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8807,7 +8808,7 @@ name = 'name_example' # String | The document name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8825,7 +8826,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The document name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8860,7 +8861,7 @@ property_name = 'property_name_example' # String | The property name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8879,7 +8880,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **property_name** | **String**| The property name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8915,7 +8916,7 @@ property_name = 'property_name_example' # String | The property name.
 opts = { 
   property: AsposeCellsCloud::CellsDocumentProperty.new, # CellsDocumentProperty | with new property value.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8935,7 +8936,7 @@ Name | Type | Description  | Notes
  **property_name** | **String**| The property name. | 
  **property** | [**CellsDocumentProperty**](CellsDocumentProperty.md)| with new property value. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -8968,14 +8969,14 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 56 # Integer | The column index.
+column_index = 789 # Integer | The column index.
 
-columns = 56 # Integer | The columns.
+columns = 789 # Integer | The columns.
 
 opts = { 
   update_reference: true, # BOOLEAN | The update reference.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -8997,7 +8998,7 @@ Name | Type | Description  | Notes
  **columns** | **Integer**| The columns. | 
  **update_reference** | **BOOLEAN**| The update reference. | [optional] [default to true]
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9030,11 +9031,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 56 # Integer | The new row index.
+row_index = 789 # Integer | The new row index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9054,7 +9055,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **row_index** | **Integer**| The new row index. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9087,13 +9088,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 56 # Integer | The begin row index to be operated.
+startrow = 789 # Integer | The begin row index to be operated.
 
 opts = { 
   total_rows: 1, # Integer | Number of rows to be operated.
   update_reference: true, # BOOLEAN | Indicates if update references in other worksheets.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9115,7 +9116,7 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| Number of rows to be operated. | [optional] [default to 1]
  **update_reference** | **BOOLEAN**| Indicates if update references in other worksheets. | [optional] [default to true]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9155,7 +9156,7 @@ opts = {
   row_count: 56, # Integer | the count of rows in the range
   column_count: 56, # Integer | the count of columns in the range
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9179,7 +9180,7 @@ Name | Type | Description  | Notes
  **row_count** | **Integer**| the count of rows in the range | [optional] 
  **column_count** | **Integer**| the count of columns in the range | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9217,7 +9218,7 @@ value = 1.2 # Float |
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9238,7 +9239,7 @@ Name | Type | Description  | Notes
  **value** | **Float**|  | 
  **range** | [**Range**](Range.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9274,7 +9275,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | range in worksheet 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9294,7 +9295,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name | 
  **range** | [**Range**](Range.md)| range in worksheet  | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9327,14 +9328,14 @@ name = 'name_example' # String | workbook name
 
 sheet_name = 'sheet_name_example' # String | worksheet name
 
-dest_row = 56 # Integer | The start row of the dest range.
+dest_row = 789 # Integer | The start row of the dest range.
 
-dest_column = 56 # Integer | The start column of the dest range.
+dest_column = 789 # Integer | The start column of the dest range.
 
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | range in worksheet 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9356,7 +9357,7 @@ Name | Type | Description  | Notes
  **dest_column** | **Integer**| The start column of the dest range. | 
  **range** | [**Range**](Range.md)| range in worksheet  | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9392,7 +9393,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name
 opts = { 
   range_operate: AsposeCellsCloud::RangeSetOutlineBorderRequest.new, # RangeSetOutlineBorderRequest | Range Set OutlineBorder Request 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9412,7 +9413,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name | 
  **range_operate** | [**RangeSetOutlineBorderRequest**](RangeSetOutlineBorderRequest.md)| Range Set OutlineBorder Request  | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9450,7 +9451,7 @@ value = 1.2 # Float |
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9471,7 +9472,7 @@ Name | Type | Description  | Notes
  **value** | **Float**|  | 
  **range** | [**Range**](Range.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9507,7 +9508,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name
 opts = { 
   range_operate: AsposeCellsCloud::RangeSetStyleRequest.new, # RangeSetStyleRequest | Range Set Style Request 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9527,7 +9528,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name | 
  **range_operate** | [**RangeSetStyleRequest**](RangeSetStyleRequest.md)| Range Set Style Request  | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9563,7 +9564,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | range in worksheet 
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9583,7 +9584,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name | 
  **range** | [**Range**](Range.md)| range in worksheet  | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9623,7 +9624,7 @@ opts = {
   is_converted: false, # BOOLEAN | True: converted to other data type if appropriate.
   set_style: false, # BOOLEAN | True: set the number format to cell's style when converting to other data type
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9646,7 +9647,7 @@ Name | Type | Description  | Notes
  **is_converted** | **BOOLEAN**| True: converted to other data type if appropriate. | [optional] [default to false]
  **set_style** | **BOOLEAN**| True: set the number format to cell&#39;s style when converting to other data type | [optional] [default to false]
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9682,7 +9683,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name
 opts = { 
   range_operate: AsposeCellsCloud::RangeCopyRequest.new, # RangeCopyRequest | copydata,copystyle,copyto,copyvalue
   folder: 'folder_example', # String | Workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9702,7 +9703,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name | 
  **range_operate** | [**RangeCopyRequest**](RangeCopyRequest.md)| copydata,copystyle,copyto,copyvalue | [optional] 
  **folder** | **String**| Workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9739,7 +9740,7 @@ opts = {
   is_auto_fit_rows: false, # BOOLEAN | Autofit rows.
   is_auto_fit_columns: false, # BOOLEAN | Autofit columns.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9761,7 +9762,7 @@ Name | Type | Description  | Notes
  **is_auto_fit_rows** | **BOOLEAN**| Autofit rows. | [optional] [default to false]
  **is_auto_fit_columns** | **BOOLEAN**| Autofit columns. | [optional] [default to false]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9794,11 +9795,11 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 56 # Integer | shape index in worksheet shapes.
+shapeindex = 789 # Integer | shape index in worksheet shapes.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9818,7 +9819,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name. | 
  **shapeindex** | **Integer**| shape index in worksheet shapes. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9853,7 +9854,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9872,7 +9873,7 @@ Name | Type | Description  | Notes
  **name** | **String**| document name. | 
  **sheet_name** | **String**| worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9905,11 +9906,11 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 56 # Integer | shape index in worksheet shapes.
+shapeindex = 789 # Integer | shape index in worksheet shapes.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9929,7 +9930,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| worksheet name. | 
  **shapeindex** | **Integer**| shape index in worksheet shapes. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -9964,7 +9965,7 @@ sheet_name = 'sheet_name_example' # String | worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -9983,7 +9984,7 @@ Name | Type | Description  | Notes
  **name** | **String**| document name. | 
  **sheet_name** | **String**| worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10016,12 +10017,12 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 56 # Integer | shape index in worksheet shapes.
+shapeindex = 789 # Integer | shape index in worksheet shapes.
 
 opts = { 
   dto: AsposeCellsCloud::Shape.new, # Shape | 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10042,7 +10043,7 @@ Name | Type | Description  | Notes
  **shapeindex** | **Integer**| shape index in worksheet shapes. | 
  **dto** | [**Shape**](Shape.md)|  | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10060,7 +10061,7 @@ No authorization required
 
 
 # **cells_shapes_put_worksheet_shape**
-> ShapeResponse cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, opts)
+> ShapeResponse cells_shapes_put_worksheet_shape(name, sheet_name, opts)
 
 Add shape in worksheet
 
@@ -10075,28 +10076,22 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-drawing_type = 'drawing_type_example' # String | shape object type
-
-upper_left_row = 56 # Integer | Upper left row index.
-
-upper_left_column = 56 # Integer | Upper left column index.
-
-top = 56 # Integer | Represents the vertical offset of Spinner from its left row, in unit of pixel.
-
-left = 56 # Integer | Represents the horizontal offset of Spinner from its left column, in unit of pixel.
-
-width = 56 # Integer | Represents the height of Spinner, in unit of pixel.
-
-height = 56 # Integer | Represents the width of Spinner, in unit of pixel.
-
 opts = { 
+  shape_dto: AsposeCellsCloud::Shape.new, # Shape | 
+  drawing_type: 'drawing_type_example', # String | shape object type
+  upper_left_row: 789, # Integer | Upper left row index.
+  upper_left_column: 789, # Integer | Upper left column index.
+  top: 789, # Integer | Represents the vertical offset of Spinner from its left row, in unit of pixel.
+  left: 789, # Integer | Represents the horizontal offset of Spinner from its left column, in unit of pixel.
+  width: 789, # Integer | Represents the height of Spinner, in unit of pixel.
+  height: 789, # Integer | Represents the width of Spinner, in unit of pixel.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
   #Add shape in worksheet
-  result = api_instance.cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, opts)
+  result = api_instance.cells_shapes_put_worksheet_shape(name, sheet_name, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
   puts "Exception when calling CellsApi->cells_shapes_put_worksheet_shape: #{e}"
@@ -10109,15 +10104,16 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| document name. | 
  **sheet_name** | **String**| worksheet name. | 
- **drawing_type** | **String**| shape object type | 
- **upper_left_row** | **Integer**| Upper left row index. | 
- **upper_left_column** | **Integer**| Upper left column index. | 
- **top** | **Integer**| Represents the vertical offset of Spinner from its left row, in unit of pixel. | 
- **left** | **Integer**| Represents the horizontal offset of Spinner from its left column, in unit of pixel. | 
- **width** | **Integer**| Represents the height of Spinner, in unit of pixel. | 
- **height** | **Integer**| Represents the width of Spinner, in unit of pixel. | 
+ **shape_dto** | [**Shape**](Shape.md)|  | [optional] 
+ **drawing_type** | **String**| shape object type | [optional] 
+ **upper_left_row** | **Integer**| Upper left row index. | [optional] 
+ **upper_left_column** | **Integer**| Upper left column index. | [optional] 
+ **top** | **Integer**| Represents the vertical offset of Spinner from its left row, in unit of pixel. | [optional] 
+ **left** | **Integer**| Represents the horizontal offset of Spinner from its left column, in unit of pixel. | [optional] 
+ **width** | **Integer**| Represents the height of Spinner, in unit of pixel. | [optional] 
+ **height** | **Integer**| Represents the width of Spinner, in unit of pixel. | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10196,7 +10192,7 @@ name = 'name_example' # String | The document name.
 opts = { 
   encryption: AsposeCellsCloud::WorkbookEncryptionRequest.new, # WorkbookEncryptionRequest | Encryption settings, only password can be specified.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10215,7 +10211,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **encryption** | [**WorkbookEncryptionRequest**](WorkbookEncryptionRequest.md)| Encryption settings, only password can be specified. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10248,7 +10244,7 @@ name = 'name_example' # String | The document name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10266,7 +10262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The document name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10300,7 +10296,7 @@ name = 'name_example' # String | The document name.
 opts = { 
   protection: AsposeCellsCloud::WorkbookProtectionRequest.new, # WorkbookProtectionRequest | Protection settings, only password can be specified.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10319,7 +10315,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **protection** | [**WorkbookProtectionRequest**](WorkbookProtectionRequest.md)| Protection settings, only password can be specified. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10352,7 +10348,7 @@ name = 'name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10370,7 +10366,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10405,7 +10401,7 @@ name_name = 'name_name_example' # String | The name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10424,7 +10420,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **name_name** | **String**| The name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10457,7 +10453,7 @@ name = 'name_example' # String | The workbook name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10475,7 +10471,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The workbook name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10512,7 +10508,7 @@ opts = {
   is_auto_fit: false, # BOOLEAN | Set document rows to be autofit.
   only_save_table: false, # BOOLEAN | Only save table data.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example', # String | storage name.
+  storage_name: 'storage_name_example', # String | storage name.
   out_path: 'out_path_example' # String | The document output folder.
 }
 
@@ -10535,7 +10531,7 @@ Name | Type | Description  | Notes
  **is_auto_fit** | **BOOLEAN**| Set document rows to be autofit. | [optional] [default to false]
  **only_save_table** | **BOOLEAN**| Only save table data. | [optional] [default to false]
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
  **out_path** | **String**| The document output folder. | [optional] 
 
 ### Return type
@@ -10569,7 +10565,7 @@ name = 'name_example' # String | The workbook name.
 
 opts = { 
   folder: 'folder_example', # String | The document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10587,7 +10583,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The workbook name. | 
  **folder** | **String**| The document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10622,7 +10618,7 @@ name_name = 'name_name_example' # String | The name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10641,7 +10637,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **name_name** | **String**| The name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10676,7 +10672,7 @@ name_name = 'name_name_example' # String | The name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10695,7 +10691,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **name_name** | **String**| The name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10728,7 +10724,7 @@ name = 'name_example' # String | The workbook name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10746,7 +10742,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The workbook name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10779,7 +10775,7 @@ name = 'name_example' # String | Document name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10797,7 +10793,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| Document name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10830,7 +10826,7 @@ name = 'name_example' # String | The workbook name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10848,7 +10844,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| The workbook name. | 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10881,11 +10877,11 @@ name = 'name_example' # String | Document name.
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | Auto Fitter Options.
-  start_row: 56, # Integer | Start row.
-  end_row: 56, # Integer | End row.
+  start_row: 789, # Integer | Start row.
+  end_row: 789, # Integer | End row.
   only_auto: false, # BOOLEAN | Only auto.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10907,7 +10903,7 @@ Name | Type | Description  | Notes
  **end_row** | **Integer**| End row. | [optional] 
  **only_auto** | **BOOLEAN**| Only auto. | [optional] [default to false]
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10941,7 +10937,7 @@ name = 'name_example' # String | The document name.
 opts = { 
   encryption: AsposeCellsCloud::WorkbookEncryptionRequest.new, # WorkbookEncryptionRequest | Encryption parameters.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -10960,7 +10956,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **encryption** | [**WorkbookEncryptionRequest**](WorkbookEncryptionRequest.md)| Encryption parameters. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -10995,7 +10991,7 @@ import_data = AsposeCellsCloud::ImportOption.new # ImportOption |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11013,7 +11009,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **import_data** | [**ImportOption**](ImportOption.md)|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11047,7 +11043,7 @@ name = 'name_example' # String | The document name.
 opts = { 
   protection: AsposeCellsCloud::WorkbookProtectionRequest.new, # WorkbookProtectionRequest | The protection settings.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11066,7 +11062,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The document name. | 
  **protection** | [**WorkbookProtectionRequest**](WorkbookProtectionRequest.md)| The protection settings. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11101,7 +11097,7 @@ opts = {
   options: AsposeCellsCloud::CalculationOptions.new, # CalculationOptions | Calculation Options.
   ignore_error: true, # BOOLEAN | ignore Error.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11121,7 +11117,7 @@ Name | Type | Description  | Notes
  **options** | [**CalculationOptions**](CalculationOptions.md)| Calculation Options. | [optional] 
  **ignore_error** | **BOOLEAN**| ignore Error. | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11155,7 +11151,7 @@ name = 'name_example' # String | The workbook name.
 opts = { 
   xml_file: 'xml_file_example', # String | The xml file full path, if empty the data is read from request body.
   folder: 'folder_example', # String | The workbook folder full path.
-  storage: 'storage_example', # String | storage name.
+  storage_name: 'storage_name_example', # String | storage name.
   out_path: 'out_path_example' # String | Path to save result
 }
 
@@ -11175,7 +11171,7 @@ Name | Type | Description  | Notes
  **name** | **String**| The workbook name. | 
  **xml_file** | **String**| The xml file full path, if empty the data is read from request body. | [optional] 
  **folder** | **String**| The workbook folder full path. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
  **out_path** | **String**| Path to save result | [optional] 
 
 ### Return type
@@ -11210,7 +11206,7 @@ name = 'name_example' # String | Document name.
 opts = { 
   settings: AsposeCellsCloud::WorkbookSettings.new, # WorkbookSettings | Workbook Setting DTO
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11229,7 +11225,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **settings** | [**WorkbookSettings**](WorkbookSettings.md)| Workbook Setting DTO | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11268,7 +11264,7 @@ opts = {
   vertical_resolution: 0, # Integer | Image vertical resolution.
   folder: 'folder_example', # String | The workbook folder.
   out_folder: 'out_folder_example', # String | out Folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11292,7 +11288,7 @@ Name | Type | Description  | Notes
  **vertical_resolution** | **Integer**| Image vertical resolution. | [optional] [default to 0]
  **folder** | **String**| The workbook folder. | [optional] 
  **out_folder** | **String**| out Folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11327,7 +11323,7 @@ merge_with = 'merge_with_example' # String | The workbook to merge with.
 
 opts = { 
   folder: 'folder_example', # String | Source workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11346,7 +11342,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Workbook name. | 
  **merge_with** | **String**| The workbook to merge with. | 
  **folder** | **String**| Source workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11383,7 +11379,7 @@ new_value = 'new_value_example' # String | The new value.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11403,7 +11399,7 @@ Name | Type | Description  | Notes
  **old_value** | **String**| The old value. | 
  **new_value** | **String**| The new value. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11438,7 +11434,7 @@ text = 'text_example' # String | Text sample.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11457,7 +11453,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **text** | **String**| Text sample. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11544,7 +11540,7 @@ name = 'name_example' # String | Document name.
 opts = { 
   password: AsposeCellsCloud::PasswordRequest.new, # PasswordRequest | Modification password.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11563,7 +11559,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **password** | [**PasswordRequest**](PasswordRequest.md)| Modification password. | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11598,7 +11594,7 @@ png = 'B' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11617,7 +11613,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **png** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11653,7 +11649,7 @@ opts = {
   data_file: 'data_file_example', # String | Smart marker data file, if the data not provided the request content is checked for the data.
   is_write_over: true, # BOOLEAN | write over file.
   folder: 'folder_example', # String | The new document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11674,11 +11670,64 @@ Name | Type | Description  | Notes
  **data_file** | **String**| Smart marker data file, if the data not provided the request content is checked for the data. | [optional] 
  **is_write_over** | **BOOLEAN**| write over file. | [optional] 
  **folder** | **String**| The new document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
 [**WorkbookResponse**](WorkbookResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_workbook_put_workbook_water_marker**
+> CellsCloudResponse cells_workbook_put_workbook_water_marker(name, opts)
+
+Set workbook background image.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example', # String | storage name.
+  text_water_marker_request: AsposeCellsCloud::TextWaterMarkerRequest.new # TextWaterMarkerRequest | The text water marker request.
+}
+
+begin
+  #Set workbook background image.
+  result = api_instance.cells_workbook_put_workbook_water_marker(name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_workbook_put_workbook_water_marker: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+ **text_water_marker_request** | [**TextWaterMarkerRequest**](TextWaterMarkerRequest.md)| The text water marker request. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -11707,11 +11756,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 56 # Integer | The validation index.
+validation_index = 789 # Integer | The validation index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11731,7 +11780,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **validation_index** | **Integer**| The validation index. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11766,7 +11815,7 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11785,7 +11834,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| Worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11818,11 +11867,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 56 # Integer | The validation index.
+validation_index = 789 # Integer | The validation index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11842,7 +11891,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **validation_index** | **Integer**| The validation index. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11877,7 +11926,7 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11896,7 +11945,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| Worksheet name. | 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11929,12 +11978,12 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 56 # Integer | The validation index.
+validation_index = 789 # Integer | The validation index.
 
 opts = { 
   validation: AsposeCellsCloud::Validation.new, # Validation | 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -11955,7 +12004,7 @@ Name | Type | Description  | Notes
  **validation_index** | **Integer**| The validation index. | 
  **validation** | [**Validation**](Validation.md)|  | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -11992,7 +12041,7 @@ opts = {
   range: 'range_example', # String | Specified cells area
   validation: AsposeCellsCloud::Validation.new, # Validation | validation
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12013,7 +12062,7 @@ Name | Type | Description  | Notes
  **range** | **String**| Specified cells area | [optional] 
  **validation** | [**Validation**](Validation.md)| validation | [optional] 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12049,7 +12098,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 opts = { 
   protect_parameter: AsposeCellsCloud::ProtectSheetParameter.new, # ProtectSheetParameter | with protection settings. Only password is used here.
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12069,7 +12118,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **protect_parameter** | [**ProtectSheetParameter**](ProtectSheetParameter.md)| with protection settings. Only password is used here. | [optional] 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12104,7 +12153,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12123,7 +12172,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12158,7 +12207,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12177,7 +12226,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12214,7 +12263,7 @@ cell_name = 'cell_name_example' # String | The cell name
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12234,7 +12283,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **cell_name** | **String**| The cell name | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12269,7 +12318,7 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12288,7 +12337,7 @@ Name | Type | Description  | Notes
  **name** | **String**|  | 
  **sheet_name** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12321,17 +12370,17 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row = 56 # Integer | 
+row = 789 # Integer | 
 
-column = 56 # Integer | 
+column = 789 # Integer | 
 
-freezed_rows = 56 # Integer | 
+freezed_rows = 789 # Integer | 
 
-freezed_columns = 56 # Integer | 
+freezed_columns = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12354,7 +12403,7 @@ Name | Type | Description  | Notes
  **freezed_rows** | **Integer**|  | 
  **freezed_columns** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12387,7 +12436,7 @@ name = 'name_example' # String | Document name.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12405,7 +12454,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| Document name. | 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12445,7 +12494,7 @@ opts = {
   area: 'area_example', # String | Exported area.
   page_index: 56, # Integer | Exported page index.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12469,7 +12518,7 @@ Name | Type | Description  | Notes
  **area** | **String**| Exported area. | [optional] 
  **page_index** | **Integer**| Exported page index. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12506,7 +12555,7 @@ formula = 'formula_example' # String | The formula.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12526,7 +12575,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **formula** | **String**| The formula. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12563,7 +12612,7 @@ cell_name = 'cell_name_example' # String | The cell name
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12583,7 +12632,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **cell_name** | **String**| The cell name | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12618,7 +12667,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12637,7 +12686,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Workbook name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12670,11 +12719,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-merged_cell_index = 56 # Integer | Merged cell index.
+merged_cell_index = 789 # Integer | Merged cell index.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12694,7 +12743,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **merged_cell_index** | **Integer**| Merged cell index. | 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12729,7 +12778,7 @@ sheet_name = 'sheet_name_example' # String | The workseet name.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12748,7 +12797,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Document name. | 
  **sheet_name** | **String**| The workseet name. | 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12783,7 +12832,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   folder: 'folder_example', # String | The workbook's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12802,7 +12851,7 @@ Name | Type | Description  | Notes
  **name** | **String**| Workbook name. | 
  **sheet_name** | **String**| The worksheet name. | 
  **folder** | **String**| The workbook&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12835,7 +12884,7 @@ name = 'name_example' # String | Document name.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12853,7 +12902,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| Document name. | 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12886,16 +12935,16 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-first_column = 56 # Integer | 
+first_column = 789 # Integer | 
 
-last_column = 56 # Integer | 
+last_column = 789 # Integer | 
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | 
-  first_row: 56, # Integer | 
-  last_row: 56, # Integer | 
+  first_row: 789, # Integer | 
+  last_row: 789, # Integer | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12918,7 +12967,7 @@ Name | Type | Description  | Notes
  **first_row** | **Integer**|  | [optional] 
  **last_row** | **Integer**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -12951,16 +13000,16 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row_index = 56 # Integer | 
+row_index = 789 # Integer | 
 
-first_column = 56 # Integer | 
+first_column = 789 # Integer | 
 
-last_column = 56 # Integer | 
+last_column = 789 # Integer | 
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -12982,7 +13031,7 @@ Name | Type | Description  | Notes
  **last_column** | **Integer**|  | 
  **auto_fitter_options** | [**AutoFitterOptions**](AutoFitterOptions.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13017,11 +13066,11 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | Auto Fitter Options.
-  start_row: 56, # Integer | Start row.
-  end_row: 56, # Integer | End row.
+  start_row: 789, # Integer | Start row.
+  end_row: 789, # Integer | End row.
   only_auto: false, # BOOLEAN | Only auto.
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13044,7 +13093,7 @@ Name | Type | Description  | Notes
  **end_row** | **Integer**| End row. | [optional] 
  **only_auto** | **BOOLEAN**| Only auto. | [optional] [default to false]
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13084,7 +13133,7 @@ opts = {
   source_workbook: 'source_workbook_example', # String | 
   source_folder: 'source_folder_example', # String | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13106,7 +13155,7 @@ Name | Type | Description  | Notes
  **source_workbook** | **String**|  | [optional] 
  **source_folder** | **String**|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13142,7 +13191,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 opts = { 
   moving: AsposeCellsCloud::WorksheetMovingRequest.new, # WorksheetMovingRequest | with moving parameters.
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13162,7 +13211,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **moving** | [**WorksheetMovingRequest**](WorksheetMovingRequest.md)| with moving parameters. | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13199,7 +13248,7 @@ newname = 'newname_example' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13219,7 +13268,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **newname** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13255,7 +13304,7 @@ sheet_name = 'sheet_name_example' # String |
 opts = { 
   sheet: AsposeCellsCloud::Worksheet.new, # Worksheet | 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13275,7 +13324,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **sheet** | [**Worksheet**](Worksheet.md)|  | [optional] 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13308,11 +13357,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-value = 56 # Integer | 
+value = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13331,7 +13380,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **value** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13369,7 +13418,7 @@ cell_name = 'cell_name_example' # String | The cell name
 opts = { 
   comment: AsposeCellsCloud::Comment.new, # Comment | Comment object
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13390,7 +13439,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**| The cell name | 
  **comment** | [**Comment**](Comment.md)| Comment object | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13428,7 +13477,7 @@ cell_area = 'cell_area_example' # String | The range to sort.
 opts = { 
   data_sorter: AsposeCellsCloud::DataSorter.new, # DataSorter | with sorting settings.
   folder: 'folder_example', # String | The workbook folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13449,7 +13498,7 @@ Name | Type | Description  | Notes
  **cell_area** | **String**| The range to sort. | 
  **data_sorter** | [**DataSorter**](DataSorter.md)| with sorting settings. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13486,7 +13535,7 @@ text = 'text_example' # String | Text to search.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13506,7 +13555,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **text** | **String**| Text to search. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13545,7 +13594,7 @@ new_value = 'new_value_example' # String | The new text to replace by.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13566,7 +13615,7 @@ Name | Type | Description  | Notes
  **old_value** | **String**| The old text to replace. | 
  **new_value** | **String**| The new text to replace by. | 
  **folder** | **String**| Document&#39;s folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13600,10 +13649,10 @@ name = 'name_example' # String | Document name.
 sheet_name = 'sheet_name_example' # String | The new sheet name.
 
 opts = { 
-  position: 56, # Integer | The new sheet position.
+  position: 789, # Integer | The new sheet position.
   sheettype: 'sheettype_example', # String | The new sheet type.
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13624,7 +13673,7 @@ Name | Type | Description  | Notes
  **position** | **Integer**| The new sheet position. | [optional] 
  **sheettype** | **String**| The new sheet type. | [optional] 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13661,7 +13710,7 @@ is_visible = true # BOOLEAN | New worksheet visibility value.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13681,7 +13730,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| Worksheet name. | 
  **is_visible** | **BOOLEAN**| New worksheet visibility value. | 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13717,7 +13766,7 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 opts = { 
   protect_parameter: AsposeCellsCloud::ProtectSheetParameter.new, # ProtectSheetParameter | with protection settings.
   folder: 'folder_example', # String | Document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13737,7 +13786,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**| The worksheet name. | 
  **protect_parameter** | [**ProtectSheetParameter**](ProtectSheetParameter.md)| with protection settings. | [optional] 
  **folder** | **String**| Document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13774,7 +13823,7 @@ png = 'B' # String |
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13794,7 +13843,7 @@ Name | Type | Description  | Notes
  **sheet_name** | **String**|  | 
  **png** | **String**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13832,7 +13881,7 @@ cell_name = 'cell_name_example' # String | The cell name
 opts = { 
   comment: AsposeCellsCloud::Comment.new, # Comment | Comment object
   folder: 'folder_example', # String | The document folder.
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13853,7 +13902,7 @@ Name | Type | Description  | Notes
  **cell_name** | **String**| The cell name | 
  **comment** | [**Comment**](Comment.md)| Comment object | [optional] 
  **folder** | **String**| The document folder. | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 
@@ -13886,17 +13935,17 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row = 56 # Integer | 
+row = 789 # Integer | 
 
-column = 56 # Integer | 
+column = 789 # Integer | 
 
-freezed_rows = 56 # Integer | 
+freezed_rows = 789 # Integer | 
 
-freezed_columns = 56 # Integer | 
+freezed_columns = 789 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
-  storage: 'storage_example' # String | storage name.
+  storage_name: 'storage_name_example' # String | storage name.
 }
 
 begin
@@ -13919,7 +13968,7 @@ Name | Type | Description  | Notes
  **freezed_rows** | **Integer**|  | 
  **freezed_columns** | **Integer**|  | 
  **folder** | **String**|  | [optional] 
- **storage** | **String**| storage name. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
 

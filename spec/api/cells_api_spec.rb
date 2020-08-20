@@ -130,7 +130,6 @@ describe 'CellsApi' do
       expect(result.uploaded.size).to  be > 0
       result = @instance.cells_get_worksheet_cell(name, sheet_name, cell_or_method_name,  { :folder=>folder})
       print(result)
-      #expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
@@ -310,32 +309,32 @@ describe 'CellsApi' do
     end
   end
 
-#  # unit tests for cells_post_cell_characters
-#  # Set cell characters 
-#  # 
-#  # @param name 
-#  # @param sheet_name 
-#  # @param cell_name 
-#  # @param [Hash] opts the optional parameters
-#  # @option opts [Array<FontSetting>] :options 
-#  # @option opts [String] :folder 
-#  # @option opts [String] :storage storage name.
-#  # @return [CellsCloudResponse]
-#  describe 'cells_post_cell_characters test' do
-#    it "should work" do
-#      name = $BOOK1
-#      sheet_name = $SHEET1
-#      cell_name = $CellName
-#      options = nil
-#      folder = $TEMPFOLDER
-#      storage = nil
-#      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-#      expect(result.uploaded.size).to  be > 0
-#      result = @instance.cells_post_cell_characters(name, sheet_name, cell_name,   { :options=>options,:folder=>folder})
-#      expect(result.code).to eql(200)
-#      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-#    end
-#  end
+  # unit tests for cells_post_cell_characters
+  # Set cell characters 
+  # 
+  # @param name 
+  # @param sheet_name 
+  # @param cell_name 
+  # @param [Hash] opts the optional parameters
+  # @option opts [Array<FontSetting>] :options 
+  # @option opts [String] :folder 
+  # @option opts [String] :storage storage name.
+  # @return [CellsCloudResponse]
+  describe 'cells_post_cell_characters test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET1
+      cell_name = $CellName
+      options = nil
+      folder = $TEMPFOLDER
+      storage = nil
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_post_cell_characters(name, sheet_name, cell_name,   { :options=>options,:folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 
   # unit tests for cells_post_clear_contents
   # Clear cells contents.

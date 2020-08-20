@@ -14,8 +14,15 @@ describe 'CellsApi' do
   end
 
 
-
-  describe 'cells_storage_test' do
+# unit tests for cells_workbook_put_convert_workbook
+  # Convert workbook from request content to some format.
+  # 
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :format The format to convert.
+  # @option opts [String] :password The workbook password.
+  # @option opts [String] :out_path Path to save result
+  # @return [File]
+  describe 'cells_workbook_put_convert_workbook test' do
     it "should work" do
       format = 'pdf'
       password = nil

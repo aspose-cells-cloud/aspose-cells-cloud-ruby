@@ -25,28 +25,20 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveResult
-    attr_accessor :source_document
-
-    attr_accessor :dest_document
-
-    attr_accessor :additional_items
+    attr_accessor :documents
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'source_document' => :'SourceDocument',
-        :'dest_document' => :'DestDocument',
-        :'additional_items' => :'AdditionalItems'
+        :'documents' => :'Documents'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'source_document' => :'Link',
-        :'dest_document' => :'Link',
-        :'additional_items' => :'Array<Link>'
+        :'documents' => :'Array<CellsCloudFileInfo>'
       }
     end
 
@@ -58,17 +50,9 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'SourceDocument')
-        self.source_document = attributes[:'SourceDocument']
-      end
-
-      if attributes.has_key?(:'DestDocument')
-        self.dest_document = attributes[:'DestDocument']
-      end
-
-      if attributes.has_key?(:'AdditionalItems')
-        if (value = attributes[:'AdditionalItems']).is_a?(Array)
-          self.additional_items = value
+      if attributes.has_key?(:'Documents')
+        if (value = attributes[:'Documents']).is_a?(Array)
+          self.documents = value
         end
       end
 
@@ -92,9 +76,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          source_document == o.source_document &&
-          dest_document == o.dest_document &&
-          additional_items == o.additional_items
+          documents == o.documents
     end
 
     # @see the `==` method
@@ -106,7 +88,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source_document, dest_document, additional_items].hash
+      [documents].hash
     end
 
     # Builds the object from hash

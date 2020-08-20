@@ -24,21 +24,33 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class SplitResult
-    attr_accessor :documents
+  class CellsCloudFileInfo
+    attr_accessor :name
+
+    attr_accessor :size
+
+    attr_accessor :folder
+
+    attr_accessor :storage
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'documents' => :'Documents'
+        :'name' => :'Name',
+        :'size' => :'Size',
+        :'folder' => :'Folder',
+        :'storage' => :'Storage'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'documents' => :'Array<CellsCloudFileInfo>'
+        :'name' => :'String',
+        :'size' => :'Integer',
+        :'folder' => :'String',
+        :'storage' => :'String'
       }
     end
 
@@ -50,10 +62,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Documents')
-        if (value = attributes[:'Documents']).is_a?(Array)
-          self.documents = value
-        end
+      if attributes.has_key?(:'Name')
+        self.name = attributes[:'Name']
+      end
+
+      if attributes.has_key?(:'Size')
+        self.size = attributes[:'Size']
+      end
+
+      if attributes.has_key?(:'Folder')
+        self.folder = attributes[:'Folder']
+      end
+
+      if attributes.has_key?(:'Storage')
+        self.storage = attributes[:'Storage']
       end
 
     end
@@ -62,12 +84,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @size.nil?
+        invalid_properties.push("invalid value for 'size', size cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @size.nil?
       return true
     end
 
@@ -76,7 +103,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          documents == o.documents
+          name == o.name &&
+          size == o.size &&
+          folder == o.folder &&
+          storage == o.storage
     end
 
     # @see the `==` method
@@ -88,7 +118,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [documents].hash
+      [name, size, folder, storage].hash
     end
 
     # Builds the object from hash
