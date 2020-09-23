@@ -114,6 +114,8 @@ Method | HTTP request | Description
 [**cells_pivot_tables_post_pivot_table_field_hide_item**](CellsApi.md#cells_pivot_tables_post_pivot_table_field_hide_item) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotField/Hide | 
 [**cells_pivot_tables_post_pivot_table_field_move_to**](CellsApi.md#cells_pivot_tables_post_pivot_table_field_move_to) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotField/Move | 
 [**cells_pivot_tables_post_pivot_table_style**](CellsApi.md#cells_pivot_tables_post_pivot_table_style) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/FormatAll | Update style for pivot table
+[**cells_pivot_tables_post_pivot_table_update_pivot_field**](CellsApi.md#cells_pivot_tables_post_pivot_table_update_pivot_field) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields/{pivotFieldIndex} | 
+[**cells_pivot_tables_post_pivot_table_update_pivot_fields**](CellsApi.md#cells_pivot_tables_post_pivot_table_update_pivot_fields) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields | 
 [**cells_pivot_tables_post_worksheet_pivot_table_calculate**](CellsApi.md#cells_pivot_tables_post_worksheet_pivot_table_calculate) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/Calculate | Calculates pivottable&#39;s data to cells.
 [**cells_pivot_tables_post_worksheet_pivot_table_move**](CellsApi.md#cells_pivot_tables_post_worksheet_pivot_table_move) | **POST** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/Move | 
 [**cells_pivot_tables_put_pivot_table_field**](CellsApi.md#cells_pivot_tables_put_pivot_table_field) | **PUT** /cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotField | Add pivot field into into pivot table
@@ -170,6 +172,12 @@ Method | HTTP request | Description
 [**cells_shapes_get_worksheet_shapes**](CellsApi.md#cells_shapes_get_worksheet_shapes) | **GET** /cells/{name}/worksheets/{sheetName}/shapes | Get worksheet shapes 
 [**cells_shapes_post_worksheet_shape**](CellsApi.md#cells_shapes_post_worksheet_shape) | **POST** /cells/{name}/worksheets/{sheetName}/shapes/{shapeindex} | Update a shape in worksheet
 [**cells_shapes_put_worksheet_shape**](CellsApi.md#cells_shapes_put_worksheet_shape) | **PUT** /cells/{name}/worksheets/{sheetName}/shapes | Add shape in worksheet
+[**cells_sparkline_groups_delete_worksheet_sparkline_group**](CellsApi.md#cells_sparkline_groups_delete_worksheet_sparkline_group) | **DELETE** /cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex} | 
+[**cells_sparkline_groups_delete_worksheet_sparkline_groups**](CellsApi.md#cells_sparkline_groups_delete_worksheet_sparkline_groups) | **DELETE** /cells/{name}/worksheets/{sheetName}/sparklinegroups | 
+[**cells_sparkline_groups_get_worksheet_sparkline_group**](CellsApi.md#cells_sparkline_groups_get_worksheet_sparkline_group) | **GET** /cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex} | 
+[**cells_sparkline_groups_get_worksheet_sparkline_groups**](CellsApi.md#cells_sparkline_groups_get_worksheet_sparkline_groups) | **GET** /cells/{name}/worksheets/{sheetName}/sparklinegroups | Get worksheet charts description.
+[**cells_sparkline_groups_post_worksheet_sparkline_group**](CellsApi.md#cells_sparkline_groups_post_worksheet_sparkline_group) | **POST** /cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex} | 
+[**cells_sparkline_groups_put_worksheet_sparkline_group**](CellsApi.md#cells_sparkline_groups_put_worksheet_sparkline_group) | **PUT** /cells/{name}/worksheets/{sheetName}/sparklinegroups | 
 [**cells_task_post_run_task**](CellsApi.md#cells_task_post_run_task) | **POST** /cells/task/runtask | Run tasks  
 [**cells_workbook_delete_decrypt_document**](CellsApi.md#cells_workbook_delete_decrypt_document) | **DELETE** /cells/{name}/encryption | Decrypt document.
 [**cells_workbook_delete_document_unprotect_from_changes**](CellsApi.md#cells_workbook_delete_document_unprotect_from_changes) | **DELETE** /cells/{name}/writeProtection | Unprotect document from changes.
@@ -272,7 +280,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 date_time_grouping_type = 'date_time_grouping_type_example' # String | 
 
@@ -344,7 +352,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 opts = { 
   criteria: 'criteria_example', # String | 
@@ -510,7 +518,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -567,7 +575,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -626,7 +634,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 opts = { 
   color_filter: AsposeCellsCloud::ColorFilterRequest.new, # ColorFilterRequest | 
@@ -691,7 +699,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 operator_type1 = 'operator_type1_example' # String | 
 
@@ -767,7 +775,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 date_time_grouping_type = 'date_time_grouping_type_example' # String | 
 
@@ -846,7 +854,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 dynamic_filter_type = 'dynamic_filter_type_example' # String | 
 
@@ -912,7 +920,7 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 criteria = 'criteria_example' # String | 
 
@@ -979,13 +987,13 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 is_top = true # BOOLEAN | 
 
 is_percent = true # BOOLEAN | 
 
-item_count = 789 # Integer | 
+item_count = 56 # Integer | 
 
 opts = { 
   match_blanks: true, # BOOLEAN | 
@@ -1052,11 +1060,11 @@ sheet_name = 'sheet_name_example' # String |
 
 range = 'range_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 icon_set_type = 'icon_set_type_example' # String | 
 
-icon_id = 789 # Integer | 
+icon_id = 56 # Integer | 
 
 opts = { 
   match_blanks: true, # BOOLEAN | 
@@ -1120,7 +1128,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-autoshape_number = 789 # Integer | The autoshape number.
+autoshape_number = 56 # Integer | The autoshape number.
 
 opts = { 
   format: 'format_example', # String | Exported format.
@@ -1233,7 +1241,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
@@ -1290,7 +1298,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
@@ -1347,7 +1355,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | Workbook folder.
@@ -1404,7 +1412,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -1461,7 +1469,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -1572,7 +1580,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -1629,7 +1637,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_number = 789 # Integer | The chart number.
+chart_number = 56 # Integer | The chart number.
 
 opts = { 
   format: 'format_example', # String | The exported file format.
@@ -1688,7 +1696,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -1745,7 +1753,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -1856,7 +1864,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-chart_index = 789 # Integer | 
+chart_index = 56 # Integer | 
 
 opts = { 
   chart: AsposeCellsCloud::Chart.new, # Chart | 
@@ -1915,7 +1923,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   legend: AsposeCellsCloud::Legend.new, # Legend | 
@@ -1974,7 +1982,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   title: AsposeCellsCloud::Title.new, # Title | Chart title
@@ -2046,7 +2054,11 @@ opts = {
   is_auto_get_serial_name: true, # BOOLEAN | Specifies whether auto update serial name. 
   title: 'title_example', # String | Specifies chart title name.
   folder: 'folder_example', # String | The workbook folder.
-  storage_name: 'storage_name_example' # String | storage name.
+  storage_name: 'storage_name_example', # String | storage name.
+  data_labels: true, # BOOLEAN | 
+  data_labels_position: 'Above', # String | 
+  pivot_table_sheet: 'pivot_table_sheet_example', # String | 
+  pivot_table_name: 'pivot_table_name_example' # String | 
 }
 
 begin
@@ -2076,6 +2088,10 @@ Name | Type | Description  | Notes
  **title** | **String**| Specifies chart title name. | [optional] 
  **folder** | **String**| The workbook folder. | [optional] 
  **storage_name** | **String**| storage name. | [optional] 
+ **data_labels** | **BOOLEAN**|  | [optional] [default to true]
+ **data_labels_position** | **String**|  | [optional] [default to Above]
+ **pivot_table_sheet** | **String**|  | [optional] 
+ **pivot_table_name** | **String**|  | [optional] 
 
 ### Return type
 
@@ -2108,7 +2124,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -2165,7 +2181,7 @@ name = 'name_example' # String | Workbook name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-chart_index = 789 # Integer | The chart index.
+chart_index = 56 # Integer | The chart index.
 
 opts = { 
   title: AsposeCellsCloud::Title.new, # Title | Chart title.
@@ -2224,7 +2240,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -2281,13 +2297,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-start_row = 789 # Integer | 
+start_row = 56 # Integer | 
 
-start_column = 789 # Integer | 
+start_column = 56 # Integer | 
 
-total_rows = 789 # Integer | 
+total_rows = 56 # Integer | 
 
-total_columns = 789 # Integer | 
+total_columns = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -2401,7 +2417,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -2571,7 +2587,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 cell_area = 'cell_area_example' # String | 
 
@@ -2643,7 +2659,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 cell_area = 'cell_area_example' # String | 
 
@@ -2703,7 +2719,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 type = 'type_example' # String | 
 
@@ -2772,9 +2788,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 789 # Integer | The column index.
+column_index = 56 # Integer | The column index.
 
-columns = 789 # Integer | The columns.
+columns = 56 # Integer | The columns.
 
 update_reference = true # BOOLEAN | The update reference.
 
@@ -2835,7 +2851,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet bame.
 
-row_index = 789 # Integer | The row index.
+row_index = 56 # Integer | The row index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -2892,7 +2908,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet bame.
 
-startrow = 789 # Integer | The begin row index to be operated.
+startrow = 56 # Integer | The begin row index to be operated.
 
 opts = { 
   total_rows: 1, # Integer | Number of rows to be operated.
@@ -3182,7 +3198,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 789 # Integer | The column index.
+column_index = 56 # Integer | The column index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -3293,7 +3309,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 789 # Integer | The row index.
+row_index = 56 # Integer | The row index.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -3404,7 +3420,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 789 # Integer | The hyperlink's index.
+hyperlink_index = 56 # Integer | The hyperlink's index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -3515,7 +3531,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 789 # Integer | The hyperlink's index.
+hyperlink_index = 56 # Integer | The hyperlink's index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -3626,7 +3642,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-hyperlink_index = 789 # Integer | The hyperlink's index.
+hyperlink_index = 56 # Integer | The hyperlink's index.
 
 opts = { 
   hyperlink: AsposeCellsCloud::Hyperlink.new, # Hyperlink | Hyperlink object
@@ -3685,13 +3701,13 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-first_row = 789 # Integer | 
+first_row = 56 # Integer | 
 
-first_column = 789 # Integer | 
+first_column = 56 # Integer | 
 
-total_rows = 789 # Integer | 
+total_rows = 56 # Integer | 
 
-total_columns = 789 # Integer | 
+total_columns = 56 # Integer | 
 
 address = 'address_example' # String | 
 
@@ -3754,7 +3770,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-list_object_index = 789 # Integer | List object index
+list_object_index = 56 # Integer | List object index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -3865,7 +3881,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-listobjectindex = 789 # Integer | list object index.
+listobjectindex = 56 # Integer | list object index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -3976,7 +3992,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-list_object_index = 789 # Integer | list Object index
+list_object_index = 56 # Integer | list Object index
 
 opts = { 
   list_object: AsposeCellsCloud::ListObject.new, # ListObject | listObject dto in request body.
@@ -4035,7 +4051,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 789 # Integer | 
+list_object_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -4091,7 +4107,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 789 # Integer | 
+list_object_index = 56 # Integer | 
 
 opts = { 
   data_sorter: AsposeCellsCloud::DataSorter.new, # DataSorter | 
@@ -4149,7 +4165,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-list_object_index = 789 # Integer | 
+list_object_index = 56 # Integer | 
 
 destsheet_name = 'destsheet_name_example' # String | 
 
@@ -4210,13 +4226,13 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 789 # Integer | The start row of the list range.
+start_row = 56 # Integer | The start row of the list range.
 
-start_column = 789 # Integer | The start row of the list range.
+start_column = 56 # Integer | The start row of the list range.
 
-end_row = 789 # Integer | The start row of the list range.
+end_row = 56 # Integer | The start row of the list range.
 
-end_column = 789 # Integer | The start row of the list range.
+end_column = 56 # Integer | The start row of the list range.
 
 opts = { 
   has_headers: true, # BOOLEAN | Whether the range has headers.
@@ -4280,7 +4296,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-ole_object_index = 789 # Integer | Ole object index
+ole_object_index = 56 # Integer | Ole object index
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -4391,7 +4407,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-object_number = 789 # Integer | The object number.
+object_number = 56 # Integer | The object number.
 
 opts = { 
   format: 'format_example', # String | The exported object format.
@@ -4504,7 +4520,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-ole_object_index = 789 # Integer | Ole object index
+ole_object_index = 56 # Integer | Ole object index
 
 opts = { 
   ole: AsposeCellsCloud::OleObject.new, # OleObject | Ole Object
@@ -4631,7 +4647,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -4688,7 +4704,7 @@ name = 'name_example' # String |
 sheet_name = 'sheet_name_example' # String | 
 
 opts = { 
-  row: 789, # Integer | 
+  row: 56, # Integer | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -4742,7 +4758,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -4799,7 +4815,7 @@ name = 'name_example' # String |
 sheet_name = 'sheet_name_example' # String | 
 
 opts = { 
-  column: 789, # Integer | 
+  column: 56, # Integer | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -4853,7 +4869,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -4962,7 +4978,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-index = 789 # Integer | 
+index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -5073,10 +5089,10 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   cellname: 'cellname_example', # String | 
-  row: 789, # Integer | 
-  column: 789, # Integer | 
-  start_column: 789, # Integer | 
-  end_column: 789, # Integer | 
+  row: 56, # Integer | 
+  column: 56, # Integer | 
+  start_column: 56, # Integer | 
+  end_column: 56, # Integer | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -5136,10 +5152,10 @@ sheet_name = 'sheet_name_example' # String |
 
 opts = { 
   cellname: 'cellname_example', # String | 
-  column: 789, # Integer | 
-  row: 789, # Integer | 
-  start_row: 789, # Integer | 
-  end_row: 789, # Integer | 
+  column: 56, # Integer | 
+  row: 56, # Integer | 
+  start_row: 56, # Integer | 
+  end_row: 56, # Integer | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -5413,7 +5429,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-section = 789 # Integer | 
+section = 56 # Integer | 
 
 script = 'script_example' # String | 
 
@@ -5476,7 +5492,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-section = 789 # Integer | 
+section = 56 # Integer | 
 
 script = 'script_example' # String | 
 
@@ -5595,7 +5611,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worsheet name.
 
-picture_index = 789 # Integer | Picture index
+picture_index = 56 # Integer | Picture index
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -5706,7 +5722,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-picture_index = 789 # Integer | The picture index.
+picture_index = 56 # Integer | The picture index.
 
 opts = { 
   format: 'format_example', # String | The exported object format.
@@ -5819,7 +5835,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-picture_index = 789 # Integer | The picture's index.
+picture_index = 56 # Integer | The picture's index.
 
 opts = { 
   picture: AsposeCellsCloud::Picture.new, # Picture | Picture object
@@ -5944,7 +5960,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
@@ -6006,7 +6022,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -6063,9 +6079,9 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 opts = { 
   need_re_calculate: false, # BOOLEAN | 
@@ -6125,7 +6141,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
 opts = { 
   need_re_calculate: false, # BOOLEAN | 
@@ -6238,9 +6254,9 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
-pivot_field_index = 789 # Integer | The field index in the base fields.
+pivot_field_index = 56 # Integer | The field index in the base fields.
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
@@ -6301,7 +6317,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivottable_index = 789 # Integer | 
+pivottable_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -6358,9 +6374,9 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
-filter_index = 789 # Integer | 
+filter_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -6417,7 +6433,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -6527,11 +6543,11 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
-column = 789 # Integer | 
+column = 56 # Integer | 
 
-row = 789 # Integer | 
+row = 56 # Integer | 
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto in request body.
@@ -6594,13 +6610,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
 pivot_field_type = 'pivot_field_type_example' # String | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
-item_index = 789 # Integer | 
+item_index = 56 # Integer | 
 
 is_hide = true # BOOLEAN | 
 
@@ -6664,9 +6680,9 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
-field_index = 789 # Integer | 
+field_index = 56 # Integer | 
 
 from = 'from_example' # String | 
 
@@ -6729,7 +6745,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto in request body.
@@ -6774,6 +6790,133 @@ No authorization required
 
 
 
+# **cells_pivot_tables_post_pivot_table_update_pivot_field**
+> CellsCloudResponse cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+pivot_table_index = 56 # Integer | 
+
+pivot_field_index = 56 # Integer | 
+
+pivot_field_type = 'pivot_field_type_example' # String | 
+
+pivot_field = AsposeCellsCloud::PivotField.new # PivotField | 
+
+opts = { 
+  need_re_calculate: false, # BOOLEAN | 
+  folder: 'folder_example' # String | 
+}
+
+begin
+  result = api_instance.cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_pivot_tables_post_pivot_table_update_pivot_field: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **pivot_table_index** | **Integer**|  | 
+ **pivot_field_index** | **Integer**|  | 
+ **pivot_field_type** | **String**|  | 
+ **pivot_field** | [**PivotField**](PivotField.md)|  | 
+ **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
+ **folder** | **String**|  | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_pivot_tables_post_pivot_table_update_pivot_fields**
+> CellsCloudResponse cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+pivot_table_index = 56 # Integer | 
+
+pivot_field_type = 'pivot_field_type_example' # String | 
+
+pivot_field = AsposeCellsCloud::PivotField.new # PivotField | 
+
+opts = { 
+  need_re_calculate: false, # BOOLEAN | 
+  folder: 'folder_example' # String | 
+}
+
+begin
+  result = api_instance.cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_pivot_tables_post_pivot_table_update_pivot_fields: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **pivot_table_index** | **Integer**|  | 
+ **pivot_field_type** | **String**|  | 
+ **pivot_field** | [**PivotField**](PivotField.md)|  | 
+ **need_re_calculate** | **BOOLEAN**|  | [optional] [default to false]
+ **folder** | **String**|  | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **cells_pivot_tables_post_worksheet_pivot_table_calculate**
 > CellsCloudResponse cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, opts)
 
@@ -6790,7 +6933,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -6847,11 +6990,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
 opts = { 
-  row: 789, # Integer | 
-  column: 789, # Integer | 
+  row: 56, # Integer | 
+  column: 56, # Integer | 
   dest_cell_name: 'dest_cell_name_example', # String | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
@@ -6909,7 +7052,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-pivot_table_index = 789 # Integer | Pivot table index
+pivot_table_index = 56 # Integer | Pivot table index
 
 pivot_field_type = 'pivot_field_type_example' # String | The fields area type.
 
@@ -7037,7 +7180,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-pivot_table_index = 789 # Integer | 
+pivot_table_index = 56 # Integer | 
 
 opts = { 
   filter: AsposeCellsCloud::PivotFilter.new, # PivotFilter | 
@@ -7218,10 +7361,10 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   range: 'range_example', # String | The range.
-  start_row: 789, # Integer | The start row.
-  start_column: 789, # Integer | The start column.
-  end_row: 789, # Integer | The end row.
-  end_column: 789, # Integer | The end column.
+  start_row: 56, # Integer | The start row.
+  start_column: 56, # Integer | The start column.
+  end_row: 56, # Integer | The end row.
+  end_column: 56, # Integer | The end column.
   folder: 'folder_example', # String | The workbook folder.
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -7282,10 +7425,10 @@ sheet_name = 'sheet_name_example' # String | Worksheet name.
 
 opts = { 
   range: 'range_example', # String | The range.
-  start_row: 789, # Integer | The start row.
-  start_column: 789, # Integer | The start column.
-  end_row: 789, # Integer | The end row.
-  end_column: 789, # Integer | The end column.
+  start_row: 56, # Integer | The start row.
+  start_column: 56, # Integer | The start column.
+  end_row: 56, # Integer | The end row.
+  end_column: 56, # Integer | The end column.
   folder: 'folder_example', # String | The workbook folder.
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -7344,7 +7487,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 789 # Integer | The column index.
+column_index = 56 # Integer | The column index.
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto
@@ -7409,8 +7552,8 @@ worksheet = 'worksheet_example' # String | Source worksheet name.
 
 opts = { 
   cellname: 'cellname_example', # String | Source cell name
-  row: 789, # Integer | Source row
-  column: 789, # Integer | Source column
+  row: 56, # Integer | Source row
+  column: 56, # Integer | Source column
   folder: 'folder_example', # String | Folder name
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -7469,11 +7612,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-source_column_index = 789 # Integer | Source column index
+source_column_index = 56 # Integer | Source column index
 
-destination_column_index = 789 # Integer | Destination column index
+destination_column_index = 56 # Integer | Destination column index
 
-column_number = 789 # Integer | The copied column number
+column_number = 56 # Integer | The copied column number
 
 opts = { 
   worksheet: '', # String | The Worksheet
@@ -7534,11 +7677,11 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-source_row_index = 789 # Integer | Source row index
+source_row_index = 56 # Integer | Source row index
 
-destination_row_index = 789 # Integer | Destination row index
+destination_row_index = 56 # Integer | Destination row index
 
-row_number = 789 # Integer | The copied row number
+row_number = 56 # Integer | The copied row number
 
 opts = { 
   worksheet: 'worksheet_example', # String | worksheet
@@ -7599,9 +7742,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 789 # Integer | The first column index to be operated.
+first_index = 56 # Integer | The first column index to be operated.
 
-last_index = 789 # Integer | The last column index to be operated.
+last_index = 56 # Integer | The last column index to be operated.
 
 opts = { 
   hide: true, # BOOLEAN | columns visible state
@@ -7661,9 +7804,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 789 # Integer | The first row index to be operated.
+first_index = 56 # Integer | The first row index to be operated.
 
-last_index = 789 # Integer | The last row index to be operated.
+last_index = 56 # Integer | The last row index to be operated.
 
 opts = { 
   hide: true, # BOOLEAN | rows visible state
@@ -7723,9 +7866,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_column = 789 # Integer | The begin column index to be operated.
+start_column = 56 # Integer | The begin column index to be operated.
 
-total_columns = 789 # Integer | Number of columns to be operated.
+total_columns = 56 # Integer | Number of columns to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -7783,9 +7926,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 789 # Integer | The begin row index to be operated.
+startrow = 56 # Integer | The begin row index to be operated.
 
-total_rows = 789 # Integer | Number of rows to be operated.
+total_rows = 56 # Integer | Number of rows to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -7843,7 +7986,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 789 # Integer | The row index.
+row_index = 56 # Integer | The row index.
 
 opts = { 
   style: AsposeCellsCloud::Style.new, # Style | Style dto
@@ -8025,7 +8168,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 789 # Integer | The column index.
+column_index = 56 # Integer | The column index.
 
 width = 1.2 # Float | The width.
 
@@ -8085,9 +8228,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 789 # Integer | The first column index to be operated.
+first_index = 56 # Integer | The first column index to be operated.
 
-last_index = 789 # Integer | The last column index to be operated.
+last_index = 56 # Integer | The last column index to be operated.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -8145,9 +8288,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-first_index = 789 # Integer | The first row index to be operated.
+first_index = 56 # Integer | The first row index to be operated.
 
-last_index = 789 # Integer | The last row index to be operated.
+last_index = 56 # Integer | The last row index to be operated.
 
 opts = { 
   is_all: true, # BOOLEAN | Is all row to be operated
@@ -8207,9 +8350,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startcolumn = 789 # Integer | The begin column index to be operated.
+startcolumn = 56 # Integer | The begin column index to be operated.
 
-total_columns = 789 # Integer | Number of columns to be operated.
+total_columns = 56 # Integer | Number of columns to be operated.
 
 opts = { 
   width: 50.0, # Float | The new column width.
@@ -8269,9 +8412,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 789 # Integer | The begin row index to be operated.
+startrow = 56 # Integer | The begin row index to be operated.
 
-total_rows = 789 # Integer | Number of rows to be operated.
+total_rows = 56 # Integer | Number of rows to be operated.
 
 opts = { 
   height: 15.0, # Float | The new row height.
@@ -8449,7 +8592,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 789 # Integer | The row index.
+row_index = 56 # Integer | The row index.
 
 opts = { 
   height: 0.0, # Float | The new row height.
@@ -8571,13 +8714,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 789 # Integer | The start row.
+start_row = 56 # Integer | The start row.
 
-start_column = 789 # Integer | The start column.
+start_column = 56 # Integer | The start column.
 
-total_rows = 789 # Integer | The total rows
+total_rows = 56 # Integer | The total rows
 
-total_columns = 789 # Integer | The total columns.
+total_columns = 56 # Integer | The total columns.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -8637,13 +8780,13 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-start_row = 789 # Integer | The start row.
+start_row = 56 # Integer | The start row.
 
-start_column = 789 # Integer | The start column.
+start_column = 56 # Integer | The start column.
 
-total_rows = 789 # Integer | The total rows
+total_rows = 56 # Integer | The total rows
 
-total_columns = 789 # Integer | The total columns.
+total_columns = 56 # Integer | The total columns.
 
 opts = { 
   folder: 'folder_example', # String | The workbook folder.
@@ -8969,9 +9112,9 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-column_index = 789 # Integer | The column index.
+column_index = 56 # Integer | The column index.
 
-columns = 789 # Integer | The columns.
+columns = 56 # Integer | The columns.
 
 opts = { 
   update_reference: true, # BOOLEAN | The update reference.
@@ -9031,7 +9174,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-row_index = 789 # Integer | The new row index.
+row_index = 56 # Integer | The new row index.
 
 opts = { 
   folder: 'folder_example', # String | The document folder.
@@ -9088,7 +9231,7 @@ name = 'name_example' # String | The workbook name.
 
 sheet_name = 'sheet_name_example' # String | The worksheet name.
 
-startrow = 789 # Integer | The begin row index to be operated.
+startrow = 56 # Integer | The begin row index to be operated.
 
 opts = { 
   total_rows: 1, # Integer | Number of rows to be operated.
@@ -9328,9 +9471,9 @@ name = 'name_example' # String | workbook name
 
 sheet_name = 'sheet_name_example' # String | worksheet name
 
-dest_row = 789 # Integer | The start row of the dest range.
+dest_row = 56 # Integer | The start row of the dest range.
 
-dest_column = 789 # Integer | The start column of the dest range.
+dest_column = 56 # Integer | The start column of the dest range.
 
 opts = { 
   range: AsposeCellsCloud::Range.new, # Range | range in worksheet 
@@ -9795,7 +9938,7 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 789 # Integer | shape index in worksheet shapes.
+shapeindex = 56 # Integer | shape index in worksheet shapes.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -9906,7 +10049,7 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 789 # Integer | shape index in worksheet shapes.
+shapeindex = 56 # Integer | shape index in worksheet shapes.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -10017,7 +10160,7 @@ name = 'name_example' # String | document name.
 
 sheet_name = 'sheet_name_example' # String | worksheet name.
 
-shapeindex = 789 # Integer | shape index in worksheet shapes.
+shapeindex = 56 # Integer | shape index in worksheet shapes.
 
 opts = { 
   dto: AsposeCellsCloud::Shape.new, # Shape | 
@@ -10079,12 +10222,12 @@ sheet_name = 'sheet_name_example' # String | worksheet name.
 opts = { 
   shape_dto: AsposeCellsCloud::Shape.new, # Shape | 
   drawing_type: 'drawing_type_example', # String | shape object type
-  upper_left_row: 789, # Integer | Upper left row index.
-  upper_left_column: 789, # Integer | Upper left column index.
-  top: 789, # Integer | Represents the vertical offset of Spinner from its left row, in unit of pixel.
-  left: 789, # Integer | Represents the horizontal offset of Spinner from its left column, in unit of pixel.
-  width: 789, # Integer | Represents the height of Spinner, in unit of pixel.
-  height: 789, # Integer | Represents the width of Spinner, in unit of pixel.
+  upper_left_row: 56, # Integer | Upper left row index.
+  upper_left_column: 56, # Integer | Upper left column index.
+  top: 56, # Integer | Represents the vertical offset of Spinner from its left row, in unit of pixel.
+  left: 56, # Integer | Represents the horizontal offset of Spinner from its left column, in unit of pixel.
+  width: 56, # Integer | Represents the height of Spinner, in unit of pixel.
+  height: 56, # Integer | Represents the width of Spinner, in unit of pixel.
   folder: 'folder_example', # String | Document's folder.
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -10118,6 +10261,349 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ShapeResponse**](ShapeResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_delete_worksheet_sparkline_group**
+> CellsCloudResponse cells_sparkline_groups_delete_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+sparkline_group_index = 56 # Integer | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  result = api_instance.cells_sparkline_groups_delete_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_delete_worksheet_sparkline_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **sparkline_group_index** | **Integer**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_delete_worksheet_sparkline_groups**
+> CellsCloudResponse cells_sparkline_groups_delete_worksheet_sparkline_groups(name, sheet_name, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  result = api_instance.cells_sparkline_groups_delete_worksheet_sparkline_groups(name, sheet_name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_delete_worksheet_sparkline_groups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_get_worksheet_sparkline_group**
+> SparklineGroupResponse cells_sparkline_groups_get_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+sparkline_group_index = 56 # Integer | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  result = api_instance.cells_sparkline_groups_get_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_get_worksheet_sparkline_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **sparkline_group_index** | **Integer**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**SparklineGroupResponse**](SparklineGroupResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_get_worksheet_sparkline_groups**
+> SparklineGroupsResponse cells_sparkline_groups_get_worksheet_sparkline_groups(name, sheet_name, opts)
+
+Get worksheet charts description.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | Document name.
+
+sheet_name = 'sheet_name_example' # String | The worksheet name.
+
+opts = { 
+  folder: 'folder_example', # String | Document's folder.
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  #Get worksheet charts description.
+  result = api_instance.cells_sparkline_groups_get_worksheet_sparkline_groups(name, sheet_name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_get_worksheet_sparkline_groups: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| Document name. | 
+ **sheet_name** | **String**| The worksheet name. | 
+ **folder** | **String**| Document&#39;s folder. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**SparklineGroupsResponse**](SparklineGroupsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_post_worksheet_sparkline_group**
+> CellsCloudResponse cells_sparkline_groups_post_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, sparkline_group, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+sparkline_group_index = 56 # Integer | 
+
+sparkline_group = AsposeCellsCloud::SparklineGroup.new # SparklineGroup | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  result = api_instance.cells_sparkline_groups_post_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, sparkline_group, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_post_worksheet_sparkline_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **sparkline_group_index** | **Integer**|  | 
+ **sparkline_group** | [**SparklineGroup**](SparklineGroup.md)|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_sparkline_groups_put_worksheet_sparkline_group**
+> CellsCloudResponse cells_sparkline_groups_put_worksheet_sparkline_group(name, sheet_name, type, data_range, is_vertical, location_range, opts)
+
+
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | 
+
+sheet_name = 'sheet_name_example' # String | 
+
+type = 'type_example' # String | 
+
+data_range = 'data_range_example' # String | 
+
+is_vertical = true # BOOLEAN | 
+
+location_range = 'location_range_example' # String | 
+
+opts = { 
+  folder: 'folder_example', # String | 
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  result = api_instance.cells_sparkline_groups_put_worksheet_sparkline_group(name, sheet_name, type, data_range, is_vertical, location_range, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_sparkline_groups_put_worksheet_sparkline_group: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
+ **sheet_name** | **String**|  | 
+ **type** | **String**|  | 
+ **data_range** | **String**|  | 
+ **is_vertical** | **BOOLEAN**|  | 
+ **location_range** | **String**|  | 
+ **folder** | **String**|  | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -10877,8 +11363,8 @@ name = 'name_example' # String | Document name.
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | Auto Fitter Options.
-  start_row: 789, # Integer | Start row.
-  end_row: 789, # Integer | End row.
+  start_row: 56, # Integer | Start row.
+  end_row: 56, # Integer | End row.
   only_auto: false, # BOOLEAN | Only auto.
   folder: 'folder_example', # String | Document's folder.
   storage_name: 'storage_name_example' # String | storage name.
@@ -11756,7 +12242,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 789 # Integer | The validation index.
+validation_index = 56 # Integer | The validation index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -11867,7 +12353,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 789 # Integer | The validation index.
+validation_index = 56 # Integer | The validation index.
 
 opts = { 
   folder: 'folder_example', # String | Document's folder.
@@ -11978,7 +12464,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-validation_index = 789 # Integer | The validation index.
+validation_index = 56 # Integer | The validation index.
 
 opts = { 
   validation: AsposeCellsCloud::Validation.new, # Validation | 
@@ -12370,13 +12856,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row = 789 # Integer | 
+row = 56 # Integer | 
 
-column = 789 # Integer | 
+column = 56 # Integer | 
 
-freezed_rows = 789 # Integer | 
+freezed_rows = 56 # Integer | 
 
-freezed_columns = 789 # Integer | 
+freezed_columns = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -12719,7 +13205,7 @@ name = 'name_example' # String | Document name.
 
 sheet_name = 'sheet_name_example' # String | Worksheet name.
 
-merged_cell_index = 789 # Integer | Merged cell index.
+merged_cell_index = 56 # Integer | Merged cell index.
 
 opts = { 
   folder: 'folder_example', # String | Document folder.
@@ -12935,14 +13421,14 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-first_column = 789 # Integer | 
+first_column = 56 # Integer | 
 
-last_column = 789 # Integer | 
+last_column = 56 # Integer | 
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | 
-  first_row: 789, # Integer | 
-  last_row: 789, # Integer | 
+  first_row: 56, # Integer | 
+  last_row: 56, # Integer | 
   folder: 'folder_example', # String | 
   storage_name: 'storage_name_example' # String | storage name.
 }
@@ -13000,11 +13486,11 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row_index = 789 # Integer | 
+row_index = 56 # Integer | 
 
-first_column = 789 # Integer | 
+first_column = 56 # Integer | 
 
-last_column = 789 # Integer | 
+last_column = 56 # Integer | 
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | 
@@ -13066,8 +13552,8 @@ sheet_name = 'sheet_name_example' # String | The worksheet name.
 
 opts = { 
   auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | Auto Fitter Options.
-  start_row: 789, # Integer | Start row.
-  end_row: 789, # Integer | End row.
+  start_row: 56, # Integer | Start row.
+  end_row: 56, # Integer | End row.
   only_auto: false, # BOOLEAN | Only auto.
   folder: 'folder_example', # String | Document's folder.
   storage_name: 'storage_name_example' # String | storage name.
@@ -13357,7 +13843,7 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-value = 789 # Integer | 
+value = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 
@@ -13649,7 +14135,7 @@ name = 'name_example' # String | Document name.
 sheet_name = 'sheet_name_example' # String | The new sheet name.
 
 opts = { 
-  position: 789, # Integer | The new sheet position.
+  position: 56, # Integer | The new sheet position.
   sheettype: 'sheettype_example', # String | The new sheet type.
   folder: 'folder_example', # String | Document folder.
   storage_name: 'storage_name_example' # String | storage name.
@@ -13935,13 +14421,13 @@ name = 'name_example' # String |
 
 sheet_name = 'sheet_name_example' # String | 
 
-row = 789 # Integer | 
+row = 56 # Integer | 
 
-column = 789 # Integer | 
+column = 56 # Integer | 
 
-freezed_rows = 789 # Integer | 
+freezed_rows = 56 # Integer | 
 
-freezed_columns = 789 # Integer | 
+freezed_columns = 56 # Integer | 
 
 opts = { 
   folder: 'folder_example', # String | 

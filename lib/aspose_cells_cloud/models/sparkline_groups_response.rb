@@ -23,28 +23,30 @@ SOFTWARE.
 require 'date'
 
 module AsposeCellsCloud
-  # File upload result
-  class FilesUploadResult
-    # List of uploaded file names
-    attr_accessor :uploaded
 
-    # List of errors.
-    attr_accessor :errors
+  class SparklineGroupsResponse
+    attr_accessor :status
+
+    attr_accessor :code
+
+    attr_accessor :sparkline_groups
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'uploaded' => :'Uploaded',
-        :'errors' => :'Errors'
+        :'status' => :'Status',
+        :'code' => :'Code',
+        :'sparkline_groups' => :'SparklineGroups'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'uploaded' => :'Array<String>',
-        :'errors' => :'Array<CellsError>'
+        :'status' => :'String',
+        :'code' => :'Integer',
+        :'sparkline_groups' => :'SparklineGroups'
       }
     end
 
@@ -56,16 +58,16 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Uploaded')
-        if (value = attributes[:'Uploaded']).is_a?(Array)
-          self.uploaded = value
-        end
+      if attributes.has_key?(:'Status')
+        self.status = attributes[:'Status']
       end
 
-      if attributes.has_key?(:'Errors')
-        if (value = attributes[:'Errors']).is_a?(Array)
-          self.errors = value
-        end
+      if attributes.has_key?(:'Code')
+        self.code = attributes[:'Code']
+      end
+
+      if attributes.has_key?(:'SparklineGroups')
+        self.sparkline_groups = attributes[:'SparklineGroups']
       end
 
     end
@@ -74,12 +76,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @code.nil?
+        invalid_properties.push("invalid value for 'code', code cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @code.nil?
       return true
     end
 
@@ -88,8 +95,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          uploaded == o.uploaded &&
-          errors == o.errors
+          status == o.status &&
+          code == o.code &&
+          sparkline_groups == o.sparkline_groups
     end
 
     # @see the `==` method
@@ -101,7 +109,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [uploaded, errors].hash
+      [status, code, sparkline_groups].hash
     end
 
     # Builds the object from hash

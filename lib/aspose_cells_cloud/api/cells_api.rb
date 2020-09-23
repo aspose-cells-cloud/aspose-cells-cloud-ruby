@@ -2437,6 +2437,10 @@ module AsposeCellsCloud
     # @option opts [String] :title Specifies chart title name.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [BOOLEAN] :data_labels  (default to true)
+    # @option opts [String] :data_labels_position  (default to Above)
+    # @option opts [String] :pivot_table_sheet 
+    # @option opts [String] :pivot_table_name 
     # @return [ChartsResponse]
     def cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts)
@@ -2460,6 +2464,10 @@ module AsposeCellsCloud
     # @option opts [String] :title Specifies chart title name.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [BOOLEAN] :data_labels 
+    # @option opts [String] :data_labels_position 
+    # @option opts [String] :pivot_table_sheet 
+    # @option opts [String] :pivot_table_name 
     # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
     def cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts = {})
       if @api_client.config.debugging
@@ -2495,6 +2503,10 @@ module AsposeCellsCloud
       query_params[:'title'] = opts[:'title'] if !opts[:'title'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+      query_params[:'dataLabels'] = opts[:'data_labels'] if !opts[:'data_labels'].nil?
+      query_params[:'dataLabelsPosition'] = opts[:'data_labels_position'] if !opts[:'data_labels_position'].nil?
+      query_params[:'pivotTableSheet'] = opts[:'pivot_table_sheet'] if !opts[:'pivot_table_sheet'].nil?
+      query_params[:'pivotTableName'] = opts[:'pivot_table_name'] if !opts[:'pivot_table_name'].nil?
 
       # header parameters
       header_params = {}
@@ -8782,6 +8794,188 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param pivot_table_index 
+    # @param pivot_field_index 
+    # @param pivot_field_type 
+    # @param pivot_field 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :need_re_calculate  (default to false)
+    # @option opts [String] :folder 
+    # @return [CellsCloudResponse]
+    def cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts = {})
+      data, _status_code, _headers = cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param pivot_table_index 
+    # @param pivot_field_index 
+    # @param pivot_field_type 
+    # @param pivot_field 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :need_re_calculate 
+    # @option opts [String] :folder 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # verify the required parameter 'pivot_table_index' is set
+      if @api_client.config.client_side_validation && pivot_table_index.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_table_index' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # verify the required parameter 'pivot_field_index' is set
+      if @api_client.config.client_side_validation && pivot_field_index.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_field_index' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # verify the required parameter 'pivot_field_type' is set
+      if @api_client.config.client_side_validation && pivot_field_type.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_field_type' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # verify the required parameter 'pivot_field' is set
+      if @api_client.config.client_side_validation && pivot_field.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_field' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields/{pivotFieldIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'pivotTableIndex' + '}', pivot_table_index.to_s).sub('{' + 'pivotFieldIndex' + '}', pivot_field_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pivotFieldType'] = pivot_field_type
+      query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(pivot_field)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_pivot_tables_post_pivot_table_update_pivot_field\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param pivot_table_index 
+    # @param pivot_field_type 
+    # @param pivot_field 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :need_re_calculate  (default to false)
+    # @option opts [String] :folder 
+    # @return [CellsCloudResponse]
+    def cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts = {})
+      data, _status_code, _headers = cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param pivot_table_index 
+    # @param pivot_field_type 
+    # @param pivot_field 
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :need_re_calculate 
+    # @option opts [String] :folder 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields"
+      end
+      # verify the required parameter 'pivot_table_index' is set
+      if @api_client.config.client_side_validation && pivot_table_index.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_table_index' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields"
+      end
+      # verify the required parameter 'pivot_field_type' is set
+      if @api_client.config.client_side_validation && pivot_field_type.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_field_type' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields"
+      end
+      # verify the required parameter 'pivot_field' is set
+      if @api_client.config.client_side_validation && pivot_field.nil?
+        fail ArgumentError, "Missing the required parameter 'pivot_field' when calling CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotFields".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'pivotTableIndex' + '}', pivot_table_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pivotFieldType'] = pivot_field_type
+      query_params[:'needReCalculate'] = opts[:'need_re_calculate'] if !opts[:'need_re_calculate'].nil?
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(pivot_field)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_pivot_tables_post_pivot_table_update_pivot_fields\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Calculates pivottable's data to cells.
     # 
     # @param name Document name.
@@ -13255,6 +13449,473 @@ module AsposeCellsCloud
         :return_type => 'ShapeResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_shapes_put_worksheet_shape\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_sparkline_groups_delete_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_group ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sparkline_group_index' is set
+      if @api_client.config.client_side_validation && sparkline_group_index.nil?
+        fail ArgumentError, "Missing the required parameter 'sparkline_group_index' when calling CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_group"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'sparklineGroupIndex' + '}', sparkline_group_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_delete_worksheet_sparkline_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_sparkline_groups_delete_worksheet_sparkline_groups(name, sheet_name, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_groups ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_groups"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_groups"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_delete_worksheet_sparkline_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [SparklineGroupResponse]
+    def cells_sparkline_groups_get_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(SparklineGroupResponse, Fixnum, Hash)>] SparklineGroupResponse data, response status code and response headers
+    def cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_get_worksheet_sparkline_group ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_get_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_get_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sparkline_group_index' is set
+      if @api_client.config.client_side_validation && sparkline_group_index.nil?
+        fail ArgumentError, "Missing the required parameter 'sparkline_group_index' when calling CellsApi.cells_sparkline_groups_get_worksheet_sparkline_group"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'sparklineGroupIndex' + '}', sparkline_group_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SparklineGroupResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_get_worksheet_sparkline_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get worksheet charts description.
+    # 
+    # @param name Document name.
+    # @param sheet_name The worksheet name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [SparklineGroupsResponse]
+    def cells_sparkline_groups_get_worksheet_sparkline_groups(name, sheet_name, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts)
+      return data
+    end
+
+    # Get worksheet charts description.
+    # 
+    # @param name Document name.
+    # @param sheet_name The worksheet name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(SparklineGroupsResponse, Fixnum, Hash)>] SparklineGroupsResponse data, response status code and response headers
+    def cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_get_worksheet_sparkline_groups ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_get_worksheet_sparkline_groups"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_get_worksheet_sparkline_groups"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'SparklineGroupsResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_get_worksheet_sparkline_groups\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param sparkline_group 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_sparkline_groups_post_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, sparkline_group, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param sparkline_group_index 
+    # @param sparkline_group 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sparkline_group_index' is set
+      if @api_client.config.client_side_validation && sparkline_group_index.nil?
+        fail ArgumentError, "Missing the required parameter 'sparkline_group_index' when calling CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sparkline_group' is set
+      if @api_client.config.client_side_validation && sparkline_group.nil?
+        fail ArgumentError, "Missing the required parameter 'sparkline_group' when calling CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'sparklineGroupIndex'] = sparkline_group_index
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(sparkline_group)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_post_worksheet_sparkline_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param type 
+    # @param data_range 
+    # @param is_vertical 
+    # @param location_range 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_sparkline_groups_put_worksheet_sparkline_group(name, sheet_name, type, data_range, is_vertical, location_range, opts = {})
+      data, _status_code, _headers = cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param type 
+    # @param data_range 
+    # @param is_vertical 
+    # @param location_range 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'type' is set
+      if @api_client.config.client_side_validation && type.nil?
+        fail ArgumentError, "Missing the required parameter 'type' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'data_range' is set
+      if @api_client.config.client_side_validation && data_range.nil?
+        fail ArgumentError, "Missing the required parameter 'data_range' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'is_vertical' is set
+      if @api_client.config.client_side_validation && is_vertical.nil?
+        fail ArgumentError, "Missing the required parameter 'is_vertical' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # verify the required parameter 'location_range' is set
+      if @api_client.config.client_side_validation && location_range.nil?
+        fail ArgumentError, "Missing the required parameter 'location_range' when calling CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'type'] = type
+      query_params[:'dataRange'] = data_range
+      query_params[:'isVertical'] = is_vertical
+      query_params[:'locationRange'] = location_range
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_sparkline_groups_put_worksheet_sparkline_group\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

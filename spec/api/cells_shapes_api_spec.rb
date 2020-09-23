@@ -8,7 +8,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsShapesApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
 
   after do
@@ -118,7 +118,7 @@ describe 'CellsShapesApi' do
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_shapes_put_worksheet_shape(name, sheet_name, drawing_type, upper_left_row, upper_left_column, top, left, width, height, { :folder=>folder})
+      result = @instance.cells_shapes_put_worksheet_shape(name, sheet_name,{:drawing_type=> drawing_type, :upper_left_row=>upper_left_row,:upper_left_column=> upper_left_column,:top=> top, :left=>left,:width=>width,:height =>height,  :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

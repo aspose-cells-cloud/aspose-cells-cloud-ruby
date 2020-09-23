@@ -23,28 +23,30 @@ SOFTWARE.
 require 'date'
 
 module AsposeCellsCloud
-  # File upload result
-  class FilesUploadResult
-    # List of uploaded file names
-    attr_accessor :uploaded
 
-    # List of errors.
-    attr_accessor :errors
+  class Sparkline
+    attr_accessor :column
+
+    attr_accessor :data_range
+
+    attr_accessor :row
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'uploaded' => :'Uploaded',
-        :'errors' => :'Errors'
+        :'column' => :'Column',
+        :'data_range' => :'DataRange',
+        :'row' => :'Row'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'uploaded' => :'Array<String>',
-        :'errors' => :'Array<CellsError>'
+        :'column' => :'Integer',
+        :'data_range' => :'String',
+        :'row' => :'Integer'
       }
     end
 
@@ -56,16 +58,16 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Uploaded')
-        if (value = attributes[:'Uploaded']).is_a?(Array)
-          self.uploaded = value
-        end
+      if attributes.has_key?(:'Column')
+        self.column = attributes[:'Column']
       end
 
-      if attributes.has_key?(:'Errors')
-        if (value = attributes[:'Errors']).is_a?(Array)
-          self.errors = value
-        end
+      if attributes.has_key?(:'DataRange')
+        self.data_range = attributes[:'DataRange']
+      end
+
+      if attributes.has_key?(:'Row')
+        self.row = attributes[:'Row']
       end
 
     end
@@ -74,12 +76,22 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @column.nil?
+        invalid_properties.push("invalid value for 'column', column cannot be nil.")
+      end
+
+      if @row.nil?
+        invalid_properties.push("invalid value for 'row', row cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @column.nil?
+      return false if @row.nil?
       return true
     end
 
@@ -88,8 +100,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          uploaded == o.uploaded &&
-          errors == o.errors
+          column == o.column &&
+          data_range == o.data_range &&
+          row == o.row
     end
 
     # @see the `==` method
@@ -101,7 +114,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [uploaded, errors].hash
+      [column, data_range, row].hash
     end
 
     # Builds the object from hash

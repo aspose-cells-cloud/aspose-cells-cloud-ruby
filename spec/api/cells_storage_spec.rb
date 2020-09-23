@@ -6,7 +6,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
 
   after do
@@ -14,15 +14,8 @@ describe 'CellsApi' do
   end
 
 
-# unit tests for cells_workbook_put_convert_workbook
-  # Convert workbook from request content to some format.
-  # 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :format The format to convert.
-  # @option opts [String] :password The workbook password.
-  # @option opts [String] :out_path Path to save result
-  # @return [File]
-  describe 'cells_workbook_put_convert_workbook test' do
+
+  describe 'cells_storage_test' do
     it "should work" do
       format = 'pdf'
       password = nil

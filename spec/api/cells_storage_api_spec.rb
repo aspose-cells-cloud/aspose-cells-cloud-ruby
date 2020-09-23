@@ -19,7 +19,7 @@ require 'base64'
 # Please update as you see appropriate
 describe 'CellsTaskApi' do
   before do
-     @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+     @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
 
   after do

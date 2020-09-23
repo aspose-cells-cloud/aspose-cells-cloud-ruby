@@ -7,7 +7,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsSaveAsApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
 
   after do
@@ -37,7 +37,7 @@ describe 'CellsSaveAsApi' do
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>newfilename, :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
+      result = @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>(folder+"/"+newfilename), :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -65,7 +65,7 @@ describe 'CellsSaveAsApi' do
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>newfilename, :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
+      result = @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>(folder+"/"+newfilename), :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

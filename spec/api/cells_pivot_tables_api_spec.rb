@@ -7,7 +7,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPivotTablesApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
 
   after do
@@ -209,6 +209,37 @@ describe 'CellsPivotTablesApi' do
     end
   end
 
+  describe 'cells_pivot_tables_post_pivot_table_update_pivot_fields test' do
+    it "should work" do
+      name = $PivTestFile
+      sheet_name = $SHEET4
+      pivot_table_index = 0
+      field_index = 0
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      pivot_field = AsposeCellsCloud::PivotField.new({:Number=>5})
+      result = @instance.cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, "Data",pivot_field , { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+  
+  describe 'cells_pivot_tables_post_pivot_table_update_pivot_field test' do
+    it "should work" do
+      name = $PivTestFile
+      sheet_name = $SHEET4
+      pivot_table_index = 0
+      field_index = 0
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      pivot_field = AsposeCellsCloud::PivotField.new({:Number=>5})
+      result = @instance.cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index,0, "Data",pivot_field , { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
   # unit tests for cells_pivot_tables_post_pivot_table_style
   # Update style for pivot table
   # 
@@ -377,12 +408,15 @@ describe 'CellsPivotTablesApi' do
       need_re_calculate = true
       folder = $TEMPFOLDER
       filter_index =0
+      field_index=0
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
       result = @instance.cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, { :filter=>filter, :need_re_calculate=>need_re_calculate, :folder=>folder})
       expect(result.code).to eql(200)
       result = @instance.cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, { :folder=>folder})
-      expect(result.code).to eql(200)      
+      expect(result.code).to eql(200)
+      result = @instance.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index,  {:need_re_calculate=>need_re_calculate, :folder=>folder})
+      expect(result.code).to eql(200)
     end
   end
 
@@ -438,33 +472,6 @@ describe 'CellsPivotTablesApi' do
     end
   end
 
-  # unit tests for cells_pivot_tables_delete_worksheet_pivot_table_filter
-  # delete  pivot filter for piovt table             
-  # 
-  # @param name 
-  # @param sheet_name 
-  # @param pivot_table_index 
-  # @param field_index 
-  # @param [Hash] opts the optional parameters
-  # @option opts [BOOLEAN] :need_re_calculate 
-  # @option opts [String] :folder 
-  # @option opts [String] :storage storage name.
-  # @return [CellsCloudResponse]
-  describe 'cells_pivot_tables_delete_worksheet_pivot_table_filter test' do
-    it "should work" do
-      name = $PivTestFile
-      sheet_name = $SHEET4
-      pivot_table_index = 0
-      field_index = 0
-      need_re_calculate = true
-      folder = $TEMPFOLDER
-      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index,  {:need_re_calculate=>need_re_calculate, :folder=>folder})
-      expect(result.code).to eql(200)
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
 
   # unit tests for cells_pivot_tables_delete_worksheet_pivot_table_filters
   # delete all pivot filters for piovt table

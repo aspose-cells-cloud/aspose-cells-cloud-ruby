@@ -7,7 +7,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsPageBreaksApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0")
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
   end
   after do
     # run after each test
@@ -207,7 +207,7 @@ describe 'CellsPageBreaksApi' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
-      row = 1
+      row = 0
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
@@ -255,7 +255,7 @@ describe 'CellsPageBreaksApi' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
-      column = 1
+      column = 0
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0

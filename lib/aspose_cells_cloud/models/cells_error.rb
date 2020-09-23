@@ -24,7 +24,7 @@ require 'date'
 
 module AsposeCellsCloud
   # Error
-  class Error
+  class CellsError
     # Code             
     attr_accessor :code
 

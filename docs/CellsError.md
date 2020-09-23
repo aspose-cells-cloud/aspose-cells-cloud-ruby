@@ -1,4 +1,4 @@
-# AsposeCellsCloud::Error
+# AsposeCellsCloud::CellsError
 
 ## Properties
 Name | Type | Description | Notes
