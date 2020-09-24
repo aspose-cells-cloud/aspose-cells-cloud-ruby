@@ -18,7 +18,7 @@ This Cloud SDK enhances your Ruby cloud-based apps to [process & manipulate Micr
 - Cloud SDK to Read & Process Excel Worksheets.
 - Leverage the Power of Pivot Tables & Ranges.
 
-## Feature & Enhancements in Version 20.8
+## Feature & Enhancements in Version 20.9
 
 - Aspose.Cells Cloud API calls are not working with explicit storage name but only default storage.
 - Get output file size without downloading during conversion.
