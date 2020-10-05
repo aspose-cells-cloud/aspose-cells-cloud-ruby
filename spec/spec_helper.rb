@@ -16,6 +16,7 @@ require 'aspose_cells_cloud'
   $client_id = '91A2FD07-BBA1-4B32-9112-ABFB1FE8AEBD' #  # replace NULL with a proper value
   $client_secret = '0fbf678c5ecabdb5caca48452a736dd0' #  # replace NULL with a proper value
   $baseurl='https://api-qa.aspose.cloud'
+  $api_version='v3.0'
   $access_token
   $BOOK1 = "Book1.xlsx"
   $MYDOC = "myDocument.xlsx"

@@ -8,7 +8,8 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsWorkbookApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,$api_version,$baseurl)
+    $VERBOSE = nil
   end
 
   after do
@@ -437,7 +438,7 @@ describe 'CellsWorkbookApi' do
       format = 'pdf'
       password = nil
       out_path = "Tdd.pdf"
-      result =  @instance.cells_workbook_put_convert_workbook(::File.open("/home/roy/aspose/cells/cloud/sdk/TestData/Book1.xlsx","r") {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
+      result =  @instance.cells_workbook_put_convert_workbook( ::File.open(File.expand_path("data/"+name),"r")  {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
       # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

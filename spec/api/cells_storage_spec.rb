@@ -6,7 +6,8 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsApi' do
   before do
-    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,"v3.0",$baseurl)
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,$api_version,$baseurl)
+    $VERBOSE = nil
   end
 
   after do
@@ -25,7 +26,7 @@ describe 'CellsApi' do
       @instance.create_folder("ruby")
       @instance.copy_folder("ruby","ruby1")
       @instance.move_folder("ruby1","ruby")
-      @instance.upload_file( "ruby/"+name,  ::File.open("/home/roy/aspose/cells/cloud/sdk/TestData/" +name,"r") {|io| io.read(io.size) })      
+      @instance.upload_file( "ruby/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })      
       @instance.copy_file("ruby/"+name,"ruby/1"+name)
       @instance.delete_file("ruby/"+name)
       @instance.move_file("ruby/1"+name,"ruby/"+name)
