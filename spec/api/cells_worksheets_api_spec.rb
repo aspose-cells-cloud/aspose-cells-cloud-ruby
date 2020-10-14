@@ -27,32 +27,32 @@ describe 'CellsWorksheetsApi' do
   end
 
 
-  # unit tests for cells_worksheets_put_worksheet_background
-  # Set worksheet background image.
-  # 
-  # @param name 
-  # @param sheet_name 
-  # @param png 
-  # @param [Hash] opts the optional parameters
-  # @option opts [String] :folder 
-  # @option opts [String] :storage storage name.
-  # @return [CellsCloudResponse]
-  describe 'cells_worksheets_put_worksheet_background test' do
-    it "should work" do
-      name = $BOOK1
-      sheet_name = $SHEET1
-      aFile = File.new(File.expand_path("data/WaterMark.png"),"r")
-      png = aFile.sysread(aFile.size)
-      aFile.close
-      folder = $TEMPFOLDER
-      result = @instance.delete_file( folder+"/"+name)
-      result = @instance.upload_file( folder+"/"+name, ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, { :folder=>folder})
-      expect(result.code).to eql(200)
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
+  # # unit tests for cells_worksheets_put_worksheet_background
+  # # Set worksheet background image.
+  # # 
+  # # @param name 
+  # # @param sheet_name 
+  # # @param png 
+  # # @param [Hash] opts the optional parameters
+  # # @option opts [String] :folder 
+  # # @option opts [String] :storage storage name.
+  # # @return [CellsCloudResponse]
+  # describe 'cells_worksheets_put_worksheet_background test' do
+  #   it "should work" do
+  #     name = $BOOK1
+  #     sheet_name = $SHEET1
+  #     aFile = File.new(File.expand_path("data/WaterMark.png"),"r")
+  #     png = aFile.sysread(aFile.size)
+  #     aFile.close
+  #     folder = $TEMPFOLDER
+  #     result = @instance.delete_file( folder+"/"+name)
+  #     result = @instance.upload_file( folder+"/"+name, ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+  #     expect(result.uploaded.size).to  be > 0
+  #     result = @instance.cells_worksheets_put_worksheet_background(name, sheet_name, png, { :folder=>folder})
+  #     expect(result.code).to eql(200)
+  #     # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+  #   end
+  # end
   # unit tests for cells_worksheets_delete_worksheet_background
   # Set worksheet background image.
   # 
