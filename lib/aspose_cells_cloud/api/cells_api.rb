@@ -13788,11 +13788,10 @@ module AsposeCellsCloud
         fail ArgumentError, "Missing the required parameter 'sparkline_group' when calling CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group"
       end
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/sparklinegroups/{sparklineGroupIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'sparklineGroupIndex' + '}', sparkline_group_index.to_s)
 
       # query parameters
       query_params = {}
-      query_params[:'sparklineGroupIndex'] = sparkline_group_index
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
