@@ -15044,9 +15044,9 @@ api_instance = AsposeCellsCloud::CellsApi.new
 
 grant_type = 'grant_type_example' # String | Grant Type
 
-client_id = 'client_id_example' # String | App SID
+client_id = 'client_id_example' # String | Client Id
 
-client_secret = 'client_secret_example' # String | App Key
+client_secret = 'client_secret_example' # String | Client Secret
 
 
 begin
@@ -15063,8 +15063,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **grant_type** | **String**| Grant Type | 
- **client_id** | **String**| App SID | 
- **client_secret** | **String**| App Key | 
+ **client_id** | **String**| Client Id | 
+ **client_secret** | **String**| Client Secret | 
 
 ### Return type
 

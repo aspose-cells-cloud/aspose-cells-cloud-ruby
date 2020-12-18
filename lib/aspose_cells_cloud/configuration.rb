@@ -25,11 +25,11 @@ require 'uri'
 module AsposeCellsCloud
   class Configuration
 
-    # App Key
-    attr_accessor :app_key
+    # Client Secret
+    attr_accessor :client_secret
 
-    # App SID
-    attr_accessor :app_sid
+    # Client ID
+    attr_accessor :client_id
 
     # Defines url scheme
     attr_accessor :scheme

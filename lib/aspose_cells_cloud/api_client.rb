@@ -128,8 +128,9 @@ module AsposeCellsCloud
       # OAuth 2.0
       req_opts[:params] = opts[:query_params]
 
-      add_o_auth_token(req_opts)
-
+      if @config.access_token
+        add_o_auth_token(req_opts)
+      end
 
       conn = Faraday.new url, {:params => query_params, :headers => header_params} do |f|
       f.request :multipart
@@ -416,7 +417,12 @@ module AsposeCellsCloud
 
     # Request access and refresh tokens if needed
     def request_token_if_needed
+      
       # check token exists
+      if @config.client_id.nil? && @config.client_secret.nil?
+        return
+      end
+
       if @config.access_token
         now = Time.now 
         time_difference = now - $get_access_token_time
@@ -442,8 +448,8 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       form_params["grant_type"] = 'client_credentials'
-      form_params["client_id"] = @config.app_sid
-      form_params["client_secret"] = @config.app_key
+      form_params["client_id"] = @config.client_id
+      form_params["client_secret"] = @config.client_secret
 
       body =  {}
 
