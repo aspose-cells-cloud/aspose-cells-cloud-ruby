@@ -127,7 +127,7 @@ module AsposeCellsCloud
 
       # OAuth 2.0
       req_opts[:params] = opts[:query_params]
-
+      
       if @config.access_token
         add_o_auth_token(req_opts)
       end
@@ -417,12 +417,10 @@ module AsposeCellsCloud
 
     # Request access and refresh tokens if needed
     def request_token_if_needed
-      
       # check token exists
       if @config.client_id.nil? && @config.client_secret.nil?
         return
       end
-
       if @config.access_token
         now = Time.now 
         time_difference = now - $get_access_token_time
