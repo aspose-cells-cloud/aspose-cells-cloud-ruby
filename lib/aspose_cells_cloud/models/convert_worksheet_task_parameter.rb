@@ -24,25 +24,49 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class OperateObject
-    attr_accessor :operate_object_type
+  class ConvertWorksheetTaskParameter
+    attr_accessor :workbook
 
-    attr_accessor :position
+    attr_accessor :sheet
+
+    attr_accessor :target
+
+    attr_accessor :format
+
+    attr_accessor :area
+
+    attr_accessor :page_index
+
+    attr_accessor :vertical_resolution
+
+    attr_accessor :horizontal_resolution
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'operate_object_type' => :'OperateObjectType',
-        :'position' => :'Position'
+        :'workbook' => :'Workbook',
+        :'sheet' => :'Sheet',
+        :'target' => :'Target',
+        :'format' => :'Format',
+        :'area' => :'Area',
+        :'page_index' => :'PageIndex',
+        :'vertical_resolution' => :'VerticalResolution',
+        :'horizontal_resolution' => :'HorizontalResolution'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'operate_object_type' => :'String',
-        :'position' => :'OperateObjectPosition'
+        :'workbook' => :'FileSource',
+        :'sheet' => :'String',
+        :'target' => :'FileSource',
+        :'format' => :'String',
+        :'area' => :'String',
+        :'page_index' => :'Integer',
+        :'vertical_resolution' => :'Integer',
+        :'horizontal_resolution' => :'Integer'
       }
     end
 
@@ -54,12 +78,36 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'OperateObjectType')
-        self.operate_object_type = attributes[:'OperateObjectType']
+      if attributes.has_key?(:'Workbook')
+        self.workbook = attributes[:'Workbook']
       end
 
-      if attributes.has_key?(:'Position')
-        self.position = attributes[:'Position']
+      if attributes.has_key?(:'Sheet')
+        self.sheet = attributes[:'Sheet']
+      end
+
+      if attributes.has_key?(:'Target')
+        self.target = attributes[:'Target']
+      end
+
+      if attributes.has_key?(:'Format')
+        self.format = attributes[:'Format']
+      end
+
+      if attributes.has_key?(:'Area')
+        self.area = attributes[:'Area']
+      end
+
+      if attributes.has_key?(:'PageIndex')
+        self.page_index = attributes[:'PageIndex']
+      end
+
+      if attributes.has_key?(:'VerticalResolution')
+        self.vertical_resolution = attributes[:'VerticalResolution']
+      end
+
+      if attributes.has_key?(:'HorizontalResolution')
+        self.horizontal_resolution = attributes[:'HorizontalResolution']
       end
 
     end
@@ -82,8 +130,14 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          operate_object_type == o.operate_object_type &&
-          position == o.position
+          workbook == o.workbook &&
+          sheet == o.sheet &&
+          target == o.target &&
+          format == o.format &&
+          area == o.area &&
+          page_index == o.page_index &&
+          vertical_resolution == o.vertical_resolution &&
+          horizontal_resolution == o.horizontal_resolution
     end
 
     # @see the `==` method
@@ -95,7 +149,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_object_type, position].hash
+      [workbook, sheet, target, format, area, page_index, vertical_resolution, horizontal_resolution].hash
     end
 
     # Builds the object from hash

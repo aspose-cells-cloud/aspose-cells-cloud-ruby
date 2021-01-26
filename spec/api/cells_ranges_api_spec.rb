@@ -281,4 +281,32 @@ describe 'CellsRangesApi' do
     end
   end
 
+  describe 'cells_ranges_put_worksheet_cells_range test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET1
+      range = "A1:B6"
+      shift = "Down"
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_ranges_put_worksheet_cells_range(name, sheet_name,range,shift, { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+  describe 'cells_ranges_delete_worksheet_cells_range test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET1
+      range = "A1:B6"
+      shift = "Up"
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_ranges_delete_worksheet_cells_range(name, sheet_name,range,shift, { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end

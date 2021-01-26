@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2020 Aspose.Cells Cloud
+Copyright (c) 2021 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -159,6 +159,7 @@ require 'aspose_cells_cloud/models/conditional_formatting_response'
 require 'aspose_cells_cloud/models/conditional_formattings'
 require 'aspose_cells_cloud/models/conditional_formattings_response'
 require 'aspose_cells_cloud/models/convert_task_parameter'
+require 'aspose_cells_cloud/models/convert_worksheet_task_parameter'
 require 'aspose_cells_cloud/models/dif_save_options'
 require 'aspose_cells_cloud/models/file_version'
 require 'aspose_cells_cloud/models/fill_format_response'

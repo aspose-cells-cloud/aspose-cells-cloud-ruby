@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2020 Aspose.Cells Cloud
+Copyright (c) 2021 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -12158,6 +12158,89 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Delete range in the worksheet
+    # 
+    # @param name workbook name
+    # @param sheet_name worksheet name
+    # @param range range
+    # @param shift Represent the shift options when deleting a range of cells. (Left,Up) 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_ranges_delete_worksheet_cells_range(name, sheet_name, range, shift, opts = {})
+      data, _status_code, _headers = cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts)
+      return data
+    end
+
+    # Delete range in the worksheet
+    # 
+    # @param name workbook name
+    # @param sheet_name worksheet name
+    # @param range range
+    # @param shift Represent the shift options when deleting a range of cells. (Left,Up) 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_delete_worksheet_cells_range ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_ranges_delete_worksheet_cells_range"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_ranges_delete_worksheet_cells_range"
+      end
+      # verify the required parameter 'range' is set
+      if @api_client.config.client_side_validation && range.nil?
+        fail ArgumentError, "Missing the required parameter 'range' when calling CellsApi.cells_ranges_delete_worksheet_cells_range"
+      end
+      # verify the required parameter 'shift' is set
+      if @api_client.config.client_side_validation && shift.nil?
+        fail ArgumentError, "Missing the required parameter 'shift' when calling CellsApi.cells_ranges_delete_worksheet_cells_range"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/ranges".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'range'] = range
+      query_params[:'shift'] = shift
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_ranges_delete_worksheet_cells_range\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Get cells list in a range by range name or row column indexes  
     # 
     # @param name workbook name
@@ -12918,6 +13001,89 @@ module AsposeCellsCloud
         :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_ranges_post_worksheet_cells_ranges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Insert range in the worksheet
+    # 
+    # @param name workbook name
+    # @param sheet_name worksheet name
+    # @param range range
+    # @param shift Represent the shift options when deleting a range of cells. (Right,Down) 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_ranges_put_worksheet_cells_range(name, sheet_name, range, shift, opts = {})
+      data, _status_code, _headers = cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts)
+      return data
+    end
+
+    # Insert range in the worksheet
+    # 
+    # @param name workbook name
+    # @param sheet_name worksheet name
+    # @param range range
+    # @param shift Represent the shift options when deleting a range of cells. (Right,Down) 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_put_worksheet_cells_range ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_ranges_put_worksheet_cells_range"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_ranges_put_worksheet_cells_range"
+      end
+      # verify the required parameter 'range' is set
+      if @api_client.config.client_side_validation && range.nil?
+        fail ArgumentError, "Missing the required parameter 'range' when calling CellsApi.cells_ranges_put_worksheet_cells_range"
+      end
+      # verify the required parameter 'shift' is set
+      if @api_client.config.client_side_validation && shift.nil?
+        fail ArgumentError, "Missing the required parameter 'shift' when calling CellsApi.cells_ranges_put_worksheet_cells_range"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/ranges".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'range'] = range
+      query_params[:'shift'] = shift
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_ranges_put_worksheet_cells_range\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
