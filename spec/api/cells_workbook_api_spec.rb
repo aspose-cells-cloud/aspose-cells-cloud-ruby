@@ -230,6 +230,32 @@ describe 'CellsWorkbookApi' do
     end
   end
 
+  # unit tests for cells_workbook_post_autofit_workbook_columns
+  # Autofit workbook columns.
+  # 
+  # @param name Document name.
+  # @param [Hash] opts the optional parameters
+  # @option opts [AutoFitterOptions] :auto_fitter_options Auto Fitter Options.
+  # @option opts [Integer] :start_column Start column.
+  # @option opts [Integer] :end_column End column.
+  # @option opts [String] :folder Document&#39;s folder.
+  # @option opts [String] :storage storage name.
+  # @return [CellsCloudResponse]
+  describe 'cells_workbook_post_autofit_workbook_columns test' do
+    it "should work" do
+      name = $BOOK1
+      auto_fitter_options = nil
+      start_column = 1
+      end_column = 100
+      only_auto = true
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_post_autofit_workbook_columns(name,  {:auto_fitter_options=>auto_fitter_options, :start_column=>start_column, :end_column=>end_column, :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 
   # unit tests for cells_workbook_post_import_data
   # 

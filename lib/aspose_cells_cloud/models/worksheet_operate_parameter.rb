@@ -24,41 +24,26 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class ChartOperateParameter
+  class WorksheetOperateParameter
     attr_accessor :operate_type
 
-    attr_accessor :title
+    attr_accessor :name
 
-    attr_accessor :area
+    attr_accessor :sheet_type
 
-    attr_accessor :category_data
+    attr_accessor :new_name
 
-    attr_accessor :upper_left_row
-
-    attr_accessor :lower_right_column
-
-    attr_accessor :lower_right_row
-
-    attr_accessor :is_auto_get_serial_name
-
-    attr_accessor :chart_type
-
-    attr_accessor :is_vertical
+    attr_accessor :moving_request
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'operate_type' => :'OperateType',
-        :'title' => :'Title',
-        :'area' => :'Area',
-        :'category_data' => :'CategoryData',
-        :'upper_left_row' => :'UpperLeftRow',
-        :'lower_right_column' => :'LowerRightColumn',
-        :'lower_right_row' => :'LowerRightRow',
-        :'is_auto_get_serial_name' => :'IsAutoGetSerialName',
-        :'chart_type' => :'ChartType',
-        :'is_vertical' => :'IsVertical'
+        :'name' => :'Name',
+        :'sheet_type' => :'SheetType',
+        :'new_name' => :'NewName',
+        :'moving_request' => :'MovingRequest'
       }
     end
 
@@ -66,15 +51,10 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'operate_type' => :'String',
-        :'title' => :'String',
-        :'area' => :'String',
-        :'category_data' => :'String',
-        :'upper_left_row' => :'Integer',
-        :'lower_right_column' => :'Integer',
-        :'lower_right_row' => :'Integer',
-        :'is_auto_get_serial_name' => :'BOOLEAN',
-        :'chart_type' => :'String',
-        :'is_vertical' => :'BOOLEAN'
+        :'name' => :'String',
+        :'sheet_type' => :'String',
+        :'new_name' => :'String',
+        :'moving_request' => :'WorksheetMovingRequest'
       }
     end
 
@@ -90,40 +70,20 @@ module AsposeCellsCloud
         self.operate_type = attributes[:'OperateType']
       end
 
-      if attributes.has_key?(:'Title')
-        self.title = attributes[:'Title']
+      if attributes.has_key?(:'Name')
+        self.name = attributes[:'Name']
       end
 
-      if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
+      if attributes.has_key?(:'SheetType')
+        self.sheet_type = attributes[:'SheetType']
       end
 
-      if attributes.has_key?(:'CategoryData')
-        self.category_data = attributes[:'CategoryData']
+      if attributes.has_key?(:'NewName')
+        self.new_name = attributes[:'NewName']
       end
 
-      if attributes.has_key?(:'UpperLeftRow')
-        self.upper_left_row = attributes[:'UpperLeftRow']
-      end
-
-      if attributes.has_key?(:'LowerRightColumn')
-        self.lower_right_column = attributes[:'LowerRightColumn']
-      end
-
-      if attributes.has_key?(:'LowerRightRow')
-        self.lower_right_row = attributes[:'LowerRightRow']
-      end
-
-      if attributes.has_key?(:'IsAutoGetSerialName')
-        self.is_auto_get_serial_name = attributes[:'IsAutoGetSerialName']
-      end
-
-      if attributes.has_key?(:'ChartType')
-        self.chart_type = attributes[:'ChartType']
-      end
-
-      if attributes.has_key?(:'IsVertical')
-        self.is_vertical = attributes[:'IsVertical']
+      if attributes.has_key?(:'MovingRequest')
+        self.moving_request = attributes[:'MovingRequest']
       end
 
     end
@@ -147,15 +107,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           operate_type == o.operate_type &&
-          title == o.title &&
-          area == o.area &&
-          category_data == o.category_data &&
-          upper_left_row == o.upper_left_row &&
-          lower_right_column == o.lower_right_column &&
-          lower_right_row == o.lower_right_row &&
-          is_auto_get_serial_name == o.is_auto_get_serial_name &&
-          chart_type == o.chart_type &&
-          is_vertical == o.is_vertical
+          name == o.name &&
+          sheet_type == o.sheet_type &&
+          new_name == o.new_name &&
+          moving_request == o.moving_request
     end
 
     # @see the `==` method
@@ -167,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_type, title, area, category_data, upper_left_row, lower_right_column, lower_right_row, is_auto_get_serial_name, chart_type, is_vertical].hash
+      [operate_type, name, sheet_type, new_name, moving_request].hash
     end
 
     # Builds the object from hash
