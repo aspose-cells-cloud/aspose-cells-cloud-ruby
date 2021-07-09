@@ -24,51 +24,21 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class CellsDocumentProperty
-    attr_accessor :link
-
-    # Returns the name of the property.             
-    attr_accessor :name
-
-    # Gets or sets the value of the property.
-    attr_accessor :value
-
-    # Indicates whether this property is linked to content
-    attr_accessor :is_linked_to_content
-
-    # The linked content source.
-    attr_accessor :source
-
-    # Gets the data type of the property.             
-    attr_accessor :type
-
-    # Returns true if this property does not have a name in the OLE2 storage and a   unique name was generated only for the public API.             
-    attr_accessor :is_generated_name
+  class FilesResult
+    attr_accessor :files
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'name' => :'Name',
-        :'value' => :'Value',
-        :'is_linked_to_content' => :'IsLinkedToContent',
-        :'source' => :'Source',
-        :'type' => :'Type',
-        :'is_generated_name' => :'IsGeneratedName'
+        :'files' => :'Files'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'name' => :'String',
-        :'value' => :'String',
-        :'is_linked_to_content' => :'String',
-        :'source' => :'String',
-        :'type' => :'String',
-        :'is_generated_name' => :'String'
+        :'files' => :'Array<FileInfo>'
       }
     end
 
@@ -80,32 +50,10 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
-      end
-
-      if attributes.has_key?(:'IsLinkedToContent')
-        self.is_linked_to_content = attributes[:'IsLinkedToContent']
-      end
-
-      if attributes.has_key?(:'Source')
-        self.source = attributes[:'Source']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'IsGeneratedName')
-        self.is_generated_name = attributes[:'IsGeneratedName']
+      if attributes.has_key?(:'Files')
+        if (value = attributes[:'Files']).is_a?(Array)
+          self.files = value
+        end
       end
 
     end
@@ -128,13 +76,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          name == o.name &&
-          value == o.value &&
-          is_linked_to_content == o.is_linked_to_content &&
-          source == o.source &&
-          type == o.type &&
-          is_generated_name == o.is_generated_name
+          files == o.files
     end
 
     # @see the `==` method
@@ -146,7 +88,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, name, value, is_linked_to_content, source, type, is_generated_name].hash
+      [files].hash
     end
 
     # Builds the object from hash

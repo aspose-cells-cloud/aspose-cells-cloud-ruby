@@ -53,7 +53,7 @@ module AsposeCellsCloud
         :'index' => :'Integer',
         :'is_hidden' => :'BOOLEAN',
         :'name' => :'String',
-        :'value' => :'Object'
+        :'value' => :'String'
       }
     end
 

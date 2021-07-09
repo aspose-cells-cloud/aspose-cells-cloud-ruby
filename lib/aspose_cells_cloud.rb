@@ -55,9 +55,11 @@ require 'aspose_cells_cloud/models/data_sorter'
 require 'aspose_cells_cloud/models/disc_usage'
 require 'aspose_cells_cloud/models/dynamic_filter'
 require 'aspose_cells_cloud/models/error_details'
+require 'aspose_cells_cloud/models/file_info'
 require 'aspose_cells_cloud/models/file_source'
 require 'aspose_cells_cloud/models/file_versions'
 require 'aspose_cells_cloud/models/files_list'
+require 'aspose_cells_cloud/models/files_result'
 require 'aspose_cells_cloud/models/files_upload_result'
 require 'aspose_cells_cloud/models/fill_format'
 require 'aspose_cells_cloud/models/filter_column'
@@ -278,6 +280,7 @@ require 'aspose_cells_cloud/models/title'
 
 # APIs
 require 'aspose_cells_cloud/api/cells_api'
+require 'aspose_cells_cloud/api/lite_cells_api'
 
 module AsposeCellsCloud
   class << self

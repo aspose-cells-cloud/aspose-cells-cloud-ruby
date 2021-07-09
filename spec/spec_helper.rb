@@ -22,6 +22,9 @@ require 'aspose_cells_cloud'
   $access_token
   $BOOK1 = "Book1.xlsx"
   $MYDOC = "myDocument.xlsx"
+  $DataSourceXlsx = "datasource.xlsx"
+  $AssemblyTestXlsx = "assemblytest.xlsx"
+  $needUnlockXlsx = "needUnlock.xlsx"
   $PivTestFile = "TestCase.xlsx"
   $TEMPFOLDER = "RubyTest"
   $SHEET1 = "Sheet1"
