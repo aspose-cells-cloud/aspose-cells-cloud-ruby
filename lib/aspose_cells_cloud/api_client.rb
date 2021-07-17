@@ -131,8 +131,8 @@ module AsposeCellsCloud
       if @config.access_token
         add_o_auth_token(req_opts)
       end
-
-      conn = Faraday.new url, {:params => query_params, :headers => header_params, :proxy => "http://127.0.0.1:8888"} do |f|
+      #, :proxy => "http://127.0.0.1:8888"
+      conn = Faraday.new url, {:params => query_params, :headers => header_params} do |f|
       f.request :multipart
       f.request :url_encoded
       f.adapter Faraday.default_adapter

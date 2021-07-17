@@ -34,8 +34,8 @@ describe 'LiteCellsApi' do
       name =$AssemblyTestXlsx 
       files[name] = ::File.open(File.expand_path("data/"+name),"r")
      
-      result = @instance.post_search(files ,'123456' )
-
+      result = @instance.post_search(files ,'1' )
+      
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
       end
   end

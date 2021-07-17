@@ -593,7 +593,7 @@ module AsposeCellsCloud
     # @option opts [String] :sheetname 
     # @option opts [String] :path 
     # @option opts [String] :storage_name 
-    # @return [File]
+    # @return [Array<TextItem>]
     def post_search(file, text, opts = {})
       data, _status_code, _headers = post_search_with_http_info(file, text, opts)
       return data
@@ -608,7 +608,7 @@ module AsposeCellsCloud
     # @option opts [String] :sheetname 
     # @option opts [String] :path 
     # @option opts [String] :storage_name 
-    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
+    # @return [Array<(Array<TextItem>, Fixnum, Hash)>] Array<TextItem> data, response status code and response headers
     def post_search_with_http_info(file, text, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LiteCellsApi.post_search ..."
@@ -657,7 +657,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'File')
+        :return_type => 'Array<TextItem>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: LiteCellsApi#post_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
