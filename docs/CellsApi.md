@@ -155,6 +155,7 @@ Method | HTTP request | Description
 [**cells_put_insert_worksheet_columns**](CellsApi.md#cells_put_insert_worksheet_columns) | **PUT** /cells/{name}/worksheets/{sheetName}/cells/columns/{columnIndex} | Insert worksheet columns.
 [**cells_put_insert_worksheet_row**](CellsApi.md#cells_put_insert_worksheet_row) | **PUT** /cells/{name}/worksheets/{sheetName}/cells/rows/{rowIndex} | Insert new worksheet row.
 [**cells_put_insert_worksheet_rows**](CellsApi.md#cells_put_insert_worksheet_rows) | **PUT** /cells/{name}/worksheets/{sheetName}/cells/rows | Insert several new worksheet rows.
+[**cells_ranges_delete_worksheet_cells_range**](CellsApi.md#cells_ranges_delete_worksheet_cells_range) | **DELETE** /cells/{name}/worksheets/{sheetName}/ranges | Delete range in the worksheet
 [**cells_ranges_get_worksheet_cells_range_value**](CellsApi.md#cells_ranges_get_worksheet_cells_range_value) | **GET** /cells/{name}/worksheets/{sheetName}/ranges/value | Get cells list in a range by range name or row column indexes  
 [**cells_ranges_post_worksheet_cells_range_column_width**](CellsApi.md#cells_ranges_post_worksheet_cells_range_column_width) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/columnWidth | Set column width of range
 [**cells_ranges_post_worksheet_cells_range_merge**](CellsApi.md#cells_ranges_post_worksheet_cells_range_merge) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/merge | Combines a range of cells into a single cell.              
@@ -165,6 +166,7 @@ Method | HTTP request | Description
 [**cells_ranges_post_worksheet_cells_range_unmerge**](CellsApi.md#cells_ranges_post_worksheet_cells_range_unmerge) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/unmerge | Unmerges merged cells of this range.             
 [**cells_ranges_post_worksheet_cells_range_value**](CellsApi.md#cells_ranges_post_worksheet_cells_range_value) | **POST** /cells/{name}/worksheets/{sheetName}/ranges/value | Puts a value into the range, if appropriate the value will be converted to other data type and cell&#39;s number format will be reset.             
 [**cells_ranges_post_worksheet_cells_ranges**](CellsApi.md#cells_ranges_post_worksheet_cells_ranges) | **POST** /cells/{name}/worksheets/{sheetName}/ranges | copy range in the worksheet
+[**cells_ranges_put_worksheet_cells_range**](CellsApi.md#cells_ranges_put_worksheet_cells_range) | **PUT** /cells/{name}/worksheets/{sheetName}/ranges | Insert range in the worksheet
 [**cells_save_as_post_document_save_as**](CellsApi.md#cells_save_as_post_document_save_as) | **POST** /cells/{name}/SaveAs | Convert document and save result to storage.
 [**cells_shapes_delete_worksheet_shape**](CellsApi.md#cells_shapes_delete_worksheet_shape) | **DELETE** /cells/{name}/worksheets/{sheetName}/shapes/{shapeindex} | Delete a shape in worksheet
 [**cells_shapes_delete_worksheet_shapes**](CellsApi.md#cells_shapes_delete_worksheet_shapes) | **DELETE** /cells/{name}/worksheets/{sheetName}/shapes | delete all shapes in worksheet
@@ -192,6 +194,7 @@ Method | HTTP request | Description
 [**cells_workbook_get_workbook_names**](CellsApi.md#cells_workbook_get_workbook_names) | **GET** /cells/{name}/names | Read workbook&#39;s names.
 [**cells_workbook_get_workbook_settings**](CellsApi.md#cells_workbook_get_workbook_settings) | **GET** /cells/{name}/settings | Get Workbook Settings DTO
 [**cells_workbook_get_workbook_text_items**](CellsApi.md#cells_workbook_get_workbook_text_items) | **GET** /cells/{name}/textItems | Read workbook&#39;s text items.
+[**cells_workbook_post_autofit_workbook_columns**](CellsApi.md#cells_workbook_post_autofit_workbook_columns) | **POST** /cells/{name}/autofitcolumns | Autofit workbook columns.
 [**cells_workbook_post_autofit_workbook_rows**](CellsApi.md#cells_workbook_post_autofit_workbook_rows) | **POST** /cells/{name}/autofitrows | Autofit workbook rows.
 [**cells_workbook_post_encrypt_document**](CellsApi.md#cells_workbook_post_encrypt_document) | **POST** /cells/{name}/encryption | Encript document.
 [**cells_workbook_post_import_data**](CellsApi.md#cells_workbook_post_import_data) | **POST** /cells/{name}/importdata | 
@@ -2773,7 +2776,7 @@ No authorization required
 
 
 # **cells_delete_worksheet_columns**
-> ColumnsResponse cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, opts)
+> CellsCloudResponse cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, opts)
 
 Delete worksheet columns.
 
@@ -2822,7 +2825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ColumnsResponse**](ColumnsResponse.md)
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -8153,7 +8156,7 @@ No authorization required
 
 
 # **cells_post_set_worksheet_column_width**
-> ColumnResponse cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, opts)
+> CellsCloudResponse cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, opts)
 
 Set worksheet column width.
 
@@ -8199,7 +8202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ColumnResponse**](ColumnResponse.md)
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -8577,7 +8580,7 @@ No authorization required
 
 
 # **cells_post_update_worksheet_row**
-> RowResponse cells_post_update_worksheet_row(name, sheet_name, row_index, opts)
+> CellsCloudResponse cells_post_update_worksheet_row(name, sheet_name, row_index, opts)
 
 Update worksheet row.
 
@@ -8622,7 +8625,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RowResponse**](RowResponse.md)
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -9097,7 +9100,7 @@ No authorization required
 
 
 # **cells_put_insert_worksheet_columns**
-> ColumnsResponse cells_put_insert_worksheet_columns(name, sheet_name, column_index, columns, opts)
+> CellsCloudResponse cells_put_insert_worksheet_columns(name, sheet_name, column_index, columns, opts)
 
 Insert worksheet columns.
 
@@ -9145,7 +9148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ColumnsResponse**](ColumnsResponse.md)
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -9159,7 +9162,7 @@ No authorization required
 
 
 # **cells_put_insert_worksheet_row**
-> RowResponse cells_put_insert_worksheet_row(name, sheet_name, row_index, opts)
+> CellsCloudResponse cells_put_insert_worksheet_row(name, sheet_name, row_index, opts)
 
 Insert new worksheet row.
 
@@ -9202,7 +9205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RowResponse**](RowResponse.md)
+[**CellsCloudResponse**](CellsCloudResponse.md)
 
 ### Authorization
 
@@ -9259,6 +9262,66 @@ Name | Type | Description  | Notes
  **total_rows** | **Integer**| Number of rows to be operated. | [optional] [default to 1]
  **update_reference** | **BOOLEAN**| Indicates if update references in other worksheets. | [optional] [default to true]
  **folder** | **String**| The document folder. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_ranges_delete_worksheet_cells_range**
+> CellsCloudResponse cells_ranges_delete_worksheet_cells_range(name, sheet_name, range, shift, opts)
+
+Delete range in the worksheet
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | workbook name
+
+sheet_name = 'sheet_name_example' # String | worksheet name
+
+range = 'range_example' # String | range
+
+shift = 'shift_example' # String | Represent the shift options when deleting a range of cells. (Left,Up) 
+
+opts = { 
+  folder: 'folder_example', # String | Workbook folder.
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  #Delete range in the worksheet
+  result = api_instance.cells_ranges_delete_worksheet_cells_range(name, sheet_name, range, shift, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_ranges_delete_worksheet_cells_range: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| workbook name | 
+ **sheet_name** | **String**| worksheet name | 
+ **range** | **String**| range | 
+ **shift** | **String**| Represent the shift options when deleting a range of cells. (Left,Up)  | 
+ **folder** | **String**| Workbook folder. | [optional] 
  **storage_name** | **String**| storage name. | [optional] 
 
 ### Return type
@@ -9845,6 +9908,66 @@ Name | Type | Description  | Notes
  **name** | **String**| workbook name | 
  **sheet_name** | **String**| worksheet name | 
  **range_operate** | [**RangeCopyRequest**](RangeCopyRequest.md)| copydata,copystyle,copyto,copyvalue | [optional] 
+ **folder** | **String**| Workbook folder. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **cells_ranges_put_worksheet_cells_range**
+> CellsCloudResponse cells_ranges_put_worksheet_cells_range(name, sheet_name, range, shift, opts)
+
+Insert range in the worksheet
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | workbook name
+
+sheet_name = 'sheet_name_example' # String | worksheet name
+
+range = 'range_example' # String | range
+
+shift = 'shift_example' # String | Represent the shift options when deleting a range of cells. (Right,Down) 
+
+opts = { 
+  folder: 'folder_example', # String | Workbook folder.
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  #Insert range in the worksheet
+  result = api_instance.cells_ranges_put_worksheet_cells_range(name, sheet_name, range, shift, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_ranges_put_worksheet_cells_range: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| workbook name | 
+ **sheet_name** | **String**| worksheet name | 
+ **range** | **String**| range | 
+ **shift** | **String**| Represent the shift options when deleting a range of cells. (Right,Down)  | 
  **folder** | **String**| Workbook folder. | [optional] 
  **storage_name** | **String**| storage name. | [optional] 
 
@@ -11347,6 +11470,63 @@ No authorization required
 
 
 
+# **cells_workbook_post_autofit_workbook_columns**
+> CellsCloudResponse cells_workbook_post_autofit_workbook_columns(name, opts)
+
+Autofit workbook columns.
+
+### Example
+```ruby
+# load the gem
+require 'aspose_cells_cloud'
+
+api_instance = AsposeCellsCloud::CellsApi.new
+
+name = 'name_example' # String | Document name.
+
+opts = { 
+  auto_fitter_options: AsposeCellsCloud::AutoFitterOptions.new, # AutoFitterOptions | Auto Fitter Options.
+  start_column: 56, # Integer | Start column.
+  end_column: 56, # Integer | End column.
+  folder: 'folder_example', # String | Document's folder.
+  storage_name: 'storage_name_example' # String | storage name.
+}
+
+begin
+  #Autofit workbook columns.
+  result = api_instance.cells_workbook_post_autofit_workbook_columns(name, opts)
+  p result
+rescue AsposeCellsCloud::ApiError => e
+  puts "Exception when calling CellsApi->cells_workbook_post_autofit_workbook_columns: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**| Document name. | 
+ **auto_fitter_options** | [**AutoFitterOptions**](AutoFitterOptions.md)| Auto Fitter Options. | [optional] 
+ **start_column** | **Integer**| Start column. | [optional] 
+ **end_column** | **Integer**| End column. | [optional] 
+ **folder** | **String**| Document&#39;s folder. | [optional] 
+ **storage_name** | **String**| storage name. | [optional] 
+
+### Return type
+
+[**CellsCloudResponse**](CellsCloudResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **cells_workbook_post_autofit_workbook_rows**
 > CellsCloudResponse cells_workbook_post_autofit_workbook_rows(name, opts)
 
@@ -11957,7 +12137,7 @@ No authorization required
 
 
 # **cells_workbook_put_convert_workbook**
-> File cells_workbook_put_convert_workbook(workbook, opts)
+> File cells_workbook_put_convert_workbook(file, opts)
 
 Convert workbook from request content to some format.
 
@@ -11968,7 +12148,7 @@ require 'aspose_cells_cloud'
 
 api_instance = AsposeCellsCloud::CellsApi.new
 
-workbook = File.new('/path/to/file.txt') # File | 
+file = File.new('/path/to/file.txt') # File | 
 
 opts = { 
   format: 'format_example', # String | The format to convert.
@@ -11978,7 +12158,7 @@ opts = {
 
 begin
   #Convert workbook from request content to some format.
-  result = api_instance.cells_workbook_put_convert_workbook(workbook, opts)
+  result = api_instance.cells_workbook_put_convert_workbook(file, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
   puts "Exception when calling CellsApi->cells_workbook_put_convert_workbook: #{e}"
@@ -11989,7 +12169,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workbook** | **File**|  | 
+ **file** | **File**|  | 
  **format** | **String**| The format to convert. | [optional] 
  **password** | **String**| The workbook password. | [optional] 
  **out_path** | **String**| Path to save result | [optional] 
@@ -12004,7 +12184,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 
@@ -15044,9 +15224,9 @@ api_instance = AsposeCellsCloud::CellsApi.new
 
 grant_type = 'grant_type_example' # String | Grant Type
 
-client_id = 'client_id_example' # String | Client Id
+client_id = 'client_id_example' # String | App SID
 
-client_secret = 'client_secret_example' # String | Client Secret
+client_secret = 'client_secret_example' # String | App Key
 
 
 begin
@@ -15063,8 +15243,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **grant_type** | **String**| Grant Type | 
- **client_id** | **String**| Client Id | 
- **client_secret** | **String**| Client Secret | 
+ **client_id** | **String**| App SID | 
+ **client_secret** | **String**| App Key | 
 
 ### Return type
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **operate_type** | **String** |  | [optional] 
-**string** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 **area** | **String** |  | [optional] 
 **category_data** | **String** |  | [optional] 
 **upper_left_row** | **Integer** |  | [optional] 
