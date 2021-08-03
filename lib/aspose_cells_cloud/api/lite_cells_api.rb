@@ -591,8 +591,6 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :password 
     # @option opts [String] :sheetname 
-    # @option opts [String] :path 
-    # @option opts [String] :storage_name 
     # @return [Array<TextItem>]
     def post_search(file, text, opts = {})
       data, _status_code, _headers = post_search_with_http_info(file, text, opts)
@@ -605,9 +603,7 @@ module AsposeCellsCloud
     # @param text 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :password 
-    # @option opts [String] :sheetname 
-    # @option opts [String] :path 
-    # @option opts [String] :storage_name 
+    # @option opts [String] :sheetname  
     # @return [Array<(Array<TextItem>, Fixnum, Hash)>] Array<TextItem> data, response status code and response headers
     def post_search_with_http_info(file, text, opts = {})
       if @api_client.config.debugging
@@ -630,8 +626,6 @@ module AsposeCellsCloud
       query_params[:'text'] = text
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'sheetname'] = opts[:'sheetname'] if !opts[:'sheetname'].nil?
-      query_params[:'path'] = opts[:'path'] if !opts[:'path'].nil?
-      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -672,8 +666,6 @@ module AsposeCellsCloud
     # @option opts [String] :password 
     # @option opts [Integer] :from 
     # @option opts [Integer] :to 
-    # @option opts [String] :path 
-    # @option opts [String] :storage_name 
     # @return [FilesResult]
     def post_split(file, format, opts = {})
       data, _status_code, _headers = post_split_with_http_info(file, format, opts)
@@ -713,8 +705,6 @@ module AsposeCellsCloud
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'from'] = opts[:'from'] if !opts[:'from'].nil?
       query_params[:'to'] = opts[:'to'] if !opts[:'to'].nil?
-      query_params[:'path'] = opts[:'path'] if !opts[:'path'].nil?
-      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
