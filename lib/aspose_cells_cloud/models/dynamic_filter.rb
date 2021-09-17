@@ -45,8 +45,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'dynamic_filter_type' => :'String',
-        :'max_value' => :'Object',
-        :'value' => :'Object'
+        :'max_value' => :'Integer',
+        :'value' => :'Integer'
       }
     end
 

@@ -4898,9 +4898,10 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param listobjectindex list object index.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :format export format.
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [ListObjectResponse]
+    # @return [File]
     def cells_list_objects_get_worksheet_list_object(name, sheet_name, listobjectindex, opts = {})
       data, _status_code, _headers = cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts)
       return data
@@ -4912,9 +4913,10 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param listobjectindex list object index.
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :format export format.
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(ListObjectResponse, Fixnum, Hash)>] ListObjectResponse data, response status code and response headers
+    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_get_worksheet_list_object ..."
@@ -4937,6 +4939,7 @@ module AsposeCellsCloud
 
       # query parameters
       query_params = {}
+      query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
@@ -4960,7 +4963,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListObjectResponse')
+        :return_type => 'File')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_list_objects_get_worksheet_list_object\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

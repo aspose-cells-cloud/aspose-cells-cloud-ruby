@@ -39,5 +39,182 @@ describe 'LiteCellsApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
       end
   end
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"chart","tiff")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"chart","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end  
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"picture","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"shape","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"sheet","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"sheet","pdf")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"sheet","ods")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"workbook","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"workbook","ods")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"workbook","pdf")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"listobject","png")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"listobject","pdf")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
+
+  describe 'lite_cells_unit export object test' do
+    it "should work" do
+      files = {}      
+      name = $DataSourceXlsx
+      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
+      name =$AssemblyTestXlsx 
+      files[name] = ::File.open(File.expand_path("data/"+name),"r")
+     
+      result = @instance.post_export(files  ,"listobject","xlsx")
+
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      end
+  end
 end
 

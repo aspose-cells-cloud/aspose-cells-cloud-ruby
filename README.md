@@ -21,11 +21,11 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 - Convert worksheets to PDF, XPS & SVG formats.
 - [Convert Excel files to popular formats](https://docs.aspose.cloud/cells/convert-excel-workbook-to-different-file-formats/).
 
-## Feature & Enhancements in Version 21.7
+## Feature & Enhancements in Version 21.8
 
-- Fix search API.
-- Fix split API.
-- Fix update metadata API.
+- Improvement for getting list object Api.
+- Add import Api.
+
 
 ## Read & Write Spreadsheet Formats
 

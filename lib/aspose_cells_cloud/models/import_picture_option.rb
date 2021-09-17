@@ -24,32 +24,63 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class ConditionalFormattingValue
-    # Get or set the Greater Than Or Equal flag. Use only for icon sets, determines    whether this threshold value uses the greater than or equal to operator.    'false' indicates 'greater than' is used instead of 'greater than or equal    to'.  Default value is true.             
-    attr_accessor :is_gte
+  class ImportPictureOption
+    attr_accessor :source
 
-    # Get or set the type of this conditional formatting value object.  Setting      the type to FormatConditionValueType.Min or FormatConditionValueType.Max      will auto set \"Value\" to null.  
-    attr_accessor :type
+    attr_accessor :import_data_type
 
-    # Get or set the value of this conditional formatting value object.  It should     be used in conjunction with Type.
-    attr_accessor :value
+    attr_accessor :destination_worksheet
+
+    attr_accessor :is_insert
+
+    # Upper Left Row.
+    attr_accessor :upper_left_row
+
+    # Upper Left Column.
+    attr_accessor :upper_left_column
+
+    # Lower Right Row.
+    attr_accessor :lower_right_row
+
+    # Lower Right Column.
+    attr_accessor :lower_right_column
+
+    # Filename.
+    attr_accessor :filename
+
+    # data : base64  string.
+    attr_accessor :data
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_gte' => :'IsGTE',
-        :'type' => :'Type',
-        :'value' => :'Value'
+        :'source' => :'Source',
+        :'import_data_type' => :'ImportDataType',
+        :'destination_worksheet' => :'DestinationWorksheet',
+        :'is_insert' => :'IsInsert',
+        :'upper_left_row' => :'UpperLeftRow',
+        :'upper_left_column' => :'UpperLeftColumn',
+        :'lower_right_row' => :'LowerRightRow',
+        :'lower_right_column' => :'LowerRightColumn',
+        :'filename' => :'Filename',
+        :'data' => :'Data'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_gte' => :'BOOLEAN',
-        :'type' => :'String',
-        :'value' => :'String'
+        :'source' => :'FileSource',
+        :'import_data_type' => :'String',
+        :'destination_worksheet' => :'String',
+        :'is_insert' => :'BOOLEAN',
+        :'upper_left_row' => :'Integer',
+        :'upper_left_column' => :'Integer',
+        :'lower_right_row' => :'Integer',
+        :'lower_right_column' => :'Integer',
+        :'filename' => :'String',
+        :'data' => :'String'
       }
     end
 
@@ -61,16 +92,44 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IsGTE')
-        self.is_gte = attributes[:'IsGTE']
+      if attributes.has_key?(:'Source')
+        self.source = attributes[:'Source']
       end
 
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+      if attributes.has_key?(:'ImportDataType')
+        self.import_data_type = attributes[:'ImportDataType']
       end
 
-      if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
+      if attributes.has_key?(:'DestinationWorksheet')
+        self.destination_worksheet = attributes[:'DestinationWorksheet']
+      end
+
+      if attributes.has_key?(:'IsInsert')
+        self.is_insert = attributes[:'IsInsert']
+      end
+
+      if attributes.has_key?(:'UpperLeftRow')
+        self.upper_left_row = attributes[:'UpperLeftRow']
+      end
+
+      if attributes.has_key?(:'UpperLeftColumn')
+        self.upper_left_column = attributes[:'UpperLeftColumn']
+      end
+
+      if attributes.has_key?(:'LowerRightRow')
+        self.lower_right_row = attributes[:'LowerRightRow']
+      end
+
+      if attributes.has_key?(:'LowerRightColumn')
+        self.lower_right_column = attributes[:'LowerRightColumn']
+      end
+
+      if attributes.has_key?(:'Filename')
+        self.filename = attributes[:'Filename']
+      end
+
+      if attributes.has_key?(:'Data')
+        self.data = attributes[:'Data']
       end
 
     end
@@ -93,9 +152,16 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_gte == o.is_gte &&
-          type == o.type &&
-          value == o.value
+          source == o.source &&
+          import_data_type == o.import_data_type &&
+          destination_worksheet == o.destination_worksheet &&
+          is_insert == o.is_insert &&
+          upper_left_row == o.upper_left_row &&
+          upper_left_column == o.upper_left_column &&
+          lower_right_row == o.lower_right_row &&
+          lower_right_column == o.lower_right_column &&
+          filename == o.filename &&
+          data == o.data
     end
 
     # @see the `==` method
@@ -107,7 +173,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_gte, type, value].hash
+      [source, import_data_type, destination_worksheet, is_insert, upper_left_row, upper_left_column, lower_right_row, lower_right_column, filename, data].hash
     end
 
     # Builds the object from hash

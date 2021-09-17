@@ -379,6 +379,80 @@ module AsposeCellsCloud
     # 
     # 
     # @param file File to upload
+    # @param import_data 
+    # @param [Hash] opts the optional parameters
+    # @return [FilesResult]
+    def post_import(file, import_data, opts = {})
+      data, _status_code, _headers = post_import_with_http_info(file, import_data, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param import_data 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
+    def post_import_with_http_info(file, import_data, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_import ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'file' is set
+      if @api_client.config.client_side_validation && file.nil?
+        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_import"
+      end
+      # verify the required parameter 'import_data' is set
+      if @api_client.config.client_side_validation && import_data.nil?
+        fail ArgumentError, "Missing the required parameter 'import_data' when calling LiteCellsApi.post_import"
+      end
+      # resource path
+      local_var_path = "/cells/import"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+
+      # form parameters
+      form_params = {}
+      file.each do |filename , context|
+        form_params[filename]  = context
+      end
+
+      # http body (model)
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      post_body = ""
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(import_data)
+      if post_body
+        form_params['documentproperties']  = post_body.to_json
+      end
+
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FilesResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LiteCellsApi#post_import\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param file File to upload
     # @param [Hash] opts the optional parameters
     # @option opts [String] :format  (default to xlsx)
     # @option opts [BOOLEAN] :merge_to_one_sheet  (default to false)

@@ -11,7 +11,7 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 require 'openssl'
 require 'bundler'
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+# OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 # load the gem
 require 'aspose_cells_cloud'
   $grant_type = 'client_credentials' # replace NULL with a proper value

@@ -131,13 +131,13 @@ module AsposeCellsCloud
       if @config.access_token
         add_o_auth_token(req_opts)
       end
-      #, :proxy => "http://127.0.0.1:8888"
+
       conn = Faraday.new url, {:params => query_params, :headers => header_params} do |f|
       f.request :multipart
       f.request :url_encoded
       f.adapter Faraday.default_adapter
       end
-      
+
       if req_opts[:body] == {}
         req_opts[:body] = nil
       end
@@ -308,6 +308,7 @@ module AsposeCellsCloud
           case value
           when ::File
             data[key] = Faraday::UploadIO.new(value.path, "application/octet-stream", key)   #MimeMagic::by_magic(value).to_s
+            # data[key] = Faraday::UploadIO.new(value.path, MimeMagic.by_magic(value).to_s, key)
           when ::Array, nil
             # let typhoeus handle File, Array and nil parameters
             data[key] = value

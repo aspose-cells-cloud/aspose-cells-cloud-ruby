@@ -42,7 +42,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'filter_operator_type' => :'String',
-        :'criteria' => :'Object'
+        :'criteria' => :'String'
       }
     end
 

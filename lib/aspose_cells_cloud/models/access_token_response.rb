@@ -25,11 +25,11 @@ require 'date'
 module AsposeCellsCloud
 
   class AccessTokenResponse
-    attr_accessor :_expires
+    attr_accessor :expires
 
     attr_accessor :access_token
 
-    attr_accessor :_issued
+    attr_accessor :issued
 
     attr_accessor :client_refresh_token_life_time_in_minutes
 
@@ -45,9 +45,9 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_expires' => :'.expires',
+        :'expires' => :'expires',
         :'access_token' => :'access_token',
-        :'_issued' => :'.issued',
+        :'issued' => :'issued',
         :'client_refresh_token_life_time_in_minutes' => :'clientRefreshTokenLifeTimeInMinutes',
         :'expires_in' => :'expires_in',
         :'token_type' => :'token_type',
@@ -59,9 +59,9 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'_expires' => :'String',
+        :'expires' => :'String',
         :'access_token' => :'String',
-        :'_issued' => :'String',
+        :'issued' => :'String',
         :'client_refresh_token_life_time_in_minutes' => :'String',
         :'expires_in' => :'Integer',
         :'token_type' => :'String',
@@ -78,16 +78,16 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'.expires')
-        self._expires = attributes[:'.expires']
+      if attributes.has_key?(:'expires')
+        self.expires = attributes[:'expires']
       end
 
       if attributes.has_key?(:'access_token')
         self.access_token = attributes[:'access_token']
       end
 
-      if attributes.has_key?(:'.issued')
-        self._issued = attributes[:'.issued']
+      if attributes.has_key?(:'issued')
+        self.issued = attributes[:'issued']
       end
 
       if attributes.has_key?(:'clientRefreshTokenLifeTimeInMinutes')
@@ -130,9 +130,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          _expires == o._expires &&
+          expires == o.expires &&
           access_token == o.access_token &&
-          _issued == o._issued &&
+          issued == o.issued &&
           client_refresh_token_life_time_in_minutes == o.client_refresh_token_life_time_in_minutes &&
           expires_in == o.expires_in &&
           token_type == o.token_type &&
@@ -149,7 +149,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [_expires, access_token, _issued, client_refresh_token_life_time_in_minutes, expires_in, token_type, client_id, refresh_token].hash
+      [expires, access_token, issued, client_refresh_token_life_time_in_minutes, expires_in, token_type, client_id, refresh_token].hash
     end
 
     # Builds the object from hash
