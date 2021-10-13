@@ -1825,7 +1825,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [ChartsResponse]
+    # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts)
       return data
@@ -1839,7 +1839,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_delete_worksheet_delete_chart ..."
@@ -1885,7 +1885,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ChartsResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_delete_worksheet_delete_chart\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2275,7 +2275,7 @@ module AsposeCellsCloud
     # @option opts [Legend] :legend 
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [LegendResponse]
+    # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
       return data
@@ -2290,7 +2290,7 @@ module AsposeCellsCloud
     # @option opts [Legend] :legend 
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(LegendResponse, Fixnum, Hash)>] LegendResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_worksheet_chart_legend ..."
@@ -2336,7 +2336,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'LegendResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_worksheet_chart_legend\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2352,7 +2352,7 @@ module AsposeCellsCloud
     # @option opts [Title] :title Chart title
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [TitleResponse]
+    # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
@@ -2367,7 +2367,7 @@ module AsposeCellsCloud
     # @option opts [Title] :title Chart title
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_worksheet_chart_title ..."
@@ -2413,7 +2413,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TitleResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_worksheet_chart_title\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2441,7 +2441,7 @@ module AsposeCellsCloud
     # @option opts [String] :data_labels_position  (default to Above)
     # @option opts [String] :pivot_table_sheet 
     # @option opts [String] :pivot_table_name 
-    # @return [ChartsResponse]
+    # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts)
       return data
@@ -2468,7 +2468,7 @@ module AsposeCellsCloud
     # @option opts [String] :data_labels_position 
     # @option opts [String] :pivot_table_sheet 
     # @option opts [String] :pivot_table_name 
-    # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_put_worksheet_add_chart ..."
@@ -2528,7 +2528,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ChartsResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_put_worksheet_add_chart\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -2619,7 +2619,7 @@ module AsposeCellsCloud
     # @option opts [Title] :title Chart title.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [TitleResponse]
+    # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
       data, _status_code, _headers = cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
@@ -2634,7 +2634,7 @@ module AsposeCellsCloud
     # @option opts [Title] :title Chart title.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_put_worksheet_chart_title ..."
@@ -2680,7 +2680,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'TitleResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_put_worksheet_chart_title\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -4576,7 +4576,7 @@ module AsposeCellsCloud
     # @option opts [Hyperlink] :hyperlink Hyperlink object
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [HyperlinkResponse]
+    # @return [CellsCloudResponse]
     def cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
       data, _status_code, _headers = cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
       return data
@@ -4591,7 +4591,7 @@ module AsposeCellsCloud
     # @option opts [Hyperlink] :hyperlink Hyperlink object
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_post_worksheet_hyperlink ..."
@@ -4637,7 +4637,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'HyperlinkResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_hypelinks_post_worksheet_hyperlink\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -4656,7 +4656,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [HyperlinkResponse]
+    # @return [CellsCloudResponse]
     def cells_hypelinks_put_worksheet_hyperlink(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
       data, _status_code, _headers = cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts)
       return data
@@ -4674,7 +4674,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_put_worksheet_hyperlink ..."
@@ -4741,7 +4741,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'HyperlinkResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_hypelinks_put_worksheet_hyperlink\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -5365,7 +5365,7 @@ module AsposeCellsCloud
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [ListObjectResponse]
+    # @return [CellsCloudResponse]
     def cells_list_objects_put_worksheet_list_object(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
       data, _status_code, _headers = cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts)
       return data
@@ -5384,7 +5384,7 @@ module AsposeCellsCloud
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(ListObjectResponse, Fixnum, Hash)>] ListObjectResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_put_worksheet_list_object ..."
@@ -5447,7 +5447,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ListObjectResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_list_objects_put_worksheet_list_object\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -5836,7 +5836,7 @@ module AsposeCellsCloud
     # @option opts [String] :image_file Image filename
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [OleObjectResponse]
+    # @return [CellsCloudResponse]
     def cells_ole_objects_put_worksheet_ole_object(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts)
       return data
@@ -5856,7 +5856,7 @@ module AsposeCellsCloud
     # @option opts [String] :image_file Image filename
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(OleObjectResponse, Fixnum, Hash)>] OleObjectResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_put_worksheet_ole_object ..."
@@ -5904,7 +5904,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'OleObjectResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_ole_objects_put_worksheet_ole_object\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -7488,7 +7488,7 @@ module AsposeCellsCloud
     # @option opts [Picture] :picture Picture object
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [PictureResponse]
+    # @return [CellsCloudResponse]
     def cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, opts = {})
       data, _status_code, _headers = cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
       return data
@@ -7503,7 +7503,7 @@ module AsposeCellsCloud
     # @option opts [Picture] :picture Picture object
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(PictureResponse, Fixnum, Hash)>] PictureResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_post_worksheet_picture ..."
@@ -7549,7 +7549,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PictureResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_pictures_post_worksheet_picture\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -7569,7 +7569,7 @@ module AsposeCellsCloud
     # @option opts [String] :picture_path The picture path, if not provided the picture data is inspected in the request body.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [PicturesResponse]
+    # @return [CellsCloudResponse]
     def cells_pictures_put_worksheet_add_picture(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts)
       return data
@@ -7588,7 +7588,7 @@ module AsposeCellsCloud
     # @option opts [String] :picture_path The picture path, if not provided the picture data is inspected in the request body.
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(PicturesResponse, Fixnum, Hash)>] PicturesResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_put_worksheet_add_picture ..."
@@ -7635,7 +7635,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PicturesResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_pictures_put_worksheet_add_picture\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -9237,7 +9237,7 @@ module AsposeCellsCloud
     # @option opts [String] :dest_cell_name The cell in the upper-left corner of the PivotTable report&#39;s destination range.
     # @option opts [String] :table_name The name of the new PivotTable report.
     # @option opts [BOOLEAN] :use_same_source Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
-    # @return [PivotTableResponse]
+    # @return [CellsCloudResponse]
     def cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_pivot_tables_put_worksheet_pivot_table_with_http_info(name, sheet_name, opts)
       return data
@@ -9255,7 +9255,7 @@ module AsposeCellsCloud
     # @option opts [String] :dest_cell_name The cell in the upper-left corner of the PivotTable report&#39;s destination range.
     # @option opts [String] :table_name The name of the new PivotTable report.
     # @option opts [BOOLEAN] :use_same_source Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
-    # @return [Array<(PivotTableResponse, Fixnum, Hash)>] PivotTableResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_worksheet_pivot_table_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_put_worksheet_pivot_table ..."
@@ -9301,7 +9301,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'PivotTableResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_pivot_tables_put_worksheet_pivot_table\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -11590,7 +11590,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [CellsDocumentPropertiesResponse]
+    # @return [CellsCloudResponse]
     def cells_properties_delete_document_properties(name, opts = {})
       data, _status_code, _headers = cells_properties_delete_document_properties_with_http_info(name, opts)
       return data
@@ -11602,7 +11602,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_delete_document_properties_with_http_info(name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_delete_document_properties ..."
@@ -11640,7 +11640,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsDocumentPropertiesResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_properties_delete_document_properties\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -11654,7 +11654,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [CellsDocumentPropertiesResponse]
+    # @return [CellsCloudResponse]
     def cells_properties_delete_document_property(name, property_name, opts = {})
       data, _status_code, _headers = cells_properties_delete_document_property_with_http_info(name, property_name, opts)
       return data
@@ -11667,7 +11667,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_delete_document_property_with_http_info(name, property_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_delete_document_property ..."
@@ -11709,7 +11709,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsDocumentPropertiesResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_properties_delete_document_property\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -11856,7 +11856,7 @@ module AsposeCellsCloud
     # @option opts [CellsDocumentProperty] :property with new property value.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [CellsDocumentPropertyResponse]
+    # @return [CellsCloudResponse]
     def cells_properties_put_document_property(name, property_name, opts = {})
       data, _status_code, _headers = cells_properties_put_document_property_with_http_info(name, property_name, opts)
       return data
@@ -11870,7 +11870,7 @@ module AsposeCellsCloud
     # @option opts [CellsDocumentProperty] :property with new property value.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(CellsDocumentPropertyResponse, Fixnum, Hash)>] CellsDocumentPropertyResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_put_document_property_with_http_info(name, property_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_put_document_property ..."
@@ -11912,7 +11912,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsDocumentPropertyResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_properties_put_document_property\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -12904,7 +12904,7 @@ module AsposeCellsCloud
 
       # query parameters
       query_params = {}
-      query_params[:'Value'] = value
+      query_params[:'value'] = value
       query_params[:'isConverted'] = opts[:'is_converted'] if !opts[:'is_converted'].nil?
       query_params[:'setStyle'] = opts[:'set_style'] if !opts[:'set_style'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
@@ -13545,7 +13545,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :height Represents the width of Spinner, in unit of pixel.
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [ShapeResponse]
+    # @return [CellsCloudResponse]
     def cells_shapes_put_worksheet_shape(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts)
       return data
@@ -13566,7 +13566,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :height Represents the width of Spinner, in unit of pixel.
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(ShapeResponse, Fixnum, Hash)>] ShapeResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_put_worksheet_shape ..."
@@ -13585,7 +13585,7 @@ module AsposeCellsCloud
 
       # query parameters
       query_params = {}
-      query_params[:'DrawingType'] = opts[:'drawing_type'] if !opts[:'drawing_type'].nil?
+      query_params[:'drawingType'] = opts[:'drawing_type'] if !opts[:'drawing_type'].nil?
       query_params[:'upperLeftRow'] = opts[:'upper_left_row'] if !opts[:'upper_left_row'].nil?
       query_params[:'upperLeftColumn'] = opts[:'upper_left_column'] if !opts[:'upper_left_column'].nil?
       query_params[:'top'] = opts[:'top'] if !opts[:'top'].nil?
@@ -13615,7 +13615,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ShapeResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_shapes_put_worksheet_shape\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -16191,7 +16191,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [ValidationResponse]
+    # @return [CellsCloudResponse]
     def cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, opts = {})
       data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
       return data
@@ -16205,7 +16205,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_delete_worksheet_validation ..."
@@ -16251,7 +16251,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'ValidationResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_worksheet_validations_delete_worksheet_validation\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

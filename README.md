@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/21.7)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/21.9)
 
 
 # Ruby SDK for Spreadsheet Processing in the Cloud
@@ -21,10 +21,27 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 - Convert worksheets to PDF, XPS & SVG formats.
 - [Convert Excel files to popular formats](https://docs.aspose.cloud/cells/convert-excel-workbook-to-different-file-formats/).
 
-## Feature & Enhancements in Version 21.8
+## Feature & Enhancements in Version 21.9
 
-- Improvement for getting list object Api.
-- Add import Api.
+- Correct the return type of the following  REST APIs. 
+
+	Delete WorksheetDeleteChart
+	Post WorksheetChartLegend
+	Post WorksheetChartTitle
+	Put WorksheetAddChart
+	Put WorksheetChartTitle
+	Post WorksheetHyperlink
+	Put WorksheetHyperlink
+	Put WorksheetListObject
+	Put WorksheetOleObject
+	Post WorksheetPicture
+	Put WorksheetAddPicture
+	Put WorksheetPivotTable
+	Delete DocumentProperties
+	Delete DocumentProperty
+	Put DocumentProperty
+	Put WorksheetShape
+	Delete WorksheetValidation
 
 
 ## Read & Write Spreadsheet Formats
