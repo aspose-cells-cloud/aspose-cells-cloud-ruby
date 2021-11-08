@@ -840,4 +840,17 @@ describe 'CellsWorksheetsApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
+
+  describe 'cells_worksheets_delete_worksheets test' do
+    it "should work" do
+      name = $BOOK1
+      folder = $TEMPFOLDER
+      match_condition =  AsposeCellsCloud::MatchConditionRequest.new({:FullMatchConditions=>[$SHEET3,$SHEET5]}) 
+      result = @instance.upload_file( folder+"/"+name, ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_worksheets_delete_worksheets(name, match_condition, { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end

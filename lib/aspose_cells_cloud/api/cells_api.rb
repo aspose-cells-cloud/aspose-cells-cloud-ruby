@@ -17072,6 +17072,75 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Read worksheets info.
+    # 
+    # @param name 
+    # @param match_condition 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_worksheets_delete_worksheets(name, match_condition, opts = {})
+      data, _status_code, _headers = cells_worksheets_delete_worksheets_with_http_info(name, match_condition, opts)
+      return data
+    end
+
+    # Read worksheets info.
+    # 
+    # @param name 
+    # @param match_condition 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_worksheets_delete_worksheets_with_http_info(name, match_condition, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheets ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_worksheets_delete_worksheets"
+      end
+      # verify the required parameter 'match_condition' is set
+      if @api_client.config.client_side_validation && match_condition.nil?
+        fail ArgumentError, "Missing the required parameter 'match_condition' when calling CellsApi.cells_worksheets_delete_worksheets"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(match_condition)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_worksheets_delete_worksheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Read worksheets ranges info.
     # 
     # @param name Document name.
@@ -19976,6 +20045,63 @@ module AsposeCellsCloud
         :return_type => 'ObjectExist')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#object_exists\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param batch_convert_request 
+    # @param [Hash] opts the optional parameters
+    # @return [File]
+    def post_batch_convert(batch_convert_request, opts = {})
+      data, _status_code, _headers = post_batch_convert_with_http_info(batch_convert_request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param batch_convert_request 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
+    def post_batch_convert_with_http_info(batch_convert_request, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.post_batch_convert ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'batch_convert_request' is set
+      if @api_client.config.client_side_validation && batch_convert_request.nil?
+        fail ArgumentError, "Missing the required parameter 'batch_convert_request' when calling CellsApi.post_batch_convert"
+      end
+      # resource path
+      local_var_path = "/cells/batch/convert"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(batch_convert_request)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'File')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#post_batch_convert\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
