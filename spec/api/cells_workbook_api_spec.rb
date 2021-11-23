@@ -663,5 +663,16 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  describe 'cells_workbook_get_page_count test' do
+    it "should work" do
+      name = $BOOK1
+      folder = $TEMPFOLDER
+      
+      result = @instance.upload_file( folder+"/"+name, ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_get_page_count(name,  { :folder=>folder})
+      expect(result).to be  > 0
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end  
 end
