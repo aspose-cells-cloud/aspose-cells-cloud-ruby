@@ -31,12 +31,20 @@ module AsposeCellsCloud
     # Gets and sets the name of the column.
     attr_accessor :name
 
+    # Gets and sets the formula of the list column.
+    attr_accessor :formula
+
+    # Gets and sets the formula of the list column.
+    attr_accessor :range
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'totals_calculation' => :'TotalsCalculation',
-        :'name' => :'Name'
+        :'name' => :'Name',
+        :'formula' => :'Formula',
+        :'range' => :'Range'
       }
     end
 
@@ -44,7 +52,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'totals_calculation' => :'String',
-        :'name' => :'String'
+        :'name' => :'String',
+        :'formula' => :'String',
+        :'range' => :'Range'
       }
     end
 
@@ -62,6 +72,14 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'Name')
         self.name = attributes[:'Name']
+      end
+
+      if attributes.has_key?(:'Formula')
+        self.formula = attributes[:'Formula']
+      end
+
+      if attributes.has_key?(:'Range')
+        self.range = attributes[:'Range']
       end
 
     end
@@ -85,7 +103,9 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           totals_calculation == o.totals_calculation &&
-          name == o.name
+          name == o.name &&
+          formula == o.formula &&
+          range == o.range
     end
 
     # @see the `==` method
@@ -97,7 +117,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [totals_calculation, name].hash
+      [totals_calculation, name, formula, range].hash
     end
 
     # Builds the object from hash

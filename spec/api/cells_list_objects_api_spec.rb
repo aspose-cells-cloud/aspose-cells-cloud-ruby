@@ -241,5 +241,32 @@ describe 'CellsListObjectsApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  describe 'cells_list_objects_post_worksheet_list_column test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET7
+      list_object_index = 0
+      request = AsposeCellsCloud::ListColumn.new({:Name=>'Test', :TotalsCalculation=>'Average'})
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_list_objects_post_worksheet_list_column(name, sheet_name, list_object_index,0, { :list_column=>request, :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+  describe 'cells_list_objects_post_worksheet_list_columns_total test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET7
+      list_object_index = 0
+      request = AsposeCellsCloud::TableTotalRequest.new({:ListColumnIndex=>'1', :TotalsCalculation=>'Average'})
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_list_objects_post_worksheet_list_columns_total(name, sheet_name, list_object_index,{ :table_total_requests=>[request], :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end

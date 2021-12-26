@@ -790,7 +790,7 @@ describe 'CellsWorksheetsApi' do
       result = @instance.upload_file( folder+"/"+name, ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
       result = @instance.cells_worksheets_put_add_new_worksheet(name, sheet_name,  {:position=>position, :sheettype=>sheettype, :folder=>folder})
-      expect(result.code).to eql(201)
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

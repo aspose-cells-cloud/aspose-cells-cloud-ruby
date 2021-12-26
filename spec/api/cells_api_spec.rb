@@ -765,7 +765,7 @@ describe 'CellsApi' do
       storage = nil
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_post_set_worksheet_column_width(name, sheet_name, column_index, width,  { :folder=>folder})
+      result = @instance.cells_post_set_worksheet_column_width(name, sheet_name, column_index, width,10,  { :folder=>folder})
       expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

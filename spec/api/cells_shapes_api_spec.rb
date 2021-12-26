@@ -171,4 +171,28 @@ describe 'CellsShapesApi' do
     end
   end
 
+  describe 'cells_shapes_post_worksheet_group_shape test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET6
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_shapes_post_worksheet_group_shape(name, sheet_name,[0,2], { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+  describe 'cells_shapes_post_worksheet_ungroup_shape test' do
+    it "should work" do
+      name = $BOOK1
+      sheet_name = $SHEET6
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_shapes_post_worksheet_ungroup_shape(name, sheet_name, 6, { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end  
 end

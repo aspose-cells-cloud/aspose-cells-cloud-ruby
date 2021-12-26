@@ -35,6 +35,8 @@ module AsposeCellsCloud
 
     attr_accessor :value
 
+    attr_accessor :formula
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -43,7 +45,8 @@ module AsposeCellsCloud
         :'column_index' => :'columnIndex',
         :'style' => :'style',
         :'type' => :'type',
-        :'value' => :'value'
+        :'value' => :'value',
+        :'formula' => :'formula'
       }
     end
 
@@ -54,7 +57,8 @@ module AsposeCellsCloud
         :'column_index' => :'Integer',
         :'style' => :'Style',
         :'type' => :'String',
-        :'value' => :'String'
+        :'value' => :'String',
+        :'formula' => :'String'
       }
     end
 
@@ -86,6 +90,10 @@ module AsposeCellsCloud
         self.value = attributes[:'value']
       end
 
+      if attributes.has_key?(:'formula')
+        self.formula = attributes[:'formula']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -110,7 +118,8 @@ module AsposeCellsCloud
           column_index == o.column_index &&
           style == o.style &&
           type == o.type &&
-          value == o.value
+          value == o.value &&
+          formula == o.formula
     end
 
     # @see the `==` method
@@ -122,7 +131,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [row_index, column_index, style, type, value].hash
+      [row_index, column_index, style, type, value, formula].hash
     end
 
     # Builds the object from hash

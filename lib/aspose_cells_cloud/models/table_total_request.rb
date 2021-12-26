@@ -24,41 +24,29 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class SortKey
-    attr_accessor :custom_list
+  class TableTotalRequest
+    attr_accessor :list_column_index
 
-    attr_accessor :sort_order
+    attr_accessor :totals_calculation
 
-    attr_accessor :key
-
-    attr_accessor :order
-
-    attr_accessor :type
-
-    attr_accessor :index
+    attr_accessor :custom_formula
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'custom_list' => :'CustomList',
-        :'sort_order' => :'SortOrder',
-        :'key' => :'Key',
-        :'order' => :'Order',
-        :'type' => :'Type',
-        :'index' => :'Index'
+        :'list_column_index' => :'ListColumnIndex',
+        :'totals_calculation' => :'TotalsCalculation',
+        :'custom_formula' => :'CustomFormula'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'custom_list' => :'Array<String>',
-        :'sort_order' => :'String',
-        :'key' => :'Integer',
-        :'order' => :'String',
-        :'type' => :'String',
-        :'index' => :'Integer'
+        :'list_column_index' => :'Integer',
+        :'totals_calculation' => :'String',
+        :'custom_formula' => :'String'
       }
     end
 
@@ -70,30 +58,16 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'CustomList')
-        if (value = attributes[:'CustomList']).is_a?(Array)
-          self.custom_list = value
-        end
+      if attributes.has_key?(:'ListColumnIndex')
+        self.list_column_index = attributes[:'ListColumnIndex']
       end
 
-      if attributes.has_key?(:'SortOrder')
-        self.sort_order = attributes[:'SortOrder']
+      if attributes.has_key?(:'TotalsCalculation')
+        self.totals_calculation = attributes[:'TotalsCalculation']
       end
 
-      if attributes.has_key?(:'Key')
-        self.key = attributes[:'Key']
-      end
-
-      if attributes.has_key?(:'Order')
-        self.order = attributes[:'Order']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
+      if attributes.has_key?(:'CustomFormula')
+        self.custom_formula = attributes[:'CustomFormula']
       end
 
     end
@@ -102,17 +76,12 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @key.nil?
-        invalid_properties.push("invalid value for 'key', key cannot be nil.")
-      end
-
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @key.nil?
       return true
     end
 
@@ -121,12 +90,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          custom_list == o.custom_list &&
-          sort_order == o.sort_order &&
-          key == o.key &&
-          order == o.order &&
-          type == o.type &&
-          index == o.index
+          list_column_index == o.list_column_index &&
+          totals_calculation == o.totals_calculation &&
+          custom_formula == o.custom_formula
     end
 
     # @see the `==` method
@@ -138,7 +104,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [custom_list, sort_order, key, order, type, index].hash
+      [list_column_index, totals_calculation, custom_formula].hash
     end
 
     # Builds the object from hash

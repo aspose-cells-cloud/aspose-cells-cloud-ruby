@@ -5039,6 +5039,166 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param list_object_index 
+    # @param column_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [ListColumn] :list_column 
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_list_objects_post_worksheet_list_column(name, sheet_name, list_object_index, column_index, opts = {})
+      data, _status_code, _headers = cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param list_object_index 
+    # @param column_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [ListColumn] :list_column 
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_column ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_list_objects_post_worksheet_list_column"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_list_objects_post_worksheet_list_column"
+      end
+      # verify the required parameter 'list_object_index' is set
+      if @api_client.config.client_side_validation && list_object_index.nil?
+        fail ArgumentError, "Missing the required parameter 'list_object_index' when calling CellsApi.cells_list_objects_post_worksheet_list_column"
+      end
+      # verify the required parameter 'column_index' is set
+      if @api_client.config.client_side_validation && column_index.nil?
+        fail ArgumentError, "Missing the required parameter 'column_index' when calling CellsApi.cells_list_objects_post_worksheet_list_column"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/listcolumns/{columnIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'listObjectIndex' + '}', list_object_index.to_s).sub('{' + 'columnIndex' + '}', column_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'list_column'])
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_list_objects_post_worksheet_list_column\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param list_object_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<TableTotalRequest>] :table_total_requests 
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_list_objects_post_worksheet_list_columns_total(name, sheet_name, list_object_index, opts = {})
+      data, _status_code, _headers = cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param list_object_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Array<TableTotalRequest>] :table_total_requests 
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_columns_total ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_list_objects_post_worksheet_list_columns_total"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_list_objects_post_worksheet_list_columns_total"
+      end
+      # verify the required parameter 'list_object_index' is set
+      if @api_client.config.client_side_validation && list_object_index.nil?
+        fail ArgumentError, "Missing the required parameter 'list_object_index' when calling CellsApi.cells_list_objects_post_worksheet_list_columns_total"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/listcolumns/total".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'listObjectIndex' + '}', list_object_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'table_total_requests'])
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_list_objects_post_worksheet_list_columns_total\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Update  list object 
     # 
     # @param name Document name.
@@ -5362,6 +5522,8 @@ module AsposeCellsCloud
     # @param end_column The start row of the list range.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :has_headers Whether the range has headers. (default to true)
+    # @option opts [BOOLEAN] :display_name Gets and sets the display name.. (default to true)
+    # @option opts [BOOLEAN] :show_totals Gets and sets whether this ListObject show total row.. (default to true)
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
@@ -5381,6 +5543,8 @@ module AsposeCellsCloud
     # @param end_column The start row of the list range.
     # @param [Hash] opts the optional parameters
     # @option opts [BOOLEAN] :has_headers Whether the range has headers.
+    # @option opts [BOOLEAN] :display_name Gets and sets the display name..
+    # @option opts [BOOLEAN] :show_totals Gets and sets whether this ListObject show total row..
     # @option opts [ListObject] :list_object List Object
     # @option opts [String] :folder Document&#39;s folder.
     # @option opts [String] :storage_name storage name.
@@ -5424,6 +5588,8 @@ module AsposeCellsCloud
       query_params[:'endRow'] = end_row
       query_params[:'endColumn'] = end_column
       query_params[:'hasHeaders'] = opts[:'has_headers'] if !opts[:'has_headers'].nil?
+      query_params[:'displayName'] = opts[:'display_name'] if !opts[:'display_name'].nil?
+      query_params[:'showTotals'] = opts[:'show_totals'] if !opts[:'show_totals'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
@@ -10656,12 +10822,13 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param column_index The column index.
     # @param width The width.
+    # @param count column number.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
-    def cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, opts = {})
-      data, _status_code, _headers = cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, opts)
+    def cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, count, opts = {})
+      data, _status_code, _headers = cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, opts)
       return data
     end
 
@@ -10671,11 +10838,12 @@ module AsposeCellsCloud
     # @param sheet_name The worksheet name.
     # @param column_index The column index.
     # @param width The width.
+    # @param count column number.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
-    def cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, opts = {})
+    def cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_worksheet_column_width ..."
       end
@@ -10696,12 +10864,17 @@ module AsposeCellsCloud
       if @api_client.config.client_side_validation && width.nil?
         fail ArgumentError, "Missing the required parameter 'width' when calling CellsApi.cells_post_set_worksheet_column_width"
       end
+      # verify the required parameter 'count' is set
+      if @api_client.config.client_side_validation && count.nil?
+        fail ArgumentError, "Missing the required parameter 'count' when calling CellsApi.cells_post_set_worksheet_column_width"
+      end
       # resource path
       local_var_path = "/cells/{name}/worksheets/{sheetName}/cells/columns/{columnIndex}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'columnIndex' + '}', column_index.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'width'] = width
+      query_params[:'count'] = count
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
@@ -11235,6 +11408,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height. (default to 0.0)
+    # @option opts [Integer] :count row number. (default to 0)
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
@@ -11250,6 +11424,7 @@ module AsposeCellsCloud
     # @param row_index The row index.
     # @param [Hash] opts the optional parameters
     # @option opts [Float] :height The new row height.
+    # @option opts [Integer] :count row number.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
@@ -11276,6 +11451,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'height'] = opts[:'height'] if !opts[:'height'].nil?
+      query_params[:'count'] = opts[:'count'] if !opts[:'count'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
@@ -13457,6 +13633,81 @@ module AsposeCellsCloud
     # 
     # @param name document name.
     # @param sheet_name worksheet name.
+    # @param list_shape group shape indexs in worksheet shapes.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_shapes_post_worksheet_group_shape(name, sheet_name, list_shape, opts = {})
+      data, _status_code, _headers = cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, opts)
+      return data
+    end
+
+    # Update a shape in worksheet
+    # 
+    # @param name document name.
+    # @param sheet_name worksheet name.
+    # @param list_shape group shape indexs in worksheet shapes.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_post_worksheet_group_shape ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_shapes_post_worksheet_group_shape"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_shapes_post_worksheet_group_shape"
+      end
+      # verify the required parameter 'list_shape' is set
+      if @api_client.config.client_side_validation && list_shape.nil?
+        fail ArgumentError, "Missing the required parameter 'list_shape' when calling CellsApi.cells_shapes_post_worksheet_group_shape"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/shapes/group".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(list_shape)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_shapes_post_worksheet_group_shape\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a shape in worksheet
+    # 
+    # @param name document name.
+    # @param sheet_name worksheet name.
     # @param shapeindex shape index in worksheet shapes.
     # @param [Hash] opts the optional parameters
     # @option opts [Shape] :dto 
@@ -13526,6 +13777,81 @@ module AsposeCellsCloud
         :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_shapes_post_worksheet_shape\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update a shape in worksheet
+    # 
+    # @param name document name.
+    # @param sheet_name worksheet name.
+    # @param shapeindex shape index in worksheet shapes.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_shapes_post_worksheet_ungroup_shape(name, sheet_name, shapeindex, opts = {})
+      data, _status_code, _headers = cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, opts)
+      return data
+    end
+
+    # Update a shape in worksheet
+    # 
+    # @param name document name.
+    # @param sheet_name worksheet name.
+    # @param shapeindex shape index in worksheet shapes.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_post_worksheet_ungroup_shape ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_shapes_post_worksheet_ungroup_shape"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_shapes_post_worksheet_ungroup_shape"
+      end
+      # verify the required parameter 'shapeindex' is set
+      if @api_client.config.client_side_validation && shapeindex.nil?
+        fail ArgumentError, "Missing the required parameter 'shapeindex' when calling CellsApi.cells_shapes_post_worksheet_ungroup_shape"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/shapes/{shapeindex}/ungroup".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'shapeindex' + '}', shapeindex.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_shapes_post_worksheet_ungroup_shape\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -15915,6 +16241,7 @@ module AsposeCellsCloud
     # @option opts [String] :format The format to convert.
     # @option opts [String] :password The workbook password.
     # @option opts [String] :out_path Path to save result
+    # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_workbook_put_convert_workbook(file, opts = {})
       data, _status_code, _headers = cells_workbook_put_convert_workbook_with_http_info(file, opts)
@@ -15928,6 +16255,7 @@ module AsposeCellsCloud
     # @option opts [String] :format The format to convert.
     # @option opts [String] :password The workbook password.
     # @option opts [String] :out_path Path to save result
+    # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_put_convert_workbook_with_http_info(file, opts = {})
       if @api_client.config.debugging
@@ -15946,6 +16274,7 @@ module AsposeCellsCloud
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
 
       # header parameters
       header_params = {}
