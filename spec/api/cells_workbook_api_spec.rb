@@ -47,7 +47,22 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-  
+  describe 'cells_workbook_get_workbook to other storage test' do
+    it "should work" do
+      name = $BOOK1
+      password = nil
+      format = 'XPS'
+      is_auto_fit = true
+      only_save_table = true
+      folder = $TEMPFOLDER
+      out_path = nil
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_get_workbook(name,  { :password=>password, :format=>format,:folder=>folder, :out_path=>out_path, :out_storage_name=>"DropBox"})
+      # expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
   # unit tests for cells_workbook_get_workbook
   # Read workbook info or export.
   # 
@@ -380,7 +395,22 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  describe 'cells_workbook_post_workbook_split to other storage test' do
+    it "should work" do
+      name = $BOOK1
+      format = 'png'
+      from = 1
+      to = 3
+      horizontal_resolution = 100
+      vertical_resolution = 90
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_post_workbook_split(name, {  :format=>format, :from=>from, :to=>to, :horizontal_resolution=>horizontal_resolution, :vertical_resolution=>vertical_resolution,:folder=>folder ,:out_storage_name=>"DropBox"})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
   # unit tests for cells_workbook_post_workbooks_merge
   # Merge workbooks.
   # 
@@ -403,7 +433,19 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
-
+  describe 'cells_workbook_post_workbooks_merge  other storage test' do
+    it "should work" do
+      name = $BOOK1
+      merge_with = 'myDocument.xlsx'
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      result = @instance.upload_file( folder+"/"+merge_with,  ::File.open(File.expand_path("data/"+merge_with),"r") {|io| io.read(io.size) },{:storage_name=>"DropBox"})
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_post_workbooks_merge(name,(folder+"/"+ merge_with), { :folder=>folder,:merged_storage_name=>"DropBox"})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
   # unit tests for cells_workbook_post_workbooks_text_replace
   # Replace text.
   # 

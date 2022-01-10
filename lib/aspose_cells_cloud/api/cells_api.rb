@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
+Copyright (c) 2022 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -13277,6 +13277,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit_columns Autofit columns. (default to false)
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [SaveResponse]
     def cells_save_as_post_document_save_as(name, opts = {})
       data, _status_code, _headers = cells_save_as_post_document_save_as_with_http_info(name, opts)
@@ -13293,6 +13294,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :is_auto_fit_columns Autofit columns.
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(SaveResponse, Fixnum, Hash)>] SaveResponse data, response status code and response headers
     def cells_save_as_post_document_save_as_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -13313,6 +13315,7 @@ module AsposeCellsCloud
       query_params[:'isAutoFitColumns'] = opts[:'is_auto_fit_columns'] if !opts[:'is_auto_fit_columns'].nil?
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+      query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -14933,6 +14936,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path The document output folder.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [File]
     def cells_workbook_get_workbook(name, opts = {})
       data, _status_code, _headers = cells_workbook_get_workbook_with_http_info(name, opts)
@@ -14950,6 +14954,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The document folder.
     # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path The document output folder.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_get_workbook_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -14972,6 +14977,7 @@ module AsposeCellsCloud
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
+      query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15810,6 +15816,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The workbook folder full path.
     # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path Path to save result
+    # @option opts [String] :out_storage_name output storage name.
     # @return [File]
     def cells_workbook_post_workbook_get_smart_marker_result(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, opts)
@@ -15824,6 +15831,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The workbook folder full path.
     # @option opts [String] :storage_name storage name.
     # @option opts [String] :out_path Path to save result
+    # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -15843,6 +15851,7 @@ module AsposeCellsCloud
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
+      query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -15948,6 +15957,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :out_folder out Folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [SplitResultResponse]
     def cells_workbook_post_workbook_split(name, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbook_split_with_http_info(name, opts)
@@ -15966,6 +15976,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :out_folder out Folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(SplitResultResponse, Fixnum, Hash)>] SplitResultResponse data, response status code and response headers
     def cells_workbook_post_workbook_split_with_http_info(name, opts = {})
       if @api_client.config.debugging
@@ -15989,6 +16000,7 @@ module AsposeCellsCloud
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'outFolder'] = opts[:'out_folder'] if !opts[:'out_folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+      query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
 
       # header parameters
       header_params = {}
@@ -16024,6 +16036,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Source workbook folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :merged_storage_name merged file storage name.
     # @return [WorkbookResponse]
     def cells_workbook_post_workbooks_merge(name, merge_with, opts = {})
       data, _status_code, _headers = cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts)
@@ -16037,6 +16050,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder Source workbook folder.
     # @option opts [String] :storage_name storage name.
+    # @option opts [String] :merged_storage_name merged file storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
     def cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts = {})
       if @api_client.config.debugging
@@ -16059,6 +16073,7 @@ module AsposeCellsCloud
       query_params[:'mergeWith'] = merge_with
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+      query_params[:'mergedStorageName'] = opts[:'merged_storage_name'] if !opts[:'merged_storage_name'].nil?
 
       # header parameters
       header_params = {}

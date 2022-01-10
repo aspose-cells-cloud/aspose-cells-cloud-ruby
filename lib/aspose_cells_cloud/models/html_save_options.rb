@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
+Copyright (c) 2022 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -45,6 +45,48 @@ module AsposeCellsCloud
 
     attr_accessor :sort_names
 
+    attr_accessor :save_as_single_file
+
+    attr_accessor :export_hidden_worksheet
+
+    attr_accessor :export_grid_lines
+
+    attr_accessor :presentation_preference
+
+    attr_accessor :cell_css_prefix
+
+    attr_accessor :table_css_id
+
+    attr_accessor :is_full_path_link
+
+    attr_accessor :export_worksheet_css_separately
+
+    attr_accessor :export_similar_border_style
+
+    attr_accessor :merge_empty_td_forcely
+
+    attr_accessor :export_cell_coordinate
+
+    attr_accessor :export_extra_headings
+
+    attr_accessor :export_headings
+
+    attr_accessor :export_formula
+
+    attr_accessor :add_tooltip_text
+
+    attr_accessor :export_bogus_row_data
+
+    attr_accessor :exclude_unused_styles
+
+    attr_accessor :export_document_properties
+
+    attr_accessor :export_worksheet_properties
+
+    attr_accessor :export_workbook_properties
+
+    attr_accessor :export_frame_scripts_and_properties
+
     attr_accessor :attached_files_directory
 
     attr_accessor :attached_files_url_prefix
@@ -81,6 +123,27 @@ module AsposeCellsCloud
         :'refresh_chart_cache' => :'RefreshChartCache',
         :'create_directory' => :'CreateDirectory',
         :'sort_names' => :'SortNames',
+        :'save_as_single_file' => :'SaveAsSingleFile',
+        :'export_hidden_worksheet' => :'ExportHiddenWorksheet',
+        :'export_grid_lines' => :'ExportGridLines',
+        :'presentation_preference' => :'PresentationPreference',
+        :'cell_css_prefix' => :'CellCssPrefix',
+        :'table_css_id' => :'TableCssId',
+        :'is_full_path_link' => :'IsFullPathLink',
+        :'export_worksheet_css_separately' => :'ExportWorksheetCSSSeparately',
+        :'export_similar_border_style' => :'ExportSimilarBorderStyle',
+        :'merge_empty_td_forcely' => :'MergeEmptyTdForcely',
+        :'export_cell_coordinate' => :'ExportCellCoordinate',
+        :'export_extra_headings' => :'ExportExtraHeadings',
+        :'export_headings' => :'ExportHeadings',
+        :'export_formula' => :'ExportFormula',
+        :'add_tooltip_text' => :'AddTooltipText',
+        :'export_bogus_row_data' => :'ExportBogusRowData',
+        :'exclude_unused_styles' => :'ExcludeUnusedStyles',
+        :'export_document_properties' => :'ExportDocumentProperties',
+        :'export_worksheet_properties' => :'ExportWorksheetProperties',
+        :'export_workbook_properties' => :'ExportWorkbookProperties',
+        :'export_frame_scripts_and_properties' => :'ExportFrameScriptsAndProperties',
         :'attached_files_directory' => :'AttachedFilesDirectory',
         :'attached_files_url_prefix' => :'AttachedFilesUrlPrefix',
         :'encoding' => :'Encoding',
@@ -107,6 +170,27 @@ module AsposeCellsCloud
         :'refresh_chart_cache' => :'BOOLEAN',
         :'create_directory' => :'BOOLEAN',
         :'sort_names' => :'BOOLEAN',
+        :'save_as_single_file' => :'String',
+        :'export_hidden_worksheet' => :'String',
+        :'export_grid_lines' => :'String',
+        :'presentation_preference' => :'String',
+        :'cell_css_prefix' => :'String',
+        :'table_css_id' => :'String',
+        :'is_full_path_link' => :'String',
+        :'export_worksheet_css_separately' => :'String',
+        :'export_similar_border_style' => :'String',
+        :'merge_empty_td_forcely' => :'String',
+        :'export_cell_coordinate' => :'String',
+        :'export_extra_headings' => :'String',
+        :'export_headings' => :'String',
+        :'export_formula' => :'String',
+        :'add_tooltip_text' => :'String',
+        :'export_bogus_row_data' => :'String',
+        :'exclude_unused_styles' => :'String',
+        :'export_document_properties' => :'String',
+        :'export_worksheet_properties' => :'String',
+        :'export_workbook_properties' => :'String',
+        :'export_frame_scripts_and_properties' => :'String',
         :'attached_files_directory' => :'String',
         :'attached_files_url_prefix' => :'String',
         :'encoding' => :'String',
@@ -160,6 +244,90 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'SortNames')
         self.sort_names = attributes[:'SortNames']
+      end
+
+      if attributes.has_key?(:'SaveAsSingleFile')
+        self.save_as_single_file = attributes[:'SaveAsSingleFile']
+      end
+
+      if attributes.has_key?(:'ExportHiddenWorksheet')
+        self.export_hidden_worksheet = attributes[:'ExportHiddenWorksheet']
+      end
+
+      if attributes.has_key?(:'ExportGridLines')
+        self.export_grid_lines = attributes[:'ExportGridLines']
+      end
+
+      if attributes.has_key?(:'PresentationPreference')
+        self.presentation_preference = attributes[:'PresentationPreference']
+      end
+
+      if attributes.has_key?(:'CellCssPrefix')
+        self.cell_css_prefix = attributes[:'CellCssPrefix']
+      end
+
+      if attributes.has_key?(:'TableCssId')
+        self.table_css_id = attributes[:'TableCssId']
+      end
+
+      if attributes.has_key?(:'IsFullPathLink')
+        self.is_full_path_link = attributes[:'IsFullPathLink']
+      end
+
+      if attributes.has_key?(:'ExportWorksheetCSSSeparately')
+        self.export_worksheet_css_separately = attributes[:'ExportWorksheetCSSSeparately']
+      end
+
+      if attributes.has_key?(:'ExportSimilarBorderStyle')
+        self.export_similar_border_style = attributes[:'ExportSimilarBorderStyle']
+      end
+
+      if attributes.has_key?(:'MergeEmptyTdForcely')
+        self.merge_empty_td_forcely = attributes[:'MergeEmptyTdForcely']
+      end
+
+      if attributes.has_key?(:'ExportCellCoordinate')
+        self.export_cell_coordinate = attributes[:'ExportCellCoordinate']
+      end
+
+      if attributes.has_key?(:'ExportExtraHeadings')
+        self.export_extra_headings = attributes[:'ExportExtraHeadings']
+      end
+
+      if attributes.has_key?(:'ExportHeadings')
+        self.export_headings = attributes[:'ExportHeadings']
+      end
+
+      if attributes.has_key?(:'ExportFormula')
+        self.export_formula = attributes[:'ExportFormula']
+      end
+
+      if attributes.has_key?(:'AddTooltipText')
+        self.add_tooltip_text = attributes[:'AddTooltipText']
+      end
+
+      if attributes.has_key?(:'ExportBogusRowData')
+        self.export_bogus_row_data = attributes[:'ExportBogusRowData']
+      end
+
+      if attributes.has_key?(:'ExcludeUnusedStyles')
+        self.exclude_unused_styles = attributes[:'ExcludeUnusedStyles']
+      end
+
+      if attributes.has_key?(:'ExportDocumentProperties')
+        self.export_document_properties = attributes[:'ExportDocumentProperties']
+      end
+
+      if attributes.has_key?(:'ExportWorksheetProperties')
+        self.export_worksheet_properties = attributes[:'ExportWorksheetProperties']
+      end
+
+      if attributes.has_key?(:'ExportWorkbookProperties')
+        self.export_workbook_properties = attributes[:'ExportWorkbookProperties']
+      end
+
+      if attributes.has_key?(:'ExportFrameScriptsAndProperties')
+        self.export_frame_scripts_and_properties = attributes[:'ExportFrameScriptsAndProperties']
       end
 
       if attributes.has_key?(:'AttachedFilesDirectory')
@@ -238,6 +406,27 @@ module AsposeCellsCloud
           refresh_chart_cache == o.refresh_chart_cache &&
           create_directory == o.create_directory &&
           sort_names == o.sort_names &&
+          save_as_single_file == o.save_as_single_file &&
+          export_hidden_worksheet == o.export_hidden_worksheet &&
+          export_grid_lines == o.export_grid_lines &&
+          presentation_preference == o.presentation_preference &&
+          cell_css_prefix == o.cell_css_prefix &&
+          table_css_id == o.table_css_id &&
+          is_full_path_link == o.is_full_path_link &&
+          export_worksheet_css_separately == o.export_worksheet_css_separately &&
+          export_similar_border_style == o.export_similar_border_style &&
+          merge_empty_td_forcely == o.merge_empty_td_forcely &&
+          export_cell_coordinate == o.export_cell_coordinate &&
+          export_extra_headings == o.export_extra_headings &&
+          export_headings == o.export_headings &&
+          export_formula == o.export_formula &&
+          add_tooltip_text == o.add_tooltip_text &&
+          export_bogus_row_data == o.export_bogus_row_data &&
+          exclude_unused_styles == o.exclude_unused_styles &&
+          export_document_properties == o.export_document_properties &&
+          export_worksheet_properties == o.export_worksheet_properties &&
+          export_workbook_properties == o.export_workbook_properties &&
+          export_frame_scripts_and_properties == o.export_frame_scripts_and_properties &&
           attached_files_directory == o.attached_files_directory &&
           attached_files_url_prefix == o.attached_files_url_prefix &&
           encoding == o.encoding &&
@@ -261,7 +450,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enable_http_compression, save_format, clear_data, cached_file_folder, validate_merged_areas, refresh_chart_cache, create_directory, sort_names, attached_files_directory, attached_files_url_prefix, encoding, export_active_worksheet_only, export_chart_image_format, export_images_as_base64, hidden_col_display_type, hidden_row_display_type, html_cross_string_type, is_exp_image_to_temp_dir, page_title, parse_html_tag_in_cell].hash
+      [enable_http_compression, save_format, clear_data, cached_file_folder, validate_merged_areas, refresh_chart_cache, create_directory, sort_names, save_as_single_file, export_hidden_worksheet, export_grid_lines, presentation_preference, cell_css_prefix, table_css_id, is_full_path_link, export_worksheet_css_separately, export_similar_border_style, merge_empty_td_forcely, export_cell_coordinate, export_extra_headings, export_headings, export_formula, add_tooltip_text, export_bogus_row_data, exclude_unused_styles, export_document_properties, export_worksheet_properties, export_workbook_properties, export_frame_scripts_and_properties, attached_files_directory, attached_files_url_prefix, encoding, export_active_worksheet_only, export_chart_image_format, export_images_as_base64, hidden_col_display_type, hidden_row_display_type, html_cross_string_type, is_exp_image_to_temp_dir, page_title, parse_html_tag_in_cell].hash
     end
 
     # Builds the object from hash

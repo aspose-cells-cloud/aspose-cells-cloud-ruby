@@ -141,9 +141,9 @@ describe 'CellsRangesApi' do
     it "should work" do
       name = $BOOK1
       sheet_name = $SHEET1
-	  color = AsposeCellsCloud::Color.new({:A=>255})
-	  range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
-      range_operate = AsposeCellsCloud::RangeSetOutlineBorderRequest.new({:borderEdge=>'LeftBorder',:borderStyle=>'Dotted',:borderColor=>color,:Range=>range })
+	    color = AsposeCellsCloud::Color.new({:A=>255})
+	    range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
+      range_operate = AsposeCellsCloud::RangeSetOutlineBorderRequest.new({:BorderEdge=>'LeftBorder',:BorderStyle=>'Dotted',:BorderColor=>color,:Range=>range })
       folder = $TEMPFOLDER
       result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
       expect(result.uploaded.size).to  be > 0

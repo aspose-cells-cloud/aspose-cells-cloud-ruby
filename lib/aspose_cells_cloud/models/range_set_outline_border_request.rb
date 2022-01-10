@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
+Copyright (c) 2022 Aspose.Cells Cloud
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -37,10 +37,10 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'border_color' => :'borderColor',
+        :'border_color' => :'BorderColor',
         :'range' => :'Range',
-        :'border_style' => :'borderStyle',
-        :'border_edge' => :'borderEdge'
+        :'border_style' => :'BorderStyle',
+        :'border_edge' => :'BorderEdge'
       }
     end
 
@@ -62,20 +62,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'borderColor')
-        self.border_color = attributes[:'borderColor']
+      if attributes.has_key?(:'BorderColor')
+        self.border_color = attributes[:'BorderColor']
       end
 
       if attributes.has_key?(:'Range')
         self.range = attributes[:'Range']
       end
 
-      if attributes.has_key?(:'borderStyle')
-        self.border_style = attributes[:'borderStyle']
+      if attributes.has_key?(:'BorderStyle')
+        self.border_style = attributes[:'BorderStyle']
       end
 
-      if attributes.has_key?(:'borderEdge')
-        self.border_edge = attributes[:'borderEdge']
+      if attributes.has_key?(:'BorderEdge')
+        self.border_edge = attributes[:'BorderEdge']
       end
 
     end

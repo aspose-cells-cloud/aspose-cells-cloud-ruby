@@ -71,4 +71,19 @@ describe 'CellsSaveAsApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
+  describe 'cells_save_as_post_document_save_as to other storage format test' do
+    it "should work" do
+      name = $BOOK1
+      save_options = nil
+      newfilename = 'newbook.xls.md'
+      is_auto_fit_rows = true
+      is_auto_fit_columns = true
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_save_as_post_document_save_as(name, { :save_options=>save_options, :newfilename=>(folder+"/"+newfilename), :is_auto_fit_rows=>is_auto_fit_rows, :is_auto_fit_columns=>is_auto_fit_columns, :folder=>folder, :out_storage_name=>"DropBox"})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end  
 end

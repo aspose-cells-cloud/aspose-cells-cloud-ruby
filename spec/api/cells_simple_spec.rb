@@ -18,7 +18,7 @@ require 'json'
 # Please update as you see appropriate
 describe 'CellsApi' do
   before do
-    @instance = AsposeCellsCloud::LiteCellsApi.new($client_id,$client_secret,$api_version,$baseurl)
+    @instance = AsposeCellsCloud::CellsApi.new($client_id,$client_secret,$api_version,$baseurl)
     $VERBOSE = nil
   end
 
@@ -26,19 +26,20 @@ describe 'CellsApi' do
     # run after each test
   end
 
-  describe 'lite_cells_unit replace test' do
+  describe 'cells_ranges_post_worksheet_cells_range_outline_border test' do
     it "should work" do
-      files = {}
-      
-      name = $DataSourceXlsx
-      files[name] = ::File.open(File.expand_path("data/"+name),"r") 
-      name =$AssemblyTestXlsx 
-      files[name] = ::File.open(File.expand_path("data/"+name),"r") #{|io| io.read(io.size) }
-     
-      result = @instance.post_replace(files  ,"1","aspose.cells cloud")
-
+      name = $BOOK1
+      sheet_name = $SHEET1
+	    color = AsposeCellsCloud::Color.new({:A=>255})
+	    range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
+      range_operate = AsposeCellsCloud::RangeSetOutlineBorderRequest.new({:BorderEdge=>'LeftBorder',:BorderStyle=>'Dotted',:BorderColor=>color,:Range=>range })
+      folder = $TEMPFOLDER
+      # result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      # expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name, { :range_operate=>range_operate, :folder=>folder})
+      expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      end
+    end
   end
 end
 
