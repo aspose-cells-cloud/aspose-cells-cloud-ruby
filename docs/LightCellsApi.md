@@ -1,21 +1,21 @@
-# AsposeCellsCloud::LiteCellsApi
+# AsposeCellsCloud::LightCellsApi
 
 All URIs are relative to *https://api.aspose.cloud/v3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_metadata**](LiteCellsApi.md#delete_metadata) | **POST** /cells/metadata/delete | 
-[**get_metadata**](LiteCellsApi.md#get_metadata) | **POST** /cells/metadata/get | 
-[**post_assemble**](LiteCellsApi.md#post_assemble) | **POST** /cells/assemble | 
-[**post_clear_objects**](LiteCellsApi.md#post_clear_objects) | **POST** /cells/clearobjects | 
-[**post_export**](LiteCellsApi.md#post_export) | **POST** /cells/export | 
-[**post_merge**](LiteCellsApi.md#post_merge) | **POST** /cells/merge | 
-[**post_metadata**](LiteCellsApi.md#post_metadata) | **POST** /cells/metadata/update | 
-[**post_protect**](LiteCellsApi.md#post_protect) | **POST** /cells/protect | 
-[**post_search**](LiteCellsApi.md#post_search) | **POST** /cells/search | 
-[**post_split**](LiteCellsApi.md#post_split) | **POST** /cells/split | 
-[**post_unlock**](LiteCellsApi.md#post_unlock) | **POST** /cells/unlock | 
-[**post_watermark**](LiteCellsApi.md#post_watermark) | **POST** /cells/watermark | 
+[**delete_metadata**](LightCellsApi.md#delete_metadata) | **POST** /cells/metadata/delete | 
+[**get_metadata**](LightCellsApi.md#get_metadata) | **POST** /cells/metadata/get | 
+[**post_assemble**](LightCellsApi.md#post_assemble) | **POST** /cells/assemble | 
+[**post_clear_objects**](LightCellsApi.md#post_clear_objects) | **POST** /cells/clearobjects | 
+[**post_export**](LightCellsApi.md#post_export) | **POST** /cells/export | 
+[**post_merge**](LightCellsApi.md#post_merge) | **POST** /cells/merge | 
+[**post_metadata**](LightCellsApi.md#post_metadata) | **POST** /cells/metadata/update | 
+[**post_protect**](LightCellsApi.md#post_protect) | **POST** /cells/protect | 
+[**post_search**](LightCellsApi.md#post_search) | **POST** /cells/search | 
+[**post_split**](LightCellsApi.md#post_split) | **POST** /cells/split | 
+[**post_unlock**](LightCellsApi.md#post_unlock) | **POST** /cells/unlock | 
+[**post_watermark**](LightCellsApi.md#post_watermark) | **POST** /cells/watermark | 
 
 
 # **delete_metadata**
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -40,7 +40,7 @@ begin
   result = api_instance.delete_metadata(file, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->delete_metadata: #{e}"
+  puts "Exception when calling LightCellsApi->delete_metadata: #{e}"
 end
 ```
 
@@ -76,7 +76,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -88,7 +88,7 @@ begin
   result = api_instance.get_metadata(file, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->get_metadata: #{e}"
+  puts "Exception when calling LightCellsApi->get_metadata: #{e}"
 end
 ```
 
@@ -124,7 +124,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -138,7 +138,7 @@ begin
   result = api_instance.post_assemble(file, datasource, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_assemble: #{e}"
+  puts "Exception when calling LightCellsApi->post_assemble: #{e}"
 end
 ```
 
@@ -175,7 +175,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -186,7 +186,7 @@ begin
   result = api_instance.post_clear_objects(file, objecttype)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_clear_objects: #{e}"
+  puts "Exception when calling LightCellsApi->post_clear_objects: #{e}"
 end
 ```
 
@@ -222,7 +222,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -235,7 +235,7 @@ begin
   result = api_instance.post_export(file, object_type, format)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_export: #{e}"
+  puts "Exception when calling LightCellsApi->post_export: #{e}"
 end
 ```
 
@@ -272,7 +272,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -285,7 +285,7 @@ begin
   result = api_instance.post_merge(file, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_merge: #{e}"
+  puts "Exception when calling LightCellsApi->post_merge: #{e}"
 end
 ```
 
@@ -322,7 +322,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -333,7 +333,7 @@ begin
   result = api_instance.post_metadata(file, document_properties)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_metadata: #{e}"
+  puts "Exception when calling LightCellsApi->post_metadata: #{e}"
 end
 ```
 
@@ -369,7 +369,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -380,7 +380,7 @@ begin
   result = api_instance.post_protect(file, password)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_protect: #{e}"
+  puts "Exception when calling LightCellsApi->post_protect: #{e}"
 end
 ```
 
@@ -416,7 +416,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -431,7 +431,7 @@ begin
   result = api_instance.post_search(file, text, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_search: #{e}"
+  puts "Exception when calling LightCellsApi->post_search: #{e}"
 end
 ```
 
@@ -469,7 +469,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -485,7 +485,7 @@ begin
   result = api_instance.post_split(file, format, opts)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_split: #{e}"
+  puts "Exception when calling LightCellsApi->post_split: #{e}"
 end
 ```
 
@@ -524,7 +524,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -535,7 +535,7 @@ begin
   result = api_instance.post_unlock(file, password)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_unlock: #{e}"
+  puts "Exception when calling LightCellsApi->post_unlock: #{e}"
 end
 ```
 
@@ -571,7 +571,7 @@ No authorization required
 # load the gem
 require 'aspose_cells_cloud'
 
-api_instance = AsposeCellsCloud::LiteCellsApi.new
+api_instance = AsposeCellsCloud::LightCellsApi.new
 
 file = File.new('/path/to/file.txt') # File | File to upload
 
@@ -584,7 +584,7 @@ begin
   result = api_instance.post_watermark(file, text, color)
   p result
 rescue AsposeCellsCloud::ApiError => e
-  puts "Exception when calling LiteCellsApi->post_watermark: #{e}"
+  puts "Exception when calling LightCellsApi->post_watermark: #{e}"
 end
 ```
 

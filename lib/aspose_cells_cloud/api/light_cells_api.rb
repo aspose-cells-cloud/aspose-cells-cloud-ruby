@@ -23,7 +23,7 @@ SOFTWARE.
 require "uri"
 
 module AsposeCellsCloud
-  class LiteCellsApi
+  class LightCellsApi
     attr_accessor :api_client
 
     def initialize(client_id,client_secret, app_version = 'v3.0', app_host = 'api.aspose.cloud',  api_client = ApiClient.default)
@@ -53,12 +53,12 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def delete_metadata_with_http_info(file, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.delete_metadata ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.delete_metadata ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.delete_metadata"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.delete_metadata"
       end
       # resource path
       local_var_path = "/cells/metadata/delete"
@@ -93,7 +93,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#delete_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#delete_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -117,12 +117,12 @@ module AsposeCellsCloud
     # @return [Array<(Array<CellsDocumentProperty>, Fixnum, Hash)>] Array<CellsDocumentProperty> data, response status code and response headers
     def get_metadata_with_http_info(file, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.get_metadata ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.get_metadata ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.get_metadata"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.get_metadata"
       end
       # resource path
       local_var_path = "/cells/metadata/get"
@@ -157,7 +157,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'Array<CellsDocumentProperty>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#get_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#get_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -183,16 +183,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_assemble_with_http_info(file, datasource, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_assemble ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_assemble ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_assemble"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_assemble"
       end
       # verify the required parameter 'datasource' is set
       if @api_client.config.client_side_validation && datasource.nil?
-        fail ArgumentError, "Missing the required parameter 'datasource' when calling LiteCellsApi.post_assemble"
+        fail ArgumentError, "Missing the required parameter 'datasource' when calling LightCellsApi.post_assemble"
       end
       # resource path
       local_var_path = "/cells/assemble"
@@ -228,7 +228,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_assemble\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_assemble\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -252,16 +252,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_clear_objects_with_http_info(file, objecttype, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_clear_objects ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_clear_objects ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_clear_objects"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_clear_objects"
       end
       # verify the required parameter 'objecttype' is set
       if @api_client.config.client_side_validation && objecttype.nil?
-        fail ArgumentError, "Missing the required parameter 'objecttype' when calling LiteCellsApi.post_clear_objects"
+        fail ArgumentError, "Missing the required parameter 'objecttype' when calling LightCellsApi.post_clear_objects"
       end
       # resource path
       local_var_path = "/cells/clearobjects"
@@ -296,7 +296,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_clear_objects\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_clear_objects\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -322,20 +322,20 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_export_with_http_info(file, object_type, format, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_export ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_export ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_export"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_export"
       end
       # verify the required parameter 'object_type' is set
       if @api_client.config.client_side_validation && object_type.nil?
-        fail ArgumentError, "Missing the required parameter 'object_type' when calling LiteCellsApi.post_export"
+        fail ArgumentError, "Missing the required parameter 'object_type' when calling LightCellsApi.post_export"
       end
       # verify the required parameter 'format' is set
       if @api_client.config.client_side_validation && format.nil?
-        fail ArgumentError, "Missing the required parameter 'format' when calling LiteCellsApi.post_export"
+        fail ArgumentError, "Missing the required parameter 'format' when calling LightCellsApi.post_export"
       end
       # resource path
       local_var_path = "/cells/export"
@@ -371,7 +371,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_export\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_export\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -395,16 +395,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_import_with_http_info(file, import_data, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_import ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_import ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_import"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_import"
       end
       # verify the required parameter 'import_data' is set
       if @api_client.config.client_side_validation && import_data.nil?
-        fail ArgumentError, "Missing the required parameter 'import_data' when calling LiteCellsApi.post_import"
+        fail ArgumentError, "Missing the required parameter 'import_data' when calling LightCellsApi.post_import"
       end
       # resource path
       local_var_path = "/cells/import"
@@ -445,7 +445,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_import\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_import\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -471,12 +471,12 @@ module AsposeCellsCloud
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_merge_with_http_info(file, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_merge ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_merge ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_merge"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_merge"
       end
       # resource path
       local_var_path = "/cells/merge"
@@ -512,7 +512,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FileInfo')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_merge\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_merge\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -536,16 +536,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_metadata_with_http_info(file, document_properties, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_metadata ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_metadata ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_metadata"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_metadata"
       end
       # verify the required parameter 'document_properties' is set
       if @api_client.config.client_side_validation && document_properties.nil?
-        fail ArgumentError, "Missing the required parameter 'document_properties' when calling LiteCellsApi.post_metadata"
+        fail ArgumentError, "Missing the required parameter 'document_properties' when calling LightCellsApi.post_metadata"
       end
       # resource path
       local_var_path = "/cells/metadata/update"
@@ -585,7 +585,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -609,16 +609,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_protect_with_http_info(file, password, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_protect ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_protect ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_protect"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_protect"
       end
       # verify the required parameter 'password' is set
       if @api_client.config.client_side_validation && password.nil?
-        fail ArgumentError, "Missing the required parameter 'password' when calling LiteCellsApi.post_protect"
+        fail ArgumentError, "Missing the required parameter 'password' when calling LightCellsApi.post_protect"
       end
       # resource path
       local_var_path = "/cells/protect"
@@ -653,7 +653,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_protect\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_protect\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -681,16 +681,16 @@ module AsposeCellsCloud
     # @return [Array<(Array<TextItem>, Fixnum, Hash)>] Array<TextItem> data, response status code and response headers
     def post_search_with_http_info(file, text, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_search ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_search ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_search"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_search"
       end
       # verify the required parameter 'text' is set
       if @api_client.config.client_side_validation && text.nil?
-        fail ArgumentError, "Missing the required parameter 'text' when calling LiteCellsApi.post_search"
+        fail ArgumentError, "Missing the required parameter 'text' when calling LightCellsApi.post_search"
       end
       # resource path
       local_var_path = "/cells/search"
@@ -727,7 +727,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'Array<TextItem>')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_search\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -759,16 +759,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_split_with_http_info(file, format, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_split ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_split ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_split"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_split"
       end
       # verify the required parameter 'format' is set
       if @api_client.config.client_side_validation && format.nil?
-        fail ArgumentError, "Missing the required parameter 'format' when calling LiteCellsApi.post_split"
+        fail ArgumentError, "Missing the required parameter 'format' when calling LightCellsApi.post_split"
       end
       # resource path
       local_var_path = "/cells/split"
@@ -806,7 +806,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_split\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_split\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -830,16 +830,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_unlock_with_http_info(file, password, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_unlock ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_unlock ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_unlock"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_unlock"
       end
       # verify the required parameter 'password' is set
       if @api_client.config.client_side_validation && password.nil?
-        fail ArgumentError, "Missing the required parameter 'password' when calling LiteCellsApi.post_unlock"
+        fail ArgumentError, "Missing the required parameter 'password' when calling LightCellsApi.post_unlock"
       end
       # resource path
       local_var_path = "/cells/unlock"
@@ -874,7 +874,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_unlock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_unlock\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -900,20 +900,20 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_watermark_with_http_info(file, text, color, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_watermark ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_watermark ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_watermark"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_watermark"
       end
       # verify the required parameter 'text' is set
       if @api_client.config.client_side_validation && text.nil?
-        fail ArgumentError, "Missing the required parameter 'text' when calling LiteCellsApi.post_watermark"
+        fail ArgumentError, "Missing the required parameter 'text' when calling LightCellsApi.post_watermark"
       end
       # verify the required parameter 'color' is set
       if @api_client.config.client_side_validation && color.nil?
-        fail ArgumentError, "Missing the required parameter 'color' when calling LiteCellsApi.post_watermark"
+        fail ArgumentError, "Missing the required parameter 'color' when calling LightCellsApi.post_watermark"
       end
       # resource path
       local_var_path = "/cells/watermark"
@@ -949,7 +949,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_watermark\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_watermark\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -973,16 +973,16 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_compress_with_http_info(file, compress_level, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_compress ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_compress ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_compress"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_compress"
       end
       # verify the required parameter 'compress_level' is set
       if @api_client.config.client_side_validation && compress_level.nil?
-        fail ArgumentError, "Missing the required parameter 'compress_level' when calling LiteCellsApi.post_compress"
+        fail ArgumentError, "Missing the required parameter 'compress_level' when calling LightCellsApi.post_compress"
       end
 
       # resource path
@@ -1018,7 +1018,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_compress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_compress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1048,20 +1048,20 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_replace_with_http_info(file, text, newtext, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_replace ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_replace ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_replace"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_replace"
       end
       # verify the required parameter 'text' is set
       if @api_client.config.client_side_validation && text.nil?
-        fail ArgumentError, "Missing the required parameter 'text' when calling LiteCellsApi.post_replace"
+        fail ArgumentError, "Missing the required parameter 'text' when calling LightCellsApi.post_replace"
       end
       # verify the required parameter 'color' is set
       if @api_client.config.client_side_validation && newtext.nil?
-        fail ArgumentError, "Missing the required parameter 'newtext' when calling LiteCellsApi.post_replace"
+        fail ArgumentError, "Missing the required parameter 'newtext' when calling LightCellsApi.post_replace"
       end
       # resource path
       local_var_path = "/cells/replace"
@@ -1098,7 +1098,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_replace\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_replace\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1121,20 +1121,20 @@ module AsposeCellsCloud
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_reverse_with_http_info(file, rotate_type, format, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: LiteCellsApi.post_reverse ..."
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_reverse ..."
       end
       @api_client.request_token_if_needed
       # verify the required parameter 'file' is set
       if @api_client.config.client_side_validation && file.nil?
-        fail ArgumentError, "Missing the required parameter 'file' when calling LiteCellsApi.post_reverse"
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_reverse"
       end
       # verify the required parameter 'rotate_type' is set
       if @api_client.config.client_side_validation && rotate_type.nil?
-        fail ArgumentError, "Missing the required parameter 'rotate_type' when calling LiteCellsApi.post_reverse"
+        fail ArgumentError, "Missing the required parameter 'rotate_type' when calling LightCellsApi.post_reverse"
       end
       # verify the required parameter 'color' is set
       if @api_client.config.client_side_validation && format.nil?
-        fail ArgumentError, "Missing the required parameter 'format' when calling LiteCellsApi.post_reverse"
+        fail ArgumentError, "Missing the required parameter 'format' when calling LightCellsApi.post_reverse"
       end
       # resource path
       local_var_path = "/cells/reverse"
@@ -1169,7 +1169,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'FilesResult')
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: LiteCellsApi#post_reverse\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: LightCellsApi#post_reverse\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

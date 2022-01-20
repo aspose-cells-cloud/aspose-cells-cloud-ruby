@@ -284,7 +284,7 @@ require 'aspose_cells_cloud/models/title'
 
 # APIs
 require 'aspose_cells_cloud/api/cells_api'
-require 'aspose_cells_cloud/api/lite_cells_api'
+require 'aspose_cells_cloud/api/light_cells_api'
 
 module AsposeCellsCloud
   class << self
