@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/22.1)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/22.2)
 
 
 # Ruby SDK for Spreadsheet Processing in the Cloud
@@ -21,15 +21,14 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 - Convert worksheets to PDF, XPS & SVG formats.
 - [Convert Excel files to popular formats](https://docs.aspose.cloud/cells/convert-excel-workbook-to-different-file-formats/).
 
-## Feature & Enhancements in Version 22.1
 
-- SaveAs API add the parameter of target storage name.
-- Workbok merged API add the parameter of merged file storage name.
-- Workbok split API add the parameter of target storage name
-- Workbok smart marker API add the parameter of output storage name.
-- Batch convert API add the parameters of intput and output storage name.
-- Remove AutoshapesController from Aspose.Cells Cloud.
-- Rename LiteCellsApi to LightCellsApi.
+## Feature & Enhancements in Version 22.2
+
+- Update return value for the DeleteUnprotectWorksheet API on Aspose.Cells Cloud.
+- Update return value for the PutProtectWorksheet API on Aspose.Cells Cloud.
+- Update return value for the PostSetCellHtmlString API on Aspose.Cells Cloud.
+- Update return value for the PostUpdateWorksheetProperty API on Aspose.Cells Cloud.
+
 
 
 ## Read & Write Spreadsheet Formats

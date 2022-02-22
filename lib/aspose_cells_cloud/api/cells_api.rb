@@ -10654,7 +10654,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [CellResponse]
+    # @return [CellsCloudResponse]
     def cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts = {})
       data, _status_code, _headers = cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts)
       return data
@@ -10669,7 +10669,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :folder The workbook folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(CellResponse, Fixnum, Hash)>] CellResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_cell_html_string ..."
@@ -10719,7 +10719,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_post_set_cell_html_string\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -17037,7 +17037,7 @@ module AsposeCellsCloud
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings. Only password is used here.
     # @option opts [String] :folder Document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [WorksheetResponse]
+    # @return [CellsCloudResponse]
     def cells_worksheets_delete_unprotect_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts)
       return data
@@ -17051,7 +17051,7 @@ module AsposeCellsCloud
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings. Only password is used here.
     # @option opts [String] :folder Document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_unprotect_worksheet ..."
@@ -17093,7 +17093,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WorksheetResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_worksheets_delete_unprotect_worksheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -18762,7 +18762,7 @@ module AsposeCellsCloud
     # @option opts [Worksheet] :sheet 
     # @option opts [String] :folder 
     # @option opts [String] :storage_name storage name.
-    # @return [WorksheetResponse]
+    # @return [CellsCloudResponse]
     def cells_worksheets_post_update_worksheet_property(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts)
       return data
@@ -18776,7 +18776,7 @@ module AsposeCellsCloud
     # @option opts [Worksheet] :sheet 
     # @option opts [String] :folder 
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_update_worksheet_property ..."
@@ -18818,7 +18818,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WorksheetResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_worksheets_post_update_worksheet_property\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -19374,7 +19374,7 @@ module AsposeCellsCloud
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings.
     # @option opts [String] :folder Document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [WorksheetResponse]
+    # @return [CellsCloudResponse]
     def cells_worksheets_put_protect_worksheet(name, sheet_name, opts = {})
       data, _status_code, _headers = cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts)
       return data
@@ -19388,7 +19388,7 @@ module AsposeCellsCloud
     # @option opts [ProtectSheetParameter] :protect_parameter with protection settings.
     # @option opts [String] :folder Document folder.
     # @option opts [String] :storage_name storage name.
-    # @return [Array<(WorksheetResponse, Fixnum, Hash)>] WorksheetResponse data, response status code and response headers
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_protect_worksheet ..."
@@ -19430,7 +19430,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WorksheetResponse')
+        :return_type => 'CellsCloudResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_worksheets_put_protect_worksheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
