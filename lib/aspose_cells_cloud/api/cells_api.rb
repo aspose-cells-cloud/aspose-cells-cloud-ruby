@@ -15541,6 +15541,83 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # Add digital signature.
+    # 
+    # @param name Workbook name.
+    # @param digitalsignaturefile Digital signature file parameters.
+    # @param password 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [CellsCloudResponse]
+    def cells_workbook_post_digital_signature(name, digitalsignaturefile, password, opts = {})
+      data, _status_code, _headers = cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, opts)
+      return data
+    end
+
+    # Add digital signature.
+    # 
+    # @param name Workbook name.
+    # @param digitalsignaturefile Digital signature file parameters.
+    # @param password 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook&#39;s folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_digital_signature ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_workbook_post_digital_signature"
+      end
+      # verify the required parameter 'digitalsignaturefile' is set
+      if @api_client.config.client_side_validation && digitalsignaturefile.nil?
+        fail ArgumentError, "Missing the required parameter 'digitalsignaturefile' when calling CellsApi.cells_workbook_post_digital_signature"
+      end
+      # verify the required parameter 'password' is set
+      if @api_client.config.client_side_validation && password.nil?
+        fail ArgumentError, "Missing the required parameter 'password' when calling CellsApi.cells_workbook_post_digital_signature"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/digitalsignature".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'digitalsignaturefile'] = digitalsignaturefile
+      query_params[:'password'] = password
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_workbook_post_digital_signature\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Encript document.
     # 
     # @param name The document name.

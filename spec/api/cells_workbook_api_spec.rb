@@ -717,4 +717,18 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end  
+  describe 'cells_workbook_post_digital_signature test' do
+    it "should work" do
+      name = $BOOK1
+      pfx_name = 'roywang.pfx'
+      folder = $TEMPFOLDER
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.upload_file( folder+"/"+pfx_name,  ::File.open(File.expand_path("data/"+pfx_name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      result = @instance.cells_workbook_post_digital_signature(name,folder+"/"+pfx_name,"123456" , { :folder=>folder})
+      expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
 end
