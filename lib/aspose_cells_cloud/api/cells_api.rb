@@ -13316,7 +13316,11 @@ module AsposeCellsCloud
       query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
-
+      if  opts[:'extendedQueryParameters'] 
+        opts[:'extendedQueryParameters'].each do |key , value|
+          query_params[key]  = value
+        end
+      end 
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
@@ -14978,7 +14982,11 @@ module AsposeCellsCloud
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
       query_params[:'outStorageName'] = opts[:'out_storage_name'] if !opts[:'out_storage_name'].nil?
-
+      if  opts[:'extendedQueryParameters'] 
+        opts[:'extendedQueryParameters'].each do |key , value|
+          query_params[key]  = value
+        end
+      end 
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
@@ -16367,7 +16375,11 @@ module AsposeCellsCloud
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'outPath'] = opts[:'out_path'] if !opts[:'out_path'].nil?
       query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
-
+      if  opts[:'extendedQueryParameters'] 
+        opts[:'extendedQueryParameters'].each do |key , value|
+          query_params[key]  = value
+        end
+      end 
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)

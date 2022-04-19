@@ -344,6 +344,11 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'objectType'] = object_type
       query_params[:'format'] = format
+      if  opts[:'extendedQueryParameters'] 
+        opts[:'extendedQueryParameters'].each do |key , value|
+          query_params[key]  = value
+        end
+      end 
 
       # header parameters
       header_params = {}

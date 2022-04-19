@@ -29,15 +29,18 @@ describe 'CellsApi' do
   describe 'cells_ranges_post_worksheet_cells_range_outline_border test' do
     it "should work" do
       name = $BOOK1
-      sheet_name = $SHEET1
-	    color = AsposeCellsCloud::Color.new({:A=>255})
-	    range = AsposeCellsCloud::Range.new({:ColumnCount=>1,:FirstColumn=>1,:FirstRow=>1,:RowCount=>10})
-      range_operate = AsposeCellsCloud::RangeSetOutlineBorderRequest.new({:BorderEdge=>'LeftBorder',:BorderStyle=>'Dotted',:BorderColor=>color,:Range=>range })
+      password = nil
+      format = 'pdf'
+      is_auto_fit = true
+      only_save_table = true
       folder = $TEMPFOLDER
-      # result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
-      # expect(result.uploaded.size).to  be > 0
-      result = @instance.cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name, { :range_operate=>range_operate, :folder=>folder})
-      expect(result.code).to eql(200)
+      out_path = nil
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      extendedQueryParameters = {} 
+      extendedQueryParameters['OnePagePerSheet'] = 'false' 
+      result = @instance.cells_workbook_get_workbook(name,  { :password=>password, :format=>format,:folder=>folder, :out_path=>out_path,  :extendedQueryParameters=>extendedQueryParameters})
+      # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end

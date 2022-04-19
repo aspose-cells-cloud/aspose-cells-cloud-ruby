@@ -63,6 +63,24 @@ describe 'CellsWorkbookApi' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
+  describe 'cells_workbook_get_workbook to extend test' do
+    it "should work" do
+      name = $BOOK1
+      password = nil
+      format = 'XPS'
+      is_auto_fit = true
+      only_save_table = true
+      folder = $TEMPFOLDER
+      out_path = nil
+      result = @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      expect(result.uploaded.size).to  be > 0
+      extendedQueryParameters = {} 
+      extendedQueryParameters['OnePagePerSheet'] = 'false' 
+      result = @instance.cells_workbook_get_workbook(name,  { :password=>password, :format=>format,:folder=>folder, :out_path=>out_path,  :extendedQueryParameters=>extendedQueryParameters})
+      # expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end  
   # unit tests for cells_workbook_get_workbook
   # Read workbook info or export.
   # 
@@ -507,6 +525,20 @@ describe 'CellsWorkbookApi' do
       password = nil
       out_path = "Tdd.pdf"
       result =  @instance.cells_workbook_put_convert_workbook( ::File.open(File.expand_path("data/"+name),"r")  {|io| io.read(io.size) },{:format=>format,out_path=>out_path})
+      # expect(result.code).to eql(200)
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'cells_workbook_put_convert_workbook_extend test' do
+    it "should work" do
+      name = $BOOK1
+      format = 'pdf'
+      password = nil
+      out_path = "Tdd.pdf"
+      extendedQueryParameters = {} 
+      extendedQueryParameters['OnePagePerSheet'] = 'false' 
+      result =  @instance.cells_workbook_put_convert_workbook( ::File.open(File.expand_path("data/"+name),"r")  {|io| io.read(io.size) },{:format=>format,out_path=>out_path,:extendedQueryParameters=>extendedQueryParameters})
       # expect(result.code).to eql(200)
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
