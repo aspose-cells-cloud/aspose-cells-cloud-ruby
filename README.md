@@ -24,7 +24,7 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 
 ## Feature & Enhancements in Version 22.5
 
-- Add new API for getting barcode description.
+- Add a snew API for getting barcode description.
 
 
 
