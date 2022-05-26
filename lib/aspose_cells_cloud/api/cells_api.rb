@@ -7353,7 +7353,80 @@ module AsposeCellsCloud
       end
       return data, status_code, headers
     end
+# Get chart area border info.
+    # 
+    # @param name Workbook name.
+    # @param sheet_name Worksheet name.
+    # @param picture_index The picture index.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [BarcodeResponseList]
+    def cells_picture_get_extract_barcodes(name, sheet_name, picture_index, opts = {})
+      data, _status_code, _headers = cells_picture_get_extract_barcodes_with_http_info(name, sheet_name, picture_index, opts)
+      return data
+    end
 
+    # Get chart area border info.
+    # 
+    # @param name Workbook name.
+    # @param sheet_name Worksheet name.
+    # @param picture_index The picture index.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Workbook folder.
+    # @option opts [String] :storage_name storage name.
+    # @return [Array<(BarcodeResponseList, Fixnum, Hash)>] BarcodeResponseList data, response status code and response headers
+    def cells_picture_get_extract_barcodes_with_http_info(name, sheet_name, picture_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_picture_get_extract_barcodes ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_picture_get_extract_barcodes"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_picture_get_extract_barcodes"
+      end
+      # verify the required parameter 'picture_index' is set
+      if @api_client.config.client_side_validation && picture_index.nil?
+        fail ArgumentError, "Missing the required parameter 'picture_index' when calling CellsApi.cells_picture_get_extract_barcodes"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/pictures/{pictureIndex}/recognize".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'pictureIndex' + '}', picture_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BarcodeResponseList')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_picture_get_extract_barcodes\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Delete a picture object in worksheet
     # 
     # @param name The workbook name.

@@ -116,7 +116,7 @@ module AsposeCellsCloud
         :params => query_params,
         :body => body
       }
-      print query_params
+      
       if [:post, :patch, :put, :delete].include?(http_method)
         req_body = build_request_body(header_params, form_params, opts[:body])
         req_opts.update :body => req_body
