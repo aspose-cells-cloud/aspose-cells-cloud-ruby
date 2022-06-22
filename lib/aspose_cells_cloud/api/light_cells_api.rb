@@ -269,7 +269,8 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'objecttype'] = objecttype
-
+      query_params[:'sheetname'] = opts[:'sheetname'] if !opts[:'sheetname'].nil?
+      query_params[:'outFormat'] = opts[:'out_format'] if !opts[:'out_format'].nil?
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
