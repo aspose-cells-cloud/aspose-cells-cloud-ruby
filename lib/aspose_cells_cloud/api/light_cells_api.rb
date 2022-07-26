@@ -66,6 +66,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'type'] = opts[:'type'] if !opts[:'type'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -130,6 +131,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'type'] = opts[:'type'] if !opts[:'type'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -201,6 +203,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'datasource'] = datasource
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -271,6 +274,7 @@ module AsposeCellsCloud
       query_params[:'objecttype'] = objecttype
       query_params[:'sheetname'] = opts[:'sheetname'] if !opts[:'sheetname'].nil?
       query_params[:'outFormat'] = opts[:'out_format'] if !opts[:'out_format'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
@@ -345,6 +349,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'objectType'] = object_type
       query_params[:'format'] = format
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
       if  opts[:'extendedQueryParameters'] 
         opts[:'extendedQueryParameters'].each do |key , value|
           query_params[key]  = value
@@ -491,6 +496,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'format'] = opts[:'format'] if !opts[:'format'].nil?
       query_params[:'mergeToOneSheet'] = opts[:'merge_to_one_sheet'] if !opts[:'merge_to_one_sheet'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -558,6 +564,7 @@ module AsposeCellsCloud
 
       # query parameters
       query_params = {}
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -706,6 +713,7 @@ module AsposeCellsCloud
       query_params[:'text'] = text
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'sheetname'] = opts[:'sheetname'] if !opts[:'sheetname'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -785,6 +793,7 @@ module AsposeCellsCloud
       query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
       query_params[:'from'] = opts[:'from'] if !opts[:'from'].nil?
       query_params[:'to'] = opts[:'to'] if !opts[:'to'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -928,6 +937,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'text'] = text
       query_params[:'color'] = color
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -997,6 +1007,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'compressLevel'] = compress_level
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
 
       # header parameters
       header_params = {}
@@ -1078,6 +1089,7 @@ module AsposeCellsCloud
       query_params[:'newtext'] = newtext
       query_params[:'password'] = opts[:'password'] if !opts[:'storagpassworde_name'].nil?
       query_params[:'sheetName'] = opts[:'sheet_name'] if !opts[:'sheet_name'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
@@ -1149,6 +1161,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'rotateType'] = rotate_type
       query_params[:'format'] = format
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
