@@ -21,5 +21,5 @@ SOFTWARE.
 =end
 
 module AsposeCellsCloud
-  VERSION = "22.7"
+  VERSION = "22.8"
 end

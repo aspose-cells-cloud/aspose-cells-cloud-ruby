@@ -1192,6 +1192,78 @@ module AsposeCellsCloud
       end
       return data, status_code, headers
     end
+    # 
+    # 
+    # @param file File to upload
+    # @param rotate_type 
+    # @param format 
+    # @return [FilesResult]
+    def post_rotate(file, rotate_type, format, opts = {})
+      data, _status_code, _headers = post_rotate_with_http_info(file, rotate_type, format, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param rotate_type 
+    # @param format 
+    # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
+    def post_rotate_with_http_info(file, rotate_type, format, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: LightCellsApi.post_rotate ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'file' is set
+      if @api_client.config.client_side_validation && file.nil?
+        fail ArgumentError, "Missing the required parameter 'file' when calling LightCellsApi.post_rotate"
+      end
+      # verify the required parameter 'rotate_type' is set
+      if @api_client.config.client_side_validation && rotate_type.nil?
+        fail ArgumentError, "Missing the required parameter 'rotate_type' when calling LightCellsApi.post_rotate"
+      end
+      # verify the required parameter 'color' is set
+      if @api_client.config.client_side_validation && format.nil?
+        fail ArgumentError, "Missing the required parameter 'format' when calling LightCellsApi.post_rotate"
+      end
+      # resource path
+      local_var_path = "/cells/rotate"
+
+      # query parameters
+      query_params = {}
+      query_params[:'rotateType'] = rotate_type
+      query_params[:'format'] = format
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+
+      # form parameters
+      form_params = {}
+      file.each do |filename , context|
+        form_params[filename]  = context
+      end
+
+      # http body (model)
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      post_body = ""
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FilesResult')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: LightCellsApi#post_reverse\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
 
   end
 end
