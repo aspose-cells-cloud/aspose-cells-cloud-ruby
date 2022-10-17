@@ -20939,6 +20939,201 @@ module AsposeCellsCloud
       return data, status_code, headers
     end
 
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
+    # @return [FileInfo]
+    def post_convert_workbook_to_pptx(file, opts = {})
+      data, _status_code, _headers = post_convert_workbook_to_pptx_with_http_info(file, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction 
+    # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
+    def post_convert_workbook_to_pptx_with_http_info(file, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_pptx ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'file' is set
+      if @api_client.config.client_side_validation && file.nil?
+        fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_convert_workbook_to_pptx"
+      end
+      # resource path
+      local_var_path = "/cells/convert/pptx"
+
+      # query parameters
+      query_params = {}
+      query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      post_body =''
+      form_params['file']  = file
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FileInfo')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#post_convert_workbook_to_pptx\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
+    # @return [FileInfo]
+    def post_convert_workbook_to_html(file, opts = {})
+      data, _status_code, _headers = post_convert_workbook_to_html_with_http_info(file, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction 
+    # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
+    def post_convert_workbook_to_html_with_http_info(file, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_html ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'file' is set
+      if @api_client.config.client_side_validation && file.nil?
+        fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_convert_workbook_to_html"
+      end
+      # resource path
+      local_var_path = "/cells/convert/html"
+
+      # query parameters
+      query_params = {}
+      query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      post_body =''
+      form_params['file']  = file
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FileInfo')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#post_convert_workbook_to_html\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
+    # @return [FileInfo]
+    def post_convert_workbook_to_markdown(file, opts = {})
+      data, _status_code, _headers = post_convert_workbook_to_markdown_with_http_info(file, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param file File to upload
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password 
+    # @option opts [BOOLEAN] :check_excel_restriction 
+    # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
+    def post_convert_workbook_to_markdown_with_http_info(file, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_markdown ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'file' is set
+      if @api_client.config.client_side_validation && file.nil?
+        fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_convert_workbook_to_markdown"
+      end
+      # resource path
+      local_var_path = "/cells/convert/markdown"
+
+      # query parameters
+      query_params = {}
+      query_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
+      query_params[:'checkExcelRestriction'] = opts[:'check_excel_restriction'] if !opts[:'check_excel_restriction'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      post_body =''
+      form_params['file']  = file
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'FileInfo')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#post_convert_workbook_to_markdown\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Check if storage exists
     # 
     # @param storage_name Storage name
