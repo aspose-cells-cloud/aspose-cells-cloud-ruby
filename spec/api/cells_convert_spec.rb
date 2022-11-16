@@ -57,6 +57,20 @@ describe 'CellsConvertApi' do
       result = @instance.post_convert_workbook_to_markdown(::File.open(File.expand_path("data/"+ $BOOK1),"r")  )
     end
   end
-
+  describe 'cells_unit test' do
+    it "should work" do
+      result = @instance.post_convert_workbook_to_json(::File.open(File.expand_path("data/"+ $BOOK1),"r")  )
+    end
+  end
+  describe 'cells_unit test' do
+    it "should work" do
+      result = @instance.post_convert_workbook_to_sql(::File.open(File.expand_path("data/"+ $BOOK1),"r")  )
+    end
+  end
+  describe 'cells_unit test' do
+    it "should work" do
+      result = @instance.post_convert_workbook_to_csv(::File.open(File.expand_path("data/"+ $BOOK1),"r")  )
+    end
+  end
 end
 
