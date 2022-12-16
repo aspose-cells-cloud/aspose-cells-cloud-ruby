@@ -1891,6 +1891,380 @@ module AsposeCellsCloud
       end
       return data, status_code, headers
     end
+    # Get chart Category Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [AxisResponse]
+    def cells_charts_get_chart_category_axis(name, sheet_name, chart_index, opts = {})
+      data, _status_code, _headers = cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, opts)
+      return data
+    end
+
+    # Get chart Category Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
+    def cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_category_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_get_chart_category_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_get_chart_category_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_get_chart_category_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/categoryaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AxisResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_chart_category_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get chart second category axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [AxisResponse]
+    def cells_charts_get_chart_second_category_axis(name, sheet_name, chart_index, opts = {})
+      data, _status_code, _headers = cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, opts)
+      return data
+    end
+
+    # Get chart second category axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
+    def cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_second_category_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_get_chart_second_category_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_get_chart_second_category_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_get_chart_second_category_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondcategoryaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AxisResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_chart_second_category_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get chart second value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [AxisResponse]
+    def cells_charts_get_chart_second_value_axis(name, sheet_name, chart_index, opts = {})
+      data, _status_code, _headers = cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, opts)
+      return data
+    end
+
+    # Get chart second value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
+    def cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_second_value_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_get_chart_second_value_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_get_chart_second_value_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_get_chart_second_value_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondvalueaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AxisResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_chart_second_value_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get chart Series Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [AxisResponse]
+    def cells_charts_get_chart_series_axis(name, sheet_name, chart_index, opts = {})
+      data, _status_code, _headers = cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, opts)
+      return data
+    end
+
+    # Get chart Series Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
+    def cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_series_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_get_chart_series_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_get_chart_series_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_get_chart_series_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/seriesaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AxisResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_chart_series_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get chart Value Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [AxisResponse]
+    def cells_charts_get_chart_value_axis(name, sheet_name, chart_index, opts = {})
+      data, _status_code, _headers = cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, opts)
+      return data
+    end
+
+    # Get chart Value Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
+    def cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_value_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_get_chart_value_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_get_chart_value_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_get_chart_value_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/valueaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'AxisResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_chart_value_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
 
     # Get chart info.
     # 
@@ -2185,6 +2559,410 @@ module AsposeCellsCloud
         :return_type => 'ChartsResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: CellsApi#cells_charts_get_worksheet_charts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Update chart Category Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_charts_post_chart_category_axis(name, sheet_name, chart_index, axis, opts = {})
+      data, _status_code, _headers = cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
+      return data
+    end
+
+    # Update chart Category Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_category_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_post_chart_category_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_post_chart_category_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_post_chart_category_axis"
+      end
+      # verify the required parameter 'axis' is set
+      if @api_client.config.client_side_validation && axis.nil?
+        fail ArgumentError, "Missing the required parameter 'axis' when calling CellsApi.cells_charts_post_chart_category_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/categoryaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(axis)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_chart_category_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update chart second category axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_charts_post_chart_second_category_axis(name, sheet_name, chart_index, axis, opts = {})
+      data, _status_code, _headers = cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
+      return data
+    end
+
+    # Update chart second category axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_second_category_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_post_chart_second_category_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_post_chart_second_category_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_post_chart_second_category_axis"
+      end
+      # verify the required parameter 'axis' is set
+      if @api_client.config.client_side_validation && axis.nil?
+        fail ArgumentError, "Missing the required parameter 'axis' when calling CellsApi.cells_charts_post_chart_second_category_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondcategoryaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(axis)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_chart_second_category_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update chart second value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_charts_post_chart_second_value_axis(name, sheet_name, chart_index, axis, opts = {})
+      data, _status_code, _headers = cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
+      return data
+    end
+
+    # Update chart second value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_second_value_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_post_chart_second_value_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_post_chart_second_value_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_post_chart_second_value_axis"
+      end
+      # verify the required parameter 'axis' is set
+      if @api_client.config.client_side_validation && axis.nil?
+        fail ArgumentError, "Missing the required parameter 'axis' when calling CellsApi.cells_charts_post_chart_second_value_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/secondvalueaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(axis)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_chart_second_value_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update chart Series Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_charts_post_chart_series_axis(name, sheet_name, chart_index, axis, opts = {})
+      data, _status_code, _headers = cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
+      return data
+    end
+
+    # Update chart Series Axis
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_series_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_post_chart_series_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_post_chart_series_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_post_chart_series_axis"
+      end
+      # verify the required parameter 'axis' is set
+      if @api_client.config.client_side_validation && axis.nil?
+        fail ArgumentError, "Missing the required parameter 'axis' when calling CellsApi.cells_charts_post_chart_series_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/seriesaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(axis)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_chart_series_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update chart value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [CellsCloudResponse]
+    def cells_charts_post_chart_value_axis(name, sheet_name, chart_index, axis, opts = {})
+      data, _status_code, _headers = cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
+      return data
+    end
+
+    # Update chart value axis 
+    # 
+    # @param name 
+    # @param sheet_name 
+    # @param chart_index 
+    # @param axis 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder 
+    # @option opts [String] :storage_name 
+    # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
+    def cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_value_axis ..."
+      end
+      @api_client.request_token_if_needed
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.cells_charts_post_chart_value_axis"
+      end
+      # verify the required parameter 'sheet_name' is set
+      if @api_client.config.client_side_validation && sheet_name.nil?
+        fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.cells_charts_post_chart_value_axis"
+      end
+      # verify the required parameter 'chart_index' is set
+      if @api_client.config.client_side_validation && chart_index.nil?
+        fail ArgumentError, "Missing the required parameter 'chart_index' when calling CellsApi.cells_charts_post_chart_value_axis"
+      end
+      # verify the required parameter 'axis' is set
+      if @api_client.config.client_side_validation && axis.nil?
+        fail ArgumentError, "Missing the required parameter 'axis' when calling CellsApi.cells_charts_post_chart_value_axis"
+      end
+      # resource path
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/charts/{chartIndex}/valueaxis".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'chartIndex' + '}', chart_index.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+      query_params[:'storageName'] = opts[:'storage_name'] if !opts[:'storage_name'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(axis)
+      #auth_names = []
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'CellsCloudResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: CellsApi#cells_charts_post_chart_value_axis\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
