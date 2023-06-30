@@ -24260,7 +24260,7 @@ module AsposeCellsCloud
     # @option opts [String] :dest_storage_name Destination storage name
     # @option opts [String] :version_id File version ID to move
     # @return [nil]
-    def move_file(src_path, dest_path, opts = {})
+    def move_file_(src_path, dest_path, opts = {})
       warn "Warning: #move_file() is deprecated."
       move_file_with_http_info(src_path, dest_path, opts)
       return nil
@@ -24542,7 +24542,7 @@ module AsposeCellsCloud
     # @param batch_convert_request 
     # @param [Hash] opts the optional parameters
     # @return [File]
-    def post_batch_convert(batch_convert_request, opts = {})
+    def post_batch_convert_(batch_convert_request, opts = {})
       warn "Warning: #post_batch_convert() is deprecated."
       data, _status_code, _headers = post_batch_convert_with_http_info(batch_convert_request, opts)
       return data
