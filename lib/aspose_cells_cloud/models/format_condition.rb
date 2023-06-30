@@ -1,103 +1,106 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="FormatConditionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class FormatCondition
-    attr_accessor :link
-
-    attr_accessor :above_average
-
-    attr_accessor :formula2
-
-    attr_accessor :style
-
-    attr_accessor :formula1
-
-    attr_accessor :color_scale
-
-    attr_accessor :data_bar
-
-    attr_accessor :text
-
-    # True, no rules with lower priority may be applied over this rule, when this     rule evaluates to true.  Only applies for Excel 2007;
-    attr_accessor :stop_if_true
-
-    # The priority of this conditional formatting rule. This value is used to determine     which format should be evaluated and rendered. Lower numeric values are higher     priority than higher numeric values, where '1' is the highest priority.
-    attr_accessor :priority
-
-    attr_accessor :top10
-
-    attr_accessor :operator
-
-    attr_accessor :icon_set
-
-    # Gets and sets whether the conditional format Type.             
-    attr_accessor :type
-
-    attr_accessor :time_period
-
+        #            
+        attr_accessor :priority
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :stop_if_true
+        #            
+        attr_accessor :above_average
+        #            
+        attr_accessor :color_scale
+        #            
+        attr_accessor :data_bar
+        #            
+        attr_accessor :formula1
+        #            
+        attr_accessor :formula2
+        #            
+        attr_accessor :icon_set
+        #            
+        attr_accessor :operator
+        #            
+        attr_accessor :style
+        #            
+        attr_accessor :text
+        #            
+        attr_accessor :time_period
+        #            
+        attr_accessor :top10
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
+        :'priority' => :'Priority',
+        :'type' => :'Type',
+        :'stop_if_true' => :'StopIfTrue',
         :'above_average' => :'AboveAverage',
-        :'formula2' => :'Formula2',
-        :'style' => :'Style',
-        :'formula1' => :'Formula1',
         :'color_scale' => :'ColorScale',
         :'data_bar' => :'DataBar',
-        :'text' => :'Text',
-        :'stop_if_true' => :'StopIfTrue',
-        :'priority' => :'Priority',
-        :'top10' => :'Top10',
-        :'operator' => :'Operator',
+        :'formula1' => :'Formula1',
+        :'formula2' => :'Formula2',
         :'icon_set' => :'IconSet',
-        :'type' => :'Type',
-        :'time_period' => :'TimePeriod'
+        :'operator' => :'Operator',
+        :'style' => :'Style',
+        :'text' => :'Text',
+        :'time_period' => :'TimePeriod',
+        :'top10' => :'Top10',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
+        :'priority' => :'Integer',
+        :'type' => :'String',
+        :'stop_if_true' => :'BOOLEAN',
         :'above_average' => :'AboveAverage',
-        :'formula2' => :'String',
-        :'style' => :'Style',
-        :'formula1' => :'String',
         :'color_scale' => :'ColorScale',
         :'data_bar' => :'DataBar',
-        :'text' => :'String',
-        :'stop_if_true' => :'BOOLEAN',
-        :'priority' => :'Integer',
-        :'top10' => :'Top10',
-        :'operator' => :'String',
+        :'formula1' => :'String',
+        :'formula2' => :'String',
         :'icon_set' => :'IconSet',
-        :'type' => :'String',
-        :'time_period' => :'String'
+        :'operator' => :'String',
+        :'style' => :'Style',
+        :'text' => :'String',
+        :'time_period' => :'String',
+        :'top10' => :'Top10',
+        :'link' => :'Link'
       }
     end
 
@@ -109,64 +112,50 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'AboveAverage')
-        self.above_average = attributes[:'AboveAverage']
-      end
-
-      if attributes.has_key?(:'Formula2')
-        self.formula2 = attributes[:'Formula2']
-      end
-
-      if attributes.has_key?(:'Style')
-        self.style = attributes[:'Style']
-      end
-
-      if attributes.has_key?(:'Formula1')
-        self.formula1 = attributes[:'Formula1']
-      end
-
-      if attributes.has_key?(:'ColorScale')
-        self.color_scale = attributes[:'ColorScale']
-      end
-
-      if attributes.has_key?(:'DataBar')
-        self.data_bar = attributes[:'DataBar']
-      end
-
-      if attributes.has_key?(:'Text')
-        self.text = attributes[:'Text']
-      end
-
-      if attributes.has_key?(:'StopIfTrue')
-        self.stop_if_true = attributes[:'StopIfTrue']
-      end
-
       if attributes.has_key?(:'Priority')
-        self.priority = attributes[:'Priority']
+          self.priority = attributes[:'Priority']
       end
-
-      if attributes.has_key?(:'Top10')
-        self.top10 = attributes[:'Top10']
-      end
-
-      if attributes.has_key?(:'Operator')
-        self.operator = attributes[:'Operator']
-      end
-
-      if attributes.has_key?(:'IconSet')
-        self.icon_set = attributes[:'IconSet']
-      end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
       end
-
+      if attributes.has_key?(:'StopIfTrue')
+          self.stop_if_true = attributes[:'StopIfTrue']
+      end
+      if attributes.has_key?(:'AboveAverage')
+          self.above_average = attributes[:'AboveAverage']
+      end
+      if attributes.has_key?(:'ColorScale')
+          self.color_scale = attributes[:'ColorScale']
+      end
+      if attributes.has_key?(:'DataBar')
+          self.data_bar = attributes[:'DataBar']
+      end
+      if attributes.has_key?(:'Formula1')
+          self.formula1 = attributes[:'Formula1']
+      end
+      if attributes.has_key?(:'Formula2')
+          self.formula2 = attributes[:'Formula2']
+      end
+      if attributes.has_key?(:'IconSet')
+          self.icon_set = attributes[:'IconSet']
+      end
+      if attributes.has_key?(:'Operator')
+          self.operator = attributes[:'Operator']
+      end
+      if attributes.has_key?(:'Style')
+          self.style = attributes[:'Style']
+      end
+      if attributes.has_key?(:'Text')
+          self.text = attributes[:'Text']
+      end
       if attributes.has_key?(:'TimePeriod')
-        self.time_period = attributes[:'TimePeriod']
+          self.time_period = attributes[:'TimePeriod']
+      end
+      if attributes.has_key?(:'Top10')
+          self.top10 = attributes[:'Top10']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -175,12 +164,73 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @priority.nil?
+          invalid_properties.push("invalid value for 'priority', priority cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @stop_if_true.nil?
+          invalid_properties.push("invalid value for 'stop_if_true', stop_if_true cannot be nil.")
+      end
+      if @above_average.nil?
+          invalid_properties.push("invalid value for 'above_average', above_average cannot be nil.")
+      end
+      if @color_scale.nil?
+          invalid_properties.push("invalid value for 'color_scale', color_scale cannot be nil.")
+      end
+      if @data_bar.nil?
+          invalid_properties.push("invalid value for 'data_bar', data_bar cannot be nil.")
+      end
+      if @formula1.nil?
+          invalid_properties.push("invalid value for 'formula1', formula1 cannot be nil.")
+      end
+      if @formula2.nil?
+          invalid_properties.push("invalid value for 'formula2', formula2 cannot be nil.")
+      end
+      if @icon_set.nil?
+          invalid_properties.push("invalid value for 'icon_set', icon_set cannot be nil.")
+      end
+      if @operator.nil?
+          invalid_properties.push("invalid value for 'operator', operator cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+      if @text.nil?
+          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      end
+      if @time_period.nil?
+          invalid_properties.push("invalid value for 'time_period', time_period cannot be nil.")
+      end
+      if @top10.nil?
+          invalid_properties.push("invalid value for 'top10', top10 cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @priority.nil?
+      return false if @type.nil?
+      return false if @stop_if_true.nil?
+      return false if @above_average.nil?
+      return false if @color_scale.nil?
+      return false if @data_bar.nil?
+      return false if @formula1.nil?
+      return false if @formula2.nil?
+      return false if @icon_set.nil?
+      return false if @operator.nil?
+      return false if @style.nil?
+      return false if @text.nil?
+      return false if @time_period.nil?
+      return false if @top10.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -189,21 +239,22 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
+          priority == o.priority &&
+          type == o.type &&
+          stop_if_true == o.stop_if_true &&
           above_average == o.above_average &&
-          formula2 == o.formula2 &&
-          style == o.style &&
-          formula1 == o.formula1 &&
           color_scale == o.color_scale &&
           data_bar == o.data_bar &&
-          text == o.text &&
-          stop_if_true == o.stop_if_true &&
-          priority == o.priority &&
-          top10 == o.top10 &&
-          operator == o.operator &&
+          formula1 == o.formula1 &&
+          formula2 == o.formula2 &&
           icon_set == o.icon_set &&
-          type == o.type &&
-          time_period == o.time_period
+          operator == o.operator &&
+          style == o.style &&
+          text == o.text &&
+          time_period == o.time_period &&
+          top10 == o.top10 &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -215,7 +266,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, above_average, formula2, style, formula1, color_scale, data_bar, text, stop_if_true, priority, top10, operator, icon_set, type, time_period].hash
+      [ priority , type , stop_if_true , above_average , color_scale , data_bar , formula1 , formula2 , icon_set , operator , style , text , time_period , top10 , link ].hash
     end
 
     # Builds the object from hash

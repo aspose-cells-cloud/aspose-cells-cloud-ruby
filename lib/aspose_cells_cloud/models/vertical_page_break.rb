@@ -1,43 +1,49 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="VerticalPageBreakrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class VerticalPageBreak
-    attr_accessor :column
-
-    attr_accessor :start_row
-
-    attr_accessor :end_row
-
+        #            
+        attr_accessor :column
+        #            
+        attr_accessor :end_row
+        #            
+        attr_accessor :start_row
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'column' => :'Column',
-        :'start_row' => :'StartRow',
-        :'end_row' => :'EndRow'
+        :'end_row' => :'EndRow',
+        :'start_row' => :'StartRow'
       }
     end
 
@@ -45,8 +51,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'column' => :'Integer',
-        :'start_row' => :'Integer',
-        :'end_row' => :'Integer'
+        :'end_row' => :'Integer',
+        :'start_row' => :'Integer'
       }
     end
 
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Column')
-        self.column = attributes[:'Column']
+          self.column = attributes[:'Column']
       end
-
-      if attributes.has_key?(:'StartRow')
-        self.start_row = attributes[:'StartRow']
-      end
-
       if attributes.has_key?(:'EndRow')
-        self.end_row = attributes[:'EndRow']
+          self.end_row = attributes[:'EndRow']
+      end
+      if attributes.has_key?(:'StartRow')
+          self.start_row = attributes[:'StartRow']
       end
 
     end
@@ -77,15 +81,13 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @column.nil?
-        invalid_properties.push("invalid value for 'column', column cannot be nil.")
+          invalid_properties.push("invalid value for 'column', column cannot be nil.")
       end
-
-      if @start_row.nil?
-        invalid_properties.push("invalid value for 'start_row', start_row cannot be nil.")
-      end
-
       if @end_row.nil?
-        invalid_properties.push("invalid value for 'end_row', end_row cannot be nil.")
+          invalid_properties.push("invalid value for 'end_row', end_row cannot be nil.")
+      end
+      if @start_row.nil?
+          invalid_properties.push("invalid value for 'start_row', start_row cannot be nil.")
       end
 
       return invalid_properties
@@ -95,8 +97,8 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @column.nil?
-      return false if @start_row.nil?
       return false if @end_row.nil?
+      return false if @start_row.nil?
       return true
     end
 
@@ -106,8 +108,9 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           column == o.column &&
-          start_row == o.start_row &&
-          end_row == o.end_row
+          end_row == o.end_row &&
+          start_row == o.start_row 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -119,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [column, start_row, end_row].hash
+      [ column , end_row , start_row ].hash
     end
 
     # Builds the object from hash

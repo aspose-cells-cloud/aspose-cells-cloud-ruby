@@ -1,81 +1,75 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="DataBarrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Describe the DataBar conditional formatting rule. This conditional formatting    rule displays a gradated data bar in the range of cells.
+
   class DataBar
-    # Gets or sets the direction the databar is displayed.
-    attr_accessor :direction
-
-    # Get or set this DataBar's max value object.  Cannot set null or CFValueObject    with type FormatConditionValueType.Min to it.             
-    attr_accessor :max_cfvo
-
-    # Get or set this DataBar's Color.             
-    attr_accessor :color
-
-    # Represents the min length of data bar .             
-    attr_accessor :min_length
-
-    # Gets or sets how a data bar is filled with color.
-    attr_accessor :bar_fill_type
-
-    # Get or set this DataBar's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.             
-    attr_accessor :min_cfvo
-
-    # Gets or sets the position of the axis of the data bars specified by a conditional    formatting rule.
-    attr_accessor :axis_position
-
-    # Gets the NegativeBarFormat object associated with a data bar conditional     formatting rule.
-    attr_accessor :negative_bar_format
-
-    # Gets an object that specifies the border of a data bar.
-    attr_accessor :bar_border
-
-    # Gets the color of the axis for cells with conditional formatting as data bars.
-    attr_accessor :axis_color
-
-    # Represents the max length of data bar .
-    attr_accessor :max_length
-
-    # Get or set the flag indicating whether to show the values of the cells on   which this data bar is applied.  Default value is true.             
-    attr_accessor :show_value
-
+        #Gets the color of the axis for cells with conditional formatting as data bars.            
+        attr_accessor :axis_color
+        #Gets or sets the position of the axis of the data bars specified by a conditional   formatting rule.            
+        attr_accessor :axis_position
+        #Gets an object that specifies the border of a data bar.            
+        attr_accessor :bar_border
+        #Gets or sets how a data bar is filled with color.            
+        attr_accessor :bar_fill_type
+        #Get or set this DataBar's Color.                        
+        attr_accessor :color
+        #Gets or sets the direction the databar is displayed.            
+        attr_accessor :direction
+        #Get or set this DataBar's max value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Min to it.                        
+        attr_accessor :max_cfvo
+        #Represents the max length of data bar .            
+        attr_accessor :max_length
+        #Get or set this DataBar's min value object.  Cannot set null or CFValueObject  with type FormatConditionValueType.Max to it.                        
+        attr_accessor :min_cfvo
+        #Represents the min length of data bar .                        
+        attr_accessor :min_length
+        #Gets the NegativeBarFormat object associated with a data bar conditional    formatting rule.            
+        attr_accessor :negative_bar_format
+        #Get or set the flag indicating whether to show the values of the cells on  which this data bar is applied.  Default value is true.                        
+        attr_accessor :show_value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'axis_color' => :'AxisColor',
+        :'axis_position' => :'AxisPosition',
+        :'bar_border' => :'BarBorder',
+        :'bar_fill_type' => :'BarFillType',
+        :'color' => :'Color',
         :'direction' => :'Direction',
         :'max_cfvo' => :'MaxCfvo',
-        :'color' => :'Color',
-        :'min_length' => :'MinLength',
-        :'bar_fill_type' => :'BarFillType',
-        :'min_cfvo' => :'MinCfvo',
-        :'axis_position' => :'AxisPosition',
-        :'negative_bar_format' => :'NegativeBarFormat',
-        :'bar_border' => :'BarBorder',
-        :'axis_color' => :'AxisColor',
         :'max_length' => :'MaxLength',
+        :'min_cfvo' => :'MinCfvo',
+        :'min_length' => :'MinLength',
+        :'negative_bar_format' => :'NegativeBarFormat',
         :'show_value' => :'ShowValue'
       }
     end
@@ -83,17 +77,17 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'axis_color' => :'Color',
+        :'axis_position' => :'String',
+        :'bar_border' => :'DataBarBorder',
+        :'bar_fill_type' => :'String',
+        :'color' => :'Color',
         :'direction' => :'String',
         :'max_cfvo' => :'ConditionalFormattingValue',
-        :'color' => :'Color',
-        :'min_length' => :'Integer',
-        :'bar_fill_type' => :'String',
-        :'min_cfvo' => :'ConditionalFormattingValue',
-        :'axis_position' => :'String',
-        :'negative_bar_format' => :'NegativeBarFormat',
-        :'bar_border' => :'DataBarBorder',
-        :'axis_color' => :'Color',
         :'max_length' => :'Integer',
+        :'min_cfvo' => :'ConditionalFormattingValue',
+        :'min_length' => :'Integer',
+        :'negative_bar_format' => :'NegativeBarFormat',
         :'show_value' => :'BOOLEAN'
       }
     end
@@ -106,52 +100,41 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Direction')
-        self.direction = attributes[:'Direction']
-      end
-
-      if attributes.has_key?(:'MaxCfvo')
-        self.max_cfvo = attributes[:'MaxCfvo']
-      end
-
-      if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
-      end
-
-      if attributes.has_key?(:'MinLength')
-        self.min_length = attributes[:'MinLength']
-      end
-
-      if attributes.has_key?(:'BarFillType')
-        self.bar_fill_type = attributes[:'BarFillType']
-      end
-
-      if attributes.has_key?(:'MinCfvo')
-        self.min_cfvo = attributes[:'MinCfvo']
-      end
-
-      if attributes.has_key?(:'AxisPosition')
-        self.axis_position = attributes[:'AxisPosition']
-      end
-
-      if attributes.has_key?(:'NegativeBarFormat')
-        self.negative_bar_format = attributes[:'NegativeBarFormat']
-      end
-
-      if attributes.has_key?(:'BarBorder')
-        self.bar_border = attributes[:'BarBorder']
-      end
-
       if attributes.has_key?(:'AxisColor')
-        self.axis_color = attributes[:'AxisColor']
+          self.axis_color = attributes[:'AxisColor']
       end
-
+      if attributes.has_key?(:'AxisPosition')
+          self.axis_position = attributes[:'AxisPosition']
+      end
+      if attributes.has_key?(:'BarBorder')
+          self.bar_border = attributes[:'BarBorder']
+      end
+      if attributes.has_key?(:'BarFillType')
+          self.bar_fill_type = attributes[:'BarFillType']
+      end
+      if attributes.has_key?(:'Color')
+          self.color = attributes[:'Color']
+      end
+      if attributes.has_key?(:'Direction')
+          self.direction = attributes[:'Direction']
+      end
+      if attributes.has_key?(:'MaxCfvo')
+          self.max_cfvo = attributes[:'MaxCfvo']
+      end
       if attributes.has_key?(:'MaxLength')
-        self.max_length = attributes[:'MaxLength']
+          self.max_length = attributes[:'MaxLength']
       end
-
+      if attributes.has_key?(:'MinCfvo')
+          self.min_cfvo = attributes[:'MinCfvo']
+      end
+      if attributes.has_key?(:'MinLength')
+          self.min_length = attributes[:'MinLength']
+      end
+      if attributes.has_key?(:'NegativeBarFormat')
+          self.negative_bar_format = attributes[:'NegativeBarFormat']
+      end
       if attributes.has_key?(:'ShowValue')
-        self.show_value = attributes[:'ShowValue']
+          self.show_value = attributes[:'ShowValue']
       end
 
     end
@@ -160,12 +143,61 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @axis_color.nil?
+          invalid_properties.push("invalid value for 'axis_color', axis_color cannot be nil.")
+      end
+      if @axis_position.nil?
+          invalid_properties.push("invalid value for 'axis_position', axis_position cannot be nil.")
+      end
+      if @bar_border.nil?
+          invalid_properties.push("invalid value for 'bar_border', bar_border cannot be nil.")
+      end
+      if @bar_fill_type.nil?
+          invalid_properties.push("invalid value for 'bar_fill_type', bar_fill_type cannot be nil.")
+      end
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @direction.nil?
+          invalid_properties.push("invalid value for 'direction', direction cannot be nil.")
+      end
+      if @max_cfvo.nil?
+          invalid_properties.push("invalid value for 'max_cfvo', max_cfvo cannot be nil.")
+      end
+      if @max_length.nil?
+          invalid_properties.push("invalid value for 'max_length', max_length cannot be nil.")
+      end
+      if @min_cfvo.nil?
+          invalid_properties.push("invalid value for 'min_cfvo', min_cfvo cannot be nil.")
+      end
+      if @min_length.nil?
+          invalid_properties.push("invalid value for 'min_length', min_length cannot be nil.")
+      end
+      if @negative_bar_format.nil?
+          invalid_properties.push("invalid value for 'negative_bar_format', negative_bar_format cannot be nil.")
+      end
+      if @show_value.nil?
+          invalid_properties.push("invalid value for 'show_value', show_value cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @axis_color.nil?
+      return false if @axis_position.nil?
+      return false if @bar_border.nil?
+      return false if @bar_fill_type.nil?
+      return false if @color.nil?
+      return false if @direction.nil?
+      return false if @max_cfvo.nil?
+      return false if @max_length.nil?
+      return false if @min_cfvo.nil?
+      return false if @min_length.nil?
+      return false if @negative_bar_format.nil?
+      return false if @show_value.nil?
       return true
     end
 
@@ -174,18 +206,19 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          axis_color == o.axis_color &&
+          axis_position == o.axis_position &&
+          bar_border == o.bar_border &&
+          bar_fill_type == o.bar_fill_type &&
+          color == o.color &&
           direction == o.direction &&
           max_cfvo == o.max_cfvo &&
-          color == o.color &&
-          min_length == o.min_length &&
-          bar_fill_type == o.bar_fill_type &&
-          min_cfvo == o.min_cfvo &&
-          axis_position == o.axis_position &&
-          negative_bar_format == o.negative_bar_format &&
-          bar_border == o.bar_border &&
-          axis_color == o.axis_color &&
           max_length == o.max_length &&
-          show_value == o.show_value
+          min_cfvo == o.min_cfvo &&
+          min_length == o.min_length &&
+          negative_bar_format == o.negative_bar_format &&
+          show_value == o.show_value 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -197,7 +230,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [direction, max_cfvo, color, min_length, bar_fill_type, min_cfvo, axis_position, negative_bar_format, bar_border, axis_color, max_length, show_value].hash
+      [ axis_color , axis_position , bar_border , bar_fill_type , color , direction , max_cfvo , max_length , min_cfvo , min_length , negative_bar_format , show_value ].hash
     end
 
     # Builds the object from hash

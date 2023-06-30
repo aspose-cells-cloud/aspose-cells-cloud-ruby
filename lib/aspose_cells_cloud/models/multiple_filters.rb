@@ -1,48 +1,54 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="MultipleFiltersrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class MultipleFilters
-    attr_accessor :multiple_filter_list
-
-    attr_accessor :match_blank
-
+        #            
+        attr_accessor :match_blank
+        #            
+        attr_accessor :multiple_filter_list
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'multiple_filter_list' => :'MultipleFilterList',
-        :'match_blank' => :'MatchBlank'
+        :'match_blank' => :'MatchBlank',
+        :'multiple_filter_list' => :'MultipleFilterList'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'multiple_filter_list' => :'Array<MultipleFilter>',
-        :'match_blank' => :'BOOLEAN'
+        :'match_blank' => :'BOOLEAN',
+        :'multiple_filter_list' => :'Array<MultipleFilter>'
       }
     end
 
@@ -54,14 +60,11 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'MultipleFilterList')
-        if (value = attributes[:'MultipleFilterList']).is_a?(Array)
-          self.multiple_filter_list = value
-        end
-      end
-
       if attributes.has_key?(:'MatchBlank')
-        self.match_blank = attributes[:'MatchBlank']
+          self.match_blank = attributes[:'MatchBlank']
+      end
+      if attributes.has_key?(:'MultipleFilterList')
+          self.multiple_filter_list = attributes[:'MultipleFilterList']
       end
 
     end
@@ -70,12 +73,21 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @match_blank.nil?
+          invalid_properties.push("invalid value for 'match_blank', match_blank cannot be nil.")
+      end
+      if @multiple_filter_list.nil?
+          invalid_properties.push("invalid value for 'multiple_filter_list', multiple_filter_list cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @match_blank.nil?
+      return false if @multiple_filter_list.nil?
       return true
     end
 
@@ -84,8 +96,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          multiple_filter_list == o.multiple_filter_list &&
-          match_blank == o.match_blank
+          match_blank == o.match_blank &&
+          multiple_filter_list == o.multiple_filter_list 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -97,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [multiple_filter_list, match_blank].hash
+      [ match_blank , multiple_filter_list ].hash
     end
 
     # Builds the object from hash

@@ -1,69 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Rangerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Range
-    # Gets the count of columns in the range.
-    attr_accessor :column_count
-
-    # Sets or gets the height of rows in this range
-    attr_accessor :row_height
-
-    # Gets or sets the name of the range.
-    attr_accessor :name
-
-    # Gets the index of the first column of the range.
-    attr_accessor :first_column
-
-    # Sets or gets the column width of this range
-    attr_accessor :column_width
-
-    # Gets the range's refers to.
-    attr_accessor :refers_to
-
-    # Gets the count of rows in the range.
-    attr_accessor :row_count
-
-    # Gets the index of the first row of the range.
-    attr_accessor :first_row
-
-    # Gets the Aspose.Cells.Range.Worksheetobject which contains this range.
-    attr_accessor :worksheet
-
+        #Gets the count of columns in the range.            
+        attr_accessor :column_count
+        #Sets or gets the column width of this range            
+        attr_accessor :column_width
+        #Gets the index of the first column of the range.            
+        attr_accessor :first_column
+        #Gets the index of the first row of the range.            
+        attr_accessor :first_row
+        #Gets or sets the name of the range.            
+        attr_accessor :name
+        #Gets the range's refers to.            
+        attr_accessor :refers_to
+        #Gets the count of rows in the range.            
+        attr_accessor :row_count
+        #Sets or gets the height of rows in this range            
+        attr_accessor :row_height
+        #Gets the Aspose.Cells.Range.Worksheetobject which contains this range.            
+        attr_accessor :worksheet
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'column_count' => :'ColumnCount',
-        :'row_height' => :'RowHeight',
-        :'name' => :'Name',
-        :'first_column' => :'FirstColumn',
         :'column_width' => :'ColumnWidth',
+        :'first_column' => :'FirstColumn',
+        :'first_row' => :'FirstRow',
+        :'name' => :'Name',
         :'refers_to' => :'RefersTo',
         :'row_count' => :'RowCount',
-        :'first_row' => :'FirstRow',
+        :'row_height' => :'RowHeight',
         :'worksheet' => :'Worksheet'
       }
     end
@@ -72,13 +69,13 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'column_count' => :'Integer',
-        :'row_height' => :'Float',
-        :'name' => :'String',
-        :'first_column' => :'Integer',
         :'column_width' => :'Float',
+        :'first_column' => :'Integer',
+        :'first_row' => :'Integer',
+        :'name' => :'String',
         :'refers_to' => :'String',
         :'row_count' => :'Integer',
-        :'first_row' => :'Integer',
+        :'row_height' => :'Float',
         :'worksheet' => :'String'
       }
     end
@@ -92,39 +89,31 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'ColumnCount')
-        self.column_count = attributes[:'ColumnCount']
+          self.column_count = attributes[:'ColumnCount']
       end
-
-      if attributes.has_key?(:'RowHeight')
-        self.row_height = attributes[:'RowHeight']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'FirstColumn')
-        self.first_column = attributes[:'FirstColumn']
-      end
-
       if attributes.has_key?(:'ColumnWidth')
-        self.column_width = attributes[:'ColumnWidth']
+          self.column_width = attributes[:'ColumnWidth']
       end
-
-      if attributes.has_key?(:'RefersTo')
-        self.refers_to = attributes[:'RefersTo']
+      if attributes.has_key?(:'FirstColumn')
+          self.first_column = attributes[:'FirstColumn']
       end
-
-      if attributes.has_key?(:'RowCount')
-        self.row_count = attributes[:'RowCount']
-      end
-
       if attributes.has_key?(:'FirstRow')
-        self.first_row = attributes[:'FirstRow']
+          self.first_row = attributes[:'FirstRow']
       end
-
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
+      if attributes.has_key?(:'RefersTo')
+          self.refers_to = attributes[:'RefersTo']
+      end
+      if attributes.has_key?(:'RowCount')
+          self.row_count = attributes[:'RowCount']
+      end
+      if attributes.has_key?(:'RowHeight')
+          self.row_height = attributes[:'RowHeight']
+      end
       if attributes.has_key?(:'Worksheet')
-        self.worksheet = attributes[:'Worksheet']
+          self.worksheet = attributes[:'Worksheet']
       end
 
     end
@@ -134,27 +123,31 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @column_count.nil?
-        invalid_properties.push("invalid value for 'column_count', column_count cannot be nil.")
+          invalid_properties.push("invalid value for 'column_count', column_count cannot be nil.")
       end
-
-      if @row_height.nil?
-        invalid_properties.push("invalid value for 'row_height', row_height cannot be nil.")
-      end
-
-      if @first_column.nil?
-        invalid_properties.push("invalid value for 'first_column', first_column cannot be nil.")
-      end
-
       if @column_width.nil?
-        invalid_properties.push("invalid value for 'column_width', column_width cannot be nil.")
+          invalid_properties.push("invalid value for 'column_width', column_width cannot be nil.")
       end
-
-      if @row_count.nil?
-        invalid_properties.push("invalid value for 'row_count', row_count cannot be nil.")
+      if @first_column.nil?
+          invalid_properties.push("invalid value for 'first_column', first_column cannot be nil.")
       end
-
       if @first_row.nil?
-        invalid_properties.push("invalid value for 'first_row', first_row cannot be nil.")
+          invalid_properties.push("invalid value for 'first_row', first_row cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @refers_to.nil?
+          invalid_properties.push("invalid value for 'refers_to', refers_to cannot be nil.")
+      end
+      if @row_count.nil?
+          invalid_properties.push("invalid value for 'row_count', row_count cannot be nil.")
+      end
+      if @row_height.nil?
+          invalid_properties.push("invalid value for 'row_height', row_height cannot be nil.")
+      end
+      if @worksheet.nil?
+          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
       end
 
       return invalid_properties
@@ -164,11 +157,14 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @column_count.nil?
-      return false if @row_height.nil?
-      return false if @first_column.nil?
       return false if @column_width.nil?
-      return false if @row_count.nil?
+      return false if @first_column.nil?
       return false if @first_row.nil?
+      return false if @name.nil?
+      return false if @refers_to.nil?
+      return false if @row_count.nil?
+      return false if @row_height.nil?
+      return false if @worksheet.nil?
       return true
     end
 
@@ -178,14 +174,15 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           column_count == o.column_count &&
-          row_height == o.row_height &&
-          name == o.name &&
-          first_column == o.first_column &&
           column_width == o.column_width &&
+          first_column == o.first_column &&
+          first_row == o.first_row &&
+          name == o.name &&
           refers_to == o.refers_to &&
           row_count == o.row_count &&
-          first_row == o.first_row &&
-          worksheet == o.worksheet
+          row_height == o.row_height &&
+          worksheet == o.worksheet 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -197,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [column_count, row_height, name, first_column, column_width, refers_to, row_count, first_row, worksheet].hash
+      [ column_count , column_width , first_column , first_row , name , refers_to , row_count , row_height , worksheet ].hash
     end
 
     # Builds the object from hash

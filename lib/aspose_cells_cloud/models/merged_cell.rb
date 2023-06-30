@@ -1,60 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="MergedCellrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class MergedCell
-    attr_accessor :link
-
-    attr_accessor :start_row
-
-    attr_accessor :start_column
-
-    attr_accessor :end_column
-
-    attr_accessor :end_row
-
+        #            
+        attr_accessor :end_column
+        #            
+        attr_accessor :end_row
+        #            
+        attr_accessor :start_column
+        #            
+        attr_accessor :start_row
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'start_row' => :'StartRow',
-        :'start_column' => :'StartColumn',
         :'end_column' => :'EndColumn',
-        :'end_row' => :'EndRow'
+        :'end_row' => :'EndRow',
+        :'start_column' => :'StartColumn',
+        :'start_row' => :'StartRow',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'start_row' => :'Integer',
-        :'start_column' => :'Integer',
         :'end_column' => :'Integer',
-        :'end_row' => :'Integer'
+        :'end_row' => :'Integer',
+        :'start_column' => :'Integer',
+        :'start_row' => :'Integer',
+        :'link' => :'Link'
       }
     end
 
@@ -66,24 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'StartRow')
-        self.start_row = attributes[:'StartRow']
-      end
-
-      if attributes.has_key?(:'StartColumn')
-        self.start_column = attributes[:'StartColumn']
-      end
-
       if attributes.has_key?(:'EndColumn')
-        self.end_column = attributes[:'EndColumn']
+          self.end_column = attributes[:'EndColumn']
       end
-
       if attributes.has_key?(:'EndRow')
-        self.end_row = attributes[:'EndRow']
+          self.end_row = attributes[:'EndRow']
+      end
+      if attributes.has_key?(:'StartColumn')
+          self.start_column = attributes[:'StartColumn']
+      end
+      if attributes.has_key?(:'StartRow')
+          self.start_row = attributes[:'StartRow']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -92,20 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @start_row.nil?
-        invalid_properties.push("invalid value for 'start_row', start_row cannot be nil.")
-      end
-
-      if @start_column.nil?
-        invalid_properties.push("invalid value for 'start_column', start_column cannot be nil.")
-      end
-
       if @end_column.nil?
-        invalid_properties.push("invalid value for 'end_column', end_column cannot be nil.")
+          invalid_properties.push("invalid value for 'end_column', end_column cannot be nil.")
       end
-
       if @end_row.nil?
-        invalid_properties.push("invalid value for 'end_row', end_row cannot be nil.")
+          invalid_properties.push("invalid value for 'end_row', end_row cannot be nil.")
+      end
+      if @start_column.nil?
+          invalid_properties.push("invalid value for 'start_column', start_column cannot be nil.")
+      end
+      if @start_row.nil?
+          invalid_properties.push("invalid value for 'start_row', start_row cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
 
       return invalid_properties
@@ -114,10 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @start_row.nil?
-      return false if @start_column.nil?
       return false if @end_column.nil?
       return false if @end_row.nil?
+      return false if @start_column.nil?
+      return false if @start_row.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -126,11 +129,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          start_row == o.start_row &&
-          start_column == o.start_column &&
           end_column == o.end_column &&
-          end_row == o.end_row
+          end_row == o.end_row &&
+          start_column == o.start_column &&
+          start_row == o.start_row &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -142,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, start_row, start_column, end_column, end_row].hash
+      [ end_column , end_row , start_column , start_row , link ].hash
     end
 
     # Builds the object from hash

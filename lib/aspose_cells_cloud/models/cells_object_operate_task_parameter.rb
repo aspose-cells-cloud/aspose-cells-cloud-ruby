@@ -1,52 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CellsObjectOperateTaskParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CellsObjectOperateTaskParameter
-    attr_accessor :operate_parameter
-
-    attr_accessor :destination_workbook
-
-    attr_accessor :operate_object
-
+        #            
+        attr_accessor :operate_object
+        #            
+        attr_accessor :operate_parameter
+        #            
+        attr_accessor :destination_workbook
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'operate_object' => :'OperateObject',
         :'operate_parameter' => :'OperateParameter',
-        :'destination_workbook' => :'DestinationWorkbook',
-        :'operate_object' => :'OperateObject'
+        :'destination_workbook' => :'DestinationWorkbook'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'operate_object' => :'OperateObject',
         :'operate_parameter' => :'OperateParameter',
-        :'destination_workbook' => :'FileSource',
-        :'operate_object' => :'OperateObject'
+        :'destination_workbook' => :'FileSource'
       }
     end
 
@@ -58,16 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'OperateParameter')
-        self.operate_parameter = attributes[:'OperateParameter']
-      end
-
-      if attributes.has_key?(:'DestinationWorkbook')
-        self.destination_workbook = attributes[:'DestinationWorkbook']
-      end
-
       if attributes.has_key?(:'OperateObject')
-        self.operate_object = attributes[:'OperateObject']
+          self.operate_object = attributes[:'OperateObject']
+      end
+      if attributes.has_key?(:'OperateParameter')
+          self.operate_parameter = attributes[:'OperateParameter']
+      end
+      if attributes.has_key?(:'DestinationWorkbook')
+          self.destination_workbook = attributes[:'DestinationWorkbook']
       end
 
     end
@@ -76,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @operate_object.nil?
+          invalid_properties.push("invalid value for 'operate_object', operate_object cannot be nil.")
+      end
+      if @operate_parameter.nil?
+          invalid_properties.push("invalid value for 'operate_parameter', operate_parameter cannot be nil.")
+      end
+      if @destination_workbook.nil?
+          invalid_properties.push("invalid value for 'destination_workbook', destination_workbook cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @operate_object.nil?
+      return false if @operate_parameter.nil?
+      return false if @destination_workbook.nil?
       return true
     end
 
@@ -90,9 +107,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          operate_object == o.operate_object &&
           operate_parameter == o.operate_parameter &&
-          destination_workbook == o.destination_workbook &&
-          operate_object == o.operate_object
+          destination_workbook == o.destination_workbook 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_parameter, destination_workbook, operate_object].hash
+      [ operate_object , operate_parameter , destination_workbook ].hash
     end
 
     # Builds the object from hash

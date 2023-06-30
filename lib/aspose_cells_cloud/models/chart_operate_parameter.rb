@@ -1,80 +1,94 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ChartOperateParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ChartOperateParameter
-    attr_accessor :operate_type
-
-    attr_accessor :title
-
-    attr_accessor :area
-
-    attr_accessor :category_data
-
-    attr_accessor :upper_left_row
-
-    attr_accessor :lower_right_column
-
-    attr_accessor :lower_right_row
-
-    attr_accessor :is_auto_get_serial_name
-
-    attr_accessor :chart_type
-
-    attr_accessor :is_vertical
-
+        #            
+        attr_accessor :chart_index
+        #            
+        attr_accessor :chart_type
+        #            
+        attr_accessor :upper_left_row
+        #            
+        attr_accessor :upper_left_column
+        #            
+        attr_accessor :lower_right_row
+        #            
+        attr_accessor :lower_right_column
+        #            
+        attr_accessor :area
+        #            
+        attr_accessor :is_vertical
+        #            
+        attr_accessor :category_data
+        #            
+        attr_accessor :is_auto_get_serial_name
+        #            
+        attr_accessor :title
+        #            
+        attr_accessor :operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'operate_type' => :'OperateType',
-        :'title' => :'Title',
-        :'area' => :'Area',
-        :'category_data' => :'CategoryData',
-        :'upper_left_row' => :'UpperLeftRow',
-        :'lower_right_column' => :'LowerRightColumn',
-        :'lower_right_row' => :'LowerRightRow',
-        :'is_auto_get_serial_name' => :'IsAutoGetSerialName',
+        :'chart_index' => :'ChartIndex',
         :'chart_type' => :'ChartType',
-        :'is_vertical' => :'IsVertical'
+        :'upper_left_row' => :'UpperLeftRow',
+        :'upper_left_column' => :'UpperLeftColumn',
+        :'lower_right_row' => :'LowerRightRow',
+        :'lower_right_column' => :'LowerRightColumn',
+        :'area' => :'Area',
+        :'is_vertical' => :'IsVertical',
+        :'category_data' => :'CategoryData',
+        :'is_auto_get_serial_name' => :'IsAutoGetSerialName',
+        :'title' => :'Title',
+        :'operate_type' => :'OperateType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'operate_type' => :'String',
-        :'title' => :'String',
-        :'area' => :'String',
-        :'category_data' => :'String',
-        :'upper_left_row' => :'Integer',
-        :'lower_right_column' => :'Integer',
-        :'lower_right_row' => :'Integer',
-        :'is_auto_get_serial_name' => :'BOOLEAN',
+        :'chart_index' => :'Integer',
         :'chart_type' => :'String',
-        :'is_vertical' => :'BOOLEAN'
+        :'upper_left_row' => :'Integer',
+        :'upper_left_column' => :'Integer',
+        :'lower_right_row' => :'Integer',
+        :'lower_right_column' => :'Integer',
+        :'area' => :'String',
+        :'is_vertical' => :'BOOLEAN',
+        :'category_data' => :'String',
+        :'is_auto_get_serial_name' => :'BOOLEAN',
+        :'title' => :'String',
+        :'operate_type' => :'String'
       }
     end
 
@@ -86,44 +100,41 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'OperateType')
-        self.operate_type = attributes[:'OperateType']
+      if attributes.has_key?(:'ChartIndex')
+          self.chart_index = attributes[:'ChartIndex']
       end
-
-      if attributes.has_key?(:'Title')
-        self.title = attributes[:'Title']
-      end
-
-      if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
-      end
-
-      if attributes.has_key?(:'CategoryData')
-        self.category_data = attributes[:'CategoryData']
-      end
-
-      if attributes.has_key?(:'UpperLeftRow')
-        self.upper_left_row = attributes[:'UpperLeftRow']
-      end
-
-      if attributes.has_key?(:'LowerRightColumn')
-        self.lower_right_column = attributes[:'LowerRightColumn']
-      end
-
-      if attributes.has_key?(:'LowerRightRow')
-        self.lower_right_row = attributes[:'LowerRightRow']
-      end
-
-      if attributes.has_key?(:'IsAutoGetSerialName')
-        self.is_auto_get_serial_name = attributes[:'IsAutoGetSerialName']
-      end
-
       if attributes.has_key?(:'ChartType')
-        self.chart_type = attributes[:'ChartType']
+          self.chart_type = attributes[:'ChartType']
       end
-
+      if attributes.has_key?(:'UpperLeftRow')
+          self.upper_left_row = attributes[:'UpperLeftRow']
+      end
+      if attributes.has_key?(:'UpperLeftColumn')
+          self.upper_left_column = attributes[:'UpperLeftColumn']
+      end
+      if attributes.has_key?(:'LowerRightRow')
+          self.lower_right_row = attributes[:'LowerRightRow']
+      end
+      if attributes.has_key?(:'LowerRightColumn')
+          self.lower_right_column = attributes[:'LowerRightColumn']
+      end
+      if attributes.has_key?(:'Area')
+          self.area = attributes[:'Area']
+      end
       if attributes.has_key?(:'IsVertical')
-        self.is_vertical = attributes[:'IsVertical']
+          self.is_vertical = attributes[:'IsVertical']
+      end
+      if attributes.has_key?(:'CategoryData')
+          self.category_data = attributes[:'CategoryData']
+      end
+      if attributes.has_key?(:'IsAutoGetSerialName')
+          self.is_auto_get_serial_name = attributes[:'IsAutoGetSerialName']
+      end
+      if attributes.has_key?(:'Title')
+          self.title = attributes[:'Title']
+      end
+      if attributes.has_key?(:'OperateType')
+          self.operate_type = attributes[:'OperateType']
       end
 
     end
@@ -132,12 +143,61 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @chart_index.nil?
+          invalid_properties.push("invalid value for 'chart_index', chart_index cannot be nil.")
+      end
+      if @chart_type.nil?
+          invalid_properties.push("invalid value for 'chart_type', chart_type cannot be nil.")
+      end
+      if @upper_left_row.nil?
+          invalid_properties.push("invalid value for 'upper_left_row', upper_left_row cannot be nil.")
+      end
+      if @upper_left_column.nil?
+          invalid_properties.push("invalid value for 'upper_left_column', upper_left_column cannot be nil.")
+      end
+      if @lower_right_row.nil?
+          invalid_properties.push("invalid value for 'lower_right_row', lower_right_row cannot be nil.")
+      end
+      if @lower_right_column.nil?
+          invalid_properties.push("invalid value for 'lower_right_column', lower_right_column cannot be nil.")
+      end
+      if @area.nil?
+          invalid_properties.push("invalid value for 'area', area cannot be nil.")
+      end
+      if @is_vertical.nil?
+          invalid_properties.push("invalid value for 'is_vertical', is_vertical cannot be nil.")
+      end
+      if @category_data.nil?
+          invalid_properties.push("invalid value for 'category_data', category_data cannot be nil.")
+      end
+      if @is_auto_get_serial_name.nil?
+          invalid_properties.push("invalid value for 'is_auto_get_serial_name', is_auto_get_serial_name cannot be nil.")
+      end
+      if @title.nil?
+          invalid_properties.push("invalid value for 'title', title cannot be nil.")
+      end
+      if @operate_type.nil?
+          invalid_properties.push("invalid value for 'operate_type', operate_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @chart_index.nil?
+      return false if @chart_type.nil?
+      return false if @upper_left_row.nil?
+      return false if @upper_left_column.nil?
+      return false if @lower_right_row.nil?
+      return false if @lower_right_column.nil?
+      return false if @area.nil?
+      return false if @is_vertical.nil?
+      return false if @category_data.nil?
+      return false if @is_auto_get_serial_name.nil?
+      return false if @title.nil?
+      return false if @operate_type.nil?
       return true
     end
 
@@ -146,16 +206,19 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          operate_type == o.operate_type &&
-          title == o.title &&
-          area == o.area &&
-          category_data == o.category_data &&
-          upper_left_row == o.upper_left_row &&
-          lower_right_column == o.lower_right_column &&
-          lower_right_row == o.lower_right_row &&
-          is_auto_get_serial_name == o.is_auto_get_serial_name &&
+          chart_index == o.chart_index &&
           chart_type == o.chart_type &&
-          is_vertical == o.is_vertical
+          upper_left_row == o.upper_left_row &&
+          upper_left_column == o.upper_left_column &&
+          lower_right_row == o.lower_right_row &&
+          lower_right_column == o.lower_right_column &&
+          area == o.area &&
+          is_vertical == o.is_vertical &&
+          category_data == o.category_data &&
+          is_auto_get_serial_name == o.is_auto_get_serial_name &&
+          title == o.title &&
+          operate_type == o.operate_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -167,7 +230,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_type, title, area, category_data, upper_left_row, lower_right_column, lower_right_row, is_auto_get_serial_name, chart_type, is_vertical].hash
+      [ chart_index , chart_type , upper_left_row , upper_left_column , lower_right_row , lower_right_column , area , is_vertical , category_data , is_auto_get_serial_name , title , operate_type ].hash
     end
 
     # Builds the object from hash

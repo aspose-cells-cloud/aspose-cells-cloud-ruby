@@ -1,64 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PicFormatOptionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PicFormatOption
-    attr_accessor :right
-
-    attr_accessor :bottom
-
-    attr_accessor :top
-
-    attr_accessor :scale
-
-    attr_accessor :type
-
-    attr_accessor :left
-
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :scale
+        #            
+        attr_accessor :left
+        #            
+        attr_accessor :right
+        #            
+        attr_accessor :top
+        #            
+        attr_accessor :bottom
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'right' => :'Right',
-        :'bottom' => :'Bottom',
-        :'top' => :'Top',
-        :'scale' => :'Scale',
         :'type' => :'Type',
-        :'left' => :'Left'
+        :'scale' => :'Scale',
+        :'left' => :'Left',
+        :'right' => :'Right',
+        :'top' => :'Top',
+        :'bottom' => :'Bottom'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'right' => :'Float',
-        :'bottom' => :'Float',
-        :'top' => :'Float',
-        :'scale' => :'Float',
         :'type' => :'String',
-        :'left' => :'Float'
+        :'scale' => :'Float',
+        :'left' => :'Float',
+        :'right' => :'Float',
+        :'top' => :'Float',
+        :'bottom' => :'Float'
       }
     end
 
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Right')
-        self.right = attributes[:'Right']
-      end
-
-      if attributes.has_key?(:'Bottom')
-        self.bottom = attributes[:'Bottom']
-      end
-
-      if attributes.has_key?(:'Top')
-        self.top = attributes[:'Top']
-      end
-
-      if attributes.has_key?(:'Scale')
-        self.scale = attributes[:'Scale']
-      end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
       end
-
+      if attributes.has_key?(:'Scale')
+          self.scale = attributes[:'Scale']
+      end
       if attributes.has_key?(:'Left')
-        self.left = attributes[:'Left']
+          self.left = attributes[:'Left']
+      end
+      if attributes.has_key?(:'Right')
+          self.right = attributes[:'Right']
+      end
+      if attributes.has_key?(:'Top')
+          self.top = attributes[:'Top']
+      end
+      if attributes.has_key?(:'Bottom')
+          self.bottom = attributes[:'Bottom']
       end
 
     end
@@ -100,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @scale.nil?
+          invalid_properties.push("invalid value for 'scale', scale cannot be nil.")
+      end
+      if @left.nil?
+          invalid_properties.push("invalid value for 'left', left cannot be nil.")
+      end
+      if @right.nil?
+          invalid_properties.push("invalid value for 'right', right cannot be nil.")
+      end
+      if @top.nil?
+          invalid_properties.push("invalid value for 'top', top cannot be nil.")
+      end
+      if @bottom.nil?
+          invalid_properties.push("invalid value for 'bottom', bottom cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @type.nil?
+      return false if @scale.nil?
+      return false if @left.nil?
+      return false if @right.nil?
+      return false if @top.nil?
+      return false if @bottom.nil?
       return true
     end
 
@@ -114,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          right == o.right &&
-          bottom == o.bottom &&
-          top == o.top &&
-          scale == o.scale &&
           type == o.type &&
-          left == o.left
+          scale == o.scale &&
+          left == o.left &&
+          right == o.right &&
+          top == o.top &&
+          bottom == o.bottom 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -131,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [right, bottom, top, scale, type, left].hash
+      [ type , scale , left , right , top , bottom ].hash
     end
 
     # Builds the object from hash

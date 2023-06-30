@@ -1,75 +1,74 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="FileVersionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # File Version
+
   class FileVersion
-    # File or folder name.
-    attr_accessor :name
-
-    # True if it is a folder.
-    attr_accessor :is_folder
-
-    # File or folder last modified DateTime.
-    attr_accessor :modified_date
-
-    # File or folder size.
-    attr_accessor :size
-
-    # File or folder path.
-    attr_accessor :path
-
-    # File Version ID.
-    attr_accessor :version_id
-
-    # Specifies whether the file is (true) or is not (false) the latest version of an file.
-    attr_accessor :is_latest
-
+        #            
+        attr_accessor :version_id
+        #            
+        attr_accessor :is_latest
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :is_folder
+        #            
+        attr_accessor :modified_date
+        #            
+        attr_accessor :size
+        #            
+        attr_accessor :path
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'version_id' => :'VersionId',
+        :'is_latest' => :'IsLatest',
         :'name' => :'Name',
         :'is_folder' => :'IsFolder',
         :'modified_date' => :'ModifiedDate',
         :'size' => :'Size',
-        :'path' => :'Path',
-        :'version_id' => :'VersionId',
-        :'is_latest' => :'IsLatest'
+        :'path' => :'Path'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'version_id' => :'String',
+        :'is_latest' => :'BOOLEAN',
         :'name' => :'String',
         :'is_folder' => :'BOOLEAN',
         :'modified_date' => :'DateTime',
         :'size' => :'Integer',
-        :'path' => :'String',
-        :'version_id' => :'String',
-        :'is_latest' => :'BOOLEAN'
+        :'path' => :'String'
       }
     end
 
@@ -81,32 +80,26 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'IsFolder')
-        self.is_folder = attributes[:'IsFolder']
-      end
-
-      if attributes.has_key?(:'ModifiedDate')
-        self.modified_date = attributes[:'ModifiedDate']
-      end
-
-      if attributes.has_key?(:'Size')
-        self.size = attributes[:'Size']
-      end
-
-      if attributes.has_key?(:'Path')
-        self.path = attributes[:'Path']
-      end
-
       if attributes.has_key?(:'VersionId')
-        self.version_id = attributes[:'VersionId']
+          self.version_id = attributes[:'VersionId']
       end
-
       if attributes.has_key?(:'IsLatest')
-        self.is_latest = attributes[:'IsLatest']
+          self.is_latest = attributes[:'IsLatest']
+      end
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
+      if attributes.has_key?(:'IsFolder')
+          self.is_folder = attributes[:'IsFolder']
+      end
+      if attributes.has_key?(:'ModifiedDate')
+          self.modified_date = attributes[:'ModifiedDate']
+      end
+      if attributes.has_key?(:'Size')
+          self.size = attributes[:'Size']
+      end
+      if attributes.has_key?(:'Path')
+          self.path = attributes[:'Path']
       end
 
     end
@@ -115,16 +108,26 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @is_folder.nil?
-        invalid_properties.push("invalid value for 'is_folder', is_folder cannot be nil.")
+      if @version_id.nil?
+          invalid_properties.push("invalid value for 'version_id', version_id cannot be nil.")
       end
-
-      if @size.nil?
-        invalid_properties.push("invalid value for 'size', size cannot be nil.")
-      end
-
       if @is_latest.nil?
-        invalid_properties.push("invalid value for 'is_latest', is_latest cannot be nil.")
+          invalid_properties.push("invalid value for 'is_latest', is_latest cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @is_folder.nil?
+          invalid_properties.push("invalid value for 'is_folder', is_folder cannot be nil.")
+      end
+      if @modified_date.nil?
+          invalid_properties.push("invalid value for 'modified_date', modified_date cannot be nil.")
+      end
+      if @size.nil?
+          invalid_properties.push("invalid value for 'size', size cannot be nil.")
+      end
+      if @path.nil?
+          invalid_properties.push("invalid value for 'path', path cannot be nil.")
       end
 
       return invalid_properties
@@ -133,9 +136,13 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @is_folder.nil?
-      return false if @size.nil?
+      return false if @version_id.nil?
       return false if @is_latest.nil?
+      return false if @name.nil?
+      return false if @is_folder.nil?
+      return false if @modified_date.nil?
+      return false if @size.nil?
+      return false if @path.nil?
       return true
     end
 
@@ -144,13 +151,14 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          version_id == o.version_id &&
+          is_latest == o.is_latest &&
           name == o.name &&
           is_folder == o.is_folder &&
           modified_date == o.modified_date &&
           size == o.size &&
-          path == o.path &&
-          version_id == o.version_id &&
-          is_latest == o.is_latest
+          path == o.path 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -162,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, is_folder, modified_date, size, path, version_id, is_latest].hash
+      [ version_id , is_latest , name , is_folder , modified_date , size , path ].hash
     end
 
     # Builds the object from hash

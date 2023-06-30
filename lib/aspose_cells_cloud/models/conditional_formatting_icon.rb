@@ -1,55 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ConditionalFormattingIconrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ConditionalFormattingIcon
-    # Gets and sets the icon's index in the icon set.             
-    attr_accessor :index
-
-    # Gets and sets the icon set type.             
-    attr_accessor :type
-
-    # Gets the icon set data.             
-    attr_accessor :image_data
-
+        #Gets the icon set data.                        
+        attr_accessor :image_data
+        #Gets and sets the icon's index in the icon set.                        
+        attr_accessor :index
+        #Gets and sets the icon set type.                        
+        attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'image_data' => :'ImageData',
         :'index' => :'Index',
-        :'type' => :'Type',
-        :'image_data' => :'ImageData'
+        :'type' => :'Type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'image_data' => :'String',
         :'index' => :'Integer',
-        :'type' => :'String',
-        :'image_data' => :'String'
+        :'type' => :'String'
       }
     end
 
@@ -61,16 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
       if attributes.has_key?(:'ImageData')
-        self.image_data = attributes[:'ImageData']
+          self.image_data = attributes[:'ImageData']
+      end
+      if attributes.has_key?(:'Index')
+          self.index = attributes[:'Index']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
       end
 
     end
@@ -79,8 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        invalid_properties.push("invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.")
+      if @image_data.nil?
+          invalid_properties.push("invalid value for 'image_data', image_data cannot be nil.")
+      end
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
       end
 
       return invalid_properties
@@ -89,19 +96,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
+      return false if @image_data.nil?
+      return false if @index.nil?
+      return false if @type.nil?
       return true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] image_data Value to be assigned
-    def image_data=(image_data)
-
-      if !image_data.nil? && image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        fail ArgumentError, "invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/."
-      end
-
-      @image_data = image_data
     end
 
     # Checks equality by comparing each attribute.
@@ -109,9 +107,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          image_data == o.image_data &&
           index == o.index &&
-          type == o.type &&
-          image_data == o.image_data
+          type == o.type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -123,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [index, type, image_data].hash
+      [ image_data , index , type ].hash
     end
 
     # Builds the object from hash

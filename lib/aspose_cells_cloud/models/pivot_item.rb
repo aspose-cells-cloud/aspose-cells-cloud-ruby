@@ -1,41 +1,44 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PivotItemrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PivotItem
-    attr_accessor :index
-
-    # Represents whether the specified item visible.
-    attr_accessor :is_hidden
-
-    # Gets the name
-    attr_accessor :name
-
-    # Gets the value of the specified item.
-    attr_accessor :value
-
+        #            
+        attr_accessor :index
+        #Represents whether the specified item visible.            
+        attr_accessor :is_hidden
+        #Gets the name            
+        attr_accessor :name
+        #Gets the value of the specified item.            
+        attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -66,19 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
+          self.index = attributes[:'Index']
       end
-
       if attributes.has_key?(:'IsHidden')
-        self.is_hidden = attributes[:'IsHidden']
+          self.is_hidden = attributes[:'IsHidden']
       end
-
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
       if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
+          self.value = attributes[:'Value']
       end
 
     end
@@ -87,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @is_hidden.nil?
+          invalid_properties.push("invalid value for 'is_hidden', is_hidden cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @value.nil?
+          invalid_properties.push("invalid value for 'value', value cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @index.nil?
+      return false if @is_hidden.nil?
+      return false if @name.nil?
+      return false if @value.nil?
       return true
     end
 
@@ -104,7 +121,8 @@ module AsposeCellsCloud
           index == o.index &&
           is_hidden == o.is_hidden &&
           name == o.name &&
-          value == o.value
+          value == o.value 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -116,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [index, is_hidden, name, value].hash
+      [ index , is_hidden , name , value ].hash
     end
 
     # Builds the object from hash

@@ -1,36 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ImportDataTaskParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ImportDataTaskParameter
-    attr_accessor :workbook
-
-    attr_accessor :import_option
-
-    attr_accessor :destination_workbook
-
+        #            
+        attr_accessor :workbook
+        #            
+        attr_accessor :import_option
+        #            
+        attr_accessor :destination_workbook
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Workbook')
-        self.workbook = attributes[:'Workbook']
+          self.workbook = attributes[:'Workbook']
       end
-
       if attributes.has_key?(:'ImportOption')
-        self.import_option = attributes[:'ImportOption']
+          self.import_option = attributes[:'ImportOption']
       end
-
       if attributes.has_key?(:'DestinationWorkbook')
-        self.destination_workbook = attributes[:'DestinationWorkbook']
+          self.destination_workbook = attributes[:'DestinationWorkbook']
       end
 
     end
@@ -76,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @workbook.nil?
+          invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
+      end
+      if @import_option.nil?
+          invalid_properties.push("invalid value for 'import_option', import_option cannot be nil.")
+      end
+      if @destination_workbook.nil?
+          invalid_properties.push("invalid value for 'destination_workbook', destination_workbook cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @workbook.nil?
+      return false if @import_option.nil?
+      return false if @destination_workbook.nil?
       return true
     end
 
@@ -92,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           workbook == o.workbook &&
           import_option == o.import_option &&
-          destination_workbook == o.destination_workbook
+          destination_workbook == o.destination_workbook 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [workbook, import_option, destination_workbook].hash
+      [ workbook , import_option , destination_workbook ].hash
     end
 
     # Builds the object from hash

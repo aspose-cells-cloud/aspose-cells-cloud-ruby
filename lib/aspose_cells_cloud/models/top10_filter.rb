@@ -1,56 +1,62 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Top10Filterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Top10Filter
-    attr_accessor :items
-
-    attr_accessor :is_percent
-
-    attr_accessor :is_top
-
-    attr_accessor :criteria
-
+        #            
+        attr_accessor :criteria
+        #            
+        attr_accessor :is_percent
+        #            
+        attr_accessor :is_top
+        #            
+        attr_accessor :items
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'items' => :'Items',
+        :'criteria' => :'Criteria',
         :'is_percent' => :'IsPercent',
         :'is_top' => :'IsTop',
-        :'criteria' => :'Criteria'
+        :'items' => :'Items'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'items' => :'Integer',
+        :'criteria' => :'String',
         :'is_percent' => :'BOOLEAN',
         :'is_top' => :'BOOLEAN',
-        :'criteria' => :'String'
+        :'items' => :'Integer'
       }
     end
 
@@ -62,20 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Items')
-        self.items = attributes[:'Items']
-      end
-
-      if attributes.has_key?(:'IsPercent')
-        self.is_percent = attributes[:'IsPercent']
-      end
-
-      if attributes.has_key?(:'IsTop')
-        self.is_top = attributes[:'IsTop']
-      end
-
       if attributes.has_key?(:'Criteria')
-        self.criteria = attributes[:'Criteria']
+          self.criteria = attributes[:'Criteria']
+      end
+      if attributes.has_key?(:'IsPercent')
+          self.is_percent = attributes[:'IsPercent']
+      end
+      if attributes.has_key?(:'IsTop')
+          self.is_top = attributes[:'IsTop']
+      end
+      if attributes.has_key?(:'Items')
+          self.items = attributes[:'Items']
       end
 
     end
@@ -84,16 +87,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @items.nil?
-        invalid_properties.push("invalid value for 'items', items cannot be nil.")
+      if @criteria.nil?
+          invalid_properties.push("invalid value for 'criteria', criteria cannot be nil.")
       end
-
       if @is_percent.nil?
-        invalid_properties.push("invalid value for 'is_percent', is_percent cannot be nil.")
+          invalid_properties.push("invalid value for 'is_percent', is_percent cannot be nil.")
       end
-
       if @is_top.nil?
-        invalid_properties.push("invalid value for 'is_top', is_top cannot be nil.")
+          invalid_properties.push("invalid value for 'is_top', is_top cannot be nil.")
+      end
+      if @items.nil?
+          invalid_properties.push("invalid value for 'items', items cannot be nil.")
       end
 
       return invalid_properties
@@ -102,9 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @items.nil?
+      return false if @criteria.nil?
       return false if @is_percent.nil?
       return false if @is_top.nil?
+      return false if @items.nil?
       return true
     end
 
@@ -113,10 +118,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          items == o.items &&
+          criteria == o.criteria &&
           is_percent == o.is_percent &&
           is_top == o.is_top &&
-          criteria == o.criteria
+          items == o.items 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -128,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [items, is_percent, is_top, criteria].hash
+      [ criteria , is_percent , is_top , items ].hash
     end
 
     # Builds the object from hash

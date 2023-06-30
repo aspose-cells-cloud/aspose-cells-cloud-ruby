@@ -1,86 +1,80 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ImageSaveOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ImageSaveOptions
-    attr_accessor :enable_http_compression
-
-    attr_accessor :save_format
-
-    # Make the workbook empty after saving the file.
-    attr_accessor :clear_data
-
-    # The cached file folder is used to store some large data.
-    attr_accessor :cached_file_folder
-
-    # Indicates whether validate merged areas before saving the file. The default value is false.             
-    attr_accessor :validate_merged_areas
-
-    attr_accessor :refresh_chart_cache
-
-    # If true and the directory does not exist, the directory will be automatically created before saving the file.             
-    attr_accessor :create_directory
-
-    attr_accessor :sort_names
-
-    attr_accessor :chart_image_type
-
-    attr_accessor :embeded_image_name_in_svg
-
-    attr_accessor :horizontal_resolution
-
-    attr_accessor :image_format
-
-    attr_accessor :is_cell_auto_fit
-
-    attr_accessor :one_page_per_sheet
-
-    attr_accessor :only_area
-
-    attr_accessor :printing_page
-
-    attr_accessor :print_with_status_dialog
-
-    attr_accessor :quality
-
-    attr_accessor :tiff_compression
-
-    attr_accessor :vertical_resolution
-
+        #            
+        attr_accessor :chart_image_type
+        #            
+        attr_accessor :embeded_image_name_in_svg
+        #            
+        attr_accessor :horizontal_resolution
+        #            
+        attr_accessor :image_format
+        #            
+        attr_accessor :is_cell_auto_fit
+        #            
+        attr_accessor :one_page_per_sheet
+        #            
+        attr_accessor :only_area
+        #            
+        attr_accessor :printing_page
+        #            
+        attr_accessor :print_with_status_dialog
+        #            
+        attr_accessor :quality
+        #            
+        attr_accessor :tiff_compression
+        #            
+        attr_accessor :vertical_resolution
+        #            
+        attr_accessor :save_format
+        #            
+        attr_accessor :cached_file_folder
+        #            
+        attr_accessor :clear_data
+        #            
+        attr_accessor :create_directory
+        #            
+        attr_accessor :enable_http_compression
+        #            
+        attr_accessor :refresh_chart_cache
+        #            
+        attr_accessor :sort_names
+        #            
+        attr_accessor :validate_merged_areas
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enable_http_compression' => :'EnableHTTPCompression',
-        :'save_format' => :'SaveFormat',
-        :'clear_data' => :'ClearData',
-        :'cached_file_folder' => :'CachedFileFolder',
-        :'validate_merged_areas' => :'ValidateMergedAreas',
-        :'refresh_chart_cache' => :'RefreshChartCache',
-        :'create_directory' => :'CreateDirectory',
-        :'sort_names' => :'SortNames',
         :'chart_image_type' => :'ChartImageType',
         :'embeded_image_name_in_svg' => :'EmbededImageNameInSvg',
         :'horizontal_resolution' => :'HorizontalResolution',
@@ -92,21 +86,21 @@ module AsposeCellsCloud
         :'print_with_status_dialog' => :'PrintWithStatusDialog',
         :'quality' => :'Quality',
         :'tiff_compression' => :'TiffCompression',
-        :'vertical_resolution' => :'VerticalResolution'
+        :'vertical_resolution' => :'VerticalResolution',
+        :'save_format' => :'SaveFormat',
+        :'cached_file_folder' => :'CachedFileFolder',
+        :'clear_data' => :'ClearData',
+        :'create_directory' => :'CreateDirectory',
+        :'enable_http_compression' => :'EnableHTTPCompression',
+        :'refresh_chart_cache' => :'RefreshChartCache',
+        :'sort_names' => :'SortNames',
+        :'validate_merged_areas' => :'ValidateMergedAreas'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'enable_http_compression' => :'BOOLEAN',
-        :'save_format' => :'String',
-        :'clear_data' => :'BOOLEAN',
-        :'cached_file_folder' => :'String',
-        :'validate_merged_areas' => :'BOOLEAN',
-        :'refresh_chart_cache' => :'BOOLEAN',
-        :'create_directory' => :'BOOLEAN',
-        :'sort_names' => :'BOOLEAN',
         :'chart_image_type' => :'String',
         :'embeded_image_name_in_svg' => :'String',
         :'horizontal_resolution' => :'Integer',
@@ -115,10 +109,18 @@ module AsposeCellsCloud
         :'one_page_per_sheet' => :'BOOLEAN',
         :'only_area' => :'BOOLEAN',
         :'printing_page' => :'String',
-        :'print_with_status_dialog' => :'Integer',
+        :'print_with_status_dialog' => :'BOOLEAN',
         :'quality' => :'Integer',
         :'tiff_compression' => :'String',
-        :'vertical_resolution' => :'Integer'
+        :'vertical_resolution' => :'Integer',
+        :'save_format' => :'String',
+        :'cached_file_folder' => :'String',
+        :'clear_data' => :'BOOLEAN',
+        :'create_directory' => :'BOOLEAN',
+        :'enable_http_compression' => :'BOOLEAN',
+        :'refresh_chart_cache' => :'BOOLEAN',
+        :'sort_names' => :'BOOLEAN',
+        :'validate_merged_areas' => :'BOOLEAN'
       }
     end
 
@@ -130,84 +132,65 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'EnableHTTPCompression')
-        self.enable_http_compression = attributes[:'EnableHTTPCompression']
-      end
-
-      if attributes.has_key?(:'SaveFormat')
-        self.save_format = attributes[:'SaveFormat']
-      end
-
-      if attributes.has_key?(:'ClearData')
-        self.clear_data = attributes[:'ClearData']
-      end
-
-      if attributes.has_key?(:'CachedFileFolder')
-        self.cached_file_folder = attributes[:'CachedFileFolder']
-      end
-
-      if attributes.has_key?(:'ValidateMergedAreas')
-        self.validate_merged_areas = attributes[:'ValidateMergedAreas']
-      end
-
-      if attributes.has_key?(:'RefreshChartCache')
-        self.refresh_chart_cache = attributes[:'RefreshChartCache']
-      end
-
-      if attributes.has_key?(:'CreateDirectory')
-        self.create_directory = attributes[:'CreateDirectory']
-      end
-
-      if attributes.has_key?(:'SortNames')
-        self.sort_names = attributes[:'SortNames']
-      end
-
       if attributes.has_key?(:'ChartImageType')
-        self.chart_image_type = attributes[:'ChartImageType']
+          self.chart_image_type = attributes[:'ChartImageType']
       end
-
       if attributes.has_key?(:'EmbededImageNameInSvg')
-        self.embeded_image_name_in_svg = attributes[:'EmbededImageNameInSvg']
+          self.embeded_image_name_in_svg = attributes[:'EmbededImageNameInSvg']
       end
-
       if attributes.has_key?(:'HorizontalResolution')
-        self.horizontal_resolution = attributes[:'HorizontalResolution']
+          self.horizontal_resolution = attributes[:'HorizontalResolution']
       end
-
       if attributes.has_key?(:'ImageFormat')
-        self.image_format = attributes[:'ImageFormat']
+          self.image_format = attributes[:'ImageFormat']
       end
-
       if attributes.has_key?(:'IsCellAutoFit')
-        self.is_cell_auto_fit = attributes[:'IsCellAutoFit']
+          self.is_cell_auto_fit = attributes[:'IsCellAutoFit']
       end
-
       if attributes.has_key?(:'OnePagePerSheet')
-        self.one_page_per_sheet = attributes[:'OnePagePerSheet']
+          self.one_page_per_sheet = attributes[:'OnePagePerSheet']
       end
-
       if attributes.has_key?(:'OnlyArea')
-        self.only_area = attributes[:'OnlyArea']
+          self.only_area = attributes[:'OnlyArea']
       end
-
       if attributes.has_key?(:'PrintingPage')
-        self.printing_page = attributes[:'PrintingPage']
+          self.printing_page = attributes[:'PrintingPage']
       end
-
       if attributes.has_key?(:'PrintWithStatusDialog')
-        self.print_with_status_dialog = attributes[:'PrintWithStatusDialog']
+          self.print_with_status_dialog = attributes[:'PrintWithStatusDialog']
       end
-
       if attributes.has_key?(:'Quality')
-        self.quality = attributes[:'Quality']
+          self.quality = attributes[:'Quality']
       end
-
       if attributes.has_key?(:'TiffCompression')
-        self.tiff_compression = attributes[:'TiffCompression']
+          self.tiff_compression = attributes[:'TiffCompression']
       end
-
       if attributes.has_key?(:'VerticalResolution')
-        self.vertical_resolution = attributes[:'VerticalResolution']
+          self.vertical_resolution = attributes[:'VerticalResolution']
+      end
+      if attributes.has_key?(:'SaveFormat')
+          self.save_format = attributes[:'SaveFormat']
+      end
+      if attributes.has_key?(:'CachedFileFolder')
+          self.cached_file_folder = attributes[:'CachedFileFolder']
+      end
+      if attributes.has_key?(:'ClearData')
+          self.clear_data = attributes[:'ClearData']
+      end
+      if attributes.has_key?(:'CreateDirectory')
+          self.create_directory = attributes[:'CreateDirectory']
+      end
+      if attributes.has_key?(:'EnableHTTPCompression')
+          self.enable_http_compression = attributes[:'EnableHTTPCompression']
+      end
+      if attributes.has_key?(:'RefreshChartCache')
+          self.refresh_chart_cache = attributes[:'RefreshChartCache']
+      end
+      if attributes.has_key?(:'SortNames')
+          self.sort_names = attributes[:'SortNames']
+      end
+      if attributes.has_key?(:'ValidateMergedAreas')
+          self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
 
     end
@@ -216,12 +199,93 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @chart_image_type.nil?
+          invalid_properties.push("invalid value for 'chart_image_type', chart_image_type cannot be nil.")
+      end
+      if @embeded_image_name_in_svg.nil?
+          invalid_properties.push("invalid value for 'embeded_image_name_in_svg', embeded_image_name_in_svg cannot be nil.")
+      end
+      if @horizontal_resolution.nil?
+          invalid_properties.push("invalid value for 'horizontal_resolution', horizontal_resolution cannot be nil.")
+      end
+      if @image_format.nil?
+          invalid_properties.push("invalid value for 'image_format', image_format cannot be nil.")
+      end
+      if @is_cell_auto_fit.nil?
+          invalid_properties.push("invalid value for 'is_cell_auto_fit', is_cell_auto_fit cannot be nil.")
+      end
+      if @one_page_per_sheet.nil?
+          invalid_properties.push("invalid value for 'one_page_per_sheet', one_page_per_sheet cannot be nil.")
+      end
+      if @only_area.nil?
+          invalid_properties.push("invalid value for 'only_area', only_area cannot be nil.")
+      end
+      if @printing_page.nil?
+          invalid_properties.push("invalid value for 'printing_page', printing_page cannot be nil.")
+      end
+      if @print_with_status_dialog.nil?
+          invalid_properties.push("invalid value for 'print_with_status_dialog', print_with_status_dialog cannot be nil.")
+      end
+      if @quality.nil?
+          invalid_properties.push("invalid value for 'quality', quality cannot be nil.")
+      end
+      if @tiff_compression.nil?
+          invalid_properties.push("invalid value for 'tiff_compression', tiff_compression cannot be nil.")
+      end
+      if @vertical_resolution.nil?
+          invalid_properties.push("invalid value for 'vertical_resolution', vertical_resolution cannot be nil.")
+      end
+      if @save_format.nil?
+          invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
+      end
+      if @cached_file_folder.nil?
+          invalid_properties.push("invalid value for 'cached_file_folder', cached_file_folder cannot be nil.")
+      end
+      if @clear_data.nil?
+          invalid_properties.push("invalid value for 'clear_data', clear_data cannot be nil.")
+      end
+      if @create_directory.nil?
+          invalid_properties.push("invalid value for 'create_directory', create_directory cannot be nil.")
+      end
+      if @enable_http_compression.nil?
+          invalid_properties.push("invalid value for 'enable_http_compression', enable_http_compression cannot be nil.")
+      end
+      if @refresh_chart_cache.nil?
+          invalid_properties.push("invalid value for 'refresh_chart_cache', refresh_chart_cache cannot be nil.")
+      end
+      if @sort_names.nil?
+          invalid_properties.push("invalid value for 'sort_names', sort_names cannot be nil.")
+      end
+      if @validate_merged_areas.nil?
+          invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @chart_image_type.nil?
+      return false if @embeded_image_name_in_svg.nil?
+      return false if @horizontal_resolution.nil?
+      return false if @image_format.nil?
+      return false if @is_cell_auto_fit.nil?
+      return false if @one_page_per_sheet.nil?
+      return false if @only_area.nil?
+      return false if @printing_page.nil?
+      return false if @print_with_status_dialog.nil?
+      return false if @quality.nil?
+      return false if @tiff_compression.nil?
+      return false if @vertical_resolution.nil?
+      return false if @save_format.nil?
+      return false if @cached_file_folder.nil?
+      return false if @clear_data.nil?
+      return false if @create_directory.nil?
+      return false if @enable_http_compression.nil?
+      return false if @refresh_chart_cache.nil?
+      return false if @sort_names.nil?
+      return false if @validate_merged_areas.nil?
       return true
     end
 
@@ -230,14 +294,6 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enable_http_compression == o.enable_http_compression &&
-          save_format == o.save_format &&
-          clear_data == o.clear_data &&
-          cached_file_folder == o.cached_file_folder &&
-          validate_merged_areas == o.validate_merged_areas &&
-          refresh_chart_cache == o.refresh_chart_cache &&
-          create_directory == o.create_directory &&
-          sort_names == o.sort_names &&
           chart_image_type == o.chart_image_type &&
           embeded_image_name_in_svg == o.embeded_image_name_in_svg &&
           horizontal_resolution == o.horizontal_resolution &&
@@ -249,7 +305,16 @@ module AsposeCellsCloud
           print_with_status_dialog == o.print_with_status_dialog &&
           quality == o.quality &&
           tiff_compression == o.tiff_compression &&
-          vertical_resolution == o.vertical_resolution
+          vertical_resolution == o.vertical_resolution &&
+          save_format == o.save_format &&
+          cached_file_folder == o.cached_file_folder &&
+          clear_data == o.clear_data &&
+          create_directory == o.create_directory &&
+          enable_http_compression == o.enable_http_compression &&
+          refresh_chart_cache == o.refresh_chart_cache &&
+          sort_names == o.sort_names &&
+          validate_merged_areas == o.validate_merged_areas 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -261,7 +326,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enable_http_compression, save_format, clear_data, cached_file_folder, validate_merged_areas, refresh_chart_cache, create_directory, sort_names, chart_image_type, embeded_image_name_in_svg, horizontal_resolution, image_format, is_cell_auto_fit, one_page_per_sheet, only_area, printing_page, print_with_status_dialog, quality, tiff_compression, vertical_resolution].hash
+      [ chart_image_type , embeded_image_name_in_svg , horizontal_resolution , image_format , is_cell_auto_fit , one_page_per_sheet , only_area , printing_page , print_with_status_dialog , quality , tiff_compression , vertical_resolution , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

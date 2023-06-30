@@ -1,45 +1,51 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PasteOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PasteOptions
-    attr_accessor :paste_type
-
-    attr_accessor :skip_blanks
-
-    attr_accessor :only_visible_cells
-
-    attr_accessor :transpose
-
+        #            
+        attr_accessor :only_visible_cells
+        #            
+        attr_accessor :paste_type
+        #            
+        attr_accessor :skip_blanks
+        #            
+        attr_accessor :transpose
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'only_visible_cells' => :'OnlyVisibleCells',
         :'paste_type' => :'PasteType',
         :'skip_blanks' => :'SkipBlanks',
-        :'only_visible_cells' => :'OnlyVisibleCells',
         :'transpose' => :'Transpose'
       }
     end
@@ -47,9 +53,9 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'only_visible_cells' => :'BOOLEAN',
         :'paste_type' => :'String',
         :'skip_blanks' => :'BOOLEAN',
-        :'only_visible_cells' => :'BOOLEAN',
         :'transpose' => :'BOOLEAN'
       }
     end
@@ -62,20 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'PasteType')
-        self.paste_type = attributes[:'PasteType']
-      end
-
-      if attributes.has_key?(:'SkipBlanks')
-        self.skip_blanks = attributes[:'SkipBlanks']
-      end
-
       if attributes.has_key?(:'OnlyVisibleCells')
-        self.only_visible_cells = attributes[:'OnlyVisibleCells']
+          self.only_visible_cells = attributes[:'OnlyVisibleCells']
       end
-
+      if attributes.has_key?(:'PasteType')
+          self.paste_type = attributes[:'PasteType']
+      end
+      if attributes.has_key?(:'SkipBlanks')
+          self.skip_blanks = attributes[:'SkipBlanks']
+      end
       if attributes.has_key?(:'Transpose')
-        self.transpose = attributes[:'Transpose']
+          self.transpose = attributes[:'Transpose']
       end
 
     end
@@ -84,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @only_visible_cells.nil?
+          invalid_properties.push("invalid value for 'only_visible_cells', only_visible_cells cannot be nil.")
+      end
+      if @paste_type.nil?
+          invalid_properties.push("invalid value for 'paste_type', paste_type cannot be nil.")
+      end
+      if @skip_blanks.nil?
+          invalid_properties.push("invalid value for 'skip_blanks', skip_blanks cannot be nil.")
+      end
+      if @transpose.nil?
+          invalid_properties.push("invalid value for 'transpose', transpose cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @only_visible_cells.nil?
+      return false if @paste_type.nil?
+      return false if @skip_blanks.nil?
+      return false if @transpose.nil?
       return true
     end
 
@@ -98,10 +118,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          only_visible_cells == o.only_visible_cells &&
           paste_type == o.paste_type &&
           skip_blanks == o.skip_blanks &&
-          only_visible_cells == o.only_visible_cells &&
-          transpose == o.transpose
+          transpose == o.transpose 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -113,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [paste_type, skip_blanks, only_visible_cells, transpose].hash
+      [ only_visible_cells , paste_type , skip_blanks , transpose ].hash
     end
 
     # Builds the object from hash

@@ -1,68 +1,74 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CreatePivotTableRequestrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CreatePivotTableRequest
-    attr_accessor :pivot_field_columns
-
-    attr_accessor :name
-
-    attr_accessor :use_same_source
-
-    attr_accessor :pivot_field_data
-
-    attr_accessor :pivot_field_rows
-
-    attr_accessor :dest_cell_name
-
-    attr_accessor :source_data
-
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :source_data
+        #            
+        attr_accessor :dest_cell_name
+        #            
+        attr_accessor :use_same_source
+        #            
+        attr_accessor :pivot_field_rows
+        #            
+        attr_accessor :pivot_field_columns
+        #            
+        attr_accessor :pivot_field_data
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'pivot_field_columns' => :'PivotFieldColumns',
         :'name' => :'Name',
-        :'use_same_source' => :'UseSameSource',
-        :'pivot_field_data' => :'PivotFieldData',
-        :'pivot_field_rows' => :'PivotFieldRows',
+        :'source_data' => :'SourceData',
         :'dest_cell_name' => :'DestCellName',
-        :'source_data' => :'SourceData'
+        :'use_same_source' => :'UseSameSource',
+        :'pivot_field_rows' => :'PivotFieldRows',
+        :'pivot_field_columns' => :'PivotFieldColumns',
+        :'pivot_field_data' => :'PivotFieldData'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'pivot_field_columns' => :'Array<Integer>',
         :'name' => :'String',
-        :'use_same_source' => :'BOOLEAN',
-        :'pivot_field_data' => :'Array<Integer>',
-        :'pivot_field_rows' => :'Array<Integer>',
+        :'source_data' => :'String',
         :'dest_cell_name' => :'String',
-        :'source_data' => :'String'
+        :'use_same_source' => :'BOOLEAN',
+        :'pivot_field_rows' => :'Array<Integer>',
+        :'pivot_field_columns' => :'Array<Integer>',
+        :'pivot_field_data' => :'Array<Integer>'
       }
     end
 
@@ -74,38 +80,26 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'PivotFieldColumns')
-        if (value = attributes[:'PivotFieldColumns']).is_a?(Array)
-          self.pivot_field_columns = value
-        end
-      end
-
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
-      if attributes.has_key?(:'UseSameSource')
-        self.use_same_source = attributes[:'UseSameSource']
-      end
-
-      if attributes.has_key?(:'PivotFieldData')
-        if (value = attributes[:'PivotFieldData']).is_a?(Array)
-          self.pivot_field_data = value
-        end
-      end
-
-      if attributes.has_key?(:'PivotFieldRows')
-        if (value = attributes[:'PivotFieldRows']).is_a?(Array)
-          self.pivot_field_rows = value
-        end
-      end
-
-      if attributes.has_key?(:'DestCellName')
-        self.dest_cell_name = attributes[:'DestCellName']
-      end
-
       if attributes.has_key?(:'SourceData')
-        self.source_data = attributes[:'SourceData']
+          self.source_data = attributes[:'SourceData']
+      end
+      if attributes.has_key?(:'DestCellName')
+          self.dest_cell_name = attributes[:'DestCellName']
+      end
+      if attributes.has_key?(:'UseSameSource')
+          self.use_same_source = attributes[:'UseSameSource']
+      end
+      if attributes.has_key?(:'PivotFieldRows')
+          self.pivot_field_rows = attributes[:'PivotFieldRows']
+      end
+      if attributes.has_key?(:'PivotFieldColumns')
+          self.pivot_field_columns = attributes[:'PivotFieldColumns']
+      end
+      if attributes.has_key?(:'PivotFieldData')
+          self.pivot_field_data = attributes[:'PivotFieldData']
       end
 
     end
@@ -114,8 +108,26 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @source_data.nil?
+          invalid_properties.push("invalid value for 'source_data', source_data cannot be nil.")
+      end
+      if @dest_cell_name.nil?
+          invalid_properties.push("invalid value for 'dest_cell_name', dest_cell_name cannot be nil.")
+      end
       if @use_same_source.nil?
-        invalid_properties.push("invalid value for 'use_same_source', use_same_source cannot be nil.")
+          invalid_properties.push("invalid value for 'use_same_source', use_same_source cannot be nil.")
+      end
+      if @pivot_field_rows.nil?
+          invalid_properties.push("invalid value for 'pivot_field_rows', pivot_field_rows cannot be nil.")
+      end
+      if @pivot_field_columns.nil?
+          invalid_properties.push("invalid value for 'pivot_field_columns', pivot_field_columns cannot be nil.")
+      end
+      if @pivot_field_data.nil?
+          invalid_properties.push("invalid value for 'pivot_field_data', pivot_field_data cannot be nil.")
       end
 
       return invalid_properties
@@ -124,7 +136,13 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
+      return false if @source_data.nil?
+      return false if @dest_cell_name.nil?
       return false if @use_same_source.nil?
+      return false if @pivot_field_rows.nil?
+      return false if @pivot_field_columns.nil?
+      return false if @pivot_field_data.nil?
       return true
     end
 
@@ -133,13 +151,14 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          pivot_field_columns == o.pivot_field_columns &&
           name == o.name &&
-          use_same_source == o.use_same_source &&
-          pivot_field_data == o.pivot_field_data &&
-          pivot_field_rows == o.pivot_field_rows &&
+          source_data == o.source_data &&
           dest_cell_name == o.dest_cell_name &&
-          source_data == o.source_data
+          use_same_source == o.use_same_source &&
+          pivot_field_rows == o.pivot_field_rows &&
+          pivot_field_columns == o.pivot_field_columns &&
+          pivot_field_data == o.pivot_field_data 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -151,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [pivot_field_columns, name, use_same_source, pivot_field_data, pivot_field_rows, dest_cell_name, source_data].hash
+      [ name , source_data , dest_cell_name , use_same_source , pivot_field_rows , pivot_field_columns , pivot_field_data ].hash
     end
 
     # Builds the object from hash

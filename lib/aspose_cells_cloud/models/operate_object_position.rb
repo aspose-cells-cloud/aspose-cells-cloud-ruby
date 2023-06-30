@@ -1,64 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="OperateObjectPositionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class OperateObjectPosition
-    attr_accessor :chart_index
-
-    attr_accessor :list_object_index
-
-    attr_accessor :sheet_name
-
-    attr_accessor :shape_index
-
-    attr_accessor :cell_name
-
-    attr_accessor :workbook
-
+        #            
+        attr_accessor :workbook
+        #            
+        attr_accessor :sheet_name
+        #            
+        attr_accessor :chart_index
+        #            
+        attr_accessor :shape_index
+        #            
+        attr_accessor :cell_name
+        #            
+        attr_accessor :list_object_index
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'chart_index' => :'ChartIndex',
-        :'list_object_index' => :'ListObjectIndex',
+        :'workbook' => :'Workbook',
         :'sheet_name' => :'SheetName',
+        :'chart_index' => :'ChartIndex',
         :'shape_index' => :'ShapeIndex',
         :'cell_name' => :'CellName',
-        :'workbook' => :'Workbook'
+        :'list_object_index' => :'ListObjectIndex'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'chart_index' => :'Integer',
-        :'list_object_index' => :'Integer',
+        :'workbook' => :'FileSource',
         :'sheet_name' => :'String',
+        :'chart_index' => :'Integer',
         :'shape_index' => :'Integer',
         :'cell_name' => :'String',
-        :'workbook' => :'FileSource'
+        :'list_object_index' => :'Integer'
       }
     end
 
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ChartIndex')
-        self.chart_index = attributes[:'ChartIndex']
-      end
-
-      if attributes.has_key?(:'ListObjectIndex')
-        self.list_object_index = attributes[:'ListObjectIndex']
-      end
-
-      if attributes.has_key?(:'SheetName')
-        self.sheet_name = attributes[:'SheetName']
-      end
-
-      if attributes.has_key?(:'ShapeIndex')
-        self.shape_index = attributes[:'ShapeIndex']
-      end
-
-      if attributes.has_key?(:'CellName')
-        self.cell_name = attributes[:'CellName']
-      end
-
       if attributes.has_key?(:'Workbook')
-        self.workbook = attributes[:'Workbook']
+          self.workbook = attributes[:'Workbook']
+      end
+      if attributes.has_key?(:'SheetName')
+          self.sheet_name = attributes[:'SheetName']
+      end
+      if attributes.has_key?(:'ChartIndex')
+          self.chart_index = attributes[:'ChartIndex']
+      end
+      if attributes.has_key?(:'ShapeIndex')
+          self.shape_index = attributes[:'ShapeIndex']
+      end
+      if attributes.has_key?(:'CellName')
+          self.cell_name = attributes[:'CellName']
+      end
+      if attributes.has_key?(:'ListObjectIndex')
+          self.list_object_index = attributes[:'ListObjectIndex']
       end
 
     end
@@ -100,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @workbook.nil?
+          invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
+      end
+      if @sheet_name.nil?
+          invalid_properties.push("invalid value for 'sheet_name', sheet_name cannot be nil.")
+      end
+      if @chart_index.nil?
+          invalid_properties.push("invalid value for 'chart_index', chart_index cannot be nil.")
+      end
+      if @shape_index.nil?
+          invalid_properties.push("invalid value for 'shape_index', shape_index cannot be nil.")
+      end
+      if @cell_name.nil?
+          invalid_properties.push("invalid value for 'cell_name', cell_name cannot be nil.")
+      end
+      if @list_object_index.nil?
+          invalid_properties.push("invalid value for 'list_object_index', list_object_index cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @workbook.nil?
+      return false if @sheet_name.nil?
+      return false if @chart_index.nil?
+      return false if @shape_index.nil?
+      return false if @cell_name.nil?
+      return false if @list_object_index.nil?
       return true
     end
 
@@ -114,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          chart_index == o.chart_index &&
-          list_object_index == o.list_object_index &&
+          workbook == o.workbook &&
           sheet_name == o.sheet_name &&
+          chart_index == o.chart_index &&
           shape_index == o.shape_index &&
           cell_name == o.cell_name &&
-          workbook == o.workbook
+          list_object_index == o.list_object_index 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -131,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [chart_index, list_object_index, sheet_name, shape_index, cell_name, workbook].hash
+      [ workbook , sheet_name , chart_index , shape_index , cell_name , list_object_index ].hash
     end
 
     # Builds the object from hash

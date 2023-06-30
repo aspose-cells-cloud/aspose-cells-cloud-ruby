@@ -1,257 +1,222 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Chartrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Chart
-    attr_accessor :link
-
-    # Gets or sets the angle of the first pie-chart or doughnut-chart slice, in degrees (clockwise from vertical). Applies only to pie, 3-D pie, and doughnut charts, 0 to 360.
-    attr_accessor :first_slice_angle
-
-    # Returns a Floor object that represents the walls of a 3-D chart.             
-    attr_accessor :floor
-
-    # Gets and sets how to plot the empty cells.
-    attr_accessor :plot_empty_cells_type
-
-    # True if Microsoft Excel scales a 3-D chart so that it's closer in size to the equivalent 2-D chart. The RightAngleAxes property must be True.
-    attr_accessor :auto_scaling
-
-    # Gets and sets the builtin style.
-    attr_accessor :style
-
-    # Gets the chart's series axis.
-    attr_accessor :series_axis
-
-    # Gets the chart's Y axis.
-    attr_accessor :value_axis
-
-    # Gets or sets a value indicating whether the chart displays a data table.
-    attr_accessor :show_data_table
-
-    # Indicates whether the chart is a 3d chart.
-    attr_accessor :is3_d
-
-    # Gets the chart area in the worksheet
-    attr_accessor :chart_area
-
-    # Represents the elevation of the 3-D chart view, in degrees.
-    attr_accessor :elevation
-
-    attr_accessor :side_wall
-
-    # Gets or sets a chart's type.
-    attr_accessor :type
-
-    # Gets the chart's title.
-    attr_accessor :title
-
-    # Returns a Walls object that represents the walls of a 3-D chart.
-    attr_accessor :walls
-
-    attr_accessor :back_wall
-
-    # Represents the chart data table.
-    attr_accessor :chart_data_table
-
-    # Returns or sets the height of a 3-D chart as a percentage of the chart width (between 5 and 500 percent).
-    attr_accessor :height_percent
-
-    # Returns or sets the space between bar or column clusters, as a percentage of the bar or column width. The value of this property must be between 0 and 500.             
-    attr_accessor :gap_width
-
-    # Gets the chart legend.
-    attr_accessor :legend
-
-    # Represents the chartShape;
-    attr_accessor :chart_object
-
-    # Gets or sets a value indicating whether the chart displays a data table.
-    attr_accessor :is_rectangular_cornered
-
-    # Gets the chart's second X axis.
-    attr_accessor :second_category_axis
-
-    # Gets the chart's second Y axis.
-    attr_accessor :second_value_axis
-
-    # Represents the way the chart is attached to the cells below it.
-    attr_accessor :placement
-
-    # Gets and sets the name of the chart.
-    attr_accessor :name
-
-    # True if Microsoft Excel resizes the chart to match the size of the chart sheet window.
-    attr_accessor :size_with_window
-
-    # True if the chart axes are at right angles.Applies only for 3-D charts(except Column3D and 3-D Pie Charts).
-    attr_accessor :right_angle_axes
-
-    # Indicates whether only plot visible cells.
-    attr_accessor :plot_visible_cells
-
-    # Gets or sets a value indicating whether the chart legend will be displayed. Default is true.
-    attr_accessor :show_legend
-
-    # The source is the data of the pivotTable.If PivotSource is not empty ,the chart is PivotChart.
-    attr_accessor :pivot_source
-
-    # Represents the depth of a 3-D chart as a percentage of the chart width (between 20 and 2000 percent).
-    attr_accessor :depth_percent
-
-    # Gets and sets the printed chart size.
-    attr_accessor :print_size
-
-    # Gets or sets the distance between the data series in a 3-D chart, as a percentage of the marker width.The value of this property must be between 0 and 500.
-    attr_accessor :gap_depth
-
-    # Returns all drawing shapes in this chart.
-    attr_accessor :shapes
-
-    # True if gridlines are drawn two-dimensionally on a 3-D chart.
-    attr_accessor :walls_and_gridlines2_d
-
-    # Gets a SeriesCollection collection representing the data series in the chart.
-    attr_accessor :n_series
-
-    # Represents the rotation of the 3-D chart view (the rotation of the plot area around the z-axis, in degrees).
-    attr_accessor :rotation_angle
-
-    # Gets the chart's plot area which includes axis tick lables.
-    attr_accessor :plot_area
-
-    # Gets the chart's X axis. The property is read only
-    attr_accessor :category_axis
-
-    # Returns or sets the perspective for the 3-D chart view. Must be between 0 and 100.This property is ignored if the RightAngleAxes property is True.
-    attr_accessor :perspective
-
-    # Indicates whether hide the pivot chart field buttons only when the chart is PivotChart
-    attr_accessor :hide_pivot_field_buttons
-
-    # Represents the page setup description in this chart.
-    attr_accessor :page_setup
-
+        #            
+        attr_accessor :auto_scaling
+        #            
+        attr_accessor :back_wall
+        #            
+        attr_accessor :category_axis
+        #            
+        attr_accessor :chart_area
+        #            
+        attr_accessor :chart_data_table
+        #            
+        attr_accessor :chart_object
+        #            
+        attr_accessor :depth_percent
+        #            
+        attr_accessor :elevation
+        #            
+        attr_accessor :first_slice_angle
+        #            
+        attr_accessor :floor
+        #            
+        attr_accessor :gap_depth
+        #            
+        attr_accessor :gap_width
+        #            
+        attr_accessor :height_percent
+        #            
+        attr_accessor :hide_pivot_field_buttons
+        #            
+        attr_accessor :is3_d
+        #            
+        attr_accessor :is_rectangular_cornered
+        #            
+        attr_accessor :legend
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :n_series
+        #            
+        attr_accessor :page_setup
+        #            
+        attr_accessor :perspective
+        #            
+        attr_accessor :pivot_source
+        #            
+        attr_accessor :placement
+        #            
+        attr_accessor :plot_area
+        #            
+        attr_accessor :plot_empty_cells_type
+        #            
+        attr_accessor :plot_visible_cells
+        #            
+        attr_accessor :print_size
+        #            
+        attr_accessor :right_angle_axes
+        #            
+        attr_accessor :rotation_angle
+        #            
+        attr_accessor :second_category_axis
+        #            
+        attr_accessor :second_value_axis
+        #            
+        attr_accessor :series_axis
+        #            
+        attr_accessor :shapes
+        #            
+        attr_accessor :show_data_table
+        #            
+        attr_accessor :show_legend
+        #            
+        attr_accessor :side_wall
+        #            
+        attr_accessor :size_with_window
+        #            
+        attr_accessor :style
+        #            
+        attr_accessor :title
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :value_axis
+        #            
+        attr_accessor :walls
+        #            
+        attr_accessor :walls_and_gridlines2_d
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
+        :'auto_scaling' => :'AutoScaling',
+        :'back_wall' => :'BackWall',
+        :'category_axis' => :'CategoryAxis',
+        :'chart_area' => :'ChartArea',
+        :'chart_data_table' => :'ChartDataTable',
+        :'chart_object' => :'ChartObject',
+        :'depth_percent' => :'DepthPercent',
+        :'elevation' => :'Elevation',
         :'first_slice_angle' => :'FirstSliceAngle',
         :'floor' => :'Floor',
-        :'plot_empty_cells_type' => :'PlotEmptyCellsType',
-        :'auto_scaling' => :'AutoScaling',
-        :'style' => :'Style',
-        :'series_axis' => :'SeriesAxis',
-        :'value_axis' => :'ValueAxis',
-        :'show_data_table' => :'ShowDataTable',
-        :'is3_d' => :'Is3D',
-        :'chart_area' => :'ChartArea',
-        :'elevation' => :'Elevation',
-        :'side_wall' => :'SideWall',
-        :'type' => :'Type',
-        :'title' => :'Title',
-        :'walls' => :'Walls',
-        :'back_wall' => :'BackWall',
-        :'chart_data_table' => :'ChartDataTable',
-        :'height_percent' => :'HeightPercent',
+        :'gap_depth' => :'GapDepth',
         :'gap_width' => :'GapWidth',
-        :'legend' => :'Legend',
-        :'chart_object' => :'ChartObject',
+        :'height_percent' => :'HeightPercent',
+        :'hide_pivot_field_buttons' => :'HidePivotFieldButtons',
+        :'is3_d' => :'Is3D',
         :'is_rectangular_cornered' => :'IsRectangularCornered',
+        :'legend' => :'Legend',
+        :'name' => :'Name',
+        :'n_series' => :'NSeries',
+        :'page_setup' => :'PageSetup',
+        :'perspective' => :'Perspective',
+        :'pivot_source' => :'PivotSource',
+        :'placement' => :'Placement',
+        :'plot_area' => :'PlotArea',
+        :'plot_empty_cells_type' => :'PlotEmptyCellsType',
+        :'plot_visible_cells' => :'PlotVisibleCells',
+        :'print_size' => :'PrintSize',
+        :'right_angle_axes' => :'RightAngleAxes',
+        :'rotation_angle' => :'RotationAngle',
         :'second_category_axis' => :'SecondCategoryAxis',
         :'second_value_axis' => :'SecondValueAxis',
-        :'placement' => :'Placement',
-        :'name' => :'Name',
-        :'size_with_window' => :'SizeWithWindow',
-        :'right_angle_axes' => :'RightAngleAxes',
-        :'plot_visible_cells' => :'PlotVisibleCells',
-        :'show_legend' => :'ShowLegend',
-        :'pivot_source' => :'PivotSource',
-        :'depth_percent' => :'DepthPercent',
-        :'print_size' => :'PrintSize',
-        :'gap_depth' => :'GapDepth',
+        :'series_axis' => :'SeriesAxis',
         :'shapes' => :'Shapes',
+        :'show_data_table' => :'ShowDataTable',
+        :'show_legend' => :'ShowLegend',
+        :'side_wall' => :'SideWall',
+        :'size_with_window' => :'SizeWithWindow',
+        :'style' => :'Style',
+        :'title' => :'Title',
+        :'type' => :'Type',
+        :'value_axis' => :'ValueAxis',
+        :'walls' => :'Walls',
         :'walls_and_gridlines2_d' => :'WallsAndGridlines2D',
-        :'n_series' => :'NSeries',
-        :'rotation_angle' => :'RotationAngle',
-        :'plot_area' => :'PlotArea',
-        :'category_axis' => :'CategoryAxis',
-        :'perspective' => :'Perspective',
-        :'hide_pivot_field_buttons' => :'HidePivotFieldButtons',
-        :'page_setup' => :'PageSetup'
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
+        :'auto_scaling' => :'BOOLEAN',
+        :'back_wall' => :'LinkElement',
+        :'category_axis' => :'LinkElement',
+        :'chart_area' => :'LinkElement',
+        :'chart_data_table' => :'LinkElement',
+        :'chart_object' => :'LinkElement',
+        :'depth_percent' => :'Integer',
+        :'elevation' => :'Integer',
         :'first_slice_angle' => :'Integer',
         :'floor' => :'LinkElement',
-        :'plot_empty_cells_type' => :'String',
-        :'auto_scaling' => :'BOOLEAN',
-        :'style' => :'Integer',
-        :'series_axis' => :'LinkElement',
-        :'value_axis' => :'LinkElement',
-        :'show_data_table' => :'BOOLEAN',
-        :'is3_d' => :'BOOLEAN',
-        :'chart_area' => :'LinkElement',
-        :'elevation' => :'Integer',
-        :'side_wall' => :'LinkElement',
-        :'type' => :'String',
-        :'title' => :'LinkElement',
-        :'walls' => :'LinkElement',
-        :'back_wall' => :'LinkElement',
-        :'chart_data_table' => :'LinkElement',
-        :'height_percent' => :'Integer',
+        :'gap_depth' => :'Integer',
         :'gap_width' => :'Integer',
-        :'legend' => :'LinkElement',
-        :'chart_object' => :'LinkElement',
+        :'height_percent' => :'Integer',
+        :'hide_pivot_field_buttons' => :'BOOLEAN',
+        :'is3_d' => :'BOOLEAN',
         :'is_rectangular_cornered' => :'BOOLEAN',
+        :'legend' => :'LinkElement',
+        :'name' => :'String',
+        :'n_series' => :'LinkElement',
+        :'page_setup' => :'LinkElement',
+        :'perspective' => :'Integer',
+        :'pivot_source' => :'String',
+        :'placement' => :'String',
+        :'plot_area' => :'LinkElement',
+        :'plot_empty_cells_type' => :'String',
+        :'plot_visible_cells' => :'BOOLEAN',
+        :'print_size' => :'String',
+        :'right_angle_axes' => :'BOOLEAN',
+        :'rotation_angle' => :'Integer',
         :'second_category_axis' => :'LinkElement',
         :'second_value_axis' => :'LinkElement',
-        :'placement' => :'String',
-        :'name' => :'String',
-        :'size_with_window' => :'BOOLEAN',
-        :'right_angle_axes' => :'BOOLEAN',
-        :'plot_visible_cells' => :'BOOLEAN',
-        :'show_legend' => :'BOOLEAN',
-        :'pivot_source' => :'String',
-        :'depth_percent' => :'Integer',
-        :'print_size' => :'String',
-        :'gap_depth' => :'Integer',
+        :'series_axis' => :'LinkElement',
         :'shapes' => :'LinkElement',
+        :'show_data_table' => :'BOOLEAN',
+        :'show_legend' => :'BOOLEAN',
+        :'side_wall' => :'LinkElement',
+        :'size_with_window' => :'BOOLEAN',
+        :'style' => :'Integer',
+        :'title' => :'LinkElement',
+        :'type' => :'String',
+        :'value_axis' => :'LinkElement',
+        :'walls' => :'LinkElement',
         :'walls_and_gridlines2_d' => :'BOOLEAN',
-        :'n_series' => :'LinkElement',
-        :'rotation_angle' => :'Integer',
-        :'plot_area' => :'LinkElement',
-        :'category_axis' => :'LinkElement',
-        :'perspective' => :'Integer',
-        :'hide_pivot_field_buttons' => :'BOOLEAN',
-        :'page_setup' => :'LinkElement'
+        :'link' => :'Link'
       }
     end
 
@@ -263,180 +228,137 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'FirstSliceAngle')
-        self.first_slice_angle = attributes[:'FirstSliceAngle']
-      end
-
-      if attributes.has_key?(:'Floor')
-        self.floor = attributes[:'Floor']
-      end
-
-      if attributes.has_key?(:'PlotEmptyCellsType')
-        self.plot_empty_cells_type = attributes[:'PlotEmptyCellsType']
-      end
-
       if attributes.has_key?(:'AutoScaling')
-        self.auto_scaling = attributes[:'AutoScaling']
+          self.auto_scaling = attributes[:'AutoScaling']
       end
-
-      if attributes.has_key?(:'Style')
-        self.style = attributes[:'Style']
-      end
-
-      if attributes.has_key?(:'SeriesAxis')
-        self.series_axis = attributes[:'SeriesAxis']
-      end
-
-      if attributes.has_key?(:'ValueAxis')
-        self.value_axis = attributes[:'ValueAxis']
-      end
-
-      if attributes.has_key?(:'ShowDataTable')
-        self.show_data_table = attributes[:'ShowDataTable']
-      end
-
-      if attributes.has_key?(:'Is3D')
-        self.is3_d = attributes[:'Is3D']
-      end
-
-      if attributes.has_key?(:'ChartArea')
-        self.chart_area = attributes[:'ChartArea']
-      end
-
-      if attributes.has_key?(:'Elevation')
-        self.elevation = attributes[:'Elevation']
-      end
-
-      if attributes.has_key?(:'SideWall')
-        self.side_wall = attributes[:'SideWall']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'Title')
-        self.title = attributes[:'Title']
-      end
-
-      if attributes.has_key?(:'Walls')
-        self.walls = attributes[:'Walls']
-      end
-
       if attributes.has_key?(:'BackWall')
-        self.back_wall = attributes[:'BackWall']
+          self.back_wall = attributes[:'BackWall']
       end
-
-      if attributes.has_key?(:'ChartDataTable')
-        self.chart_data_table = attributes[:'ChartDataTable']
-      end
-
-      if attributes.has_key?(:'HeightPercent')
-        self.height_percent = attributes[:'HeightPercent']
-      end
-
-      if attributes.has_key?(:'GapWidth')
-        self.gap_width = attributes[:'GapWidth']
-      end
-
-      if attributes.has_key?(:'Legend')
-        self.legend = attributes[:'Legend']
-      end
-
-      if attributes.has_key?(:'ChartObject')
-        self.chart_object = attributes[:'ChartObject']
-      end
-
-      if attributes.has_key?(:'IsRectangularCornered')
-        self.is_rectangular_cornered = attributes[:'IsRectangularCornered']
-      end
-
-      if attributes.has_key?(:'SecondCategoryAxis')
-        self.second_category_axis = attributes[:'SecondCategoryAxis']
-      end
-
-      if attributes.has_key?(:'SecondValueAxis')
-        self.second_value_axis = attributes[:'SecondValueAxis']
-      end
-
-      if attributes.has_key?(:'Placement')
-        self.placement = attributes[:'Placement']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'SizeWithWindow')
-        self.size_with_window = attributes[:'SizeWithWindow']
-      end
-
-      if attributes.has_key?(:'RightAngleAxes')
-        self.right_angle_axes = attributes[:'RightAngleAxes']
-      end
-
-      if attributes.has_key?(:'PlotVisibleCells')
-        self.plot_visible_cells = attributes[:'PlotVisibleCells']
-      end
-
-      if attributes.has_key?(:'ShowLegend')
-        self.show_legend = attributes[:'ShowLegend']
-      end
-
-      if attributes.has_key?(:'PivotSource')
-        self.pivot_source = attributes[:'PivotSource']
-      end
-
-      if attributes.has_key?(:'DepthPercent')
-        self.depth_percent = attributes[:'DepthPercent']
-      end
-
-      if attributes.has_key?(:'PrintSize')
-        self.print_size = attributes[:'PrintSize']
-      end
-
-      if attributes.has_key?(:'GapDepth')
-        self.gap_depth = attributes[:'GapDepth']
-      end
-
-      if attributes.has_key?(:'Shapes')
-        self.shapes = attributes[:'Shapes']
-      end
-
-      if attributes.has_key?(:'WallsAndGridlines2D')
-        self.walls_and_gridlines2_d = attributes[:'WallsAndGridlines2D']
-      end
-
-      if attributes.has_key?(:'NSeries')
-        self.n_series = attributes[:'NSeries']
-      end
-
-      if attributes.has_key?(:'RotationAngle')
-        self.rotation_angle = attributes[:'RotationAngle']
-      end
-
-      if attributes.has_key?(:'PlotArea')
-        self.plot_area = attributes[:'PlotArea']
-      end
-
       if attributes.has_key?(:'CategoryAxis')
-        self.category_axis = attributes[:'CategoryAxis']
+          self.category_axis = attributes[:'CategoryAxis']
       end
-
-      if attributes.has_key?(:'Perspective')
-        self.perspective = attributes[:'Perspective']
+      if attributes.has_key?(:'ChartArea')
+          self.chart_area = attributes[:'ChartArea']
       end
-
+      if attributes.has_key?(:'ChartDataTable')
+          self.chart_data_table = attributes[:'ChartDataTable']
+      end
+      if attributes.has_key?(:'ChartObject')
+          self.chart_object = attributes[:'ChartObject']
+      end
+      if attributes.has_key?(:'DepthPercent')
+          self.depth_percent = attributes[:'DepthPercent']
+      end
+      if attributes.has_key?(:'Elevation')
+          self.elevation = attributes[:'Elevation']
+      end
+      if attributes.has_key?(:'FirstSliceAngle')
+          self.first_slice_angle = attributes[:'FirstSliceAngle']
+      end
+      if attributes.has_key?(:'Floor')
+          self.floor = attributes[:'Floor']
+      end
+      if attributes.has_key?(:'GapDepth')
+          self.gap_depth = attributes[:'GapDepth']
+      end
+      if attributes.has_key?(:'GapWidth')
+          self.gap_width = attributes[:'GapWidth']
+      end
+      if attributes.has_key?(:'HeightPercent')
+          self.height_percent = attributes[:'HeightPercent']
+      end
       if attributes.has_key?(:'HidePivotFieldButtons')
-        self.hide_pivot_field_buttons = attributes[:'HidePivotFieldButtons']
+          self.hide_pivot_field_buttons = attributes[:'HidePivotFieldButtons']
       end
-
+      if attributes.has_key?(:'Is3D')
+          self.is3_d = attributes[:'Is3D']
+      end
+      if attributes.has_key?(:'IsRectangularCornered')
+          self.is_rectangular_cornered = attributes[:'IsRectangularCornered']
+      end
+      if attributes.has_key?(:'Legend')
+          self.legend = attributes[:'Legend']
+      end
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
+      if attributes.has_key?(:'NSeries')
+          self.n_series = attributes[:'NSeries']
+      end
       if attributes.has_key?(:'PageSetup')
-        self.page_setup = attributes[:'PageSetup']
+          self.page_setup = attributes[:'PageSetup']
+      end
+      if attributes.has_key?(:'Perspective')
+          self.perspective = attributes[:'Perspective']
+      end
+      if attributes.has_key?(:'PivotSource')
+          self.pivot_source = attributes[:'PivotSource']
+      end
+      if attributes.has_key?(:'Placement')
+          self.placement = attributes[:'Placement']
+      end
+      if attributes.has_key?(:'PlotArea')
+          self.plot_area = attributes[:'PlotArea']
+      end
+      if attributes.has_key?(:'PlotEmptyCellsType')
+          self.plot_empty_cells_type = attributes[:'PlotEmptyCellsType']
+      end
+      if attributes.has_key?(:'PlotVisibleCells')
+          self.plot_visible_cells = attributes[:'PlotVisibleCells']
+      end
+      if attributes.has_key?(:'PrintSize')
+          self.print_size = attributes[:'PrintSize']
+      end
+      if attributes.has_key?(:'RightAngleAxes')
+          self.right_angle_axes = attributes[:'RightAngleAxes']
+      end
+      if attributes.has_key?(:'RotationAngle')
+          self.rotation_angle = attributes[:'RotationAngle']
+      end
+      if attributes.has_key?(:'SecondCategoryAxis')
+          self.second_category_axis = attributes[:'SecondCategoryAxis']
+      end
+      if attributes.has_key?(:'SecondValueAxis')
+          self.second_value_axis = attributes[:'SecondValueAxis']
+      end
+      if attributes.has_key?(:'SeriesAxis')
+          self.series_axis = attributes[:'SeriesAxis']
+      end
+      if attributes.has_key?(:'Shapes')
+          self.shapes = attributes[:'Shapes']
+      end
+      if attributes.has_key?(:'ShowDataTable')
+          self.show_data_table = attributes[:'ShowDataTable']
+      end
+      if attributes.has_key?(:'ShowLegend')
+          self.show_legend = attributes[:'ShowLegend']
+      end
+      if attributes.has_key?(:'SideWall')
+          self.side_wall = attributes[:'SideWall']
+      end
+      if attributes.has_key?(:'SizeWithWindow')
+          self.size_with_window = attributes[:'SizeWithWindow']
+      end
+      if attributes.has_key?(:'Style')
+          self.style = attributes[:'Style']
+      end
+      if attributes.has_key?(:'Title')
+          self.title = attributes[:'Title']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'ValueAxis')
+          self.value_axis = attributes[:'ValueAxis']
+      end
+      if attributes.has_key?(:'Walls')
+          self.walls = attributes[:'Walls']
+      end
+      if attributes.has_key?(:'WallsAndGridlines2D')
+          self.walls_and_gridlines2_d = attributes[:'WallsAndGridlines2D']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -445,12 +367,189 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @auto_scaling.nil?
+          invalid_properties.push("invalid value for 'auto_scaling', auto_scaling cannot be nil.")
+      end
+      if @back_wall.nil?
+          invalid_properties.push("invalid value for 'back_wall', back_wall cannot be nil.")
+      end
+      if @category_axis.nil?
+          invalid_properties.push("invalid value for 'category_axis', category_axis cannot be nil.")
+      end
+      if @chart_area.nil?
+          invalid_properties.push("invalid value for 'chart_area', chart_area cannot be nil.")
+      end
+      if @chart_data_table.nil?
+          invalid_properties.push("invalid value for 'chart_data_table', chart_data_table cannot be nil.")
+      end
+      if @chart_object.nil?
+          invalid_properties.push("invalid value for 'chart_object', chart_object cannot be nil.")
+      end
+      if @depth_percent.nil?
+          invalid_properties.push("invalid value for 'depth_percent', depth_percent cannot be nil.")
+      end
+      if @elevation.nil?
+          invalid_properties.push("invalid value for 'elevation', elevation cannot be nil.")
+      end
+      if @first_slice_angle.nil?
+          invalid_properties.push("invalid value for 'first_slice_angle', first_slice_angle cannot be nil.")
+      end
+      if @floor.nil?
+          invalid_properties.push("invalid value for 'floor', floor cannot be nil.")
+      end
+      if @gap_depth.nil?
+          invalid_properties.push("invalid value for 'gap_depth', gap_depth cannot be nil.")
+      end
+      if @gap_width.nil?
+          invalid_properties.push("invalid value for 'gap_width', gap_width cannot be nil.")
+      end
+      if @height_percent.nil?
+          invalid_properties.push("invalid value for 'height_percent', height_percent cannot be nil.")
+      end
+      if @hide_pivot_field_buttons.nil?
+          invalid_properties.push("invalid value for 'hide_pivot_field_buttons', hide_pivot_field_buttons cannot be nil.")
+      end
+      if @is3_d.nil?
+          invalid_properties.push("invalid value for 'is3_d', is3_d cannot be nil.")
+      end
+      if @is_rectangular_cornered.nil?
+          invalid_properties.push("invalid value for 'is_rectangular_cornered', is_rectangular_cornered cannot be nil.")
+      end
+      if @legend.nil?
+          invalid_properties.push("invalid value for 'legend', legend cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @n_series.nil?
+          invalid_properties.push("invalid value for 'n_series', n_series cannot be nil.")
+      end
+      if @page_setup.nil?
+          invalid_properties.push("invalid value for 'page_setup', page_setup cannot be nil.")
+      end
+      if @perspective.nil?
+          invalid_properties.push("invalid value for 'perspective', perspective cannot be nil.")
+      end
+      if @pivot_source.nil?
+          invalid_properties.push("invalid value for 'pivot_source', pivot_source cannot be nil.")
+      end
+      if @placement.nil?
+          invalid_properties.push("invalid value for 'placement', placement cannot be nil.")
+      end
+      if @plot_area.nil?
+          invalid_properties.push("invalid value for 'plot_area', plot_area cannot be nil.")
+      end
+      if @plot_empty_cells_type.nil?
+          invalid_properties.push("invalid value for 'plot_empty_cells_type', plot_empty_cells_type cannot be nil.")
+      end
+      if @plot_visible_cells.nil?
+          invalid_properties.push("invalid value for 'plot_visible_cells', plot_visible_cells cannot be nil.")
+      end
+      if @print_size.nil?
+          invalid_properties.push("invalid value for 'print_size', print_size cannot be nil.")
+      end
+      if @right_angle_axes.nil?
+          invalid_properties.push("invalid value for 'right_angle_axes', right_angle_axes cannot be nil.")
+      end
+      if @rotation_angle.nil?
+          invalid_properties.push("invalid value for 'rotation_angle', rotation_angle cannot be nil.")
+      end
+      if @second_category_axis.nil?
+          invalid_properties.push("invalid value for 'second_category_axis', second_category_axis cannot be nil.")
+      end
+      if @second_value_axis.nil?
+          invalid_properties.push("invalid value for 'second_value_axis', second_value_axis cannot be nil.")
+      end
+      if @series_axis.nil?
+          invalid_properties.push("invalid value for 'series_axis', series_axis cannot be nil.")
+      end
+      if @shapes.nil?
+          invalid_properties.push("invalid value for 'shapes', shapes cannot be nil.")
+      end
+      if @show_data_table.nil?
+          invalid_properties.push("invalid value for 'show_data_table', show_data_table cannot be nil.")
+      end
+      if @show_legend.nil?
+          invalid_properties.push("invalid value for 'show_legend', show_legend cannot be nil.")
+      end
+      if @side_wall.nil?
+          invalid_properties.push("invalid value for 'side_wall', side_wall cannot be nil.")
+      end
+      if @size_with_window.nil?
+          invalid_properties.push("invalid value for 'size_with_window', size_with_window cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+      if @title.nil?
+          invalid_properties.push("invalid value for 'title', title cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @value_axis.nil?
+          invalid_properties.push("invalid value for 'value_axis', value_axis cannot be nil.")
+      end
+      if @walls.nil?
+          invalid_properties.push("invalid value for 'walls', walls cannot be nil.")
+      end
+      if @walls_and_gridlines2_d.nil?
+          invalid_properties.push("invalid value for 'walls_and_gridlines2_d', walls_and_gridlines2_d cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @auto_scaling.nil?
+      return false if @back_wall.nil?
+      return false if @category_axis.nil?
+      return false if @chart_area.nil?
+      return false if @chart_data_table.nil?
+      return false if @chart_object.nil?
+      return false if @depth_percent.nil?
+      return false if @elevation.nil?
+      return false if @first_slice_angle.nil?
+      return false if @floor.nil?
+      return false if @gap_depth.nil?
+      return false if @gap_width.nil?
+      return false if @height_percent.nil?
+      return false if @hide_pivot_field_buttons.nil?
+      return false if @is3_d.nil?
+      return false if @is_rectangular_cornered.nil?
+      return false if @legend.nil?
+      return false if @name.nil?
+      return false if @n_series.nil?
+      return false if @page_setup.nil?
+      return false if @perspective.nil?
+      return false if @pivot_source.nil?
+      return false if @placement.nil?
+      return false if @plot_area.nil?
+      return false if @plot_empty_cells_type.nil?
+      return false if @plot_visible_cells.nil?
+      return false if @print_size.nil?
+      return false if @right_angle_axes.nil?
+      return false if @rotation_angle.nil?
+      return false if @second_category_axis.nil?
+      return false if @second_value_axis.nil?
+      return false if @series_axis.nil?
+      return false if @shapes.nil?
+      return false if @show_data_table.nil?
+      return false if @show_legend.nil?
+      return false if @side_wall.nil?
+      return false if @size_with_window.nil?
+      return false if @style.nil?
+      return false if @title.nil?
+      return false if @type.nil?
+      return false if @value_axis.nil?
+      return false if @walls.nil?
+      return false if @walls_and_gridlines2_d.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -459,50 +558,51 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
+          auto_scaling == o.auto_scaling &&
+          back_wall == o.back_wall &&
+          category_axis == o.category_axis &&
+          chart_area == o.chart_area &&
+          chart_data_table == o.chart_data_table &&
+          chart_object == o.chart_object &&
+          depth_percent == o.depth_percent &&
+          elevation == o.elevation &&
           first_slice_angle == o.first_slice_angle &&
           floor == o.floor &&
-          plot_empty_cells_type == o.plot_empty_cells_type &&
-          auto_scaling == o.auto_scaling &&
-          style == o.style &&
-          series_axis == o.series_axis &&
-          value_axis == o.value_axis &&
-          show_data_table == o.show_data_table &&
-          is3_d == o.is3_d &&
-          chart_area == o.chart_area &&
-          elevation == o.elevation &&
-          side_wall == o.side_wall &&
-          type == o.type &&
-          title == o.title &&
-          walls == o.walls &&
-          back_wall == o.back_wall &&
-          chart_data_table == o.chart_data_table &&
-          height_percent == o.height_percent &&
+          gap_depth == o.gap_depth &&
           gap_width == o.gap_width &&
-          legend == o.legend &&
-          chart_object == o.chart_object &&
+          height_percent == o.height_percent &&
+          hide_pivot_field_buttons == o.hide_pivot_field_buttons &&
+          is3_d == o.is3_d &&
           is_rectangular_cornered == o.is_rectangular_cornered &&
+          legend == o.legend &&
+          name == o.name &&
+          n_series == o.n_series &&
+          page_setup == o.page_setup &&
+          perspective == o.perspective &&
+          pivot_source == o.pivot_source &&
+          placement == o.placement &&
+          plot_area == o.plot_area &&
+          plot_empty_cells_type == o.plot_empty_cells_type &&
+          plot_visible_cells == o.plot_visible_cells &&
+          print_size == o.print_size &&
+          right_angle_axes == o.right_angle_axes &&
+          rotation_angle == o.rotation_angle &&
           second_category_axis == o.second_category_axis &&
           second_value_axis == o.second_value_axis &&
-          placement == o.placement &&
-          name == o.name &&
-          size_with_window == o.size_with_window &&
-          right_angle_axes == o.right_angle_axes &&
-          plot_visible_cells == o.plot_visible_cells &&
-          show_legend == o.show_legend &&
-          pivot_source == o.pivot_source &&
-          depth_percent == o.depth_percent &&
-          print_size == o.print_size &&
-          gap_depth == o.gap_depth &&
+          series_axis == o.series_axis &&
           shapes == o.shapes &&
+          show_data_table == o.show_data_table &&
+          show_legend == o.show_legend &&
+          side_wall == o.side_wall &&
+          size_with_window == o.size_with_window &&
+          style == o.style &&
+          title == o.title &&
+          type == o.type &&
+          value_axis == o.value_axis &&
+          walls == o.walls &&
           walls_and_gridlines2_d == o.walls_and_gridlines2_d &&
-          n_series == o.n_series &&
-          rotation_angle == o.rotation_angle &&
-          plot_area == o.plot_area &&
-          category_axis == o.category_axis &&
-          perspective == o.perspective &&
-          hide_pivot_field_buttons == o.hide_pivot_field_buttons &&
-          page_setup == o.page_setup
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -514,7 +614,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, first_slice_angle, floor, plot_empty_cells_type, auto_scaling, style, series_axis, value_axis, show_data_table, is3_d, chart_area, elevation, side_wall, type, title, walls, back_wall, chart_data_table, height_percent, gap_width, legend, chart_object, is_rectangular_cornered, second_category_axis, second_value_axis, placement, name, size_with_window, right_angle_axes, plot_visible_cells, show_legend, pivot_source, depth_percent, print_size, gap_depth, shapes, walls_and_gridlines2_d, n_series, rotation_angle, plot_area, category_axis, perspective, hide_pivot_field_buttons, page_setup].hash
+      [ auto_scaling , back_wall , category_axis , chart_area , chart_data_table , chart_object , depth_percent , elevation , first_slice_angle , floor , gap_depth , gap_width , height_percent , hide_pivot_field_buttons , is3_d , is_rectangular_cornered , legend , name , n_series , page_setup , perspective , pivot_source , placement , plot_area , plot_empty_cells_type , plot_visible_cells , print_size , right_angle_axes , rotation_angle , second_category_axis , second_value_axis , series_axis , shapes , show_data_table , show_legend , side_wall , size_with_window , style , title , type , value_axis , walls , walls_and_gridlines2_d , link ].hash
     end
 
     # Builds the object from hash

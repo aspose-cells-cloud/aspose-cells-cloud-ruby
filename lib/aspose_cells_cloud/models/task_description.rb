@@ -1,48 +1,54 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="TaskDescriptionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class TaskDescription
-    attr_accessor :task_parameter
-
-    attr_accessor :task_type
-
+        #            
+        attr_accessor :task_type
+        #            
+        attr_accessor :task_parameter
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'task_parameter' => :'TaskParameter',
-        :'task_type' => :'TaskType'
+        :'task_type' => :'TaskType',
+        :'task_parameter' => :'TaskParameter'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'task_parameter' => :'TaskParameter',
-        :'task_type' => :'String'
+        :'task_type' => :'String',
+        :'task_parameter' => :'TaskParameter'
       }
     end
 
@@ -54,12 +60,11 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'TaskParameter')
-        self.task_parameter = attributes[:'TaskParameter']
-      end
-
       if attributes.has_key?(:'TaskType')
-        self.task_type = attributes[:'TaskType']
+          self.task_type = attributes[:'TaskType']
+      end
+      if attributes.has_key?(:'TaskParameter')
+          self.task_parameter = attributes[:'TaskParameter']
       end
 
     end
@@ -68,12 +73,21 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @task_type.nil?
+          invalid_properties.push("invalid value for 'task_type', task_type cannot be nil.")
+      end
+      if @task_parameter.nil?
+          invalid_properties.push("invalid value for 'task_parameter', task_parameter cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @task_type.nil?
+      return false if @task_parameter.nil?
       return true
     end
 
@@ -82,8 +96,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          task_parameter == o.task_parameter &&
-          task_type == o.task_type
+          task_type == o.task_type &&
+          task_parameter == o.task_parameter 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -95,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [task_parameter, task_type].hash
+      [ task_type , task_parameter ].hash
     end
 
     # Builds the object from hash

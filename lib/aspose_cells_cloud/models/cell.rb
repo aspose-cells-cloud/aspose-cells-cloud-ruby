@@ -1,122 +1,114 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Cellrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Encapsulates the object that represents a single Workbook cell.
+
   class Cell
-    attr_accessor :link
-
-    attr_accessor :style
-
-    # Gets and sets the html string which contains data and some formattings in this cell.             
-    attr_accessor :html_string
-
-    # Gets the name of the cell.             
-    attr_accessor :name
-
-    # Gets column number (zero based) of the cell.             
-    attr_accessor :column
-
-    # Gets the parent worksheet.
-    attr_accessor :worksheet
-
-    # Indicates whethe this cell is part of table formula.             
-    attr_accessor :is_in_table
-
-    # Inidicates the cell's formula is and array formula and it is the first cell of the array.
-    attr_accessor :is_array_header
-
-    attr_accessor :value
-
-    # Represents if the specified cell contains formula.             
-    attr_accessor :is_formula
-
-    # Indicates if the cell's style is set. If return false, it means this cell has a default cell format.             
-    attr_accessor :is_style_set
-
-    # Indicates whether the cell formula is an array formula.
-    attr_accessor :is_in_array
-
-    # Checks if a formula can properly evaluate a result.             
-    attr_accessor :is_error_value
-
-    # Checks if a cell is part of a merged range or not.             
-    attr_accessor :is_merged
-
-    # Gets or sets a formula of the Aspose.Cells.Cell.
-    attr_accessor :formula
-
-    # Specifies a cell value type.
-    attr_accessor :type
-
-    # Gets row number (zero based) of the cell.             
-    attr_accessor :row
-
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :row
+        #            
+        attr_accessor :column
+        #            
+        attr_accessor :value
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :formula
+        #            
+        attr_accessor :is_formula
+        #            
+        attr_accessor :is_merged
+        #            
+        attr_accessor :is_array_header
+        #            
+        attr_accessor :is_in_array
+        #            
+        attr_accessor :is_error_value
+        #            
+        attr_accessor :is_in_table
+        #            
+        attr_accessor :is_style_set
+        #            
+        attr_accessor :html_string
+        #            
+        attr_accessor :style
+        #            
+        attr_accessor :worksheet
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'style' => :'Style',
-        :'html_string' => :'HtmlString',
         :'name' => :'Name',
+        :'row' => :'Row',
         :'column' => :'Column',
-        :'worksheet' => :'Worksheet',
-        :'is_in_table' => :'IsInTable',
-        :'is_array_header' => :'IsArrayHeader',
         :'value' => :'Value',
+        :'type' => :'Type',
+        :'formula' => :'Formula',
         :'is_formula' => :'IsFormula',
-        :'is_style_set' => :'IsStyleSet',
+        :'is_merged' => :'IsMerged',
+        :'is_array_header' => :'IsArrayHeader',
         :'is_in_array' => :'IsInArray',
         :'is_error_value' => :'IsErrorValue',
-        :'is_merged' => :'IsMerged',
-        :'formula' => :'Formula',
-        :'type' => :'Type',
-        :'row' => :'Row'
+        :'is_in_table' => :'IsInTable',
+        :'is_style_set' => :'IsStyleSet',
+        :'html_string' => :'HtmlString',
+        :'style' => :'Style',
+        :'worksheet' => :'Worksheet',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'style' => :'LinkElement',
-        :'html_string' => :'String',
         :'name' => :'String',
+        :'row' => :'Integer',
         :'column' => :'Integer',
-        :'worksheet' => :'String',
-        :'is_in_table' => :'BOOLEAN',
-        :'is_array_header' => :'BOOLEAN',
         :'value' => :'String',
+        :'type' => :'String',
+        :'formula' => :'String',
         :'is_formula' => :'BOOLEAN',
-        :'is_style_set' => :'BOOLEAN',
+        :'is_merged' => :'BOOLEAN',
+        :'is_array_header' => :'BOOLEAN',
         :'is_in_array' => :'BOOLEAN',
         :'is_error_value' => :'BOOLEAN',
-        :'is_merged' => :'BOOLEAN',
-        :'formula' => :'String',
-        :'type' => :'String',
-        :'row' => :'Integer'
+        :'is_in_table' => :'BOOLEAN',
+        :'is_style_set' => :'BOOLEAN',
+        :'html_string' => :'String',
+        :'style' => :'LinkElement',
+        :'worksheet' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -128,72 +120,56 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'Style')
-        self.style = attributes[:'Style']
-      end
-
-      if attributes.has_key?(:'HtmlString')
-        self.html_string = attributes[:'HtmlString']
-      end
-
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
-      if attributes.has_key?(:'Column')
-        self.column = attributes[:'Column']
-      end
-
-      if attributes.has_key?(:'Worksheet')
-        self.worksheet = attributes[:'Worksheet']
-      end
-
-      if attributes.has_key?(:'IsInTable')
-        self.is_in_table = attributes[:'IsInTable']
-      end
-
-      if attributes.has_key?(:'IsArrayHeader')
-        self.is_array_header = attributes[:'IsArrayHeader']
-      end
-
-      if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
-      end
-
-      if attributes.has_key?(:'IsFormula')
-        self.is_formula = attributes[:'IsFormula']
-      end
-
-      if attributes.has_key?(:'IsStyleSet')
-        self.is_style_set = attributes[:'IsStyleSet']
-      end
-
-      if attributes.has_key?(:'IsInArray')
-        self.is_in_array = attributes[:'IsInArray']
-      end
-
-      if attributes.has_key?(:'IsErrorValue')
-        self.is_error_value = attributes[:'IsErrorValue']
-      end
-
-      if attributes.has_key?(:'IsMerged')
-        self.is_merged = attributes[:'IsMerged']
-      end
-
-      if attributes.has_key?(:'Formula')
-        self.formula = attributes[:'Formula']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
       if attributes.has_key?(:'Row')
-        self.row = attributes[:'Row']
+          self.row = attributes[:'Row']
+      end
+      if attributes.has_key?(:'Column')
+          self.column = attributes[:'Column']
+      end
+      if attributes.has_key?(:'Value')
+          self.value = attributes[:'Value']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'Formula')
+          self.formula = attributes[:'Formula']
+      end
+      if attributes.has_key?(:'IsFormula')
+          self.is_formula = attributes[:'IsFormula']
+      end
+      if attributes.has_key?(:'IsMerged')
+          self.is_merged = attributes[:'IsMerged']
+      end
+      if attributes.has_key?(:'IsArrayHeader')
+          self.is_array_header = attributes[:'IsArrayHeader']
+      end
+      if attributes.has_key?(:'IsInArray')
+          self.is_in_array = attributes[:'IsInArray']
+      end
+      if attributes.has_key?(:'IsErrorValue')
+          self.is_error_value = attributes[:'IsErrorValue']
+      end
+      if attributes.has_key?(:'IsInTable')
+          self.is_in_table = attributes[:'IsInTable']
+      end
+      if attributes.has_key?(:'IsStyleSet')
+          self.is_style_set = attributes[:'IsStyleSet']
+      end
+      if attributes.has_key?(:'HtmlString')
+          self.html_string = attributes[:'HtmlString']
+      end
+      if attributes.has_key?(:'Style')
+          self.style = attributes[:'Style']
+      end
+      if attributes.has_key?(:'Worksheet')
+          self.worksheet = attributes[:'Worksheet']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -202,40 +178,56 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @column.nil?
-        invalid_properties.push("invalid value for 'column', column cannot be nil.")
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
       end
-
-      if @is_in_table.nil?
-        invalid_properties.push("invalid value for 'is_in_table', is_in_table cannot be nil.")
-      end
-
-      if @is_array_header.nil?
-        invalid_properties.push("invalid value for 'is_array_header', is_array_header cannot be nil.")
-      end
-
-      if @is_formula.nil?
-        invalid_properties.push("invalid value for 'is_formula', is_formula cannot be nil.")
-      end
-
-      if @is_style_set.nil?
-        invalid_properties.push("invalid value for 'is_style_set', is_style_set cannot be nil.")
-      end
-
-      if @is_in_array.nil?
-        invalid_properties.push("invalid value for 'is_in_array', is_in_array cannot be nil.")
-      end
-
-      if @is_error_value.nil?
-        invalid_properties.push("invalid value for 'is_error_value', is_error_value cannot be nil.")
-      end
-
-      if @is_merged.nil?
-        invalid_properties.push("invalid value for 'is_merged', is_merged cannot be nil.")
-      end
-
       if @row.nil?
-        invalid_properties.push("invalid value for 'row', row cannot be nil.")
+          invalid_properties.push("invalid value for 'row', row cannot be nil.")
+      end
+      if @column.nil?
+          invalid_properties.push("invalid value for 'column', column cannot be nil.")
+      end
+      if @value.nil?
+          invalid_properties.push("invalid value for 'value', value cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @formula.nil?
+          invalid_properties.push("invalid value for 'formula', formula cannot be nil.")
+      end
+      if @is_formula.nil?
+          invalid_properties.push("invalid value for 'is_formula', is_formula cannot be nil.")
+      end
+      if @is_merged.nil?
+          invalid_properties.push("invalid value for 'is_merged', is_merged cannot be nil.")
+      end
+      if @is_array_header.nil?
+          invalid_properties.push("invalid value for 'is_array_header', is_array_header cannot be nil.")
+      end
+      if @is_in_array.nil?
+          invalid_properties.push("invalid value for 'is_in_array', is_in_array cannot be nil.")
+      end
+      if @is_error_value.nil?
+          invalid_properties.push("invalid value for 'is_error_value', is_error_value cannot be nil.")
+      end
+      if @is_in_table.nil?
+          invalid_properties.push("invalid value for 'is_in_table', is_in_table cannot be nil.")
+      end
+      if @is_style_set.nil?
+          invalid_properties.push("invalid value for 'is_style_set', is_style_set cannot be nil.")
+      end
+      if @html_string.nil?
+          invalid_properties.push("invalid value for 'html_string', html_string cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+      if @worksheet.nil?
+          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
 
       return invalid_properties
@@ -244,15 +236,23 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
+      return false if @row.nil?
       return false if @column.nil?
-      return false if @is_in_table.nil?
-      return false if @is_array_header.nil?
+      return false if @value.nil?
+      return false if @type.nil?
+      return false if @formula.nil?
       return false if @is_formula.nil?
-      return false if @is_style_set.nil?
+      return false if @is_merged.nil?
+      return false if @is_array_header.nil?
       return false if @is_in_array.nil?
       return false if @is_error_value.nil?
-      return false if @is_merged.nil?
-      return false if @row.nil?
+      return false if @is_in_table.nil?
+      return false if @is_style_set.nil?
+      return false if @html_string.nil?
+      return false if @style.nil?
+      return false if @worksheet.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -261,23 +261,24 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          style == o.style &&
-          html_string == o.html_string &&
           name == o.name &&
+          row == o.row &&
           column == o.column &&
-          worksheet == o.worksheet &&
-          is_in_table == o.is_in_table &&
-          is_array_header == o.is_array_header &&
           value == o.value &&
+          type == o.type &&
+          formula == o.formula &&
           is_formula == o.is_formula &&
-          is_style_set == o.is_style_set &&
+          is_merged == o.is_merged &&
+          is_array_header == o.is_array_header &&
           is_in_array == o.is_in_array &&
           is_error_value == o.is_error_value &&
-          is_merged == o.is_merged &&
-          formula == o.formula &&
-          type == o.type &&
-          row == o.row
+          is_in_table == o.is_in_table &&
+          is_style_set == o.is_style_set &&
+          html_string == o.html_string &&
+          style == o.style &&
+          worksheet == o.worksheet &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -289,7 +290,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, style, html_string, name, column, worksheet, is_in_table, is_array_header, value, is_formula, is_style_set, is_in_array, is_error_value, is_merged, formula, type, row].hash
+      [ name , row , column , value , type , formula , is_formula , is_merged , is_array_header , is_in_array , is_error_value , is_in_table , is_style_set , html_string , style , worksheet , link ].hash
     end
 
     # Builds the object from hash

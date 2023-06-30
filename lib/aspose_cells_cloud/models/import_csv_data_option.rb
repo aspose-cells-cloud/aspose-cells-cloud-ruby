@@ -1,80 +1,86 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ImportCSVDataOptionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ImportCSVDataOption
-    attr_accessor :source
-
-    attr_accessor :import_data_type
-
-    attr_accessor :destination_worksheet
-
-    attr_accessor :is_insert
-
-    attr_accessor :convert_numeric_data
-
-    attr_accessor :first_column
-
-    attr_accessor :source_file
-
-    attr_accessor :first_row
-
-    attr_accessor :separator_string
-
-    attr_accessor :custom_parsers
-
+        #            
+        attr_accessor :separator_string
+        #            
+        attr_accessor :convert_numeric_data
+        #            
+        attr_accessor :first_row
+        #            
+        attr_accessor :first_column
+        #            
+        attr_accessor :source_file
+        #            
+        attr_accessor :custom_parsers
+        #            
+        attr_accessor :destination_worksheet
+        #            
+        attr_accessor :is_insert
+        #            
+        attr_accessor :import_data_type
+        #            
+        attr_accessor :source
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'source' => :'Source',
-        :'import_data_type' => :'ImportDataType',
-        :'destination_worksheet' => :'DestinationWorksheet',
-        :'is_insert' => :'IsInsert',
+        :'separator_string' => :'SeparatorString',
         :'convert_numeric_data' => :'ConvertNumericData',
+        :'first_row' => :'FirstRow',
         :'first_column' => :'FirstColumn',
         :'source_file' => :'SourceFile',
-        :'first_row' => :'FirstRow',
-        :'separator_string' => :'SeparatorString',
-        :'custom_parsers' => :'CustomParsers'
+        :'custom_parsers' => :'CustomParsers',
+        :'destination_worksheet' => :'DestinationWorksheet',
+        :'is_insert' => :'IsInsert',
+        :'import_data_type' => :'ImportDataType',
+        :'source' => :'Source'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'source' => :'FileSource',
-        :'import_data_type' => :'String',
-        :'destination_worksheet' => :'String',
-        :'is_insert' => :'BOOLEAN',
+        :'separator_string' => :'String',
         :'convert_numeric_data' => :'BOOLEAN',
+        :'first_row' => :'Integer',
         :'first_column' => :'Integer',
         :'source_file' => :'String',
-        :'first_row' => :'Integer',
-        :'separator_string' => :'String',
-        :'custom_parsers' => :'Array<CustomParserConfig>'
+        :'custom_parsers' => :'Array<CustomParserConfig>',
+        :'destination_worksheet' => :'String',
+        :'is_insert' => :'BOOLEAN',
+        :'import_data_type' => :'String',
+        :'source' => :'FileSource'
       }
     end
 
@@ -86,46 +92,35 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Source')
-        self.source = attributes[:'Source']
-      end
-
-      if attributes.has_key?(:'ImportDataType')
-        self.import_data_type = attributes[:'ImportDataType']
-      end
-
-      if attributes.has_key?(:'DestinationWorksheet')
-        self.destination_worksheet = attributes[:'DestinationWorksheet']
-      end
-
-      if attributes.has_key?(:'IsInsert')
-        self.is_insert = attributes[:'IsInsert']
-      end
-
-      if attributes.has_key?(:'ConvertNumericData')
-        self.convert_numeric_data = attributes[:'ConvertNumericData']
-      end
-
-      if attributes.has_key?(:'FirstColumn')
-        self.first_column = attributes[:'FirstColumn']
-      end
-
-      if attributes.has_key?(:'SourceFile')
-        self.source_file = attributes[:'SourceFile']
-      end
-
-      if attributes.has_key?(:'FirstRow')
-        self.first_row = attributes[:'FirstRow']
-      end
-
       if attributes.has_key?(:'SeparatorString')
-        self.separator_string = attributes[:'SeparatorString']
+          self.separator_string = attributes[:'SeparatorString']
       end
-
+      if attributes.has_key?(:'ConvertNumericData')
+          self.convert_numeric_data = attributes[:'ConvertNumericData']
+      end
+      if attributes.has_key?(:'FirstRow')
+          self.first_row = attributes[:'FirstRow']
+      end
+      if attributes.has_key?(:'FirstColumn')
+          self.first_column = attributes[:'FirstColumn']
+      end
+      if attributes.has_key?(:'SourceFile')
+          self.source_file = attributes[:'SourceFile']
+      end
       if attributes.has_key?(:'CustomParsers')
-        if (value = attributes[:'CustomParsers']).is_a?(Array)
-          self.custom_parsers = value
-        end
+          self.custom_parsers = attributes[:'CustomParsers']
+      end
+      if attributes.has_key?(:'DestinationWorksheet')
+          self.destination_worksheet = attributes[:'DestinationWorksheet']
+      end
+      if attributes.has_key?(:'IsInsert')
+          self.is_insert = attributes[:'IsInsert']
+      end
+      if attributes.has_key?(:'ImportDataType')
+          self.import_data_type = attributes[:'ImportDataType']
+      end
+      if attributes.has_key?(:'Source')
+          self.source = attributes[:'Source']
       end
 
     end
@@ -134,12 +129,53 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @separator_string.nil?
+          invalid_properties.push("invalid value for 'separator_string', separator_string cannot be nil.")
+      end
+      if @convert_numeric_data.nil?
+          invalid_properties.push("invalid value for 'convert_numeric_data', convert_numeric_data cannot be nil.")
+      end
+      if @first_row.nil?
+          invalid_properties.push("invalid value for 'first_row', first_row cannot be nil.")
+      end
+      if @first_column.nil?
+          invalid_properties.push("invalid value for 'first_column', first_column cannot be nil.")
+      end
+      if @source_file.nil?
+          invalid_properties.push("invalid value for 'source_file', source_file cannot be nil.")
+      end
+      if @custom_parsers.nil?
+          invalid_properties.push("invalid value for 'custom_parsers', custom_parsers cannot be nil.")
+      end
+      if @destination_worksheet.nil?
+          invalid_properties.push("invalid value for 'destination_worksheet', destination_worksheet cannot be nil.")
+      end
+      if @is_insert.nil?
+          invalid_properties.push("invalid value for 'is_insert', is_insert cannot be nil.")
+      end
+      if @import_data_type.nil?
+          invalid_properties.push("invalid value for 'import_data_type', import_data_type cannot be nil.")
+      end
+      if @source.nil?
+          invalid_properties.push("invalid value for 'source', source cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @separator_string.nil?
+      return false if @convert_numeric_data.nil?
+      return false if @first_row.nil?
+      return false if @first_column.nil?
+      return false if @source_file.nil?
+      return false if @custom_parsers.nil?
+      return false if @destination_worksheet.nil?
+      return false if @is_insert.nil?
+      return false if @import_data_type.nil?
+      return false if @source.nil?
       return true
     end
 
@@ -148,16 +184,17 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          source == o.source &&
-          import_data_type == o.import_data_type &&
-          destination_worksheet == o.destination_worksheet &&
-          is_insert == o.is_insert &&
+          separator_string == o.separator_string &&
           convert_numeric_data == o.convert_numeric_data &&
+          first_row == o.first_row &&
           first_column == o.first_column &&
           source_file == o.source_file &&
-          first_row == o.first_row &&
-          separator_string == o.separator_string &&
-          custom_parsers == o.custom_parsers
+          custom_parsers == o.custom_parsers &&
+          destination_worksheet == o.destination_worksheet &&
+          is_insert == o.is_insert &&
+          import_data_type == o.import_data_type &&
+          source == o.source 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -169,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source, import_data_type, destination_worksheet, is_insert, convert_numeric_data, first_column, source_file, first_row, separator_string, custom_parsers].hash
+      [ separator_string , convert_numeric_data , first_row , first_column , source_file , custom_parsers , destination_worksheet , is_insert , import_data_type , source ].hash
     end
 
     # Builds the object from hash

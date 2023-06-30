@@ -1,36 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Sparklinerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Sparkline
-    attr_accessor :column
-
-    attr_accessor :data_range
-
-    attr_accessor :row
-
+        #Gets the column index of the sparkline.            
+        attr_accessor :column
+        #Represents the data range of the sparkline.            
+        attr_accessor :data_range
+        #Gets the row index of the sparkline.            
+        attr_accessor :row
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Column')
-        self.column = attributes[:'Column']
+          self.column = attributes[:'Column']
       end
-
       if attributes.has_key?(:'DataRange')
-        self.data_range = attributes[:'DataRange']
+          self.data_range = attributes[:'DataRange']
       end
-
       if attributes.has_key?(:'Row')
-        self.row = attributes[:'Row']
+          self.row = attributes[:'Row']
       end
 
     end
@@ -77,11 +81,13 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @column.nil?
-        invalid_properties.push("invalid value for 'column', column cannot be nil.")
+          invalid_properties.push("invalid value for 'column', column cannot be nil.")
       end
-
+      if @data_range.nil?
+          invalid_properties.push("invalid value for 'data_range', data_range cannot be nil.")
+      end
       if @row.nil?
-        invalid_properties.push("invalid value for 'row', row cannot be nil.")
+          invalid_properties.push("invalid value for 'row', row cannot be nil.")
       end
 
       return invalid_properties
@@ -91,6 +97,7 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @column.nil?
+      return false if @data_range.nil?
       return false if @row.nil?
       return true
     end
@@ -102,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           column == o.column &&
           data_range == o.data_range &&
-          row == o.row
+          row == o.row 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -114,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [column, data_range, row].hash
+      [ column , data_range , row ].hash
     end
 
     # Builds the object from hash

@@ -1,80 +1,86 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Fontrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Font
-    attr_accessor :is_italic
-
-    attr_accessor :name
-
-    attr_accessor :double_size
-
-    attr_accessor :color
-
-    attr_accessor :is_bold
-
-    attr_accessor :is_subscript
-
-    attr_accessor :is_superscript
-
-    attr_accessor :is_strikeout
-
-    attr_accessor :underline
-
-    attr_accessor :size
-
+        #            
+        attr_accessor :color
+        #            
+        attr_accessor :double_size
+        #            
+        attr_accessor :is_bold
+        #            
+        attr_accessor :is_italic
+        #            
+        attr_accessor :is_strikeout
+        #            
+        attr_accessor :is_subscript
+        #            
+        attr_accessor :is_superscript
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :size
+        #            
+        attr_accessor :underline
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_italic' => :'IsItalic',
-        :'name' => :'Name',
-        :'double_size' => :'DoubleSize',
         :'color' => :'Color',
+        :'double_size' => :'DoubleSize',
         :'is_bold' => :'IsBold',
+        :'is_italic' => :'IsItalic',
+        :'is_strikeout' => :'IsStrikeout',
         :'is_subscript' => :'IsSubscript',
         :'is_superscript' => :'IsSuperscript',
-        :'is_strikeout' => :'IsStrikeout',
-        :'underline' => :'Underline',
-        :'size' => :'Size'
+        :'name' => :'Name',
+        :'size' => :'Size',
+        :'underline' => :'Underline'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_italic' => :'BOOLEAN',
-        :'name' => :'String',
-        :'double_size' => :'Float',
         :'color' => :'Color',
+        :'double_size' => :'Float',
         :'is_bold' => :'BOOLEAN',
+        :'is_italic' => :'BOOLEAN',
+        :'is_strikeout' => :'BOOLEAN',
         :'is_subscript' => :'BOOLEAN',
         :'is_superscript' => :'BOOLEAN',
-        :'is_strikeout' => :'BOOLEAN',
-        :'underline' => :'String',
-        :'size' => :'Integer'
+        :'name' => :'String',
+        :'size' => :'Integer',
+        :'underline' => :'String'
       }
     end
 
@@ -86,44 +92,35 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IsItalic')
-        self.is_italic = attributes[:'IsItalic']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'DoubleSize')
-        self.double_size = attributes[:'DoubleSize']
-      end
-
       if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
+          self.color = attributes[:'Color']
       end
-
+      if attributes.has_key?(:'DoubleSize')
+          self.double_size = attributes[:'DoubleSize']
+      end
       if attributes.has_key?(:'IsBold')
-        self.is_bold = attributes[:'IsBold']
+          self.is_bold = attributes[:'IsBold']
       end
-
-      if attributes.has_key?(:'IsSubscript')
-        self.is_subscript = attributes[:'IsSubscript']
+      if attributes.has_key?(:'IsItalic')
+          self.is_italic = attributes[:'IsItalic']
       end
-
-      if attributes.has_key?(:'IsSuperscript')
-        self.is_superscript = attributes[:'IsSuperscript']
-      end
-
       if attributes.has_key?(:'IsStrikeout')
-        self.is_strikeout = attributes[:'IsStrikeout']
+          self.is_strikeout = attributes[:'IsStrikeout']
       end
-
-      if attributes.has_key?(:'Underline')
-        self.underline = attributes[:'Underline']
+      if attributes.has_key?(:'IsSubscript')
+          self.is_subscript = attributes[:'IsSubscript']
       end
-
+      if attributes.has_key?(:'IsSuperscript')
+          self.is_superscript = attributes[:'IsSuperscript']
+      end
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
       if attributes.has_key?(:'Size')
-        self.size = attributes[:'Size']
+          self.size = attributes[:'Size']
+      end
+      if attributes.has_key?(:'Underline')
+          self.underline = attributes[:'Underline']
       end
 
     end
@@ -132,12 +129,53 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @double_size.nil?
+          invalid_properties.push("invalid value for 'double_size', double_size cannot be nil.")
+      end
+      if @is_bold.nil?
+          invalid_properties.push("invalid value for 'is_bold', is_bold cannot be nil.")
+      end
+      if @is_italic.nil?
+          invalid_properties.push("invalid value for 'is_italic', is_italic cannot be nil.")
+      end
+      if @is_strikeout.nil?
+          invalid_properties.push("invalid value for 'is_strikeout', is_strikeout cannot be nil.")
+      end
+      if @is_subscript.nil?
+          invalid_properties.push("invalid value for 'is_subscript', is_subscript cannot be nil.")
+      end
+      if @is_superscript.nil?
+          invalid_properties.push("invalid value for 'is_superscript', is_superscript cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @size.nil?
+          invalid_properties.push("invalid value for 'size', size cannot be nil.")
+      end
+      if @underline.nil?
+          invalid_properties.push("invalid value for 'underline', underline cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @color.nil?
+      return false if @double_size.nil?
+      return false if @is_bold.nil?
+      return false if @is_italic.nil?
+      return false if @is_strikeout.nil?
+      return false if @is_subscript.nil?
+      return false if @is_superscript.nil?
+      return false if @name.nil?
+      return false if @size.nil?
+      return false if @underline.nil?
       return true
     end
 
@@ -146,16 +184,17 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_italic == o.is_italic &&
-          name == o.name &&
-          double_size == o.double_size &&
           color == o.color &&
+          double_size == o.double_size &&
           is_bold == o.is_bold &&
+          is_italic == o.is_italic &&
+          is_strikeout == o.is_strikeout &&
           is_subscript == o.is_subscript &&
           is_superscript == o.is_superscript &&
-          is_strikeout == o.is_strikeout &&
-          underline == o.underline &&
-          size == o.size
+          name == o.name &&
+          size == o.size &&
+          underline == o.underline 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -167,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_italic, name, double_size, color, is_bold, is_subscript, is_superscript, is_strikeout, underline, size].hash
+      [ color , double_size , is_bold , is_italic , is_strikeout , is_subscript , is_superscript , name , size , underline ].hash
     end
 
     # Builds the object from hash

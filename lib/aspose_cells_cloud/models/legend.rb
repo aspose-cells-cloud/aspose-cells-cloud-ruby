@@ -1,104 +1,106 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Legendrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Legend
-    attr_accessor :is_inner_mode
-
-    attr_accessor :shape_properties
-
-    attr_accessor :auto_scale_font
-
-    attr_accessor :area
-
-    attr_accessor :height
-
-    attr_accessor :width
-
-    attr_accessor :background_mode
-
-    attr_accessor :is_automatic_size
-
-    attr_accessor :y
-
-    attr_accessor :x
-
-    attr_accessor :shadow
-
-    attr_accessor :font
-
-    attr_accessor :border
-
-    attr_accessor :link
-
-    attr_accessor :legend_entries
-
-    attr_accessor :position
-
+        #            
+        attr_accessor :position
+        #            
+        attr_accessor :legend_entries
+        #            
+        attr_accessor :area
+        #            
+        attr_accessor :auto_scale_font
+        #            
+        attr_accessor :background_mode
+        #            
+        attr_accessor :border
+        #            
+        attr_accessor :font
+        #            
+        attr_accessor :is_automatic_size
+        #            
+        attr_accessor :is_inner_mode
+        #            
+        attr_accessor :shadow
+        #            
+        attr_accessor :shape_properties
+        #            
+        attr_accessor :width
+        #            
+        attr_accessor :height
+        #            
+        attr_accessor :x
+        #            
+        attr_accessor :y
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_inner_mode' => :'IsInnerMode',
-        :'shape_properties' => :'ShapeProperties',
-        :'auto_scale_font' => :'AutoScaleFont',
-        :'area' => :'Area',
-        :'height' => :'Height',
-        :'width' => :'Width',
-        :'background_mode' => :'BackgroundMode',
-        :'is_automatic_size' => :'IsAutomaticSize',
-        :'y' => :'Y',
-        :'x' => :'X',
-        :'shadow' => :'Shadow',
-        :'font' => :'Font',
-        :'border' => :'Border',
-        :'link' => :'link',
+        :'position' => :'Position',
         :'legend_entries' => :'LegendEntries',
-        :'position' => :'Position'
+        :'area' => :'Area',
+        :'auto_scale_font' => :'AutoScaleFont',
+        :'background_mode' => :'BackgroundMode',
+        :'border' => :'Border',
+        :'font' => :'Font',
+        :'is_automatic_size' => :'IsAutomaticSize',
+        :'is_inner_mode' => :'IsInnerMode',
+        :'shadow' => :'Shadow',
+        :'shape_properties' => :'ShapeProperties',
+        :'width' => :'Width',
+        :'height' => :'Height',
+        :'x' => :'X',
+        :'y' => :'Y'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_inner_mode' => :'BOOLEAN',
-        :'shape_properties' => :'Array<LinkElement>',
-        :'auto_scale_font' => :'BOOLEAN',
-        :'area' => :'Area',
-        :'height' => :'Integer',
-        :'width' => :'Integer',
-        :'background_mode' => :'String',
-        :'is_automatic_size' => :'BOOLEAN',
-        :'y' => :'Integer',
-        :'x' => :'Integer',
-        :'shadow' => :'BOOLEAN',
-        :'font' => :'Font',
-        :'border' => :'Line',
-        :'link' => :'Link',
+        :'position' => :'String',
         :'legend_entries' => :'LinkElement',
-        :'position' => :'String'
+        :'area' => :'Area',
+        :'auto_scale_font' => :'BOOLEAN',
+        :'background_mode' => :'String',
+        :'border' => :'Line',
+        :'font' => :'Font',
+        :'is_automatic_size' => :'BOOLEAN',
+        :'is_inner_mode' => :'BOOLEAN',
+        :'shadow' => :'BOOLEAN',
+        :'shape_properties' => :'Array<LinkElement>',
+        :'width' => :'Integer',
+        :'height' => :'Integer',
+        :'x' => :'Integer',
+        :'y' => :'Integer'
       }
     end
 
@@ -110,70 +112,50 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IsInnerMode')
-        self.is_inner_mode = attributes[:'IsInnerMode']
-      end
-
-      if attributes.has_key?(:'ShapeProperties')
-        if (value = attributes[:'ShapeProperties']).is_a?(Array)
-          self.shape_properties = value
-        end
-      end
-
-      if attributes.has_key?(:'AutoScaleFont')
-        self.auto_scale_font = attributes[:'AutoScaleFont']
-      end
-
-      if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
-      end
-
-      if attributes.has_key?(:'Height')
-        self.height = attributes[:'Height']
-      end
-
-      if attributes.has_key?(:'Width')
-        self.width = attributes[:'Width']
-      end
-
-      if attributes.has_key?(:'BackgroundMode')
-        self.background_mode = attributes[:'BackgroundMode']
-      end
-
-      if attributes.has_key?(:'IsAutomaticSize')
-        self.is_automatic_size = attributes[:'IsAutomaticSize']
-      end
-
-      if attributes.has_key?(:'Y')
-        self.y = attributes[:'Y']
-      end
-
-      if attributes.has_key?(:'X')
-        self.x = attributes[:'X']
-      end
-
-      if attributes.has_key?(:'Shadow')
-        self.shadow = attributes[:'Shadow']
-      end
-
-      if attributes.has_key?(:'Font')
-        self.font = attributes[:'Font']
-      end
-
-      if attributes.has_key?(:'Border')
-        self.border = attributes[:'Border']
-      end
-
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'LegendEntries')
-        self.legend_entries = attributes[:'LegendEntries']
-      end
-
       if attributes.has_key?(:'Position')
-        self.position = attributes[:'Position']
+          self.position = attributes[:'Position']
+      end
+      if attributes.has_key?(:'LegendEntries')
+          self.legend_entries = attributes[:'LegendEntries']
+      end
+      if attributes.has_key?(:'Area')
+          self.area = attributes[:'Area']
+      end
+      if attributes.has_key?(:'AutoScaleFont')
+          self.auto_scale_font = attributes[:'AutoScaleFont']
+      end
+      if attributes.has_key?(:'BackgroundMode')
+          self.background_mode = attributes[:'BackgroundMode']
+      end
+      if attributes.has_key?(:'Border')
+          self.border = attributes[:'Border']
+      end
+      if attributes.has_key?(:'Font')
+          self.font = attributes[:'Font']
+      end
+      if attributes.has_key?(:'IsAutomaticSize')
+          self.is_automatic_size = attributes[:'IsAutomaticSize']
+      end
+      if attributes.has_key?(:'IsInnerMode')
+          self.is_inner_mode = attributes[:'IsInnerMode']
+      end
+      if attributes.has_key?(:'Shadow')
+          self.shadow = attributes[:'Shadow']
+      end
+      if attributes.has_key?(:'ShapeProperties')
+          self.shape_properties = attributes[:'ShapeProperties']
+      end
+      if attributes.has_key?(:'Width')
+          self.width = attributes[:'Width']
+      end
+      if attributes.has_key?(:'Height')
+          self.height = attributes[:'Height']
+      end
+      if attributes.has_key?(:'X')
+          self.x = attributes[:'X']
+      end
+      if attributes.has_key?(:'Y')
+          self.y = attributes[:'Y']
       end
 
     end
@@ -182,12 +164,73 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @position.nil?
+          invalid_properties.push("invalid value for 'position', position cannot be nil.")
+      end
+      if @legend_entries.nil?
+          invalid_properties.push("invalid value for 'legend_entries', legend_entries cannot be nil.")
+      end
+      if @area.nil?
+          invalid_properties.push("invalid value for 'area', area cannot be nil.")
+      end
+      if @auto_scale_font.nil?
+          invalid_properties.push("invalid value for 'auto_scale_font', auto_scale_font cannot be nil.")
+      end
+      if @background_mode.nil?
+          invalid_properties.push("invalid value for 'background_mode', background_mode cannot be nil.")
+      end
+      if @border.nil?
+          invalid_properties.push("invalid value for 'border', border cannot be nil.")
+      end
+      if @font.nil?
+          invalid_properties.push("invalid value for 'font', font cannot be nil.")
+      end
+      if @is_automatic_size.nil?
+          invalid_properties.push("invalid value for 'is_automatic_size', is_automatic_size cannot be nil.")
+      end
+      if @is_inner_mode.nil?
+          invalid_properties.push("invalid value for 'is_inner_mode', is_inner_mode cannot be nil.")
+      end
+      if @shadow.nil?
+          invalid_properties.push("invalid value for 'shadow', shadow cannot be nil.")
+      end
+      if @shape_properties.nil?
+          invalid_properties.push("invalid value for 'shape_properties', shape_properties cannot be nil.")
+      end
+      if @width.nil?
+          invalid_properties.push("invalid value for 'width', width cannot be nil.")
+      end
+      if @height.nil?
+          invalid_properties.push("invalid value for 'height', height cannot be nil.")
+      end
+      if @x.nil?
+          invalid_properties.push("invalid value for 'x', x cannot be nil.")
+      end
+      if @y.nil?
+          invalid_properties.push("invalid value for 'y', y cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @position.nil?
+      return false if @legend_entries.nil?
+      return false if @area.nil?
+      return false if @auto_scale_font.nil?
+      return false if @background_mode.nil?
+      return false if @border.nil?
+      return false if @font.nil?
+      return false if @is_automatic_size.nil?
+      return false if @is_inner_mode.nil?
+      return false if @shadow.nil?
+      return false if @shape_properties.nil?
+      return false if @width.nil?
+      return false if @height.nil?
+      return false if @x.nil?
+      return false if @y.nil?
       return true
     end
 
@@ -196,22 +239,22 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_inner_mode == o.is_inner_mode &&
-          shape_properties == o.shape_properties &&
-          auto_scale_font == o.auto_scale_font &&
-          area == o.area &&
-          height == o.height &&
-          width == o.width &&
-          background_mode == o.background_mode &&
-          is_automatic_size == o.is_automatic_size &&
-          y == o.y &&
-          x == o.x &&
-          shadow == o.shadow &&
-          font == o.font &&
-          border == o.border &&
-          link == o.link &&
+          position == o.position &&
           legend_entries == o.legend_entries &&
-          position == o.position
+          area == o.area &&
+          auto_scale_font == o.auto_scale_font &&
+          background_mode == o.background_mode &&
+          border == o.border &&
+          font == o.font &&
+          is_automatic_size == o.is_automatic_size &&
+          is_inner_mode == o.is_inner_mode &&
+          shadow == o.shadow &&
+          shape_properties == o.shape_properties &&
+          width == o.width &&
+          height == o.height &&
+          x == o.x &&
+          y == o.y 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -223,7 +266,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_inner_mode, shape_properties, auto_scale_font, area, height, width, background_mode, is_automatic_size, y, x, shadow, font, border, link, legend_entries, position].hash
+      [ position , legend_entries , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , shape_properties , width , height , x , y ].hash
     end
 
     # Builds the object from hash

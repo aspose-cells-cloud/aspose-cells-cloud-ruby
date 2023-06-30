@@ -1,64 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="TextureFillrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class TextureFill
-    attr_accessor :scale
-
-    attr_accessor :image
-
-    attr_accessor :pic_format_option
-
-    attr_accessor :tile_pic_option
-
-    attr_accessor :transparency
-
-    attr_accessor :type
-
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :transparency
+        #            
+        attr_accessor :scale
+        #            
+        attr_accessor :tile_pic_option
+        #            
+        attr_accessor :pic_format_option
+        #            
+        attr_accessor :image
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'scale' => :'Scale',
-        :'image' => :'Image',
-        :'pic_format_option' => :'PicFormatOption',
-        :'tile_pic_option' => :'TilePicOption',
+        :'type' => :'Type',
         :'transparency' => :'Transparency',
-        :'type' => :'Type'
+        :'scale' => :'Scale',
+        :'tile_pic_option' => :'TilePicOption',
+        :'pic_format_option' => :'PicFormatOption',
+        :'image' => :'Image'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'scale' => :'Float',
-        :'image' => :'LinkElement',
-        :'pic_format_option' => :'PicFormatOption',
-        :'tile_pic_option' => :'TilePicOption',
+        :'type' => :'String',
         :'transparency' => :'Float',
-        :'type' => :'String'
+        :'scale' => :'Float',
+        :'tile_pic_option' => :'TilePicOption',
+        :'pic_format_option' => :'PicFormatOption',
+        :'image' => :'LinkElement'
       }
     end
 
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Scale')
-        self.scale = attributes[:'Scale']
-      end
-
-      if attributes.has_key?(:'Image')
-        self.image = attributes[:'Image']
-      end
-
-      if attributes.has_key?(:'PicFormatOption')
-        self.pic_format_option = attributes[:'PicFormatOption']
-      end
-
-      if attributes.has_key?(:'TilePicOption')
-        self.tile_pic_option = attributes[:'TilePicOption']
-      end
-
-      if attributes.has_key?(:'Transparency')
-        self.transparency = attributes[:'Transparency']
-      end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'Transparency')
+          self.transparency = attributes[:'Transparency']
+      end
+      if attributes.has_key?(:'Scale')
+          self.scale = attributes[:'Scale']
+      end
+      if attributes.has_key?(:'TilePicOption')
+          self.tile_pic_option = attributes[:'TilePicOption']
+      end
+      if attributes.has_key?(:'PicFormatOption')
+          self.pic_format_option = attributes[:'PicFormatOption']
+      end
+      if attributes.has_key?(:'Image')
+          self.image = attributes[:'Image']
       end
 
     end
@@ -100,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @transparency.nil?
+          invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
+      end
+      if @scale.nil?
+          invalid_properties.push("invalid value for 'scale', scale cannot be nil.")
+      end
+      if @tile_pic_option.nil?
+          invalid_properties.push("invalid value for 'tile_pic_option', tile_pic_option cannot be nil.")
+      end
+      if @pic_format_option.nil?
+          invalid_properties.push("invalid value for 'pic_format_option', pic_format_option cannot be nil.")
+      end
+      if @image.nil?
+          invalid_properties.push("invalid value for 'image', image cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @type.nil?
+      return false if @transparency.nil?
+      return false if @scale.nil?
+      return false if @tile_pic_option.nil?
+      return false if @pic_format_option.nil?
+      return false if @image.nil?
       return true
     end
 
@@ -114,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          scale == o.scale &&
-          image == o.image &&
-          pic_format_option == o.pic_format_option &&
-          tile_pic_option == o.tile_pic_option &&
+          type == o.type &&
           transparency == o.transparency &&
-          type == o.type
+          scale == o.scale &&
+          tile_pic_option == o.tile_pic_option &&
+          pic_format_option == o.pic_format_option &&
+          image == o.image 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -131,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [scale, image, pic_format_option, tile_pic_option, transparency, type].hash
+      [ type , transparency , scale , tile_pic_option , pic_format_option , image ].hash
     end
 
     # Builds the object from hash

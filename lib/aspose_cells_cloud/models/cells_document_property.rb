@@ -1,55 +1,52 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CellsDocumentPropertyrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CellsDocumentProperty
-    attr_accessor :link
-
-    # Returns the name of the property.             
-    attr_accessor :name
-
-    # Gets or sets the value of the property.
-    attr_accessor :value
-
-    # Indicates whether this property is linked to content
-    attr_accessor :is_linked_to_content
-
-    # The linked content source.
-    attr_accessor :source
-
-    # Gets the data type of the property.             
-    attr_accessor :type
-
-    # Returns true if this property does not have a name in the OLE2 storage and a   unique name was generated only for the public API.             
-    attr_accessor :is_generated_name
-
+        #Returns the name of the property.                        
+        attr_accessor :name
+        #Gets or sets the value of the property.            
+        attr_accessor :value
+        #Indicates whether this property is linked to content            
+        attr_accessor :is_linked_to_content
+        #The linked content source.            
+        attr_accessor :source
+        #Gets the data type of the property.                        
+        attr_accessor :type
+        #Returns true if this property does not have a name in the OLE2 storage and a  unique name was generated only for the public API.                        
+        attr_accessor :is_generated_name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
         :'name' => :'Name',
         :'value' => :'Value',
         :'is_linked_to_content' => :'IsLinkedToContent',
@@ -62,7 +59,6 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
         :'name' => :'String',
         :'value' => :'String',
         :'is_linked_to_content' => :'String',
@@ -80,32 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
       if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
+          self.value = attributes[:'Value']
       end
-
       if attributes.has_key?(:'IsLinkedToContent')
-        self.is_linked_to_content = attributes[:'IsLinkedToContent']
+          self.is_linked_to_content = attributes[:'IsLinkedToContent']
       end
-
       if attributes.has_key?(:'Source')
-        self.source = attributes[:'Source']
+          self.source = attributes[:'Source']
       end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
       end
-
       if attributes.has_key?(:'IsGeneratedName')
-        self.is_generated_name = attributes[:'IsGeneratedName']
+          self.is_generated_name = attributes[:'IsGeneratedName']
       end
 
     end
@@ -114,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @value.nil?
+          invalid_properties.push("invalid value for 'value', value cannot be nil.")
+      end
+      if @is_linked_to_content.nil?
+          invalid_properties.push("invalid value for 'is_linked_to_content', is_linked_to_content cannot be nil.")
+      end
+      if @source.nil?
+          invalid_properties.push("invalid value for 'source', source cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @is_generated_name.nil?
+          invalid_properties.push("invalid value for 'is_generated_name', is_generated_name cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
+      return false if @value.nil?
+      return false if @is_linked_to_content.nil?
+      return false if @source.nil?
+      return false if @type.nil?
+      return false if @is_generated_name.nil?
       return true
     end
 
@@ -128,13 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
           name == o.name &&
           value == o.value &&
           is_linked_to_content == o.is_linked_to_content &&
           source == o.source &&
           type == o.type &&
-          is_generated_name == o.is_generated_name
+          is_generated_name == o.is_generated_name 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -146,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, name, value, is_linked_to_content, source, type, is_generated_name].hash
+      [ name , value , is_linked_to_content , source , type , is_generated_name ].hash
     end
 
     # Builds the object from hash

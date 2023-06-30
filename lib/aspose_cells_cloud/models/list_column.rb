@@ -1,60 +1,62 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ListColumnrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ListColumn
-    # Gets and sets the type of calculation in the Totals row of the list column.
-    attr_accessor :totals_calculation
-
-    # Gets and sets the name of the column.
-    attr_accessor :name
-
-    # Gets and sets the formula of the list column.
-    attr_accessor :formula
-
-    # Gets and sets the formula of the list column.
-    attr_accessor :range
-
+        #Gets and sets the name of the column.            
+        attr_accessor :name
+        #Gets the range of this list column.                        
+        attr_accessor :range
+        #Gets and sets the type of calculation in the Totals row of the list column.            
+        attr_accessor :totals_calculation
+        #Gets and sets the formula of the list column.                        
+        attr_accessor :formula
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'totals_calculation' => :'TotalsCalculation',
         :'name' => :'Name',
-        :'formula' => :'Formula',
-        :'range' => :'Range'
+        :'range' => :'Range',
+        :'totals_calculation' => :'TotalsCalculation',
+        :'formula' => :'Formula'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'totals_calculation' => :'String',
         :'name' => :'String',
-        :'formula' => :'String',
-        :'range' => :'Range'
+        :'range' => :'Range',
+        :'totals_calculation' => :'String',
+        :'formula' => :'String'
       }
     end
 
@@ -66,20 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'TotalsCalculation')
-        self.totals_calculation = attributes[:'TotalsCalculation']
-      end
-
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
-      if attributes.has_key?(:'Formula')
-        self.formula = attributes[:'Formula']
-      end
-
       if attributes.has_key?(:'Range')
-        self.range = attributes[:'Range']
+          self.range = attributes[:'Range']
+      end
+      if attributes.has_key?(:'TotalsCalculation')
+          self.totals_calculation = attributes[:'TotalsCalculation']
+      end
+      if attributes.has_key?(:'Formula')
+          self.formula = attributes[:'Formula']
       end
 
     end
@@ -88,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @range.nil?
+          invalid_properties.push("invalid value for 'range', range cannot be nil.")
+      end
+      if @totals_calculation.nil?
+          invalid_properties.push("invalid value for 'totals_calculation', totals_calculation cannot be nil.")
+      end
+      if @formula.nil?
+          invalid_properties.push("invalid value for 'formula', formula cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
+      return false if @range.nil?
+      return false if @totals_calculation.nil?
+      return false if @formula.nil?
       return true
     end
 
@@ -102,10 +118,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          totals_calculation == o.totals_calculation &&
           name == o.name &&
-          formula == o.formula &&
-          range == o.range
+          range == o.range &&
+          totals_calculation == o.totals_calculation &&
+          formula == o.formula 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -117,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [totals_calculation, name, formula, range].hash
+      [ name , range , totals_calculation , formula ].hash
     end
 
     # Builds the object from hash

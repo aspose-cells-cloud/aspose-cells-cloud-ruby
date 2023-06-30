@@ -1,68 +1,74 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PatternFillrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PatternFill
-    attr_accessor :foreground_color
-
-    attr_accessor :pattern
-
-    attr_accessor :background_color
-
-    attr_accessor :back_transparency
-
-    attr_accessor :background_cells_color
-
-    attr_accessor :fore_transparency
-
-    attr_accessor :foreground_cells_color
-
+        #            
+        attr_accessor :pattern
+        #            
+        attr_accessor :background_cells_color
+        #            
+        attr_accessor :foreground_cells_color
+        #            
+        attr_accessor :foreground_color
+        #            
+        attr_accessor :background_color
+        #            
+        attr_accessor :back_transparency
+        #            
+        attr_accessor :fore_transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'foreground_color' => :'ForegroundColor',
         :'pattern' => :'Pattern',
+        :'background_cells_color' => :'BackgroundCellsColor',
+        :'foreground_cells_color' => :'ForegroundCellsColor',
+        :'foreground_color' => :'ForegroundColor',
         :'background_color' => :'BackgroundColor',
         :'back_transparency' => :'BackTransparency',
-        :'background_cells_color' => :'BackgroundCellsColor',
-        :'fore_transparency' => :'ForeTransparency',
-        :'foreground_cells_color' => :'ForegroundCellsColor'
+        :'fore_transparency' => :'ForeTransparency'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'foreground_color' => :'Color',
         :'pattern' => :'String',
+        :'background_cells_color' => :'CellsColor',
+        :'foreground_cells_color' => :'CellsColor',
+        :'foreground_color' => :'Color',
         :'background_color' => :'Color',
         :'back_transparency' => :'Float',
-        :'background_cells_color' => :'CellsColor',
-        :'fore_transparency' => :'Float',
-        :'foreground_cells_color' => :'CellsColor'
+        :'fore_transparency' => :'Float'
       }
     end
 
@@ -74,32 +80,26 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ForegroundColor')
-        self.foreground_color = attributes[:'ForegroundColor']
-      end
-
       if attributes.has_key?(:'Pattern')
-        self.pattern = attributes[:'Pattern']
+          self.pattern = attributes[:'Pattern']
       end
-
-      if attributes.has_key?(:'BackgroundColor')
-        self.background_color = attributes[:'BackgroundColor']
-      end
-
-      if attributes.has_key?(:'BackTransparency')
-        self.back_transparency = attributes[:'BackTransparency']
-      end
-
       if attributes.has_key?(:'BackgroundCellsColor')
-        self.background_cells_color = attributes[:'BackgroundCellsColor']
+          self.background_cells_color = attributes[:'BackgroundCellsColor']
       end
-
-      if attributes.has_key?(:'ForeTransparency')
-        self.fore_transparency = attributes[:'ForeTransparency']
-      end
-
       if attributes.has_key?(:'ForegroundCellsColor')
-        self.foreground_cells_color = attributes[:'ForegroundCellsColor']
+          self.foreground_cells_color = attributes[:'ForegroundCellsColor']
+      end
+      if attributes.has_key?(:'ForegroundColor')
+          self.foreground_color = attributes[:'ForegroundColor']
+      end
+      if attributes.has_key?(:'BackgroundColor')
+          self.background_color = attributes[:'BackgroundColor']
+      end
+      if attributes.has_key?(:'BackTransparency')
+          self.back_transparency = attributes[:'BackTransparency']
+      end
+      if attributes.has_key?(:'ForeTransparency')
+          self.fore_transparency = attributes[:'ForeTransparency']
       end
 
     end
@@ -108,12 +108,41 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @pattern.nil?
+          invalid_properties.push("invalid value for 'pattern', pattern cannot be nil.")
+      end
+      if @background_cells_color.nil?
+          invalid_properties.push("invalid value for 'background_cells_color', background_cells_color cannot be nil.")
+      end
+      if @foreground_cells_color.nil?
+          invalid_properties.push("invalid value for 'foreground_cells_color', foreground_cells_color cannot be nil.")
+      end
+      if @foreground_color.nil?
+          invalid_properties.push("invalid value for 'foreground_color', foreground_color cannot be nil.")
+      end
+      if @background_color.nil?
+          invalid_properties.push("invalid value for 'background_color', background_color cannot be nil.")
+      end
+      if @back_transparency.nil?
+          invalid_properties.push("invalid value for 'back_transparency', back_transparency cannot be nil.")
+      end
+      if @fore_transparency.nil?
+          invalid_properties.push("invalid value for 'fore_transparency', fore_transparency cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @pattern.nil?
+      return false if @background_cells_color.nil?
+      return false if @foreground_cells_color.nil?
+      return false if @foreground_color.nil?
+      return false if @background_color.nil?
+      return false if @back_transparency.nil?
+      return false if @fore_transparency.nil?
       return true
     end
 
@@ -122,13 +151,14 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          foreground_color == o.foreground_color &&
           pattern == o.pattern &&
+          background_cells_color == o.background_cells_color &&
+          foreground_cells_color == o.foreground_cells_color &&
+          foreground_color == o.foreground_color &&
           background_color == o.background_color &&
           back_transparency == o.back_transparency &&
-          background_cells_color == o.background_cells_color &&
-          fore_transparency == o.fore_transparency &&
-          foreground_cells_color == o.foreground_cells_color
+          fore_transparency == o.fore_transparency 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -140,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [foreground_color, pattern, background_color, back_transparency, background_cells_color, fore_transparency, foreground_cells_color].hash
+      [ pattern , background_cells_color , foreground_cells_color , foreground_color , background_color , back_transparency , fore_transparency ].hash
     end
 
     # Builds the object from hash

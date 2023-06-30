@@ -1,48 +1,54 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="WorkbookSettingsOperateParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class WorkbookSettingsOperateParameter
-    attr_accessor :operate_type
-
-    attr_accessor :workbook_settings
-
+        #            
+        attr_accessor :workbook_settings
+        #            
+        attr_accessor :operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'operate_type' => :'OperateType',
-        :'workbook_settings' => :'WorkbookSettings'
+        :'workbook_settings' => :'WorkbookSettings',
+        :'operate_type' => :'OperateType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'operate_type' => :'String',
-        :'workbook_settings' => :'WorkbookSettings'
+        :'workbook_settings' => :'WorkbookSettings',
+        :'operate_type' => :'String'
       }
     end
 
@@ -54,12 +60,11 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'OperateType')
-        self.operate_type = attributes[:'OperateType']
-      end
-
       if attributes.has_key?(:'WorkbookSettings')
-        self.workbook_settings = attributes[:'WorkbookSettings']
+          self.workbook_settings = attributes[:'WorkbookSettings']
+      end
+      if attributes.has_key?(:'OperateType')
+          self.operate_type = attributes[:'OperateType']
       end
 
     end
@@ -68,12 +73,21 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @workbook_settings.nil?
+          invalid_properties.push("invalid value for 'workbook_settings', workbook_settings cannot be nil.")
+      end
+      if @operate_type.nil?
+          invalid_properties.push("invalid value for 'operate_type', operate_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @workbook_settings.nil?
+      return false if @operate_type.nil?
       return true
     end
 
@@ -82,8 +96,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          operate_type == o.operate_type &&
-          workbook_settings == o.workbook_settings
+          workbook_settings == o.workbook_settings &&
+          operate_type == o.operate_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -95,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_type, workbook_settings].hash
+      [ workbook_settings , operate_type ].hash
     end
 
     # Builds the object from hash

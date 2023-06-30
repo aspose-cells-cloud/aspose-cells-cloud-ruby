@@ -1,124 +1,126 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Titlerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Title
-    attr_accessor :is_inner_mode
-
-    attr_accessor :shape_properties
-
-    attr_accessor :auto_scale_font
-
-    attr_accessor :area
-
-    attr_accessor :height
-
-    attr_accessor :width
-
-    attr_accessor :background_mode
-
-    attr_accessor :is_automatic_size
-
-    attr_accessor :y
-
-    attr_accessor :x
-
-    attr_accessor :shadow
-
-    attr_accessor :font
-
-    attr_accessor :border
-
-    attr_accessor :link
-
-    attr_accessor :linked_source
-
-    attr_accessor :text
-
-    attr_accessor :is_visible
-
-    attr_accessor :text_direction
-
-    attr_accessor :rotation_angle
-
-    attr_accessor :text_vertical_alignment
-
-    attr_accessor :text_horizontal_alignment
-
+        #            
+        attr_accessor :is_visible
+        #            
+        attr_accessor :linked_source
+        #            
+        attr_accessor :rotation_angle
+        #            
+        attr_accessor :text
+        #            
+        attr_accessor :text_direction
+        #            
+        attr_accessor :text_horizontal_alignment
+        #            
+        attr_accessor :text_vertical_alignment
+        #            
+        attr_accessor :area
+        #            
+        attr_accessor :auto_scale_font
+        #            
+        attr_accessor :background_mode
+        #            
+        attr_accessor :border
+        #            
+        attr_accessor :font
+        #            
+        attr_accessor :is_automatic_size
+        #            
+        attr_accessor :is_inner_mode
+        #            
+        attr_accessor :shadow
+        #            
+        attr_accessor :shape_properties
+        #            
+        attr_accessor :width
+        #            
+        attr_accessor :height
+        #            
+        attr_accessor :x
+        #            
+        attr_accessor :y
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'is_inner_mode' => :'IsInnerMode',
-        :'shape_properties' => :'ShapeProperties',
-        :'auto_scale_font' => :'AutoScaleFont',
-        :'area' => :'Area',
-        :'height' => :'Height',
-        :'width' => :'Width',
-        :'background_mode' => :'BackgroundMode',
-        :'is_automatic_size' => :'IsAutomaticSize',
-        :'y' => :'Y',
-        :'x' => :'X',
-        :'shadow' => :'Shadow',
-        :'font' => :'Font',
-        :'border' => :'Border',
-        :'link' => :'link',
-        :'linked_source' => :'LinkedSource',
-        :'text' => :'Text',
         :'is_visible' => :'IsVisible',
-        :'text_direction' => :'TextDirection',
+        :'linked_source' => :'LinkedSource',
         :'rotation_angle' => :'RotationAngle',
+        :'text' => :'Text',
+        :'text_direction' => :'TextDirection',
+        :'text_horizontal_alignment' => :'TextHorizontalAlignment',
         :'text_vertical_alignment' => :'TextVerticalAlignment',
-        :'text_horizontal_alignment' => :'TextHorizontalAlignment'
+        :'area' => :'Area',
+        :'auto_scale_font' => :'AutoScaleFont',
+        :'background_mode' => :'BackgroundMode',
+        :'border' => :'Border',
+        :'font' => :'Font',
+        :'is_automatic_size' => :'IsAutomaticSize',
+        :'is_inner_mode' => :'IsInnerMode',
+        :'shadow' => :'Shadow',
+        :'shape_properties' => :'ShapeProperties',
+        :'width' => :'Width',
+        :'height' => :'Height',
+        :'x' => :'X',
+        :'y' => :'Y'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'is_inner_mode' => :'BOOLEAN',
-        :'shape_properties' => :'Array<LinkElement>',
-        :'auto_scale_font' => :'BOOLEAN',
-        :'area' => :'Area',
-        :'height' => :'Integer',
-        :'width' => :'Integer',
-        :'background_mode' => :'String',
-        :'is_automatic_size' => :'BOOLEAN',
-        :'y' => :'Integer',
-        :'x' => :'Integer',
-        :'shadow' => :'BOOLEAN',
-        :'font' => :'Font',
-        :'border' => :'Line',
-        :'link' => :'Link',
-        :'linked_source' => :'String',
-        :'text' => :'String',
         :'is_visible' => :'BOOLEAN',
-        :'text_direction' => :'String',
+        :'linked_source' => :'String',
         :'rotation_angle' => :'Integer',
+        :'text' => :'String',
+        :'text_direction' => :'String',
+        :'text_horizontal_alignment' => :'String',
         :'text_vertical_alignment' => :'String',
-        :'text_horizontal_alignment' => :'String'
+        :'area' => :'Area',
+        :'auto_scale_font' => :'BOOLEAN',
+        :'background_mode' => :'String',
+        :'border' => :'Line',
+        :'font' => :'Font',
+        :'is_automatic_size' => :'BOOLEAN',
+        :'is_inner_mode' => :'BOOLEAN',
+        :'shadow' => :'BOOLEAN',
+        :'shape_properties' => :'Array<LinkElement>',
+        :'width' => :'Integer',
+        :'height' => :'Integer',
+        :'x' => :'Integer',
+        :'y' => :'Integer'
       }
     end
 
@@ -130,90 +132,65 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IsInnerMode')
-        self.is_inner_mode = attributes[:'IsInnerMode']
-      end
-
-      if attributes.has_key?(:'ShapeProperties')
-        if (value = attributes[:'ShapeProperties']).is_a?(Array)
-          self.shape_properties = value
-        end
-      end
-
-      if attributes.has_key?(:'AutoScaleFont')
-        self.auto_scale_font = attributes[:'AutoScaleFont']
-      end
-
-      if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
-      end
-
-      if attributes.has_key?(:'Height')
-        self.height = attributes[:'Height']
-      end
-
-      if attributes.has_key?(:'Width')
-        self.width = attributes[:'Width']
-      end
-
-      if attributes.has_key?(:'BackgroundMode')
-        self.background_mode = attributes[:'BackgroundMode']
-      end
-
-      if attributes.has_key?(:'IsAutomaticSize')
-        self.is_automatic_size = attributes[:'IsAutomaticSize']
-      end
-
-      if attributes.has_key?(:'Y')
-        self.y = attributes[:'Y']
-      end
-
-      if attributes.has_key?(:'X')
-        self.x = attributes[:'X']
-      end
-
-      if attributes.has_key?(:'Shadow')
-        self.shadow = attributes[:'Shadow']
-      end
-
-      if attributes.has_key?(:'Font')
-        self.font = attributes[:'Font']
-      end
-
-      if attributes.has_key?(:'Border')
-        self.border = attributes[:'Border']
-      end
-
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'LinkedSource')
-        self.linked_source = attributes[:'LinkedSource']
-      end
-
-      if attributes.has_key?(:'Text')
-        self.text = attributes[:'Text']
-      end
-
       if attributes.has_key?(:'IsVisible')
-        self.is_visible = attributes[:'IsVisible']
+          self.is_visible = attributes[:'IsVisible']
       end
-
-      if attributes.has_key?(:'TextDirection')
-        self.text_direction = attributes[:'TextDirection']
+      if attributes.has_key?(:'LinkedSource')
+          self.linked_source = attributes[:'LinkedSource']
       end
-
       if attributes.has_key?(:'RotationAngle')
-        self.rotation_angle = attributes[:'RotationAngle']
+          self.rotation_angle = attributes[:'RotationAngle']
       end
-
-      if attributes.has_key?(:'TextVerticalAlignment')
-        self.text_vertical_alignment = attributes[:'TextVerticalAlignment']
+      if attributes.has_key?(:'Text')
+          self.text = attributes[:'Text']
       end
-
+      if attributes.has_key?(:'TextDirection')
+          self.text_direction = attributes[:'TextDirection']
+      end
       if attributes.has_key?(:'TextHorizontalAlignment')
-        self.text_horizontal_alignment = attributes[:'TextHorizontalAlignment']
+          self.text_horizontal_alignment = attributes[:'TextHorizontalAlignment']
+      end
+      if attributes.has_key?(:'TextVerticalAlignment')
+          self.text_vertical_alignment = attributes[:'TextVerticalAlignment']
+      end
+      if attributes.has_key?(:'Area')
+          self.area = attributes[:'Area']
+      end
+      if attributes.has_key?(:'AutoScaleFont')
+          self.auto_scale_font = attributes[:'AutoScaleFont']
+      end
+      if attributes.has_key?(:'BackgroundMode')
+          self.background_mode = attributes[:'BackgroundMode']
+      end
+      if attributes.has_key?(:'Border')
+          self.border = attributes[:'Border']
+      end
+      if attributes.has_key?(:'Font')
+          self.font = attributes[:'Font']
+      end
+      if attributes.has_key?(:'IsAutomaticSize')
+          self.is_automatic_size = attributes[:'IsAutomaticSize']
+      end
+      if attributes.has_key?(:'IsInnerMode')
+          self.is_inner_mode = attributes[:'IsInnerMode']
+      end
+      if attributes.has_key?(:'Shadow')
+          self.shadow = attributes[:'Shadow']
+      end
+      if attributes.has_key?(:'ShapeProperties')
+          self.shape_properties = attributes[:'ShapeProperties']
+      end
+      if attributes.has_key?(:'Width')
+          self.width = attributes[:'Width']
+      end
+      if attributes.has_key?(:'Height')
+          self.height = attributes[:'Height']
+      end
+      if attributes.has_key?(:'X')
+          self.x = attributes[:'X']
+      end
+      if attributes.has_key?(:'Y')
+          self.y = attributes[:'Y']
       end
 
     end
@@ -222,12 +199,93 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @is_visible.nil?
+          invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+      end
+      if @linked_source.nil?
+          invalid_properties.push("invalid value for 'linked_source', linked_source cannot be nil.")
+      end
+      if @rotation_angle.nil?
+          invalid_properties.push("invalid value for 'rotation_angle', rotation_angle cannot be nil.")
+      end
+      if @text.nil?
+          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      end
+      if @text_direction.nil?
+          invalid_properties.push("invalid value for 'text_direction', text_direction cannot be nil.")
+      end
+      if @text_horizontal_alignment.nil?
+          invalid_properties.push("invalid value for 'text_horizontal_alignment', text_horizontal_alignment cannot be nil.")
+      end
+      if @text_vertical_alignment.nil?
+          invalid_properties.push("invalid value for 'text_vertical_alignment', text_vertical_alignment cannot be nil.")
+      end
+      if @area.nil?
+          invalid_properties.push("invalid value for 'area', area cannot be nil.")
+      end
+      if @auto_scale_font.nil?
+          invalid_properties.push("invalid value for 'auto_scale_font', auto_scale_font cannot be nil.")
+      end
+      if @background_mode.nil?
+          invalid_properties.push("invalid value for 'background_mode', background_mode cannot be nil.")
+      end
+      if @border.nil?
+          invalid_properties.push("invalid value for 'border', border cannot be nil.")
+      end
+      if @font.nil?
+          invalid_properties.push("invalid value for 'font', font cannot be nil.")
+      end
+      if @is_automatic_size.nil?
+          invalid_properties.push("invalid value for 'is_automatic_size', is_automatic_size cannot be nil.")
+      end
+      if @is_inner_mode.nil?
+          invalid_properties.push("invalid value for 'is_inner_mode', is_inner_mode cannot be nil.")
+      end
+      if @shadow.nil?
+          invalid_properties.push("invalid value for 'shadow', shadow cannot be nil.")
+      end
+      if @shape_properties.nil?
+          invalid_properties.push("invalid value for 'shape_properties', shape_properties cannot be nil.")
+      end
+      if @width.nil?
+          invalid_properties.push("invalid value for 'width', width cannot be nil.")
+      end
+      if @height.nil?
+          invalid_properties.push("invalid value for 'height', height cannot be nil.")
+      end
+      if @x.nil?
+          invalid_properties.push("invalid value for 'x', x cannot be nil.")
+      end
+      if @y.nil?
+          invalid_properties.push("invalid value for 'y', y cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @is_visible.nil?
+      return false if @linked_source.nil?
+      return false if @rotation_angle.nil?
+      return false if @text.nil?
+      return false if @text_direction.nil?
+      return false if @text_horizontal_alignment.nil?
+      return false if @text_vertical_alignment.nil?
+      return false if @area.nil?
+      return false if @auto_scale_font.nil?
+      return false if @background_mode.nil?
+      return false if @border.nil?
+      return false if @font.nil?
+      return false if @is_automatic_size.nil?
+      return false if @is_inner_mode.nil?
+      return false if @shadow.nil?
+      return false if @shape_properties.nil?
+      return false if @width.nil?
+      return false if @height.nil?
+      return false if @x.nil?
+      return false if @y.nil?
       return true
     end
 
@@ -236,27 +294,27 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          is_inner_mode == o.is_inner_mode &&
-          shape_properties == o.shape_properties &&
-          auto_scale_font == o.auto_scale_font &&
-          area == o.area &&
-          height == o.height &&
-          width == o.width &&
-          background_mode == o.background_mode &&
-          is_automatic_size == o.is_automatic_size &&
-          y == o.y &&
-          x == o.x &&
-          shadow == o.shadow &&
-          font == o.font &&
-          border == o.border &&
-          link == o.link &&
-          linked_source == o.linked_source &&
-          text == o.text &&
           is_visible == o.is_visible &&
-          text_direction == o.text_direction &&
+          linked_source == o.linked_source &&
           rotation_angle == o.rotation_angle &&
+          text == o.text &&
+          text_direction == o.text_direction &&
+          text_horizontal_alignment == o.text_horizontal_alignment &&
           text_vertical_alignment == o.text_vertical_alignment &&
-          text_horizontal_alignment == o.text_horizontal_alignment
+          area == o.area &&
+          auto_scale_font == o.auto_scale_font &&
+          background_mode == o.background_mode &&
+          border == o.border &&
+          font == o.font &&
+          is_automatic_size == o.is_automatic_size &&
+          is_inner_mode == o.is_inner_mode &&
+          shadow == o.shadow &&
+          shape_properties == o.shape_properties &&
+          width == o.width &&
+          height == o.height &&
+          x == o.x &&
+          y == o.y 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -268,7 +326,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_inner_mode, shape_properties, auto_scale_font, area, height, width, background_mode, is_automatic_size, y, x, shadow, font, border, link, linked_source, text, is_visible, text_direction, rotation_angle, text_vertical_alignment, text_horizontal_alignment].hash
+      [ is_visible , linked_source , rotation_angle , text , text_direction , text_horizontal_alignment , text_vertical_alignment , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , shape_properties , width , height , x , y ].hash
     end
 
     # Builds the object from hash

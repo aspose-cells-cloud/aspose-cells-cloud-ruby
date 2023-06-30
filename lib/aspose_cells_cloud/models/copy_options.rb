@@ -1,69 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CopyOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Represents the copy options.
+
   class CopyOptions
-    # When copying the range in the same file and the chart refers to the source sheet,   False means the copied chart's data source will not be changed. True means the   copied chart's data source refers to the destination sheet.             
-    attr_accessor :refer_to_destination_sheet
-
-    # Indicates whether copying the names.
-    attr_accessor :copy_names
-
-    attr_accessor :refer_to_sheet_with_same_name
-
-    # Indicates whether copying column width in unit of characters.
-    attr_accessor :column_character_width
-
-    # If the formula is not valid for the dest destination, only copy values.
-    attr_accessor :copy_invalid_formulas_as_values
-
-    # Indicates whether extend ranges when copying the range to adjacent range.
-    attr_accessor :extend_to_adjacent_range
-
+        #Indicates whether copying column width in unit of characters.            
+        attr_accessor :column_character_width
+        #If the formula is not valid for the dest destination, only copy values.            
+        attr_accessor :copy_invalid_formulas_as_values
+        #Indicates whether copying the names.            
+        attr_accessor :copy_names
+        #Indicates whether extend ranges when copying the range to adjacent range.            
+        attr_accessor :extend_to_adjacent_range
+        #When copying the range in the same file and the chart refers to the source sheet,  False means the copied chart's data source will not be changed. True means the  copied chart's data source refers to the destination sheet.                        
+        attr_accessor :refer_to_destination_sheet
+        #            
+        attr_accessor :refer_to_sheet_with_same_name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'refer_to_destination_sheet' => :'ReferToDestinationSheet',
-        :'copy_names' => :'CopyNames',
-        :'refer_to_sheet_with_same_name' => :'ReferToSheetWithSameName',
         :'column_character_width' => :'ColumnCharacterWidth',
         :'copy_invalid_formulas_as_values' => :'CopyInvalidFormulasAsValues',
-        :'extend_to_adjacent_range' => :'ExtendToAdjacentRange'
+        :'copy_names' => :'CopyNames',
+        :'extend_to_adjacent_range' => :'ExtendToAdjacentRange',
+        :'refer_to_destination_sheet' => :'ReferToDestinationSheet',
+        :'refer_to_sheet_with_same_name' => :'ReferToSheetWithSameName'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'refer_to_destination_sheet' => :'BOOLEAN',
-        :'copy_names' => :'BOOLEAN',
-        :'refer_to_sheet_with_same_name' => :'BOOLEAN',
         :'column_character_width' => :'BOOLEAN',
         :'copy_invalid_formulas_as_values' => :'BOOLEAN',
-        :'extend_to_adjacent_range' => :'BOOLEAN'
+        :'copy_names' => :'BOOLEAN',
+        :'extend_to_adjacent_range' => :'BOOLEAN',
+        :'refer_to_destination_sheet' => :'BOOLEAN',
+        :'refer_to_sheet_with_same_name' => :'BOOLEAN'
       }
     end
 
@@ -75,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ReferToDestinationSheet')
-        self.refer_to_destination_sheet = attributes[:'ReferToDestinationSheet']
-      end
-
-      if attributes.has_key?(:'CopyNames')
-        self.copy_names = attributes[:'CopyNames']
-      end
-
-      if attributes.has_key?(:'ReferToSheetWithSameName')
-        self.refer_to_sheet_with_same_name = attributes[:'ReferToSheetWithSameName']
-      end
-
       if attributes.has_key?(:'ColumnCharacterWidth')
-        self.column_character_width = attributes[:'ColumnCharacterWidth']
+          self.column_character_width = attributes[:'ColumnCharacterWidth']
       end
-
       if attributes.has_key?(:'CopyInvalidFormulasAsValues')
-        self.copy_invalid_formulas_as_values = attributes[:'CopyInvalidFormulasAsValues']
+          self.copy_invalid_formulas_as_values = attributes[:'CopyInvalidFormulasAsValues']
       end
-
+      if attributes.has_key?(:'CopyNames')
+          self.copy_names = attributes[:'CopyNames']
+      end
       if attributes.has_key?(:'ExtendToAdjacentRange')
-        self.extend_to_adjacent_range = attributes[:'ExtendToAdjacentRange']
+          self.extend_to_adjacent_range = attributes[:'ExtendToAdjacentRange']
+      end
+      if attributes.has_key?(:'ReferToDestinationSheet')
+          self.refer_to_destination_sheet = attributes[:'ReferToDestinationSheet']
+      end
+      if attributes.has_key?(:'ReferToSheetWithSameName')
+          self.refer_to_sheet_with_same_name = attributes[:'ReferToSheetWithSameName']
       end
 
     end
@@ -105,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @column_character_width.nil?
+          invalid_properties.push("invalid value for 'column_character_width', column_character_width cannot be nil.")
+      end
+      if @copy_invalid_formulas_as_values.nil?
+          invalid_properties.push("invalid value for 'copy_invalid_formulas_as_values', copy_invalid_formulas_as_values cannot be nil.")
+      end
+      if @copy_names.nil?
+          invalid_properties.push("invalid value for 'copy_names', copy_names cannot be nil.")
+      end
+      if @extend_to_adjacent_range.nil?
+          invalid_properties.push("invalid value for 'extend_to_adjacent_range', extend_to_adjacent_range cannot be nil.")
+      end
+      if @refer_to_destination_sheet.nil?
+          invalid_properties.push("invalid value for 'refer_to_destination_sheet', refer_to_destination_sheet cannot be nil.")
+      end
+      if @refer_to_sheet_with_same_name.nil?
+          invalid_properties.push("invalid value for 'refer_to_sheet_with_same_name', refer_to_sheet_with_same_name cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @column_character_width.nil?
+      return false if @copy_invalid_formulas_as_values.nil?
+      return false if @copy_names.nil?
+      return false if @extend_to_adjacent_range.nil?
+      return false if @refer_to_destination_sheet.nil?
+      return false if @refer_to_sheet_with_same_name.nil?
       return true
     end
 
@@ -119,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          refer_to_destination_sheet == o.refer_to_destination_sheet &&
-          copy_names == o.copy_names &&
-          refer_to_sheet_with_same_name == o.refer_to_sheet_with_same_name &&
           column_character_width == o.column_character_width &&
           copy_invalid_formulas_as_values == o.copy_invalid_formulas_as_values &&
-          extend_to_adjacent_range == o.extend_to_adjacent_range
+          copy_names == o.copy_names &&
+          extend_to_adjacent_range == o.extend_to_adjacent_range &&
+          refer_to_destination_sheet == o.refer_to_destination_sheet &&
+          refer_to_sheet_with_same_name == o.refer_to_sheet_with_same_name 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -136,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [refer_to_destination_sheet, copy_names, refer_to_sheet_with_same_name, column_character_width, copy_invalid_formulas_as_values, extend_to_adjacent_range].hash
+      [ column_character_width , copy_invalid_formulas_as_values , copy_names , extend_to_adjacent_range , refer_to_destination_sheet , refer_to_sheet_with_same_name ].hash
     end
 
     # Builds the object from hash

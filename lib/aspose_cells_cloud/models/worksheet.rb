@@ -1,189 +1,174 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Worksheetrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Worksheet
-    # Gets the index of sheet in the worksheets collection.             
-    attr_accessor :index
-
-    attr_accessor :pictures
-
-    attr_accessor :charts
-
-    attr_accessor :comments
-
-    attr_accessor :hyperlinks
-
-    # Represents if the worksheet is visible.             
-    attr_accessor :is_visible
-
-    # Gets and sets the view type.
-    attr_accessor :view_type
-
-    # Represents worksheet type
-    attr_accessor :type
-
-    # Gets or sets a value indicating whether the gridelines are visible.Default     is true.
-    attr_accessor :is_gridlines_visible
-
-    # Gets or sets a value indicating whether the worksheet will display row and column headers.Default is true.             
-    attr_accessor :is_row_column_headers_visible
-
-    # Indications the specified worksheet is shown in normal view or page break preview.
-    attr_accessor :is_page_break_preview
-
-    # True if zero values are displayed.
-    attr_accessor :display_zeros
-
-    # Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
-    attr_accessor :transition_evaluation
-
-    # Indicates if the specified worksheet is displayed from right to left instead    of from left to right.  Default is false.             
-    attr_accessor :display_right_to_left
-
-    # Represents first visible column index.
-    attr_accessor :first_visible_column
-
-    attr_accessor :ole_objects
-
-    # Indicates whether show outline.             
-    attr_accessor :is_outline_shown
-
-    # Gets or sets the name of the worksheet.             
-    attr_accessor :name
-
-    attr_accessor :auto_shapes
-
-    attr_accessor :cells
-
-    attr_accessor :validations
-
-    # Represents the scaling factor in percent. It should be btween 10 and 400.             
-    attr_accessor :zoom
-
-    attr_accessor :conditional_formattings
-
-    # Indicates whether this worksheet is selected when the workbook is opened.
-    attr_accessor :is_selected
-
-    # Represents worksheet tab color.
-    attr_accessor :tab_color
-
-    # Represents first visible row index.             
-    attr_accessor :first_visible_row
-
-    # Flag indicating whether the Transition Formula Entry (Lotus compatibility) option is enabled.
-    attr_accessor :transition_entry
-
-    # Indicates the state for this sheet visibility             
-    attr_accessor :visibility_type
-
-    # Indicates whether the ruler is visible. Only apply for page break preview.
-    attr_accessor :is_ruler_visible
-
-    attr_accessor :links
-
-    # Indicates if the worksheet is protected.
-    attr_accessor :is_protected
-
-    attr_accessor :merged_cells
-
+        #            
+        attr_accessor :links
+        #Indicates if the specified worksheet is displayed from right to left instead   of from left to right.  Default is false.                        
+        attr_accessor :display_right_to_left
+        #True if zero values are displayed.            
+        attr_accessor :display_zeros
+        #Represents first visible column index.            
+        attr_accessor :first_visible_column
+        #Represents first visible row index.                        
+        attr_accessor :first_visible_row
+        #Gets or sets the name of the worksheet.                        
+        attr_accessor :name
+        #Gets the index of sheet in the worksheets collection.                        
+        attr_accessor :index
+        #Gets or sets a value indicating whether the gridelines are visible.Default    is true.            
+        attr_accessor :is_gridlines_visible
+        #Indicates whether show outline.                        
+        attr_accessor :is_outline_shown
+        #Indications the specified worksheet is shown in normal view or page break preview.            
+        attr_accessor :is_page_break_preview
+        #Represents if the worksheet is visible.                        
+        attr_accessor :is_visible
+        #Indicates if the worksheet is protected.            
+        attr_accessor :is_protected
+        #Gets or sets a value indicating whether the worksheet will display row and column headers.Default is true.                        
+        attr_accessor :is_row_column_headers_visible
+        #Indicates whether the ruler is visible. Only apply for page break preview.            
+        attr_accessor :is_ruler_visible
+        #Indicates whether this worksheet is selected when the workbook is opened.            
+        attr_accessor :is_selected
+        #Represents worksheet tab color.            
+        attr_accessor :tab_color
+        #Flag indicating whether the Transition Formula Entry (Lotus compatibility) option is enabled.            
+        attr_accessor :transition_entry
+        #Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.                        
+        attr_accessor :transition_evaluation
+        #Represents worksheet type            
+        attr_accessor :type
+        #Gets and sets the view type.            
+        attr_accessor :view_type
+        #Indicates the state for this sheet visibility                        
+        attr_accessor :visibility_type
+        #Represents the scaling factor in percent. It should be btween 10 and 400.                        
+        attr_accessor :zoom
+        #            
+        attr_accessor :cells
+        #            
+        attr_accessor :charts
+        #            
+        attr_accessor :auto_shapes
+        #            
+        attr_accessor :ole_objects
+        #            
+        attr_accessor :comments
+        #            
+        attr_accessor :pictures
+        #            
+        attr_accessor :merged_cells
+        #            
+        attr_accessor :validations
+        #            
+        attr_accessor :conditional_formattings
+        #            
+        attr_accessor :hyperlinks
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'index' => :'Index',
-        :'pictures' => :'Pictures',
-        :'charts' => :'Charts',
-        :'comments' => :'Comments',
-        :'hyperlinks' => :'Hyperlinks',
-        :'is_visible' => :'IsVisible',
-        :'view_type' => :'ViewType',
-        :'type' => :'Type',
-        :'is_gridlines_visible' => :'IsGridlinesVisible',
-        :'is_row_column_headers_visible' => :'IsRowColumnHeadersVisible',
-        :'is_page_break_preview' => :'IsPageBreakPreview',
-        :'display_zeros' => :'DisplayZeros',
-        :'transition_evaluation' => :'TransitionEvaluation',
+        :'links' => :'Links',
         :'display_right_to_left' => :'DisplayRightToLeft',
+        :'display_zeros' => :'DisplayZeros',
         :'first_visible_column' => :'FirstVisibleColumn',
-        :'ole_objects' => :'OleObjects',
-        :'is_outline_shown' => :'IsOutlineShown',
+        :'first_visible_row' => :'FirstVisibleRow',
         :'name' => :'Name',
-        :'auto_shapes' => :'AutoShapes',
-        :'cells' => :'Cells',
-        :'validations' => :'Validations',
-        :'zoom' => :'Zoom',
-        :'conditional_formattings' => :'ConditionalFormattings',
+        :'index' => :'Index',
+        :'is_gridlines_visible' => :'IsGridlinesVisible',
+        :'is_outline_shown' => :'IsOutlineShown',
+        :'is_page_break_preview' => :'IsPageBreakPreview',
+        :'is_visible' => :'IsVisible',
+        :'is_protected' => :'IsProtected',
+        :'is_row_column_headers_visible' => :'IsRowColumnHeadersVisible',
+        :'is_ruler_visible' => :'IsRulerVisible',
         :'is_selected' => :'IsSelected',
         :'tab_color' => :'TabColor',
-        :'first_visible_row' => :'FirstVisibleRow',
         :'transition_entry' => :'TransitionEntry',
+        :'transition_evaluation' => :'TransitionEvaluation',
+        :'type' => :'Type',
+        :'view_type' => :'ViewType',
         :'visibility_type' => :'VisibilityType',
-        :'is_ruler_visible' => :'IsRulerVisible',
-        :'links' => :'Links',
-        :'is_protected' => :'IsProtected',
-        :'merged_cells' => :'MergedCells'
+        :'zoom' => :'Zoom',
+        :'cells' => :'Cells',
+        :'charts' => :'Charts',
+        :'auto_shapes' => :'AutoShapes',
+        :'ole_objects' => :'OleObjects',
+        :'comments' => :'Comments',
+        :'pictures' => :'Pictures',
+        :'merged_cells' => :'MergedCells',
+        :'validations' => :'Validations',
+        :'conditional_formattings' => :'ConditionalFormattings',
+        :'hyperlinks' => :'Hyperlinks'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'index' => :'Integer',
-        :'pictures' => :'LinkElement',
-        :'charts' => :'LinkElement',
-        :'comments' => :'LinkElement',
-        :'hyperlinks' => :'LinkElement',
-        :'is_visible' => :'BOOLEAN',
-        :'view_type' => :'String',
-        :'type' => :'String',
-        :'is_gridlines_visible' => :'BOOLEAN',
-        :'is_row_column_headers_visible' => :'BOOLEAN',
-        :'is_page_break_preview' => :'BOOLEAN',
-        :'display_zeros' => :'BOOLEAN',
-        :'transition_evaluation' => :'BOOLEAN',
+        :'links' => :'Array<Link>',
         :'display_right_to_left' => :'BOOLEAN',
+        :'display_zeros' => :'BOOLEAN',
         :'first_visible_column' => :'Integer',
-        :'ole_objects' => :'LinkElement',
-        :'is_outline_shown' => :'BOOLEAN',
+        :'first_visible_row' => :'Integer',
         :'name' => :'String',
-        :'auto_shapes' => :'LinkElement',
-        :'cells' => :'LinkElement',
-        :'validations' => :'LinkElement',
-        :'zoom' => :'Integer',
-        :'conditional_formattings' => :'LinkElement',
+        :'index' => :'Integer',
+        :'is_gridlines_visible' => :'BOOLEAN',
+        :'is_outline_shown' => :'BOOLEAN',
+        :'is_page_break_preview' => :'BOOLEAN',
+        :'is_visible' => :'BOOLEAN',
+        :'is_protected' => :'BOOLEAN',
+        :'is_row_column_headers_visible' => :'BOOLEAN',
+        :'is_ruler_visible' => :'BOOLEAN',
         :'is_selected' => :'BOOLEAN',
         :'tab_color' => :'Color',
-        :'first_visible_row' => :'Integer',
         :'transition_entry' => :'BOOLEAN',
+        :'transition_evaluation' => :'BOOLEAN',
+        :'type' => :'String',
+        :'view_type' => :'String',
         :'visibility_type' => :'String',
-        :'is_ruler_visible' => :'BOOLEAN',
-        :'links' => :'Array<Link>',
-        :'is_protected' => :'BOOLEAN',
-        :'merged_cells' => :'LinkElement'
+        :'zoom' => :'Integer',
+        :'cells' => :'LinkElement',
+        :'charts' => :'LinkElement',
+        :'auto_shapes' => :'LinkElement',
+        :'ole_objects' => :'LinkElement',
+        :'comments' => :'LinkElement',
+        :'pictures' => :'LinkElement',
+        :'merged_cells' => :'LinkElement',
+        :'validations' => :'LinkElement',
+        :'conditional_formattings' => :'LinkElement',
+        :'hyperlinks' => :'LinkElement'
       }
     end
 
@@ -195,134 +180,101 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
-      end
-
-      if attributes.has_key?(:'Pictures')
-        self.pictures = attributes[:'Pictures']
-      end
-
-      if attributes.has_key?(:'Charts')
-        self.charts = attributes[:'Charts']
-      end
-
-      if attributes.has_key?(:'Comments')
-        self.comments = attributes[:'Comments']
-      end
-
-      if attributes.has_key?(:'Hyperlinks')
-        self.hyperlinks = attributes[:'Hyperlinks']
-      end
-
-      if attributes.has_key?(:'IsVisible')
-        self.is_visible = attributes[:'IsVisible']
-      end
-
-      if attributes.has_key?(:'ViewType')
-        self.view_type = attributes[:'ViewType']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'IsGridlinesVisible')
-        self.is_gridlines_visible = attributes[:'IsGridlinesVisible']
-      end
-
-      if attributes.has_key?(:'IsRowColumnHeadersVisible')
-        self.is_row_column_headers_visible = attributes[:'IsRowColumnHeadersVisible']
-      end
-
-      if attributes.has_key?(:'IsPageBreakPreview')
-        self.is_page_break_preview = attributes[:'IsPageBreakPreview']
-      end
-
-      if attributes.has_key?(:'DisplayZeros')
-        self.display_zeros = attributes[:'DisplayZeros']
-      end
-
-      if attributes.has_key?(:'TransitionEvaluation')
-        self.transition_evaluation = attributes[:'TransitionEvaluation']
-      end
-
-      if attributes.has_key?(:'DisplayRightToLeft')
-        self.display_right_to_left = attributes[:'DisplayRightToLeft']
-      end
-
-      if attributes.has_key?(:'FirstVisibleColumn')
-        self.first_visible_column = attributes[:'FirstVisibleColumn']
-      end
-
-      if attributes.has_key?(:'OleObjects')
-        self.ole_objects = attributes[:'OleObjects']
-      end
-
-      if attributes.has_key?(:'IsOutlineShown')
-        self.is_outline_shown = attributes[:'IsOutlineShown']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'AutoShapes')
-        self.auto_shapes = attributes[:'AutoShapes']
-      end
-
-      if attributes.has_key?(:'Cells')
-        self.cells = attributes[:'Cells']
-      end
-
-      if attributes.has_key?(:'Validations')
-        self.validations = attributes[:'Validations']
-      end
-
-      if attributes.has_key?(:'Zoom')
-        self.zoom = attributes[:'Zoom']
-      end
-
-      if attributes.has_key?(:'ConditionalFormattings')
-        self.conditional_formattings = attributes[:'ConditionalFormattings']
-      end
-
-      if attributes.has_key?(:'IsSelected')
-        self.is_selected = attributes[:'IsSelected']
-      end
-
-      if attributes.has_key?(:'TabColor')
-        self.tab_color = attributes[:'TabColor']
-      end
-
-      if attributes.has_key?(:'FirstVisibleRow')
-        self.first_visible_row = attributes[:'FirstVisibleRow']
-      end
-
-      if attributes.has_key?(:'TransitionEntry')
-        self.transition_entry = attributes[:'TransitionEntry']
-      end
-
-      if attributes.has_key?(:'VisibilityType')
-        self.visibility_type = attributes[:'VisibilityType']
-      end
-
-      if attributes.has_key?(:'IsRulerVisible')
-        self.is_ruler_visible = attributes[:'IsRulerVisible']
-      end
-
       if attributes.has_key?(:'Links')
-        if (value = attributes[:'Links']).is_a?(Array)
-          self.links = value
-        end
+          self.links = attributes[:'Links']
       end
-
+      if attributes.has_key?(:'DisplayRightToLeft')
+          self.display_right_to_left = attributes[:'DisplayRightToLeft']
+      end
+      if attributes.has_key?(:'DisplayZeros')
+          self.display_zeros = attributes[:'DisplayZeros']
+      end
+      if attributes.has_key?(:'FirstVisibleColumn')
+          self.first_visible_column = attributes[:'FirstVisibleColumn']
+      end
+      if attributes.has_key?(:'FirstVisibleRow')
+          self.first_visible_row = attributes[:'FirstVisibleRow']
+      end
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
+      if attributes.has_key?(:'Index')
+          self.index = attributes[:'Index']
+      end
+      if attributes.has_key?(:'IsGridlinesVisible')
+          self.is_gridlines_visible = attributes[:'IsGridlinesVisible']
+      end
+      if attributes.has_key?(:'IsOutlineShown')
+          self.is_outline_shown = attributes[:'IsOutlineShown']
+      end
+      if attributes.has_key?(:'IsPageBreakPreview')
+          self.is_page_break_preview = attributes[:'IsPageBreakPreview']
+      end
+      if attributes.has_key?(:'IsVisible')
+          self.is_visible = attributes[:'IsVisible']
+      end
       if attributes.has_key?(:'IsProtected')
-        self.is_protected = attributes[:'IsProtected']
+          self.is_protected = attributes[:'IsProtected']
       end
-
+      if attributes.has_key?(:'IsRowColumnHeadersVisible')
+          self.is_row_column_headers_visible = attributes[:'IsRowColumnHeadersVisible']
+      end
+      if attributes.has_key?(:'IsRulerVisible')
+          self.is_ruler_visible = attributes[:'IsRulerVisible']
+      end
+      if attributes.has_key?(:'IsSelected')
+          self.is_selected = attributes[:'IsSelected']
+      end
+      if attributes.has_key?(:'TabColor')
+          self.tab_color = attributes[:'TabColor']
+      end
+      if attributes.has_key?(:'TransitionEntry')
+          self.transition_entry = attributes[:'TransitionEntry']
+      end
+      if attributes.has_key?(:'TransitionEvaluation')
+          self.transition_evaluation = attributes[:'TransitionEvaluation']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'ViewType')
+          self.view_type = attributes[:'ViewType']
+      end
+      if attributes.has_key?(:'VisibilityType')
+          self.visibility_type = attributes[:'VisibilityType']
+      end
+      if attributes.has_key?(:'Zoom')
+          self.zoom = attributes[:'Zoom']
+      end
+      if attributes.has_key?(:'Cells')
+          self.cells = attributes[:'Cells']
+      end
+      if attributes.has_key?(:'Charts')
+          self.charts = attributes[:'Charts']
+      end
+      if attributes.has_key?(:'AutoShapes')
+          self.auto_shapes = attributes[:'AutoShapes']
+      end
+      if attributes.has_key?(:'OleObjects')
+          self.ole_objects = attributes[:'OleObjects']
+      end
+      if attributes.has_key?(:'Comments')
+          self.comments = attributes[:'Comments']
+      end
+      if attributes.has_key?(:'Pictures')
+          self.pictures = attributes[:'Pictures']
+      end
       if attributes.has_key?(:'MergedCells')
-        self.merged_cells = attributes[:'MergedCells']
+          self.merged_cells = attributes[:'MergedCells']
+      end
+      if attributes.has_key?(:'Validations')
+          self.validations = attributes[:'Validations']
+      end
+      if attributes.has_key?(:'ConditionalFormattings')
+          self.conditional_formattings = attributes[:'ConditionalFormattings']
+      end
+      if attributes.has_key?(:'Hyperlinks')
+          self.hyperlinks = attributes[:'Hyperlinks']
       end
 
     end
@@ -331,12 +283,101 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @index.nil?
-        invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      if @links.nil?
+          invalid_properties.push("invalid value for 'links', links cannot be nil.")
       end
-
+      if @display_right_to_left.nil?
+          invalid_properties.push("invalid value for 'display_right_to_left', display_right_to_left cannot be nil.")
+      end
+      if @display_zeros.nil?
+          invalid_properties.push("invalid value for 'display_zeros', display_zeros cannot be nil.")
+      end
+      if @first_visible_column.nil?
+          invalid_properties.push("invalid value for 'first_visible_column', first_visible_column cannot be nil.")
+      end
+      if @first_visible_row.nil?
+          invalid_properties.push("invalid value for 'first_visible_row', first_visible_row cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @is_gridlines_visible.nil?
+          invalid_properties.push("invalid value for 'is_gridlines_visible', is_gridlines_visible cannot be nil.")
+      end
+      if @is_outline_shown.nil?
+          invalid_properties.push("invalid value for 'is_outline_shown', is_outline_shown cannot be nil.")
+      end
+      if @is_page_break_preview.nil?
+          invalid_properties.push("invalid value for 'is_page_break_preview', is_page_break_preview cannot be nil.")
+      end
+      if @is_visible.nil?
+          invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+      end
       if @is_protected.nil?
-        invalid_properties.push("invalid value for 'is_protected', is_protected cannot be nil.")
+          invalid_properties.push("invalid value for 'is_protected', is_protected cannot be nil.")
+      end
+      if @is_row_column_headers_visible.nil?
+          invalid_properties.push("invalid value for 'is_row_column_headers_visible', is_row_column_headers_visible cannot be nil.")
+      end
+      if @is_ruler_visible.nil?
+          invalid_properties.push("invalid value for 'is_ruler_visible', is_ruler_visible cannot be nil.")
+      end
+      if @is_selected.nil?
+          invalid_properties.push("invalid value for 'is_selected', is_selected cannot be nil.")
+      end
+      if @tab_color.nil?
+          invalid_properties.push("invalid value for 'tab_color', tab_color cannot be nil.")
+      end
+      if @transition_entry.nil?
+          invalid_properties.push("invalid value for 'transition_entry', transition_entry cannot be nil.")
+      end
+      if @transition_evaluation.nil?
+          invalid_properties.push("invalid value for 'transition_evaluation', transition_evaluation cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @view_type.nil?
+          invalid_properties.push("invalid value for 'view_type', view_type cannot be nil.")
+      end
+      if @visibility_type.nil?
+          invalid_properties.push("invalid value for 'visibility_type', visibility_type cannot be nil.")
+      end
+      if @zoom.nil?
+          invalid_properties.push("invalid value for 'zoom', zoom cannot be nil.")
+      end
+      if @cells.nil?
+          invalid_properties.push("invalid value for 'cells', cells cannot be nil.")
+      end
+      if @charts.nil?
+          invalid_properties.push("invalid value for 'charts', charts cannot be nil.")
+      end
+      if @auto_shapes.nil?
+          invalid_properties.push("invalid value for 'auto_shapes', auto_shapes cannot be nil.")
+      end
+      if @ole_objects.nil?
+          invalid_properties.push("invalid value for 'ole_objects', ole_objects cannot be nil.")
+      end
+      if @comments.nil?
+          invalid_properties.push("invalid value for 'comments', comments cannot be nil.")
+      end
+      if @pictures.nil?
+          invalid_properties.push("invalid value for 'pictures', pictures cannot be nil.")
+      end
+      if @merged_cells.nil?
+          invalid_properties.push("invalid value for 'merged_cells', merged_cells cannot be nil.")
+      end
+      if @validations.nil?
+          invalid_properties.push("invalid value for 'validations', validations cannot be nil.")
+      end
+      if @conditional_formattings.nil?
+          invalid_properties.push("invalid value for 'conditional_formattings', conditional_formattings cannot be nil.")
+      end
+      if @hyperlinks.nil?
+          invalid_properties.push("invalid value for 'hyperlinks', hyperlinks cannot be nil.")
       end
 
       return invalid_properties
@@ -345,8 +386,38 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @links.nil?
+      return false if @display_right_to_left.nil?
+      return false if @display_zeros.nil?
+      return false if @first_visible_column.nil?
+      return false if @first_visible_row.nil?
+      return false if @name.nil?
       return false if @index.nil?
+      return false if @is_gridlines_visible.nil?
+      return false if @is_outline_shown.nil?
+      return false if @is_page_break_preview.nil?
+      return false if @is_visible.nil?
       return false if @is_protected.nil?
+      return false if @is_row_column_headers_visible.nil?
+      return false if @is_ruler_visible.nil?
+      return false if @is_selected.nil?
+      return false if @tab_color.nil?
+      return false if @transition_entry.nil?
+      return false if @transition_evaluation.nil?
+      return false if @type.nil?
+      return false if @view_type.nil?
+      return false if @visibility_type.nil?
+      return false if @zoom.nil?
+      return false if @cells.nil?
+      return false if @charts.nil?
+      return false if @auto_shapes.nil?
+      return false if @ole_objects.nil?
+      return false if @comments.nil?
+      return false if @pictures.nil?
+      return false if @merged_cells.nil?
+      return false if @validations.nil?
+      return false if @conditional_formattings.nil?
+      return false if @hyperlinks.nil?
       return true
     end
 
@@ -355,38 +426,39 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          index == o.index &&
-          pictures == o.pictures &&
-          charts == o.charts &&
-          comments == o.comments &&
-          hyperlinks == o.hyperlinks &&
-          is_visible == o.is_visible &&
-          view_type == o.view_type &&
-          type == o.type &&
-          is_gridlines_visible == o.is_gridlines_visible &&
-          is_row_column_headers_visible == o.is_row_column_headers_visible &&
-          is_page_break_preview == o.is_page_break_preview &&
-          display_zeros == o.display_zeros &&
-          transition_evaluation == o.transition_evaluation &&
+          links == o.links &&
           display_right_to_left == o.display_right_to_left &&
+          display_zeros == o.display_zeros &&
           first_visible_column == o.first_visible_column &&
-          ole_objects == o.ole_objects &&
-          is_outline_shown == o.is_outline_shown &&
+          first_visible_row == o.first_visible_row &&
           name == o.name &&
-          auto_shapes == o.auto_shapes &&
-          cells == o.cells &&
-          validations == o.validations &&
-          zoom == o.zoom &&
-          conditional_formattings == o.conditional_formattings &&
+          index == o.index &&
+          is_gridlines_visible == o.is_gridlines_visible &&
+          is_outline_shown == o.is_outline_shown &&
+          is_page_break_preview == o.is_page_break_preview &&
+          is_visible == o.is_visible &&
+          is_protected == o.is_protected &&
+          is_row_column_headers_visible == o.is_row_column_headers_visible &&
+          is_ruler_visible == o.is_ruler_visible &&
           is_selected == o.is_selected &&
           tab_color == o.tab_color &&
-          first_visible_row == o.first_visible_row &&
           transition_entry == o.transition_entry &&
+          transition_evaluation == o.transition_evaluation &&
+          type == o.type &&
+          view_type == o.view_type &&
           visibility_type == o.visibility_type &&
-          is_ruler_visible == o.is_ruler_visible &&
-          links == o.links &&
-          is_protected == o.is_protected &&
-          merged_cells == o.merged_cells
+          zoom == o.zoom &&
+          cells == o.cells &&
+          charts == o.charts &&
+          auto_shapes == o.auto_shapes &&
+          ole_objects == o.ole_objects &&
+          comments == o.comments &&
+          pictures == o.pictures &&
+          merged_cells == o.merged_cells &&
+          validations == o.validations &&
+          conditional_formattings == o.conditional_formattings &&
+          hyperlinks == o.hyperlinks 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -398,7 +470,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [index, pictures, charts, comments, hyperlinks, is_visible, view_type, type, is_gridlines_visible, is_row_column_headers_visible, is_page_break_preview, display_zeros, transition_evaluation, display_right_to_left, first_visible_column, ole_objects, is_outline_shown, name, auto_shapes, cells, validations, zoom, conditional_formattings, is_selected, tab_color, first_visible_row, transition_entry, visibility_type, is_ruler_visible, links, is_protected, merged_cells].hash
+      [ links , display_right_to_left , display_zeros , first_visible_column , first_visible_row , name , index , is_gridlines_visible , is_outline_shown , is_page_break_preview , is_visible , is_protected , is_row_column_headers_visible , is_ruler_visible , is_selected , tab_color , transition_entry , transition_evaluation , type , view_type , visibility_type , zoom , cells , charts , auto_shapes , ole_objects , comments , pictures , merged_cells , validations , conditional_formattings , hyperlinks ].hash
     end
 
     # Builds the object from hash

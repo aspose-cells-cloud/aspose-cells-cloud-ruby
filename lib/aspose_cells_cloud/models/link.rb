@@ -1,46 +1,52 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Linkrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Link
-    attr_accessor :href
-
-    attr_accessor :type
-
-    attr_accessor :rel
-
-    attr_accessor :title
-
+        #            
+        attr_accessor :href
+        #            
+        attr_accessor :rel
+        #            
+        attr_accessor :title
+        #            
+        attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'href' => :'Href',
-        :'type' => :'Type',
         :'rel' => :'Rel',
-        :'title' => :'Title'
+        :'title' => :'Title',
+        :'type' => :'Type'
       }
     end
 
@@ -48,9 +54,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'href' => :'String',
-        :'type' => :'String',
         :'rel' => :'String',
-        :'title' => :'String'
+        :'title' => :'String',
+        :'type' => :'String'
       }
     end
 
@@ -63,19 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Href')
-        self.href = attributes[:'Href']
+          self.href = attributes[:'Href']
       end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
       if attributes.has_key?(:'Rel')
-        self.rel = attributes[:'Rel']
+          self.rel = attributes[:'Rel']
       end
-
       if attributes.has_key?(:'Title')
-        self.title = attributes[:'Title']
+          self.title = attributes[:'Title']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
       end
 
     end
@@ -84,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @href.nil?
+          invalid_properties.push("invalid value for 'href', href cannot be nil.")
+      end
+      if @rel.nil?
+          invalid_properties.push("invalid value for 'rel', rel cannot be nil.")
+      end
+      if @title.nil?
+          invalid_properties.push("invalid value for 'title', title cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @href.nil?
+      return false if @rel.nil?
+      return false if @title.nil?
+      return false if @type.nil?
       return true
     end
 
@@ -99,9 +119,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           href == o.href &&
-          type == o.type &&
           rel == o.rel &&
-          title == o.title
+          title == o.title &&
+          type == o.type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -113,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [href, type, rel, title].hash
+      [ href , rel , title , type ].hash
     end
 
     # Builds the object from hash

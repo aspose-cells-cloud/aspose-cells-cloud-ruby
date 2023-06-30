@@ -1,128 +1,122 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="HtmlSaveOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class HtmlSaveOptions
-    attr_accessor :enable_http_compression
-
-    attr_accessor :save_format
-
-    # Make the workbook empty after saving the file.
-    attr_accessor :clear_data
-
-    # The cached file folder is used to store some large data.
-    attr_accessor :cached_file_folder
-
-    # Indicates whether validate merged areas before saving the file. The default value is false.             
-    attr_accessor :validate_merged_areas
-
-    attr_accessor :refresh_chart_cache
-
-    # If true and the directory does not exist, the directory will be automatically created before saving the file.             
-    attr_accessor :create_directory
-
-    attr_accessor :sort_names
-
-    attr_accessor :save_as_single_file
-
-    attr_accessor :export_hidden_worksheet
-
-    attr_accessor :export_grid_lines
-
-    attr_accessor :presentation_preference
-
-    attr_accessor :cell_css_prefix
-
-    attr_accessor :table_css_id
-
-    attr_accessor :is_full_path_link
-
-    attr_accessor :export_worksheet_css_separately
-
-    attr_accessor :export_similar_border_style
-
-    attr_accessor :merge_empty_td_forcely
-
-    attr_accessor :export_cell_coordinate
-
-    attr_accessor :export_extra_headings
-
-    attr_accessor :export_headings
-
-    attr_accessor :export_formula
-
-    attr_accessor :add_tooltip_text
-
-    attr_accessor :export_bogus_row_data
-
-    attr_accessor :exclude_unused_styles
-
-    attr_accessor :export_document_properties
-
-    attr_accessor :export_worksheet_properties
-
-    attr_accessor :export_workbook_properties
-
-    attr_accessor :export_frame_scripts_and_properties
-
-    attr_accessor :attached_files_directory
-
-    attr_accessor :attached_files_url_prefix
-
-    attr_accessor :encoding
-
-    attr_accessor :export_active_worksheet_only
-
-    attr_accessor :export_chart_image_format
-
-    attr_accessor :export_images_as_base64
-
-    attr_accessor :hidden_col_display_type
-
-    attr_accessor :hidden_row_display_type
-
-    attr_accessor :html_cross_string_type
-
-    attr_accessor :is_exp_image_to_temp_dir
-
-    attr_accessor :page_title
-
-    attr_accessor :parse_html_tag_in_cell
-
+        #            
+        attr_accessor :save_as_single_file
+        #            
+        attr_accessor :export_hidden_worksheet
+        #            
+        attr_accessor :export_grid_lines
+        #            
+        attr_accessor :presentation_preference
+        #            
+        attr_accessor :cell_css_prefix
+        #            
+        attr_accessor :table_css_id
+        #            
+        attr_accessor :is_full_path_link
+        #            
+        attr_accessor :export_worksheet_css_separately
+        #            
+        attr_accessor :export_similar_border_style
+        #            
+        attr_accessor :merge_empty_td_forcely
+        #            
+        attr_accessor :export_cell_coordinate
+        #            
+        attr_accessor :export_extra_headings
+        #            
+        attr_accessor :export_headings
+        #            
+        attr_accessor :export_formula
+        #            
+        attr_accessor :add_tooltip_text
+        #            
+        attr_accessor :export_bogus_row_data
+        #            
+        attr_accessor :exclude_unused_styles
+        #            
+        attr_accessor :export_document_properties
+        #            
+        attr_accessor :export_worksheet_properties
+        #            
+        attr_accessor :export_workbook_properties
+        #            
+        attr_accessor :export_frame_scripts_and_properties
+        #            
+        attr_accessor :attached_files_directory
+        #            
+        attr_accessor :attached_files_url_prefix
+        #            
+        attr_accessor :encoding
+        #            
+        attr_accessor :export_active_worksheet_only
+        #            
+        attr_accessor :export_chart_image_format
+        #            
+        attr_accessor :export_images_as_base64
+        #            
+        attr_accessor :hidden_col_display_type
+        #            
+        attr_accessor :hidden_row_display_type
+        #            
+        attr_accessor :html_cross_string_type
+        #            
+        attr_accessor :is_exp_image_to_temp_dir
+        #            
+        attr_accessor :page_title
+        #            
+        attr_accessor :parse_html_tag_in_cell
+        #            
+        attr_accessor :save_format
+        #            
+        attr_accessor :cached_file_folder
+        #            
+        attr_accessor :clear_data
+        #            
+        attr_accessor :create_directory
+        #            
+        attr_accessor :enable_http_compression
+        #            
+        attr_accessor :refresh_chart_cache
+        #            
+        attr_accessor :sort_names
+        #            
+        attr_accessor :validate_merged_areas
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enable_http_compression' => :'EnableHTTPCompression',
-        :'save_format' => :'SaveFormat',
-        :'clear_data' => :'ClearData',
-        :'cached_file_folder' => :'CachedFileFolder',
-        :'validate_merged_areas' => :'ValidateMergedAreas',
-        :'refresh_chart_cache' => :'RefreshChartCache',
-        :'create_directory' => :'CreateDirectory',
-        :'sort_names' => :'SortNames',
         :'save_as_single_file' => :'SaveAsSingleFile',
         :'export_hidden_worksheet' => :'ExportHiddenWorksheet',
         :'export_grid_lines' => :'ExportGridLines',
@@ -155,42 +149,42 @@ module AsposeCellsCloud
         :'html_cross_string_type' => :'HtmlCrossStringType',
         :'is_exp_image_to_temp_dir' => :'IsExpImageToTempDir',
         :'page_title' => :'PageTitle',
-        :'parse_html_tag_in_cell' => :'ParseHtmlTagInCell'
+        :'parse_html_tag_in_cell' => :'ParseHtmlTagInCell',
+        :'save_format' => :'SaveFormat',
+        :'cached_file_folder' => :'CachedFileFolder',
+        :'clear_data' => :'ClearData',
+        :'create_directory' => :'CreateDirectory',
+        :'enable_http_compression' => :'EnableHTTPCompression',
+        :'refresh_chart_cache' => :'RefreshChartCache',
+        :'sort_names' => :'SortNames',
+        :'validate_merged_areas' => :'ValidateMergedAreas'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'enable_http_compression' => :'BOOLEAN',
-        :'save_format' => :'String',
-        :'clear_data' => :'BOOLEAN',
-        :'cached_file_folder' => :'String',
-        :'validate_merged_areas' => :'BOOLEAN',
-        :'refresh_chart_cache' => :'BOOLEAN',
-        :'create_directory' => :'BOOLEAN',
-        :'sort_names' => :'BOOLEAN',
-        :'save_as_single_file' => :'String',
-        :'export_hidden_worksheet' => :'String',
-        :'export_grid_lines' => :'String',
-        :'presentation_preference' => :'String',
+        :'save_as_single_file' => :'BOOLEAN',
+        :'export_hidden_worksheet' => :'BOOLEAN',
+        :'export_grid_lines' => :'BOOLEAN',
+        :'presentation_preference' => :'BOOLEAN',
         :'cell_css_prefix' => :'String',
         :'table_css_id' => :'String',
-        :'is_full_path_link' => :'String',
-        :'export_worksheet_css_separately' => :'String',
-        :'export_similar_border_style' => :'String',
-        :'merge_empty_td_forcely' => :'String',
-        :'export_cell_coordinate' => :'String',
-        :'export_extra_headings' => :'String',
-        :'export_headings' => :'String',
-        :'export_formula' => :'String',
-        :'add_tooltip_text' => :'String',
-        :'export_bogus_row_data' => :'String',
-        :'exclude_unused_styles' => :'String',
-        :'export_document_properties' => :'String',
-        :'export_worksheet_properties' => :'String',
-        :'export_workbook_properties' => :'String',
-        :'export_frame_scripts_and_properties' => :'String',
+        :'is_full_path_link' => :'BOOLEAN',
+        :'export_worksheet_css_separately' => :'BOOLEAN',
+        :'export_similar_border_style' => :'BOOLEAN',
+        :'merge_empty_td_forcely' => :'BOOLEAN',
+        :'export_cell_coordinate' => :'BOOLEAN',
+        :'export_extra_headings' => :'BOOLEAN',
+        :'export_headings' => :'BOOLEAN',
+        :'export_formula' => :'BOOLEAN',
+        :'add_tooltip_text' => :'BOOLEAN',
+        :'export_bogus_row_data' => :'BOOLEAN',
+        :'exclude_unused_styles' => :'BOOLEAN',
+        :'export_document_properties' => :'BOOLEAN',
+        :'export_worksheet_properties' => :'BOOLEAN',
+        :'export_workbook_properties' => :'BOOLEAN',
+        :'export_frame_scripts_and_properties' => :'BOOLEAN',
         :'attached_files_directory' => :'String',
         :'attached_files_url_prefix' => :'String',
         :'encoding' => :'String',
@@ -202,7 +196,15 @@ module AsposeCellsCloud
         :'html_cross_string_type' => :'String',
         :'is_exp_image_to_temp_dir' => :'BOOLEAN',
         :'page_title' => :'String',
-        :'parse_html_tag_in_cell' => :'BOOLEAN'
+        :'parse_html_tag_in_cell' => :'BOOLEAN',
+        :'save_format' => :'String',
+        :'cached_file_folder' => :'String',
+        :'clear_data' => :'BOOLEAN',
+        :'create_directory' => :'BOOLEAN',
+        :'enable_http_compression' => :'BOOLEAN',
+        :'refresh_chart_cache' => :'BOOLEAN',
+        :'sort_names' => :'BOOLEAN',
+        :'validate_merged_areas' => :'BOOLEAN'
       }
     end
 
@@ -214,168 +216,128 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'EnableHTTPCompression')
-        self.enable_http_compression = attributes[:'EnableHTTPCompression']
-      end
-
-      if attributes.has_key?(:'SaveFormat')
-        self.save_format = attributes[:'SaveFormat']
-      end
-
-      if attributes.has_key?(:'ClearData')
-        self.clear_data = attributes[:'ClearData']
-      end
-
-      if attributes.has_key?(:'CachedFileFolder')
-        self.cached_file_folder = attributes[:'CachedFileFolder']
-      end
-
-      if attributes.has_key?(:'ValidateMergedAreas')
-        self.validate_merged_areas = attributes[:'ValidateMergedAreas']
-      end
-
-      if attributes.has_key?(:'RefreshChartCache')
-        self.refresh_chart_cache = attributes[:'RefreshChartCache']
-      end
-
-      if attributes.has_key?(:'CreateDirectory')
-        self.create_directory = attributes[:'CreateDirectory']
-      end
-
-      if attributes.has_key?(:'SortNames')
-        self.sort_names = attributes[:'SortNames']
-      end
-
       if attributes.has_key?(:'SaveAsSingleFile')
-        self.save_as_single_file = attributes[:'SaveAsSingleFile']
+          self.save_as_single_file = attributes[:'SaveAsSingleFile']
       end
-
       if attributes.has_key?(:'ExportHiddenWorksheet')
-        self.export_hidden_worksheet = attributes[:'ExportHiddenWorksheet']
+          self.export_hidden_worksheet = attributes[:'ExportHiddenWorksheet']
       end
-
       if attributes.has_key?(:'ExportGridLines')
-        self.export_grid_lines = attributes[:'ExportGridLines']
+          self.export_grid_lines = attributes[:'ExportGridLines']
       end
-
       if attributes.has_key?(:'PresentationPreference')
-        self.presentation_preference = attributes[:'PresentationPreference']
+          self.presentation_preference = attributes[:'PresentationPreference']
       end
-
       if attributes.has_key?(:'CellCssPrefix')
-        self.cell_css_prefix = attributes[:'CellCssPrefix']
+          self.cell_css_prefix = attributes[:'CellCssPrefix']
       end
-
       if attributes.has_key?(:'TableCssId')
-        self.table_css_id = attributes[:'TableCssId']
+          self.table_css_id = attributes[:'TableCssId']
       end
-
       if attributes.has_key?(:'IsFullPathLink')
-        self.is_full_path_link = attributes[:'IsFullPathLink']
+          self.is_full_path_link = attributes[:'IsFullPathLink']
       end
-
       if attributes.has_key?(:'ExportWorksheetCSSSeparately')
-        self.export_worksheet_css_separately = attributes[:'ExportWorksheetCSSSeparately']
+          self.export_worksheet_css_separately = attributes[:'ExportWorksheetCSSSeparately']
       end
-
       if attributes.has_key?(:'ExportSimilarBorderStyle')
-        self.export_similar_border_style = attributes[:'ExportSimilarBorderStyle']
+          self.export_similar_border_style = attributes[:'ExportSimilarBorderStyle']
       end
-
       if attributes.has_key?(:'MergeEmptyTdForcely')
-        self.merge_empty_td_forcely = attributes[:'MergeEmptyTdForcely']
+          self.merge_empty_td_forcely = attributes[:'MergeEmptyTdForcely']
       end
-
       if attributes.has_key?(:'ExportCellCoordinate')
-        self.export_cell_coordinate = attributes[:'ExportCellCoordinate']
+          self.export_cell_coordinate = attributes[:'ExportCellCoordinate']
       end
-
       if attributes.has_key?(:'ExportExtraHeadings')
-        self.export_extra_headings = attributes[:'ExportExtraHeadings']
+          self.export_extra_headings = attributes[:'ExportExtraHeadings']
       end
-
       if attributes.has_key?(:'ExportHeadings')
-        self.export_headings = attributes[:'ExportHeadings']
+          self.export_headings = attributes[:'ExportHeadings']
       end
-
       if attributes.has_key?(:'ExportFormula')
-        self.export_formula = attributes[:'ExportFormula']
+          self.export_formula = attributes[:'ExportFormula']
       end
-
       if attributes.has_key?(:'AddTooltipText')
-        self.add_tooltip_text = attributes[:'AddTooltipText']
+          self.add_tooltip_text = attributes[:'AddTooltipText']
       end
-
       if attributes.has_key?(:'ExportBogusRowData')
-        self.export_bogus_row_data = attributes[:'ExportBogusRowData']
+          self.export_bogus_row_data = attributes[:'ExportBogusRowData']
       end
-
       if attributes.has_key?(:'ExcludeUnusedStyles')
-        self.exclude_unused_styles = attributes[:'ExcludeUnusedStyles']
+          self.exclude_unused_styles = attributes[:'ExcludeUnusedStyles']
       end
-
       if attributes.has_key?(:'ExportDocumentProperties')
-        self.export_document_properties = attributes[:'ExportDocumentProperties']
+          self.export_document_properties = attributes[:'ExportDocumentProperties']
       end
-
       if attributes.has_key?(:'ExportWorksheetProperties')
-        self.export_worksheet_properties = attributes[:'ExportWorksheetProperties']
+          self.export_worksheet_properties = attributes[:'ExportWorksheetProperties']
       end
-
       if attributes.has_key?(:'ExportWorkbookProperties')
-        self.export_workbook_properties = attributes[:'ExportWorkbookProperties']
+          self.export_workbook_properties = attributes[:'ExportWorkbookProperties']
       end
-
       if attributes.has_key?(:'ExportFrameScriptsAndProperties')
-        self.export_frame_scripts_and_properties = attributes[:'ExportFrameScriptsAndProperties']
+          self.export_frame_scripts_and_properties = attributes[:'ExportFrameScriptsAndProperties']
       end
-
       if attributes.has_key?(:'AttachedFilesDirectory')
-        self.attached_files_directory = attributes[:'AttachedFilesDirectory']
+          self.attached_files_directory = attributes[:'AttachedFilesDirectory']
       end
-
       if attributes.has_key?(:'AttachedFilesUrlPrefix')
-        self.attached_files_url_prefix = attributes[:'AttachedFilesUrlPrefix']
+          self.attached_files_url_prefix = attributes[:'AttachedFilesUrlPrefix']
       end
-
       if attributes.has_key?(:'Encoding')
-        self.encoding = attributes[:'Encoding']
+          self.encoding = attributes[:'Encoding']
       end
-
       if attributes.has_key?(:'ExportActiveWorksheetOnly')
-        self.export_active_worksheet_only = attributes[:'ExportActiveWorksheetOnly']
+          self.export_active_worksheet_only = attributes[:'ExportActiveWorksheetOnly']
       end
-
       if attributes.has_key?(:'ExportChartImageFormat')
-        self.export_chart_image_format = attributes[:'ExportChartImageFormat']
+          self.export_chart_image_format = attributes[:'ExportChartImageFormat']
       end
-
       if attributes.has_key?(:'ExportImagesAsBase64')
-        self.export_images_as_base64 = attributes[:'ExportImagesAsBase64']
+          self.export_images_as_base64 = attributes[:'ExportImagesAsBase64']
       end
-
       if attributes.has_key?(:'HiddenColDisplayType')
-        self.hidden_col_display_type = attributes[:'HiddenColDisplayType']
+          self.hidden_col_display_type = attributes[:'HiddenColDisplayType']
       end
-
       if attributes.has_key?(:'HiddenRowDisplayType')
-        self.hidden_row_display_type = attributes[:'HiddenRowDisplayType']
+          self.hidden_row_display_type = attributes[:'HiddenRowDisplayType']
       end
-
       if attributes.has_key?(:'HtmlCrossStringType')
-        self.html_cross_string_type = attributes[:'HtmlCrossStringType']
+          self.html_cross_string_type = attributes[:'HtmlCrossStringType']
       end
-
       if attributes.has_key?(:'IsExpImageToTempDir')
-        self.is_exp_image_to_temp_dir = attributes[:'IsExpImageToTempDir']
+          self.is_exp_image_to_temp_dir = attributes[:'IsExpImageToTempDir']
       end
-
       if attributes.has_key?(:'PageTitle')
-        self.page_title = attributes[:'PageTitle']
+          self.page_title = attributes[:'PageTitle']
       end
-
       if attributes.has_key?(:'ParseHtmlTagInCell')
-        self.parse_html_tag_in_cell = attributes[:'ParseHtmlTagInCell']
+          self.parse_html_tag_in_cell = attributes[:'ParseHtmlTagInCell']
+      end
+      if attributes.has_key?(:'SaveFormat')
+          self.save_format = attributes[:'SaveFormat']
+      end
+      if attributes.has_key?(:'CachedFileFolder')
+          self.cached_file_folder = attributes[:'CachedFileFolder']
+      end
+      if attributes.has_key?(:'ClearData')
+          self.clear_data = attributes[:'ClearData']
+      end
+      if attributes.has_key?(:'CreateDirectory')
+          self.create_directory = attributes[:'CreateDirectory']
+      end
+      if attributes.has_key?(:'EnableHTTPCompression')
+          self.enable_http_compression = attributes[:'EnableHTTPCompression']
+      end
+      if attributes.has_key?(:'RefreshChartCache')
+          self.refresh_chart_cache = attributes[:'RefreshChartCache']
+      end
+      if attributes.has_key?(:'SortNames')
+          self.sort_names = attributes[:'SortNames']
+      end
+      if attributes.has_key?(:'ValidateMergedAreas')
+          self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
 
     end
@@ -384,12 +346,177 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @save_as_single_file.nil?
+          invalid_properties.push("invalid value for 'save_as_single_file', save_as_single_file cannot be nil.")
+      end
+      if @export_hidden_worksheet.nil?
+          invalid_properties.push("invalid value for 'export_hidden_worksheet', export_hidden_worksheet cannot be nil.")
+      end
+      if @export_grid_lines.nil?
+          invalid_properties.push("invalid value for 'export_grid_lines', export_grid_lines cannot be nil.")
+      end
+      if @presentation_preference.nil?
+          invalid_properties.push("invalid value for 'presentation_preference', presentation_preference cannot be nil.")
+      end
+      if @cell_css_prefix.nil?
+          invalid_properties.push("invalid value for 'cell_css_prefix', cell_css_prefix cannot be nil.")
+      end
+      if @table_css_id.nil?
+          invalid_properties.push("invalid value for 'table_css_id', table_css_id cannot be nil.")
+      end
+      if @is_full_path_link.nil?
+          invalid_properties.push("invalid value for 'is_full_path_link', is_full_path_link cannot be nil.")
+      end
+      if @export_worksheet_css_separately.nil?
+          invalid_properties.push("invalid value for 'export_worksheet_css_separately', export_worksheet_css_separately cannot be nil.")
+      end
+      if @export_similar_border_style.nil?
+          invalid_properties.push("invalid value for 'export_similar_border_style', export_similar_border_style cannot be nil.")
+      end
+      if @merge_empty_td_forcely.nil?
+          invalid_properties.push("invalid value for 'merge_empty_td_forcely', merge_empty_td_forcely cannot be nil.")
+      end
+      if @export_cell_coordinate.nil?
+          invalid_properties.push("invalid value for 'export_cell_coordinate', export_cell_coordinate cannot be nil.")
+      end
+      if @export_extra_headings.nil?
+          invalid_properties.push("invalid value for 'export_extra_headings', export_extra_headings cannot be nil.")
+      end
+      if @export_headings.nil?
+          invalid_properties.push("invalid value for 'export_headings', export_headings cannot be nil.")
+      end
+      if @export_formula.nil?
+          invalid_properties.push("invalid value for 'export_formula', export_formula cannot be nil.")
+      end
+      if @add_tooltip_text.nil?
+          invalid_properties.push("invalid value for 'add_tooltip_text', add_tooltip_text cannot be nil.")
+      end
+      if @export_bogus_row_data.nil?
+          invalid_properties.push("invalid value for 'export_bogus_row_data', export_bogus_row_data cannot be nil.")
+      end
+      if @exclude_unused_styles.nil?
+          invalid_properties.push("invalid value for 'exclude_unused_styles', exclude_unused_styles cannot be nil.")
+      end
+      if @export_document_properties.nil?
+          invalid_properties.push("invalid value for 'export_document_properties', export_document_properties cannot be nil.")
+      end
+      if @export_worksheet_properties.nil?
+          invalid_properties.push("invalid value for 'export_worksheet_properties', export_worksheet_properties cannot be nil.")
+      end
+      if @export_workbook_properties.nil?
+          invalid_properties.push("invalid value for 'export_workbook_properties', export_workbook_properties cannot be nil.")
+      end
+      if @export_frame_scripts_and_properties.nil?
+          invalid_properties.push("invalid value for 'export_frame_scripts_and_properties', export_frame_scripts_and_properties cannot be nil.")
+      end
+      if @attached_files_directory.nil?
+          invalid_properties.push("invalid value for 'attached_files_directory', attached_files_directory cannot be nil.")
+      end
+      if @attached_files_url_prefix.nil?
+          invalid_properties.push("invalid value for 'attached_files_url_prefix', attached_files_url_prefix cannot be nil.")
+      end
+      if @encoding.nil?
+          invalid_properties.push("invalid value for 'encoding', encoding cannot be nil.")
+      end
+      if @export_active_worksheet_only.nil?
+          invalid_properties.push("invalid value for 'export_active_worksheet_only', export_active_worksheet_only cannot be nil.")
+      end
+      if @export_chart_image_format.nil?
+          invalid_properties.push("invalid value for 'export_chart_image_format', export_chart_image_format cannot be nil.")
+      end
+      if @export_images_as_base64.nil?
+          invalid_properties.push("invalid value for 'export_images_as_base64', export_images_as_base64 cannot be nil.")
+      end
+      if @hidden_col_display_type.nil?
+          invalid_properties.push("invalid value for 'hidden_col_display_type', hidden_col_display_type cannot be nil.")
+      end
+      if @hidden_row_display_type.nil?
+          invalid_properties.push("invalid value for 'hidden_row_display_type', hidden_row_display_type cannot be nil.")
+      end
+      if @html_cross_string_type.nil?
+          invalid_properties.push("invalid value for 'html_cross_string_type', html_cross_string_type cannot be nil.")
+      end
+      if @is_exp_image_to_temp_dir.nil?
+          invalid_properties.push("invalid value for 'is_exp_image_to_temp_dir', is_exp_image_to_temp_dir cannot be nil.")
+      end
+      if @page_title.nil?
+          invalid_properties.push("invalid value for 'page_title', page_title cannot be nil.")
+      end
+      if @parse_html_tag_in_cell.nil?
+          invalid_properties.push("invalid value for 'parse_html_tag_in_cell', parse_html_tag_in_cell cannot be nil.")
+      end
+      if @save_format.nil?
+          invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
+      end
+      if @cached_file_folder.nil?
+          invalid_properties.push("invalid value for 'cached_file_folder', cached_file_folder cannot be nil.")
+      end
+      if @clear_data.nil?
+          invalid_properties.push("invalid value for 'clear_data', clear_data cannot be nil.")
+      end
+      if @create_directory.nil?
+          invalid_properties.push("invalid value for 'create_directory', create_directory cannot be nil.")
+      end
+      if @enable_http_compression.nil?
+          invalid_properties.push("invalid value for 'enable_http_compression', enable_http_compression cannot be nil.")
+      end
+      if @refresh_chart_cache.nil?
+          invalid_properties.push("invalid value for 'refresh_chart_cache', refresh_chart_cache cannot be nil.")
+      end
+      if @sort_names.nil?
+          invalid_properties.push("invalid value for 'sort_names', sort_names cannot be nil.")
+      end
+      if @validate_merged_areas.nil?
+          invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @save_as_single_file.nil?
+      return false if @export_hidden_worksheet.nil?
+      return false if @export_grid_lines.nil?
+      return false if @presentation_preference.nil?
+      return false if @cell_css_prefix.nil?
+      return false if @table_css_id.nil?
+      return false if @is_full_path_link.nil?
+      return false if @export_worksheet_css_separately.nil?
+      return false if @export_similar_border_style.nil?
+      return false if @merge_empty_td_forcely.nil?
+      return false if @export_cell_coordinate.nil?
+      return false if @export_extra_headings.nil?
+      return false if @export_headings.nil?
+      return false if @export_formula.nil?
+      return false if @add_tooltip_text.nil?
+      return false if @export_bogus_row_data.nil?
+      return false if @exclude_unused_styles.nil?
+      return false if @export_document_properties.nil?
+      return false if @export_worksheet_properties.nil?
+      return false if @export_workbook_properties.nil?
+      return false if @export_frame_scripts_and_properties.nil?
+      return false if @attached_files_directory.nil?
+      return false if @attached_files_url_prefix.nil?
+      return false if @encoding.nil?
+      return false if @export_active_worksheet_only.nil?
+      return false if @export_chart_image_format.nil?
+      return false if @export_images_as_base64.nil?
+      return false if @hidden_col_display_type.nil?
+      return false if @hidden_row_display_type.nil?
+      return false if @html_cross_string_type.nil?
+      return false if @is_exp_image_to_temp_dir.nil?
+      return false if @page_title.nil?
+      return false if @parse_html_tag_in_cell.nil?
+      return false if @save_format.nil?
+      return false if @cached_file_folder.nil?
+      return false if @clear_data.nil?
+      return false if @create_directory.nil?
+      return false if @enable_http_compression.nil?
+      return false if @refresh_chart_cache.nil?
+      return false if @sort_names.nil?
+      return false if @validate_merged_areas.nil?
       return true
     end
 
@@ -398,14 +525,6 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enable_http_compression == o.enable_http_compression &&
-          save_format == o.save_format &&
-          clear_data == o.clear_data &&
-          cached_file_folder == o.cached_file_folder &&
-          validate_merged_areas == o.validate_merged_areas &&
-          refresh_chart_cache == o.refresh_chart_cache &&
-          create_directory == o.create_directory &&
-          sort_names == o.sort_names &&
           save_as_single_file == o.save_as_single_file &&
           export_hidden_worksheet == o.export_hidden_worksheet &&
           export_grid_lines == o.export_grid_lines &&
@@ -438,7 +557,16 @@ module AsposeCellsCloud
           html_cross_string_type == o.html_cross_string_type &&
           is_exp_image_to_temp_dir == o.is_exp_image_to_temp_dir &&
           page_title == o.page_title &&
-          parse_html_tag_in_cell == o.parse_html_tag_in_cell
+          parse_html_tag_in_cell == o.parse_html_tag_in_cell &&
+          save_format == o.save_format &&
+          cached_file_folder == o.cached_file_folder &&
+          clear_data == o.clear_data &&
+          create_directory == o.create_directory &&
+          enable_http_compression == o.enable_http_compression &&
+          refresh_chart_cache == o.refresh_chart_cache &&
+          sort_names == o.sort_names &&
+          validate_merged_areas == o.validate_merged_areas 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -450,7 +578,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enable_http_compression, save_format, clear_data, cached_file_folder, validate_merged_areas, refresh_chart_cache, create_directory, sort_names, save_as_single_file, export_hidden_worksheet, export_grid_lines, presentation_preference, cell_css_prefix, table_css_id, is_full_path_link, export_worksheet_css_separately, export_similar_border_style, merge_empty_td_forcely, export_cell_coordinate, export_extra_headings, export_headings, export_formula, add_tooltip_text, export_bogus_row_data, exclude_unused_styles, export_document_properties, export_worksheet_properties, export_workbook_properties, export_frame_scripts_and_properties, attached_files_directory, attached_files_url_prefix, encoding, export_active_worksheet_only, export_chart_image_format, export_images_as_base64, hidden_col_display_type, hidden_row_display_type, html_cross_string_type, is_exp_image_to_temp_dir, page_title, parse_html_tag_in_cell].hash
+      [ save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

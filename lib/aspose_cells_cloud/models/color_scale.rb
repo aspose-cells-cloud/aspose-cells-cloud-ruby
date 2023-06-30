@@ -1,58 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ColorScalerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Describe the ColorScale conditional formatting rule. This conditional formatting    rule creates a gradated color scale on the cells.             
+
   class ColorScale
-    # Get or set this ColorScale's max value object.  Cannot set null or CFValueObject     with type FormatConditionValueType.Min to it.
-    attr_accessor :max_cfvo
-
-    # Get or set the mid value object's corresponding color.             
-    attr_accessor :mid_color
-
-    # Get or set the min value object's corresponding color.
-    attr_accessor :min_color
-
-    # Get or set this ColorScale's mid value object.  Cannot set CFValueObject    with type FormatConditionValueType.Max or FormatConditionValueType.Min to    it.             
-    attr_accessor :mid_cfvo
-
-    # Get or set this ColorScale's min value object.  Cannot set null or CFValueObject    with type FormatConditionValueType.Max to it.             
-    attr_accessor :min_cfvo
-
-    # Get or set the max value object's corresponding color.
-    attr_accessor :max_color
-
+        #Get or set this ColorScale's max value object.  Cannot set null or CFValueObject    with type FormatConditionValueType.Min to it.            
+        attr_accessor :max_cfvo
+        #Get or set the max value object's corresponding color.            
+        attr_accessor :max_color
+        #Get or set this ColorScale's mid value object.  Cannot set CFValueObject   with type FormatConditionValueType.Max or FormatConditionValueType.Min to   it.                        
+        attr_accessor :mid_cfvo
+        #Get or set the mid value object's corresponding color.                        
+        attr_accessor :mid_color
+        #Get or set this ColorScale's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.                        
+        attr_accessor :min_cfvo
+        #Get or set the min value object's corresponding color.            
+        attr_accessor :min_color
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'max_cfvo' => :'MaxCfvo',
-        :'mid_color' => :'MidColor',
-        :'min_color' => :'MinColor',
+        :'max_color' => :'MaxColor',
         :'mid_cfvo' => :'MidCfvo',
+        :'mid_color' => :'MidColor',
         :'min_cfvo' => :'MinCfvo',
-        :'max_color' => :'MaxColor'
+        :'min_color' => :'MinColor'
       }
     end
 
@@ -60,11 +60,11 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'max_cfvo' => :'ConditionalFormattingValue',
-        :'mid_color' => :'Color',
-        :'min_color' => :'Color',
+        :'max_color' => :'Color',
         :'mid_cfvo' => :'ConditionalFormattingValue',
+        :'mid_color' => :'Color',
         :'min_cfvo' => :'ConditionalFormattingValue',
-        :'max_color' => :'Color'
+        :'min_color' => :'Color'
       }
     end
 
@@ -77,27 +77,22 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'MaxCfvo')
-        self.max_cfvo = attributes[:'MaxCfvo']
+          self.max_cfvo = attributes[:'MaxCfvo']
       end
-
-      if attributes.has_key?(:'MidColor')
-        self.mid_color = attributes[:'MidColor']
-      end
-
-      if attributes.has_key?(:'MinColor')
-        self.min_color = attributes[:'MinColor']
-      end
-
-      if attributes.has_key?(:'MidCfvo')
-        self.mid_cfvo = attributes[:'MidCfvo']
-      end
-
-      if attributes.has_key?(:'MinCfvo')
-        self.min_cfvo = attributes[:'MinCfvo']
-      end
-
       if attributes.has_key?(:'MaxColor')
-        self.max_color = attributes[:'MaxColor']
+          self.max_color = attributes[:'MaxColor']
+      end
+      if attributes.has_key?(:'MidCfvo')
+          self.mid_cfvo = attributes[:'MidCfvo']
+      end
+      if attributes.has_key?(:'MidColor')
+          self.mid_color = attributes[:'MidColor']
+      end
+      if attributes.has_key?(:'MinCfvo')
+          self.min_cfvo = attributes[:'MinCfvo']
+      end
+      if attributes.has_key?(:'MinColor')
+          self.min_color = attributes[:'MinColor']
       end
 
     end
@@ -106,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @max_cfvo.nil?
+          invalid_properties.push("invalid value for 'max_cfvo', max_cfvo cannot be nil.")
+      end
+      if @max_color.nil?
+          invalid_properties.push("invalid value for 'max_color', max_color cannot be nil.")
+      end
+      if @mid_cfvo.nil?
+          invalid_properties.push("invalid value for 'mid_cfvo', mid_cfvo cannot be nil.")
+      end
+      if @mid_color.nil?
+          invalid_properties.push("invalid value for 'mid_color', mid_color cannot be nil.")
+      end
+      if @min_cfvo.nil?
+          invalid_properties.push("invalid value for 'min_cfvo', min_cfvo cannot be nil.")
+      end
+      if @min_color.nil?
+          invalid_properties.push("invalid value for 'min_color', min_color cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @max_cfvo.nil?
+      return false if @max_color.nil?
+      return false if @mid_cfvo.nil?
+      return false if @mid_color.nil?
+      return false if @min_cfvo.nil?
+      return false if @min_color.nil?
       return true
     end
 
@@ -121,11 +141,12 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           max_cfvo == o.max_cfvo &&
-          mid_color == o.mid_color &&
-          min_color == o.min_color &&
+          max_color == o.max_color &&
           mid_cfvo == o.mid_cfvo &&
+          mid_color == o.mid_color &&
           min_cfvo == o.min_cfvo &&
-          max_color == o.max_color
+          min_color == o.min_color 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -137,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [max_cfvo, mid_color, min_color, mid_cfvo, min_cfvo, max_color].hash
+      [ max_cfvo , max_color , mid_cfvo , mid_color , min_cfvo , min_color ].hash
     end
 
     # Builds the object from hash

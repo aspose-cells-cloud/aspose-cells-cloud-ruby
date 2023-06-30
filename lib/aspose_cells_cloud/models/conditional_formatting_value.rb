@@ -1,39 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ConditionalFormattingValuerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ConditionalFormattingValue
-    # Get or set the Greater Than Or Equal flag. Use only for icon sets, determines    whether this threshold value uses the greater than or equal to operator.    'false' indicates 'greater than' is used instead of 'greater than or equal    to'.  Default value is true.             
-    attr_accessor :is_gte
-
-    # Get or set the type of this conditional formatting value object.  Setting      the type to FormatConditionValueType.Min or FormatConditionValueType.Max      will auto set \"Value\" to null.  
-    attr_accessor :type
-
-    # Get or set the value of this conditional formatting value object.  It should     be used in conjunction with Type.
-    attr_accessor :value
-
+        #Get or set the Greater Than Or Equal flag. Use only for icon sets, determines   whether this threshold value uses the greater than or equal to operator.   'false' indicates 'greater than' is used instead of 'greater than or equal   to'.  Default value is true.                        
+        attr_accessor :is_gte
+        #Get or set the type of this conditional formatting value object.  Setting     the type to FormatConditionValueType.Min or FormatConditionValueType.Max     will auto set "Value" to null.             
+        attr_accessor :type
+        #Get or set the value of this conditional formatting value object.  It should    be used in conjunction with Type.            
+        attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -49,7 +52,7 @@ module AsposeCellsCloud
       {
         :'is_gte' => :'BOOLEAN',
         :'type' => :'String',
-        :'value' => :'String'
+        :'value' => :'Object'
       }
     end
 
@@ -62,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'IsGTE')
-        self.is_gte = attributes[:'IsGTE']
+          self.is_gte = attributes[:'IsGTE']
       end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
       end
-
       if attributes.has_key?(:'Value')
-        self.value = attributes[:'Value']
+          self.value = attributes[:'Value']
       end
 
     end
@@ -79,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @is_gte.nil?
+          invalid_properties.push("invalid value for 'is_gte', is_gte cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @value.nil?
+          invalid_properties.push("invalid value for 'value', value cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @is_gte.nil?
+      return false if @type.nil?
+      return false if @value.nil?
       return true
     end
 
@@ -95,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           is_gte == o.is_gte &&
           type == o.type &&
-          value == o.value
+          value == o.value 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -107,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_gte, type, value].hash
+      [ is_gte , type , value ].hash
     end
 
     # Builds the object from hash

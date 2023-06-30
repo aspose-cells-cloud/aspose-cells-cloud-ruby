@@ -1,55 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="WorkbookEncryptionRequestrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Used by workbook encryption/decryption requests.
+
   class WorkbookEncryptionRequest
-    # Encription password.
-    attr_accessor :password
-
-    # Encription key length.
-    attr_accessor :key_length
-
-    # Workbook encription type.
-    attr_accessor :encryption_type
-
+        #Workbook encription type.            
+        attr_accessor :encryption_type
+        #Encription key length.            
+        attr_accessor :key_length
+        #Encription password.            
+        attr_accessor :password
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'password' => :'Password',
+        :'encryption_type' => :'EncryptionType',
         :'key_length' => :'KeyLength',
-        :'encryption_type' => :'EncryptionType'
+        :'password' => :'Password'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'password' => :'String',
+        :'encryption_type' => :'String',
         :'key_length' => :'Integer',
-        :'encryption_type' => :'String'
+        :'password' => :'String'
       }
     end
 
@@ -61,16 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Password')
-        self.password = attributes[:'Password']
-      end
-
-      if attributes.has_key?(:'KeyLength')
-        self.key_length = attributes[:'KeyLength']
-      end
-
       if attributes.has_key?(:'EncryptionType')
-        self.encryption_type = attributes[:'EncryptionType']
+          self.encryption_type = attributes[:'EncryptionType']
+      end
+      if attributes.has_key?(:'KeyLength')
+          self.key_length = attributes[:'KeyLength']
+      end
+      if attributes.has_key?(:'Password')
+          self.password = attributes[:'Password']
       end
 
     end
@@ -79,8 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @encryption_type.nil?
+          invalid_properties.push("invalid value for 'encryption_type', encryption_type cannot be nil.")
+      end
       if @key_length.nil?
-        invalid_properties.push("invalid value for 'key_length', key_length cannot be nil.")
+          invalid_properties.push("invalid value for 'key_length', key_length cannot be nil.")
+      end
+      if @password.nil?
+          invalid_properties.push("invalid value for 'password', password cannot be nil.")
       end
 
       return invalid_properties
@@ -89,7 +96,9 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @encryption_type.nil?
       return false if @key_length.nil?
+      return false if @password.nil?
       return true
     end
 
@@ -98,9 +107,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          password == o.password &&
+          encryption_type == o.encryption_type &&
           key_length == o.key_length &&
-          encryption_type == o.encryption_type
+          password == o.password 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -112,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [password, key_length, encryption_type].hash
+      [ encryption_type , key_length , password ].hash
     end
 
     # Builds the object from hash

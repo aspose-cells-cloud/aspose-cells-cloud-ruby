@@ -1,124 +1,114 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Validationrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Validation
-    attr_accessor :link
-
-    # Represents the value or expression associated with the second part of the    data validation.             
-    attr_accessor :formula2
-
-    # Represents the value or expression associated with the data validation.
-    attr_accessor :formula1
-
-    # Indicates whether the data validation error message will be displayed whenever    the user enters invalid data.
-    attr_accessor :show_error
-
-    # Represents the data validation error message.
-    attr_accessor :error_message
-
-    # Indicates whether data validation displays a drop-down list that contains    acceptable values.
-    attr_accessor :in_cell_drop_down
-
-    # Indicates whether the data validation input message will be displayed whenever    the user selects a cell in the data validation range.
-    attr_accessor :show_input
-
-    # Represents the validation alert style.Information,Stop,Warning             
-    attr_accessor :alert_style
-
-    # Represents the title of the data-validation input dialog box.
-    attr_accessor :input_title
-
-    # Indicates whether blank values are permitted by the range data validation.
-    attr_accessor :ignore_blank
-
-    # Represents the first value associated with the data validation.             
-    attr_accessor :value2
-
-    # Represents the first value associated with the data validation.
-    attr_accessor :value1
-
-    # Represents the operator for the data validation. Between,Equal,GreaterThan,GreaterOrEqual,LessThan,LessOrEqual,None,NotBetween,NotEqual
-    attr_accessor :operator
-
-    # Represents the title of the data-validation error dialog box.
-    attr_accessor :error_title
-
-    # Represents the data validation type. AnyValue ,WholeNumber,Decimal,List,Date,Time,TextLength,Custom             
-    attr_accessor :type
-
-    # Represents the data validation input message.
-    attr_accessor :input_message
-
-    # Represents a collection of Aspose.Cells.CellArea which contains the data     validation settings.
-    attr_accessor :area_list
-
+        #            
+        attr_accessor :alert_style
+        #            
+        attr_accessor :area_list
+        #            
+        attr_accessor :error_message
+        #            
+        attr_accessor :error_title
+        #            
+        attr_accessor :formula1
+        #            
+        attr_accessor :formula2
+        #            
+        attr_accessor :ignore_blank
+        #            
+        attr_accessor :in_cell_drop_down
+        #            
+        attr_accessor :input_message
+        #            
+        attr_accessor :input_title
+        #            
+        attr_accessor :operator
+        #            
+        attr_accessor :show_error
+        #            
+        attr_accessor :show_input
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :value1
+        #            
+        attr_accessor :value2
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'formula2' => :'Formula2',
-        :'formula1' => :'Formula1',
-        :'show_error' => :'ShowError',
-        :'error_message' => :'ErrorMessage',
-        :'in_cell_drop_down' => :'InCellDropDown',
-        :'show_input' => :'ShowInput',
         :'alert_style' => :'AlertStyle',
-        :'input_title' => :'InputTitle',
-        :'ignore_blank' => :'IgnoreBlank',
-        :'value2' => :'Value2',
-        :'value1' => :'Value1',
-        :'operator' => :'Operator',
+        :'area_list' => :'AreaList',
+        :'error_message' => :'ErrorMessage',
         :'error_title' => :'ErrorTitle',
-        :'type' => :'Type',
+        :'formula1' => :'Formula1',
+        :'formula2' => :'Formula2',
+        :'ignore_blank' => :'IgnoreBlank',
+        :'in_cell_drop_down' => :'InCellDropDown',
         :'input_message' => :'InputMessage',
-        :'area_list' => :'AreaList'
+        :'input_title' => :'InputTitle',
+        :'operator' => :'Operator',
+        :'show_error' => :'ShowError',
+        :'show_input' => :'ShowInput',
+        :'type' => :'Type',
+        :'value1' => :'Value1',
+        :'value2' => :'Value2',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'formula2' => :'String',
-        :'formula1' => :'String',
-        :'show_error' => :'BOOLEAN',
-        :'error_message' => :'String',
-        :'in_cell_drop_down' => :'BOOLEAN',
-        :'show_input' => :'BOOLEAN',
         :'alert_style' => :'String',
-        :'input_title' => :'String',
-        :'ignore_blank' => :'BOOLEAN',
-        :'value2' => :'String',
-        :'value1' => :'String',
-        :'operator' => :'String',
+        :'area_list' => :'Array<CellArea>',
+        :'error_message' => :'String',
         :'error_title' => :'String',
-        :'type' => :'String',
+        :'formula1' => :'String',
+        :'formula2' => :'String',
+        :'ignore_blank' => :'BOOLEAN',
+        :'in_cell_drop_down' => :'BOOLEAN',
         :'input_message' => :'String',
-        :'area_list' => :'Array<CellArea>'
+        :'input_title' => :'String',
+        :'operator' => :'String',
+        :'show_error' => :'BOOLEAN',
+        :'show_input' => :'BOOLEAN',
+        :'type' => :'String',
+        :'value1' => :'String',
+        :'value2' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -130,74 +120,56 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'Formula2')
-        self.formula2 = attributes[:'Formula2']
-      end
-
-      if attributes.has_key?(:'Formula1')
-        self.formula1 = attributes[:'Formula1']
-      end
-
-      if attributes.has_key?(:'ShowError')
-        self.show_error = attributes[:'ShowError']
-      end
-
-      if attributes.has_key?(:'ErrorMessage')
-        self.error_message = attributes[:'ErrorMessage']
-      end
-
-      if attributes.has_key?(:'InCellDropDown')
-        self.in_cell_drop_down = attributes[:'InCellDropDown']
-      end
-
-      if attributes.has_key?(:'ShowInput')
-        self.show_input = attributes[:'ShowInput']
-      end
-
       if attributes.has_key?(:'AlertStyle')
-        self.alert_style = attributes[:'AlertStyle']
+          self.alert_style = attributes[:'AlertStyle']
       end
-
-      if attributes.has_key?(:'InputTitle')
-        self.input_title = attributes[:'InputTitle']
-      end
-
-      if attributes.has_key?(:'IgnoreBlank')
-        self.ignore_blank = attributes[:'IgnoreBlank']
-      end
-
-      if attributes.has_key?(:'Value2')
-        self.value2 = attributes[:'Value2']
-      end
-
-      if attributes.has_key?(:'Value1')
-        self.value1 = attributes[:'Value1']
-      end
-
-      if attributes.has_key?(:'Operator')
-        self.operator = attributes[:'Operator']
-      end
-
-      if attributes.has_key?(:'ErrorTitle')
-        self.error_title = attributes[:'ErrorTitle']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'InputMessage')
-        self.input_message = attributes[:'InputMessage']
-      end
-
       if attributes.has_key?(:'AreaList')
-        if (value = attributes[:'AreaList']).is_a?(Array)
-          self.area_list = value
-        end
+          self.area_list = attributes[:'AreaList']
+      end
+      if attributes.has_key?(:'ErrorMessage')
+          self.error_message = attributes[:'ErrorMessage']
+      end
+      if attributes.has_key?(:'ErrorTitle')
+          self.error_title = attributes[:'ErrorTitle']
+      end
+      if attributes.has_key?(:'Formula1')
+          self.formula1 = attributes[:'Formula1']
+      end
+      if attributes.has_key?(:'Formula2')
+          self.formula2 = attributes[:'Formula2']
+      end
+      if attributes.has_key?(:'IgnoreBlank')
+          self.ignore_blank = attributes[:'IgnoreBlank']
+      end
+      if attributes.has_key?(:'InCellDropDown')
+          self.in_cell_drop_down = attributes[:'InCellDropDown']
+      end
+      if attributes.has_key?(:'InputMessage')
+          self.input_message = attributes[:'InputMessage']
+      end
+      if attributes.has_key?(:'InputTitle')
+          self.input_title = attributes[:'InputTitle']
+      end
+      if attributes.has_key?(:'Operator')
+          self.operator = attributes[:'Operator']
+      end
+      if attributes.has_key?(:'ShowError')
+          self.show_error = attributes[:'ShowError']
+      end
+      if attributes.has_key?(:'ShowInput')
+          self.show_input = attributes[:'ShowInput']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'Value1')
+          self.value1 = attributes[:'Value1']
+      end
+      if attributes.has_key?(:'Value2')
+          self.value2 = attributes[:'Value2']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -206,12 +178,81 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @alert_style.nil?
+          invalid_properties.push("invalid value for 'alert_style', alert_style cannot be nil.")
+      end
+      if @area_list.nil?
+          invalid_properties.push("invalid value for 'area_list', area_list cannot be nil.")
+      end
+      if @error_message.nil?
+          invalid_properties.push("invalid value for 'error_message', error_message cannot be nil.")
+      end
+      if @error_title.nil?
+          invalid_properties.push("invalid value for 'error_title', error_title cannot be nil.")
+      end
+      if @formula1.nil?
+          invalid_properties.push("invalid value for 'formula1', formula1 cannot be nil.")
+      end
+      if @formula2.nil?
+          invalid_properties.push("invalid value for 'formula2', formula2 cannot be nil.")
+      end
+      if @ignore_blank.nil?
+          invalid_properties.push("invalid value for 'ignore_blank', ignore_blank cannot be nil.")
+      end
+      if @in_cell_drop_down.nil?
+          invalid_properties.push("invalid value for 'in_cell_drop_down', in_cell_drop_down cannot be nil.")
+      end
+      if @input_message.nil?
+          invalid_properties.push("invalid value for 'input_message', input_message cannot be nil.")
+      end
+      if @input_title.nil?
+          invalid_properties.push("invalid value for 'input_title', input_title cannot be nil.")
+      end
+      if @operator.nil?
+          invalid_properties.push("invalid value for 'operator', operator cannot be nil.")
+      end
+      if @show_error.nil?
+          invalid_properties.push("invalid value for 'show_error', show_error cannot be nil.")
+      end
+      if @show_input.nil?
+          invalid_properties.push("invalid value for 'show_input', show_input cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @value1.nil?
+          invalid_properties.push("invalid value for 'value1', value1 cannot be nil.")
+      end
+      if @value2.nil?
+          invalid_properties.push("invalid value for 'value2', value2 cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @alert_style.nil?
+      return false if @area_list.nil?
+      return false if @error_message.nil?
+      return false if @error_title.nil?
+      return false if @formula1.nil?
+      return false if @formula2.nil?
+      return false if @ignore_blank.nil?
+      return false if @in_cell_drop_down.nil?
+      return false if @input_message.nil?
+      return false if @input_title.nil?
+      return false if @operator.nil?
+      return false if @show_error.nil?
+      return false if @show_input.nil?
+      return false if @type.nil?
+      return false if @value1.nil?
+      return false if @value2.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -220,23 +261,24 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          formula2 == o.formula2 &&
-          formula1 == o.formula1 &&
-          show_error == o.show_error &&
-          error_message == o.error_message &&
-          in_cell_drop_down == o.in_cell_drop_down &&
-          show_input == o.show_input &&
           alert_style == o.alert_style &&
-          input_title == o.input_title &&
-          ignore_blank == o.ignore_blank &&
-          value2 == o.value2 &&
-          value1 == o.value1 &&
-          operator == o.operator &&
+          area_list == o.area_list &&
+          error_message == o.error_message &&
           error_title == o.error_title &&
-          type == o.type &&
+          formula1 == o.formula1 &&
+          formula2 == o.formula2 &&
+          ignore_blank == o.ignore_blank &&
+          in_cell_drop_down == o.in_cell_drop_down &&
           input_message == o.input_message &&
-          area_list == o.area_list
+          input_title == o.input_title &&
+          operator == o.operator &&
+          show_error == o.show_error &&
+          show_input == o.show_input &&
+          type == o.type &&
+          value1 == o.value1 &&
+          value2 == o.value2 &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -248,7 +290,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, formula2, formula1, show_error, error_message, in_cell_drop_down, show_input, alert_style, input_title, ignore_blank, value2, value1, operator, error_title, type, input_message, area_list].hash
+      [ alert_style , area_list , error_message , error_title , formula1 , formula2 , ignore_blank , in_cell_drop_down , input_message , input_title , operator , show_error , show_input , type , value1 , value2 , link ].hash
     end
 
     # Builds the object from hash

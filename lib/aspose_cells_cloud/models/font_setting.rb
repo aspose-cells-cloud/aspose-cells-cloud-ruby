@@ -1,60 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="FontSettingrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class FontSetting
-    attr_accessor :text_options
-
-    attr_accessor :length
-
-    attr_accessor :font
-
-    attr_accessor :type
-
-    attr_accessor :start_index
-
+        #            
+        attr_accessor :font
+        #            
+        attr_accessor :length
+        #            
+        attr_accessor :start_index
+        #            
+        attr_accessor :text_options
+        #            
+        attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'text_options' => :'TextOptions',
-        :'length' => :'Length',
         :'font' => :'Font',
-        :'type' => :'Type',
-        :'start_index' => :'StartIndex'
+        :'length' => :'Length',
+        :'start_index' => :'StartIndex',
+        :'text_options' => :'TextOptions',
+        :'type' => :'Type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'text_options' => :'TextOptions',
-        :'length' => :'Integer',
         :'font' => :'Font',
-        :'type' => :'String',
-        :'start_index' => :'Integer'
+        :'length' => :'Integer',
+        :'start_index' => :'Integer',
+        :'text_options' => :'TextOptions',
+        :'type' => :'String'
       }
     end
 
@@ -66,24 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'TextOptions')
-        self.text_options = attributes[:'TextOptions']
-      end
-
-      if attributes.has_key?(:'Length')
-        self.length = attributes[:'Length']
-      end
-
       if attributes.has_key?(:'Font')
-        self.font = attributes[:'Font']
+          self.font = attributes[:'Font']
       end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+      if attributes.has_key?(:'Length')
+          self.length = attributes[:'Length']
       end
-
       if attributes.has_key?(:'StartIndex')
-        self.start_index = attributes[:'StartIndex']
+          self.start_index = attributes[:'StartIndex']
+      end
+      if attributes.has_key?(:'TextOptions')
+          self.text_options = attributes[:'TextOptions']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
       end
 
     end
@@ -92,12 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @length.nil?
-        invalid_properties.push("invalid value for 'length', length cannot be nil.")
+      if @font.nil?
+          invalid_properties.push("invalid value for 'font', font cannot be nil.")
       end
-
+      if @length.nil?
+          invalid_properties.push("invalid value for 'length', length cannot be nil.")
+      end
       if @start_index.nil?
-        invalid_properties.push("invalid value for 'start_index', start_index cannot be nil.")
+          invalid_properties.push("invalid value for 'start_index', start_index cannot be nil.")
+      end
+      if @text_options.nil?
+          invalid_properties.push("invalid value for 'text_options', text_options cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
       end
 
       return invalid_properties
@@ -106,8 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @font.nil?
       return false if @length.nil?
       return false if @start_index.nil?
+      return false if @text_options.nil?
+      return false if @type.nil?
       return true
     end
 
@@ -116,11 +129,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          text_options == o.text_options &&
-          length == o.length &&
           font == o.font &&
-          type == o.type &&
-          start_index == o.start_index
+          length == o.length &&
+          start_index == o.start_index &&
+          text_options == o.text_options &&
+          type == o.type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -132,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [text_options, length, font, type, start_index].hash
+      [ font , length , start_index , text_options , type ].hash
     end
 
     # Builds the object from hash

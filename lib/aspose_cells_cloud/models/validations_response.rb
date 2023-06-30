@@ -1,52 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ValidationsResponserb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ValidationsResponse
-    attr_accessor :status
-
-    attr_accessor :code
-
-    attr_accessor :validations
-
+        #            
+        attr_accessor :validations
+        #            
+        attr_accessor :code
+        #            
+        attr_accessor :status
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'status' => :'Status',
+        :'validations' => :'Validations',
         :'code' => :'Code',
-        :'validations' => :'Validations'
+        :'status' => :'Status'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'status' => :'String',
+        :'validations' => :'Validations',
         :'code' => :'Integer',
-        :'validations' => :'Validations'
+        :'status' => :'String'
       }
     end
 
@@ -58,16 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Status')
-        self.status = attributes[:'Status']
-      end
-
-      if attributes.has_key?(:'Code')
-        self.code = attributes[:'Code']
-      end
-
       if attributes.has_key?(:'Validations')
-        self.validations = attributes[:'Validations']
+          self.validations = attributes[:'Validations']
+      end
+      if attributes.has_key?(:'Code')
+          self.code = attributes[:'Code']
+      end
+      if attributes.has_key?(:'Status')
+          self.status = attributes[:'Status']
       end
 
     end
@@ -76,8 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @validations.nil?
+          invalid_properties.push("invalid value for 'validations', validations cannot be nil.")
+      end
       if @code.nil?
-        invalid_properties.push("invalid value for 'code', code cannot be nil.")
+          invalid_properties.push("invalid value for 'code', code cannot be nil.")
+      end
+      if @status.nil?
+          invalid_properties.push("invalid value for 'status', status cannot be nil.")
       end
 
       return invalid_properties
@@ -86,7 +96,9 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @validations.nil?
       return false if @code.nil?
+      return false if @status.nil?
       return true
     end
 
@@ -95,9 +107,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          status == o.status &&
+          validations == o.validations &&
           code == o.code &&
-          validations == o.validations
+          status == o.status 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -109,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [status, code, validations].hash
+      [ validations , code , status ].hash
     end
 
     # Builds the object from hash

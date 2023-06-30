@@ -1,36 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ColorFilterRequestrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ColorFilterRequest
-    attr_accessor :pattern
-
-    attr_accessor :foreground_color
-
-    attr_accessor :background_color
-
+        #            
+        attr_accessor :pattern
+        #            
+        attr_accessor :foreground_color
+        #            
+        attr_accessor :background_color
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Pattern')
-        self.pattern = attributes[:'Pattern']
+          self.pattern = attributes[:'Pattern']
       end
-
       if attributes.has_key?(:'ForegroundColor')
-        self.foreground_color = attributes[:'ForegroundColor']
+          self.foreground_color = attributes[:'ForegroundColor']
       end
-
       if attributes.has_key?(:'BackgroundColor')
-        self.background_color = attributes[:'BackgroundColor']
+          self.background_color = attributes[:'BackgroundColor']
       end
 
     end
@@ -76,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @pattern.nil?
+          invalid_properties.push("invalid value for 'pattern', pattern cannot be nil.")
+      end
+      if @foreground_color.nil?
+          invalid_properties.push("invalid value for 'foreground_color', foreground_color cannot be nil.")
+      end
+      if @background_color.nil?
+          invalid_properties.push("invalid value for 'background_color', background_color cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @pattern.nil?
+      return false if @foreground_color.nil?
+      return false if @background_color.nil?
       return true
     end
 
@@ -92,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           pattern == o.pattern &&
           foreground_color == o.foreground_color &&
-          background_color == o.background_color
+          background_color == o.background_color 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [pattern, foreground_color, background_color].hash
+      [ pattern , foreground_color , background_color ].hash
     end
 
     # Builds the object from hash

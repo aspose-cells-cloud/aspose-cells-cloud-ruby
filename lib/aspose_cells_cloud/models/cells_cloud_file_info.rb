@@ -1,38 +1,44 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CellsCloudFileInforb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CellsCloudFileInfo
-    attr_accessor :name
-
-    attr_accessor :size
-
-    attr_accessor :folder
-
-    attr_accessor :storage
-
+        #            
+        attr_accessor :name
+        #            
+        attr_accessor :size
+        #            
+        attr_accessor :folder
+        #            
+        attr_accessor :storage
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -63,19 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
+          self.name = attributes[:'Name']
       end
-
       if attributes.has_key?(:'Size')
-        self.size = attributes[:'Size']
+          self.size = attributes[:'Size']
       end
-
       if attributes.has_key?(:'Folder')
-        self.folder = attributes[:'Folder']
+          self.folder = attributes[:'Folder']
       end
-
       if attributes.has_key?(:'Storage')
-        self.storage = attributes[:'Storage']
+          self.storage = attributes[:'Storage']
       end
 
     end
@@ -84,8 +87,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
       if @size.nil?
-        invalid_properties.push("invalid value for 'size', size cannot be nil.")
+          invalid_properties.push("invalid value for 'size', size cannot be nil.")
+      end
+      if @folder.nil?
+          invalid_properties.push("invalid value for 'folder', folder cannot be nil.")
+      end
+      if @storage.nil?
+          invalid_properties.push("invalid value for 'storage', storage cannot be nil.")
       end
 
       return invalid_properties
@@ -94,7 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
       return false if @size.nil?
+      return false if @folder.nil?
+      return false if @storage.nil?
       return true
     end
 
@@ -106,7 +121,8 @@ module AsposeCellsCloud
           name == o.name &&
           size == o.size &&
           folder == o.folder &&
-          storage == o.storage
+          storage == o.storage 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -118,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, size, folder, storage].hash
+      [ name , size , folder , storage ].hash
     end
 
     # Builds the object from hash

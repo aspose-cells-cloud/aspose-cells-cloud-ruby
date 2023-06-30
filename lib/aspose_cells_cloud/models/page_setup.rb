@@ -1,214 +1,186 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PageSetuprb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # excel print page setting
+
   class PageSetup
-    attr_accessor :link
-
-    # True means that the header/footer of the first page is different with other pages.
-    attr_accessor :is_hf_diff_first
-
-    # Represents the number of pages wide the worksheet will be scaled to when it's printed.
-    attr_accessor :fit_to_pages_wide
-
-    # Represents the print quality.
-    attr_accessor :print_quality
-
-    # Represents if the sheet will be printed without graphics.
-    attr_accessor :print_draft
-
-    # Represents the first page number that will be used when this sheet is printed.
-    attr_accessor :first_page_number
-
-    # Represents the size of the paper.
-    attr_accessor :paper_size
-
-    # Represents the way comments are printed with the sheet.
-    attr_accessor :print_comments
-
-    # Specifies the type of print error displayed.
-    attr_accessor :print_errors
-
-    # Represent if the sheet is printed centered vertically.
-    attr_accessor :center_vertically
-
-    # If this property is False, the FitToPagesWide and FitToPagesTall properties control how the worksheet is scaled.
-    attr_accessor :is_percent_scale
-
-    # Represents if elements of the document will be printed in black and white. True/False
-    attr_accessor :black_and_white
-
-    # Represents the columns that contain the cells to be repeated on the left side of each page.
-    attr_accessor :print_title_columns
-
-    # Indicates whether header and footer margins are aligned with the page margins.Only applies for Excel 2007.
-    attr_accessor :is_hf_align_margins
-
-    # Represents the range to be printed.
-    attr_accessor :print_area
-
-    # Represents the distance from the bottom of the page to the footer, in unit of centimeters.
-    attr_accessor :footer_margin
-
-    # Represents the size of the left margin, in unit of centimeters.
-    attr_accessor :left_margin
-
-    # Represent if the sheet is printed centered horizontally.
-    attr_accessor :center_horizontally
-
-    # Represents the distance from the top of the page to the header, in unit of centimeters.
-    attr_accessor :header_margin
-
-    # Represents the size of the top margin, in unit of centimeters.
-    attr_accessor :top_margin
-
-    # Represents the page footor.
-    attr_accessor :footer
-
-    # Represents the number of pages tall the worksheet will be scaled to when it's printed.
-    attr_accessor :fit_to_pages_tall
-
-    # Indicates whether header and footer are scaled with document scaling.Only applies for Excel 2007. 
-    attr_accessor :is_hf_scale_with_doc
-
-    # Represents if row and column headings are printed with this page.
-    attr_accessor :print_headings
-
-    # Represents the scaling factor in percent. It should be between 10 and 400.
-    attr_accessor :zoom
-
-    # Represents the rows that contain the cells to be repeated at the top of each page.
-    attr_accessor :print_title_rows
-
-    # Represents the order that Microsoft Excel uses to number pages when printing a large worksheet.
-    attr_accessor :order
-
-    # Get and sets number of copies to print.
-    attr_accessor :print_copies
-
-    # Represents page print orientation.
-    attr_accessor :orientation
-
-    # Represents the size of the right margin, in unit of centimeters.
-    attr_accessor :right_margin
-
-    # Represents if cell gridlines are printed on the page.
-    attr_accessor :print_gridlines
-
-    # Indicates whether the first the page number is automatically assigned.
-    attr_accessor :is_auto_first_page_number
-
-    # Represents the page header.
-    attr_accessor :header
-
-    # True means that the header/footer of the odd pages is different with odd pages.
-    attr_accessor :is_hf_diff_odd_even
-
-    # Represents the size of the bottom margin, in unit of centimeters.
-    attr_accessor :bottom_margin
-
+        #            
+        attr_accessor :black_and_white
+        #            
+        attr_accessor :bottom_margin
+        #            
+        attr_accessor :center_horizontally
+        #            
+        attr_accessor :center_vertically
+        #            
+        attr_accessor :first_page_number
+        #            
+        attr_accessor :fit_to_pages_tall
+        #            
+        attr_accessor :fit_to_pages_wide
+        #            
+        attr_accessor :footer_margin
+        #            
+        attr_accessor :header_margin
+        #            
+        attr_accessor :is_auto_first_page_number
+        #            
+        attr_accessor :is_hf_align_margins
+        #            
+        attr_accessor :is_hf_diff_first
+        #            
+        attr_accessor :is_hf_diff_odd_even
+        #            
+        attr_accessor :is_hf_scale_with_doc
+        #            
+        attr_accessor :is_percent_scale
+        #            
+        attr_accessor :left_margin
+        #            
+        attr_accessor :order
+        #            
+        attr_accessor :orientation
+        #            
+        attr_accessor :paper_size
+        #            
+        attr_accessor :print_area
+        #            
+        attr_accessor :print_comments
+        #            
+        attr_accessor :print_copies
+        #            
+        attr_accessor :print_draft
+        #            
+        attr_accessor :print_errors
+        #            
+        attr_accessor :print_gridlines
+        #            
+        attr_accessor :print_headings
+        #            
+        attr_accessor :print_quality
+        #            
+        attr_accessor :print_title_columns
+        #            
+        attr_accessor :print_title_rows
+        #            
+        attr_accessor :right_margin
+        #            
+        attr_accessor :top_margin
+        #            
+        attr_accessor :zoom
+        #            
+        attr_accessor :header
+        #            
+        attr_accessor :footer
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'is_hf_diff_first' => :'IsHFDiffFirst',
-        :'fit_to_pages_wide' => :'FitToPagesWide',
-        :'print_quality' => :'PrintQuality',
-        :'print_draft' => :'PrintDraft',
-        :'first_page_number' => :'FirstPageNumber',
-        :'paper_size' => :'PaperSize',
-        :'print_comments' => :'PrintComments',
-        :'print_errors' => :'PrintErrors',
-        :'center_vertically' => :'CenterVertically',
-        :'is_percent_scale' => :'IsPercentScale',
         :'black_and_white' => :'BlackAndWhite',
-        :'print_title_columns' => :'PrintTitleColumns',
-        :'is_hf_align_margins' => :'IsHFAlignMargins',
-        :'print_area' => :'PrintArea',
-        :'footer_margin' => :'FooterMargin',
-        :'left_margin' => :'LeftMargin',
+        :'bottom_margin' => :'BottomMargin',
         :'center_horizontally' => :'CenterHorizontally',
-        :'header_margin' => :'HeaderMargin',
-        :'top_margin' => :'TopMargin',
-        :'footer' => :'Footer',
+        :'center_vertically' => :'CenterVertically',
+        :'first_page_number' => :'FirstPageNumber',
         :'fit_to_pages_tall' => :'FitToPagesTall',
-        :'is_hf_scale_with_doc' => :'IsHFScaleWithDoc',
-        :'print_headings' => :'PrintHeadings',
-        :'zoom' => :'Zoom',
-        :'print_title_rows' => :'PrintTitleRows',
-        :'order' => :'Order',
-        :'print_copies' => :'PrintCopies',
-        :'orientation' => :'Orientation',
-        :'right_margin' => :'RightMargin',
-        :'print_gridlines' => :'PrintGridlines',
+        :'fit_to_pages_wide' => :'FitToPagesWide',
+        :'footer_margin' => :'FooterMargin',
+        :'header_margin' => :'HeaderMargin',
         :'is_auto_first_page_number' => :'IsAutoFirstPageNumber',
-        :'header' => :'Header',
+        :'is_hf_align_margins' => :'IsHFAlignMargins',
+        :'is_hf_diff_first' => :'IsHFDiffFirst',
         :'is_hf_diff_odd_even' => :'IsHFDiffOddEven',
-        :'bottom_margin' => :'BottomMargin'
+        :'is_hf_scale_with_doc' => :'IsHFScaleWithDoc',
+        :'is_percent_scale' => :'IsPercentScale',
+        :'left_margin' => :'LeftMargin',
+        :'order' => :'Order',
+        :'orientation' => :'Orientation',
+        :'paper_size' => :'PaperSize',
+        :'print_area' => :'PrintArea',
+        :'print_comments' => :'PrintComments',
+        :'print_copies' => :'PrintCopies',
+        :'print_draft' => :'PrintDraft',
+        :'print_errors' => :'PrintErrors',
+        :'print_gridlines' => :'PrintGridlines',
+        :'print_headings' => :'PrintHeadings',
+        :'print_quality' => :'PrintQuality',
+        :'print_title_columns' => :'PrintTitleColumns',
+        :'print_title_rows' => :'PrintTitleRows',
+        :'right_margin' => :'RightMargin',
+        :'top_margin' => :'TopMargin',
+        :'zoom' => :'Zoom',
+        :'header' => :'Header',
+        :'footer' => :'Footer',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'is_hf_diff_first' => :'BOOLEAN',
-        :'fit_to_pages_wide' => :'Integer',
-        :'print_quality' => :'Integer',
-        :'print_draft' => :'BOOLEAN',
-        :'first_page_number' => :'Integer',
-        :'paper_size' => :'String',
-        :'print_comments' => :'String',
-        :'print_errors' => :'String',
-        :'center_vertically' => :'BOOLEAN',
-        :'is_percent_scale' => :'BOOLEAN',
         :'black_and_white' => :'BOOLEAN',
-        :'print_title_columns' => :'String',
-        :'is_hf_align_margins' => :'BOOLEAN',
-        :'print_area' => :'String',
-        :'footer_margin' => :'Float',
-        :'left_margin' => :'Float',
+        :'bottom_margin' => :'Float',
         :'center_horizontally' => :'BOOLEAN',
-        :'header_margin' => :'Float',
-        :'top_margin' => :'Float',
-        :'footer' => :'Array<PageSection>',
+        :'center_vertically' => :'BOOLEAN',
+        :'first_page_number' => :'Integer',
         :'fit_to_pages_tall' => :'Integer',
-        :'is_hf_scale_with_doc' => :'BOOLEAN',
-        :'print_headings' => :'BOOLEAN',
-        :'zoom' => :'Integer',
-        :'print_title_rows' => :'String',
-        :'order' => :'String',
-        :'print_copies' => :'Integer',
-        :'orientation' => :'String',
-        :'right_margin' => :'Float',
-        :'print_gridlines' => :'BOOLEAN',
+        :'fit_to_pages_wide' => :'Integer',
+        :'footer_margin' => :'Float',
+        :'header_margin' => :'Float',
         :'is_auto_first_page_number' => :'BOOLEAN',
-        :'header' => :'Array<PageSection>',
+        :'is_hf_align_margins' => :'BOOLEAN',
+        :'is_hf_diff_first' => :'BOOLEAN',
         :'is_hf_diff_odd_even' => :'BOOLEAN',
-        :'bottom_margin' => :'Float'
+        :'is_hf_scale_with_doc' => :'BOOLEAN',
+        :'is_percent_scale' => :'BOOLEAN',
+        :'left_margin' => :'Float',
+        :'order' => :'String',
+        :'orientation' => :'String',
+        :'paper_size' => :'String',
+        :'print_area' => :'String',
+        :'print_comments' => :'String',
+        :'print_copies' => :'Integer',
+        :'print_draft' => :'BOOLEAN',
+        :'print_errors' => :'String',
+        :'print_gridlines' => :'BOOLEAN',
+        :'print_headings' => :'BOOLEAN',
+        :'print_quality' => :'Integer',
+        :'print_title_columns' => :'String',
+        :'print_title_rows' => :'String',
+        :'right_margin' => :'Float',
+        :'top_margin' => :'Float',
+        :'zoom' => :'Integer',
+        :'header' => :'Array<PageSection>',
+        :'footer' => :'Array<PageSection>',
+        :'link' => :'Link'
       }
     end
 
@@ -220,148 +192,110 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'IsHFDiffFirst')
-        self.is_hf_diff_first = attributes[:'IsHFDiffFirst']
-      end
-
-      if attributes.has_key?(:'FitToPagesWide')
-        self.fit_to_pages_wide = attributes[:'FitToPagesWide']
-      end
-
-      if attributes.has_key?(:'PrintQuality')
-        self.print_quality = attributes[:'PrintQuality']
-      end
-
-      if attributes.has_key?(:'PrintDraft')
-        self.print_draft = attributes[:'PrintDraft']
-      end
-
-      if attributes.has_key?(:'FirstPageNumber')
-        self.first_page_number = attributes[:'FirstPageNumber']
-      end
-
-      if attributes.has_key?(:'PaperSize')
-        self.paper_size = attributes[:'PaperSize']
-      end
-
-      if attributes.has_key?(:'PrintComments')
-        self.print_comments = attributes[:'PrintComments']
-      end
-
-      if attributes.has_key?(:'PrintErrors')
-        self.print_errors = attributes[:'PrintErrors']
-      end
-
-      if attributes.has_key?(:'CenterVertically')
-        self.center_vertically = attributes[:'CenterVertically']
-      end
-
-      if attributes.has_key?(:'IsPercentScale')
-        self.is_percent_scale = attributes[:'IsPercentScale']
-      end
-
       if attributes.has_key?(:'BlackAndWhite')
-        self.black_and_white = attributes[:'BlackAndWhite']
+          self.black_and_white = attributes[:'BlackAndWhite']
       end
-
-      if attributes.has_key?(:'PrintTitleColumns')
-        self.print_title_columns = attributes[:'PrintTitleColumns']
-      end
-
-      if attributes.has_key?(:'IsHFAlignMargins')
-        self.is_hf_align_margins = attributes[:'IsHFAlignMargins']
-      end
-
-      if attributes.has_key?(:'PrintArea')
-        self.print_area = attributes[:'PrintArea']
-      end
-
-      if attributes.has_key?(:'FooterMargin')
-        self.footer_margin = attributes[:'FooterMargin']
-      end
-
-      if attributes.has_key?(:'LeftMargin')
-        self.left_margin = attributes[:'LeftMargin']
-      end
-
-      if attributes.has_key?(:'CenterHorizontally')
-        self.center_horizontally = attributes[:'CenterHorizontally']
-      end
-
-      if attributes.has_key?(:'HeaderMargin')
-        self.header_margin = attributes[:'HeaderMargin']
-      end
-
-      if attributes.has_key?(:'TopMargin')
-        self.top_margin = attributes[:'TopMargin']
-      end
-
-      if attributes.has_key?(:'Footer')
-        if (value = attributes[:'Footer']).is_a?(Array)
-          self.footer = value
-        end
-      end
-
-      if attributes.has_key?(:'FitToPagesTall')
-        self.fit_to_pages_tall = attributes[:'FitToPagesTall']
-      end
-
-      if attributes.has_key?(:'IsHFScaleWithDoc')
-        self.is_hf_scale_with_doc = attributes[:'IsHFScaleWithDoc']
-      end
-
-      if attributes.has_key?(:'PrintHeadings')
-        self.print_headings = attributes[:'PrintHeadings']
-      end
-
-      if attributes.has_key?(:'Zoom')
-        self.zoom = attributes[:'Zoom']
-      end
-
-      if attributes.has_key?(:'PrintTitleRows')
-        self.print_title_rows = attributes[:'PrintTitleRows']
-      end
-
-      if attributes.has_key?(:'Order')
-        self.order = attributes[:'Order']
-      end
-
-      if attributes.has_key?(:'PrintCopies')
-        self.print_copies = attributes[:'PrintCopies']
-      end
-
-      if attributes.has_key?(:'Orientation')
-        self.orientation = attributes[:'Orientation']
-      end
-
-      if attributes.has_key?(:'RightMargin')
-        self.right_margin = attributes[:'RightMargin']
-      end
-
-      if attributes.has_key?(:'PrintGridlines')
-        self.print_gridlines = attributes[:'PrintGridlines']
-      end
-
-      if attributes.has_key?(:'IsAutoFirstPageNumber')
-        self.is_auto_first_page_number = attributes[:'IsAutoFirstPageNumber']
-      end
-
-      if attributes.has_key?(:'Header')
-        if (value = attributes[:'Header']).is_a?(Array)
-          self.header = value
-        end
-      end
-
-      if attributes.has_key?(:'IsHFDiffOddEven')
-        self.is_hf_diff_odd_even = attributes[:'IsHFDiffOddEven']
-      end
-
       if attributes.has_key?(:'BottomMargin')
-        self.bottom_margin = attributes[:'BottomMargin']
+          self.bottom_margin = attributes[:'BottomMargin']
+      end
+      if attributes.has_key?(:'CenterHorizontally')
+          self.center_horizontally = attributes[:'CenterHorizontally']
+      end
+      if attributes.has_key?(:'CenterVertically')
+          self.center_vertically = attributes[:'CenterVertically']
+      end
+      if attributes.has_key?(:'FirstPageNumber')
+          self.first_page_number = attributes[:'FirstPageNumber']
+      end
+      if attributes.has_key?(:'FitToPagesTall')
+          self.fit_to_pages_tall = attributes[:'FitToPagesTall']
+      end
+      if attributes.has_key?(:'FitToPagesWide')
+          self.fit_to_pages_wide = attributes[:'FitToPagesWide']
+      end
+      if attributes.has_key?(:'FooterMargin')
+          self.footer_margin = attributes[:'FooterMargin']
+      end
+      if attributes.has_key?(:'HeaderMargin')
+          self.header_margin = attributes[:'HeaderMargin']
+      end
+      if attributes.has_key?(:'IsAutoFirstPageNumber')
+          self.is_auto_first_page_number = attributes[:'IsAutoFirstPageNumber']
+      end
+      if attributes.has_key?(:'IsHFAlignMargins')
+          self.is_hf_align_margins = attributes[:'IsHFAlignMargins']
+      end
+      if attributes.has_key?(:'IsHFDiffFirst')
+          self.is_hf_diff_first = attributes[:'IsHFDiffFirst']
+      end
+      if attributes.has_key?(:'IsHFDiffOddEven')
+          self.is_hf_diff_odd_even = attributes[:'IsHFDiffOddEven']
+      end
+      if attributes.has_key?(:'IsHFScaleWithDoc')
+          self.is_hf_scale_with_doc = attributes[:'IsHFScaleWithDoc']
+      end
+      if attributes.has_key?(:'IsPercentScale')
+          self.is_percent_scale = attributes[:'IsPercentScale']
+      end
+      if attributes.has_key?(:'LeftMargin')
+          self.left_margin = attributes[:'LeftMargin']
+      end
+      if attributes.has_key?(:'Order')
+          self.order = attributes[:'Order']
+      end
+      if attributes.has_key?(:'Orientation')
+          self.orientation = attributes[:'Orientation']
+      end
+      if attributes.has_key?(:'PaperSize')
+          self.paper_size = attributes[:'PaperSize']
+      end
+      if attributes.has_key?(:'PrintArea')
+          self.print_area = attributes[:'PrintArea']
+      end
+      if attributes.has_key?(:'PrintComments')
+          self.print_comments = attributes[:'PrintComments']
+      end
+      if attributes.has_key?(:'PrintCopies')
+          self.print_copies = attributes[:'PrintCopies']
+      end
+      if attributes.has_key?(:'PrintDraft')
+          self.print_draft = attributes[:'PrintDraft']
+      end
+      if attributes.has_key?(:'PrintErrors')
+          self.print_errors = attributes[:'PrintErrors']
+      end
+      if attributes.has_key?(:'PrintGridlines')
+          self.print_gridlines = attributes[:'PrintGridlines']
+      end
+      if attributes.has_key?(:'PrintHeadings')
+          self.print_headings = attributes[:'PrintHeadings']
+      end
+      if attributes.has_key?(:'PrintQuality')
+          self.print_quality = attributes[:'PrintQuality']
+      end
+      if attributes.has_key?(:'PrintTitleColumns')
+          self.print_title_columns = attributes[:'PrintTitleColumns']
+      end
+      if attributes.has_key?(:'PrintTitleRows')
+          self.print_title_rows = attributes[:'PrintTitleRows']
+      end
+      if attributes.has_key?(:'RightMargin')
+          self.right_margin = attributes[:'RightMargin']
+      end
+      if attributes.has_key?(:'TopMargin')
+          self.top_margin = attributes[:'TopMargin']
+      end
+      if attributes.has_key?(:'Zoom')
+          self.zoom = attributes[:'Zoom']
+      end
+      if attributes.has_key?(:'Header')
+          self.header = attributes[:'Header']
+      end
+      if attributes.has_key?(:'Footer')
+          self.footer = attributes[:'Footer']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -370,12 +304,153 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @black_and_white.nil?
+          invalid_properties.push("invalid value for 'black_and_white', black_and_white cannot be nil.")
+      end
+      if @bottom_margin.nil?
+          invalid_properties.push("invalid value for 'bottom_margin', bottom_margin cannot be nil.")
+      end
+      if @center_horizontally.nil?
+          invalid_properties.push("invalid value for 'center_horizontally', center_horizontally cannot be nil.")
+      end
+      if @center_vertically.nil?
+          invalid_properties.push("invalid value for 'center_vertically', center_vertically cannot be nil.")
+      end
+      if @first_page_number.nil?
+          invalid_properties.push("invalid value for 'first_page_number', first_page_number cannot be nil.")
+      end
+      if @fit_to_pages_tall.nil?
+          invalid_properties.push("invalid value for 'fit_to_pages_tall', fit_to_pages_tall cannot be nil.")
+      end
+      if @fit_to_pages_wide.nil?
+          invalid_properties.push("invalid value for 'fit_to_pages_wide', fit_to_pages_wide cannot be nil.")
+      end
+      if @footer_margin.nil?
+          invalid_properties.push("invalid value for 'footer_margin', footer_margin cannot be nil.")
+      end
+      if @header_margin.nil?
+          invalid_properties.push("invalid value for 'header_margin', header_margin cannot be nil.")
+      end
+      if @is_auto_first_page_number.nil?
+          invalid_properties.push("invalid value for 'is_auto_first_page_number', is_auto_first_page_number cannot be nil.")
+      end
+      if @is_hf_align_margins.nil?
+          invalid_properties.push("invalid value for 'is_hf_align_margins', is_hf_align_margins cannot be nil.")
+      end
+      if @is_hf_diff_first.nil?
+          invalid_properties.push("invalid value for 'is_hf_diff_first', is_hf_diff_first cannot be nil.")
+      end
+      if @is_hf_diff_odd_even.nil?
+          invalid_properties.push("invalid value for 'is_hf_diff_odd_even', is_hf_diff_odd_even cannot be nil.")
+      end
+      if @is_hf_scale_with_doc.nil?
+          invalid_properties.push("invalid value for 'is_hf_scale_with_doc', is_hf_scale_with_doc cannot be nil.")
+      end
+      if @is_percent_scale.nil?
+          invalid_properties.push("invalid value for 'is_percent_scale', is_percent_scale cannot be nil.")
+      end
+      if @left_margin.nil?
+          invalid_properties.push("invalid value for 'left_margin', left_margin cannot be nil.")
+      end
+      if @order.nil?
+          invalid_properties.push("invalid value for 'order', order cannot be nil.")
+      end
+      if @orientation.nil?
+          invalid_properties.push("invalid value for 'orientation', orientation cannot be nil.")
+      end
+      if @paper_size.nil?
+          invalid_properties.push("invalid value for 'paper_size', paper_size cannot be nil.")
+      end
+      if @print_area.nil?
+          invalid_properties.push("invalid value for 'print_area', print_area cannot be nil.")
+      end
+      if @print_comments.nil?
+          invalid_properties.push("invalid value for 'print_comments', print_comments cannot be nil.")
+      end
+      if @print_copies.nil?
+          invalid_properties.push("invalid value for 'print_copies', print_copies cannot be nil.")
+      end
+      if @print_draft.nil?
+          invalid_properties.push("invalid value for 'print_draft', print_draft cannot be nil.")
+      end
+      if @print_errors.nil?
+          invalid_properties.push("invalid value for 'print_errors', print_errors cannot be nil.")
+      end
+      if @print_gridlines.nil?
+          invalid_properties.push("invalid value for 'print_gridlines', print_gridlines cannot be nil.")
+      end
+      if @print_headings.nil?
+          invalid_properties.push("invalid value for 'print_headings', print_headings cannot be nil.")
+      end
+      if @print_quality.nil?
+          invalid_properties.push("invalid value for 'print_quality', print_quality cannot be nil.")
+      end
+      if @print_title_columns.nil?
+          invalid_properties.push("invalid value for 'print_title_columns', print_title_columns cannot be nil.")
+      end
+      if @print_title_rows.nil?
+          invalid_properties.push("invalid value for 'print_title_rows', print_title_rows cannot be nil.")
+      end
+      if @right_margin.nil?
+          invalid_properties.push("invalid value for 'right_margin', right_margin cannot be nil.")
+      end
+      if @top_margin.nil?
+          invalid_properties.push("invalid value for 'top_margin', top_margin cannot be nil.")
+      end
+      if @zoom.nil?
+          invalid_properties.push("invalid value for 'zoom', zoom cannot be nil.")
+      end
+      if @header.nil?
+          invalid_properties.push("invalid value for 'header', header cannot be nil.")
+      end
+      if @footer.nil?
+          invalid_properties.push("invalid value for 'footer', footer cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @black_and_white.nil?
+      return false if @bottom_margin.nil?
+      return false if @center_horizontally.nil?
+      return false if @center_vertically.nil?
+      return false if @first_page_number.nil?
+      return false if @fit_to_pages_tall.nil?
+      return false if @fit_to_pages_wide.nil?
+      return false if @footer_margin.nil?
+      return false if @header_margin.nil?
+      return false if @is_auto_first_page_number.nil?
+      return false if @is_hf_align_margins.nil?
+      return false if @is_hf_diff_first.nil?
+      return false if @is_hf_diff_odd_even.nil?
+      return false if @is_hf_scale_with_doc.nil?
+      return false if @is_percent_scale.nil?
+      return false if @left_margin.nil?
+      return false if @order.nil?
+      return false if @orientation.nil?
+      return false if @paper_size.nil?
+      return false if @print_area.nil?
+      return false if @print_comments.nil?
+      return false if @print_copies.nil?
+      return false if @print_draft.nil?
+      return false if @print_errors.nil?
+      return false if @print_gridlines.nil?
+      return false if @print_headings.nil?
+      return false if @print_quality.nil?
+      return false if @print_title_columns.nil?
+      return false if @print_title_rows.nil?
+      return false if @right_margin.nil?
+      return false if @top_margin.nil?
+      return false if @zoom.nil?
+      return false if @header.nil?
+      return false if @footer.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -384,41 +459,42 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          is_hf_diff_first == o.is_hf_diff_first &&
-          fit_to_pages_wide == o.fit_to_pages_wide &&
-          print_quality == o.print_quality &&
-          print_draft == o.print_draft &&
-          first_page_number == o.first_page_number &&
-          paper_size == o.paper_size &&
-          print_comments == o.print_comments &&
-          print_errors == o.print_errors &&
-          center_vertically == o.center_vertically &&
-          is_percent_scale == o.is_percent_scale &&
           black_and_white == o.black_and_white &&
-          print_title_columns == o.print_title_columns &&
-          is_hf_align_margins == o.is_hf_align_margins &&
-          print_area == o.print_area &&
-          footer_margin == o.footer_margin &&
-          left_margin == o.left_margin &&
+          bottom_margin == o.bottom_margin &&
           center_horizontally == o.center_horizontally &&
-          header_margin == o.header_margin &&
-          top_margin == o.top_margin &&
-          footer == o.footer &&
+          center_vertically == o.center_vertically &&
+          first_page_number == o.first_page_number &&
           fit_to_pages_tall == o.fit_to_pages_tall &&
-          is_hf_scale_with_doc == o.is_hf_scale_with_doc &&
-          print_headings == o.print_headings &&
-          zoom == o.zoom &&
-          print_title_rows == o.print_title_rows &&
-          order == o.order &&
-          print_copies == o.print_copies &&
-          orientation == o.orientation &&
-          right_margin == o.right_margin &&
-          print_gridlines == o.print_gridlines &&
+          fit_to_pages_wide == o.fit_to_pages_wide &&
+          footer_margin == o.footer_margin &&
+          header_margin == o.header_margin &&
           is_auto_first_page_number == o.is_auto_first_page_number &&
-          header == o.header &&
+          is_hf_align_margins == o.is_hf_align_margins &&
+          is_hf_diff_first == o.is_hf_diff_first &&
           is_hf_diff_odd_even == o.is_hf_diff_odd_even &&
-          bottom_margin == o.bottom_margin
+          is_hf_scale_with_doc == o.is_hf_scale_with_doc &&
+          is_percent_scale == o.is_percent_scale &&
+          left_margin == o.left_margin &&
+          order == o.order &&
+          orientation == o.orientation &&
+          paper_size == o.paper_size &&
+          print_area == o.print_area &&
+          print_comments == o.print_comments &&
+          print_copies == o.print_copies &&
+          print_draft == o.print_draft &&
+          print_errors == o.print_errors &&
+          print_gridlines == o.print_gridlines &&
+          print_headings == o.print_headings &&
+          print_quality == o.print_quality &&
+          print_title_columns == o.print_title_columns &&
+          print_title_rows == o.print_title_rows &&
+          right_margin == o.right_margin &&
+          top_margin == o.top_margin &&
+          zoom == o.zoom &&
+          header == o.header &&
+          footer == o.footer &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -430,7 +506,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, is_hf_diff_first, fit_to_pages_wide, print_quality, print_draft, first_page_number, paper_size, print_comments, print_errors, center_vertically, is_percent_scale, black_and_white, print_title_columns, is_hf_align_margins, print_area, footer_margin, left_margin, center_horizontally, header_margin, top_margin, footer, fit_to_pages_tall, is_hf_scale_with_doc, print_headings, zoom, print_title_rows, order, print_copies, orientation, right_margin, print_gridlines, is_auto_first_page_number, header, is_hf_diff_odd_even, bottom_margin].hash
+      [ black_and_white , bottom_margin , center_horizontally , center_vertically , first_page_number , fit_to_pages_tall , fit_to_pages_wide , footer_margin , header_margin , is_auto_first_page_number , is_hf_align_margins , is_hf_diff_first , is_hf_diff_odd_even , is_hf_scale_with_doc , is_percent_scale , left_margin , order , orientation , paper_size , print_area , print_comments , print_copies , print_draft , print_errors , print_gridlines , print_headings , print_quality , print_title_columns , print_title_rows , right_margin , top_margin , zoom , header , footer , link ].hash
     end
 
     # Builds the object from hash

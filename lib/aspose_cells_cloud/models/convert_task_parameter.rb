@@ -1,43 +1,49 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ConvertTaskParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ConvertTaskParameter
-    attr_accessor :workbook
-
-    attr_accessor :save_options
-
-    attr_accessor :destination_file
-
+        #            
+        attr_accessor :workbook
+        #            
+        attr_accessor :destination_file
+        #            
+        attr_accessor :save_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'workbook' => :'Workbook',
-        :'save_options' => :'SaveOptions',
-        :'destination_file' => :'DestinationFile'
+        :'destination_file' => :'DestinationFile',
+        :'save_options' => :'SaveOptions'
       }
     end
 
@@ -45,8 +51,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'workbook' => :'FileSource',
-        :'save_options' => :'SaveOptions',
-        :'destination_file' => :'String'
+        :'destination_file' => :'String',
+        :'save_options' => :'SaveOptions'
       }
     end
 
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Workbook')
-        self.workbook = attributes[:'Workbook']
+          self.workbook = attributes[:'Workbook']
       end
-
-      if attributes.has_key?(:'SaveOptions')
-        self.save_options = attributes[:'SaveOptions']
-      end
-
       if attributes.has_key?(:'DestinationFile')
-        self.destination_file = attributes[:'DestinationFile']
+          self.destination_file = attributes[:'DestinationFile']
+      end
+      if attributes.has_key?(:'SaveOptions')
+          self.save_options = attributes[:'SaveOptions']
       end
 
     end
@@ -76,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @workbook.nil?
+          invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
+      end
+      if @destination_file.nil?
+          invalid_properties.push("invalid value for 'destination_file', destination_file cannot be nil.")
+      end
+      if @save_options.nil?
+          invalid_properties.push("invalid value for 'save_options', save_options cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @workbook.nil?
+      return false if @destination_file.nil?
+      return false if @save_options.nil?
       return true
     end
 
@@ -91,8 +108,9 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           workbook == o.workbook &&
-          save_options == o.save_options &&
-          destination_file == o.destination_file
+          destination_file == o.destination_file &&
+          save_options == o.save_options 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [workbook, save_options, destination_file].hash
+      [ workbook , destination_file , save_options ].hash
     end
 
     # Builds the object from hash

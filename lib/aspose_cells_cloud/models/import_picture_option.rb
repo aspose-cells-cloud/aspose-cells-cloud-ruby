@@ -1,86 +1,86 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ImportPictureOptionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ImportPictureOption
-    attr_accessor :source
-
-    attr_accessor :import_data_type
-
-    attr_accessor :destination_worksheet
-
-    attr_accessor :is_insert
-
-    # Upper Left Row.
-    attr_accessor :upper_left_row
-
-    # Upper Left Column.
-    attr_accessor :upper_left_column
-
-    # Lower Right Row.
-    attr_accessor :lower_right_row
-
-    # Lower Right Column.
-    attr_accessor :lower_right_column
-
-    # Filename.
-    attr_accessor :filename
-
-    # data : base64  string.
-    attr_accessor :data
-
+        #            
+        attr_accessor :upper_left_row
+        #            
+        attr_accessor :upper_left_column
+        #            
+        attr_accessor :lower_right_row
+        #            
+        attr_accessor :lower_right_column
+        #            
+        attr_accessor :filename
+        #            
+        attr_accessor :data
+        #            
+        attr_accessor :destination_worksheet
+        #            
+        attr_accessor :is_insert
+        #            
+        attr_accessor :import_data_type
+        #            
+        attr_accessor :source
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'source' => :'Source',
-        :'import_data_type' => :'ImportDataType',
-        :'destination_worksheet' => :'DestinationWorksheet',
-        :'is_insert' => :'IsInsert',
         :'upper_left_row' => :'UpperLeftRow',
         :'upper_left_column' => :'UpperLeftColumn',
         :'lower_right_row' => :'LowerRightRow',
         :'lower_right_column' => :'LowerRightColumn',
         :'filename' => :'Filename',
-        :'data' => :'Data'
+        :'data' => :'Data',
+        :'destination_worksheet' => :'DestinationWorksheet',
+        :'is_insert' => :'IsInsert',
+        :'import_data_type' => :'ImportDataType',
+        :'source' => :'Source'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'source' => :'FileSource',
-        :'import_data_type' => :'String',
-        :'destination_worksheet' => :'String',
-        :'is_insert' => :'BOOLEAN',
         :'upper_left_row' => :'Integer',
         :'upper_left_column' => :'Integer',
         :'lower_right_row' => :'Integer',
         :'lower_right_column' => :'Integer',
         :'filename' => :'String',
-        :'data' => :'String'
+        :'data' => :'String',
+        :'destination_worksheet' => :'String',
+        :'is_insert' => :'BOOLEAN',
+        :'import_data_type' => :'String',
+        :'source' => :'FileSource'
       }
     end
 
@@ -92,44 +92,35 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Source')
-        self.source = attributes[:'Source']
-      end
-
-      if attributes.has_key?(:'ImportDataType')
-        self.import_data_type = attributes[:'ImportDataType']
-      end
-
-      if attributes.has_key?(:'DestinationWorksheet')
-        self.destination_worksheet = attributes[:'DestinationWorksheet']
-      end
-
-      if attributes.has_key?(:'IsInsert')
-        self.is_insert = attributes[:'IsInsert']
-      end
-
       if attributes.has_key?(:'UpperLeftRow')
-        self.upper_left_row = attributes[:'UpperLeftRow']
+          self.upper_left_row = attributes[:'UpperLeftRow']
       end
-
       if attributes.has_key?(:'UpperLeftColumn')
-        self.upper_left_column = attributes[:'UpperLeftColumn']
+          self.upper_left_column = attributes[:'UpperLeftColumn']
       end
-
       if attributes.has_key?(:'LowerRightRow')
-        self.lower_right_row = attributes[:'LowerRightRow']
+          self.lower_right_row = attributes[:'LowerRightRow']
       end
-
       if attributes.has_key?(:'LowerRightColumn')
-        self.lower_right_column = attributes[:'LowerRightColumn']
+          self.lower_right_column = attributes[:'LowerRightColumn']
       end
-
       if attributes.has_key?(:'Filename')
-        self.filename = attributes[:'Filename']
+          self.filename = attributes[:'Filename']
       end
-
       if attributes.has_key?(:'Data')
-        self.data = attributes[:'Data']
+          self.data = attributes[:'Data']
+      end
+      if attributes.has_key?(:'DestinationWorksheet')
+          self.destination_worksheet = attributes[:'DestinationWorksheet']
+      end
+      if attributes.has_key?(:'IsInsert')
+          self.is_insert = attributes[:'IsInsert']
+      end
+      if attributes.has_key?(:'ImportDataType')
+          self.import_data_type = attributes[:'ImportDataType']
+      end
+      if attributes.has_key?(:'Source')
+          self.source = attributes[:'Source']
       end
 
     end
@@ -138,12 +129,53 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @upper_left_row.nil?
+          invalid_properties.push("invalid value for 'upper_left_row', upper_left_row cannot be nil.")
+      end
+      if @upper_left_column.nil?
+          invalid_properties.push("invalid value for 'upper_left_column', upper_left_column cannot be nil.")
+      end
+      if @lower_right_row.nil?
+          invalid_properties.push("invalid value for 'lower_right_row', lower_right_row cannot be nil.")
+      end
+      if @lower_right_column.nil?
+          invalid_properties.push("invalid value for 'lower_right_column', lower_right_column cannot be nil.")
+      end
+      if @filename.nil?
+          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
+      end
+      if @data.nil?
+          invalid_properties.push("invalid value for 'data', data cannot be nil.")
+      end
+      if @destination_worksheet.nil?
+          invalid_properties.push("invalid value for 'destination_worksheet', destination_worksheet cannot be nil.")
+      end
+      if @is_insert.nil?
+          invalid_properties.push("invalid value for 'is_insert', is_insert cannot be nil.")
+      end
+      if @import_data_type.nil?
+          invalid_properties.push("invalid value for 'import_data_type', import_data_type cannot be nil.")
+      end
+      if @source.nil?
+          invalid_properties.push("invalid value for 'source', source cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @upper_left_row.nil?
+      return false if @upper_left_column.nil?
+      return false if @lower_right_row.nil?
+      return false if @lower_right_column.nil?
+      return false if @filename.nil?
+      return false if @data.nil?
+      return false if @destination_worksheet.nil?
+      return false if @is_insert.nil?
+      return false if @import_data_type.nil?
+      return false if @source.nil?
       return true
     end
 
@@ -152,16 +184,17 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          source == o.source &&
-          import_data_type == o.import_data_type &&
-          destination_worksheet == o.destination_worksheet &&
-          is_insert == o.is_insert &&
           upper_left_row == o.upper_left_row &&
           upper_left_column == o.upper_left_column &&
           lower_right_row == o.lower_right_row &&
           lower_right_column == o.lower_right_column &&
           filename == o.filename &&
-          data == o.data
+          data == o.data &&
+          destination_worksheet == o.destination_worksheet &&
+          is_insert == o.is_insert &&
+          import_data_type == o.import_data_type &&
+          source == o.source 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -173,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source, import_data_type, destination_worksheet, is_insert, upper_left_row, upper_left_column, lower_right_row, lower_right_column, filename, data].hash
+      [ upper_left_row , upper_left_column , lower_right_row , lower_right_column , filename , data , destination_worksheet , is_insert , import_data_type , source ].hash
     end
 
     # Builds the object from hash

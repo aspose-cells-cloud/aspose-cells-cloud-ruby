@@ -1,64 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="SortKeyrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class SortKey
-    attr_accessor :custom_list
-
-    attr_accessor :sort_order
-
-    attr_accessor :key
-
-    attr_accessor :order
-
-    attr_accessor :type
-
-    attr_accessor :index
-
+        #            
+        attr_accessor :key
+        #            
+        attr_accessor :sort_order
+        #            
+        attr_accessor :custom_list
+        #Indicates the order of sorting.            
+        attr_accessor :order
+        #Gets the sorted column index(absolute position, column A is 0, B is 1, ...).            
+        attr_accessor :index
+        #Represents the type of sorting.            
+        attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'custom_list' => :'CustomList',
-        :'sort_order' => :'SortOrder',
         :'key' => :'Key',
+        :'sort_order' => :'SortOrder',
+        :'custom_list' => :'CustomList',
         :'order' => :'Order',
-        :'type' => :'Type',
-        :'index' => :'Index'
+        :'index' => :'Index',
+        :'type' => :'Type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'custom_list' => :'Array<String>',
-        :'sort_order' => :'String',
         :'key' => :'Integer',
+        :'sort_order' => :'String',
+        :'custom_list' => :'Array<String>',
         :'order' => :'String',
-        :'type' => :'String',
-        :'index' => :'Integer'
+        :'index' => :'Integer',
+        :'type' => :'String'
       }
     end
 
@@ -70,30 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'CustomList')
-        if (value = attributes[:'CustomList']).is_a?(Array)
-          self.custom_list = value
-        end
-      end
-
-      if attributes.has_key?(:'SortOrder')
-        self.sort_order = attributes[:'SortOrder']
-      end
-
       if attributes.has_key?(:'Key')
-        self.key = attributes[:'Key']
+          self.key = attributes[:'Key']
       end
-
+      if attributes.has_key?(:'SortOrder')
+          self.sort_order = attributes[:'SortOrder']
+      end
+      if attributes.has_key?(:'CustomList')
+          self.custom_list = attributes[:'CustomList']
+      end
       if attributes.has_key?(:'Order')
-        self.order = attributes[:'Order']
+          self.order = attributes[:'Order']
       end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
       if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
+          self.index = attributes[:'Index']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
       end
 
     end
@@ -103,7 +102,22 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @key.nil?
-        invalid_properties.push("invalid value for 'key', key cannot be nil.")
+          invalid_properties.push("invalid value for 'key', key cannot be nil.")
+      end
+      if @sort_order.nil?
+          invalid_properties.push("invalid value for 'sort_order', sort_order cannot be nil.")
+      end
+      if @custom_list.nil?
+          invalid_properties.push("invalid value for 'custom_list', custom_list cannot be nil.")
+      end
+      if @order.nil?
+          invalid_properties.push("invalid value for 'order', order cannot be nil.")
+      end
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
       end
 
       return invalid_properties
@@ -113,6 +127,11 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @key.nil?
+      return false if @sort_order.nil?
+      return false if @custom_list.nil?
+      return false if @order.nil?
+      return false if @index.nil?
+      return false if @type.nil?
       return true
     end
 
@@ -121,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          custom_list == o.custom_list &&
-          sort_order == o.sort_order &&
           key == o.key &&
+          sort_order == o.sort_order &&
+          custom_list == o.custom_list &&
           order == o.order &&
-          type == o.type &&
-          index == o.index
+          index == o.index &&
+          type == o.type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -138,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [custom_list, sort_order, key, order, type, index].hash
+      [ key , sort_order , custom_list , order , index , type ].hash
     end
 
     # Builds the object from hash

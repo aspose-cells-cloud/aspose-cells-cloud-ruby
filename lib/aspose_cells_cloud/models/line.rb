@@ -1,116 +1,122 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Linerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Line
-    attr_accessor :style
-
-    attr_accessor :is_auto
-
-    attr_accessor :begin_arrow_length
-
-    attr_accessor :weight
-
-    attr_accessor :gradient_fill
-
-    attr_accessor :color
-
-    attr_accessor :compound_type
-
-    attr_accessor :weight_pt
-
-    attr_accessor :is_visible
-
-    attr_accessor :join_type
-
-    attr_accessor :end_arrow_length
-
-    attr_accessor :is_automatic_color
-
-    attr_accessor :dash_type
-
-    attr_accessor :begin_type
-
-    attr_accessor :cap_type
-
-    attr_accessor :end_type
-
-    attr_accessor :begin_arrow_width
-
-    attr_accessor :end_arrow_width
-
-    attr_accessor :transparency
-
+        #            
+        attr_accessor :begin_arrow_length
+        #            
+        attr_accessor :begin_arrow_width
+        #            
+        attr_accessor :begin_type
+        #            
+        attr_accessor :cap_type
+        #            
+        attr_accessor :color
+        #            
+        attr_accessor :compound_type
+        #            
+        attr_accessor :dash_type
+        #            
+        attr_accessor :end_arrow_length
+        #            
+        attr_accessor :end_arrow_width
+        #            
+        attr_accessor :end_type
+        #            
+        attr_accessor :gradient_fill
+        #            
+        attr_accessor :is_auto
+        #            
+        attr_accessor :is_automatic_color
+        #            
+        attr_accessor :is_visible
+        #            
+        attr_accessor :join_type
+        #            
+        attr_accessor :style
+        #            
+        attr_accessor :transparency
+        #            
+        attr_accessor :weight
+        #            
+        attr_accessor :weight_pt
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'style' => :'Style',
-        :'is_auto' => :'IsAuto',
         :'begin_arrow_length' => :'BeginArrowLength',
-        :'weight' => :'Weight',
-        :'gradient_fill' => :'GradientFill',
-        :'color' => :'Color',
-        :'compound_type' => :'CompoundType',
-        :'weight_pt' => :'WeightPt',
-        :'is_visible' => :'IsVisible',
-        :'join_type' => :'JoinType',
-        :'end_arrow_length' => :'EndArrowLength',
-        :'is_automatic_color' => :'IsAutomaticColor',
-        :'dash_type' => :'DashType',
+        :'begin_arrow_width' => :'BeginArrowWidth',
         :'begin_type' => :'BeginType',
         :'cap_type' => :'CapType',
-        :'end_type' => :'EndType',
-        :'begin_arrow_width' => :'BeginArrowWidth',
+        :'color' => :'Color',
+        :'compound_type' => :'CompoundType',
+        :'dash_type' => :'DashType',
+        :'end_arrow_length' => :'EndArrowLength',
         :'end_arrow_width' => :'EndArrowWidth',
-        :'transparency' => :'Transparency'
+        :'end_type' => :'EndType',
+        :'gradient_fill' => :'GradientFill',
+        :'is_auto' => :'IsAuto',
+        :'is_automatic_color' => :'IsAutomaticColor',
+        :'is_visible' => :'IsVisible',
+        :'join_type' => :'JoinType',
+        :'style' => :'Style',
+        :'transparency' => :'Transparency',
+        :'weight' => :'Weight',
+        :'weight_pt' => :'WeightPt'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'style' => :'String',
-        :'is_auto' => :'BOOLEAN',
         :'begin_arrow_length' => :'String',
-        :'weight' => :'String',
-        :'gradient_fill' => :'GradientFill',
-        :'color' => :'Color',
-        :'compound_type' => :'String',
-        :'weight_pt' => :'Float',
-        :'is_visible' => :'BOOLEAN',
-        :'join_type' => :'String',
-        :'end_arrow_length' => :'String',
-        :'is_automatic_color' => :'BOOLEAN',
-        :'dash_type' => :'String',
+        :'begin_arrow_width' => :'String',
         :'begin_type' => :'String',
         :'cap_type' => :'String',
-        :'end_type' => :'String',
-        :'begin_arrow_width' => :'String',
+        :'color' => :'Color',
+        :'compound_type' => :'String',
+        :'dash_type' => :'String',
+        :'end_arrow_length' => :'String',
         :'end_arrow_width' => :'String',
-        :'transparency' => :'Float'
+        :'end_type' => :'String',
+        :'gradient_fill' => :'GradientFill',
+        :'is_auto' => :'BOOLEAN',
+        :'is_automatic_color' => :'BOOLEAN',
+        :'is_visible' => :'BOOLEAN',
+        :'join_type' => :'String',
+        :'style' => :'String',
+        :'transparency' => :'Float',
+        :'weight' => :'String',
+        :'weight_pt' => :'Float'
       }
     end
 
@@ -122,80 +128,62 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Style')
-        self.style = attributes[:'Style']
-      end
-
-      if attributes.has_key?(:'IsAuto')
-        self.is_auto = attributes[:'IsAuto']
-      end
-
       if attributes.has_key?(:'BeginArrowLength')
-        self.begin_arrow_length = attributes[:'BeginArrowLength']
+          self.begin_arrow_length = attributes[:'BeginArrowLength']
       end
-
-      if attributes.has_key?(:'Weight')
-        self.weight = attributes[:'Weight']
-      end
-
-      if attributes.has_key?(:'GradientFill')
-        self.gradient_fill = attributes[:'GradientFill']
-      end
-
-      if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
-      end
-
-      if attributes.has_key?(:'CompoundType')
-        self.compound_type = attributes[:'CompoundType']
-      end
-
-      if attributes.has_key?(:'WeightPt')
-        self.weight_pt = attributes[:'WeightPt']
-      end
-
-      if attributes.has_key?(:'IsVisible')
-        self.is_visible = attributes[:'IsVisible']
-      end
-
-      if attributes.has_key?(:'JoinType')
-        self.join_type = attributes[:'JoinType']
-      end
-
-      if attributes.has_key?(:'EndArrowLength')
-        self.end_arrow_length = attributes[:'EndArrowLength']
-      end
-
-      if attributes.has_key?(:'IsAutomaticColor')
-        self.is_automatic_color = attributes[:'IsAutomaticColor']
-      end
-
-      if attributes.has_key?(:'DashType')
-        self.dash_type = attributes[:'DashType']
-      end
-
-      if attributes.has_key?(:'BeginType')
-        self.begin_type = attributes[:'BeginType']
-      end
-
-      if attributes.has_key?(:'CapType')
-        self.cap_type = attributes[:'CapType']
-      end
-
-      if attributes.has_key?(:'EndType')
-        self.end_type = attributes[:'EndType']
-      end
-
       if attributes.has_key?(:'BeginArrowWidth')
-        self.begin_arrow_width = attributes[:'BeginArrowWidth']
+          self.begin_arrow_width = attributes[:'BeginArrowWidth']
       end
-
+      if attributes.has_key?(:'BeginType')
+          self.begin_type = attributes[:'BeginType']
+      end
+      if attributes.has_key?(:'CapType')
+          self.cap_type = attributes[:'CapType']
+      end
+      if attributes.has_key?(:'Color')
+          self.color = attributes[:'Color']
+      end
+      if attributes.has_key?(:'CompoundType')
+          self.compound_type = attributes[:'CompoundType']
+      end
+      if attributes.has_key?(:'DashType')
+          self.dash_type = attributes[:'DashType']
+      end
+      if attributes.has_key?(:'EndArrowLength')
+          self.end_arrow_length = attributes[:'EndArrowLength']
+      end
       if attributes.has_key?(:'EndArrowWidth')
-        self.end_arrow_width = attributes[:'EndArrowWidth']
+          self.end_arrow_width = attributes[:'EndArrowWidth']
       end
-
+      if attributes.has_key?(:'EndType')
+          self.end_type = attributes[:'EndType']
+      end
+      if attributes.has_key?(:'GradientFill')
+          self.gradient_fill = attributes[:'GradientFill']
+      end
+      if attributes.has_key?(:'IsAuto')
+          self.is_auto = attributes[:'IsAuto']
+      end
+      if attributes.has_key?(:'IsAutomaticColor')
+          self.is_automatic_color = attributes[:'IsAutomaticColor']
+      end
+      if attributes.has_key?(:'IsVisible')
+          self.is_visible = attributes[:'IsVisible']
+      end
+      if attributes.has_key?(:'JoinType')
+          self.join_type = attributes[:'JoinType']
+      end
+      if attributes.has_key?(:'Style')
+          self.style = attributes[:'Style']
+      end
       if attributes.has_key?(:'Transparency')
-        self.transparency = attributes[:'Transparency']
+          self.transparency = attributes[:'Transparency']
+      end
+      if attributes.has_key?(:'Weight')
+          self.weight = attributes[:'Weight']
+      end
+      if attributes.has_key?(:'WeightPt')
+          self.weight_pt = attributes[:'WeightPt']
       end
 
     end
@@ -204,12 +192,89 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @begin_arrow_length.nil?
+          invalid_properties.push("invalid value for 'begin_arrow_length', begin_arrow_length cannot be nil.")
+      end
+      if @begin_arrow_width.nil?
+          invalid_properties.push("invalid value for 'begin_arrow_width', begin_arrow_width cannot be nil.")
+      end
+      if @begin_type.nil?
+          invalid_properties.push("invalid value for 'begin_type', begin_type cannot be nil.")
+      end
+      if @cap_type.nil?
+          invalid_properties.push("invalid value for 'cap_type', cap_type cannot be nil.")
+      end
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @compound_type.nil?
+          invalid_properties.push("invalid value for 'compound_type', compound_type cannot be nil.")
+      end
+      if @dash_type.nil?
+          invalid_properties.push("invalid value for 'dash_type', dash_type cannot be nil.")
+      end
+      if @end_arrow_length.nil?
+          invalid_properties.push("invalid value for 'end_arrow_length', end_arrow_length cannot be nil.")
+      end
+      if @end_arrow_width.nil?
+          invalid_properties.push("invalid value for 'end_arrow_width', end_arrow_width cannot be nil.")
+      end
+      if @end_type.nil?
+          invalid_properties.push("invalid value for 'end_type', end_type cannot be nil.")
+      end
+      if @gradient_fill.nil?
+          invalid_properties.push("invalid value for 'gradient_fill', gradient_fill cannot be nil.")
+      end
+      if @is_auto.nil?
+          invalid_properties.push("invalid value for 'is_auto', is_auto cannot be nil.")
+      end
+      if @is_automatic_color.nil?
+          invalid_properties.push("invalid value for 'is_automatic_color', is_automatic_color cannot be nil.")
+      end
+      if @is_visible.nil?
+          invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+      end
+      if @join_type.nil?
+          invalid_properties.push("invalid value for 'join_type', join_type cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+      if @transparency.nil?
+          invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
+      end
+      if @weight.nil?
+          invalid_properties.push("invalid value for 'weight', weight cannot be nil.")
+      end
+      if @weight_pt.nil?
+          invalid_properties.push("invalid value for 'weight_pt', weight_pt cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @begin_arrow_length.nil?
+      return false if @begin_arrow_width.nil?
+      return false if @begin_type.nil?
+      return false if @cap_type.nil?
+      return false if @color.nil?
+      return false if @compound_type.nil?
+      return false if @dash_type.nil?
+      return false if @end_arrow_length.nil?
+      return false if @end_arrow_width.nil?
+      return false if @end_type.nil?
+      return false if @gradient_fill.nil?
+      return false if @is_auto.nil?
+      return false if @is_automatic_color.nil?
+      return false if @is_visible.nil?
+      return false if @join_type.nil?
+      return false if @style.nil?
+      return false if @transparency.nil?
+      return false if @weight.nil?
+      return false if @weight_pt.nil?
       return true
     end
 
@@ -218,25 +283,26 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          style == o.style &&
-          is_auto == o.is_auto &&
           begin_arrow_length == o.begin_arrow_length &&
-          weight == o.weight &&
-          gradient_fill == o.gradient_fill &&
-          color == o.color &&
-          compound_type == o.compound_type &&
-          weight_pt == o.weight_pt &&
-          is_visible == o.is_visible &&
-          join_type == o.join_type &&
-          end_arrow_length == o.end_arrow_length &&
-          is_automatic_color == o.is_automatic_color &&
-          dash_type == o.dash_type &&
+          begin_arrow_width == o.begin_arrow_width &&
           begin_type == o.begin_type &&
           cap_type == o.cap_type &&
-          end_type == o.end_type &&
-          begin_arrow_width == o.begin_arrow_width &&
+          color == o.color &&
+          compound_type == o.compound_type &&
+          dash_type == o.dash_type &&
+          end_arrow_length == o.end_arrow_length &&
           end_arrow_width == o.end_arrow_width &&
-          transparency == o.transparency
+          end_type == o.end_type &&
+          gradient_fill == o.gradient_fill &&
+          is_auto == o.is_auto &&
+          is_automatic_color == o.is_automatic_color &&
+          is_visible == o.is_visible &&
+          join_type == o.join_type &&
+          style == o.style &&
+          transparency == o.transparency &&
+          weight == o.weight &&
+          weight_pt == o.weight_pt 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -248,7 +314,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [style, is_auto, begin_arrow_length, weight, gradient_fill, color, compound_type, weight_pt, is_visible, join_type, end_arrow_length, is_automatic_color, dash_type, begin_type, cap_type, end_type, begin_arrow_width, end_arrow_width, transparency].hash
+      [ begin_arrow_length , begin_arrow_width , begin_type , cap_type , color , compound_type , dash_type , end_arrow_length , end_arrow_width , end_type , gradient_fill , is_auto , is_automatic_color , is_visible , join_type , style , transparency , weight , weight_pt ].hash
     end
 
     # Builds the object from hash

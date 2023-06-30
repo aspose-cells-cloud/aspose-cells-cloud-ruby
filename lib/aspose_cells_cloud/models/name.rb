@@ -1,72 +1,78 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Namerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Name
-    attr_accessor :link
-
-    attr_accessor :comment
-
-    attr_accessor :text
-
-    attr_accessor :worksheet_index
-
-    attr_accessor :r1_c1_refers_to
-
-    attr_accessor :refers_to
-
-    attr_accessor :is_referred
-
-    attr_accessor :is_visible
-
+        #            
+        attr_accessor :comment
+        #            
+        attr_accessor :worksheet_index
+        #            
+        attr_accessor :is_referred
+        #            
+        attr_accessor :is_visible
+        #            
+        attr_accessor :r1_c1_refers_to
+        #            
+        attr_accessor :refers_to
+        #            
+        attr_accessor :text
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
         :'comment' => :'Comment',
-        :'text' => :'Text',
         :'worksheet_index' => :'WorksheetIndex',
+        :'is_referred' => :'IsReferred',
+        :'is_visible' => :'IsVisible',
         :'r1_c1_refers_to' => :'R1C1RefersTo',
         :'refers_to' => :'RefersTo',
-        :'is_referred' => :'IsReferred',
-        :'is_visible' => :'IsVisible'
+        :'text' => :'Text',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
         :'comment' => :'String',
-        :'text' => :'String',
         :'worksheet_index' => :'Integer',
+        :'is_referred' => :'BOOLEAN',
+        :'is_visible' => :'BOOLEAN',
         :'r1_c1_refers_to' => :'String',
         :'refers_to' => :'String',
-        :'is_referred' => :'BOOLEAN',
-        :'is_visible' => :'BOOLEAN'
+        :'text' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -78,36 +84,29 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
       if attributes.has_key?(:'Comment')
-        self.comment = attributes[:'Comment']
+          self.comment = attributes[:'Comment']
       end
-
-      if attributes.has_key?(:'Text')
-        self.text = attributes[:'Text']
-      end
-
       if attributes.has_key?(:'WorksheetIndex')
-        self.worksheet_index = attributes[:'WorksheetIndex']
+          self.worksheet_index = attributes[:'WorksheetIndex']
       end
-
-      if attributes.has_key?(:'R1C1RefersTo')
-        self.r1_c1_refers_to = attributes[:'R1C1RefersTo']
-      end
-
-      if attributes.has_key?(:'RefersTo')
-        self.refers_to = attributes[:'RefersTo']
-      end
-
       if attributes.has_key?(:'IsReferred')
-        self.is_referred = attributes[:'IsReferred']
+          self.is_referred = attributes[:'IsReferred']
       end
-
       if attributes.has_key?(:'IsVisible')
-        self.is_visible = attributes[:'IsVisible']
+          self.is_visible = attributes[:'IsVisible']
+      end
+      if attributes.has_key?(:'R1C1RefersTo')
+          self.r1_c1_refers_to = attributes[:'R1C1RefersTo']
+      end
+      if attributes.has_key?(:'RefersTo')
+          self.refers_to = attributes[:'RefersTo']
+      end
+      if attributes.has_key?(:'Text')
+          self.text = attributes[:'Text']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -116,16 +115,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @comment.nil?
+          invalid_properties.push("invalid value for 'comment', comment cannot be nil.")
+      end
       if @worksheet_index.nil?
-        invalid_properties.push("invalid value for 'worksheet_index', worksheet_index cannot be nil.")
+          invalid_properties.push("invalid value for 'worksheet_index', worksheet_index cannot be nil.")
       end
-
       if @is_referred.nil?
-        invalid_properties.push("invalid value for 'is_referred', is_referred cannot be nil.")
+          invalid_properties.push("invalid value for 'is_referred', is_referred cannot be nil.")
       end
-
       if @is_visible.nil?
-        invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+          invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+      end
+      if @r1_c1_refers_to.nil?
+          invalid_properties.push("invalid value for 'r1_c1_refers_to', r1_c1_refers_to cannot be nil.")
+      end
+      if @refers_to.nil?
+          invalid_properties.push("invalid value for 'refers_to', refers_to cannot be nil.")
+      end
+      if @text.nil?
+          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
 
       return invalid_properties
@@ -134,9 +146,14 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @comment.nil?
       return false if @worksheet_index.nil?
       return false if @is_referred.nil?
       return false if @is_visible.nil?
+      return false if @r1_c1_refers_to.nil?
+      return false if @refers_to.nil?
+      return false if @text.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -145,14 +162,15 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
           comment == o.comment &&
-          text == o.text &&
           worksheet_index == o.worksheet_index &&
+          is_referred == o.is_referred &&
+          is_visible == o.is_visible &&
           r1_c1_refers_to == o.r1_c1_refers_to &&
           refers_to == o.refers_to &&
-          is_referred == o.is_referred &&
-          is_visible == o.is_visible
+          text == o.text &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -164,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, comment, text, worksheet_index, r1_c1_refers_to, refers_to, is_referred, is_visible].hash
+      [ comment , worksheet_index , is_referred , is_visible , r1_c1_refers_to , refers_to , text , link ].hash
     end
 
     # Builds the object from hash

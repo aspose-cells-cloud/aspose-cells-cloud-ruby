@@ -1,124 +1,134 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="SqlScriptSaveOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class SqlScriptSaveOptions
-    attr_accessor :enable_http_compression
-
-    attr_accessor :save_format
-
-    # Make the workbook empty after saving the file.
-    attr_accessor :clear_data
-
-    # The cached file folder is used to store some large data.
-    attr_accessor :cached_file_folder
-
-    # Indicates whether validate merged areas before saving the file. The default value is false.             
-    attr_accessor :validate_merged_areas
-
-    attr_accessor :refresh_chart_cache
-
-    # If true and the directory does not exist, the directory will be automatically created before saving the file.             
-    attr_accessor :create_directory
-
-    attr_accessor :sort_names
-
-    attr_accessor :check_if_table_exists
-
-    attr_accessor :column_type_map
-
-    attr_accessor :check_all_data_for_column_type
-
-    attr_accessor :add_blank_line_between_rows
-
-    attr_accessor :operator_type
-
-    attr_accessor :create_table
-
-    attr_accessor :id_name
-
-    attr_accessor :start_id
-
-    attr_accessor :table_name
-
-    attr_accessor :export_as_string
-
-    attr_accessor :export_area
-
-    attr_accessor :has_header_row
-
+        #            
+        attr_accessor :check_if_table_exists
+        #            
+        attr_accessor :column_type_map
+        #            
+        attr_accessor :check_all_data_for_column_type
+        #            
+        attr_accessor :add_blank_line_between_rows
+        #            
+        attr_accessor :separator
+        #            
+        attr_accessor :operator_type
+        #            
+        attr_accessor :primary_key
+        #            
+        attr_accessor :create_table
+        #            
+        attr_accessor :id_name
+        #            
+        attr_accessor :start_id
+        #            
+        attr_accessor :table_name
+        #            
+        attr_accessor :export_as_string
+        #            
+        attr_accessor :export_area
+        #            
+        attr_accessor :has_header_row
+        #            
+        attr_accessor :save_format
+        #            
+        attr_accessor :cached_file_folder
+        #            
+        attr_accessor :clear_data
+        #            
+        attr_accessor :create_directory
+        #            
+        attr_accessor :enable_http_compression
+        #            
+        attr_accessor :refresh_chart_cache
+        #            
+        attr_accessor :sort_names
+        #            
+        attr_accessor :validate_merged_areas
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enable_http_compression' => :'EnableHTTPCompression',
-        :'save_format' => :'SaveFormat',
-        :'clear_data' => :'ClearData',
-        :'cached_file_folder' => :'CachedFileFolder',
-        :'validate_merged_areas' => :'ValidateMergedAreas',
-        :'refresh_chart_cache' => :'RefreshChartCache',
-        :'create_directory' => :'CreateDirectory',
-        :'sort_names' => :'SortNames',
         :'check_if_table_exists' => :'CheckIfTableExists',
         :'column_type_map' => :'ColumnTypeMap',
         :'check_all_data_for_column_type' => :'CheckAllDataForColumnType',
         :'add_blank_line_between_rows' => :'AddBlankLineBetweenRows',
+        :'separator' => :'Separator',
         :'operator_type' => :'OperatorType',
+        :'primary_key' => :'PrimaryKey',
         :'create_table' => :'CreateTable',
         :'id_name' => :'IdName',
         :'start_id' => :'StartId',
         :'table_name' => :'TableName',
         :'export_as_string' => :'ExportAsString',
         :'export_area' => :'ExportArea',
-        :'has_header_row' => :'HasHeaderRow'
+        :'has_header_row' => :'HasHeaderRow',
+        :'save_format' => :'SaveFormat',
+        :'cached_file_folder' => :'CachedFileFolder',
+        :'clear_data' => :'ClearData',
+        :'create_directory' => :'CreateDirectory',
+        :'enable_http_compression' => :'EnableHTTPCompression',
+        :'refresh_chart_cache' => :'RefreshChartCache',
+        :'sort_names' => :'SortNames',
+        :'validate_merged_areas' => :'ValidateMergedAreas'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'enable_http_compression' => :'BOOLEAN',
-        :'save_format' => :'String',
-        :'clear_data' => :'BOOLEAN',
-        :'cached_file_folder' => :'String',
-        :'validate_merged_areas' => :'BOOLEAN',
-        :'refresh_chart_cache' => :'BOOLEAN',
-        :'create_directory' => :'BOOLEAN',
-        :'sort_names' => :'BOOLEAN',
         :'check_if_table_exists' => :'BOOLEAN',
         :'column_type_map' => :'String',
         :'check_all_data_for_column_type' => :'BOOLEAN',
         :'add_blank_line_between_rows' => :'BOOLEAN',
+        :'separator' => :'String',
         :'operator_type' => :'String',
+        :'primary_key' => :'Integer',
         :'create_table' => :'BOOLEAN',
         :'id_name' => :'String',
         :'start_id' => :'Integer',
         :'table_name' => :'String',
         :'export_as_string' => :'BOOLEAN',
         :'export_area' => :'CellArea',
-        :'has_header_row' => :'BOOLEAN'
+        :'has_header_row' => :'BOOLEAN',
+        :'save_format' => :'String',
+        :'cached_file_folder' => :'String',
+        :'clear_data' => :'BOOLEAN',
+        :'create_directory' => :'BOOLEAN',
+        :'enable_http_compression' => :'BOOLEAN',
+        :'refresh_chart_cache' => :'BOOLEAN',
+        :'sort_names' => :'BOOLEAN',
+        :'validate_merged_areas' => :'BOOLEAN'
       }
     end
 
@@ -130,84 +140,71 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'EnableHTTPCompression')
-        self.enable_http_compression = attributes[:'EnableHTTPCompression']
-      end
-
-      if attributes.has_key?(:'SaveFormat')
-        self.save_format = attributes[:'SaveFormat']
-      end
-
-      if attributes.has_key?(:'ClearData')
-        self.clear_data = attributes[:'ClearData']
-      end
-
-      if attributes.has_key?(:'CachedFileFolder')
-        self.cached_file_folder = attributes[:'CachedFileFolder']
-      end
-
-      if attributes.has_key?(:'ValidateMergedAreas')
-        self.validate_merged_areas = attributes[:'ValidateMergedAreas']
-      end
-
-      if attributes.has_key?(:'RefreshChartCache')
-        self.refresh_chart_cache = attributes[:'RefreshChartCache']
-      end
-
-      if attributes.has_key?(:'CreateDirectory')
-        self.create_directory = attributes[:'CreateDirectory']
-      end
-
-      if attributes.has_key?(:'SortNames')
-        self.sort_names = attributes[:'SortNames']
-      end
-
       if attributes.has_key?(:'CheckIfTableExists')
-        self.check_if_table_exists = attributes[:'CheckIfTableExists']
+          self.check_if_table_exists = attributes[:'CheckIfTableExists']
       end
-
       if attributes.has_key?(:'ColumnTypeMap')
-        self.column_type_map = attributes[:'ColumnTypeMap']
+          self.column_type_map = attributes[:'ColumnTypeMap']
       end
-
       if attributes.has_key?(:'CheckAllDataForColumnType')
-        self.check_all_data_for_column_type = attributes[:'CheckAllDataForColumnType']
+          self.check_all_data_for_column_type = attributes[:'CheckAllDataForColumnType']
       end
-
       if attributes.has_key?(:'AddBlankLineBetweenRows')
-        self.add_blank_line_between_rows = attributes[:'AddBlankLineBetweenRows']
+          self.add_blank_line_between_rows = attributes[:'AddBlankLineBetweenRows']
       end
-
+      if attributes.has_key?(:'Separator')
+          self.separator = attributes[:'Separator']
+      end
       if attributes.has_key?(:'OperatorType')
-        self.operator_type = attributes[:'OperatorType']
+          self.operator_type = attributes[:'OperatorType']
       end
-
+      if attributes.has_key?(:'PrimaryKey')
+          self.primary_key = attributes[:'PrimaryKey']
+      end
       if attributes.has_key?(:'CreateTable')
-        self.create_table = attributes[:'CreateTable']
+          self.create_table = attributes[:'CreateTable']
       end
-
       if attributes.has_key?(:'IdName')
-        self.id_name = attributes[:'IdName']
+          self.id_name = attributes[:'IdName']
       end
-
       if attributes.has_key?(:'StartId')
-        self.start_id = attributes[:'StartId']
+          self.start_id = attributes[:'StartId']
       end
-
       if attributes.has_key?(:'TableName')
-        self.table_name = attributes[:'TableName']
+          self.table_name = attributes[:'TableName']
       end
-
       if attributes.has_key?(:'ExportAsString')
-        self.export_as_string = attributes[:'ExportAsString']
+          self.export_as_string = attributes[:'ExportAsString']
       end
-
       if attributes.has_key?(:'ExportArea')
-        self.export_area = attributes[:'ExportArea']
+          self.export_area = attributes[:'ExportArea']
       end
-
       if attributes.has_key?(:'HasHeaderRow')
-        self.has_header_row = attributes[:'HasHeaderRow']
+          self.has_header_row = attributes[:'HasHeaderRow']
+      end
+      if attributes.has_key?(:'SaveFormat')
+          self.save_format = attributes[:'SaveFormat']
+      end
+      if attributes.has_key?(:'CachedFileFolder')
+          self.cached_file_folder = attributes[:'CachedFileFolder']
+      end
+      if attributes.has_key?(:'ClearData')
+          self.clear_data = attributes[:'ClearData']
+      end
+      if attributes.has_key?(:'CreateDirectory')
+          self.create_directory = attributes[:'CreateDirectory']
+      end
+      if attributes.has_key?(:'EnableHTTPCompression')
+          self.enable_http_compression = attributes[:'EnableHTTPCompression']
+      end
+      if attributes.has_key?(:'RefreshChartCache')
+          self.refresh_chart_cache = attributes[:'RefreshChartCache']
+      end
+      if attributes.has_key?(:'SortNames')
+          self.sort_names = attributes[:'SortNames']
+      end
+      if attributes.has_key?(:'ValidateMergedAreas')
+          self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
 
     end
@@ -216,12 +213,101 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @check_if_table_exists.nil?
+          invalid_properties.push("invalid value for 'check_if_table_exists', check_if_table_exists cannot be nil.")
+      end
+      if @column_type_map.nil?
+          invalid_properties.push("invalid value for 'column_type_map', column_type_map cannot be nil.")
+      end
+      if @check_all_data_for_column_type.nil?
+          invalid_properties.push("invalid value for 'check_all_data_for_column_type', check_all_data_for_column_type cannot be nil.")
+      end
+      if @add_blank_line_between_rows.nil?
+          invalid_properties.push("invalid value for 'add_blank_line_between_rows', add_blank_line_between_rows cannot be nil.")
+      end
+      if @separator.nil?
+          invalid_properties.push("invalid value for 'separator', separator cannot be nil.")
+      end
+      if @operator_type.nil?
+          invalid_properties.push("invalid value for 'operator_type', operator_type cannot be nil.")
+      end
+      if @primary_key.nil?
+          invalid_properties.push("invalid value for 'primary_key', primary_key cannot be nil.")
+      end
+      if @create_table.nil?
+          invalid_properties.push("invalid value for 'create_table', create_table cannot be nil.")
+      end
+      if @id_name.nil?
+          invalid_properties.push("invalid value for 'id_name', id_name cannot be nil.")
+      end
+      if @start_id.nil?
+          invalid_properties.push("invalid value for 'start_id', start_id cannot be nil.")
+      end
+      if @table_name.nil?
+          invalid_properties.push("invalid value for 'table_name', table_name cannot be nil.")
+      end
+      if @export_as_string.nil?
+          invalid_properties.push("invalid value for 'export_as_string', export_as_string cannot be nil.")
+      end
+      if @export_area.nil?
+          invalid_properties.push("invalid value for 'export_area', export_area cannot be nil.")
+      end
+      if @has_header_row.nil?
+          invalid_properties.push("invalid value for 'has_header_row', has_header_row cannot be nil.")
+      end
+      if @save_format.nil?
+          invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
+      end
+      if @cached_file_folder.nil?
+          invalid_properties.push("invalid value for 'cached_file_folder', cached_file_folder cannot be nil.")
+      end
+      if @clear_data.nil?
+          invalid_properties.push("invalid value for 'clear_data', clear_data cannot be nil.")
+      end
+      if @create_directory.nil?
+          invalid_properties.push("invalid value for 'create_directory', create_directory cannot be nil.")
+      end
+      if @enable_http_compression.nil?
+          invalid_properties.push("invalid value for 'enable_http_compression', enable_http_compression cannot be nil.")
+      end
+      if @refresh_chart_cache.nil?
+          invalid_properties.push("invalid value for 'refresh_chart_cache', refresh_chart_cache cannot be nil.")
+      end
+      if @sort_names.nil?
+          invalid_properties.push("invalid value for 'sort_names', sort_names cannot be nil.")
+      end
+      if @validate_merged_areas.nil?
+          invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @check_if_table_exists.nil?
+      return false if @column_type_map.nil?
+      return false if @check_all_data_for_column_type.nil?
+      return false if @add_blank_line_between_rows.nil?
+      return false if @separator.nil?
+      return false if @operator_type.nil?
+      return false if @primary_key.nil?
+      return false if @create_table.nil?
+      return false if @id_name.nil?
+      return false if @start_id.nil?
+      return false if @table_name.nil?
+      return false if @export_as_string.nil?
+      return false if @export_area.nil?
+      return false if @has_header_row.nil?
+      return false if @save_format.nil?
+      return false if @cached_file_folder.nil?
+      return false if @clear_data.nil?
+      return false if @create_directory.nil?
+      return false if @enable_http_compression.nil?
+      return false if @refresh_chart_cache.nil?
+      return false if @sort_names.nil?
+      return false if @validate_merged_areas.nil?
       return true
     end
 
@@ -230,26 +316,29 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enable_http_compression == o.enable_http_compression &&
-          save_format == o.save_format &&
-          clear_data == o.clear_data &&
-          cached_file_folder == o.cached_file_folder &&
-          validate_merged_areas == o.validate_merged_areas &&
-          refresh_chart_cache == o.refresh_chart_cache &&
-          create_directory == o.create_directory &&
-          sort_names == o.sort_names &&
           check_if_table_exists == o.check_if_table_exists &&
           column_type_map == o.column_type_map &&
           check_all_data_for_column_type == o.check_all_data_for_column_type &&
           add_blank_line_between_rows == o.add_blank_line_between_rows &&
+          separator == o.separator &&
           operator_type == o.operator_type &&
+          primary_key == o.primary_key &&
           create_table == o.create_table &&
           id_name == o.id_name &&
           start_id == o.start_id &&
           table_name == o.table_name &&
           export_as_string == o.export_as_string &&
           export_area == o.export_area &&
-          has_header_row == o.has_header_row
+          has_header_row == o.has_header_row &&
+          save_format == o.save_format &&
+          cached_file_folder == o.cached_file_folder &&
+          clear_data == o.clear_data &&
+          create_directory == o.create_directory &&
+          enable_http_compression == o.enable_http_compression &&
+          refresh_chart_cache == o.refresh_chart_cache &&
+          sort_names == o.sort_names &&
+          validate_merged_areas == o.validate_merged_areas 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -261,7 +350,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [enable_http_compression, save_format, clear_data, cached_file_folder, validate_merged_areas, refresh_chart_cache, create_directory, sort_names, check_if_table_exists, column_type_map, check_all_data_for_column_type, add_blank_line_between_rows, operator_type, create_table, id_name, start_id, table_name, export_as_string, export_area, has_header_row].hash
+      [ check_if_table_exists , column_type_map , check_all_data_for_column_type , add_blank_line_between_rows , separator , operator_type , primary_key , create_table , id_name , start_id , table_name , export_as_string , export_area , has_header_row , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

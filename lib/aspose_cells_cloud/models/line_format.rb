@@ -1,108 +1,114 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="LineFormatrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class LineFormat
-    attr_accessor :texture_fill
-
-    attr_accessor :image_data
-
-    attr_accessor :pattern_fill
-
-    attr_accessor :solid_fill
-
-    attr_accessor :gradient_fill
-
-    attr_accessor :type
-
-    attr_accessor :begin_arrowhead_length
-
-    attr_accessor :dash_style
-
-    attr_accessor :end_arrowhead_width
-
-    attr_accessor :end_arrowhead_length
-
-    attr_accessor :begin_arrowhead_width
-
-    attr_accessor :compound_type
-
-    attr_accessor :join_type
-
-    attr_accessor :weight
-
-    attr_accessor :begin_arrowhead_style
-
-    attr_accessor :end_arrowhead_style
-
-    attr_accessor :cap_type
-
+        #            
+        attr_accessor :begin_arrowhead_length
+        #            
+        attr_accessor :begin_arrowhead_style
+        #            
+        attr_accessor :begin_arrowhead_width
+        #            
+        attr_accessor :cap_type
+        #            
+        attr_accessor :compound_type
+        #            
+        attr_accessor :dash_style
+        #            
+        attr_accessor :end_arrowhead_length
+        #            
+        attr_accessor :end_arrowhead_style
+        #            
+        attr_accessor :end_arrowhead_width
+        #            
+        attr_accessor :join_type
+        #            
+        attr_accessor :weight
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :solid_fill
+        #            
+        attr_accessor :pattern_fill
+        #            
+        attr_accessor :texture_fill
+        #            
+        attr_accessor :gradient_fill
+        #            
+        attr_accessor :image_data
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'texture_fill' => :'TextureFill',
-        :'image_data' => :'ImageData',
-        :'pattern_fill' => :'PatternFill',
-        :'solid_fill' => :'SolidFill',
-        :'gradient_fill' => :'GradientFill',
-        :'type' => :'Type',
         :'begin_arrowhead_length' => :'BeginArrowheadLength',
-        :'dash_style' => :'DashStyle',
-        :'end_arrowhead_width' => :'EndArrowheadWidth',
-        :'end_arrowhead_length' => :'EndArrowheadLength',
+        :'begin_arrowhead_style' => :'BeginArrowheadStyle',
         :'begin_arrowhead_width' => :'BeginArrowheadWidth',
+        :'cap_type' => :'CapType',
         :'compound_type' => :'CompoundType',
+        :'dash_style' => :'DashStyle',
+        :'end_arrowhead_length' => :'EndArrowheadLength',
+        :'end_arrowhead_style' => :'EndArrowheadStyle',
+        :'end_arrowhead_width' => :'EndArrowheadWidth',
         :'join_type' => :'JoinType',
         :'weight' => :'Weight',
-        :'begin_arrowhead_style' => :'BeginArrowheadStyle',
-        :'end_arrowhead_style' => :'EndArrowheadStyle',
-        :'cap_type' => :'CapType'
+        :'type' => :'Type',
+        :'solid_fill' => :'SolidFill',
+        :'pattern_fill' => :'PatternFill',
+        :'texture_fill' => :'TextureFill',
+        :'gradient_fill' => :'GradientFill',
+        :'image_data' => :'ImageData'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'texture_fill' => :'TextureFill',
-        :'image_data' => :'String',
-        :'pattern_fill' => :'PatternFill',
-        :'solid_fill' => :'SolidFill',
-        :'gradient_fill' => :'GradientFill',
-        :'type' => :'String',
         :'begin_arrowhead_length' => :'String',
-        :'dash_style' => :'String',
-        :'end_arrowhead_width' => :'String',
-        :'end_arrowhead_length' => :'String',
+        :'begin_arrowhead_style' => :'String',
         :'begin_arrowhead_width' => :'String',
+        :'cap_type' => :'String',
         :'compound_type' => :'String',
+        :'dash_style' => :'String',
+        :'end_arrowhead_length' => :'String',
+        :'end_arrowhead_style' => :'String',
+        :'end_arrowhead_width' => :'String',
         :'join_type' => :'String',
         :'weight' => :'Float',
-        :'begin_arrowhead_style' => :'String',
-        :'end_arrowhead_style' => :'String',
-        :'cap_type' => :'String'
+        :'type' => :'String',
+        :'solid_fill' => :'SolidFill',
+        :'pattern_fill' => :'PatternFill',
+        :'texture_fill' => :'TextureFill',
+        :'gradient_fill' => :'GradientFill',
+        :'image_data' => :'String'
       }
     end
 
@@ -114,72 +120,56 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'TextureFill')
-        self.texture_fill = attributes[:'TextureFill']
-      end
-
-      if attributes.has_key?(:'ImageData')
-        self.image_data = attributes[:'ImageData']
-      end
-
-      if attributes.has_key?(:'PatternFill')
-        self.pattern_fill = attributes[:'PatternFill']
-      end
-
-      if attributes.has_key?(:'SolidFill')
-        self.solid_fill = attributes[:'SolidFill']
-      end
-
-      if attributes.has_key?(:'GradientFill')
-        self.gradient_fill = attributes[:'GradientFill']
-      end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
       if attributes.has_key?(:'BeginArrowheadLength')
-        self.begin_arrowhead_length = attributes[:'BeginArrowheadLength']
+          self.begin_arrowhead_length = attributes[:'BeginArrowheadLength']
       end
-
-      if attributes.has_key?(:'DashStyle')
-        self.dash_style = attributes[:'DashStyle']
-      end
-
-      if attributes.has_key?(:'EndArrowheadWidth')
-        self.end_arrowhead_width = attributes[:'EndArrowheadWidth']
-      end
-
-      if attributes.has_key?(:'EndArrowheadLength')
-        self.end_arrowhead_length = attributes[:'EndArrowheadLength']
-      end
-
-      if attributes.has_key?(:'BeginArrowheadWidth')
-        self.begin_arrowhead_width = attributes[:'BeginArrowheadWidth']
-      end
-
-      if attributes.has_key?(:'CompoundType')
-        self.compound_type = attributes[:'CompoundType']
-      end
-
-      if attributes.has_key?(:'JoinType')
-        self.join_type = attributes[:'JoinType']
-      end
-
-      if attributes.has_key?(:'Weight')
-        self.weight = attributes[:'Weight']
-      end
-
       if attributes.has_key?(:'BeginArrowheadStyle')
-        self.begin_arrowhead_style = attributes[:'BeginArrowheadStyle']
+          self.begin_arrowhead_style = attributes[:'BeginArrowheadStyle']
       end
-
-      if attributes.has_key?(:'EndArrowheadStyle')
-        self.end_arrowhead_style = attributes[:'EndArrowheadStyle']
+      if attributes.has_key?(:'BeginArrowheadWidth')
+          self.begin_arrowhead_width = attributes[:'BeginArrowheadWidth']
       end
-
       if attributes.has_key?(:'CapType')
-        self.cap_type = attributes[:'CapType']
+          self.cap_type = attributes[:'CapType']
+      end
+      if attributes.has_key?(:'CompoundType')
+          self.compound_type = attributes[:'CompoundType']
+      end
+      if attributes.has_key?(:'DashStyle')
+          self.dash_style = attributes[:'DashStyle']
+      end
+      if attributes.has_key?(:'EndArrowheadLength')
+          self.end_arrowhead_length = attributes[:'EndArrowheadLength']
+      end
+      if attributes.has_key?(:'EndArrowheadStyle')
+          self.end_arrowhead_style = attributes[:'EndArrowheadStyle']
+      end
+      if attributes.has_key?(:'EndArrowheadWidth')
+          self.end_arrowhead_width = attributes[:'EndArrowheadWidth']
+      end
+      if attributes.has_key?(:'JoinType')
+          self.join_type = attributes[:'JoinType']
+      end
+      if attributes.has_key?(:'Weight')
+          self.weight = attributes[:'Weight']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'SolidFill')
+          self.solid_fill = attributes[:'SolidFill']
+      end
+      if attributes.has_key?(:'PatternFill')
+          self.pattern_fill = attributes[:'PatternFill']
+      end
+      if attributes.has_key?(:'TextureFill')
+          self.texture_fill = attributes[:'TextureFill']
+      end
+      if attributes.has_key?(:'GradientFill')
+          self.gradient_fill = attributes[:'GradientFill']
+      end
+      if attributes.has_key?(:'ImageData')
+          self.image_data = attributes[:'ImageData']
       end
 
     end
@@ -188,8 +178,56 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        invalid_properties.push("invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.")
+      if @begin_arrowhead_length.nil?
+          invalid_properties.push("invalid value for 'begin_arrowhead_length', begin_arrowhead_length cannot be nil.")
+      end
+      if @begin_arrowhead_style.nil?
+          invalid_properties.push("invalid value for 'begin_arrowhead_style', begin_arrowhead_style cannot be nil.")
+      end
+      if @begin_arrowhead_width.nil?
+          invalid_properties.push("invalid value for 'begin_arrowhead_width', begin_arrowhead_width cannot be nil.")
+      end
+      if @cap_type.nil?
+          invalid_properties.push("invalid value for 'cap_type', cap_type cannot be nil.")
+      end
+      if @compound_type.nil?
+          invalid_properties.push("invalid value for 'compound_type', compound_type cannot be nil.")
+      end
+      if @dash_style.nil?
+          invalid_properties.push("invalid value for 'dash_style', dash_style cannot be nil.")
+      end
+      if @end_arrowhead_length.nil?
+          invalid_properties.push("invalid value for 'end_arrowhead_length', end_arrowhead_length cannot be nil.")
+      end
+      if @end_arrowhead_style.nil?
+          invalid_properties.push("invalid value for 'end_arrowhead_style', end_arrowhead_style cannot be nil.")
+      end
+      if @end_arrowhead_width.nil?
+          invalid_properties.push("invalid value for 'end_arrowhead_width', end_arrowhead_width cannot be nil.")
+      end
+      if @join_type.nil?
+          invalid_properties.push("invalid value for 'join_type', join_type cannot be nil.")
+      end
+      if @weight.nil?
+          invalid_properties.push("invalid value for 'weight', weight cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @solid_fill.nil?
+          invalid_properties.push("invalid value for 'solid_fill', solid_fill cannot be nil.")
+      end
+      if @pattern_fill.nil?
+          invalid_properties.push("invalid value for 'pattern_fill', pattern_fill cannot be nil.")
+      end
+      if @texture_fill.nil?
+          invalid_properties.push("invalid value for 'texture_fill', texture_fill cannot be nil.")
+      end
+      if @gradient_fill.nil?
+          invalid_properties.push("invalid value for 'gradient_fill', gradient_fill cannot be nil.")
+      end
+      if @image_data.nil?
+          invalid_properties.push("invalid value for 'image_data', image_data cannot be nil.")
       end
 
       return invalid_properties
@@ -198,19 +236,24 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
+      return false if @begin_arrowhead_length.nil?
+      return false if @begin_arrowhead_style.nil?
+      return false if @begin_arrowhead_width.nil?
+      return false if @cap_type.nil?
+      return false if @compound_type.nil?
+      return false if @dash_style.nil?
+      return false if @end_arrowhead_length.nil?
+      return false if @end_arrowhead_style.nil?
+      return false if @end_arrowhead_width.nil?
+      return false if @join_type.nil?
+      return false if @weight.nil?
+      return false if @type.nil?
+      return false if @solid_fill.nil?
+      return false if @pattern_fill.nil?
+      return false if @texture_fill.nil?
+      return false if @gradient_fill.nil?
+      return false if @image_data.nil?
       return true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] image_data Value to be assigned
-    def image_data=(image_data)
-
-      if !image_data.nil? && image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        fail ArgumentError, "invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/."
-      end
-
-      @image_data = image_data
     end
 
     # Checks equality by comparing each attribute.
@@ -218,23 +261,24 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          texture_fill == o.texture_fill &&
-          image_data == o.image_data &&
-          pattern_fill == o.pattern_fill &&
-          solid_fill == o.solid_fill &&
-          gradient_fill == o.gradient_fill &&
-          type == o.type &&
           begin_arrowhead_length == o.begin_arrowhead_length &&
-          dash_style == o.dash_style &&
-          end_arrowhead_width == o.end_arrowhead_width &&
-          end_arrowhead_length == o.end_arrowhead_length &&
+          begin_arrowhead_style == o.begin_arrowhead_style &&
           begin_arrowhead_width == o.begin_arrowhead_width &&
+          cap_type == o.cap_type &&
           compound_type == o.compound_type &&
+          dash_style == o.dash_style &&
+          end_arrowhead_length == o.end_arrowhead_length &&
+          end_arrowhead_style == o.end_arrowhead_style &&
+          end_arrowhead_width == o.end_arrowhead_width &&
           join_type == o.join_type &&
           weight == o.weight &&
-          begin_arrowhead_style == o.begin_arrowhead_style &&
-          end_arrowhead_style == o.end_arrowhead_style &&
-          cap_type == o.cap_type
+          type == o.type &&
+          solid_fill == o.solid_fill &&
+          pattern_fill == o.pattern_fill &&
+          texture_fill == o.texture_fill &&
+          gradient_fill == o.gradient_fill &&
+          image_data == o.image_data 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -246,7 +290,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [texture_fill, image_data, pattern_fill, solid_fill, gradient_fill, type, begin_arrowhead_length, dash_style, end_arrowhead_width, end_arrowhead_length, begin_arrowhead_width, compound_type, join_type, weight, begin_arrowhead_style, end_arrowhead_style, cap_type].hash
+      [ begin_arrowhead_length , begin_arrowhead_style , begin_arrowhead_width , cap_type , compound_type , dash_style , end_arrowhead_length , end_arrowhead_style , end_arrowhead_width , join_type , weight , type , solid_fill , pattern_fill , texture_fill , gradient_fill , image_data ].hash
     end
 
     # Builds the object from hash

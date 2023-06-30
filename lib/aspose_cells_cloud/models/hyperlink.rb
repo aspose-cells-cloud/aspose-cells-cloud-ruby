@@ -1,60 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Hyperlinkrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Hyperlink
-    attr_accessor :link
-
-    attr_accessor :screen_tip
-
-    attr_accessor :area
-
-    attr_accessor :text_to_display
-
-    attr_accessor :address
-
+        #            
+        attr_accessor :address
+        #            
+        attr_accessor :area
+        #            
+        attr_accessor :screen_tip
+        #            
+        attr_accessor :text_to_display
+        #            
+        attr_accessor :link_type
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'screen_tip' => :'ScreenTip',
+        :'address' => :'Address',
         :'area' => :'Area',
+        :'screen_tip' => :'ScreenTip',
         :'text_to_display' => :'TextToDisplay',
-        :'address' => :'Address'
+        :'link_type' => :'LinkType',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'screen_tip' => :'String',
+        :'address' => :'String',
         :'area' => :'CellArea',
+        :'screen_tip' => :'String',
         :'text_to_display' => :'String',
-        :'address' => :'String'
+        :'link_type' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -66,24 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'ScreenTip')
-        self.screen_tip = attributes[:'ScreenTip']
-      end
-
-      if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
-      end
-
-      if attributes.has_key?(:'TextToDisplay')
-        self.text_to_display = attributes[:'TextToDisplay']
-      end
-
       if attributes.has_key?(:'Address')
-        self.address = attributes[:'Address']
+          self.address = attributes[:'Address']
+      end
+      if attributes.has_key?(:'Area')
+          self.area = attributes[:'Area']
+      end
+      if attributes.has_key?(:'ScreenTip')
+          self.screen_tip = attributes[:'ScreenTip']
+      end
+      if attributes.has_key?(:'TextToDisplay')
+          self.text_to_display = attributes[:'TextToDisplay']
+      end
+      if attributes.has_key?(:'LinkType')
+          self.link_type = attributes[:'LinkType']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -92,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @address.nil?
+          invalid_properties.push("invalid value for 'address', address cannot be nil.")
+      end
+      if @area.nil?
+          invalid_properties.push("invalid value for 'area', area cannot be nil.")
+      end
+      if @screen_tip.nil?
+          invalid_properties.push("invalid value for 'screen_tip', screen_tip cannot be nil.")
+      end
+      if @text_to_display.nil?
+          invalid_properties.push("invalid value for 'text_to_display', text_to_display cannot be nil.")
+      end
+      if @link_type.nil?
+          invalid_properties.push("invalid value for 'link_type', link_type cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @address.nil?
+      return false if @area.nil?
+      return false if @screen_tip.nil?
+      return false if @text_to_display.nil?
+      return false if @link_type.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -106,11 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          screen_tip == o.screen_tip &&
+          address == o.address &&
           area == o.area &&
+          screen_tip == o.screen_tip &&
           text_to_display == o.text_to_display &&
-          address == o.address
+          link_type == o.link_type &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -122,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, screen_tip, area, text_to_display, address].hash
+      [ address , area , screen_tip , text_to_display , link_type , link ].hash
     end
 
     # Builds the object from hash

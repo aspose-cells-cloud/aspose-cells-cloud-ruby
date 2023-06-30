@@ -1,84 +1,90 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="SparklineGrouprb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class SparklineGroup
-    attr_accessor :display_hidden
-
-    attr_accessor :first_point_color
-
-    attr_accessor :high_point_color
-
-    attr_accessor :horizontal_axis_color
-
-    attr_accessor :horizontal_axis_date_range
-
-    attr_accessor :last_point_color
-
-    attr_accessor :line_weight
-
-    attr_accessor :low_point_color
-
-    attr_accessor :markers_color
-
-    attr_accessor :negative_points_color
-
-    attr_accessor :plot_empty_cells_type
-
-    attr_accessor :plot_right_to_left
-
-    attr_accessor :preset_style
-
-    attr_accessor :series_color
-
-    attr_accessor :show_first_point
-
-    attr_accessor :show_high_point
-
-    attr_accessor :show_horizontal_axis
-
-    attr_accessor :show_last_point
-
-    attr_accessor :show_low_point
-
-    attr_accessor :show_markers
-
-    attr_accessor :show_negative_points
-
-    attr_accessor :sparkline_collection
-
-    attr_accessor :type
-
-    attr_accessor :vertical_axis_max_value
-
-    attr_accessor :vertical_axis_max_value_type
-
-    attr_accessor :vertical_axis_min_value
-
-    attr_accessor :vertical_axis_min_value_type
-
+        #Indicates whether to show data in hidden rows and columns.            
+        attr_accessor :display_hidden
+        #Gets and sets the color of the first point of data in the sparkline group.            
+        attr_accessor :first_point_color
+        #Gets and sets the color of the highest points of data in the sparkline group.            
+        attr_accessor :high_point_color
+        #Gets and sets the color of the horizontal axis in the sparkline group.            
+        attr_accessor :horizontal_axis_color
+        #Represents the range that contains the date values for the sparkline data.            
+        attr_accessor :horizontal_axis_date_range
+        #Gets and sets the color of the last point of data in the sparkline group.            
+        attr_accessor :last_point_color
+        #Gets and sets the line weight in each line sparkline in the sparkline group,  in the unit of points.                        
+        attr_accessor :line_weight
+        #Gets and sets the color of the lowest points of data in the sparkline group.            
+        attr_accessor :low_point_color
+        #Gets and sets the color of points in each line sparkline in the sparkline group.            
+        attr_accessor :markers_color
+        #Gets and sets the color of the negative values on the sparkline group.                        
+        attr_accessor :negative_points_color
+        #Indicates how to plot empty cells.            
+        attr_accessor :plot_empty_cells_type
+        #Indicates whether the plot data is right to left.            
+        attr_accessor :plot_right_to_left
+        #Gets and sets the preset style type of the sparkline group.            
+        attr_accessor :preset_style
+        #Gets and sets the color of the sparklines in the sparkline group.                        
+        attr_accessor :series_color
+        #Indicates whether to highlight the first point of data in the sparkline group.            
+        attr_accessor :show_first_point
+        #Indicates whether to highlight the highest points of data in the sparkline group.            
+        attr_accessor :show_high_point
+        #Indicates whether to show the sparkline horizontal axis. The horizontal axis   appears if the sparkline has data that crosses the zero axis.                        
+        attr_accessor :show_horizontal_axis
+        #Indicates whether to highlight the last point of data in the sparkline group.            
+        attr_accessor :show_last_point
+        #Indicates whether to highlight the lowest points of data in the sparkline group.                        
+        attr_accessor :show_low_point
+        #Indicates whether to highlight each point in each line sparkline in the sparkline  group.            
+        attr_accessor :show_markers
+        #Indicates whether to highlight the negative values on the sparkline group with a different color or marker.            
+        attr_accessor :show_negative_points
+        #Gets the Aspose.Cells.Charts.SparklineGroup.SparklineCollection object of the sparkline group.            
+        attr_accessor :sparkline_collection
+        #Indicates the sparkline type of the sparkline group.            
+        attr_accessor :type
+        #Gets and sets the custom maximum value for the vertical axis.            
+        attr_accessor :vertical_axis_max_value
+        #Represents the vertical axis maximum value type.            
+        attr_accessor :vertical_axis_max_value_type
+        #Gets and sets the custom minimum value for the vertical axis.            
+        attr_accessor :vertical_axis_min_value
+        #Represents the vertical axis minimum value type.                        
+        attr_accessor :vertical_axis_min_value_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -155,113 +161,85 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'DisplayHidden')
-        self.display_hidden = attributes[:'DisplayHidden']
+          self.display_hidden = attributes[:'DisplayHidden']
       end
-
       if attributes.has_key?(:'FirstPointColor')
-        self.first_point_color = attributes[:'FirstPointColor']
+          self.first_point_color = attributes[:'FirstPointColor']
       end
-
       if attributes.has_key?(:'HighPointColor')
-        self.high_point_color = attributes[:'HighPointColor']
+          self.high_point_color = attributes[:'HighPointColor']
       end
-
       if attributes.has_key?(:'HorizontalAxisColor')
-        self.horizontal_axis_color = attributes[:'HorizontalAxisColor']
+          self.horizontal_axis_color = attributes[:'HorizontalAxisColor']
       end
-
       if attributes.has_key?(:'HorizontalAxisDateRange')
-        self.horizontal_axis_date_range = attributes[:'HorizontalAxisDateRange']
+          self.horizontal_axis_date_range = attributes[:'HorizontalAxisDateRange']
       end
-
       if attributes.has_key?(:'LastPointColor')
-        self.last_point_color = attributes[:'LastPointColor']
+          self.last_point_color = attributes[:'LastPointColor']
       end
-
       if attributes.has_key?(:'LineWeight')
-        self.line_weight = attributes[:'LineWeight']
+          self.line_weight = attributes[:'LineWeight']
       end
-
       if attributes.has_key?(:'LowPointColor')
-        self.low_point_color = attributes[:'LowPointColor']
+          self.low_point_color = attributes[:'LowPointColor']
       end
-
       if attributes.has_key?(:'MarkersColor')
-        self.markers_color = attributes[:'MarkersColor']
+          self.markers_color = attributes[:'MarkersColor']
       end
-
       if attributes.has_key?(:'NegativePointsColor')
-        self.negative_points_color = attributes[:'NegativePointsColor']
+          self.negative_points_color = attributes[:'NegativePointsColor']
       end
-
       if attributes.has_key?(:'PlotEmptyCellsType')
-        self.plot_empty_cells_type = attributes[:'PlotEmptyCellsType']
+          self.plot_empty_cells_type = attributes[:'PlotEmptyCellsType']
       end
-
       if attributes.has_key?(:'PlotRightToLeft')
-        self.plot_right_to_left = attributes[:'PlotRightToLeft']
+          self.plot_right_to_left = attributes[:'PlotRightToLeft']
       end
-
       if attributes.has_key?(:'PresetStyle')
-        self.preset_style = attributes[:'PresetStyle']
+          self.preset_style = attributes[:'PresetStyle']
       end
-
       if attributes.has_key?(:'SeriesColor')
-        self.series_color = attributes[:'SeriesColor']
+          self.series_color = attributes[:'SeriesColor']
       end
-
       if attributes.has_key?(:'ShowFirstPoint')
-        self.show_first_point = attributes[:'ShowFirstPoint']
+          self.show_first_point = attributes[:'ShowFirstPoint']
       end
-
       if attributes.has_key?(:'ShowHighPoint')
-        self.show_high_point = attributes[:'ShowHighPoint']
+          self.show_high_point = attributes[:'ShowHighPoint']
       end
-
       if attributes.has_key?(:'ShowHorizontalAxis')
-        self.show_horizontal_axis = attributes[:'ShowHorizontalAxis']
+          self.show_horizontal_axis = attributes[:'ShowHorizontalAxis']
       end
-
       if attributes.has_key?(:'ShowLastPoint')
-        self.show_last_point = attributes[:'ShowLastPoint']
+          self.show_last_point = attributes[:'ShowLastPoint']
       end
-
       if attributes.has_key?(:'ShowLowPoint')
-        self.show_low_point = attributes[:'ShowLowPoint']
+          self.show_low_point = attributes[:'ShowLowPoint']
       end
-
       if attributes.has_key?(:'ShowMarkers')
-        self.show_markers = attributes[:'ShowMarkers']
+          self.show_markers = attributes[:'ShowMarkers']
       end
-
       if attributes.has_key?(:'ShowNegativePoints')
-        self.show_negative_points = attributes[:'ShowNegativePoints']
+          self.show_negative_points = attributes[:'ShowNegativePoints']
       end
-
       if attributes.has_key?(:'SparklineCollection')
-        if (value = attributes[:'SparklineCollection']).is_a?(Array)
-          self.sparkline_collection = value
-        end
+          self.sparkline_collection = attributes[:'SparklineCollection']
       end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
       end
-
       if attributes.has_key?(:'VerticalAxisMaxValue')
-        self.vertical_axis_max_value = attributes[:'VerticalAxisMaxValue']
+          self.vertical_axis_max_value = attributes[:'VerticalAxisMaxValue']
       end
-
       if attributes.has_key?(:'VerticalAxisMaxValueType')
-        self.vertical_axis_max_value_type = attributes[:'VerticalAxisMaxValueType']
+          self.vertical_axis_max_value_type = attributes[:'VerticalAxisMaxValueType']
       end
-
       if attributes.has_key?(:'VerticalAxisMinValue')
-        self.vertical_axis_min_value = attributes[:'VerticalAxisMinValue']
+          self.vertical_axis_min_value = attributes[:'VerticalAxisMinValue']
       end
-
       if attributes.has_key?(:'VerticalAxisMinValueType')
-        self.vertical_axis_min_value_type = attributes[:'VerticalAxisMinValueType']
+          self.vertical_axis_min_value_type = attributes[:'VerticalAxisMinValueType']
       end
 
     end
@@ -270,12 +248,121 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @display_hidden.nil?
+          invalid_properties.push("invalid value for 'display_hidden', display_hidden cannot be nil.")
+      end
+      if @first_point_color.nil?
+          invalid_properties.push("invalid value for 'first_point_color', first_point_color cannot be nil.")
+      end
+      if @high_point_color.nil?
+          invalid_properties.push("invalid value for 'high_point_color', high_point_color cannot be nil.")
+      end
+      if @horizontal_axis_color.nil?
+          invalid_properties.push("invalid value for 'horizontal_axis_color', horizontal_axis_color cannot be nil.")
+      end
+      if @horizontal_axis_date_range.nil?
+          invalid_properties.push("invalid value for 'horizontal_axis_date_range', horizontal_axis_date_range cannot be nil.")
+      end
+      if @last_point_color.nil?
+          invalid_properties.push("invalid value for 'last_point_color', last_point_color cannot be nil.")
+      end
+      if @line_weight.nil?
+          invalid_properties.push("invalid value for 'line_weight', line_weight cannot be nil.")
+      end
+      if @low_point_color.nil?
+          invalid_properties.push("invalid value for 'low_point_color', low_point_color cannot be nil.")
+      end
+      if @markers_color.nil?
+          invalid_properties.push("invalid value for 'markers_color', markers_color cannot be nil.")
+      end
+      if @negative_points_color.nil?
+          invalid_properties.push("invalid value for 'negative_points_color', negative_points_color cannot be nil.")
+      end
+      if @plot_empty_cells_type.nil?
+          invalid_properties.push("invalid value for 'plot_empty_cells_type', plot_empty_cells_type cannot be nil.")
+      end
+      if @plot_right_to_left.nil?
+          invalid_properties.push("invalid value for 'plot_right_to_left', plot_right_to_left cannot be nil.")
+      end
+      if @preset_style.nil?
+          invalid_properties.push("invalid value for 'preset_style', preset_style cannot be nil.")
+      end
+      if @series_color.nil?
+          invalid_properties.push("invalid value for 'series_color', series_color cannot be nil.")
+      end
+      if @show_first_point.nil?
+          invalid_properties.push("invalid value for 'show_first_point', show_first_point cannot be nil.")
+      end
+      if @show_high_point.nil?
+          invalid_properties.push("invalid value for 'show_high_point', show_high_point cannot be nil.")
+      end
+      if @show_horizontal_axis.nil?
+          invalid_properties.push("invalid value for 'show_horizontal_axis', show_horizontal_axis cannot be nil.")
+      end
+      if @show_last_point.nil?
+          invalid_properties.push("invalid value for 'show_last_point', show_last_point cannot be nil.")
+      end
+      if @show_low_point.nil?
+          invalid_properties.push("invalid value for 'show_low_point', show_low_point cannot be nil.")
+      end
+      if @show_markers.nil?
+          invalid_properties.push("invalid value for 'show_markers', show_markers cannot be nil.")
+      end
+      if @show_negative_points.nil?
+          invalid_properties.push("invalid value for 'show_negative_points', show_negative_points cannot be nil.")
+      end
+      if @sparkline_collection.nil?
+          invalid_properties.push("invalid value for 'sparkline_collection', sparkline_collection cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @vertical_axis_max_value.nil?
+          invalid_properties.push("invalid value for 'vertical_axis_max_value', vertical_axis_max_value cannot be nil.")
+      end
+      if @vertical_axis_max_value_type.nil?
+          invalid_properties.push("invalid value for 'vertical_axis_max_value_type', vertical_axis_max_value_type cannot be nil.")
+      end
+      if @vertical_axis_min_value.nil?
+          invalid_properties.push("invalid value for 'vertical_axis_min_value', vertical_axis_min_value cannot be nil.")
+      end
+      if @vertical_axis_min_value_type.nil?
+          invalid_properties.push("invalid value for 'vertical_axis_min_value_type', vertical_axis_min_value_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @display_hidden.nil?
+      return false if @first_point_color.nil?
+      return false if @high_point_color.nil?
+      return false if @horizontal_axis_color.nil?
+      return false if @horizontal_axis_date_range.nil?
+      return false if @last_point_color.nil?
+      return false if @line_weight.nil?
+      return false if @low_point_color.nil?
+      return false if @markers_color.nil?
+      return false if @negative_points_color.nil?
+      return false if @plot_empty_cells_type.nil?
+      return false if @plot_right_to_left.nil?
+      return false if @preset_style.nil?
+      return false if @series_color.nil?
+      return false if @show_first_point.nil?
+      return false if @show_high_point.nil?
+      return false if @show_horizontal_axis.nil?
+      return false if @show_last_point.nil?
+      return false if @show_low_point.nil?
+      return false if @show_markers.nil?
+      return false if @show_negative_points.nil?
+      return false if @sparkline_collection.nil?
+      return false if @type.nil?
+      return false if @vertical_axis_max_value.nil?
+      return false if @vertical_axis_max_value_type.nil?
+      return false if @vertical_axis_min_value.nil?
+      return false if @vertical_axis_min_value_type.nil?
       return true
     end
 
@@ -310,7 +397,8 @@ module AsposeCellsCloud
           vertical_axis_max_value == o.vertical_axis_max_value &&
           vertical_axis_max_value_type == o.vertical_axis_max_value_type &&
           vertical_axis_min_value == o.vertical_axis_min_value &&
-          vertical_axis_min_value_type == o.vertical_axis_min_value_type
+          vertical_axis_min_value_type == o.vertical_axis_min_value_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -322,7 +410,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [display_hidden, first_point_color, high_point_color, horizontal_axis_color, horizontal_axis_date_range, last_point_color, line_weight, low_point_color, markers_color, negative_points_color, plot_empty_cells_type, plot_right_to_left, preset_style, series_color, show_first_point, show_high_point, show_horizontal_axis, show_last_point, show_low_point, show_markers, show_negative_points, sparkline_collection, type, vertical_axis_max_value, vertical_axis_max_value_type, vertical_axis_min_value, vertical_axis_min_value_type].hash
+      [ display_hidden , first_point_color , high_point_color , horizontal_axis_color , horizontal_axis_date_range , last_point_color , line_weight , low_point_color , markers_color , negative_points_color , plot_empty_cells_type , plot_right_to_left , preset_style , series_color , show_first_point , show_high_point , show_horizontal_axis , show_last_point , show_low_point , show_markers , show_negative_points , sparkline_collection , type , vertical_axis_max_value , vertical_axis_max_value_type , vertical_axis_min_value , vertical_axis_min_value_type ].hash
     end
 
     # Builds the object from hash

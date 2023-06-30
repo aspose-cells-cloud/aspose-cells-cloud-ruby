@@ -1,72 +1,78 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Rowrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Row
-    attr_accessor :link
-
-    attr_accessor :index
-
-    attr_accessor :style
-
-    attr_accessor :group_level
-
-    attr_accessor :height
-
-    attr_accessor :is_height_matched
-
-    attr_accessor :is_hidden
-
-    attr_accessor :is_blank
-
+        #            
+        attr_accessor :group_level
+        #            
+        attr_accessor :height
+        #            
+        attr_accessor :index
+        #            
+        attr_accessor :is_blank
+        #            
+        attr_accessor :is_height_matched
+        #            
+        attr_accessor :is_hidden
+        #            
+        attr_accessor :style
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'index' => :'Index',
-        :'style' => :'Style',
         :'group_level' => :'GroupLevel',
         :'height' => :'Height',
+        :'index' => :'Index',
+        :'is_blank' => :'IsBlank',
         :'is_height_matched' => :'IsHeightMatched',
         :'is_hidden' => :'IsHidden',
-        :'is_blank' => :'IsBlank'
+        :'style' => :'Style',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'index' => :'Integer',
-        :'style' => :'LinkElement',
         :'group_level' => :'Integer',
         :'height' => :'Float',
+        :'index' => :'Integer',
+        :'is_blank' => :'BOOLEAN',
         :'is_height_matched' => :'BOOLEAN',
         :'is_hidden' => :'BOOLEAN',
-        :'is_blank' => :'BOOLEAN'
+        :'style' => :'LinkElement',
+        :'link' => :'Link'
       }
     end
 
@@ -78,36 +84,29 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
-      end
-
-      if attributes.has_key?(:'Style')
-        self.style = attributes[:'Style']
-      end
-
       if attributes.has_key?(:'GroupLevel')
-        self.group_level = attributes[:'GroupLevel']
+          self.group_level = attributes[:'GroupLevel']
       end
-
       if attributes.has_key?(:'Height')
-        self.height = attributes[:'Height']
+          self.height = attributes[:'Height']
       end
-
-      if attributes.has_key?(:'IsHeightMatched')
-        self.is_height_matched = attributes[:'IsHeightMatched']
+      if attributes.has_key?(:'Index')
+          self.index = attributes[:'Index']
       end
-
-      if attributes.has_key?(:'IsHidden')
-        self.is_hidden = attributes[:'IsHidden']
-      end
-
       if attributes.has_key?(:'IsBlank')
-        self.is_blank = attributes[:'IsBlank']
+          self.is_blank = attributes[:'IsBlank']
+      end
+      if attributes.has_key?(:'IsHeightMatched')
+          self.is_height_matched = attributes[:'IsHeightMatched']
+      end
+      if attributes.has_key?(:'IsHidden')
+          self.is_hidden = attributes[:'IsHidden']
+      end
+      if attributes.has_key?(:'Style')
+          self.style = attributes[:'Style']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -116,12 +115,45 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @group_level.nil?
+          invalid_properties.push("invalid value for 'group_level', group_level cannot be nil.")
+      end
+      if @height.nil?
+          invalid_properties.push("invalid value for 'height', height cannot be nil.")
+      end
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @is_blank.nil?
+          invalid_properties.push("invalid value for 'is_blank', is_blank cannot be nil.")
+      end
+      if @is_height_matched.nil?
+          invalid_properties.push("invalid value for 'is_height_matched', is_height_matched cannot be nil.")
+      end
+      if @is_hidden.nil?
+          invalid_properties.push("invalid value for 'is_hidden', is_hidden cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @group_level.nil?
+      return false if @height.nil?
+      return false if @index.nil?
+      return false if @is_blank.nil?
+      return false if @is_height_matched.nil?
+      return false if @is_hidden.nil?
+      return false if @style.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -130,14 +162,15 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          index == o.index &&
-          style == o.style &&
           group_level == o.group_level &&
           height == o.height &&
+          index == o.index &&
+          is_blank == o.is_blank &&
           is_height_matched == o.is_height_matched &&
           is_hidden == o.is_hidden &&
-          is_blank == o.is_blank
+          style == o.style &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -149,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, index, style, group_level, height, is_height_matched, is_hidden, is_blank].hash
+      [ group_level , height , index , is_blank , is_height_matched , is_hidden , style , link ].hash
     end
 
     # Builds the object from hash

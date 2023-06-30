@@ -1,70 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="IconSetrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Describe the IconSet conditional formatting rule. This conditional formatting     rule applies icons to cells according to their values.
+
   class IconSet
-    # Get or set the flag indicating whether to reverses the default order of the   icons in this icon set.  Default value is false.             
-    attr_accessor :reverse
-
-    # Get theAspose.Cells.ConditionalFormattingIcon from the collection
-    attr_accessor :cf_icons
-
-    # Get the CFValueObjects instance.
-    attr_accessor :cfvos
-
-    # Get or Set the icon set type to display.  Setting the type will auto check    if the current Cfvos's count is accord with the new type. If not accord,    old Cfvos will be cleaned and default Cfvos will be added.             
-    attr_accessor :icon_set_type
-
-    # Indicates whether the icon set is custom.  Default value is false.
-    attr_accessor :is_custom
-
-    # Get or set the flag indicating whether to show the values of the cells on    which this icon set is applied.  Default value is true.             
-    attr_accessor :show_value
-
+        #Get theAspose.Cells.ConditionalFormattingIcon from the collection            
+        attr_accessor :cf_icons
+        #Get the CFValueObjects instance.            
+        attr_accessor :cfvos
+        #Indicates whether the icon set is custom.  Default value is false.            
+        attr_accessor :is_custom
+        #Get or set the flag indicating whether to reverses the default order of the  icons in this icon set.  Default value is false.                        
+        attr_accessor :reverse
+        #Get or set the flag indicating whether to show the values of the cells on   which this icon set is applied.  Default value is true.                        
+        attr_accessor :show_value
+        #Get or Set the icon set type to display.  Setting the type will auto check   if the current Cfvos's count is accord with the new type. If not accord,   old Cfvos will be cleaned and default Cfvos will be added.                        
+        attr_accessor :icon_set_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'reverse' => :'Reverse',
         :'cf_icons' => :'CfIcons',
         :'cfvos' => :'Cfvos',
-        :'icon_set_type' => :'IconSetType',
         :'is_custom' => :'IsCustom',
-        :'show_value' => :'ShowValue'
+        :'reverse' => :'Reverse',
+        :'show_value' => :'ShowValue',
+        :'icon_set_type' => :'IconSetType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'reverse' => :'BOOLEAN',
         :'cf_icons' => :'Array<ConditionalFormattingIcon>',
         :'cfvos' => :'Array<ConditionalFormattingValue>',
-        :'icon_set_type' => :'String',
         :'is_custom' => :'BOOLEAN',
-        :'show_value' => :'BOOLEAN'
+        :'reverse' => :'BOOLEAN',
+        :'show_value' => :'BOOLEAN',
+        :'icon_set_type' => :'String'
       }
     end
 
@@ -76,32 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Reverse')
-        self.reverse = attributes[:'Reverse']
-      end
-
       if attributes.has_key?(:'CfIcons')
-        if (value = attributes[:'CfIcons']).is_a?(Array)
-          self.cf_icons = value
-        end
+          self.cf_icons = attributes[:'CfIcons']
       end
-
       if attributes.has_key?(:'Cfvos')
-        if (value = attributes[:'Cfvos']).is_a?(Array)
-          self.cfvos = value
-        end
+          self.cfvos = attributes[:'Cfvos']
       end
-
-      if attributes.has_key?(:'IconSetType')
-        self.icon_set_type = attributes[:'IconSetType']
-      end
-
       if attributes.has_key?(:'IsCustom')
-        self.is_custom = attributes[:'IsCustom']
+          self.is_custom = attributes[:'IsCustom']
       end
-
+      if attributes.has_key?(:'Reverse')
+          self.reverse = attributes[:'Reverse']
+      end
       if attributes.has_key?(:'ShowValue')
-        self.show_value = attributes[:'ShowValue']
+          self.show_value = attributes[:'ShowValue']
+      end
+      if attributes.has_key?(:'IconSetType')
+          self.icon_set_type = attributes[:'IconSetType']
       end
 
     end
@@ -110,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @cf_icons.nil?
+          invalid_properties.push("invalid value for 'cf_icons', cf_icons cannot be nil.")
+      end
+      if @cfvos.nil?
+          invalid_properties.push("invalid value for 'cfvos', cfvos cannot be nil.")
+      end
+      if @is_custom.nil?
+          invalid_properties.push("invalid value for 'is_custom', is_custom cannot be nil.")
+      end
+      if @reverse.nil?
+          invalid_properties.push("invalid value for 'reverse', reverse cannot be nil.")
+      end
+      if @show_value.nil?
+          invalid_properties.push("invalid value for 'show_value', show_value cannot be nil.")
+      end
+      if @icon_set_type.nil?
+          invalid_properties.push("invalid value for 'icon_set_type', icon_set_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @cf_icons.nil?
+      return false if @cfvos.nil?
+      return false if @is_custom.nil?
+      return false if @reverse.nil?
+      return false if @show_value.nil?
+      return false if @icon_set_type.nil?
       return true
     end
 
@@ -124,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          reverse == o.reverse &&
           cf_icons == o.cf_icons &&
           cfvos == o.cfvos &&
-          icon_set_type == o.icon_set_type &&
           is_custom == o.is_custom &&
-          show_value == o.show_value
+          reverse == o.reverse &&
+          show_value == o.show_value &&
+          icon_set_type == o.icon_set_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -141,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [reverse, cf_icons, cfvos, icon_set_type, is_custom, show_value].hash
+      [ cf_icons , cfvos , is_custom , reverse , show_value , icon_set_type ].hash
     end
 
     # Builds the object from hash

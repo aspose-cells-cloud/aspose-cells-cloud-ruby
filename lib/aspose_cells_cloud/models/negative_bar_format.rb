@@ -1,49 +1,51 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="NegativeBarFormatrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Represents the color settings of the data bars for negative values that are    defined by a data bar conditional formating rule.             
+
   class NegativeBarFormat
-    # Gets or sets a FormatColor object that you can use to specify the border    color for negative data bars.             
-    attr_accessor :border_color
-
-    # Gets or sets a FormatColor object that you can use to specify the fill color    for negative data bars.             
-    attr_accessor :color
-
-    # Gets whether to use the same border color as positive data bars.             
-    attr_accessor :border_color_type
-
-    # Gets or sets whether to use the same fill color as positive data bars.
-    attr_accessor :color_type
-
+        #Gets or sets a FormatColor object that you can use to specify the border   color for negative data bars.                        
+        attr_accessor :border_color
+        #Gets whether to use the same border color as positive data bars.                        
+        attr_accessor :border_color_type
+        #Gets or sets a FormatColor object that you can use to specify the fill color   for negative data bars.                        
+        attr_accessor :color
+        #Gets or sets whether to use the same fill color as positive data bars.            
+        attr_accessor :color_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'border_color' => :'BorderColor',
-        :'color' => :'Color',
         :'border_color_type' => :'BorderColorType',
+        :'color' => :'Color',
         :'color_type' => :'ColorType'
       }
     end
@@ -52,8 +54,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'border_color' => :'Color',
-        :'color' => :'Color',
         :'border_color_type' => :'String',
+        :'color' => :'Color',
         :'color_type' => :'String'
       }
     end
@@ -67,19 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'BorderColor')
-        self.border_color = attributes[:'BorderColor']
+          self.border_color = attributes[:'BorderColor']
       end
-
-      if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
-      end
-
       if attributes.has_key?(:'BorderColorType')
-        self.border_color_type = attributes[:'BorderColorType']
+          self.border_color_type = attributes[:'BorderColorType']
       end
-
+      if attributes.has_key?(:'Color')
+          self.color = attributes[:'Color']
+      end
       if attributes.has_key?(:'ColorType')
-        self.color_type = attributes[:'ColorType']
+          self.color_type = attributes[:'ColorType']
       end
 
     end
@@ -88,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @border_color.nil?
+          invalid_properties.push("invalid value for 'border_color', border_color cannot be nil.")
+      end
+      if @border_color_type.nil?
+          invalid_properties.push("invalid value for 'border_color_type', border_color_type cannot be nil.")
+      end
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @color_type.nil?
+          invalid_properties.push("invalid value for 'color_type', color_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @border_color.nil?
+      return false if @border_color_type.nil?
+      return false if @color.nil?
+      return false if @color_type.nil?
       return true
     end
 
@@ -103,9 +119,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           border_color == o.border_color &&
-          color == o.color &&
           border_color_type == o.border_color_type &&
-          color_type == o.color_type
+          color == o.color &&
+          color_type == o.color_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -117,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [border_color, color, border_color_type, color_type].hash
+      [ border_color , border_color_type , color , color_type ].hash
     end
 
     # Builds the object from hash

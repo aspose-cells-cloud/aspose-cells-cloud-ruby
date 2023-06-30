@@ -1,43 +1,49 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CustomParserConfigrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CustomParserConfig
-    attr_accessor :column_index
-
-    attr_accessor :custom_style
-
-    attr_accessor :parse_method
-
+        #            
+        attr_accessor :column_index
+        #            
+        attr_accessor :parse_method
+        #            
+        attr_accessor :custom_style
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'column_index' => :'ColumnIndex',
-        :'custom_style' => :'CustomStyle',
-        :'parse_method' => :'ParseMethod'
+        :'parse_method' => :'ParseMethod',
+        :'custom_style' => :'CustomStyle'
       }
     end
 
@@ -45,8 +51,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'column_index' => :'Integer',
-        :'custom_style' => :'String',
-        :'parse_method' => :'String'
+        :'parse_method' => :'String',
+        :'custom_style' => :'String'
       }
     end
 
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'ColumnIndex')
-        self.column_index = attributes[:'ColumnIndex']
+          self.column_index = attributes[:'ColumnIndex']
       end
-
-      if attributes.has_key?(:'CustomStyle')
-        self.custom_style = attributes[:'CustomStyle']
-      end
-
       if attributes.has_key?(:'ParseMethod')
-        self.parse_method = attributes[:'ParseMethod']
+          self.parse_method = attributes[:'ParseMethod']
+      end
+      if attributes.has_key?(:'CustomStyle')
+          self.custom_style = attributes[:'CustomStyle']
       end
 
     end
@@ -76,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @column_index.nil?
+          invalid_properties.push("invalid value for 'column_index', column_index cannot be nil.")
+      end
+      if @parse_method.nil?
+          invalid_properties.push("invalid value for 'parse_method', parse_method cannot be nil.")
+      end
+      if @custom_style.nil?
+          invalid_properties.push("invalid value for 'custom_style', custom_style cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @column_index.nil?
+      return false if @parse_method.nil?
+      return false if @custom_style.nil?
       return true
     end
 
@@ -91,8 +108,9 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           column_index == o.column_index &&
-          custom_style == o.custom_style &&
-          parse_method == o.parse_method
+          parse_method == o.parse_method &&
+          custom_style == o.custom_style 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [column_index, custom_style, parse_method].hash
+      [ column_index , parse_method , custom_style ].hash
     end
 
     # Builds the object from hash

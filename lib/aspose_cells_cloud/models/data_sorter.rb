@@ -1,46 +1,55 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="DataSorterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class DataSorter
-    attr_accessor :case_sensitive
-
-    attr_accessor :key_list
-
-    attr_accessor :has_headers
-
-    attr_accessor :sort_left_to_right
-
+        #            
+        attr_accessor :case_sensitive
+        #            
+        attr_accessor :has_headers
+        #            
+        attr_accessor :key_list
+        #            
+        attr_accessor :sort_left_to_right
+        #            
+        attr_accessor :sort_as_number
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'case_sensitive' => :'CaseSensitive',
-        :'key_list' => :'KeyList',
         :'has_headers' => :'HasHeaders',
-        :'sort_left_to_right' => :'SortLeftToRight'
+        :'key_list' => :'KeyList',
+        :'sort_left_to_right' => :'SortLeftToRight',
+        :'sort_as_number' => :'SortAsNumber'
       }
     end
 
@@ -48,9 +57,10 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'case_sensitive' => :'BOOLEAN',
-        :'key_list' => :'Array<SortKey>',
         :'has_headers' => :'BOOLEAN',
-        :'sort_left_to_right' => :'BOOLEAN'
+        :'key_list' => :'Array<SortKey>',
+        :'sort_left_to_right' => :'BOOLEAN',
+        :'sort_as_number' => :'BOOLEAN'
       }
     end
 
@@ -63,21 +73,19 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'CaseSensitive')
-        self.case_sensitive = attributes[:'CaseSensitive']
+          self.case_sensitive = attributes[:'CaseSensitive']
       end
-
-      if attributes.has_key?(:'KeyList')
-        if (value = attributes[:'KeyList']).is_a?(Array)
-          self.key_list = value
-        end
-      end
-
       if attributes.has_key?(:'HasHeaders')
-        self.has_headers = attributes[:'HasHeaders']
+          self.has_headers = attributes[:'HasHeaders']
       end
-
+      if attributes.has_key?(:'KeyList')
+          self.key_list = attributes[:'KeyList']
+      end
       if attributes.has_key?(:'SortLeftToRight')
-        self.sort_left_to_right = attributes[:'SortLeftToRight']
+          self.sort_left_to_right = attributes[:'SortLeftToRight']
+      end
+      if attributes.has_key?(:'SortAsNumber')
+          self.sort_as_number = attributes[:'SortAsNumber']
       end
 
     end
@@ -86,12 +94,33 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @case_sensitive.nil?
+          invalid_properties.push("invalid value for 'case_sensitive', case_sensitive cannot be nil.")
+      end
+      if @has_headers.nil?
+          invalid_properties.push("invalid value for 'has_headers', has_headers cannot be nil.")
+      end
+      if @key_list.nil?
+          invalid_properties.push("invalid value for 'key_list', key_list cannot be nil.")
+      end
+      if @sort_left_to_right.nil?
+          invalid_properties.push("invalid value for 'sort_left_to_right', sort_left_to_right cannot be nil.")
+      end
+      if @sort_as_number.nil?
+          invalid_properties.push("invalid value for 'sort_as_number', sort_as_number cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @case_sensitive.nil?
+      return false if @has_headers.nil?
+      return false if @key_list.nil?
+      return false if @sort_left_to_right.nil?
+      return false if @sort_as_number.nil?
       return true
     end
 
@@ -101,9 +130,11 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           case_sensitive == o.case_sensitive &&
-          key_list == o.key_list &&
           has_headers == o.has_headers &&
-          sort_left_to_right == o.sort_left_to_right
+          key_list == o.key_list &&
+          sort_left_to_right == o.sort_left_to_right &&
+          sort_as_number == o.sort_as_number 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -115,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [case_sensitive, key_list, has_headers, sort_left_to_right].hash
+      [ case_sensitive , has_headers , key_list , sort_left_to_right , sort_as_number ].hash
     end
 
     # Builds the object from hash

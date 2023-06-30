@@ -33,6 +33,2521 @@ module AsposeCellsCloud
       @api_client.config.api_version = app_version
       @api_client.config.host = app_host
     end
+    # Get auto filters description in worksheet.
+
+    def get_worksheet_auto_filter( get_worksheet_auto_filter_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_auto_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds date filter in worksheet.
+
+    def put_worksheet_date_filter( put_worksheet_date_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_date_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a filter for a filter column in worksheet.
+    #             
+
+    def put_worksheet_filter( put_worksheet_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds an icon filter in worksheet.
+
+    def put_worksheet_icon_filter( put_worksheet_icon_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_icon_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Filters a list with a custom criteria in worksheet.
+    #             
+
+    def put_worksheet_custom_filter( put_worksheet_custom_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_custom_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a dynamic filter in worksheet.
+
+    def put_worksheet_dynamic_filter( put_worksheet_dynamic_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_dynamic_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Filters the top 10 item in the list in worksheet
+
+    def put_worksheet_filter_top10( put_worksheet_filter_top10_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_filter_top10_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a color filter in worksheet.
+
+    def put_worksheet_color_filter( put_worksheet_color_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_color_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Match all blank cell in the list.
+
+    def post_worksheet_match_blanks( post_worksheet_match_blanks_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_match_blanks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Match all not blank cell in the list.
+    #             
+
+    def post_worksheet_match_non_blanks( post_worksheet_match_non_blanks_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_match_non_blanks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Refresh auto filters in worksheet.
+
+    def post_worksheet_auto_filter_refresh( post_worksheet_auto_filter_refresh_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_auto_filter_refresh_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Removes a date filter in worksheet.
+    #             
+
+    def delete_worksheet_date_filter( delete_worksheet_date_filter_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_date_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a filter for a filter column in worksheet.
+    #             
+
+    def delete_worksheet_filter( delete_worksheet_filter_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_worksheet_autoshapes( get_worksheet_autoshapes_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_autoshapes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_worksheet_autoshape_with_format( get_worksheet_autoshape_with_format_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_autoshape_with_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_batch_convert( post_batch_convert_request, opts = {})
+
+       data, _status_code, _headers = post_batch_convert_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_batch_protect( post_batch_protect_request, opts = {})
+
+       data, _status_code, _headers = post_batch_protect_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_batch_lock( post_batch_lock_request, opts = {})
+
+       data, _status_code, _headers = post_batch_lock_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_batch_unlock( post_batch_unlock_request, opts = {})
+
+       data, _status_code, _headers = post_batch_unlock_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_batch_split( post_batch_split_request, opts = {})
+
+       data, _status_code, _headers = post_batch_split_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Extract barcodes from worksheet picture.
+
+    def get_extract_barcodes( get_extract_barcodes_request, opts = {})
+
+       data, _status_code, _headers = get_extract_barcodes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clear cells contents in worksheet.
+
+    def post_clear_contents( post_clear_contents_request, opts = {})
+
+       data, _status_code, _headers = post_clear_contents_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clear cells formats in worksheet.
+
+    def post_clear_formats( post_clear_formats_request, opts = {})
+
+       data, _status_code, _headers = post_clear_formats_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates cell's range style in worksheet.
+
+    def post_update_worksheet_range_style( post_update_worksheet_range_style_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_range_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge cells in worksheet.
+
+    def post_worksheet_merge( post_worksheet_merge_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_merge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unmerge cells in worksheet.
+
+    def post_worksheet_unmerge( post_worksheet_unmerge_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_unmerge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets cells description in some format.
+
+    def get_worksheet_cells( get_worksheet_cells_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_cells_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets cell data by cell or method name in worksheet.
+
+    def get_worksheet_cell( get_worksheet_cell_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_cell_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets cell's style description in worksheet.
+
+    def get_worksheet_cell_style( get_worksheet_cell_style_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_cell_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets cell value by cell name in worksheet.
+
+    def post_worksheet_cell_set_value( post_worksheet_cell_set_value_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cell_set_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets cell's style by cell name in worksheet.
+
+    def post_update_worksheet_cell_style( post_update_worksheet_cell_style_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_cell_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets the value of the range in worksheet.
+
+    def post_set_cell_range_value( post_set_cell_range_value_request, opts = {})
+
+       data, _status_code, _headers = post_set_cell_range_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Copies data to destination cell from a source cell in worksheet.
+
+    def post_copy_cell_into_cell( post_copy_cell_into_cell_request, opts = {})
+
+       data, _status_code, _headers = post_copy_cell_into_cell_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets the html string which contains data and some formats in this cell.
+
+    def get_cell_html_string( get_cell_html_string_request, opts = {})
+
+       data, _status_code, _headers = get_cell_html_string_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets the html string which contains data and some formats in this cell.
+
+    def post_set_cell_html_string( post_set_cell_html_string_request, opts = {})
+
+       data, _status_code, _headers = post_set_cell_html_string_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Calculates cell formula in worksheet.
+
+    def post_cell_calculate( post_cell_calculate_request, opts = {})
+
+       data, _status_code, _headers = post_cell_calculate_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets cell characters in worksheet.
+
+    def post_cell_characters( post_cell_characters_request, opts = {})
+
+       data, _status_code, _headers = post_cell_characters_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_worksheet_columns( get_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets worksheet column width.
+
+    def post_set_worksheet_column_width( post_set_worksheet_column_width_request, opts = {})
+
+       data, _status_code, _headers = post_set_worksheet_column_width_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets worksheet column data by column's index.
+
+    def get_worksheet_column( get_worksheet_column_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_column_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Insert worksheet columns.
+
+    def put_insert_worksheet_columns( put_insert_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = put_insert_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete worksheet columns.
+
+    def delete_worksheet_columns( delete_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Hide worksheet columns.
+
+    def post_hide_worksheet_columns( post_hide_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_hide_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unhide worksheet columns.
+
+    def post_unhide_worksheet_columns( post_unhide_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_unhide_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Group worksheet columns.
+
+    def post_group_worksheet_columns( post_group_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_group_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Ungroup worksheet columns.
+
+    def post_ungroup_worksheet_columns( post_ungroup_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_ungroup_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Copy data to destination columns from source columns in worksheet.
+
+    def post_copy_worksheet_columns( post_copy_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_copy_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets column style in worksheet.
+
+    def post_column_style( post_column_style_request, opts = {})
+
+       data, _status_code, _headers = post_column_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_worksheet_rows( get_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets row data by row's index in worksheet.
+
+    def get_worksheet_row( get_worksheet_row_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_row_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes row in worksheet.
+
+    def delete_worksheet_row( delete_worksheet_row_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_row_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_worksheet_rows( delete_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def put_insert_worksheet_rows( put_insert_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = put_insert_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Inserts new row in worksheet.
+
+    def put_insert_worksheet_row( put_insert_worksheet_row_request, opts = {})
+
+       data, _status_code, _headers = put_insert_worksheet_row_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates row in worksheet.
+
+    def post_update_worksheet_row( post_update_worksheet_row_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_row_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Hide rows in worksheet.
+
+    def post_hide_worksheet_rows( post_hide_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_hide_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unhide rows in worksheet.
+
+    def post_unhide_worksheet_rows( post_unhide_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_unhide_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Group rows in worksheet.
+
+    def post_group_worksheet_rows( post_group_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_group_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Ungroup rows in worksheet.
+
+    def post_ungroup_worksheet_rows( post_ungroup_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_ungroup_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Copies data and formats of some whole rows in worksheet.
+
+    def post_copy_worksheet_rows( post_copy_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_copy_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Applies formats for a whole row in worksheet.
+    #             
+
+    def post_row_style( post_row_style_request, opts = {})
+
+       data, _status_code, _headers = post_row_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets cells description in some format.
+
+    def get_cells_cloud_services_health_check( get_cells_cloud_services_health_check_request, opts = {})
+
+       data, _status_code, _headers = get_cells_cloud_services_health_check_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Aspose.Cells Cloud service health status check(old). 
+
+    def get_cells_cloud_service_status( get_cells_cloud_service_status_request, opts = {})
+
+       data, _status_code, _headers = get_cells_cloud_service_status_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart area description in worksheet.
+
+    def get_chart_area( get_chart_area_request, opts = {})
+
+       data, _status_code, _headers = get_chart_area_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart area fill format description in worksheet.
+
+    def get_chart_area_fill_format( get_chart_area_fill_format_request, opts = {})
+
+       data, _status_code, _headers = get_chart_area_fill_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart area border description.
+
+    def get_chart_area_border( get_chart_area_border_request, opts = {})
+
+       data, _status_code, _headers = get_chart_area_border_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheet charts description.
+
+    def get_worksheet_charts( get_worksheet_charts_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_charts_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart in some format.
+
+    def get_worksheet_chart( get_worksheet_chart_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_chart_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds new chart in worksheet.
+
+    def put_worksheet_add_chart( put_worksheet_add_chart_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_add_chart_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a chart by index in worksheet.
+
+    def delete_worksheet_delete_chart( delete_worksheet_delete_chart_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_delete_chart_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update chart propreties in worksheet.
+
+    def post_worksheet_chart( post_worksheet_chart_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_chart_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart legend description in worksheet.
+
+    def get_worksheet_chart_legend( get_worksheet_chart_legend_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_chart_legend_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates chart legend in worksheet.
+
+    def post_worksheet_chart_legend( post_worksheet_chart_legend_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_chart_legend_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Show chart legend in worksheet.
+
+    def put_worksheet_chart_legend( put_worksheet_chart_legend_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_chart_legend_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Hides chart legend in worksheet.
+
+    def delete_worksheet_chart_legend( delete_worksheet_chart_legend_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_chart_legend_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clear the charts in worksheets.
+
+    def delete_worksheet_clear_charts( delete_worksheet_clear_charts_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_clear_charts_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets chart title description in worksheet.
+
+    def get_worksheet_chart_title( get_worksheet_chart_title_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_chart_title_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update chart title in worksheet.
+
+    def post_worksheet_chart_title( post_worksheet_chart_title_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_chart_title_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Add chart title / Set chart title visible
+
+    def put_worksheet_chart_title( put_worksheet_chart_title_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_chart_title_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Hides chart title in worksheet.
+
+    def delete_worksheet_chart_title( delete_worksheet_chart_title_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_chart_title_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_chart_series_axis( get_chart_series_axis_request, opts = {})
+
+       data, _status_code, _headers = get_chart_series_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_chart_category_axis( get_chart_category_axis_request, opts = {})
+
+       data, _status_code, _headers = get_chart_category_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_chart_value_axis( get_chart_value_axis_request, opts = {})
+
+       data, _status_code, _headers = get_chart_value_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_chart_second_category_axis( get_chart_second_category_axis_request, opts = {})
+
+       data, _status_code, _headers = get_chart_second_category_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_chart_second_value_axis( get_chart_second_value_axis_request, opts = {})
+
+       data, _status_code, _headers = get_chart_second_value_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_chart_series_axis( post_chart_series_axis_request, opts = {})
+
+       data, _status_code, _headers = post_chart_series_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_chart_category_axis( post_chart_category_axis_request, opts = {})
+
+       data, _status_code, _headers = post_chart_category_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_chart_value_axis( post_chart_value_axis_request, opts = {})
+
+       data, _status_code, _headers = post_chart_value_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_chart_second_category_axis( post_chart_second_category_axis_request, opts = {})
+
+       data, _status_code, _headers = post_chart_second_category_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_chart_second_value_axis( post_chart_second_value_axis_request, opts = {})
+
+       data, _status_code, _headers = post_chart_second_value_axis_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get conditional formattings description.
+
+    def get_worksheet_conditional_formattings( get_worksheet_conditional_formattings_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_conditional_formattings_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets conditional formatting description in worksheet.
+
+    def get_worksheet_conditional_formatting( get_worksheet_conditional_formatting_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_conditional_formatting_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a condition formatting in worksheet.
+
+    def put_worksheet_conditional_formatting( put_worksheet_conditional_formatting_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_conditional_formatting_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a format condition in worksheet.
+
+    def put_worksheet_format_condition( put_worksheet_format_condition_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_format_condition_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a cell area for format condition.
+
+    def put_worksheet_format_condition_area( put_worksheet_format_condition_area_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_format_condition_area_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a condition for format condition.
+
+    def put_worksheet_format_condition_condition( put_worksheet_format_condition_condition_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_format_condition_condition_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clear all condition formattings.
+
+    def delete_worksheet_conditional_formattings( delete_worksheet_conditional_formattings_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_conditional_formattings_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Remove a conditional formatting.
+
+    def delete_worksheet_conditional_formatting( delete_worksheet_conditional_formatting_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_conditional_formatting_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Removes cell area from conditional formatting.
+
+    def delete_worksheet_conditional_formatting_area( delete_worksheet_conditional_formatting_area_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_conditional_formatting_area_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Exports workbook to some format.
+
+    def get_workbook( get_workbook_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts workbook from request content to some format.
+
+    def put_convert_workbook( put_convert_workbook_request, opts = {})
+
+       data, _status_code, _headers = put_convert_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts document and saves result to storage.
+
+    def post_workbook_save_as( post_workbook_save_as_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_save_as_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_pdf( post_convert_workbook_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_png( post_convert_workbook_to_png_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_png_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_docx( post_convert_workbook_to_docx_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_docx_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_pptx( post_convert_workbook_to_pptx_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_pptx_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_html( post_convert_workbook_to_html_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_html_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_markdown( post_convert_workbook_to_markdown_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_markdown_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_json( post_convert_workbook_to_json_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_json_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_sql( post_convert_workbook_to_sql_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_sql_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_convert_workbook_to_csv( post_convert_workbook_to_csv_request, opts = {})
+
+       data, _status_code, _headers = post_convert_workbook_to_csv_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get hyperlinks description in worksheet.
+
+    def get_worksheet_hyperlinks( get_worksheet_hyperlinks_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_hyperlinks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets hyperlink description by index in worksheet.
+
+    def get_worksheet_hyperlink( get_worksheet_hyperlink_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_hyperlink_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes hyperlink by index in worksheet.
+
+    def delete_worksheet_hyperlink( delete_worksheet_hyperlink_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_hyperlink_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates hyperlink by index in worksheet.
+
+    def post_worksheet_hyperlink( post_worksheet_hyperlink_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_hyperlink_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds hyperlink in worksheet.
+
+    def put_worksheet_hyperlink( put_worksheet_hyperlink_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_hyperlink_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all hyperlinks in worksheet.
+
+    def delete_worksheet_hyperlinks( delete_worksheet_hyperlinks_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_hyperlinks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Combine data files and template files to kinds of format files. 
+
+    def post_assemble( post_assemble_request, opts = {})
+
+       data, _status_code, _headers = post_assemble_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Compress XLS, XLSX, XLSM, XLSB, ODS and more
+
+    def post_compress( post_compress_request, opts = {})
+
+       data, _status_code, _headers = post_compress_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Export excel internal elements or itself to kinds of format files.
+
+    def post_export( post_export_request, opts = {})
+
+       data, _status_code, _headers = post_export_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge cells in worksheet.
+
+    def post_merge( post_merge_request, opts = {})
+
+       data, _status_code, _headers = post_merge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unprotect password protected Excel file.
+
+    def post_unlock( post_unlock_request, opts = {})
+
+       data, _status_code, _headers = post_unlock_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Protect MS Excel and OpenDocument Spreadsheet by making them password protected.
+
+    def post_protect( post_protect_request, opts = {})
+
+       data, _status_code, _headers = post_protect_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Split Excel spreadsheet files by worksheet, save as kinds of format files.
+
+    def post_split( post_split_request, opts = {})
+
+       data, _status_code, _headers = post_split_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search specify the text from excel files.
+
+    def post_search( post_search_request, opts = {})
+
+       data, _status_code, _headers = post_search_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Use new text to replace specify the text from excel files.
+
+    def post_replace( post_replace_request, opts = {})
+
+       data, _status_code, _headers = post_replace_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Import data into excel file.
+
+    def post_import( post_import_request, opts = {})
+
+       data, _status_code, _headers = post_import_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Add Text Watermark to Excel files.
+
+    def post_watermark( post_watermark_request, opts = {})
+
+       data, _status_code, _headers = post_watermark_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clear excel internal elements for excel files
+
+    def post_clear_objects( post_clear_objects_request, opts = {})
+
+       data, _status_code, _headers = post_clear_objects_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Reverse rows or columns of Excel files, save as kinds of format files.
+
+    def post_reverse( post_reverse_request, opts = {})
+
+       data, _status_code, _headers = post_reverse_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Reverse rows or columns of Excel files, save as kinds of format files.
+
+    def post_rotate( post_rotate_request, opts = {})
+
+       data, _status_code, _headers = post_rotate_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_metadata( post_metadata_request, opts = {})
+
+       data, _status_code, _headers = post_metadata_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_metadata( get_metadata_request, opts = {})
+
+       data, _status_code, _headers = get_metadata_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_metadata( delete_metadata_request, opts = {})
+
+       data, _status_code, _headers = delete_metadata_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get listobjects description in worksheet.
+
+    def get_worksheet_list_objects( get_worksheet_list_objects_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_list_objects_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets list object description by index in worksheet.
+
+    def get_worksheet_list_object( get_worksheet_list_object_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_list_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a list object in worksheet.
+
+    def put_worksheet_list_object( put_worksheet_list_object_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_list_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete worksheet list objects in worksheet.
+
+    def delete_worksheet_list_objects( delete_worksheet_list_objects_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_list_objects_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes list object by index in worksheet.
+
+    def delete_worksheet_list_object( delete_worksheet_list_object_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_list_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates list object in worksheet.
+
+    def post_worksheet_list_object( post_worksheet_list_object_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts list object to range in worksheet.
+
+    def post_worksheet_list_object_convert_to_range( post_worksheet_list_object_convert_to_range_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_convert_to_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Creates pivot table with list object in worksheet.
+
+    def post_worksheet_list_object_summarize_with_pivot_table( post_worksheet_list_object_summarize_with_pivot_table_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_summarize_with_pivot_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sorts list object in worksheet.
+
+    def post_worksheet_list_object_sort_table( post_worksheet_list_object_sort_table_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_sort_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update list column properties.
+
+    def post_worksheet_list_column( post_worksheet_list_column_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_column_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update table total of list columns.
+
+    def post_worksheet_list_columns_total( post_worksheet_list_columns_total_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_columns_total_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get OLE objects description in worksheet.
+
+    def get_worksheet_ole_objects( get_worksheet_ole_objects_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_ole_objects_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets OLE object info or get the OLE object in some format.
+
+    def get_worksheet_ole_object( get_worksheet_ole_object_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_ole_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all OLE objects in  worksheet.
+
+    def delete_worksheet_ole_objects( delete_worksheet_ole_objects_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_ole_objects_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes an OLE object in worksheet.
+
+    def delete_worksheet_ole_object( delete_worksheet_ole_object_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_ole_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update an OLE object in worksheet.
+
+    def post_update_worksheet_ole_object( post_update_worksheet_ole_object_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_ole_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Add an OLE object in worksheet.
+
+    def put_worksheet_ole_object( put_worksheet_ole_object_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_ole_object_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get vertical page breaks description in worksheet.
+
+    def get_vertical_page_breaks( get_vertical_page_breaks_request, opts = {})
+
+       data, _status_code, _headers = get_vertical_page_breaks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get horizontal page breaks descripton in worksheet.
+
+    def get_horizontal_page_breaks( get_horizontal_page_breaks_request, opts = {})
+
+       data, _status_code, _headers = get_horizontal_page_breaks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets a vertical page break description in worksheet.
+
+    def get_vertical_page_break( get_vertical_page_break_request, opts = {})
+
+       data, _status_code, _headers = get_vertical_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets a horizontal page breaks descripton in worksheet.
+
+    def get_horizontal_page_break( get_horizontal_page_break_request, opts = {})
+
+       data, _status_code, _headers = get_horizontal_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a vertical page break in worksheet.
+
+    def put_vertical_page_break( put_vertical_page_break_request, opts = {})
+
+       data, _status_code, _headers = put_vertical_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a horizontal page breaks in worksheet.
+
+    def put_horizontal_page_break( put_horizontal_page_break_request, opts = {})
+
+       data, _status_code, _headers = put_horizontal_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete vertical page breaks in worksheet.
+
+    def delete_vertical_page_breaks( delete_vertical_page_breaks_request, opts = {})
+
+       data, _status_code, _headers = delete_vertical_page_breaks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete horizontal page breaks in worksheet.
+
+    def delete_horizontal_page_breaks( delete_horizontal_page_breaks_request, opts = {})
+
+       data, _status_code, _headers = delete_horizontal_page_breaks_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete a vertical page breaks in worksheet.
+
+    def delete_vertical_page_break( delete_vertical_page_break_request, opts = {})
+
+       data, _status_code, _headers = delete_vertical_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete a horizontal page breaks in worksheet.
+
+    def delete_horizontal_page_break( delete_horizontal_page_break_request, opts = {})
+
+       data, _status_code, _headers = delete_horizontal_page_break_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets page setup description in worksheet.
+
+    def get_page_setup( get_page_setup_request, opts = {})
+
+       data, _status_code, _headers = get_page_setup_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates page setup in worksheet.
+
+    def post_page_setup( post_page_setup_request, opts = {})
+
+       data, _status_code, _headers = post_page_setup_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Clears header footer in worksheet.
+
+    def delete_header_footer( delete_header_footer_request, opts = {})
+
+       data, _status_code, _headers = delete_header_footer_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets page header description in worksheet.
+
+    def get_header( get_header_request, opts = {})
+
+       data, _status_code, _headers = get_header_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates page header in worksheet. 
+
+    def post_header( post_header_request, opts = {})
+
+       data, _status_code, _headers = post_header_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets page footer description in worksheet.
+
+    def get_footer( get_footer_request, opts = {})
+
+       data, _status_code, _headers = get_footer_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update  page footer description in worksheet. 
+
+    def post_footer( post_footer_request, opts = {})
+
+       data, _status_code, _headers = post_footer_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get pictures description in worksheet.
+
+    def get_worksheet_pictures( get_worksheet_pictures_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_pictures_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets a picture by number in worksheet.
+
+    def get_worksheet_picture_with_format( get_worksheet_picture_with_format_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_picture_with_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a new picture in worksheet.
+
+    def put_worksheet_add_picture( put_worksheet_add_picture_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_add_picture_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates a picture by index in worksheet.
+
+    def post_worksheet_picture( post_worksheet_picture_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_picture_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a picture object in worksheet
+
+    def delete_worksheet_picture( delete_worksheet_picture_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_picture_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all pictures in worksheet.
+
+    def delete_worksheet_pictures( delete_worksheet_pictures_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_pictures_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheet pivottables description.
+
+    def get_worksheet_pivot_tables( get_worksheet_pivot_tables_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_pivot_tables_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets a pivottable info by index in worksheet.
+
+    def get_worksheet_pivot_table( get_worksheet_pivot_table_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_pivot_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets pivot field description in pivot table.
+
+    def get_pivot_table_field( get_pivot_table_field_request, opts = {})
+
+       data, _status_code, _headers = get_pivot_table_field_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets pivot table filters in worksheet.
+
+    def get_worksheet_pivot_table_filters( get_worksheet_pivot_table_filters_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_pivot_table_filters_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets pivot table filters in worksheet.
+
+    def get_worksheet_pivot_table_filter( get_worksheet_pivot_table_filter_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_pivot_table_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a pivot table in worksheet.
+
+    def put_worksheet_pivot_table( put_worksheet_pivot_table_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_pivot_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a pivot field in pivot table
+
+    def put_pivot_table_field( put_pivot_table_field_request, opts = {})
+
+       data, _status_code, _headers = put_pivot_table_field_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a pivot filter for piovt table index
+
+    def put_worksheet_pivot_table_filter( put_worksheet_pivot_table_filter_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_pivot_table_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Hides pivot field item in pivot table.
+
+    def post_pivot_table_field_hide_item( post_pivot_table_field_hide_item_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_field_hide_item_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Moves pivot field in pivot table.
+
+    def post_pivot_table_field_move_to( post_pivot_table_field_move_to_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_field_move_to_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates cell style in pivot table.
+
+    def post_pivot_table_cell_style( post_pivot_table_cell_style_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_cell_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates style in pivot table.
+
+    def post_pivot_table_style( post_pivot_table_style_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_pivot_table_update_pivot_fields( post_pivot_table_update_pivot_fields_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_update_pivot_fields_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_pivot_table_update_pivot_field( post_pivot_table_update_pivot_field_request, opts = {})
+
+       data, _status_code, _headers = post_pivot_table_update_pivot_field_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Calculates pivottable's data to cells.
+
+    def post_worksheet_pivot_table_calculate( post_worksheet_pivot_table_calculate_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_pivot_table_calculate_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Moves pivot table in worksheet.
+
+    def post_worksheet_pivot_table_move( post_worksheet_pivot_table_move_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_pivot_table_move_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete pivot tables in worksheet.
+
+    def delete_worksheet_pivot_tables( delete_worksheet_pivot_tables_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_pivot_tables_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes  pivot table by index in worksheet.
+
+    def delete_worksheet_pivot_table( delete_worksheet_pivot_table_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_pivot_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes pivot field in pivot table.
+
+    def delete_pivot_table_field( delete_pivot_table_field_request, opts = {})
+
+       data, _status_code, _headers = delete_pivot_table_field_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all pivot filters in piovt table.
+
+    def delete_worksheet_pivot_table_filters( delete_worksheet_pivot_table_filters_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_pivot_table_filters_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a pivot filter in piovt table.
+
+    def delete_worksheet_pivot_table_filter( delete_worksheet_pivot_table_filter_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_pivot_table_filter_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get document properties description.
+
+    def get_document_properties( get_document_properties_request, opts = {})
+
+       data, _status_code, _headers = get_document_properties_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets/creates a sdocument property.
+
+    def put_document_property( put_document_property_request, opts = {})
+
+       data, _status_code, _headers = put_document_property_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets document property by name.
+
+    def get_document_property( get_document_property_request, opts = {})
+
+       data, _status_code, _headers = get_document_property_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a document property.
+
+    def delete_document_property( delete_document_property_request, opts = {})
+
+       data, _status_code, _headers = delete_document_property_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all custom document properties and clean built-in ones.
+
+    def delete_document_properties( delete_document_properties_request, opts = {})
+
+       data, _status_code, _headers = delete_document_properties_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Copys content to destination range from source range in worksheet.
+
+    def post_worksheet_cells_ranges( post_worksheet_cells_ranges_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_ranges_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Combines a range of cells into a single cell. 
+
+    def post_worksheet_cells_range_merge( post_worksheet_cells_range_merge_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_merge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unmerges merged cells of this range.
+
+    def post_worksheet_cells_range_un_merge( post_worksheet_cells_range_un_merge_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_un_merge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets the style of the range.
+
+    def post_worksheet_cells_range_style( post_worksheet_cells_range_style_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get the value of cells in range.
+
+    def get_worksheet_cells_range_value( get_worksheet_cells_range_value_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_cells_range_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Puts a value into the range, if appropriate the value will be converted to other data type and cell's number format will be reset.
+    #             
+
+    def post_worksheet_cells_range_value( post_worksheet_cells_range_value_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Moves the current range to the dest range.
+    #             
+
+    def post_worksheet_cells_range_move_to( post_worksheet_cells_range_move_to_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_move_to_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets outline border around a range of cells.
+
+    def post_worksheet_cells_range_outline_border( post_worksheet_cells_range_outline_border_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_outline_border_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets column width of range.
+
+    def post_worksheet_cells_range_column_width( post_worksheet_cells_range_column_width_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_column_width_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets row height of range.
+
+    def post_worksheet_cells_range_row_height( post_worksheet_cells_range_row_height_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_row_height_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Inserts a range of cells and shift cells according to the shift option.
+    #             
+
+    def put_worksheet_cells_range( put_worksheet_cells_range_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_cells_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a range of cells and shift cells according to the shift option.
+
+    def delete_worksheet_cells_range( delete_worksheet_cells_range_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_cells_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get shapes description in worksheet.
+
+    def get_worksheet_shapes( get_worksheet_shapes_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_shapes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets shape description in worksheet.
+
+    def get_worksheet_shape( get_worksheet_shape_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds shape in worksheet.
+
+    def put_worksheet_shape( put_worksheet_shape_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # delete all shapes in worksheet.
+
+    def delete_worksheet_shapes( delete_worksheet_shapes_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_shapes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a shape in worksheet.
+
+    def delete_worksheet_shape( delete_worksheet_shape_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates a shape in worksheet.
+
+    def post_worksheet_shape( post_worksheet_shape_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_worksheet_group_shape( post_worksheet_group_shape_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_group_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_worksheet_ungroup_shape( post_worksheet_ungroup_shape_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_ungroup_shape_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheet sparkline groups description.
+
+    def get_worksheet_sparkline_groups( get_worksheet_sparkline_groups_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_sparkline_groups_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheet sparkline group description.
+
+    def get_worksheet_sparkline_group( get_worksheet_sparkline_group_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_sparkline_group_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete worksheet sparkline groups description.
+
+    def delete_worksheet_sparkline_groups( delete_worksheet_sparkline_groups_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_sparkline_groups_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete worksheet sparkline group description.
+
+    def delete_worksheet_sparkline_group( delete_worksheet_sparkline_group_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_sparkline_group_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Put worksheet sparkline group description.
+
+    def put_worksheet_sparkline_group( put_worksheet_sparkline_group_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_sparkline_group_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Post worksheet sparkline group description.
+
+    def post_worksheet_sparkline_group( post_worksheet_sparkline_group_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_sparkline_group_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Run tasks.
+
+    def post_run_task( post_run_task_request, opts = {})
+
+       data, _status_code, _headers = post_run_task_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Digital Signature.
+
+    def post_digital_signature( post_digital_signature_request, opts = {})
+
+       data, _status_code, _headers = post_digital_signature_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Encripts workbook.
+
+    def post_encrypt_workbook( post_encrypt_workbook_request, opts = {})
+
+       data, _status_code, _headers = post_encrypt_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Decrypts workbook.
+
+    def delete_decrypt_workbook( delete_decrypt_workbook_request, opts = {})
+
+       data, _status_code, _headers = delete_decrypt_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Protects workbook.
+
+    def post_protect_workbook( post_protect_workbook_request, opts = {})
+
+       data, _status_code, _headers = post_protect_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unprotects workbook.
+
+    def delete_un_protect_workbook( delete_un_protect_workbook_request, opts = {})
+
+       data, _status_code, _headers = delete_un_protect_workbook_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets workbook default style description.
+
+    def get_workbook_default_style( get_workbook_default_style_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_default_style_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get workbook's text items.
+
+    def get_workbook_text_items( get_workbook_text_items_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_text_items_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get workbook's names.
+
+    def get_workbook_names( get_workbook_names_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_names_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Defines a new name in workbook.
+
+    def put_workbook_name( put_workbook_name_request, opts = {})
+
+       data, _status_code, _headers = put_workbook_name_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets workbook's name description.
+
+    def get_workbook_name( get_workbook_name_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_name_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update workbook's name. 
+
+    def post_workbook_name( post_workbook_name_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_name_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets workbook's name value.
+
+    def get_workbook_name_value( get_workbook_name_value_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_name_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete workbook's names.
+
+    def delete_workbook_names( delete_workbook_names_request, opts = {})
+
+       data, _status_code, _headers = delete_workbook_names_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets workbook's name description.
+
+    def delete_workbook_name( delete_workbook_name_request, opts = {})
+
+       data, _status_code, _headers = delete_workbook_name_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Protects document from changes.
+
+    def put_document_protect_from_changes( put_document_protect_from_changes_request, opts = {})
+
+       data, _status_code, _headers = put_document_protect_from_changes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unprotects document from changes.
+
+    def delete_document_un_protect_from_changes( delete_document_un_protect_from_changes_request, opts = {})
+
+       data, _status_code, _headers = delete_document_un_protect_from_changes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge workbooks.
+
+    def post_workbooks_merge( post_workbooks_merge_request, opts = {})
+
+       data, _status_code, _headers = post_workbooks_merge_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search text in workbook.
+
+    def post_workbooks_text_search( post_workbooks_text_search_request, opts = {})
+
+       data, _status_code, _headers = post_workbooks_text_search_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replaces text in workbook.
+
+    def post_workbook_text_replace( post_workbook_text_replace_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_text_replace_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Smart marker processing result.
+
+    def post_workbook_get_smart_marker_result( post_workbook_get_smart_marker_result_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_get_smart_marker_result_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Creates new workbook using deferent methods.
+
+    def put_workbook_create( put_workbook_create_request, opts = {})
+
+       data, _status_code, _headers = put_workbook_create_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Splits workbook.
+
+    def post_workbook_split( post_workbook_split_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_split_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Imports data into workbook.
+
+    def post_import_data( post_import_data_request, opts = {})
+
+       data, _status_code, _headers = post_import_data_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Calculate all formulas in workbook.
+
+    def post_workbook_calculate_formula( post_workbook_calculate_formula_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_calculate_formula_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Autofit workbook rows.
+
+    def post_autofit_workbook_rows( post_autofit_workbook_rows_request, opts = {})
+
+       data, _status_code, _headers = post_autofit_workbook_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_autofit_workbook_columns( post_autofit_workbook_columns_request, opts = {})
+
+       data, _status_code, _headers = post_autofit_workbook_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets workbook settings description.
+
+    def get_workbook_settings( get_workbook_settings_request, opts = {})
+
+       data, _status_code, _headers = get_workbook_settings_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates workbook setting.
+
+    def post_workbook_settings( post_workbook_settings_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_settings_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Set workbook background.
+
+    def put_workbook_background( put_workbook_background_request, opts = {})
+
+       data, _status_code, _headers = put_workbook_background_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete workbook background.
+
+    def delete_workbook_background( delete_workbook_background_request, opts = {})
+
+       data, _status_code, _headers = delete_workbook_background_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Set workbook water marker.
+
+    def put_workbook_water_marker( put_workbook_water_marker_request, opts = {})
+
+       data, _status_code, _headers = put_workbook_water_marker_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_page_count( get_page_count_request, opts = {})
+
+       data, _status_code, _headers = get_page_count_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheets description.
+
+    def get_worksheets( get_worksheets_request, opts = {})
+
+       data, _status_code, _headers = get_worksheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets worksheet in some format.
+
+    def get_worksheet_with_format( get_worksheet_with_format_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_with_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Changes worksheet visibility.
+
+    def put_change_visibility_worksheet( put_change_visibility_worksheet_request, opts = {})
+
+       data, _status_code, _headers = put_change_visibility_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Active sheet
+
+    def put_active_worksheet( put_active_worksheet_request, opts = {})
+
+       data, _status_code, _headers = put_active_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Inserts new worksheet in workbook.
+
+    def put_insert_new_worksheet( put_insert_new_worksheet_request, opts = {})
+
+       data, _status_code, _headers = put_insert_new_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds new worksheet in workbook.
+
+    def put_add_new_worksheet( put_add_new_worksheet_request, opts = {})
+
+       data, _status_code, _headers = put_add_new_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a worksheet in workbook.
+
+    def delete_worksheet( delete_worksheet_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_worksheets( delete_worksheets_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Move worksheet in workbook.
+
+    def post_move_worksheet( post_move_worksheet_request, opts = {})
+
+       data, _status_code, _headers = post_move_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Protects worksheet.
+
+    def put_protect_worksheet( put_protect_worksheet_request, opts = {})
+
+       data, _status_code, _headers = put_protect_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unprotects worksheet.
+
+    def delete_unprotect_worksheet( delete_unprotect_worksheet_request, opts = {})
+
+       data, _status_code, _headers = delete_unprotect_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get text items in worksheet.
+
+    def get_worksheet_text_items( get_worksheet_text_items_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_text_items_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get comments description in worksheet.
+
+    def get_worksheet_comments( get_worksheet_comments_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_comments_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets comment by cell name in worksheet.
+
+    def get_worksheet_comment( get_worksheet_comment_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_comment_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds cell comment in worksheet.
+
+    def put_worksheet_comment( put_worksheet_comment_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_comment_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates cell comment in worksheet.
+
+    def post_worksheet_comment( post_worksheet_comment_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_comment_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes cell comment in worksheet.
+
+    def delete_worksheet_comment( delete_worksheet_comment_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_comment_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all comments in worksheet.
+
+    def delete_worksheet_comments( delete_worksheet_comments_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_comments_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheet merged cells.
+
+    def get_worksheet_merged_cells( get_worksheet_merged_cells_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_merged_cells_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets merged cell description by its index in worksheet.
+
+    def get_worksheet_merged_cell( get_worksheet_merged_cell_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_merged_cell_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Calculates formula value in worksheet.
+
+    def get_worksheet_calculate_formula( get_worksheet_calculate_formula_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_calculate_formula_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Calculates formula value in worksheet.
+
+    def post_worksheet_calculate_formula( post_worksheet_calculate_formula_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_calculate_formula_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Searchs text in worksheet.
+
+    def post_worksheet_text_search( post_worksheet_text_search_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_text_search_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replaces text in worksheet.
+
+    def post_worsheet_text_replace( post_worsheet_text_replace_request, opts = {})
+
+       data, _status_code, _headers = post_worsheet_text_replace_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sorts range in worksheet.
+
+    def post_worksheet_range_sort( post_worksheet_range_sort_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_range_sort_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Autofits row in worksheet.
+
+    def post_autofit_worksheet_row( post_autofit_worksheet_row_request, opts = {})
+
+       data, _status_code, _headers = post_autofit_worksheet_row_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Autofit rows in worksheet.
+
+    def post_autofit_worksheet_rows( post_autofit_worksheet_rows_request, opts = {})
+
+       data, _status_code, _headers = post_autofit_worksheet_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_autofit_worksheet_columns( post_autofit_worksheet_columns_request, opts = {})
+
+       data, _status_code, _headers = post_autofit_worksheet_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets background image in worksheet.
+
+    def put_worksheet_background( put_worksheet_background_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_background_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete background image in worksheet.
+
+    def delete_worksheet_background( delete_worksheet_background_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_background_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets freeze panes in worksheet.
+
+    def put_worksheet_freeze_panes( put_worksheet_freeze_panes_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_freeze_panes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Unfreezes panes in worksheet.
+
+    def delete_worksheet_freeze_panes( delete_worksheet_freeze_panes_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_freeze_panes_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Copies contents and formats from another worksheet.
+
+    def post_copy_worksheet( post_copy_worksheet_request, opts = {})
+
+       data, _status_code, _headers = post_copy_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Rename worksheet.
+
+    def post_rename_worksheet( post_rename_worksheet_request, opts = {})
+
+       data, _status_code, _headers = post_rename_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Update worksheet properties.
+
+    def post_update_worksheet_property( post_update_worksheet_property_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_property_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get worksheets ranges description.
+
+    def get_named_ranges( get_named_ranges_request, opts = {})
+
+       data, _status_code, _headers = get_named_ranges_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get range values.
+
+    def get_named_range_value( get_named_range_value_request, opts = {})
+
+       data, _status_code, _headers = get_named_range_value_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates worksheet zoom.
+
+    def post_update_worksheet_zoom( post_update_worksheet_zoom_request, opts = {})
+
+       data, _status_code, _headers = post_update_worksheet_zoom_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_worksheet_page_count( get_worksheet_page_count_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_page_count_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get validations description in worksheet.
+
+    def get_worksheet_validations( get_worksheet_validations_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_validations_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Gets a validation by index in worksheet.
+
+    def get_worksheet_validation( get_worksheet_validation_request, opts = {})
+
+       data, _status_code, _headers = get_worksheet_validation_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Adds a validation at index in worksheet.
+
+    def put_worksheet_validation( put_worksheet_validation_request, opts = {})
+
+       data, _status_code, _headers = put_worksheet_validation_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Updates a validation by index in worksheet.
+
+    def post_worksheet_validation( post_worksheet_validation_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_validation_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes a validation by index in worksheet.
+
+    def delete_worksheet_validation( delete_worksheet_validation_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_validation_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all validations in worksheet.
+
+    def delete_worksheet_validations( delete_worksheet_validations_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_validations_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Export XML data from Excel file. 
+    # When there are Xml Maps in Excel file, export xml data. 
+    # When there is not xml map in Excel file, convert Excel file to xml file. 
+
+    def post_workbook_export_xml( post_workbook_export_xml_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_export_xml_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Imports/Updates an XML data file into the workbook.
+    # The XML data file can be a cloud file or HTTP URI data.
+
+    def post_workbook_import_xml( post_workbook_import_xml_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_import_xml_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def download_file( download_file_request, opts = {})
+
+       data, _status_code, _headers = download_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def upload_file( upload_file_request, opts = {})
+
+       data, _status_code, _headers = upload_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def copy_file( copy_file_request, opts = {})
+
+       data, _status_code, _headers = copy_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def move_file( move_file_request, opts = {})
+
+       data, _status_code, _headers = move_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_file( delete_file_request, opts = {})
+
+       data, _status_code, _headers = delete_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_files_list( get_files_list_request, opts = {})
+
+       data, _status_code, _headers = get_files_list_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def create_folder( create_folder_request, opts = {})
+
+       data, _status_code, _headers = create_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def copy_folder( copy_folder_request, opts = {})
+
+       data, _status_code, _headers = copy_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def move_folder( move_folder_request, opts = {})
+
+       data, _status_code, _headers = move_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_folder( delete_folder_request, opts = {})
+
+       data, _status_code, _headers = delete_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def storage_exists( storage_exists_request, opts = {})
+
+       data, _status_code, _headers = storage_exists_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def object_exists( object_exists_request, opts = {})
+
+       data, _status_code, _headers = object_exists_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_disc_usage( get_disc_usage_request, opts = {})
+
+       data, _status_code, _headers = get_disc_usage_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_file_versions( get_file_versions_request, opts = {})
+
+       data, _status_code, _headers = get_file_versions_request.create_http_request(@api_client,opts )
+       return data
+    end
 
     # Removes a date filter.             
     # 
@@ -51,6 +2566,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_delete_worksheet_date_filter(name, sheet_name, field_index, date_time_grouping_type, opts = {})
+      warn "Warning: #cells_auto_filter_delete_worksheet_date_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_delete_worksheet_date_filter_with_http_info(name, sheet_name, field_index, date_time_grouping_type, opts)
       return data
     end
@@ -72,6 +2588,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_delete_worksheet_date_filter_with_http_info(name, sheet_name, field_index, date_time_grouping_type, opts = {})
+      warn "Warning: #cells_auto_filter_delete_worksheet_date_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_delete_worksheet_date_filter ..."
       end
@@ -146,6 +2663,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_delete_worksheet_filter(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_delete_worksheet_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_delete_worksheet_filter_with_http_info(name, sheet_name, field_index, opts)
       return data
     end
@@ -161,6 +2679,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_delete_worksheet_filter_with_http_info(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_delete_worksheet_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_delete_worksheet_filter ..."
       end
@@ -223,6 +2742,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [AutoFilterResponse]
     def cells_auto_filter_get_worksheet_auto_filter(name, sheet_name, opts = {})
+      warn "Warning: #cells_auto_filter_get_worksheet_auto_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_get_worksheet_auto_filter_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -236,6 +2756,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(AutoFilterResponse, Fixnum, Hash)>] AutoFilterResponse data, response status code and response headers
     def cells_auto_filter_get_worksheet_auto_filter_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_auto_filter_get_worksheet_auto_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_get_worksheet_auto_filter ..."
       end
@@ -292,6 +2813,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_auto_filter_refresh(name, sheet_name, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_auto_filter_refresh() is deprecated."
       data, _status_code, _headers = cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -305,6 +2827,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_auto_filter_refresh_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_post_worksheet_auto_filter_refresh ..."
       end
@@ -362,6 +2885,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_match_blanks(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_match_blanks() is deprecated."
       data, _status_code, _headers = cells_auto_filter_post_worksheet_match_blanks_with_http_info(name, sheet_name, field_index, opts)
       return data
     end
@@ -376,6 +2900,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_match_blanks_with_http_info(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_match_blanks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_post_worksheet_match_blanks ..."
       end
@@ -438,6 +2963,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_post_worksheet_match_non_blanks(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_match_non_blanks() is deprecated."
       data, _status_code, _headers = cells_auto_filter_post_worksheet_match_non_blanks_with_http_info(name, sheet_name, field_index, opts)
       return data
     end
@@ -452,6 +2978,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_post_worksheet_match_non_blanks_with_http_info(name, sheet_name, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_post_worksheet_match_non_blanks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_post_worksheet_match_non_blanks ..."
       end
@@ -518,6 +3045,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_color_filter(name, sheet_name, range, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_color_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_color_filter_with_http_info(name, sheet_name, range, field_index, opts)
       return data
     end
@@ -536,6 +3064,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_color_filter_with_http_info(name, sheet_name, range, field_index, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_color_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_color_filter ..."
       end
@@ -613,6 +3142,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_custom_filter(name, sheet_name, range, field_index, operator_type1, criteria1, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_custom_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_custom_filter_with_http_info(name, sheet_name, range, field_index, operator_type1, criteria1, opts)
       return data
     end
@@ -635,6 +3165,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_custom_filter_with_http_info(name, sheet_name, range, field_index, operator_type1, criteria1, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_custom_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_custom_filter ..."
       end
@@ -727,6 +3258,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_date_filter(name, sheet_name, range, field_index, date_time_grouping_type, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_date_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_date_filter_with_http_info(name, sheet_name, range, field_index, date_time_grouping_type, opts)
       return data
     end
@@ -751,6 +3283,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_date_filter_with_http_info(name, sheet_name, range, field_index, date_time_grouping_type, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_date_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_date_filter ..."
       end
@@ -835,6 +3368,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_dynamic_filter(name, sheet_name, range, field_index, dynamic_filter_type, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_dynamic_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_dynamic_filter_with_http_info(name, sheet_name, range, field_index, dynamic_filter_type, opts)
       return data
     end
@@ -853,6 +3387,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_dynamic_filter_with_http_info(name, sheet_name, range, field_index, dynamic_filter_type, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_dynamic_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_dynamic_filter ..."
       end
@@ -931,6 +3466,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_filter(name, sheet_name, range, field_index, criteria, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_filter_with_http_info(name, sheet_name, range, field_index, criteria, opts)
       return data
     end
@@ -949,6 +3485,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_filter_with_http_info(name, sheet_name, range, field_index, criteria, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_filter ..."
       end
@@ -1029,6 +3566,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_filter_top10(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_filter_top10() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_filter_top10_with_http_info(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts)
       return data
     end
@@ -1049,6 +3587,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_filter_top10_with_http_info(name, sheet_name, range, field_index, is_top, is_percent, item_count, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_filter_top10_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_filter_top10 ..."
       end
@@ -1138,6 +3677,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_auto_filter_put_worksheet_icon_filter(name, sheet_name, range, field_index, icon_set_type, icon_id, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_icon_filter() is deprecated."
       data, _status_code, _headers = cells_auto_filter_put_worksheet_icon_filter_with_http_info(name, sheet_name, range, field_index, icon_set_type, icon_id, opts)
       return data
     end
@@ -1157,6 +3697,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_auto_filter_put_worksheet_icon_filter_with_http_info(name, sheet_name, range, field_index, icon_set_type, icon_id, opts = {})
+      warn "Warning: #cells_auto_filter_put_worksheet_icon_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_auto_filter_put_worksheet_icon_filter ..."
       end
@@ -1237,6 +3778,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_autoshapes_get_worksheet_autoshape(name, sheet_name, autoshape_number, opts = {})
+      warn "Warning: #cells_autoshapes_get_worksheet_autoshape() is deprecated."
       data, _status_code, _headers = cells_autoshapes_get_worksheet_autoshape_with_http_info(name, sheet_name, autoshape_number, opts)
       return data
     end
@@ -1252,6 +3794,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_autoshapes_get_worksheet_autoshape_with_http_info(name, sheet_name, autoshape_number, opts = {})
+      warn "Warning: #cells_autoshapes_get_worksheet_autoshape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_autoshapes_get_worksheet_autoshape ..."
       end
@@ -1313,6 +3856,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [AutoShapesResponse]
     def cells_autoshapes_get_worksheet_autoshapes(name, sheet_name, opts = {})
+      warn "Warning: #cells_autoshapes_get_worksheet_autoshapes() is deprecated."
       data, _status_code, _headers = cells_autoshapes_get_worksheet_autoshapes_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -1326,6 +3870,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(AutoShapesResponse, Fixnum, Hash)>] AutoShapesResponse data, response status code and response headers
     def cells_autoshapes_get_worksheet_autoshapes_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_autoshapes_get_worksheet_autoshapes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_autoshapes_get_worksheet_autoshapes ..."
       end
@@ -1383,6 +3928,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ChartAreaResponse]
     def cells_chart_area_get_chart_area(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area() is deprecated."
       data, _status_code, _headers = cells_chart_area_get_chart_area_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1397,6 +3943,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartAreaResponse, Fixnum, Hash)>] ChartAreaResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_chart_area_get_chart_area ..."
       end
@@ -1458,6 +4005,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [LineResponse]
     def cells_chart_area_get_chart_area_border(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area_border() is deprecated."
       data, _status_code, _headers = cells_chart_area_get_chart_area_border_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1472,6 +4020,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(LineResponse, Fixnum, Hash)>] LineResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_border_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area_border_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_chart_area_get_chart_area_border ..."
       end
@@ -1533,6 +4082,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [FillFormatResponse]
     def cells_chart_area_get_chart_area_fill_format(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area_fill_format() is deprecated."
       data, _status_code, _headers = cells_chart_area_get_chart_area_fill_format_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1547,6 +4097,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(FillFormatResponse, Fixnum, Hash)>] FillFormatResponse data, response status code and response headers
     def cells_chart_area_get_chart_area_fill_format_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_chart_area_get_chart_area_fill_format_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_chart_area_get_chart_area_fill_format ..."
       end
@@ -1608,6 +4159,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_chart_legend() is deprecated."
       data, _status_code, _headers = cells_charts_delete_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1622,6 +4174,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_chart_legend_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_delete_worksheet_chart_legend ..."
       end
@@ -1683,6 +4236,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_chart_title() is deprecated."
       data, _status_code, _headers = cells_charts_delete_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1697,6 +4251,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_chart_title_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_delete_worksheet_chart_title ..."
       end
@@ -1757,6 +4312,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_clear_charts(name, sheet_name, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_clear_charts() is deprecated."
       data, _status_code, _headers = cells_charts_delete_worksheet_clear_charts_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -1770,6 +4326,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_clear_charts_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_clear_charts_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_delete_worksheet_clear_charts ..."
       end
@@ -1827,6 +4384,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_delete_worksheet_delete_chart(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_delete_chart() is deprecated."
       data, _status_code, _headers = cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1841,6 +4399,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_delete_worksheet_delete_chart_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_delete_worksheet_delete_chart_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_delete_worksheet_delete_chart ..."
       end
@@ -1901,6 +4460,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [AxisResponse]
     def cells_charts_get_chart_category_axis(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_category_axis() is deprecated."
       data, _status_code, _headers = cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1915,6 +4475,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
     def cells_charts_get_chart_category_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_category_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_category_axis ..."
       end
@@ -1976,6 +4537,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [AxisResponse]
     def cells_charts_get_chart_second_category_axis(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_second_category_axis() is deprecated."
       data, _status_code, _headers = cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -1990,6 +4552,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
     def cells_charts_get_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_second_category_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_second_category_axis ..."
       end
@@ -2051,6 +4614,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [AxisResponse]
     def cells_charts_get_chart_second_value_axis(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_second_value_axis() is deprecated."
       data, _status_code, _headers = cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2065,6 +4629,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
     def cells_charts_get_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_second_value_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_second_value_axis ..."
       end
@@ -2126,6 +4691,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [AxisResponse]
     def cells_charts_get_chart_series_axis(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_series_axis() is deprecated."
       data, _status_code, _headers = cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2140,6 +4706,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
     def cells_charts_get_chart_series_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_series_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_series_axis ..."
       end
@@ -2201,6 +4768,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [AxisResponse]
     def cells_charts_get_chart_value_axis(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_value_axis() is deprecated."
       data, _status_code, _headers = cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2215,6 +4783,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(AxisResponse, Fixnum, Hash)>] AxisResponse data, response status code and response headers
     def cells_charts_get_chart_value_axis_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_chart_value_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_chart_value_axis ..."
       end
@@ -2277,6 +4846,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_charts_get_worksheet_chart(name, sheet_name, chart_number, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart() is deprecated."
       data, _status_code, _headers = cells_charts_get_worksheet_chart_with_http_info(name, sheet_name, chart_number, opts)
       return data
     end
@@ -2292,6 +4862,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_charts_get_worksheet_chart_with_http_info(name, sheet_name, chart_number, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_worksheet_chart ..."
       end
@@ -2354,6 +4925,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [LegendResponse]
     def cells_charts_get_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart_legend() is deprecated."
       data, _status_code, _headers = cells_charts_get_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2368,6 +4940,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(LegendResponse, Fixnum, Hash)>] LegendResponse data, response status code and response headers
     def cells_charts_get_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart_legend_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_worksheet_chart_legend ..."
       end
@@ -2429,6 +5002,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [TitleResponse]
     def cells_charts_get_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart_title() is deprecated."
       data, _status_code, _headers = cells_charts_get_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2443,6 +5017,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(TitleResponse, Fixnum, Hash)>] TitleResponse data, response status code and response headers
     def cells_charts_get_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_chart_title_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_worksheet_chart_title ..."
       end
@@ -2503,6 +5078,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ChartsResponse]
     def cells_charts_get_worksheet_charts(name, sheet_name, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_charts() is deprecated."
       data, _status_code, _headers = cells_charts_get_worksheet_charts_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -2516,6 +5092,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ChartsResponse, Fixnum, Hash)>] ChartsResponse data, response status code and response headers
     def cells_charts_get_worksheet_charts_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_charts_get_worksheet_charts_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_get_worksheet_charts ..."
       end
@@ -2573,6 +5150,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_charts_post_chart_category_axis(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_category_axis() is deprecated."
       data, _status_code, _headers = cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
       return data
     end
@@ -2588,6 +5166,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_chart_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_category_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_category_axis ..."
       end
@@ -2654,6 +5233,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_charts_post_chart_second_category_axis(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_second_category_axis() is deprecated."
       data, _status_code, _headers = cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
       return data
     end
@@ -2669,6 +5249,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_chart_second_category_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_second_category_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_second_category_axis ..."
       end
@@ -2735,6 +5316,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_charts_post_chart_second_value_axis(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_second_value_axis() is deprecated."
       data, _status_code, _headers = cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
       return data
     end
@@ -2750,6 +5332,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_chart_second_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_second_value_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_second_value_axis ..."
       end
@@ -2816,6 +5399,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_charts_post_chart_series_axis(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_series_axis() is deprecated."
       data, _status_code, _headers = cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
       return data
     end
@@ -2831,6 +5415,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_chart_series_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_series_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_series_axis ..."
       end
@@ -2897,6 +5482,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_charts_post_chart_value_axis(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_value_axis() is deprecated."
       data, _status_code, _headers = cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts)
       return data
     end
@@ -2912,6 +5498,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_chart_value_axis_with_http_info(name, sheet_name, chart_index, axis, opts = {})
+      warn "Warning: #cells_charts_post_chart_value_axis_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_chart_value_axis ..."
       end
@@ -2978,6 +5565,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart() is deprecated."
       data, _status_code, _headers = cells_charts_post_worksheet_chart_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -2993,6 +5581,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_worksheet_chart ..."
       end
@@ -3055,6 +5644,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart_legend() is deprecated."
       data, _status_code, _headers = cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -3070,6 +5660,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart_legend_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_worksheet_chart_legend ..."
       end
@@ -3132,6 +5723,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_post_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart_title() is deprecated."
       data, _status_code, _headers = cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -3147,6 +5739,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_post_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_post_worksheet_chart_title_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_post_worksheet_chart_title ..."
       end
@@ -3221,6 +5814,7 @@ module AsposeCellsCloud
     # @option opts [String] :pivot_table_name 
     # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_add_chart(name, sheet_name, chart_type, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_add_chart() is deprecated."
       data, _status_code, _headers = cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts)
       return data
     end
@@ -3248,6 +5842,7 @@ module AsposeCellsCloud
     # @option opts [String] :pivot_table_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_add_chart_with_http_info(name, sheet_name, chart_type, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_add_chart_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_put_worksheet_add_chart ..."
       end
@@ -3323,6 +5918,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_chart_legend(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_chart_legend() is deprecated."
       data, _status_code, _headers = cells_charts_put_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -3337,6 +5933,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_chart_legend_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_chart_legend_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_put_worksheet_chart_legend ..."
       end
@@ -3399,6 +5996,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_charts_put_worksheet_chart_title(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_chart_title() is deprecated."
       data, _status_code, _headers = cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts)
       return data
     end
@@ -3414,6 +6012,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_charts_put_worksheet_chart_title_with_http_info(name, sheet_name, chart_index, opts = {})
+      warn "Warning: #cells_charts_put_worksheet_chart_title_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_charts_put_worksheet_chart_title ..."
       end
@@ -3475,6 +6074,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formatting(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formatting() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -3489,6 +6089,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formatting_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_delete_worksheet_conditional_formatting ..."
       end
@@ -3553,6 +6154,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_area(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formatting_area() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
       return data
     end
@@ -3570,6 +6172,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formatting_area_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_delete_worksheet_conditional_formatting_area ..."
       end
@@ -3646,6 +6249,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_delete_worksheet_conditional_formattings(name, sheet_name, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formattings() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -3659,6 +6263,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_conditional_formattings_delete_worksheet_conditional_formattings_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_delete_worksheet_conditional_formattings ..."
       end
@@ -3716,6 +6321,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ConditionalFormattingResponse]
     def cells_conditional_formattings_get_worksheet_conditional_formatting(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_conditional_formattings_get_worksheet_conditional_formatting() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -3730,6 +6336,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ConditionalFormattingResponse, Fixnum, Hash)>] ConditionalFormattingResponse data, response status code and response headers
     def cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_conditional_formattings_get_worksheet_conditional_formatting_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_get_worksheet_conditional_formatting ..."
       end
@@ -3790,6 +6397,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ConditionalFormattingsResponse]
     def cells_conditional_formattings_get_worksheet_conditional_formattings(name, sheet_name, opts = {})
+      warn "Warning: #cells_conditional_formattings_get_worksheet_conditional_formattings() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -3803,6 +6411,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ConditionalFormattingsResponse, Fixnum, Hash)>] ConditionalFormattingsResponse data, response status code and response headers
     def cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_conditional_formattings_get_worksheet_conditional_formattings_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_get_worksheet_conditional_formattings ..."
       end
@@ -3861,6 +6470,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_conditional_formatting(name, sheet_name, cell_area, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_conditional_formatting() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info(name, sheet_name, cell_area, opts)
       return data
     end
@@ -3876,6 +6486,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info(name, sheet_name, cell_area, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_conditional_formatting_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_put_worksheet_conditional_formatting ..."
       end
@@ -3943,6 +6554,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_with_http_info(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts)
       return data
     end
@@ -3962,6 +6574,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_with_http_info(name, sheet_name, index, cell_area, type, operator_type, formula1, formula2, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_put_worksheet_format_condition ..."
       end
@@ -4049,6 +6662,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition_area(name, sheet_name, index, cell_area, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition_area() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info(name, sheet_name, index, cell_area, opts)
       return data
     end
@@ -4064,6 +6678,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info(name, sheet_name, index, cell_area, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition_area_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_put_worksheet_format_condition_area ..."
       end
@@ -4134,6 +6749,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_conditional_formattings_put_worksheet_format_condition_condition(name, sheet_name, index, type, operator_type, formula1, formula2, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition_condition() is deprecated."
       data, _status_code, _headers = cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info(name, sheet_name, index, type, operator_type, formula1, formula2, opts)
       return data
     end
@@ -4152,6 +6768,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info(name, sheet_name, index, type, operator_type, formula1, formula2, opts = {})
+      warn "Warning: #cells_conditional_formattings_put_worksheet_format_condition_condition_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_conditional_formattings_put_worksheet_format_condition_condition ..."
       end
@@ -4235,6 +6852,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_delete_worksheet_columns(name, sheet_name, column_index, columns, update_reference, opts = {})
+      warn "Warning: #cells_delete_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_delete_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, update_reference, opts)
       return data
     end
@@ -4251,6 +6869,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_delete_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, update_reference, opts = {})
+      warn "Warning: #cells_delete_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_delete_worksheet_columns ..."
       end
@@ -4322,6 +6941,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_delete_worksheet_row(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_delete_worksheet_row() is deprecated."
       data, _status_code, _headers = cells_delete_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
       return data
     end
@@ -4336,6 +6956,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_delete_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_delete_worksheet_row_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_delete_worksheet_row ..."
       end
@@ -4399,6 +7020,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_delete_worksheet_rows(name, sheet_name, startrow, opts = {})
+      warn "Warning: #cells_delete_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_delete_worksheet_rows_with_http_info(name, sheet_name, startrow, opts)
       return data
     end
@@ -4415,6 +7037,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_delete_worksheet_rows_with_http_info(name, sheet_name, startrow, opts = {})
+      warn "Warning: #cells_delete_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_delete_worksheet_rows ..."
       end
@@ -4479,6 +7102,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_get_cell_html_string(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_get_cell_html_string() is deprecated."
       data, _status_code, _headers = cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -4493,6 +7117,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_get_cell_html_string_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_get_cell_html_string_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_cell_html_string ..."
       end
@@ -4554,6 +7179,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_get_worksheet_cell(name, sheet_name, cell_or_method_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cell() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_cell_with_http_info(name, sheet_name, cell_or_method_name, opts)
       return data
     end
@@ -4568,6 +7194,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_get_worksheet_cell_with_http_info(name, sheet_name, cell_or_method_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cell_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_cell ..."
       end
@@ -4629,6 +7256,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_get_worksheet_cell_style(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cell_style() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -4643,6 +7271,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_get_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cell_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_cell_style ..."
       end
@@ -4705,6 +7334,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsResponse]
     def cells_get_worksheet_cells(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cells() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_cells_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -4720,6 +7350,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsResponse, Fixnum, Hash)>] CellsResponse data, response status code and response headers
     def cells_get_worksheet_cells_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_cells_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_cells ..."
       end
@@ -4779,6 +7410,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ColumnResponse]
     def cells_get_worksheet_column(name, sheet_name, column_index, opts = {})
+      warn "Warning: #cells_get_worksheet_column() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_column_with_http_info(name, sheet_name, column_index, opts)
       return data
     end
@@ -4793,6 +7425,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnResponse, Fixnum, Hash)>] ColumnResponse data, response status code and response headers
     def cells_get_worksheet_column_with_http_info(name, sheet_name, column_index, opts = {})
+      warn "Warning: #cells_get_worksheet_column_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_column ..."
       end
@@ -4853,6 +7486,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ColumnsResponse]
     def cells_get_worksheet_columns(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_columns_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -4866,6 +7500,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ColumnsResponse, Fixnum, Hash)>] ColumnsResponse data, response status code and response headers
     def cells_get_worksheet_columns_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_columns ..."
       end
@@ -4923,6 +7558,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [RowResponse]
     def cells_get_worksheet_row(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_get_worksheet_row() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
       return data
     end
@@ -4937,6 +7573,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(RowResponse, Fixnum, Hash)>] RowResponse data, response status code and response headers
     def cells_get_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_get_worksheet_row_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_row ..."
       end
@@ -4997,6 +7634,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [RowsResponse]
     def cells_get_worksheet_rows(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_get_worksheet_rows_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -5010,6 +7648,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(RowsResponse, Fixnum, Hash)>] RowsResponse data, response status code and response headers
     def cells_get_worksheet_rows_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_get_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_get_worksheet_rows ..."
       end
@@ -5067,6 +7706,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_delete_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_delete_worksheet_hyperlink() is deprecated."
       data, _status_code, _headers = cells_hypelinks_delete_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
       return data
     end
@@ -5081,6 +7721,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_delete_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_delete_worksheet_hyperlink_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_delete_worksheet_hyperlink ..."
       end
@@ -5141,6 +7782,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_delete_worksheet_hyperlinks(name, sheet_name, opts = {})
+      warn "Warning: #cells_hypelinks_delete_worksheet_hyperlinks() is deprecated."
       data, _status_code, _headers = cells_hypelinks_delete_worksheet_hyperlinks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -5154,6 +7796,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_delete_worksheet_hyperlinks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_hypelinks_delete_worksheet_hyperlinks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_delete_worksheet_hyperlinks ..."
       end
@@ -5211,6 +7854,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [HyperlinkResponse]
     def cells_hypelinks_get_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_get_worksheet_hyperlink() is deprecated."
       data, _status_code, _headers = cells_hypelinks_get_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
       return data
     end
@@ -5225,6 +7869,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinkResponse, Fixnum, Hash)>] HyperlinkResponse data, response status code and response headers
     def cells_hypelinks_get_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_get_worksheet_hyperlink_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_get_worksheet_hyperlink ..."
       end
@@ -5285,6 +7930,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [HyperlinksResponse]
     def cells_hypelinks_get_worksheet_hyperlinks(name, sheet_name, opts = {})
+      warn "Warning: #cells_hypelinks_get_worksheet_hyperlinks() is deprecated."
       data, _status_code, _headers = cells_hypelinks_get_worksheet_hyperlinks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -5298,6 +7944,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(HyperlinksResponse, Fixnum, Hash)>] HyperlinksResponse data, response status code and response headers
     def cells_hypelinks_get_worksheet_hyperlinks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_hypelinks_get_worksheet_hyperlinks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_get_worksheet_hyperlinks ..."
       end
@@ -5356,6 +8003,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_post_worksheet_hyperlink(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_post_worksheet_hyperlink() is deprecated."
       data, _status_code, _headers = cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts)
       return data
     end
@@ -5371,6 +8019,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_post_worksheet_hyperlink_with_http_info(name, sheet_name, hyperlink_index, opts = {})
+      warn "Warning: #cells_hypelinks_post_worksheet_hyperlink_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_post_worksheet_hyperlink ..."
       end
@@ -5436,6 +8085,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_hypelinks_put_worksheet_hyperlink(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
+      warn "Warning: #cells_hypelinks_put_worksheet_hyperlink() is deprecated."
       data, _status_code, _headers = cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts)
       return data
     end
@@ -5454,6 +8104,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_hypelinks_put_worksheet_hyperlink_with_http_info(name, sheet_name, first_row, first_column, total_rows, total_columns, address, opts = {})
+      warn "Warning: #cells_hypelinks_put_worksheet_hyperlink_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_hypelinks_put_worksheet_hyperlink ..."
       end
@@ -5536,6 +8187,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_delete_worksheet_list_object(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_delete_worksheet_list_object() is deprecated."
       data, _status_code, _headers = cells_list_objects_delete_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts)
       return data
     end
@@ -5550,6 +8202,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_delete_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_delete_worksheet_list_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_delete_worksheet_list_object ..."
       end
@@ -5610,6 +8263,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_delete_worksheet_list_objects(name, sheet_name, opts = {})
+      warn "Warning: #cells_list_objects_delete_worksheet_list_objects() is deprecated."
       data, _status_code, _headers = cells_list_objects_delete_worksheet_list_objects_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -5623,6 +8277,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_delete_worksheet_list_objects_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_list_objects_delete_worksheet_list_objects_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_delete_worksheet_list_objects ..."
       end
@@ -5681,6 +8336,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_list_objects_get_worksheet_list_object(name, sheet_name, listobjectindex, opts = {})
+      warn "Warning: #cells_list_objects_get_worksheet_list_object() is deprecated."
       data, _status_code, _headers = cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts)
       return data
     end
@@ -5696,6 +8352,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_list_objects_get_worksheet_list_object_with_http_info(name, sheet_name, listobjectindex, opts = {})
+      warn "Warning: #cells_list_objects_get_worksheet_list_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_get_worksheet_list_object ..."
       end
@@ -5757,6 +8414,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ListObjectsResponse]
     def cells_list_objects_get_worksheet_list_objects(name, sheet_name, opts = {})
+      warn "Warning: #cells_list_objects_get_worksheet_list_objects() is deprecated."
       data, _status_code, _headers = cells_list_objects_get_worksheet_list_objects_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -5770,6 +8428,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ListObjectsResponse, Fixnum, Hash)>] ListObjectsResponse data, response status code and response headers
     def cells_list_objects_get_worksheet_list_objects_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_list_objects_get_worksheet_list_objects_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_get_worksheet_list_objects ..."
       end
@@ -5829,6 +8488,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_column(name, sheet_name, list_object_index, column_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_column() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, opts)
       return data
     end
@@ -5845,6 +8505,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_column_with_http_info(name, sheet_name, list_object_index, column_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_column_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_column ..."
       end
@@ -5911,6 +8572,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_columns_total(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_columns_total() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, opts)
       return data
     end
@@ -5926,6 +8588,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_columns_total_with_http_info(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_columns_total_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_columns_total ..."
       end
@@ -5988,6 +8651,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts)
       return data
     end
@@ -6003,6 +8667,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_with_http_info(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_object ..."
       end
@@ -6064,6 +8729,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_convert_to_range(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_convert_to_range() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info(name, sheet_name, list_object_index, opts)
       return data
     end
@@ -6078,6 +8744,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_convert_to_range_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_object_convert_to_range ..."
       end
@@ -6140,6 +8807,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_sort_table(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_sort_table() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_sort_table_with_http_info(name, sheet_name, list_object_index, opts)
       return data
     end
@@ -6155,6 +8823,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_sort_table_with_http_info(name, sheet_name, list_object_index, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_sort_table_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_object_sort_table ..."
       end
@@ -6218,6 +8887,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table(name, sheet_name, list_object_index, destsheet_name, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table() is deprecated."
       data, _status_code, _headers = cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info(name, sheet_name, list_object_index, destsheet_name, opts)
       return data
     end
@@ -6234,6 +8904,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info(name, sheet_name, list_object_index, destsheet_name, opts = {})
+      warn "Warning: #cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_post_worksheet_list_object_summarize_with_pivot_table ..."
       end
@@ -6307,6 +8978,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_list_objects_put_worksheet_list_object(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
+      warn "Warning: #cells_list_objects_put_worksheet_list_object() is deprecated."
       data, _status_code, _headers = cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts)
       return data
     end
@@ -6328,6 +9000,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_list_objects_put_worksheet_list_object_with_http_info(name, sheet_name, start_row, start_column, end_row, end_column, opts = {})
+      warn "Warning: #cells_list_objects_put_worksheet_list_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_list_objects_put_worksheet_list_object ..."
       end
@@ -6408,6 +9081,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_delete_worksheet_ole_object(name, sheet_name, ole_object_index, opts = {})
+      warn "Warning: #cells_ole_objects_delete_worksheet_ole_object() is deprecated."
       data, _status_code, _headers = cells_ole_objects_delete_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts)
       return data
     end
@@ -6422,6 +9096,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_delete_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts = {})
+      warn "Warning: #cells_ole_objects_delete_worksheet_ole_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_delete_worksheet_ole_object ..."
       end
@@ -6482,6 +9157,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_delete_worksheet_ole_objects(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_delete_worksheet_ole_objects() is deprecated."
       data, _status_code, _headers = cells_ole_objects_delete_worksheet_ole_objects_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -6495,6 +9171,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_delete_worksheet_ole_objects_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_delete_worksheet_ole_objects_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_delete_worksheet_ole_objects ..."
       end
@@ -6553,6 +9230,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_ole_objects_get_worksheet_ole_object(name, sheet_name, object_number, opts = {})
+      warn "Warning: #cells_ole_objects_get_worksheet_ole_object() is deprecated."
       data, _status_code, _headers = cells_ole_objects_get_worksheet_ole_object_with_http_info(name, sheet_name, object_number, opts)
       return data
     end
@@ -6568,6 +9246,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_ole_objects_get_worksheet_ole_object_with_http_info(name, sheet_name, object_number, opts = {})
+      warn "Warning: #cells_ole_objects_get_worksheet_ole_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_get_worksheet_ole_object ..."
       end
@@ -6629,6 +9308,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [OleObjectsResponse]
     def cells_ole_objects_get_worksheet_ole_objects(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_get_worksheet_ole_objects() is deprecated."
       data, _status_code, _headers = cells_ole_objects_get_worksheet_ole_objects_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -6642,6 +9322,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(OleObjectsResponse, Fixnum, Hash)>] OleObjectsResponse data, response status code and response headers
     def cells_ole_objects_get_worksheet_ole_objects_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_get_worksheet_ole_objects_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_get_worksheet_ole_objects ..."
       end
@@ -6700,6 +9381,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_post_update_worksheet_ole_object(name, sheet_name, ole_object_index, opts = {})
+      warn "Warning: #cells_ole_objects_post_update_worksheet_ole_object() is deprecated."
       data, _status_code, _headers = cells_ole_objects_post_update_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts)
       return data
     end
@@ -6715,6 +9397,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_post_update_worksheet_ole_object_with_http_info(name, sheet_name, ole_object_index, opts = {})
+      warn "Warning: #cells_ole_objects_post_update_worksheet_ole_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_post_update_worksheet_ole_object ..."
       end
@@ -6782,6 +9465,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ole_objects_put_worksheet_ole_object(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_put_worksheet_ole_object() is deprecated."
       data, _status_code, _headers = cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -6802,6 +9486,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ole_objects_put_worksheet_ole_object_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ole_objects_put_worksheet_ole_object_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ole_objects_put_worksheet_ole_object ..."
       end
@@ -6865,6 +9550,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_horizontal_page_break(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_delete_horizontal_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_delete_horizontal_page_break_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -6879,6 +9565,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_horizontal_page_break_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_delete_horizontal_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_delete_horizontal_page_break ..."
       end
@@ -6940,6 +9627,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_horizontal_page_breaks(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_delete_horizontal_page_breaks() is deprecated."
       data, _status_code, _headers = cells_page_breaks_delete_horizontal_page_breaks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -6954,6 +9642,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_horizontal_page_breaks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_delete_horizontal_page_breaks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_delete_horizontal_page_breaks ..."
       end
@@ -7012,6 +9701,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_vertical_page_break(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_delete_vertical_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_delete_vertical_page_break_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -7026,6 +9716,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_vertical_page_break_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_delete_vertical_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_delete_vertical_page_break ..."
       end
@@ -7087,6 +9778,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_delete_vertical_page_breaks(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_delete_vertical_page_breaks() is deprecated."
       data, _status_code, _headers = cells_page_breaks_delete_vertical_page_breaks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7101,6 +9793,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_delete_vertical_page_breaks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_delete_vertical_page_breaks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_delete_vertical_page_breaks ..."
       end
@@ -7159,6 +9852,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [HorizontalPageBreakResponse]
     def cells_page_breaks_get_horizontal_page_break(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_get_horizontal_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_get_horizontal_page_break_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -7173,6 +9867,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(HorizontalPageBreakResponse, Fixnum, Hash)>] HorizontalPageBreakResponse data, response status code and response headers
     def cells_page_breaks_get_horizontal_page_break_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_get_horizontal_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_get_horizontal_page_break ..."
       end
@@ -7233,6 +9928,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [HorizontalPageBreaksResponse]
     def cells_page_breaks_get_horizontal_page_breaks(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_get_horizontal_page_breaks() is deprecated."
       data, _status_code, _headers = cells_page_breaks_get_horizontal_page_breaks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7246,6 +9942,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(HorizontalPageBreaksResponse, Fixnum, Hash)>] HorizontalPageBreaksResponse data, response status code and response headers
     def cells_page_breaks_get_horizontal_page_breaks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_get_horizontal_page_breaks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_get_horizontal_page_breaks ..."
       end
@@ -7303,6 +10000,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [VerticalPageBreakResponse]
     def cells_page_breaks_get_vertical_page_break(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_get_vertical_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_get_vertical_page_break_with_http_info(name, sheet_name, index, opts)
       return data
     end
@@ -7317,6 +10015,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(VerticalPageBreakResponse, Fixnum, Hash)>] VerticalPageBreakResponse data, response status code and response headers
     def cells_page_breaks_get_vertical_page_break_with_http_info(name, sheet_name, index, opts = {})
+      warn "Warning: #cells_page_breaks_get_vertical_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_get_vertical_page_break ..."
       end
@@ -7377,6 +10076,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [VerticalPageBreaksResponse]
     def cells_page_breaks_get_vertical_page_breaks(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_get_vertical_page_breaks() is deprecated."
       data, _status_code, _headers = cells_page_breaks_get_vertical_page_breaks_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7390,6 +10090,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(VerticalPageBreaksResponse, Fixnum, Hash)>] VerticalPageBreaksResponse data, response status code and response headers
     def cells_page_breaks_get_vertical_page_breaks_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_get_vertical_page_breaks_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_get_vertical_page_breaks ..."
       end
@@ -7451,6 +10152,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_put_horizontal_page_break(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_put_horizontal_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_put_horizontal_page_break_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7469,6 +10171,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_put_horizontal_page_break_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_put_horizontal_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_put_horizontal_page_break ..."
       end
@@ -7535,6 +10238,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_breaks_put_vertical_page_break(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_put_vertical_page_break() is deprecated."
       data, _status_code, _headers = cells_page_breaks_put_vertical_page_break_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7553,6 +10257,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_breaks_put_vertical_page_break_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_breaks_put_vertical_page_break_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_breaks_put_vertical_page_break ..."
       end
@@ -7614,6 +10319,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_delete_header_footer(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_delete_header_footer() is deprecated."
       data, _status_code, _headers = cells_page_setup_delete_header_footer_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7627,6 +10333,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_delete_header_footer_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_delete_header_footer_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_delete_header_footer ..."
       end
@@ -7683,6 +10390,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PageSectionsResponse]
     def cells_page_setup_get_footer(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_footer() is deprecated."
       data, _status_code, _headers = cells_page_setup_get_footer_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7696,6 +10404,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSectionsResponse, Fixnum, Hash)>] PageSectionsResponse data, response status code and response headers
     def cells_page_setup_get_footer_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_footer_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_get_footer ..."
       end
@@ -7752,6 +10461,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PageSectionsResponse]
     def cells_page_setup_get_header(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_header() is deprecated."
       data, _status_code, _headers = cells_page_setup_get_header_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7765,6 +10475,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSectionsResponse, Fixnum, Hash)>] PageSectionsResponse data, response status code and response headers
     def cells_page_setup_get_header_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_header_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_get_header ..."
       end
@@ -7821,6 +10532,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PageSetupResponse]
     def cells_page_setup_get_page_setup(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_page_setup() is deprecated."
       data, _status_code, _headers = cells_page_setup_get_page_setup_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -7834,6 +10546,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PageSetupResponse, Fixnum, Hash)>] PageSetupResponse data, response status code and response headers
     def cells_page_setup_get_page_setup_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_get_page_setup_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_get_page_setup ..."
       end
@@ -7893,6 +10606,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_footer(name, sheet_name, section, script, is_first_page, opts = {})
+      warn "Warning: #cells_page_setup_post_footer() is deprecated."
       data, _status_code, _headers = cells_page_setup_post_footer_with_http_info(name, sheet_name, section, script, is_first_page, opts)
       return data
     end
@@ -7909,6 +10623,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_footer_with_http_info(name, sheet_name, section, script, is_first_page, opts = {})
+      warn "Warning: #cells_page_setup_post_footer_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_post_footer ..."
       end
@@ -7983,6 +10698,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_header(name, sheet_name, section, script, is_first_page, opts = {})
+      warn "Warning: #cells_page_setup_post_header() is deprecated."
       data, _status_code, _headers = cells_page_setup_post_header_with_http_info(name, sheet_name, section, script, is_first_page, opts)
       return data
     end
@@ -7999,6 +10715,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_header_with_http_info(name, sheet_name, section, script, is_first_page, opts = {})
+      warn "Warning: #cells_page_setup_post_header_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_post_header ..."
       end
@@ -8071,6 +10788,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_page_setup_post_page_setup(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_post_page_setup() is deprecated."
       data, _status_code, _headers = cells_page_setup_post_page_setup_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -8085,6 +10803,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_page_setup_post_page_setup_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_page_setup_post_page_setup_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_page_setup_post_page_setup ..."
       end
@@ -8141,6 +10860,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [BarcodeResponseList]
     def cells_picture_get_extract_barcodes(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_picture_get_extract_barcodes() is deprecated."
       data, _status_code, _headers = cells_picture_get_extract_barcodes_with_http_info(name, sheet_name, picture_index, opts)
       return data
     end
@@ -8155,6 +10875,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(BarcodeResponseList, Fixnum, Hash)>] BarcodeResponseList data, response status code and response headers
     def cells_picture_get_extract_barcodes_with_http_info(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_picture_get_extract_barcodes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_picture_get_extract_barcodes ..."
       end
@@ -8215,6 +10936,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_delete_worksheet_picture(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_delete_worksheet_picture() is deprecated."
       data, _status_code, _headers = cells_pictures_delete_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
       return data
     end
@@ -8229,6 +10951,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_delete_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_delete_worksheet_picture_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_delete_worksheet_picture ..."
       end
@@ -8289,6 +11012,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_delete_worksheet_pictures(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_delete_worksheet_pictures() is deprecated."
       data, _status_code, _headers = cells_pictures_delete_worksheet_pictures_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -8302,6 +11026,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_delete_worksheet_pictures_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_delete_worksheet_pictures_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_delete_worksheet_pictures ..."
       end
@@ -8360,6 +11085,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_pictures_get_worksheet_picture(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_get_worksheet_picture() is deprecated."
       data, _status_code, _headers = cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
       return data
     end
@@ -8375,6 +11101,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_pictures_get_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_get_worksheet_picture_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_get_worksheet_picture ..."
       end
@@ -8436,6 +11163,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PicturesResponse]
     def cells_pictures_get_worksheet_pictures(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_get_worksheet_pictures() is deprecated."
       data, _status_code, _headers = cells_pictures_get_worksheet_pictures_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -8449,6 +11177,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PicturesResponse, Fixnum, Hash)>] PicturesResponse data, response status code and response headers
     def cells_pictures_get_worksheet_pictures_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_get_worksheet_pictures_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_get_worksheet_pictures ..."
       end
@@ -8507,6 +11236,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_post_worksheet_picture(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_post_worksheet_picture() is deprecated."
       data, _status_code, _headers = cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts)
       return data
     end
@@ -8522,6 +11252,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_post_worksheet_picture_with_http_info(name, sheet_name, picture_index, opts = {})
+      warn "Warning: #cells_pictures_post_worksheet_picture_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_post_worksheet_picture ..."
       end
@@ -8588,6 +11319,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pictures_put_worksheet_add_picture(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_put_worksheet_add_picture() is deprecated."
       data, _status_code, _headers = cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -8607,6 +11339,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pictures_put_worksheet_add_picture_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pictures_put_worksheet_add_picture_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pictures_put_worksheet_add_picture ..."
       end
@@ -8671,6 +11404,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_pivot_table_field() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_delete_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts)
       return data
     end
@@ -8687,6 +11421,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_pivot_table_field_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_delete_pivot_table_field ..."
       end
@@ -8753,6 +11488,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -8767,6 +11503,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_delete_worksheet_pivot_table ..."
       end
@@ -8830,6 +11567,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, field_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table_filter() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, field_index, opts)
       return data
     end
@@ -8846,6 +11584,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, field_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_delete_worksheet_pivot_table_filter ..."
       end
@@ -8913,6 +11652,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table_filters() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -8928,6 +11668,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_table_filters_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_delete_worksheet_pivot_table_filters ..."
       end
@@ -8989,6 +11730,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_delete_worksheet_pivot_tables(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_tables() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -9002,6 +11744,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_delete_worksheet_pivot_tables_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_delete_worksheet_pivot_tables ..."
       end
@@ -9061,6 +11804,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PivotFieldResponse]
     def cells_pivot_tables_get_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_get_pivot_table_field() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_get_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts)
       return data
     end
@@ -9077,6 +11821,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFieldResponse, Fixnum, Hash)>] PivotFieldResponse data, response status code and response headers
     def cells_pivot_tables_get_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_get_pivot_table_field_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_get_pivot_table_field ..."
       end
@@ -9148,6 +11893,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PivotTableResponse]
     def cells_pivot_tables_get_worksheet_pivot_table(name, sheet_name, pivottable_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_with_http_info(name, sheet_name, pivottable_index, opts)
       return data
     end
@@ -9162,6 +11908,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotTableResponse, Fixnum, Hash)>] PivotTableResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_with_http_info(name, sheet_name, pivottable_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_get_worksheet_pivot_table ..."
       end
@@ -9224,6 +11971,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PivotFilterResponse]
     def cells_pivot_tables_get_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, filter_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table_filter() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, filter_index, opts)
       return data
     end
@@ -9239,6 +11987,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFilterResponse, Fixnum, Hash)>] PivotFilterResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, filter_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_get_worksheet_pivot_table_filter ..."
       end
@@ -9304,6 +12053,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PivotFiltersResponse]
     def cells_pivot_tables_get_worksheet_pivot_table_filters(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table_filters() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -9318,6 +12068,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotFiltersResponse, Fixnum, Hash)>] PivotFiltersResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_table_filters_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_get_worksheet_pivot_table_filters ..."
       end
@@ -9378,6 +12129,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [PivotTablesResponse]
     def cells_pivot_tables_get_worksheet_pivot_tables(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_tables() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_get_worksheet_pivot_tables_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -9391,6 +12143,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(PivotTablesResponse, Fixnum, Hash)>] PivotTablesResponse data, response status code and response headers
     def cells_pivot_tables_get_worksheet_pivot_tables_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_get_worksheet_pivot_tables_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_get_worksheet_pivot_tables ..."
       end
@@ -9452,6 +12205,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_cell_style(name, sheet_name, pivot_table_index, column, row, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_cell_style() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_cell_style_with_http_info(name, sheet_name, pivot_table_index, column, row, opts)
       return data
     end
@@ -9470,6 +12224,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_cell_style_with_http_info(name, sheet_name, pivot_table_index, column, row, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_cell_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_cell_style ..."
       end
@@ -9547,6 +12302,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_field_hide_item(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_field_hide_item() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts)
       return data
     end
@@ -9566,6 +12322,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, field_index, item_index, is_hide, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_field_hide_item_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_field_hide_item ..."
       end
@@ -9651,6 +12408,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_field_move_to(name, sheet_name, pivot_table_index, field_index, from, to, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_field_move_to() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_field_move_to_with_http_info(name, sheet_name, pivot_table_index, field_index, from, to, opts)
       return data
     end
@@ -9668,6 +12426,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_field_move_to_with_http_info(name, sheet_name, pivot_table_index, field_index, from, to, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_field_move_to_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_field_move_to ..."
       end
@@ -9746,6 +12505,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_style(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_style() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_style_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -9762,6 +12522,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_style_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_style ..."
       end
@@ -9827,6 +12588,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder 
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_update_pivot_field(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_update_pivot_field() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts)
       return data
     end
@@ -9844,6 +12606,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_index, pivot_field_type, pivot_field, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_update_pivot_field_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_field ..."
       end
@@ -9920,6 +12683,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder 
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_pivot_table_update_pivot_fields(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_update_pivot_fields() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts)
       return data
     end
@@ -9936,6 +12700,7 @@ module AsposeCellsCloud
     # @option opts [String] :folder 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, pivot_field, opts = {})
+      warn "Warning: #cells_pivot_tables_post_pivot_table_update_pivot_fields_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_pivot_table_update_pivot_fields ..."
       end
@@ -10006,6 +12771,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_worksheet_pivot_table_calculate(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_worksheet_pivot_table_calculate() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -10020,6 +12786,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_worksheet_pivot_table_calculate_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_worksheet_pivot_table_calculate ..."
       end
@@ -10084,6 +12851,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_post_worksheet_pivot_table_move(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_worksheet_pivot_table_move() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -10101,6 +12869,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_post_worksheet_pivot_table_move_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_post_worksheet_pivot_table_move ..."
       end
@@ -10168,6 +12937,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_put_pivot_table_field(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_put_pivot_table_field() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_put_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts)
       return data
     end
@@ -10185,6 +12955,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_pivot_table_field_with_http_info(name, sheet_name, pivot_table_index, pivot_field_type, opts = {})
+      warn "Warning: #cells_pivot_tables_put_pivot_table_field_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_put_pivot_table_field ..."
       end
@@ -10256,6 +13027,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :use_same_source Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_put_worksheet_pivot_table(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_put_worksheet_pivot_table() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_put_worksheet_pivot_table_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -10274,6 +13046,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :use_same_source Indicates whether using same data source when another existing pivot table has used this data source. If the property is true, it will save memory.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_worksheet_pivot_table_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_pivot_tables_put_worksheet_pivot_table_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_put_worksheet_pivot_table ..."
       end
@@ -10337,6 +13110,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_pivot_tables_put_worksheet_pivot_table_filter(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_put_worksheet_pivot_table_filter() is deprecated."
       data, _status_code, _headers = cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, opts)
       return data
     end
@@ -10353,6 +13127,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info(name, sheet_name, pivot_table_index, opts = {})
+      warn "Warning: #cells_pivot_tables_put_worksheet_pivot_table_filter_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_pivot_tables_put_worksheet_pivot_table_filter ..."
       end
@@ -10416,6 +13191,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_cell_calculate(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_cell_calculate() is deprecated."
       data, _status_code, _headers = cells_post_cell_calculate_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -10431,6 +13207,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_cell_calculate_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_cell_calculate_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_cell_calculate ..."
       end
@@ -10493,6 +13270,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_cell_characters(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_cell_characters() is deprecated."
       data, _status_code, _headers = cells_post_cell_characters_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -10508,6 +13286,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_cell_characters_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_cell_characters_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_cell_characters ..."
       end
@@ -10573,6 +13352,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_clear_contents(name, sheet_name, opts = {})
+      warn "Warning: #cells_post_clear_contents() is deprecated."
       data, _status_code, _headers = cells_post_clear_contents_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -10591,6 +13371,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_clear_contents_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_post_clear_contents_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_clear_contents ..."
       end
@@ -10657,6 +13438,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_clear_formats(name, sheet_name, opts = {})
+      warn "Warning: #cells_post_clear_formats() is deprecated."
       data, _status_code, _headers = cells_post_clear_formats_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -10675,6 +13457,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_clear_formats_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_post_clear_formats_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_clear_formats ..."
       end
@@ -10738,6 +13521,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_column_style(name, sheet_name, column_index, opts = {})
+      warn "Warning: #cells_post_column_style() is deprecated."
       data, _status_code, _headers = cells_post_column_style_with_http_info(name, sheet_name, column_index, opts)
       return data
     end
@@ -10753,6 +13537,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_column_style_with_http_info(name, sheet_name, column_index, opts = {})
+      warn "Warning: #cells_post_column_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_column_style ..."
       end
@@ -10818,6 +13603,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_cell_into_cell(name, dest_cell_name, sheet_name, worksheet, opts = {})
+      warn "Warning: #cells_post_copy_cell_into_cell() is deprecated."
       data, _status_code, _headers = cells_post_copy_cell_into_cell_with_http_info(name, dest_cell_name, sheet_name, worksheet, opts)
       return data
     end
@@ -10836,6 +13622,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_cell_into_cell_with_http_info(name, dest_cell_name, sheet_name, worksheet, opts = {})
+      warn "Warning: #cells_post_copy_cell_into_cell_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_copy_cell_into_cell ..."
       end
@@ -10908,6 +13695,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_worksheet_columns(name, sheet_name, source_column_index, destination_column_index, column_number, opts = {})
+      warn "Warning: #cells_post_copy_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_post_copy_worksheet_columns_with_http_info(name, sheet_name, source_column_index, destination_column_index, column_number, opts)
       return data
     end
@@ -10925,6 +13713,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_worksheet_columns_with_http_info(name, sheet_name, source_column_index, destination_column_index, column_number, opts = {})
+      warn "Warning: #cells_post_copy_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_copy_worksheet_columns ..."
       end
@@ -11001,6 +13790,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_copy_worksheet_rows(name, sheet_name, source_row_index, destination_row_index, row_number, opts = {})
+      warn "Warning: #cells_post_copy_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_post_copy_worksheet_rows_with_http_info(name, sheet_name, source_row_index, destination_row_index, row_number, opts)
       return data
     end
@@ -11018,6 +13808,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_copy_worksheet_rows_with_http_info(name, sheet_name, source_row_index, destination_row_index, row_number, opts = {})
+      warn "Warning: #cells_post_copy_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_copy_worksheet_rows ..."
       end
@@ -11093,6 +13884,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_group_worksheet_columns(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_group_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_post_group_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts)
       return data
     end
@@ -11109,6 +13901,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_group_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_group_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_group_worksheet_columns ..."
       end
@@ -11179,6 +13972,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_group_worksheet_rows(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_group_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_post_group_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts)
       return data
     end
@@ -11195,6 +13989,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_group_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_group_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_group_worksheet_rows ..."
       end
@@ -11264,6 +14059,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_hide_worksheet_columns(name, sheet_name, start_column, total_columns, opts = {})
+      warn "Warning: #cells_post_hide_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_post_hide_worksheet_columns_with_http_info(name, sheet_name, start_column, total_columns, opts)
       return data
     end
@@ -11279,6 +14075,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_hide_worksheet_columns_with_http_info(name, sheet_name, start_column, total_columns, opts = {})
+      warn "Warning: #cells_post_hide_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_hide_worksheet_columns ..."
       end
@@ -11347,6 +14144,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_hide_worksheet_rows(name, sheet_name, startrow, total_rows, opts = {})
+      warn "Warning: #cells_post_hide_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_post_hide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts)
       return data
     end
@@ -11362,6 +14160,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_hide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts = {})
+      warn "Warning: #cells_post_hide_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_hide_worksheet_rows ..."
       end
@@ -11430,6 +14229,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_row_style(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_post_row_style() is deprecated."
       data, _status_code, _headers = cells_post_row_style_with_http_info(name, sheet_name, row_index, opts)
       return data
     end
@@ -11445,6 +14245,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_row_style_with_http_info(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_post_row_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_row_style ..."
       end
@@ -11507,6 +14308,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_set_cell_html_string(name, sheet_name, cell_name, html_string, opts = {})
+      warn "Warning: #cells_post_set_cell_html_string() is deprecated."
       data, _status_code, _headers = cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts)
       return data
     end
@@ -11522,6 +14324,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_set_cell_html_string_with_http_info(name, sheet_name, cell_name, html_string, opts = {})
+      warn "Warning: #cells_post_set_cell_html_string_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_cell_html_string ..."
       end
@@ -11589,6 +14392,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_set_cell_range_value(name, sheet_name, cellarea, value, type, opts = {})
+      warn "Warning: #cells_post_set_cell_range_value() is deprecated."
       data, _status_code, _headers = cells_post_set_cell_range_value_with_http_info(name, sheet_name, cellarea, value, type, opts)
       return data
     end
@@ -11605,6 +14409,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_set_cell_range_value_with_http_info(name, sheet_name, cellarea, value, type, opts = {})
+      warn "Warning: #cells_post_set_cell_range_value_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_cell_range_value ..."
       end
@@ -11679,6 +14484,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_set_worksheet_column_width(name, sheet_name, column_index, width, count, opts = {})
+      warn "Warning: #cells_post_set_worksheet_column_width() is deprecated."
       data, _status_code, _headers = cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, opts)
       return data
     end
@@ -11695,6 +14501,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_set_worksheet_column_width_with_http_info(name, sheet_name, column_index, width, count, opts = {})
+      warn "Warning: #cells_post_set_worksheet_column_width_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_set_worksheet_column_width ..."
       end
@@ -11767,6 +14574,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_ungroup_worksheet_columns(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_ungroup_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_post_ungroup_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts)
       return data
     end
@@ -11782,6 +14590,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_ungroup_worksheet_columns_with_http_info(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_ungroup_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_ungroup_worksheet_columns ..."
       end
@@ -11851,6 +14660,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_ungroup_worksheet_rows(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_ungroup_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_post_ungroup_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts)
       return data
     end
@@ -11867,6 +14677,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_ungroup_worksheet_rows_with_http_info(name, sheet_name, first_index, last_index, opts = {})
+      warn "Warning: #cells_post_ungroup_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_ungroup_worksheet_rows ..."
       end
@@ -11937,6 +14748,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_unhide_worksheet_columns(name, sheet_name, startcolumn, total_columns, opts = {})
+      warn "Warning: #cells_post_unhide_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_post_unhide_worksheet_columns_with_http_info(name, sheet_name, startcolumn, total_columns, opts)
       return data
     end
@@ -11953,6 +14765,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_unhide_worksheet_columns_with_http_info(name, sheet_name, startcolumn, total_columns, opts = {})
+      warn "Warning: #cells_post_unhide_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_unhide_worksheet_columns ..."
       end
@@ -12023,6 +14836,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_unhide_worksheet_rows(name, sheet_name, startrow, total_rows, opts = {})
+      warn "Warning: #cells_post_unhide_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_post_unhide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts)
       return data
     end
@@ -12039,6 +14853,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_unhide_worksheet_rows_with_http_info(name, sheet_name, startrow, total_rows, opts = {})
+      warn "Warning: #cells_post_unhide_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_unhide_worksheet_rows ..."
       end
@@ -12108,6 +14923,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_post_update_worksheet_cell_style(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_update_worksheet_cell_style() is deprecated."
       data, _status_code, _headers = cells_post_update_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -12123,6 +14939,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_post_update_worksheet_cell_style_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_update_worksheet_cell_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_update_worksheet_cell_style ..."
       end
@@ -12185,6 +15002,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_update_worksheet_range_style(name, sheet_name, range, opts = {})
+      warn "Warning: #cells_post_update_worksheet_range_style() is deprecated."
       data, _status_code, _headers = cells_post_update_worksheet_range_style_with_http_info(name, sheet_name, range, opts)
       return data
     end
@@ -12200,6 +15018,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_update_worksheet_range_style_with_http_info(name, sheet_name, range, opts = {})
+      warn "Warning: #cells_post_update_worksheet_range_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_update_worksheet_range_style ..."
       end
@@ -12264,6 +15083,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_update_worksheet_row(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_post_update_worksheet_row() is deprecated."
       data, _status_code, _headers = cells_post_update_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
       return data
     end
@@ -12280,6 +15100,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_update_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_post_update_worksheet_row_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_update_worksheet_row ..."
       end
@@ -12346,6 +15167,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellResponse]
     def cells_post_worksheet_cell_set_value(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_worksheet_cell_set_value() is deprecated."
       data, _status_code, _headers = cells_post_worksheet_cell_set_value_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -12363,6 +15185,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellResponse, Fixnum, Hash)>] CellResponse data, response status code and response headers
     def cells_post_worksheet_cell_set_value_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_post_worksheet_cell_set_value_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_worksheet_cell_set_value ..."
       end
@@ -12430,6 +15253,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_worksheet_merge(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_post_worksheet_merge() is deprecated."
       data, _status_code, _headers = cells_post_worksheet_merge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
       return data
     end
@@ -12447,6 +15271,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_worksheet_merge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_post_worksheet_merge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_worksheet_merge ..."
       end
@@ -12527,6 +15352,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_post_worksheet_unmerge(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_post_worksheet_unmerge() is deprecated."
       data, _status_code, _headers = cells_post_worksheet_unmerge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts)
       return data
     end
@@ -12544,6 +15370,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_post_worksheet_unmerge_with_http_info(name, sheet_name, start_row, start_column, total_rows, total_columns, opts = {})
+      warn "Warning: #cells_post_worksheet_unmerge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_post_worksheet_unmerge ..."
       end
@@ -12619,6 +15446,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_properties_delete_document_properties(name, opts = {})
+      warn "Warning: #cells_properties_delete_document_properties() is deprecated."
       data, _status_code, _headers = cells_properties_delete_document_properties_with_http_info(name, opts)
       return data
     end
@@ -12631,6 +15459,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_delete_document_properties_with_http_info(name, opts = {})
+      warn "Warning: #cells_properties_delete_document_properties_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_delete_document_properties ..."
       end
@@ -12683,6 +15512,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_properties_delete_document_property(name, property_name, opts = {})
+      warn "Warning: #cells_properties_delete_document_property() is deprecated."
       data, _status_code, _headers = cells_properties_delete_document_property_with_http_info(name, property_name, opts)
       return data
     end
@@ -12696,6 +15526,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_delete_document_property_with_http_info(name, property_name, opts = {})
+      warn "Warning: #cells_properties_delete_document_property_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_delete_document_property ..."
       end
@@ -12751,6 +15582,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertiesResponse]
     def cells_properties_get_document_properties(name, opts = {})
+      warn "Warning: #cells_properties_get_document_properties() is deprecated."
       data, _status_code, _headers = cells_properties_get_document_properties_with_http_info(name, opts)
       return data
     end
@@ -12763,6 +15595,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertiesResponse, Fixnum, Hash)>] CellsDocumentPropertiesResponse data, response status code and response headers
     def cells_properties_get_document_properties_with_http_info(name, opts = {})
+      warn "Warning: #cells_properties_get_document_properties_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_get_document_properties ..."
       end
@@ -12815,6 +15648,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsDocumentPropertyResponse]
     def cells_properties_get_document_property(name, property_name, opts = {})
+      warn "Warning: #cells_properties_get_document_property() is deprecated."
       data, _status_code, _headers = cells_properties_get_document_property_with_http_info(name, property_name, opts)
       return data
     end
@@ -12828,6 +15662,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsDocumentPropertyResponse, Fixnum, Hash)>] CellsDocumentPropertyResponse data, response status code and response headers
     def cells_properties_get_document_property_with_http_info(name, property_name, opts = {})
+      warn "Warning: #cells_properties_get_document_property_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_get_document_property ..."
       end
@@ -12885,6 +15720,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_properties_put_document_property(name, property_name, opts = {})
+      warn "Warning: #cells_properties_put_document_property() is deprecated."
       data, _status_code, _headers = cells_properties_put_document_property_with_http_info(name, property_name, opts)
       return data
     end
@@ -12899,6 +15735,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_properties_put_document_property_with_http_info(name, property_name, opts = {})
+      warn "Warning: #cells_properties_put_document_property_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_properties_put_document_property ..."
       end
@@ -12958,6 +15795,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_put_insert_worksheet_columns(name, sheet_name, column_index, columns, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_put_insert_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, opts)
       return data
     end
@@ -12974,6 +15812,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_put_insert_worksheet_columns_with_http_info(name, sheet_name, column_index, columns, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_put_insert_worksheet_columns ..."
       end
@@ -13041,6 +15880,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_put_insert_worksheet_row(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_row() is deprecated."
       data, _status_code, _headers = cells_put_insert_worksheet_row_with_http_info(name, sheet_name, row_index, opts)
       return data
     end
@@ -13055,6 +15895,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_put_insert_worksheet_row_with_http_info(name, sheet_name, row_index, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_row_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_put_insert_worksheet_row ..."
       end
@@ -13118,6 +15959,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_put_insert_worksheet_rows(name, sheet_name, startrow, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_put_insert_worksheet_rows_with_http_info(name, sheet_name, startrow, opts)
       return data
     end
@@ -13134,6 +15976,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_put_insert_worksheet_rows_with_http_info(name, sheet_name, startrow, opts = {})
+      warn "Warning: #cells_put_insert_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_put_insert_worksheet_rows ..."
       end
@@ -13199,6 +16042,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_delete_worksheet_cells_range(name, sheet_name, range, shift, opts = {})
+      warn "Warning: #cells_ranges_delete_worksheet_cells_range() is deprecated."
       data, _status_code, _headers = cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts)
       return data
     end
@@ -13214,6 +16058,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_delete_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts = {})
+      warn "Warning: #cells_ranges_delete_worksheet_cells_range_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_delete_worksheet_cells_range ..."
       end
@@ -13285,6 +16130,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [RangeValueResponse]
     def cells_ranges_get_worksheet_cells_range_value(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_get_worksheet_cells_range_value() is deprecated."
       data, _status_code, _headers = cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13303,6 +16149,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(RangeValueResponse, Fixnum, Hash)>] RangeValueResponse data, response status code and response headers
     def cells_ranges_get_worksheet_cells_range_value_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_get_worksheet_cells_range_value_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_get_worksheet_cells_range_value ..."
       end
@@ -13366,6 +16213,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_column_width(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_column_width() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_column_width_with_http_info(name, sheet_name, value, opts)
       return data
     end
@@ -13381,6 +16229,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_column_width_with_http_info(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_column_width_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_column_width ..."
       end
@@ -13443,6 +16292,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_merge(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_merge() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_merge_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13457,6 +16307,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_merge_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_merge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_merge ..."
       end
@@ -13516,6 +16367,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_move_to(name, sheet_name, dest_row, dest_column, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_move_to() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_move_to_with_http_info(name, sheet_name, dest_row, dest_column, opts)
       return data
     end
@@ -13532,6 +16384,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_move_to_with_http_info(name, sheet_name, dest_row, dest_column, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_move_to_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_move_to ..."
       end
@@ -13599,6 +16452,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_outline_border(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_outline_border() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_outline_border_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13613,6 +16467,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_outline_border_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_outline_border_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_outline_border ..."
       end
@@ -13671,6 +16526,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_row_height(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_row_height() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_row_height_with_http_info(name, sheet_name, value, opts)
       return data
     end
@@ -13686,6 +16542,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_row_height_with_http_info(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_row_height_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_row_height ..."
       end
@@ -13748,6 +16605,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_style(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_style() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_style_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13762,6 +16620,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_style_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_style ..."
       end
@@ -13819,6 +16678,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_unmerge(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_unmerge() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_unmerge_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13833,6 +16693,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_unmerge_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_unmerge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_unmerge ..."
       end
@@ -13893,6 +16754,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_range_value(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_value() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_range_value_with_http_info(name, sheet_name, value, opts)
       return data
     end
@@ -13910,6 +16772,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_range_value_with_http_info(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_range_value_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_range_value ..."
       end
@@ -13974,6 +16837,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_post_worksheet_cells_ranges(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_ranges() is deprecated."
       data, _status_code, _headers = cells_ranges_post_worksheet_cells_ranges_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -13988,6 +16852,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_post_worksheet_cells_ranges_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_ranges_post_worksheet_cells_ranges_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_post_worksheet_cells_ranges ..."
       end
@@ -14046,6 +16911,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_ranges_put_worksheet_cells_range(name, sheet_name, range, shift, opts = {})
+      warn "Warning: #cells_ranges_put_worksheet_cells_range() is deprecated."
       data, _status_code, _headers = cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts)
       return data
     end
@@ -14061,6 +16927,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_ranges_put_worksheet_cells_range_with_http_info(name, sheet_name, range, shift, opts = {})
+      warn "Warning: #cells_ranges_put_worksheet_cells_range_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_ranges_put_worksheet_cells_range ..."
       end
@@ -14131,6 +16998,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [SaveResponse]
     def cells_save_as_post_document_save_as(name, opts = {})
+      warn "Warning: #cells_save_as_post_document_save_as() is deprecated."
       data, _status_code, _headers = cells_save_as_post_document_save_as_with_http_info(name, opts)
       return data
     end
@@ -14148,6 +17016,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(SaveResponse, Fixnum, Hash)>] SaveResponse data, response status code and response headers
     def cells_save_as_post_document_save_as_with_http_info(name, opts = {})
+      warn "Warning: #cells_save_as_post_document_save_as_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_save_as_post_document_save_as ..."
       end
@@ -14210,6 +17079,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_delete_worksheet_shape(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_delete_worksheet_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_delete_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
       return data
     end
@@ -14224,6 +17094,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_delete_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_delete_worksheet_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_delete_worksheet_shape ..."
       end
@@ -14284,6 +17155,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_delete_worksheet_shapes(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_delete_worksheet_shapes() is deprecated."
       data, _status_code, _headers = cells_shapes_delete_worksheet_shapes_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -14297,6 +17169,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_delete_worksheet_shapes_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_delete_worksheet_shapes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_delete_worksheet_shapes ..."
       end
@@ -14354,6 +17227,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ShapeResponse]
     def cells_shapes_get_worksheet_shape(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_get_worksheet_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_get_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
       return data
     end
@@ -14368,6 +17242,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ShapeResponse, Fixnum, Hash)>] ShapeResponse data, response status code and response headers
     def cells_shapes_get_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_get_worksheet_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_get_worksheet_shape ..."
       end
@@ -14428,6 +17303,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ShapesResponse]
     def cells_shapes_get_worksheet_shapes(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_get_worksheet_shapes() is deprecated."
       data, _status_code, _headers = cells_shapes_get_worksheet_shapes_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -14441,6 +17317,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ShapesResponse, Fixnum, Hash)>] ShapesResponse data, response status code and response headers
     def cells_shapes_get_worksheet_shapes_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_get_worksheet_shapes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_get_worksheet_shapes ..."
       end
@@ -14498,6 +17375,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_post_worksheet_group_shape(name, sheet_name, list_shape, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_group_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, opts)
       return data
     end
@@ -14512,6 +17390,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_post_worksheet_group_shape_with_http_info(name, sheet_name, list_shape, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_group_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_post_worksheet_group_shape ..."
       end
@@ -14574,6 +17453,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_post_worksheet_shape(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_post_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts)
       return data
     end
@@ -14589,6 +17469,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_post_worksheet_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_post_worksheet_shape ..."
       end
@@ -14650,6 +17531,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_post_worksheet_ungroup_shape(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_ungroup_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, opts)
       return data
     end
@@ -14664,6 +17546,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_post_worksheet_ungroup_shape_with_http_info(name, sheet_name, shapeindex, opts = {})
+      warn "Warning: #cells_shapes_post_worksheet_ungroup_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_post_worksheet_ungroup_shape ..."
       end
@@ -14732,6 +17615,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_shapes_put_worksheet_shape(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_put_worksheet_shape() is deprecated."
       data, _status_code, _headers = cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -14753,6 +17637,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_shapes_put_worksheet_shape_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_shapes_put_worksheet_shape_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_shapes_put_worksheet_shape ..."
       end
@@ -14817,6 +17702,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_sparkline_groups_delete_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts = {})
+      warn "Warning: #cells_sparkline_groups_delete_worksheet_sparkline_group() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts)
       return data
     end
@@ -14831,6 +17717,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts = {})
+      warn "Warning: #cells_sparkline_groups_delete_worksheet_sparkline_group_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_group ..."
       end
@@ -14891,6 +17778,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_sparkline_groups_delete_worksheet_sparkline_groups(name, sheet_name, opts = {})
+      warn "Warning: #cells_sparkline_groups_delete_worksheet_sparkline_groups() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -14904,6 +17792,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_sparkline_groups_delete_worksheet_sparkline_groups_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_delete_worksheet_sparkline_groups ..."
       end
@@ -14961,6 +17850,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [SparklineGroupResponse]
     def cells_sparkline_groups_get_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, opts = {})
+      warn "Warning: #cells_sparkline_groups_get_worksheet_sparkline_group() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts)
       return data
     end
@@ -14975,6 +17865,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(SparklineGroupResponse, Fixnum, Hash)>] SparklineGroupResponse data, response status code and response headers
     def cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, opts = {})
+      warn "Warning: #cells_sparkline_groups_get_worksheet_sparkline_group_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_get_worksheet_sparkline_group ..."
       end
@@ -15035,6 +17926,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [SparklineGroupsResponse]
     def cells_sparkline_groups_get_worksheet_sparkline_groups(name, sheet_name, opts = {})
+      warn "Warning: #cells_sparkline_groups_get_worksheet_sparkline_groups() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -15048,6 +17940,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(SparklineGroupsResponse, Fixnum, Hash)>] SparklineGroupsResponse data, response status code and response headers
     def cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_sparkline_groups_get_worksheet_sparkline_groups_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_get_worksheet_sparkline_groups ..."
       end
@@ -15106,6 +17999,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_sparkline_groups_post_worksheet_sparkline_group(name, sheet_name, sparkline_group_index, sparkline_group, opts = {})
+      warn "Warning: #cells_sparkline_groups_post_worksheet_sparkline_group() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, opts)
       return data
     end
@@ -15121,6 +18015,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info(name, sheet_name, sparkline_group_index, sparkline_group, opts = {})
+      warn "Warning: #cells_sparkline_groups_post_worksheet_sparkline_group_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_post_worksheet_sparkline_group ..."
       end
@@ -15189,6 +18084,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_sparkline_groups_put_worksheet_sparkline_group(name, sheet_name, type, data_range, is_vertical, location_range, opts = {})
+      warn "Warning: #cells_sparkline_groups_put_worksheet_sparkline_group() is deprecated."
       data, _status_code, _headers = cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, opts)
       return data
     end
@@ -15206,6 +18102,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info(name, sheet_name, type, data_range, is_vertical, location_range, opts = {})
+      warn "Warning: #cells_sparkline_groups_put_worksheet_sparkline_group_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_sparkline_groups_put_worksheet_sparkline_group ..."
       end
@@ -15279,6 +18176,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Object]
     def cells_task_post_run_task(task_data, opts = {})
+      warn "Warning: #cells_task_post_run_task() is deprecated."
       data, _status_code, _headers = cells_task_post_run_task_with_http_info(task_data, opts)
       return data
     end
@@ -15289,6 +18187,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_task_post_run_task_with_http_info(task_data, opts = {})
+      warn "Warning: #cells_task_post_run_task_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_task_post_run_task ..."
       end
@@ -15339,6 +18238,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_decrypt_document(name, opts = {})
+      warn "Warning: #cells_workbook_delete_decrypt_document() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_decrypt_document_with_http_info(name, opts)
       return data
     end
@@ -15352,6 +18252,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_decrypt_document_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_delete_decrypt_document_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_decrypt_document ..."
       end
@@ -15403,6 +18304,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_document_unprotect_from_changes(name, opts = {})
+      warn "Warning: #cells_workbook_delete_document_unprotect_from_changes() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_document_unprotect_from_changes_with_http_info(name, opts)
       return data
     end
@@ -15415,6 +18317,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_document_unprotect_from_changes_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_delete_document_unprotect_from_changes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_document_unprotect_from_changes ..."
       end
@@ -15467,6 +18370,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_unprotect_document(name, opts = {})
+      warn "Warning: #cells_workbook_delete_unprotect_document() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_unprotect_document_with_http_info(name, opts)
       return data
     end
@@ -15480,6 +18384,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_unprotect_document_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_delete_unprotect_document_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_unprotect_document ..."
       end
@@ -15531,6 +18436,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_background(name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_background() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_workbook_background_with_http_info(name, opts)
       return data
     end
@@ -15543,6 +18449,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_background_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_background_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_workbook_background ..."
       end
@@ -15595,6 +18502,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_name(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_name() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_workbook_name_with_http_info(name, name_name, opts)
       return data
     end
@@ -15608,6 +18516,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_name_with_http_info(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_name_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_workbook_name ..."
       end
@@ -15663,6 +18572,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_delete_workbook_names(name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_names() is deprecated."
       data, _status_code, _headers = cells_workbook_delete_workbook_names_with_http_info(name, opts)
       return data
     end
@@ -15675,6 +18585,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_delete_workbook_names_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_delete_workbook_names_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_delete_workbook_names ..."
       end
@@ -15726,6 +18637,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_workbook_get_page_count(name, opts = {})
+      warn "Warning: #cells_workbook_get_page_count() is deprecated."
       data, _status_code, _headers = cells_workbook_get_page_count_with_http_info(name, opts)
       return data
     end
@@ -15738,6 +18650,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_workbook_get_page_count_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_page_count_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_page_count ..."
       end
@@ -15795,6 +18708,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [File]
     def cells_workbook_get_workbook(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_with_http_info(name, opts)
       return data
     end
@@ -15813,6 +18727,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_get_workbook_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook ..."
       end
@@ -15874,6 +18789,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [StyleResponse]
     def cells_workbook_get_workbook_default_style(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_default_style() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_default_style_with_http_info(name, opts)
       return data
     end
@@ -15886,6 +18802,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(StyleResponse, Fixnum, Hash)>] StyleResponse data, response status code and response headers
     def cells_workbook_get_workbook_default_style_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_default_style_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_default_style ..."
       end
@@ -15938,6 +18855,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [NameResponse]
     def cells_workbook_get_workbook_name(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_name() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_name_with_http_info(name, name_name, opts)
       return data
     end
@@ -15951,6 +18869,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(NameResponse, Fixnum, Hash)>] NameResponse data, response status code and response headers
     def cells_workbook_get_workbook_name_with_http_info(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_name_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_name ..."
       end
@@ -16007,6 +18926,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [RangeValueResponse]
     def cells_workbook_get_workbook_name_value(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_name_value() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_name_value_with_http_info(name, name_name, opts)
       return data
     end
@@ -16020,6 +18940,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(RangeValueResponse, Fixnum, Hash)>] RangeValueResponse data, response status code and response headers
     def cells_workbook_get_workbook_name_value_with_http_info(name, name_name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_name_value_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_name_value ..."
       end
@@ -16075,6 +18996,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [NamesResponse]
     def cells_workbook_get_workbook_names(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_names() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_names_with_http_info(name, opts)
       return data
     end
@@ -16087,6 +19009,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(NamesResponse, Fixnum, Hash)>] NamesResponse data, response status code and response headers
     def cells_workbook_get_workbook_names_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_names_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_names ..."
       end
@@ -16138,6 +19061,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [WorkbookSettingsResponse]
     def cells_workbook_get_workbook_settings(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_settings() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_settings_with_http_info(name, opts)
       return data
     end
@@ -16150,6 +19074,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookSettingsResponse, Fixnum, Hash)>] WorkbookSettingsResponse data, response status code and response headers
     def cells_workbook_get_workbook_settings_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_settings_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_settings ..."
       end
@@ -16201,6 +19126,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_workbook_get_workbook_text_items(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_text_items() is deprecated."
       data, _status_code, _headers = cells_workbook_get_workbook_text_items_with_http_info(name, opts)
       return data
     end
@@ -16213,6 +19139,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_workbook_get_workbook_text_items_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_get_workbook_text_items_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_get_workbook_text_items ..."
       end
@@ -16267,6 +19194,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_autofit_workbook_columns(name, opts = {})
+      warn "Warning: #cells_workbook_post_autofit_workbook_columns() is deprecated."
       data, _status_code, _headers = cells_workbook_post_autofit_workbook_columns_with_http_info(name, opts)
       return data
     end
@@ -16282,6 +19210,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_autofit_workbook_columns_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_autofit_workbook_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_autofit_workbook_columns ..."
       end
@@ -16339,6 +19268,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_autofit_workbook_rows(name, opts = {})
+      warn "Warning: #cells_workbook_post_autofit_workbook_rows() is deprecated."
       data, _status_code, _headers = cells_workbook_post_autofit_workbook_rows_with_http_info(name, opts)
       return data
     end
@@ -16355,6 +19285,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_autofit_workbook_rows_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_autofit_workbook_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_autofit_workbook_rows ..."
       end
@@ -16411,6 +19342,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_digital_signature(name, digitalsignaturefile, password, opts = {})
+      warn "Warning: #cells_workbook_post_digital_signature() is deprecated."
       data, _status_code, _headers = cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, opts)
       return data
     end
@@ -16425,6 +19357,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_digital_signature_with_http_info(name, digitalsignaturefile, password, opts = {})
+      warn "Warning: #cells_workbook_post_digital_signature_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_digital_signature ..."
       end
@@ -16487,6 +19420,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_encrypt_document(name, opts = {})
+      warn "Warning: #cells_workbook_post_encrypt_document() is deprecated."
       data, _status_code, _headers = cells_workbook_post_encrypt_document_with_http_info(name, opts)
       return data
     end
@@ -16500,6 +19434,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_encrypt_document_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_encrypt_document_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_encrypt_document ..."
       end
@@ -16552,6 +19487,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_import_data(name, import_data, opts = {})
+      warn "Warning: #cells_workbook_post_import_data() is deprecated."
       data, _status_code, _headers = cells_workbook_post_import_data_with_http_info(name, import_data, opts)
       return data
     end
@@ -16565,6 +19501,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_import_data_with_http_info(name, import_data, opts = {})
+      warn "Warning: #cells_workbook_post_import_data_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_import_data ..."
       end
@@ -16621,6 +19558,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_protect_document(name, opts = {})
+      warn "Warning: #cells_workbook_post_protect_document() is deprecated."
       data, _status_code, _headers = cells_workbook_post_protect_document_with_http_info(name, opts)
       return data
     end
@@ -16634,6 +19572,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_protect_document_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_protect_document_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_protect_document ..."
       end
@@ -16687,6 +19626,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_workbook_calculate_formula(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_calculate_formula() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbook_calculate_formula_with_http_info(name, opts)
       return data
     end
@@ -16701,6 +19641,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_workbook_calculate_formula_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_calculate_formula_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbook_calculate_formula ..."
       end
@@ -16756,6 +19697,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [File]
     def cells_workbook_post_workbook_get_smart_marker_result(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_get_smart_marker_result() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, opts)
       return data
     end
@@ -16771,6 +19713,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_post_workbook_get_smart_marker_result_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_get_smart_marker_result_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbook_get_smart_marker_result ..."
       end
@@ -16826,6 +19769,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_post_workbook_settings(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_settings() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbook_settings_with_http_info(name, opts)
       return data
     end
@@ -16839,6 +19783,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_post_workbook_settings_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_settings_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbook_settings ..."
       end
@@ -16897,6 +19842,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [SplitResultResponse]
     def cells_workbook_post_workbook_split(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_split() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbook_split_with_http_info(name, opts)
       return data
     end
@@ -16916,6 +19862,7 @@ module AsposeCellsCloud
     # @option opts [String] :out_storage_name output storage name.
     # @return [Array<(SplitResultResponse, Fixnum, Hash)>] SplitResultResponse data, response status code and response headers
     def cells_workbook_post_workbook_split_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_post_workbook_split_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbook_split ..."
       end
@@ -16976,6 +19923,7 @@ module AsposeCellsCloud
     # @option opts [String] :merged_storage_name merged file storage name.
     # @return [WorkbookResponse]
     def cells_workbook_post_workbooks_merge(name, merge_with, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_merge() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts)
       return data
     end
@@ -16990,6 +19938,7 @@ module AsposeCellsCloud
     # @option opts [String] :merged_storage_name merged file storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
     def cells_workbook_post_workbooks_merge_with_http_info(name, merge_with, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_merge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbooks_merge ..."
       end
@@ -17049,6 +19998,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [WorkbookReplaceResponse]
     def cells_workbook_post_workbooks_text_replace(name, old_value, new_value, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_text_replace() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbooks_text_replace_with_http_info(name, old_value, new_value, opts)
       return data
     end
@@ -17063,6 +20013,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookReplaceResponse, Fixnum, Hash)>] WorkbookReplaceResponse data, response status code and response headers
     def cells_workbook_post_workbooks_text_replace_with_http_info(name, old_value, new_value, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_text_replace_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbooks_text_replace ..."
       end
@@ -17125,6 +20076,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_workbook_post_workbooks_text_search(name, text, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_text_search() is deprecated."
       data, _status_code, _headers = cells_workbook_post_workbooks_text_search_with_http_info(name, text, opts)
       return data
     end
@@ -17138,6 +20090,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_workbook_post_workbooks_text_search_with_http_info(name, text, opts = {})
+      warn "Warning: #cells_workbook_post_workbooks_text_search_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_post_workbooks_text_search ..."
       end
@@ -17196,6 +20149,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_workbook_put_convert_workbook(file, opts = {})
+      warn "Warning: #cells_workbook_put_convert_workbook() is deprecated."
       data, _status_code, _headers = cells_workbook_put_convert_workbook_with_http_info(file, opts)
       return data
     end
@@ -17210,6 +20164,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_workbook_put_convert_workbook_with_http_info(file, opts = {})
+      warn "Warning: #cells_workbook_put_convert_workbook_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_convert_workbook ..."
       end
@@ -17269,6 +20224,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_put_document_protect_from_changes(name, opts = {})
+      warn "Warning: #cells_workbook_put_document_protect_from_changes() is deprecated."
       data, _status_code, _headers = cells_workbook_put_document_protect_from_changes_with_http_info(name, opts)
       return data
     end
@@ -17282,6 +20238,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_document_protect_from_changes_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_put_document_protect_from_changes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_document_protect_from_changes ..."
       end
@@ -17334,6 +20291,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_workbook_put_workbook_background(name, png, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_background() is deprecated."
       data, _status_code, _headers = cells_workbook_put_workbook_background_with_http_info(name, png, opts)
       return data
     end
@@ -17347,6 +20305,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_workbook_background_with_http_info(name, png, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_background_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_workbook_background ..."
       end
@@ -17405,6 +20364,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [WorkbookResponse]
     def cells_workbook_put_workbook_create(name, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_create() is deprecated."
       data, _status_code, _headers = cells_workbook_put_workbook_create_with_http_info(name, opts)
       return data
     end
@@ -17420,6 +20380,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(WorkbookResponse, Fixnum, Hash)>] WorkbookResponse data, response status code and response headers
     def cells_workbook_put_workbook_create_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_create_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_workbook_create ..."
       end
@@ -17475,6 +20436,7 @@ module AsposeCellsCloud
     # @option opts [TextWaterMarkerRequest] :text_water_marker_request The text water marker request.
     # @return [CellsCloudResponse]
     def cells_workbook_put_workbook_water_marker(name, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_water_marker() is deprecated."
       data, _status_code, _headers = cells_workbook_put_workbook_water_marker_with_http_info(name, opts)
       return data
     end
@@ -17488,6 +20450,7 @@ module AsposeCellsCloud
     # @option opts [TextWaterMarkerRequest] :text_water_marker_request The text water marker request.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_workbook_put_workbook_water_marker_with_http_info(name, opts = {})
+      warn "Warning: #cells_workbook_put_workbook_water_marker_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_workbook_put_workbook_water_marker ..."
       end
@@ -17541,6 +20504,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheet_validations_delete_worksheet_validation(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_delete_worksheet_validation() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
       return data
     end
@@ -17555,6 +20519,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheet_validations_delete_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_delete_worksheet_validation_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_delete_worksheet_validation ..."
       end
@@ -17615,6 +20580,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheet_validations_delete_worksheet_validations(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_delete_worksheet_validations() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -17628,6 +20594,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheet_validations_delete_worksheet_validations_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_delete_worksheet_validations_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_delete_worksheet_validations ..."
       end
@@ -17685,6 +20652,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_get_worksheet_validation(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_get_worksheet_validation() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_get_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
       return data
     end
@@ -17699,6 +20667,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_get_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_get_worksheet_validation_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_get_worksheet_validation ..."
       end
@@ -17759,6 +20728,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ValidationsResponse]
     def cells_worksheet_validations_get_worksheet_validations(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_get_worksheet_validations() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_get_worksheet_validations_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -17772,6 +20742,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationsResponse, Fixnum, Hash)>] ValidationsResponse data, response status code and response headers
     def cells_worksheet_validations_get_worksheet_validations_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_get_worksheet_validations_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_get_worksheet_validations ..."
       end
@@ -17830,6 +20801,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_post_worksheet_validation(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_post_worksheet_validation() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_post_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts)
       return data
     end
@@ -17845,6 +20817,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_post_worksheet_validation_with_http_info(name, sheet_name, validation_index, opts = {})
+      warn "Warning: #cells_worksheet_validations_post_worksheet_validation_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_post_worksheet_validation ..."
       end
@@ -17907,6 +20880,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [ValidationResponse]
     def cells_worksheet_validations_put_worksheet_validation(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_put_worksheet_validation() is deprecated."
       data, _status_code, _headers = cells_worksheet_validations_put_worksheet_validation_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -17922,6 +20896,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(ValidationResponse, Fixnum, Hash)>] ValidationResponse data, response status code and response headers
     def cells_worksheet_validations_put_worksheet_validation_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheet_validations_put_worksheet_validation_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheet_validations_put_worksheet_validation ..."
       end
@@ -17980,6 +20955,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_unprotect_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_unprotect_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -17994,6 +20970,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_unprotect_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_unprotect_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_unprotect_worksheet ..."
       end
@@ -18050,6 +21027,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18063,6 +21041,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheet ..."
       end
@@ -18119,6 +21098,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_background(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_background() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheet_background_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18132,6 +21112,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_background_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_background_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheet_background ..."
       end
@@ -18189,6 +21170,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_comment(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_comment() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -18203,6 +21185,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_comment_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheet_comment ..."
       end
@@ -18263,6 +21246,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_comments(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_comments() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheet_comments_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18276,6 +21260,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_comments_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_comments_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheet_comments ..."
       end
@@ -18336,6 +21321,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_freeze_panes() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts)
       return data
     end
@@ -18353,6 +21339,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheet_freeze_panes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheet_freeze_panes ..."
       end
@@ -18429,6 +21416,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [CellsCloudResponse]
     def cells_worksheets_delete_worksheets(name, match_condition, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheets() is deprecated."
       data, _status_code, _headers = cells_worksheets_delete_worksheets_with_http_info(name, match_condition, opts)
       return data
     end
@@ -18442,6 +21430,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_delete_worksheets_with_http_info(name, match_condition, opts = {})
+      warn "Warning: #cells_worksheets_delete_worksheets_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_delete_worksheets ..."
       end
@@ -18497,6 +21486,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [RangesResponse]
     def cells_worksheets_get_named_ranges(name, opts = {})
+      warn "Warning: #cells_worksheets_get_named_ranges() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_named_ranges_with_http_info(name, opts)
       return data
     end
@@ -18509,6 +21499,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(RangesResponse, Fixnum, Hash)>] RangesResponse data, response status code and response headers
     def cells_worksheets_get_named_ranges_with_http_info(name, opts = {})
+      warn "Warning: #cells_worksheets_get_named_ranges_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_named_ranges ..."
       end
@@ -18561,6 +21552,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Object]
     def cells_worksheets_get_page_count(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_page_count() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_page_count_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18574,6 +21566,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def cells_worksheets_get_page_count_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_page_count_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_page_count ..."
       end
@@ -18635,6 +21628,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [File]
     def cells_worksheets_get_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18653,6 +21647,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def cells_worksheets_get_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet ..."
       end
@@ -18715,6 +21710,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [SingleValueResponse]
     def cells_worksheets_get_worksheet_calculate_formula(name, sheet_name, formula, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_calculate_formula() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_calculate_formula_with_http_info(name, sheet_name, formula, opts)
       return data
     end
@@ -18729,6 +21725,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(SingleValueResponse, Fixnum, Hash)>] SingleValueResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_calculate_formula_with_http_info(name, sheet_name, formula, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_calculate_formula_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_calculate_formula ..."
       end
@@ -18791,6 +21788,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CommentResponse]
     def cells_worksheets_get_worksheet_comment(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_comment() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -18805,6 +21803,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentResponse, Fixnum, Hash)>] CommentResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_comment_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_comment ..."
       end
@@ -18865,6 +21864,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CommentsResponse]
     def cells_worksheets_get_worksheet_comments(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_comments() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_comments_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -18878,6 +21878,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentsResponse, Fixnum, Hash)>] CommentsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_comments_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_comments_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_comments ..."
       end
@@ -18935,6 +21936,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [MergedCellResponse]
     def cells_worksheets_get_worksheet_merged_cell(name, sheet_name, merged_cell_index, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_merged_cell() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_merged_cell_with_http_info(name, sheet_name, merged_cell_index, opts)
       return data
     end
@@ -18949,6 +21951,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(MergedCellResponse, Fixnum, Hash)>] MergedCellResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_merged_cell_with_http_info(name, sheet_name, merged_cell_index, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_merged_cell_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_merged_cell ..."
       end
@@ -19009,6 +22012,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [MergedCellsResponse]
     def cells_worksheets_get_worksheet_merged_cells(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_merged_cells() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_merged_cells_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -19022,6 +22026,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(MergedCellsResponse, Fixnum, Hash)>] MergedCellsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_merged_cells_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_merged_cells_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_merged_cells ..."
       end
@@ -19078,6 +22083,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_worksheets_get_worksheet_text_items(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_text_items() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheet_text_items_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -19091,6 +22097,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_worksheets_get_worksheet_text_items_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheet_text_items_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheet_text_items ..."
       end
@@ -19146,6 +22153,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [WorksheetsResponse]
     def cells_worksheets_get_worksheets(name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheets() is deprecated."
       data, _status_code, _headers = cells_worksheets_get_worksheets_with_http_info(name, opts)
       return data
     end
@@ -19158,6 +22166,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetsResponse, Fixnum, Hash)>] WorksheetsResponse data, response status code and response headers
     def cells_worksheets_get_worksheets_with_http_info(name, opts = {})
+      warn "Warning: #cells_worksheets_get_worksheets_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_get_worksheets ..."
       end
@@ -19215,6 +22224,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_columns(name, sheet_name, first_column, last_column, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_columns() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_columns_with_http_info(name, sheet_name, first_column, last_column, opts)
       return data
     end
@@ -19233,6 +22243,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_columns_with_http_info(name, sheet_name, first_column, last_column, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_columns_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_autofit_worksheet_columns ..."
       end
@@ -19305,6 +22316,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_row(name, sheet_name, row_index, first_column, last_column, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_row() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_row_with_http_info(name, sheet_name, row_index, first_column, last_column, opts)
       return data
     end
@@ -19322,6 +22334,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_row_with_http_info(name, sheet_name, row_index, first_column, last_column, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_row_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_autofit_worksheet_row ..."
       end
@@ -19397,6 +22410,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_autofit_worksheet_rows(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_rows() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_autofit_worksheet_rows_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -19414,6 +22428,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_autofit_worksheet_rows_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_autofit_worksheet_rows_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_autofit_worksheet_rows ..."
       end
@@ -19477,6 +22492,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_copy_worksheet(name, sheet_name, source_sheet, opts = {})
+      warn "Warning: #cells_worksheets_post_copy_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_copy_worksheet_with_http_info(name, sheet_name, source_sheet, opts)
       return data
     end
@@ -19494,6 +22510,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_copy_worksheet_with_http_info(name, sheet_name, source_sheet, opts = {})
+      warn "Warning: #cells_worksheets_post_copy_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_copy_worksheet ..."
       end
@@ -19558,6 +22575,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_move_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_move_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_move_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -19572,6 +22590,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_move_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_move_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_move_worksheet ..."
       end
@@ -19629,6 +22648,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_rename_worksheet(name, sheet_name, newname, opts = {})
+      warn "Warning: #cells_worksheets_post_rename_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_rename_worksheet_with_http_info(name, sheet_name, newname, opts)
       return data
     end
@@ -19643,6 +22663,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_rename_worksheet_with_http_info(name, sheet_name, newname, opts = {})
+      warn "Warning: #cells_worksheets_post_rename_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_rename_worksheet ..."
       end
@@ -19705,6 +22726,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_update_worksheet_property(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_update_worksheet_property() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -19719,6 +22741,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_update_worksheet_property_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_post_update_worksheet_property_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_update_worksheet_property ..."
       end
@@ -19776,6 +22799,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_update_worksheet_zoom(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_worksheets_post_update_worksheet_zoom() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_update_worksheet_zoom_with_http_info(name, sheet_name, value, opts)
       return data
     end
@@ -19790,6 +22814,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_update_worksheet_zoom_with_http_info(name, sheet_name, value, opts = {})
+      warn "Warning: #cells_worksheets_post_update_worksheet_zoom_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_update_worksheet_zoom ..."
       end
@@ -19853,6 +22878,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_worksheet_comment(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_comment() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -19868,6 +22894,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_comment_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_worksheet_comment ..."
       end
@@ -19930,6 +22957,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_post_worksheet_range_sort(name, sheet_name, cell_area, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_range_sort() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_worksheet_range_sort_with_http_info(name, sheet_name, cell_area, opts)
       return data
     end
@@ -19945,6 +22973,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_range_sort_with_http_info(name, sheet_name, cell_area, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_range_sort_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_worksheet_range_sort ..."
       end
@@ -20007,6 +23036,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [TextItemsResponse]
     def cells_worksheets_post_worksheet_text_search(name, sheet_name, text, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_text_search() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_worksheet_text_search_with_http_info(name, sheet_name, text, opts)
       return data
     end
@@ -20021,6 +23051,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(TextItemsResponse, Fixnum, Hash)>] TextItemsResponse data, response status code and response headers
     def cells_worksheets_post_worksheet_text_search_with_http_info(name, sheet_name, text, opts = {})
+      warn "Warning: #cells_worksheets_post_worksheet_text_search_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_worksheet_text_search ..."
       end
@@ -20084,6 +23115,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [WorksheetReplaceResponse]
     def cells_worksheets_post_worsheet_text_replace(name, sheet_name, old_value, new_value, opts = {})
+      warn "Warning: #cells_worksheets_post_worsheet_text_replace() is deprecated."
       data, _status_code, _headers = cells_worksheets_post_worsheet_text_replace_with_http_info(name, sheet_name, old_value, new_value, opts)
       return data
     end
@@ -20099,6 +23131,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(WorksheetReplaceResponse, Fixnum, Hash)>] WorksheetReplaceResponse data, response status code and response headers
     def cells_worksheets_post_worsheet_text_replace_with_http_info(name, sheet_name, old_value, new_value, opts = {})
+      warn "Warning: #cells_worksheets_post_worsheet_text_replace_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_post_worsheet_text_replace ..."
       end
@@ -20167,6 +23200,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_add_new_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_put_add_new_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_add_new_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -20182,6 +23216,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_add_new_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_put_add_new_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_add_new_worksheet ..."
       end
@@ -20241,6 +23276,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_change_visibility_worksheet(name, sheet_name, is_visible, opts = {})
+      warn "Warning: #cells_worksheets_put_change_visibility_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_change_visibility_worksheet_with_http_info(name, sheet_name, is_visible, opts)
       return data
     end
@@ -20255,6 +23291,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_change_visibility_worksheet_with_http_info(name, sheet_name, is_visible, opts = {})
+      warn "Warning: #cells_worksheets_put_change_visibility_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_change_visibility_worksheet ..."
       end
@@ -20317,6 +23354,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_protect_worksheet(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_put_protect_worksheet() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts)
       return data
     end
@@ -20331,6 +23369,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_protect_worksheet_with_http_info(name, sheet_name, opts = {})
+      warn "Warning: #cells_worksheets_put_protect_worksheet_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_protect_worksheet ..."
       end
@@ -20388,6 +23427,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_worksheet_background(name, sheet_name, png, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_background() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_worksheet_background_with_http_info(name, sheet_name, png, opts)
       return data
     end
@@ -20402,6 +23442,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_background_with_http_info(name, sheet_name, png, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_background_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_worksheet_background ..."
       end
@@ -20464,6 +23505,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CommentResponse]
     def cells_worksheets_put_worksheet_comment(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_comment() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts)
       return data
     end
@@ -20479,6 +23521,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CommentResponse, Fixnum, Hash)>] CommentResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_comment_with_http_info(name, sheet_name, cell_name, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_comment_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_worksheet_comment ..."
       end
@@ -20543,6 +23586,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [CellsCloudResponse]
     def cells_worksheets_put_worksheet_freeze_panes(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_freeze_panes() is deprecated."
       data, _status_code, _headers = cells_worksheets_put_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts)
       return data
     end
@@ -20560,6 +23604,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name storage name.
     # @return [Array<(CellsCloudResponse, Fixnum, Hash)>] CellsCloudResponse data, response status code and response headers
     def cells_worksheets_put_worksheet_freeze_panes_with_http_info(name, sheet_name, row, column, freezed_rows, freezed_columns, opts = {})
+      warn "Warning: #cells_worksheets_put_worksheet_freeze_panes_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.cells_worksheets_put_worksheet_freeze_panes ..."
       end
@@ -20636,7 +23681,8 @@ module AsposeCellsCloud
     # @option opts [String] :dest_storage_name Destination storage name
     # @option opts [String] :version_id File version ID to copy
     # @return [nil]
-    def copy_file(src_path, dest_path, opts = {})
+    def copy_file_(src_path, dest_path, opts = {})
+      warn "Warning: #copy_file() is deprecated."
       copy_file_with_http_info(src_path, dest_path, opts)
       return nil
     end
@@ -20651,6 +23697,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID to copy
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def copy_file_with_http_info(src_path, dest_path, opts = {})
+      warn "Warning: #copy_file_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.copy_file ..."
       end
@@ -20707,7 +23754,8 @@ module AsposeCellsCloud
     # @option opts [String] :src_storage_name Source storage name
     # @option opts [String] :dest_storage_name Destination storage name
     # @return [nil]
-    def copy_folder(src_path, dest_path, opts = {})
+    def copy_folder_(src_path, dest_path, opts = {})
+      warn "Warning: #copy_folder() is deprecated."
       copy_folder_with_http_info(src_path, dest_path, opts)
       return nil
     end
@@ -20721,6 +23769,7 @@ module AsposeCellsCloud
     # @option opts [String] :dest_storage_name Destination storage name
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def copy_folder_with_http_info(src_path, dest_path, opts = {})
+      warn "Warning: #copy_folder_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.copy_folder ..."
       end
@@ -20774,7 +23823,8 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :storage_name Storage name
     # @return [nil]
-    def create_folder(path, opts = {})
+    def create_folder_(path, opts = {})
+      warn "Warning: #create_folder() is deprecated."
       create_folder_with_http_info(path, opts)
       return nil
     end
@@ -20786,6 +23836,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def create_folder_with_http_info(path, opts = {})
+      warn "Warning: #create_folder_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.create_folder ..."
       end
@@ -20834,7 +23885,8 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @option opts [String] :version_id File version ID to delete
     # @return [nil]
-    def delete_file(path, opts = {})
+    def delete_file_(path, opts = {})
+      warn "Warning: #delete_file() is deprecated."
       delete_file_with_http_info(path, opts)
       return nil
     end
@@ -20847,6 +23899,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID to delete
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_file_with_http_info(path, opts = {})
+      warn "Warning: #delete_file_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.delete_file ..."
       end
@@ -20896,7 +23949,8 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @option opts [BOOLEAN] :recursive Enable to delete folders, subfolders and files (default to false)
     # @return [nil]
-    def delete_folder(path, opts = {})
+    def delete_folder_(path, opts = {})
+      warn "Warning: #delete_folder() is deprecated."
       delete_folder_with_http_info(path, opts)
       return nil
     end
@@ -20909,6 +23963,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :recursive Enable to delete folders, subfolders and files
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_folder_with_http_info(path, opts = {})
+      warn "Warning: #delete_folder_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.delete_folder ..."
       end
@@ -20958,7 +24013,8 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @option opts [String] :version_id File version ID to download
     # @return [File]
-    def download_file(path, opts = {})
+    def download_file_(path, opts = {})
+      warn "Warning: #download_file() is deprecated."
       data, _status_code, _headers = download_file_with_http_info(path, opts)
       return data
     end
@@ -20971,6 +24027,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID to download
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def download_file_with_http_info(path, opts = {})
+      warn "Warning: #download_file_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.download_file ..."
       end
@@ -21019,7 +24076,8 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :storage_name Storage name
     # @return [DiscUsage]
-    def get_disc_usage(opts = {})
+    def get_disc_usage_(opts = {})
+      warn "Warning: #get_disc_usage() is deprecated."
       data, _status_code, _headers = get_disc_usage_with_http_info(opts)
       return data
     end
@@ -21030,6 +24088,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @return [Array<(DiscUsage, Fixnum, Hash)>] DiscUsage data, response status code and response headers
     def get_disc_usage_with_http_info(opts = {})
+      warn "Warning: #get_disc_usage_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.get_disc_usage ..."
       end
@@ -21074,7 +24133,8 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :storage_name Storage name
     # @return [FileVersions]
-    def get_file_versions(path, opts = {})
+    def get_file_versions_(path, opts = {})
+      warn "Warning: #get_file_versions() is deprecated."
       data, _status_code, _headers = get_file_versions_with_http_info(path, opts)
       return data
     end
@@ -21086,6 +24146,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @return [Array<(FileVersions, Fixnum, Hash)>] FileVersions data, response status code and response headers
     def get_file_versions_with_http_info(path, opts = {})
+      warn "Warning: #get_file_versions_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.get_file_versions ..."
       end
@@ -21134,7 +24195,8 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :storage_name Storage name
     # @return [FilesList]
-    def get_files_list(path, opts = {})
+    def get_files_list_(path, opts = {})
+      warn "Warning: #get_files_list() is deprecated."
       data, _status_code, _headers = get_files_list_with_http_info(path, opts)
       return data
     end
@@ -21146,6 +24208,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @return [Array<(FilesList, Fixnum, Hash)>] FilesList data, response status code and response headers
     def get_files_list_with_http_info(path, opts = {})
+      warn "Warning: #get_files_list_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.get_files_list ..."
       end
@@ -21198,6 +24261,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID to move
     # @return [nil]
     def move_file(src_path, dest_path, opts = {})
+      warn "Warning: #move_file() is deprecated."
       move_file_with_http_info(src_path, dest_path, opts)
       return nil
     end
@@ -21212,6 +24276,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID to move
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def move_file_with_http_info(src_path, dest_path, opts = {})
+      warn "Warning: #move_file_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.move_file ..."
       end
@@ -21268,7 +24333,8 @@ module AsposeCellsCloud
     # @option opts [String] :src_storage_name Source storage name
     # @option opts [String] :dest_storage_name Destination storage name
     # @return [nil]
-    def move_folder(src_path, dest_path, opts = {})
+    def move_folder_(src_path, dest_path, opts = {})
+      warn "Warning: #move_folder() is deprecated."
       move_folder_with_http_info(src_path, dest_path, opts)
       return nil
     end
@@ -21282,6 +24348,7 @@ module AsposeCellsCloud
     # @option opts [String] :dest_storage_name Destination storage name
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def move_folder_with_http_info(src_path, dest_path, opts = {})
+      warn "Warning: #move_folder_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.move_folder ..."
       end
@@ -21337,6 +24404,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [AccessTokenResponse]
     def o_auth_post(grant_type, client_id, client_secret, opts = {})
+      warn "Warning: #o_auth_post() is deprecated."
       data, _status_code, _headers = o_auth_post_with_http_info(grant_type, client_id, client_secret, opts)
       return data
     end
@@ -21349,6 +24417,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(AccessTokenResponse, Fixnum, Hash)>] AccessTokenResponse data, response status code and response headers
     def o_auth_post_with_http_info(grant_type, client_id, client_secret, opts = {})
+      warn "Warning: #o_auth_post_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.o_auth_post ..."
       end
@@ -21410,7 +24479,8 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @option opts [String] :version_id File version ID
     # @return [ObjectExist]
-    def object_exists(path, opts = {})
+    def object_exists_(path, opts = {})
+      warn "Warning: #object_exists() is deprecated."
       data, _status_code, _headers = object_exists_with_http_info(path, opts)
       return data
     end
@@ -21423,6 +24493,7 @@ module AsposeCellsCloud
     # @option opts [String] :version_id File version ID
     # @return [Array<(ObjectExist, Fixnum, Hash)>] ObjectExist data, response status code and response headers
     def object_exists_with_http_info(path, opts = {})
+      warn "Warning: #object_exists_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.object_exists ..."
       end
@@ -21472,6 +24543,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [File]
     def post_batch_convert(batch_convert_request, opts = {})
+      warn "Warning: #post_batch_convert() is deprecated."
       data, _status_code, _headers = post_batch_convert_with_http_info(batch_convert_request, opts)
       return data
     end
@@ -21482,6 +24554,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
     def post_batch_convert_with_http_info(batch_convert_request, opts = {})
+      warn "Warning: #post_batch_convert_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_batch_convert ..."
       end
@@ -21530,6 +24603,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_docx(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_docx() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_docx_with_http_info(file, opts)
       return data
     end
@@ -21542,6 +24616,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_docx_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_docx_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_docx ..."
       end
@@ -21595,6 +24670,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_pdf(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_pdf() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_pdf_with_http_info(file, opts)
       return data
     end
@@ -21607,6 +24683,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_pdf_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_pdf_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_pdf ..."
       end
@@ -21660,6 +24737,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_png(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_png() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_png_with_http_info(file, opts)
       return data
     end
@@ -21672,6 +24750,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_png_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_png_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_png ..."
       end
@@ -21725,6 +24804,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_pptx(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_pptx() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_pptx_with_http_info(file, opts)
       return data
     end
@@ -21737,6 +24817,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_pptx_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_pptx_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_pptx ..."
       end
@@ -21790,6 +24871,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_html(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_html() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_html_with_http_info(file, opts)
       return data
     end
@@ -21802,6 +24884,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_html_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_html_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_html ..."
       end
@@ -21855,6 +24938,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_markdown(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_markdown() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_markdown_with_http_info(file, opts)
       return data
     end
@@ -21867,6 +24951,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_markdown_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_markdown_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_markdown ..."
       end
@@ -21921,6 +25006,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_json(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_json() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_json_with_http_info(file, opts)
       return data
     end
@@ -21933,6 +25019,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_json_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_json_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_json ..."
       end
@@ -21985,6 +25072,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_sql(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_sql() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_sql_with_http_info(file, opts)
       return data
     end
@@ -21997,6 +25085,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_sql_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_sql_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_sql ..."
       end
@@ -22050,6 +25139,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction  (default to true)
     # @return [FileInfo]
     def post_convert_workbook_to_csv(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_csv() is deprecated."
       data, _status_code, _headers = post_convert_workbook_to_csv_with_http_info(file, opts)
       return data
     end
@@ -22062,6 +25152,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :check_excel_restriction 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_convert_workbook_to_csv_with_http_info(file, opts = {})
+      warn "Warning: #post_convert_workbook_to_csv_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_csv ..."
       end
@@ -22112,7 +25203,8 @@ module AsposeCellsCloud
     # @param storage_name Storage name
     # @param [Hash] opts the optional parameters
     # @return [StorageExist]
-    def storage_exists(storage_name, opts = {})
+    def storage_exists_(storage_name, opts = {})
+      warn "Warning: #storage_exists() is deprecated."
       data, _status_code, _headers = storage_exists_with_http_info(storage_name, opts)
       return data
     end
@@ -22123,6 +25215,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(StorageExist, Fixnum, Hash)>] StorageExist data, response status code and response headers
     def storage_exists_with_http_info(storage_name, opts = {})
+      warn "Warning: #storage_exists_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.storage_exists ..."
       end
@@ -22171,7 +25264,8 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @option opts [String] :storage_name Storage name
     # @return [FilesUploadResult]
-    def upload_file(path, file, opts = {})
+    def upload_file_(path, file, opts = {})
+      warn "Warning: #upload_file() is deprecated."
       data, _status_code, _headers = upload_file_with_http_info(path, file, opts)
       return data
     end
@@ -22184,6 +25278,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name Storage name
     # @return [Array<(FilesUploadResult, Fixnum, Hash)>] FilesUploadResult data, response status code and response headers
     def upload_file_with_http_info(path, file, opts = {})
+      warn "Warning: #upload_file_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: CellsApi.upload_file ..."
       end

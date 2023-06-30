@@ -1,41 +1,51 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="BarcodeResponserb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class BarcodeResponse
-    attr_accessor :barcode_value
-
-    attr_accessor :barcode_type
-
-    attr_accessor :checksum
+        #Gets or sets barcode data.                        
+        attr_accessor :barcode_value
+        #Gets or sets type of the barcode.                        
+        attr_accessor :barcode_type
+        #Gets or sets region with barcode.                        
+        attr_accessor :region
+        #Gets or sets checksum of barcode.                        
+        attr_accessor :checksum
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'barcode_value' => :'BarcodeValue',
         :'barcode_type' => :'BarcodeType',
+        :'region' => :'Region',
         :'checksum' => :'Checksum'
       }
     end
@@ -45,6 +55,7 @@ module AsposeCellsCloud
       {
         :'barcode_value' => :'String',
         :'barcode_type' => :'String',
+        :'region' => :'Array<Point>',
         :'checksum' => :'String'
       }
     end
@@ -58,15 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'BarcodeValue')
-        self.barcode_value = attributes[:'BarcodeValue']
+          self.barcode_value = attributes[:'BarcodeValue']
       end
-
       if attributes.has_key?(:'BarcodeType')
-        self.barcode_type = attributes[:'BarcodeType']
+          self.barcode_type = attributes[:'BarcodeType']
       end
-
+      if attributes.has_key?(:'Region')
+          self.region = attributes[:'Region']
+      end
       if attributes.has_key?(:'Checksum')
-        self.checksum = attributes[:'Checksum']
+          self.checksum = attributes[:'Checksum']
       end
 
     end
@@ -75,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @barcode_value.nil?
+          invalid_properties.push("invalid value for 'barcode_value', barcode_value cannot be nil.")
+      end
+      if @barcode_type.nil?
+          invalid_properties.push("invalid value for 'barcode_type', barcode_type cannot be nil.")
+      end
+      if @region.nil?
+          invalid_properties.push("invalid value for 'region', region cannot be nil.")
+      end
+      if @checksum.nil?
+          invalid_properties.push("invalid value for 'checksum', checksum cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @barcode_value.nil?
+      return false if @barcode_type.nil?
+      return false if @region.nil?
+      return false if @checksum.nil?
       return true
     end
 
@@ -91,7 +120,9 @@ module AsposeCellsCloud
       self.class == o.class &&
           barcode_value == o.barcode_value &&
           barcode_type == o.barcode_type &&
+          region == o.region &&
           checksum == o.checksum 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -103,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [barcode_value, barcode_type, checksum, region].hash
+      [ barcode_value , barcode_type , region , checksum ].hash
     end
 
     # Builds the object from hash

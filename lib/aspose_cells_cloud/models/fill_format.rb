@@ -1,64 +1,70 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="FillFormatrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class FillFormat
-    attr_accessor :texture_fill
-
-    attr_accessor :image_data
-
-    attr_accessor :pattern_fill
-
-    attr_accessor :solid_fill
-
-    attr_accessor :gradient_fill
-
-    attr_accessor :type
-
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :solid_fill
+        #            
+        attr_accessor :pattern_fill
+        #            
+        attr_accessor :texture_fill
+        #            
+        attr_accessor :gradient_fill
+        #            
+        attr_accessor :image_data
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'texture_fill' => :'TextureFill',
-        :'image_data' => :'ImageData',
-        :'pattern_fill' => :'PatternFill',
+        :'type' => :'Type',
         :'solid_fill' => :'SolidFill',
+        :'pattern_fill' => :'PatternFill',
+        :'texture_fill' => :'TextureFill',
         :'gradient_fill' => :'GradientFill',
-        :'type' => :'Type'
+        :'image_data' => :'ImageData'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'texture_fill' => :'TextureFill',
-        :'image_data' => :'String',
-        :'pattern_fill' => :'PatternFill',
+        :'type' => :'String',
         :'solid_fill' => :'SolidFill',
+        :'pattern_fill' => :'PatternFill',
+        :'texture_fill' => :'TextureFill',
         :'gradient_fill' => :'GradientFill',
-        :'type' => :'String'
+        :'image_data' => :'String'
       }
     end
 
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'TextureFill')
-        self.texture_fill = attributes[:'TextureFill']
-      end
-
-      if attributes.has_key?(:'ImageData')
-        self.image_data = attributes[:'ImageData']
-      end
-
-      if attributes.has_key?(:'PatternFill')
-        self.pattern_fill = attributes[:'PatternFill']
-      end
-
-      if attributes.has_key?(:'SolidFill')
-        self.solid_fill = attributes[:'SolidFill']
-      end
-
-      if attributes.has_key?(:'GradientFill')
-        self.gradient_fill = attributes[:'GradientFill']
-      end
-
       if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'SolidFill')
+          self.solid_fill = attributes[:'SolidFill']
+      end
+      if attributes.has_key?(:'PatternFill')
+          self.pattern_fill = attributes[:'PatternFill']
+      end
+      if attributes.has_key?(:'TextureFill')
+          self.texture_fill = attributes[:'TextureFill']
+      end
+      if attributes.has_key?(:'GradientFill')
+          self.gradient_fill = attributes[:'GradientFill']
+      end
+      if attributes.has_key?(:'ImageData')
+          self.image_data = attributes[:'ImageData']
       end
 
     end
@@ -100,8 +101,23 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        invalid_properties.push("invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.")
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @solid_fill.nil?
+          invalid_properties.push("invalid value for 'solid_fill', solid_fill cannot be nil.")
+      end
+      if @pattern_fill.nil?
+          invalid_properties.push("invalid value for 'pattern_fill', pattern_fill cannot be nil.")
+      end
+      if @texture_fill.nil?
+          invalid_properties.push("invalid value for 'texture_fill', texture_fill cannot be nil.")
+      end
+      if @gradient_fill.nil?
+          invalid_properties.push("invalid value for 'gradient_fill', gradient_fill cannot be nil.")
+      end
+      if @image_data.nil?
+          invalid_properties.push("invalid value for 'image_data', image_data cannot be nil.")
       end
 
       return invalid_properties
@@ -110,19 +126,13 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@image_data.nil? && @image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
+      return false if @type.nil?
+      return false if @solid_fill.nil?
+      return false if @pattern_fill.nil?
+      return false if @texture_fill.nil?
+      return false if @gradient_fill.nil?
+      return false if @image_data.nil?
       return true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] image_data Value to be assigned
-    def image_data=(image_data)
-
-      if !image_data.nil? && image_data !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        fail ArgumentError, "invalid value for 'image_data', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/."
-      end
-
-      @image_data = image_data
     end
 
     # Checks equality by comparing each attribute.
@@ -130,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          texture_fill == o.texture_fill &&
-          image_data == o.image_data &&
-          pattern_fill == o.pattern_fill &&
+          type == o.type &&
           solid_fill == o.solid_fill &&
+          pattern_fill == o.pattern_fill &&
+          texture_fill == o.texture_fill &&
           gradient_fill == o.gradient_fill &&
-          type == o.type
+          image_data == o.image_data 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -147,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [texture_fill, image_data, pattern_fill, solid_fill, gradient_fill, type].hash
+      [ type , solid_fill , pattern_fill , texture_fill , gradient_fill , image_data ].hash
     end
 
     # Builds the object from hash

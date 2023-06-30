@@ -1,50 +1,56 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Arearb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Area
-    attr_accessor :foreground_color
-
-    attr_accessor :background_color
-
-    attr_accessor :format
-
-    attr_accessor :fill_format
-
-    attr_accessor :invert_if_negative
-
-    attr_accessor :transparency
-
+        #            
+        attr_accessor :background_color
+        #            
+        attr_accessor :fill_format
+        #            
+        attr_accessor :foreground_color
+        #            
+        attr_accessor :format
+        #            
+        attr_accessor :invert_if_negative
+        #            
+        attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'foreground_color' => :'ForegroundColor',
         :'background_color' => :'BackgroundColor',
-        :'format' => :'Format',
         :'fill_format' => :'FillFormat',
+        :'foreground_color' => :'ForegroundColor',
+        :'format' => :'Format',
         :'invert_if_negative' => :'InvertIfNegative',
         :'transparency' => :'Transparency'
       }
@@ -53,10 +59,10 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'foreground_color' => :'Color',
         :'background_color' => :'Color',
-        :'format' => :'String',
         :'fill_format' => :'FillFormat',
+        :'foreground_color' => :'Color',
+        :'format' => :'String',
         :'invert_if_negative' => :'BOOLEAN',
         :'transparency' => :'Float'
       }
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ForegroundColor')
-        self.foreground_color = attributes[:'ForegroundColor']
-      end
-
       if attributes.has_key?(:'BackgroundColor')
-        self.background_color = attributes[:'BackgroundColor']
+          self.background_color = attributes[:'BackgroundColor']
       end
-
-      if attributes.has_key?(:'Format')
-        self.format = attributes[:'Format']
-      end
-
       if attributes.has_key?(:'FillFormat')
-        self.fill_format = attributes[:'FillFormat']
+          self.fill_format = attributes[:'FillFormat']
       end
-
+      if attributes.has_key?(:'ForegroundColor')
+          self.foreground_color = attributes[:'ForegroundColor']
+      end
+      if attributes.has_key?(:'Format')
+          self.format = attributes[:'Format']
+      end
       if attributes.has_key?(:'InvertIfNegative')
-        self.invert_if_negative = attributes[:'InvertIfNegative']
+          self.invert_if_negative = attributes[:'InvertIfNegative']
       end
-
       if attributes.has_key?(:'Transparency')
-        self.transparency = attributes[:'Transparency']
+          self.transparency = attributes[:'Transparency']
       end
 
     end
@@ -100,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @background_color.nil?
+          invalid_properties.push("invalid value for 'background_color', background_color cannot be nil.")
+      end
+      if @fill_format.nil?
+          invalid_properties.push("invalid value for 'fill_format', fill_format cannot be nil.")
+      end
+      if @foreground_color.nil?
+          invalid_properties.push("invalid value for 'foreground_color', foreground_color cannot be nil.")
+      end
+      if @format.nil?
+          invalid_properties.push("invalid value for 'format', format cannot be nil.")
+      end
+      if @invert_if_negative.nil?
+          invalid_properties.push("invalid value for 'invert_if_negative', invert_if_negative cannot be nil.")
+      end
+      if @transparency.nil?
+          invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @background_color.nil?
+      return false if @fill_format.nil?
+      return false if @foreground_color.nil?
+      return false if @format.nil?
+      return false if @invert_if_negative.nil?
+      return false if @transparency.nil?
       return true
     end
 
@@ -114,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          foreground_color == o.foreground_color &&
           background_color == o.background_color &&
-          format == o.format &&
           fill_format == o.fill_format &&
+          foreground_color == o.foreground_color &&
+          format == o.format &&
           invert_if_negative == o.invert_if_negative &&
-          transparency == o.transparency
+          transparency == o.transparency 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -131,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [foreground_color, background_color, format, fill_format, invert_if_negative, transparency].hash
+      [ background_color , fill_format , foreground_color , format , invert_if_negative , transparency ].hash
     end
 
     # Builds the object from hash

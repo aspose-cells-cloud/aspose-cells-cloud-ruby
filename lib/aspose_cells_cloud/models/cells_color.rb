@@ -1,49 +1,64 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CellsColorrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CellsColor
-    attr_accessor :color
-
-    attr_accessor :type
-
-    attr_accessor :theme_color
-
-    attr_accessor :is_shape_color
-
-    attr_accessor :color_index
-
+        #Gets and sets the RGB color.            
+        attr_accessor :color
+        #Gets and sets the color index in the color palette. Only applies of indexed color.            
+        attr_accessor :color_index
+        #Gets and set the color which should apply to cell or shape.            
+        attr_accessor :is_shape_color
+        #Set the tint of the shape color            
+        attr_accessor :tint
+        #Gets and sets the color from a 32-bit ARGB value.            
+        attr_accessor :argb
+        #Gets the theme color. Only applies for theme color type.                        
+        attr_accessor :theme_color
+        #The color type.            
+        attr_accessor :type
+        #Gets and sets transparency as a value from 0.0 (opaque) through 1.0 (clear).            
+        attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'color' => :'Color',
-        :'type' => :'Type',
-        :'theme_color' => :'ThemeColor',
+        :'color_index' => :'ColorIndex',
         :'is_shape_color' => :'IsShapeColor',
-        :'color_index' => :'ColorIndex'
+        :'tint' => :'tint',
+        :'argb' => :'Argb',
+        :'theme_color' => :'ThemeColor',
+        :'type' => :'Type',
+        :'transparency' => :'Transparency'
       }
     end
 
@@ -51,10 +66,13 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'color' => :'Color',
-        :'type' => :'String',
-        :'theme_color' => :'ThemeColor',
+        :'color_index' => :'Integer',
         :'is_shape_color' => :'BOOLEAN',
-        :'color_index' => :'Integer'
+        :'tint' => :'Float',
+        :'argb' => :'Integer',
+        :'theme_color' => :'ThemeColor',
+        :'type' => :'String',
+        :'transparency' => :'Float'
       }
     end
 
@@ -67,23 +85,28 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
+          self.color = attributes[:'Color']
       end
-
-      if attributes.has_key?(:'Type')
-        self.type = attributes[:'Type']
-      end
-
-      if attributes.has_key?(:'ThemeColor')
-        self.theme_color = attributes[:'ThemeColor']
-      end
-
-      if attributes.has_key?(:'IsShapeColor')
-        self.is_shape_color = attributes[:'IsShapeColor']
-      end
-
       if attributes.has_key?(:'ColorIndex')
-        self.color_index = attributes[:'ColorIndex']
+          self.color_index = attributes[:'ColorIndex']
+      end
+      if attributes.has_key?(:'IsShapeColor')
+          self.is_shape_color = attributes[:'IsShapeColor']
+      end
+      if attributes.has_key?(:'tint')
+          self.tint = attributes[:'tint']
+      end
+      if attributes.has_key?(:'Argb')
+          self.argb = attributes[:'Argb']
+      end
+      if attributes.has_key?(:'ThemeColor')
+          self.theme_color = attributes[:'ThemeColor']
+      end
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
+      end
+      if attributes.has_key?(:'Transparency')
+          self.transparency = attributes[:'Transparency']
       end
 
     end
@@ -92,12 +115,45 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @color_index.nil?
+          invalid_properties.push("invalid value for 'color_index', color_index cannot be nil.")
+      end
+      if @is_shape_color.nil?
+          invalid_properties.push("invalid value for 'is_shape_color', is_shape_color cannot be nil.")
+      end
+      if @tint.nil?
+          invalid_properties.push("invalid value for 'tint', tint cannot be nil.")
+      end
+      if @argb.nil?
+          invalid_properties.push("invalid value for 'argb', argb cannot be nil.")
+      end
+      if @theme_color.nil?
+          invalid_properties.push("invalid value for 'theme_color', theme_color cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @transparency.nil?
+          invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @color.nil?
+      return false if @color_index.nil?
+      return false if @is_shape_color.nil?
+      return false if @tint.nil?
+      return false if @argb.nil?
+      return false if @theme_color.nil?
+      return false if @type.nil?
+      return false if @transparency.nil?
       return true
     end
 
@@ -107,10 +163,14 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           color == o.color &&
-          type == o.type &&
-          theme_color == o.theme_color &&
+          color_index == o.color_index &&
           is_shape_color == o.is_shape_color &&
-          color_index == o.color_index
+          tint == o.tint &&
+          argb == o.argb &&
+          theme_color == o.theme_color &&
+          type == o.type &&
+          transparency == o.transparency 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -122,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [color, type, theme_color, is_shape_color, color_index].hash
+      [ color , color_index , is_shape_color , tint , argb , theme_color , type , transparency ].hash
     end
 
     # Builds the object from hash

@@ -1,52 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="CellValuerb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class CellValue
-    attr_accessor :row_index
-
-    attr_accessor :column_index
-
-    attr_accessor :style
-
-    attr_accessor :type
-
-    attr_accessor :value
-
-    attr_accessor :formula
-
+        #            
+        attr_accessor :row_index
+        #            
+        attr_accessor :column_index
+        #            
+        attr_accessor :type
+        #            
+        attr_accessor :value
+        #            
+        attr_accessor :formula
+        #            
+        attr_accessor :style
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'row_index' => :'rowIndex',
         :'column_index' => :'columnIndex',
-        :'style' => :'style',
         :'type' => :'type',
         :'value' => :'value',
-        :'formula' => :'formula'
+        :'formula' => :'formula',
+        :'style' => :'style'
       }
     end
 
@@ -55,10 +61,10 @@ module AsposeCellsCloud
       {
         :'row_index' => :'Integer',
         :'column_index' => :'Integer',
-        :'style' => :'Style',
         :'type' => :'String',
         :'value' => :'String',
-        :'formula' => :'String'
+        :'formula' => :'String',
+        :'style' => :'Style'
       }
     end
 
@@ -71,27 +77,22 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'rowIndex')
-        self.row_index = attributes[:'rowIndex']
+          self.row_index = attributes[:'rowIndex']
       end
-
       if attributes.has_key?(:'columnIndex')
-        self.column_index = attributes[:'columnIndex']
+          self.column_index = attributes[:'columnIndex']
       end
-
-      if attributes.has_key?(:'style')
-        self.style = attributes[:'style']
-      end
-
       if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+          self.type = attributes[:'type']
       end
-
       if attributes.has_key?(:'value')
-        self.value = attributes[:'value']
+          self.value = attributes[:'value']
       end
-
       if attributes.has_key?(:'formula')
-        self.formula = attributes[:'formula']
+          self.formula = attributes[:'formula']
+      end
+      if attributes.has_key?(:'style')
+          self.style = attributes[:'style']
       end
 
     end
@@ -100,12 +101,37 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @row_index.nil?
+          invalid_properties.push("invalid value for 'row_index', row_index cannot be nil.")
+      end
+      if @column_index.nil?
+          invalid_properties.push("invalid value for 'column_index', column_index cannot be nil.")
+      end
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
+      end
+      if @value.nil?
+          invalid_properties.push("invalid value for 'value', value cannot be nil.")
+      end
+      if @formula.nil?
+          invalid_properties.push("invalid value for 'formula', formula cannot be nil.")
+      end
+      if @style.nil?
+          invalid_properties.push("invalid value for 'style', style cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @row_index.nil?
+      return false if @column_index.nil?
+      return false if @type.nil?
+      return false if @value.nil?
+      return false if @formula.nil?
+      return false if @style.nil?
       return true
     end
 
@@ -116,10 +142,11 @@ module AsposeCellsCloud
       self.class == o.class &&
           row_index == o.row_index &&
           column_index == o.column_index &&
-          style == o.style &&
           type == o.type &&
           value == o.value &&
-          formula == o.formula
+          formula == o.formula &&
+          style == o.style 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -131,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [row_index, column_index, style, type, value, formula].hash
+      [ row_index , column_index , type , value , formula , style ].hash
     end
 
     # Builds the object from hash

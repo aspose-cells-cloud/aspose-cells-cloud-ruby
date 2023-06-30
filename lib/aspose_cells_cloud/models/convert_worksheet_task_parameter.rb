@@ -1,46 +1,52 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ConvertWorksheetTaskParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class ConvertWorksheetTaskParameter
-    attr_accessor :workbook
-
-    attr_accessor :sheet
-
-    attr_accessor :target
-
-    attr_accessor :format
-
-    attr_accessor :area
-
-    attr_accessor :page_index
-
-    attr_accessor :vertical_resolution
-
-    attr_accessor :horizontal_resolution
-
+        #            
+        attr_accessor :workbook
+        #            
+        attr_accessor :sheet
+        #            
+        attr_accessor :target
+        #            
+        attr_accessor :format
+        #            
+        attr_accessor :area
+        #            
+        attr_accessor :page_index
+        #            
+        attr_accessor :vertical_resolution
+        #            
+        attr_accessor :horizontal_resolution
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -79,35 +85,28 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Workbook')
-        self.workbook = attributes[:'Workbook']
+          self.workbook = attributes[:'Workbook']
       end
-
       if attributes.has_key?(:'Sheet')
-        self.sheet = attributes[:'Sheet']
+          self.sheet = attributes[:'Sheet']
       end
-
       if attributes.has_key?(:'Target')
-        self.target = attributes[:'Target']
+          self.target = attributes[:'Target']
       end
-
       if attributes.has_key?(:'Format')
-        self.format = attributes[:'Format']
+          self.format = attributes[:'Format']
       end
-
       if attributes.has_key?(:'Area')
-        self.area = attributes[:'Area']
+          self.area = attributes[:'Area']
       end
-
       if attributes.has_key?(:'PageIndex')
-        self.page_index = attributes[:'PageIndex']
+          self.page_index = attributes[:'PageIndex']
       end
-
       if attributes.has_key?(:'VerticalResolution')
-        self.vertical_resolution = attributes[:'VerticalResolution']
+          self.vertical_resolution = attributes[:'VerticalResolution']
       end
-
       if attributes.has_key?(:'HorizontalResolution')
-        self.horizontal_resolution = attributes[:'HorizontalResolution']
+          self.horizontal_resolution = attributes[:'HorizontalResolution']
       end
 
     end
@@ -116,12 +115,45 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @workbook.nil?
+          invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
+      end
+      if @sheet.nil?
+          invalid_properties.push("invalid value for 'sheet', sheet cannot be nil.")
+      end
+      if @target.nil?
+          invalid_properties.push("invalid value for 'target', target cannot be nil.")
+      end
+      if @format.nil?
+          invalid_properties.push("invalid value for 'format', format cannot be nil.")
+      end
+      if @area.nil?
+          invalid_properties.push("invalid value for 'area', area cannot be nil.")
+      end
+      if @page_index.nil?
+          invalid_properties.push("invalid value for 'page_index', page_index cannot be nil.")
+      end
+      if @vertical_resolution.nil?
+          invalid_properties.push("invalid value for 'vertical_resolution', vertical_resolution cannot be nil.")
+      end
+      if @horizontal_resolution.nil?
+          invalid_properties.push("invalid value for 'horizontal_resolution', horizontal_resolution cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @workbook.nil?
+      return false if @sheet.nil?
+      return false if @target.nil?
+      return false if @format.nil?
+      return false if @area.nil?
+      return false if @page_index.nil?
+      return false if @vertical_resolution.nil?
+      return false if @horizontal_resolution.nil?
       return true
     end
 
@@ -137,7 +169,8 @@ module AsposeCellsCloud
           area == o.area &&
           page_index == o.page_index &&
           vertical_resolution == o.vertical_resolution &&
-          horizontal_resolution == o.horizontal_resolution
+          horizontal_resolution == o.horizontal_resolution 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -149,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [workbook, sheet, target, format, area, page_index, vertical_resolution, horizontal_resolution].hash
+      [ workbook , sheet , target , format , area , page_index , vertical_resolution , horizontal_resolution ].hash
     end
 
     # Builds the object from hash

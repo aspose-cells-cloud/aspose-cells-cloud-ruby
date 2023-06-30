@@ -1,60 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="FilterColumnrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class FilterColumn
-    attr_accessor :filter_type
-
-    attr_accessor :multiple_filters
-
-    attr_accessor :custom_filters
-
-    attr_accessor :dynamic_filter
-
-    attr_accessor :color_filter
-
-    attr_accessor :field_index
-
-    attr_accessor :top10_filter
-
-    attr_accessor :icon_filter
-
-    attr_accessor :visibledropdown
-
+        #            
+        attr_accessor :field_index
+        #            
+        attr_accessor :filter_type
+        #            
+        attr_accessor :multiple_filters
+        #            
+        attr_accessor :color_filter
+        #            
+        attr_accessor :custom_filters
+        #            
+        attr_accessor :dynamic_filter
+        #            
+        attr_accessor :icon_filter
+        #            
+        attr_accessor :top10_filter
+        #            
+        attr_accessor :visibledropdown
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'field_index' => :'FieldIndex',
         :'filter_type' => :'FilterType',
         :'multiple_filters' => :'MultipleFilters',
+        :'color_filter' => :'ColorFilter',
         :'custom_filters' => :'CustomFilters',
         :'dynamic_filter' => :'DynamicFilter',
-        :'color_filter' => :'ColorFilter',
-        :'field_index' => :'FieldIndex',
-        :'top10_filter' => :'Top10Filter',
         :'icon_filter' => :'IconFilter',
+        :'top10_filter' => :'Top10Filter',
         :'visibledropdown' => :'Visibledropdown'
       }
     end
@@ -62,14 +68,14 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'field_index' => :'Integer',
         :'filter_type' => :'String',
         :'multiple_filters' => :'MultipleFilters',
+        :'color_filter' => :'ColorFilter',
         :'custom_filters' => :'Array<CustomFilter>',
         :'dynamic_filter' => :'DynamicFilter',
-        :'color_filter' => :'ColorFilter',
-        :'field_index' => :'Integer',
-        :'top10_filter' => :'Top10Filter',
         :'icon_filter' => :'IconFilter',
+        :'top10_filter' => :'Top10Filter',
         :'visibledropdown' => :'String'
       }
     end
@@ -82,42 +88,32 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'FilterType')
-        self.filter_type = attributes[:'FilterType']
-      end
-
-      if attributes.has_key?(:'MultipleFilters')
-        self.multiple_filters = attributes[:'MultipleFilters']
-      end
-
-      if attributes.has_key?(:'CustomFilters')
-        if (value = attributes[:'CustomFilters']).is_a?(Array)
-          self.custom_filters = value
-        end
-      end
-
-      if attributes.has_key?(:'DynamicFilter')
-        self.dynamic_filter = attributes[:'DynamicFilter']
-      end
-
-      if attributes.has_key?(:'ColorFilter')
-        self.color_filter = attributes[:'ColorFilter']
-      end
-
       if attributes.has_key?(:'FieldIndex')
-        self.field_index = attributes[:'FieldIndex']
+          self.field_index = attributes[:'FieldIndex']
       end
-
-      if attributes.has_key?(:'Top10Filter')
-        self.top10_filter = attributes[:'Top10Filter']
+      if attributes.has_key?(:'FilterType')
+          self.filter_type = attributes[:'FilterType']
       end
-
+      if attributes.has_key?(:'MultipleFilters')
+          self.multiple_filters = attributes[:'MultipleFilters']
+      end
+      if attributes.has_key?(:'ColorFilter')
+          self.color_filter = attributes[:'ColorFilter']
+      end
+      if attributes.has_key?(:'CustomFilters')
+          self.custom_filters = attributes[:'CustomFilters']
+      end
+      if attributes.has_key?(:'DynamicFilter')
+          self.dynamic_filter = attributes[:'DynamicFilter']
+      end
       if attributes.has_key?(:'IconFilter')
-        self.icon_filter = attributes[:'IconFilter']
+          self.icon_filter = attributes[:'IconFilter']
       end
-
+      if attributes.has_key?(:'Top10Filter')
+          self.top10_filter = attributes[:'Top10Filter']
+      end
       if attributes.has_key?(:'Visibledropdown')
-        self.visibledropdown = attributes[:'Visibledropdown']
+          self.visibledropdown = attributes[:'Visibledropdown']
       end
 
     end
@@ -127,7 +123,31 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @field_index.nil?
-        invalid_properties.push("invalid value for 'field_index', field_index cannot be nil.")
+          invalid_properties.push("invalid value for 'field_index', field_index cannot be nil.")
+      end
+      if @filter_type.nil?
+          invalid_properties.push("invalid value for 'filter_type', filter_type cannot be nil.")
+      end
+      if @multiple_filters.nil?
+          invalid_properties.push("invalid value for 'multiple_filters', multiple_filters cannot be nil.")
+      end
+      if @color_filter.nil?
+          invalid_properties.push("invalid value for 'color_filter', color_filter cannot be nil.")
+      end
+      if @custom_filters.nil?
+          invalid_properties.push("invalid value for 'custom_filters', custom_filters cannot be nil.")
+      end
+      if @dynamic_filter.nil?
+          invalid_properties.push("invalid value for 'dynamic_filter', dynamic_filter cannot be nil.")
+      end
+      if @icon_filter.nil?
+          invalid_properties.push("invalid value for 'icon_filter', icon_filter cannot be nil.")
+      end
+      if @top10_filter.nil?
+          invalid_properties.push("invalid value for 'top10_filter', top10_filter cannot be nil.")
+      end
+      if @visibledropdown.nil?
+          invalid_properties.push("invalid value for 'visibledropdown', visibledropdown cannot be nil.")
       end
 
       return invalid_properties
@@ -137,6 +157,14 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @field_index.nil?
+      return false if @filter_type.nil?
+      return false if @multiple_filters.nil?
+      return false if @color_filter.nil?
+      return false if @custom_filters.nil?
+      return false if @dynamic_filter.nil?
+      return false if @icon_filter.nil?
+      return false if @top10_filter.nil?
+      return false if @visibledropdown.nil?
       return true
     end
 
@@ -145,15 +173,16 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          field_index == o.field_index &&
           filter_type == o.filter_type &&
           multiple_filters == o.multiple_filters &&
+          color_filter == o.color_filter &&
           custom_filters == o.custom_filters &&
           dynamic_filter == o.dynamic_filter &&
-          color_filter == o.color_filter &&
-          field_index == o.field_index &&
-          top10_filter == o.top10_filter &&
           icon_filter == o.icon_filter &&
-          visibledropdown == o.visibledropdown
+          top10_filter == o.top10_filter &&
+          visibledropdown == o.visibledropdown 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -165,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [filter_type, multiple_filters, custom_filters, dynamic_filter, color_filter, field_index, top10_filter, icon_filter, visibledropdown].hash
+      [ field_index , filter_type , multiple_filters , color_filter , custom_filters , dynamic_filter , icon_filter , top10_filter , visibledropdown ].hash
     end
 
     # Builds the object from hash

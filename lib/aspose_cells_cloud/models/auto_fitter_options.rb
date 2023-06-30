@@ -1,52 +1,62 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="AutoFitterOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class AutoFitterOptions
-    attr_accessor :ignore_hidden
-
-    attr_accessor :only_auto
-
-    attr_accessor :auto_fit_merged_cells
-
+        #            
+        attr_accessor :auto_fit_merged_cells_type
+        #            
+        attr_accessor :auto_fit_merged_cells
+        #            
+        attr_accessor :ignore_hidden
+        #            
+        attr_accessor :only_auto
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'auto_fit_merged_cells_type' => :'AutoFitMergedCellsType',
+        :'auto_fit_merged_cells' => :'AutoFitMergedCells',
         :'ignore_hidden' => :'IgnoreHidden',
-        :'only_auto' => :'OnlyAuto',
-        :'auto_fit_merged_cells' => :'AutoFitMergedCells'
+        :'only_auto' => :'OnlyAuto'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'auto_fit_merged_cells_type' => :'String',
+        :'auto_fit_merged_cells' => :'BOOLEAN',
         :'ignore_hidden' => :'BOOLEAN',
-        :'only_auto' => :'BOOLEAN',
-        :'auto_fit_merged_cells' => :'BOOLEAN'
+        :'only_auto' => :'BOOLEAN'
       }
     end
 
@@ -58,16 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'IgnoreHidden')
-        self.ignore_hidden = attributes[:'IgnoreHidden']
+      if attributes.has_key?(:'AutoFitMergedCellsType')
+          self.auto_fit_merged_cells_type = attributes[:'AutoFitMergedCellsType']
       end
-
-      if attributes.has_key?(:'OnlyAuto')
-        self.only_auto = attributes[:'OnlyAuto']
-      end
-
       if attributes.has_key?(:'AutoFitMergedCells')
-        self.auto_fit_merged_cells = attributes[:'AutoFitMergedCells']
+          self.auto_fit_merged_cells = attributes[:'AutoFitMergedCells']
+      end
+      if attributes.has_key?(:'IgnoreHidden')
+          self.ignore_hidden = attributes[:'IgnoreHidden']
+      end
+      if attributes.has_key?(:'OnlyAuto')
+          self.only_auto = attributes[:'OnlyAuto']
       end
 
     end
@@ -76,16 +87,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @ignore_hidden.nil?
-        invalid_properties.push("invalid value for 'ignore_hidden', ignore_hidden cannot be nil.")
+      if @auto_fit_merged_cells_type.nil?
+          invalid_properties.push("invalid value for 'auto_fit_merged_cells_type', auto_fit_merged_cells_type cannot be nil.")
       end
-
-      if @only_auto.nil?
-        invalid_properties.push("invalid value for 'only_auto', only_auto cannot be nil.")
-      end
-
       if @auto_fit_merged_cells.nil?
-        invalid_properties.push("invalid value for 'auto_fit_merged_cells', auto_fit_merged_cells cannot be nil.")
+          invalid_properties.push("invalid value for 'auto_fit_merged_cells', auto_fit_merged_cells cannot be nil.")
+      end
+      if @ignore_hidden.nil?
+          invalid_properties.push("invalid value for 'ignore_hidden', ignore_hidden cannot be nil.")
+      end
+      if @only_auto.nil?
+          invalid_properties.push("invalid value for 'only_auto', only_auto cannot be nil.")
       end
 
       return invalid_properties
@@ -94,9 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @auto_fit_merged_cells_type.nil?
+      return false if @auto_fit_merged_cells.nil?
       return false if @ignore_hidden.nil?
       return false if @only_auto.nil?
-      return false if @auto_fit_merged_cells.nil?
       return true
     end
 
@@ -105,9 +118,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          auto_fit_merged_cells_type == o.auto_fit_merged_cells_type &&
+          auto_fit_merged_cells == o.auto_fit_merged_cells &&
           ignore_hidden == o.ignore_hidden &&
-          only_auto == o.only_auto &&
-          auto_fit_merged_cells == o.auto_fit_merged_cells
+          only_auto == o.only_auto 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -119,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ignore_hidden, only_auto, auto_fit_merged_cells].hash
+      [ auto_fit_merged_cells_type , auto_fit_merged_cells , ignore_hidden , only_auto ].hash
     end
 
     # Builds the object from hash

@@ -1,46 +1,52 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="GradientFillrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class GradientFill
-    attr_accessor :fill_type
-
-    attr_accessor :angle
-
-    attr_accessor :gradient_stops
-
-    attr_accessor :direction_type
-
+        #            
+        attr_accessor :fill_type
+        #            
+        attr_accessor :direction_type
+        #            
+        attr_accessor :angle
+        #            
+        attr_accessor :gradient_stops
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'fill_type' => :'FillType',
+        :'direction_type' => :'DirectionType',
         :'angle' => :'Angle',
-        :'gradient_stops' => :'GradientStops',
-        :'direction_type' => :'DirectionType'
+        :'gradient_stops' => :'GradientStops'
       }
     end
 
@@ -48,9 +54,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'fill_type' => :'String',
+        :'direction_type' => :'String',
         :'angle' => :'Float',
-        :'gradient_stops' => :'Array<GradientFillStop>',
-        :'direction_type' => :'String'
+        :'gradient_stops' => :'Array<GradientFillStop>'
       }
     end
 
@@ -63,21 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'FillType')
-        self.fill_type = attributes[:'FillType']
+          self.fill_type = attributes[:'FillType']
       end
-
-      if attributes.has_key?(:'Angle')
-        self.angle = attributes[:'Angle']
-      end
-
-      if attributes.has_key?(:'GradientStops')
-        if (value = attributes[:'GradientStops']).is_a?(Array)
-          self.gradient_stops = value
-        end
-      end
-
       if attributes.has_key?(:'DirectionType')
-        self.direction_type = attributes[:'DirectionType']
+          self.direction_type = attributes[:'DirectionType']
+      end
+      if attributes.has_key?(:'Angle')
+          self.angle = attributes[:'Angle']
+      end
+      if attributes.has_key?(:'GradientStops')
+          self.gradient_stops = attributes[:'GradientStops']
       end
 
     end
@@ -86,12 +87,29 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @fill_type.nil?
+          invalid_properties.push("invalid value for 'fill_type', fill_type cannot be nil.")
+      end
+      if @direction_type.nil?
+          invalid_properties.push("invalid value for 'direction_type', direction_type cannot be nil.")
+      end
+      if @angle.nil?
+          invalid_properties.push("invalid value for 'angle', angle cannot be nil.")
+      end
+      if @gradient_stops.nil?
+          invalid_properties.push("invalid value for 'gradient_stops', gradient_stops cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @fill_type.nil?
+      return false if @direction_type.nil?
+      return false if @angle.nil?
+      return false if @gradient_stops.nil?
       return true
     end
 
@@ -101,9 +119,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           fill_type == o.fill_type &&
+          direction_type == o.direction_type &&
           angle == o.angle &&
-          gradient_stops == o.gradient_stops &&
-          direction_type == o.direction_type
+          gradient_stops == o.gradient_stops 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -115,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [fill_type, angle, gradient_stops, direction_type].hash
+      [ fill_type , direction_type , angle , gradient_stops ].hash
     end
 
     # Builds the object from hash

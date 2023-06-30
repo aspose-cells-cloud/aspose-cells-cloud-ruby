@@ -1,24 +1,30 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ApiClientrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 require 'json'
@@ -26,6 +32,7 @@ require 'logger'
 require 'tempfile'
 require 'uri'
 require 'faraday'
+require 'faraday/multipart'
 require_relative 'version'
 require_relative 'api_error'
 
@@ -44,7 +51,7 @@ module AsposeCellsCloud
     # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
       @config = config
-      
+
       @default_headers = {
         'Content-Type' => "application/json",
         'x-aspose-client' => "ruby sdk",
@@ -69,7 +76,7 @@ module AsposeCellsCloud
       end
 
       unless response.success?
-        
+
         if response.status == 0
           # Errors from libcurl will be made visible here
           fail ApiError.new(:code => 0,
@@ -116,7 +123,7 @@ module AsposeCellsCloud
         :params => query_params,
         :body => body
       }
-      
+
       if [:post, :patch, :put, :delete].include?(http_method)
         req_body = build_request_body(header_params, form_params, opts[:body])
         req_opts.update :body => req_body
@@ -127,7 +134,7 @@ module AsposeCellsCloud
 
       # OAuth 2.0
       req_opts[:params] = opts[:query_params]
-      
+
       if @config.access_token
         add_o_auth_token(req_opts)
       end
@@ -137,7 +144,7 @@ module AsposeCellsCloud
       f.request :url_encoded
       f.adapter Faraday.default_adapter
       end
-    
+
       if req_opts[:body] == {}
         req_opts[:body] = nil
       end
@@ -254,7 +261,7 @@ module AsposeCellsCloud
     def download_file(response)
       tempfile = nil
       encoding = nil
-      
+
       content_disposition = response.headers['Content-Disposition']
       if content_disposition and content_disposition =~ /filename=/i
         filename = content_disposition[/filename=['"]?([^'"\s]+)['"]?/, 1]
@@ -266,7 +273,7 @@ module AsposeCellsCloud
       encoding = response.body.encoding
       tempfile = Tempfile.open(prefix, @config.temp_folder_path, encoding: encoding)
       @tempfile = tempfile
-     
+
       tempfile.write(response.body)
 
       response.on_complete do |resp|
@@ -290,7 +297,9 @@ module AsposeCellsCloud
     def build_request_url(path)
       # Add leading and trailing slashes to path
       path = "/#{path}".gsub(/\/+/, '/')
-      URI.encode(@config.base_url + path)
+      # URI.encode(@config.base_url + path)
+      # URI.encode_www_form_component(@config.base_url + path)
+      @config.base_url + path
     end
 
     # Builds the HTTP request body

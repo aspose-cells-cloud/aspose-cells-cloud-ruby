@@ -1,88 +1,94 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Commentrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Comment
-    attr_accessor :link
-
-    attr_accessor :auto_size
-
-    attr_accessor :author
-
-    attr_accessor :is_visible
-
-    attr_accessor :text_orientation_type
-
-    attr_accessor :height
-
-    attr_accessor :note
-
-    attr_accessor :width
-
-    attr_accessor :text_vertical_alignment
-
-    attr_accessor :cell_name
-
-    attr_accessor :html_note
-
-    attr_accessor :text_horizontal_alignment
-
+        #            
+        attr_accessor :cell_name
+        #            
+        attr_accessor :author
+        #            
+        attr_accessor :html_note
+        #            
+        attr_accessor :note
+        #            
+        attr_accessor :auto_size
+        #            
+        attr_accessor :is_visible
+        #            
+        attr_accessor :width
+        #            
+        attr_accessor :height
+        #            
+        attr_accessor :text_horizontal_alignment
+        #            
+        attr_accessor :text_orientation_type
+        #            
+        attr_accessor :text_vertical_alignment
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'auto_size' => :'AutoSize',
-        :'author' => :'Author',
-        :'is_visible' => :'IsVisible',
-        :'text_orientation_type' => :'TextOrientationType',
-        :'height' => :'Height',
-        :'note' => :'Note',
-        :'width' => :'Width',
-        :'text_vertical_alignment' => :'TextVerticalAlignment',
         :'cell_name' => :'CellName',
+        :'author' => :'Author',
         :'html_note' => :'HtmlNote',
-        :'text_horizontal_alignment' => :'TextHorizontalAlignment'
+        :'note' => :'Note',
+        :'auto_size' => :'AutoSize',
+        :'is_visible' => :'IsVisible',
+        :'width' => :'Width',
+        :'height' => :'Height',
+        :'text_horizontal_alignment' => :'TextHorizontalAlignment',
+        :'text_orientation_type' => :'TextOrientationType',
+        :'text_vertical_alignment' => :'TextVerticalAlignment',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'auto_size' => :'BOOLEAN',
-        :'author' => :'String',
-        :'is_visible' => :'BOOLEAN',
-        :'text_orientation_type' => :'String',
-        :'height' => :'Integer',
-        :'note' => :'String',
-        :'width' => :'Integer',
-        :'text_vertical_alignment' => :'String',
         :'cell_name' => :'String',
+        :'author' => :'String',
         :'html_note' => :'String',
-        :'text_horizontal_alignment' => :'String'
+        :'note' => :'String',
+        :'auto_size' => :'BOOLEAN',
+        :'is_visible' => :'BOOLEAN',
+        :'width' => :'Integer',
+        :'height' => :'Integer',
+        :'text_horizontal_alignment' => :'String',
+        :'text_orientation_type' => :'String',
+        :'text_vertical_alignment' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -94,52 +100,41 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'AutoSize')
-        self.auto_size = attributes[:'AutoSize']
-      end
-
-      if attributes.has_key?(:'Author')
-        self.author = attributes[:'Author']
-      end
-
-      if attributes.has_key?(:'IsVisible')
-        self.is_visible = attributes[:'IsVisible']
-      end
-
-      if attributes.has_key?(:'TextOrientationType')
-        self.text_orientation_type = attributes[:'TextOrientationType']
-      end
-
-      if attributes.has_key?(:'Height')
-        self.height = attributes[:'Height']
-      end
-
-      if attributes.has_key?(:'Note')
-        self.note = attributes[:'Note']
-      end
-
-      if attributes.has_key?(:'Width')
-        self.width = attributes[:'Width']
-      end
-
-      if attributes.has_key?(:'TextVerticalAlignment')
-        self.text_vertical_alignment = attributes[:'TextVerticalAlignment']
-      end
-
       if attributes.has_key?(:'CellName')
-        self.cell_name = attributes[:'CellName']
+          self.cell_name = attributes[:'CellName']
       end
-
+      if attributes.has_key?(:'Author')
+          self.author = attributes[:'Author']
+      end
       if attributes.has_key?(:'HtmlNote')
-        self.html_note = attributes[:'HtmlNote']
+          self.html_note = attributes[:'HtmlNote']
       end
-
+      if attributes.has_key?(:'Note')
+          self.note = attributes[:'Note']
+      end
+      if attributes.has_key?(:'AutoSize')
+          self.auto_size = attributes[:'AutoSize']
+      end
+      if attributes.has_key?(:'IsVisible')
+          self.is_visible = attributes[:'IsVisible']
+      end
+      if attributes.has_key?(:'Width')
+          self.width = attributes[:'Width']
+      end
+      if attributes.has_key?(:'Height')
+          self.height = attributes[:'Height']
+      end
       if attributes.has_key?(:'TextHorizontalAlignment')
-        self.text_horizontal_alignment = attributes[:'TextHorizontalAlignment']
+          self.text_horizontal_alignment = attributes[:'TextHorizontalAlignment']
+      end
+      if attributes.has_key?(:'TextOrientationType')
+          self.text_orientation_type = attributes[:'TextOrientationType']
+      end
+      if attributes.has_key?(:'TextVerticalAlignment')
+          self.text_vertical_alignment = attributes[:'TextVerticalAlignment']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -148,12 +143,61 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @cell_name.nil?
+          invalid_properties.push("invalid value for 'cell_name', cell_name cannot be nil.")
+      end
+      if @author.nil?
+          invalid_properties.push("invalid value for 'author', author cannot be nil.")
+      end
+      if @html_note.nil?
+          invalid_properties.push("invalid value for 'html_note', html_note cannot be nil.")
+      end
+      if @note.nil?
+          invalid_properties.push("invalid value for 'note', note cannot be nil.")
+      end
+      if @auto_size.nil?
+          invalid_properties.push("invalid value for 'auto_size', auto_size cannot be nil.")
+      end
+      if @is_visible.nil?
+          invalid_properties.push("invalid value for 'is_visible', is_visible cannot be nil.")
+      end
+      if @width.nil?
+          invalid_properties.push("invalid value for 'width', width cannot be nil.")
+      end
+      if @height.nil?
+          invalid_properties.push("invalid value for 'height', height cannot be nil.")
+      end
+      if @text_horizontal_alignment.nil?
+          invalid_properties.push("invalid value for 'text_horizontal_alignment', text_horizontal_alignment cannot be nil.")
+      end
+      if @text_orientation_type.nil?
+          invalid_properties.push("invalid value for 'text_orientation_type', text_orientation_type cannot be nil.")
+      end
+      if @text_vertical_alignment.nil?
+          invalid_properties.push("invalid value for 'text_vertical_alignment', text_vertical_alignment cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @cell_name.nil?
+      return false if @author.nil?
+      return false if @html_note.nil?
+      return false if @note.nil?
+      return false if @auto_size.nil?
+      return false if @is_visible.nil?
+      return false if @width.nil?
+      return false if @height.nil?
+      return false if @text_horizontal_alignment.nil?
+      return false if @text_orientation_type.nil?
+      return false if @text_vertical_alignment.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -162,18 +206,19 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          auto_size == o.auto_size &&
-          author == o.author &&
-          is_visible == o.is_visible &&
-          text_orientation_type == o.text_orientation_type &&
-          height == o.height &&
-          note == o.note &&
-          width == o.width &&
-          text_vertical_alignment == o.text_vertical_alignment &&
           cell_name == o.cell_name &&
+          author == o.author &&
           html_note == o.html_note &&
-          text_horizontal_alignment == o.text_horizontal_alignment
+          note == o.note &&
+          auto_size == o.auto_size &&
+          is_visible == o.is_visible &&
+          width == o.width &&
+          height == o.height &&
+          text_horizontal_alignment == o.text_horizontal_alignment &&
+          text_orientation_type == o.text_orientation_type &&
+          text_vertical_alignment == o.text_vertical_alignment &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -185,7 +230,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, auto_size, author, is_visible, text_orientation_type, height, note, width, text_vertical_alignment, cell_name, html_note, text_horizontal_alignment].hash
+      [ cell_name , author , html_note , note , auto_size , is_visible , width , height , text_horizontal_alignment , text_orientation_type , text_vertical_alignment , link ].hash
     end
 
     # Builds the object from hash

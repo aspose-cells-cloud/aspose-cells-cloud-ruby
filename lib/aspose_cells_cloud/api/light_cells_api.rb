@@ -27,6 +27,7 @@ module AsposeCellsCloud
     attr_accessor :api_client
 
     def initialize(client_id,client_secret, app_version = 'v3.0', app_host = 'api.aspose.cloud',  api_client = ApiClient.default)
+      warn "Warning: #initialize() is deprecated."
       @api_client = api_client
       @api_client.config.client_secret = client_secret
       @api_client.config.client_id = client_id
@@ -41,6 +42,7 @@ module AsposeCellsCloud
     # @option opts [String] :type  (default to all)
     # @return [FilesResult]
     def delete_metadata(file, opts = {})
+      warn "Warning: #delete_metadata() is deprecated."
       data, _status_code, _headers = delete_metadata_with_http_info(file, opts)
       return data
     end
@@ -52,6 +54,7 @@ module AsposeCellsCloud
     # @option opts [String] :type 
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def delete_metadata_with_http_info(file, opts = {})
+      warn "Warning: #delete_metadata_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.delete_metadata ..."
       end
@@ -106,6 +109,7 @@ module AsposeCellsCloud
     # @option opts [String] :type  (default to all)
     # @return [Array<CellsDocumentProperty>]
     def get_metadata(file, opts = {})
+      warn "Warning: #get_metadata() is deprecated."
       data, _status_code, _headers = get_metadata_with_http_info(file, opts)
       return data
     end
@@ -117,6 +121,7 @@ module AsposeCellsCloud
     # @option opts [String] :type 
     # @return [Array<(Array<CellsDocumentProperty>, Fixnum, Hash)>] Array<CellsDocumentProperty> data, response status code and response headers
     def get_metadata_with_http_info(file, opts = {})
+      warn "Warning: #get_metadata_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.get_metadata ..."
       end
@@ -172,6 +177,7 @@ module AsposeCellsCloud
     # @option opts [String] :format  (default to Xlsx)
     # @return [FilesResult]
     def post_assemble(file, datasource, opts = {})
+      warn "Warning: #post_assemble() is deprecated."
       data, _status_code, _headers = post_assemble_with_http_info(file, datasource, opts)
       return data
     end
@@ -184,6 +190,7 @@ module AsposeCellsCloud
     # @option opts [String] :format 
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_assemble_with_http_info(file, datasource, opts = {})
+      warn "Warning: #post_assemble_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_assemble ..."
       end
@@ -243,6 +250,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_clear_objects(file, objecttype, opts = {})
+      warn "Warning: #post_clear_objects() is deprecated."
       data, _status_code, _headers = post_clear_objects_with_http_info(file, objecttype, opts)
       return data
     end
@@ -254,6 +262,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_clear_objects_with_http_info(file, objecttype, opts = {})
+      warn "Warning: #post_clear_objects_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_clear_objects ..."
       end
@@ -314,6 +323,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_export(file, object_type, format, opts = {})
+      warn "Warning: #post_export() is deprecated."
       data, _status_code, _headers = post_export_with_http_info(file, object_type, format, opts)
       return data
     end
@@ -326,6 +336,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_export_with_http_info(file, object_type, format, opts = {})
+      warn "Warning: #post_export_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_export ..."
       end
@@ -394,6 +405,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_import(file, import_data, opts = {})
+      warn "Warning: #post_import() is deprecated."
       data, _status_code, _headers = post_import_with_http_info(file, import_data, opts)
       return data
     end
@@ -405,6 +417,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_import_with_http_info(file, import_data, opts = {})
+      warn "Warning: #post_import_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_import ..."
       end
@@ -469,6 +482,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :merge_to_one_sheet  (default to false)
     # @return [FileInfo]
     def post_merge(file, opts = {})
+      warn "Warning: #post_merge() is deprecated."
       data, _status_code, _headers = post_merge_with_http_info(file, opts)
       return data
     end
@@ -481,6 +495,7 @@ module AsposeCellsCloud
     # @option opts [BOOLEAN] :merge_to_one_sheet 
     # @return [Array<(FileInfo, Fixnum, Hash)>] FileInfo data, response status code and response headers
     def post_merge_with_http_info(file, opts = {})
+      warn "Warning: #post_merge_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_merge ..."
       end
@@ -536,6 +551,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_metadata(file, document_properties, opts = {})
+      warn "Warning: #post_metadata() is deprecated."
       data, _status_code, _headers = post_metadata_with_http_info(file, document_properties, opts)
       return data
     end
@@ -547,6 +563,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_metadata_with_http_info(file, document_properties, opts = {})
+      warn "Warning: #post_metadata_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_metadata ..."
       end
@@ -610,6 +627,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_protect(file, password, opts = {})
+      warn "Warning: #post_protect() is deprecated."
       data, _status_code, _headers = post_protect_with_http_info(file, password, opts)
       return data
     end
@@ -621,6 +639,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_protect_with_http_info(file, password, opts = {})
+      warn "Warning: #post_protect_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_protect ..."
       end
@@ -680,6 +699,7 @@ module AsposeCellsCloud
     # @option opts [String] :sheetname 
     # @return [Array<TextItem>]
     def post_search(file, text, opts = {})
+      warn "Warning: #post_search() is deprecated."
       data, _status_code, _headers = post_search_with_http_info(file, text, opts)
       return data
     end
@@ -693,6 +713,7 @@ module AsposeCellsCloud
     # @option opts [String] :sheetname  
     # @return [Array<(Array<TextItem>, Fixnum, Hash)>] Array<TextItem> data, response status code and response headers
     def post_search_with_http_info(file, text, opts = {})
+      warn "Warning: #post_search_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_search ..."
       end
@@ -756,6 +777,7 @@ module AsposeCellsCloud
     # @option opts [Integer] :to 
     # @return [FilesResult]
     def post_split(file, format, opts = {})
+      warn "Warning: #post_split() is deprecated."
       data, _status_code, _headers = post_split_with_http_info(file, format, opts)
       return data
     end
@@ -772,6 +794,7 @@ module AsposeCellsCloud
     # @option opts [String] :storage_name 
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_split_with_http_info(file, format, opts = {})
+      warn "Warning: #post_split_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_split ..."
       end
@@ -833,6 +856,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_unlock(file, password, opts = {})
+      warn "Warning: #post_unlock() is deprecated."
       data, _status_code, _headers = post_unlock_with_http_info(file, password, opts)
       return data
     end
@@ -844,6 +868,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_unlock_with_http_info(file, password, opts = {})
+      warn "Warning: #post_unlock_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_unlock ..."
       end
@@ -902,6 +927,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_watermark(file, text, color, opts = {})
+      warn "Warning: #post_watermark() is deprecated."
       data, _status_code, _headers = post_watermark_with_http_info(file, text, color, opts)
       return data
     end
@@ -914,6 +940,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_watermark_with_http_info(file, text, color, opts = {})
+      warn "Warning: #post_watermark_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_watermark ..."
       end
@@ -977,6 +1004,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [FilesResult]
     def post_compress(file, compress_level, opts = {})
+      warn "Warning: #post_compress() is deprecated."
       data, _status_code, _headers = post_compress_with_http_info(file, compress_level, opts)
       return data
     end
@@ -988,6 +1016,7 @@ module AsposeCellsCloud
     # @param [Hash] opts the optional parameters
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_compress_with_http_info(file, compress_level, opts = {})
+      warn "Warning: #post_compress_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_compress ..."
       end
@@ -1050,6 +1079,7 @@ module AsposeCellsCloud
     # @param sheet_name
     # @return [FilesResult]
     def post_replace(file, text, newtext, opts = {})
+      warn "Warning: #post_replace() is deprecated."
       data, _status_code, _headers = post_replace_with_http_info(file, text, newtext, opts)
       return data
     end
@@ -1064,6 +1094,7 @@ module AsposeCellsCloud
     # @param sheet_name
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_replace_with_http_info(file, text, newtext, opts = {})
+      warn "Warning: #post_replace_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_replace ..."
       end
@@ -1127,6 +1158,7 @@ module AsposeCellsCloud
     # @param format 
     # @return [FilesResult]
     def post_reverse(file, rotate_type, format, opts = {})
+      warn "Warning: #post_reverse() is deprecated."
       data, _status_code, _headers = post_reverse_with_http_info(file, rotate_type, format, opts)
       return data
     end
@@ -1138,6 +1170,7 @@ module AsposeCellsCloud
     # @param format 
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_reverse_with_http_info(file, rotate_type, format, opts = {})
+      warn "Warning: #post_reverse_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_reverse ..."
       end
@@ -1199,6 +1232,7 @@ module AsposeCellsCloud
     # @param format 
     # @return [FilesResult]
     def post_rotate(file, rotate_type, format, opts = {})
+      warn "Warning: #post_rotate() is deprecated."
       data, _status_code, _headers = post_rotate_with_http_info(file, rotate_type, format, opts)
       return data
     end
@@ -1210,6 +1244,7 @@ module AsposeCellsCloud
     # @param format 
     # @return [Array<(FilesResult, Fixnum, Hash)>] FilesResult data, response status code and response headers
     def post_rotate_with_http_info(file, rotate_type, format, opts = {})
+      warn "Warning: #post_rotate_with_http_info() is deprecated."
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: LightCellsApi.post_rotate ..."
       end

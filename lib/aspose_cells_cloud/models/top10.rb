@@ -1,39 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Top10rb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Describe the Top10 conditional formatting rule. This conditional formatting     rule highlights cells whose values fall in the top N or bottom N bracket,     as specified.
+
   class Top10
-    # Get or set the flag indicating whether a \"top/bottom n\" rule is a \"bottom    n\" rule. '1' indicates 'bottom'.  Default value is false.             
-    attr_accessor :is_bottom
-
-    # Get or set the flag indicating whether a \"top/bottom n\" rule is a \"top/bottom     n percent\" rule.  Default value is false.
-    attr_accessor :is_percent
-
-    # Get or set the value of \"n\" in a \"top/bottom n\" conditional formatting rule.      If IsPercent is true, the value must between 0 and 100.  Otherwise it must     between 0 and 1000.  Default value is 10.
-    attr_accessor :rank
-
+        #Get or set the flag indicating whether a "top/bottom n" rule is a "bottom   n" rule. '1' indicates 'bottom'.  Default value is false.                        
+        attr_accessor :is_bottom
+        #Get or set the flag indicating whether a "top/bottom n" rule is a "top/bottom    n percent" rule.  Default value is false.            
+        attr_accessor :is_percent
+        #Get or set the value of "n" in a "top/bottom n" conditional formatting rule.     If IsPercent is true, the value must between 0 and 100.  Otherwise it must    between 0 and 1000.  Default value is 10.            
+        attr_accessor :rank
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -62,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'IsBottom')
-        self.is_bottom = attributes[:'IsBottom']
+          self.is_bottom = attributes[:'IsBottom']
       end
-
       if attributes.has_key?(:'IsPercent')
-        self.is_percent = attributes[:'IsPercent']
+          self.is_percent = attributes[:'IsPercent']
       end
-
       if attributes.has_key?(:'Rank')
-        self.rank = attributes[:'Rank']
+          self.rank = attributes[:'Rank']
       end
 
     end
@@ -79,12 +80,25 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @is_bottom.nil?
+          invalid_properties.push("invalid value for 'is_bottom', is_bottom cannot be nil.")
+      end
+      if @is_percent.nil?
+          invalid_properties.push("invalid value for 'is_percent', is_percent cannot be nil.")
+      end
+      if @rank.nil?
+          invalid_properties.push("invalid value for 'rank', rank cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @is_bottom.nil?
+      return false if @is_percent.nil?
+      return false if @rank.nil?
       return true
     end
 
@@ -95,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           is_bottom == o.is_bottom &&
           is_percent == o.is_percent &&
-          rank == o.rank
+          rank == o.rank 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -107,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_bottom, is_percent, rank].hash
+      [ is_bottom , is_percent , rank ].hash
     end
 
     # Builds the object from hash

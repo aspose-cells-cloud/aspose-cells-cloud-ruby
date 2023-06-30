@@ -1,69 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PivotFilterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Represents a PivotFilter in PivotFilter Collection.
+
   class PivotFilter
-    # Gets the Evaluation Order of the pivot filter.
-    attr_accessor :evaluation_order
-
-    # Gets the name of the pivot filter.
-    attr_accessor :name
-
-    # Gets the autofilter type of the pivot filter.
-    attr_accessor :filter_type
-
-    # Gets the autofilter of the pivot filter.
-    attr_accessor :auto_filter
-
-    # Gets the field index of the pivot filter.
-    attr_accessor :field_index
-
-    # Gets the measure field index of the pivot filter.             
-    attr_accessor :measure_fld_index
-
-    # Gets the string value1 of the label pivot filter.             
-    attr_accessor :value1
-
-    # Gets the member property field index of the pivot filter.             
-    attr_accessor :member_property_field_index
-
-    # Gets the string value2 of the label pivot filter.             
-    attr_accessor :value2
-
+        #Gets the autofilter of the pivot filter.            
+        attr_accessor :auto_filter
+        #Gets the Evaluation Order of the pivot filter.            
+        attr_accessor :evaluation_order
+        #Gets the field index of the pivot filter.            
+        attr_accessor :field_index
+        #Gets the autofilter type of the pivot filter.            
+        attr_accessor :filter_type
+        #Gets the measure field index of the pivot filter.                        
+        attr_accessor :measure_fld_index
+        #Gets the member property field index of the pivot filter.                        
+        attr_accessor :member_property_field_index
+        #Gets the name of the pivot filter.            
+        attr_accessor :name
+        #Gets the string value1 of the label pivot filter.                        
+        attr_accessor :value1
+        #Gets the string value2 of the label pivot filter.                        
+        attr_accessor :value2
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'evaluation_order' => :'EvaluationOrder',
-        :'name' => :'Name',
-        :'filter_type' => :'FilterType',
         :'auto_filter' => :'AutoFilter',
+        :'evaluation_order' => :'EvaluationOrder',
         :'field_index' => :'FieldIndex',
+        :'filter_type' => :'FilterType',
         :'measure_fld_index' => :'MeasureFldIndex',
-        :'value1' => :'Value1',
         :'member_property_field_index' => :'MemberPropertyFieldIndex',
+        :'name' => :'Name',
+        :'value1' => :'Value1',
         :'value2' => :'Value2'
       }
     end
@@ -71,14 +68,14 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'evaluation_order' => :'Integer',
-        :'name' => :'String',
-        :'filter_type' => :'String',
         :'auto_filter' => :'AutoFilter',
+        :'evaluation_order' => :'Integer',
         :'field_index' => :'Integer',
+        :'filter_type' => :'String',
         :'measure_fld_index' => :'Integer',
-        :'value1' => :'String',
         :'member_property_field_index' => :'Integer',
+        :'name' => :'String',
+        :'value1' => :'String',
         :'value2' => :'String'
       }
     end
@@ -91,40 +88,32 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'EvaluationOrder')
-        self.evaluation_order = attributes[:'EvaluationOrder']
-      end
-
-      if attributes.has_key?(:'Name')
-        self.name = attributes[:'Name']
-      end
-
-      if attributes.has_key?(:'FilterType')
-        self.filter_type = attributes[:'FilterType']
-      end
-
       if attributes.has_key?(:'AutoFilter')
-        self.auto_filter = attributes[:'AutoFilter']
+          self.auto_filter = attributes[:'AutoFilter']
       end
-
+      if attributes.has_key?(:'EvaluationOrder')
+          self.evaluation_order = attributes[:'EvaluationOrder']
+      end
       if attributes.has_key?(:'FieldIndex')
-        self.field_index = attributes[:'FieldIndex']
+          self.field_index = attributes[:'FieldIndex']
       end
-
+      if attributes.has_key?(:'FilterType')
+          self.filter_type = attributes[:'FilterType']
+      end
       if attributes.has_key?(:'MeasureFldIndex')
-        self.measure_fld_index = attributes[:'MeasureFldIndex']
+          self.measure_fld_index = attributes[:'MeasureFldIndex']
       end
-
-      if attributes.has_key?(:'Value1')
-        self.value1 = attributes[:'Value1']
-      end
-
       if attributes.has_key?(:'MemberPropertyFieldIndex')
-        self.member_property_field_index = attributes[:'MemberPropertyFieldIndex']
+          self.member_property_field_index = attributes[:'MemberPropertyFieldIndex']
       end
-
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
+      if attributes.has_key?(:'Value1')
+          self.value1 = attributes[:'Value1']
+      end
       if attributes.has_key?(:'Value2')
-        self.value2 = attributes[:'Value2']
+          self.value2 = attributes[:'Value2']
       end
 
     end
@@ -133,12 +122,49 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @auto_filter.nil?
+          invalid_properties.push("invalid value for 'auto_filter', auto_filter cannot be nil.")
+      end
+      if @evaluation_order.nil?
+          invalid_properties.push("invalid value for 'evaluation_order', evaluation_order cannot be nil.")
+      end
+      if @field_index.nil?
+          invalid_properties.push("invalid value for 'field_index', field_index cannot be nil.")
+      end
+      if @filter_type.nil?
+          invalid_properties.push("invalid value for 'filter_type', filter_type cannot be nil.")
+      end
+      if @measure_fld_index.nil?
+          invalid_properties.push("invalid value for 'measure_fld_index', measure_fld_index cannot be nil.")
+      end
+      if @member_property_field_index.nil?
+          invalid_properties.push("invalid value for 'member_property_field_index', member_property_field_index cannot be nil.")
+      end
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
+      if @value1.nil?
+          invalid_properties.push("invalid value for 'value1', value1 cannot be nil.")
+      end
+      if @value2.nil?
+          invalid_properties.push("invalid value for 'value2', value2 cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @auto_filter.nil?
+      return false if @evaluation_order.nil?
+      return false if @field_index.nil?
+      return false if @filter_type.nil?
+      return false if @measure_fld_index.nil?
+      return false if @member_property_field_index.nil?
+      return false if @name.nil?
+      return false if @value1.nil?
+      return false if @value2.nil?
       return true
     end
 
@@ -147,15 +173,16 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          evaluation_order == o.evaluation_order &&
-          name == o.name &&
-          filter_type == o.filter_type &&
           auto_filter == o.auto_filter &&
+          evaluation_order == o.evaluation_order &&
           field_index == o.field_index &&
+          filter_type == o.filter_type &&
           measure_fld_index == o.measure_fld_index &&
-          value1 == o.value1 &&
           member_property_field_index == o.member_property_field_index &&
-          value2 == o.value2
+          name == o.name &&
+          value1 == o.value1 &&
+          value2 == o.value2 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -167,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [evaluation_order, name, filter_type, auto_filter, field_index, measure_fld_index, value1, member_property_field_index, value2].hash
+      [ auto_filter , evaluation_order , field_index , filter_type , measure_fld_index , member_property_field_index , name , value1 , value2 ].hash
     end
 
     # Builds the object from hash

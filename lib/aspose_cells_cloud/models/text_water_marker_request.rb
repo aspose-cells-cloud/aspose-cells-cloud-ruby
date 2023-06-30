@@ -1,45 +1,46 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="TextWaterMarkerRequestrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Used by text water marker requests.
+
   class TextWaterMarkerRequest
-    # water marker.
-    attr_accessor :text
-
-    # font name.
-    attr_accessor :font_name
-
-    # font size.
-    attr_accessor :font_size
-
-    # height.
-    attr_accessor :height
-
-    # width.
-    attr_accessor :width
-
+        #            
+        attr_accessor :text
+        #            
+        attr_accessor :font_name
+        #            
+        attr_accessor :font_size
+        #            
+        attr_accessor :height
+        #            
+        attr_accessor :width
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -72,23 +73,19 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Text')
-        self.text = attributes[:'Text']
+          self.text = attributes[:'Text']
       end
-
       if attributes.has_key?(:'FontName')
-        self.font_name = attributes[:'FontName']
+          self.font_name = attributes[:'FontName']
       end
-
       if attributes.has_key?(:'FontSize')
-        self.font_size = attributes[:'FontSize']
+          self.font_size = attributes[:'FontSize']
       end
-
       if attributes.has_key?(:'Height')
-        self.height = attributes[:'Height']
+          self.height = attributes[:'Height']
       end
-
       if attributes.has_key?(:'Width')
-        self.width = attributes[:'Width']
+          self.width = attributes[:'Width']
       end
 
     end
@@ -97,12 +94,33 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @text.nil?
+          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      end
+      if @font_name.nil?
+          invalid_properties.push("invalid value for 'font_name', font_name cannot be nil.")
+      end
+      if @font_size.nil?
+          invalid_properties.push("invalid value for 'font_size', font_size cannot be nil.")
+      end
+      if @height.nil?
+          invalid_properties.push("invalid value for 'height', height cannot be nil.")
+      end
+      if @width.nil?
+          invalid_properties.push("invalid value for 'width', width cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @text.nil?
+      return false if @font_name.nil?
+      return false if @font_size.nil?
+      return false if @height.nil?
+      return false if @width.nil?
       return true
     end
 
@@ -115,7 +133,8 @@ module AsposeCellsCloud
           font_name == o.font_name &&
           font_size == o.font_size &&
           height == o.height &&
-          width == o.width
+          width == o.width 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -127,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [text, font_name, font_size, height, width].hash
+      [ text , font_name , font_size , height , width ].hash
     end
 
     # Builds the object from hash

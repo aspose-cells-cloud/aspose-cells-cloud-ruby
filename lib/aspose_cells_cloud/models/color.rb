@@ -1,46 +1,52 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Colorrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Color
-    attr_accessor :a
-
-    attr_accessor :b
-
-    attr_accessor :r
-
-    attr_accessor :g
-
+        #            
+        attr_accessor :a
+        #            
+        attr_accessor :r
+        #            
+        attr_accessor :g
+        #            
+        attr_accessor :b
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'a' => :'A',
-        :'b' => :'B',
         :'r' => :'R',
-        :'g' => :'G'
+        :'g' => :'G',
+        :'b' => :'B'
       }
     end
 
@@ -48,9 +54,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'a' => :'Integer',
-        :'b' => :'Integer',
         :'r' => :'Integer',
-        :'g' => :'Integer'
+        :'g' => :'Integer',
+        :'b' => :'Integer'
       }
     end
 
@@ -63,19 +69,16 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'A')
-        self.a = attributes[:'A']
+          self.a = attributes[:'A']
       end
-
-      if attributes.has_key?(:'B')
-        self.b = attributes[:'B']
-      end
-
       if attributes.has_key?(:'R')
-        self.r = attributes[:'R']
+          self.r = attributes[:'R']
       end
-
       if attributes.has_key?(:'G')
-        self.g = attributes[:'G']
+          self.g = attributes[:'G']
+      end
+      if attributes.has_key?(:'B')
+          self.b = attributes[:'B']
       end
 
     end
@@ -85,19 +88,16 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @a.nil?
-        invalid_properties.push("invalid value for 'a', a cannot be nil.")
+          invalid_properties.push("invalid value for 'a', a cannot be nil.")
       end
-
-      if @b.nil?
-        invalid_properties.push("invalid value for 'b', b cannot be nil.")
-      end
-
       if @r.nil?
-        invalid_properties.push("invalid value for 'r', r cannot be nil.")
+          invalid_properties.push("invalid value for 'r', r cannot be nil.")
       end
-
       if @g.nil?
-        invalid_properties.push("invalid value for 'g', g cannot be nil.")
+          invalid_properties.push("invalid value for 'g', g cannot be nil.")
+      end
+      if @b.nil?
+          invalid_properties.push("invalid value for 'b', b cannot be nil.")
       end
 
       return invalid_properties
@@ -107,9 +107,9 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @a.nil?
-      return false if @b.nil?
       return false if @r.nil?
       return false if @g.nil?
+      return false if @b.nil?
       return true
     end
 
@@ -119,9 +119,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           a == o.a &&
-          b == o.b &&
           r == o.r &&
-          g == o.g
+          g == o.g &&
+          b == o.b 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -133,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [a, b, r, g].hash
+      [ a , r , g , b ].hash
     end
 
     # Builds the object from hash

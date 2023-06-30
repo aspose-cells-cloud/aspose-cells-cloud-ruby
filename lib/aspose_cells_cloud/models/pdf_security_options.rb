@@ -1,54 +1,56 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PdfSecurityOptionsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PdfSecurityOptions
-    attr_accessor :annotations_permission
-
-    attr_accessor :assemble_document_permission
-
-    # Make the workbook empty after saving the file.
-    attr_accessor :extract_content_permission
-
-    # The cached file folder is used to store some large data.
-    attr_accessor :extract_content_permission_obsolete
-
-    # Indicates whether validate merged areas before saving the file. The default value is false.             
-    attr_accessor :fill_forms_permission
-
-    attr_accessor :full_quality_print_permission
-
-    # If true and the directory does not exist, the directory will be automatically created before saving the file.             
-    attr_accessor :modify_document_permission
-
-    attr_accessor :owner_password
-
-    attr_accessor :print_permission
-
-    attr_accessor :user_password
-
+        #            
+        attr_accessor :annotations_permission
+        #            
+        attr_accessor :assemble_document_permission
+        #            
+        attr_accessor :extract_content_permission
+        #            
+        attr_accessor :extract_content_permission_obsolete
+        #            
+        attr_accessor :fill_forms_permission
+        #            
+        attr_accessor :full_quality_print_permission
+        #            
+        attr_accessor :modify_document_permission
+        #            
+        attr_accessor :owner_password
+        #            
+        attr_accessor :print_permission
+        #            
+        attr_accessor :user_password
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -91,43 +93,34 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'AnnotationsPermission')
-        self.annotations_permission = attributes[:'AnnotationsPermission']
+          self.annotations_permission = attributes[:'AnnotationsPermission']
       end
-
       if attributes.has_key?(:'AssembleDocumentPermission')
-        self.assemble_document_permission = attributes[:'AssembleDocumentPermission']
+          self.assemble_document_permission = attributes[:'AssembleDocumentPermission']
       end
-
       if attributes.has_key?(:'ExtractContentPermission')
-        self.extract_content_permission = attributes[:'ExtractContentPermission']
+          self.extract_content_permission = attributes[:'ExtractContentPermission']
       end
-
       if attributes.has_key?(:'ExtractContentPermissionObsolete')
-        self.extract_content_permission_obsolete = attributes[:'ExtractContentPermissionObsolete']
+          self.extract_content_permission_obsolete = attributes[:'ExtractContentPermissionObsolete']
       end
-
       if attributes.has_key?(:'FillFormsPermission')
-        self.fill_forms_permission = attributes[:'FillFormsPermission']
+          self.fill_forms_permission = attributes[:'FillFormsPermission']
       end
-
       if attributes.has_key?(:'FullQualityPrintPermission')
-        self.full_quality_print_permission = attributes[:'FullQualityPrintPermission']
+          self.full_quality_print_permission = attributes[:'FullQualityPrintPermission']
       end
-
       if attributes.has_key?(:'ModifyDocumentPermission')
-        self.modify_document_permission = attributes[:'ModifyDocumentPermission']
+          self.modify_document_permission = attributes[:'ModifyDocumentPermission']
       end
-
       if attributes.has_key?(:'OwnerPassword')
-        self.owner_password = attributes[:'OwnerPassword']
+          self.owner_password = attributes[:'OwnerPassword']
       end
-
       if attributes.has_key?(:'PrintPermission')
-        self.print_permission = attributes[:'PrintPermission']
+          self.print_permission = attributes[:'PrintPermission']
       end
-
       if attributes.has_key?(:'UserPassword')
-        self.user_password = attributes[:'UserPassword']
+          self.user_password = attributes[:'UserPassword']
       end
 
     end
@@ -136,12 +129,53 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @annotations_permission.nil?
+          invalid_properties.push("invalid value for 'annotations_permission', annotations_permission cannot be nil.")
+      end
+      if @assemble_document_permission.nil?
+          invalid_properties.push("invalid value for 'assemble_document_permission', assemble_document_permission cannot be nil.")
+      end
+      if @extract_content_permission.nil?
+          invalid_properties.push("invalid value for 'extract_content_permission', extract_content_permission cannot be nil.")
+      end
+      if @extract_content_permission_obsolete.nil?
+          invalid_properties.push("invalid value for 'extract_content_permission_obsolete', extract_content_permission_obsolete cannot be nil.")
+      end
+      if @fill_forms_permission.nil?
+          invalid_properties.push("invalid value for 'fill_forms_permission', fill_forms_permission cannot be nil.")
+      end
+      if @full_quality_print_permission.nil?
+          invalid_properties.push("invalid value for 'full_quality_print_permission', full_quality_print_permission cannot be nil.")
+      end
+      if @modify_document_permission.nil?
+          invalid_properties.push("invalid value for 'modify_document_permission', modify_document_permission cannot be nil.")
+      end
+      if @owner_password.nil?
+          invalid_properties.push("invalid value for 'owner_password', owner_password cannot be nil.")
+      end
+      if @print_permission.nil?
+          invalid_properties.push("invalid value for 'print_permission', print_permission cannot be nil.")
+      end
+      if @user_password.nil?
+          invalid_properties.push("invalid value for 'user_password', user_password cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @annotations_permission.nil?
+      return false if @assemble_document_permission.nil?
+      return false if @extract_content_permission.nil?
+      return false if @extract_content_permission_obsolete.nil?
+      return false if @fill_forms_permission.nil?
+      return false if @full_quality_print_permission.nil?
+      return false if @modify_document_permission.nil?
+      return false if @owner_password.nil?
+      return false if @print_permission.nil?
+      return false if @user_password.nil?
       return true
     end
 
@@ -159,7 +193,8 @@ module AsposeCellsCloud
           modify_document_permission == o.modify_document_permission &&
           owner_password == o.owner_password &&
           print_permission == o.print_permission &&
-          user_password == o.user_password
+          user_password == o.user_password 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -171,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [annotations_permission, assemble_document_permission, extract_content_permission, extract_content_permission_obsolete, fill_forms_permission, full_quality_print_permission, modify_document_permission, owner_password, print_permission, user_password].hash
+      [ annotations_permission , assemble_document_permission , extract_content_permission , extract_content_permission_obsolete , fill_forms_permission , full_quality_print_permission , modify_document_permission , owner_password , print_permission , user_password ].hash
     end
 
     # Builds the object from hash

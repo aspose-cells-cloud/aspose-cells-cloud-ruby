@@ -1,52 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Borderrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Border
-    attr_accessor :color
-
-    attr_accessor :border_type
-
-    attr_accessor :line_style
-
+        #            
+        attr_accessor :line_style
+        #            
+        attr_accessor :color
+        #            
+        attr_accessor :border_type
+        #            
+        attr_accessor :theme_color
+        #            
+        attr_accessor :argb_color
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'line_style' => :'LineStyle',
         :'color' => :'Color',
         :'border_type' => :'BorderType',
-        :'line_style' => :'LineStyle'
+        :'theme_color' => :'ThemeColor',
+        :'argb_color' => :'ArgbColor'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'line_style' => :'String',
         :'color' => :'Color',
         :'border_type' => :'String',
-        :'line_style' => :'String'
+        :'theme_color' => :'ThemeColor',
+        :'argb_color' => :'Integer'
       }
     end
 
@@ -58,16 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
-      end
-
-      if attributes.has_key?(:'BorderType')
-        self.border_type = attributes[:'BorderType']
-      end
-
       if attributes.has_key?(:'LineStyle')
-        self.line_style = attributes[:'LineStyle']
+          self.line_style = attributes[:'LineStyle']
+      end
+      if attributes.has_key?(:'Color')
+          self.color = attributes[:'Color']
+      end
+      if attributes.has_key?(:'BorderType')
+          self.border_type = attributes[:'BorderType']
+      end
+      if attributes.has_key?(:'ThemeColor')
+          self.theme_color = attributes[:'ThemeColor']
+      end
+      if attributes.has_key?(:'ArgbColor')
+          self.argb_color = attributes[:'ArgbColor']
       end
 
     end
@@ -76,12 +94,33 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @line_style.nil?
+          invalid_properties.push("invalid value for 'line_style', line_style cannot be nil.")
+      end
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
+      end
+      if @border_type.nil?
+          invalid_properties.push("invalid value for 'border_type', border_type cannot be nil.")
+      end
+      if @theme_color.nil?
+          invalid_properties.push("invalid value for 'theme_color', theme_color cannot be nil.")
+      end
+      if @argb_color.nil?
+          invalid_properties.push("invalid value for 'argb_color', argb_color cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @line_style.nil?
+      return false if @color.nil?
+      return false if @border_type.nil?
+      return false if @theme_color.nil?
+      return false if @argb_color.nil?
       return true
     end
 
@@ -90,9 +129,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          line_style == o.line_style &&
           color == o.color &&
           border_type == o.border_type &&
-          line_style == o.line_style
+          theme_color == o.theme_color &&
+          argb_color == o.argb_color 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -104,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [color, border_type, line_style].hash
+      [ line_style , color , border_type , theme_color , argb_color ].hash
     end
 
     # Builds the object from hash

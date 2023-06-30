@@ -1,68 +1,74 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PageBreakOperateParameterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PageBreakOperateParameter
-    attr_accessor :operate_type
-
-    attr_accessor :index
-
-    attr_accessor :end_index
-
-    attr_accessor :column
-
-    attr_accessor :start_index
-
-    attr_accessor :page_break_type
-
-    attr_accessor :row
-
+        #            
+        attr_accessor :page_break_type
+        #            
+        attr_accessor :index
+        #            
+        attr_accessor :row
+        #            
+        attr_accessor :column
+        #            
+        attr_accessor :start_index
+        #            
+        attr_accessor :end_index
+        #            
+        attr_accessor :operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'operate_type' => :'OperateType',
+        :'page_break_type' => :'PageBreakType',
         :'index' => :'Index',
-        :'end_index' => :'EndIndex',
+        :'row' => :'Row',
         :'column' => :'Column',
         :'start_index' => :'StartIndex',
-        :'page_break_type' => :'PageBreakType',
-        :'row' => :'Row'
+        :'end_index' => :'EndIndex',
+        :'operate_type' => :'OperateType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'operate_type' => :'String',
+        :'page_break_type' => :'String',
         :'index' => :'Integer',
-        :'end_index' => :'Integer',
+        :'row' => :'Integer',
         :'column' => :'Integer',
         :'start_index' => :'Integer',
-        :'page_break_type' => :'String',
-        :'row' => :'Integer'
+        :'end_index' => :'Integer',
+        :'operate_type' => :'String'
       }
     end
 
@@ -74,32 +80,26 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'OperateType')
-        self.operate_type = attributes[:'OperateType']
-      end
-
-      if attributes.has_key?(:'Index')
-        self.index = attributes[:'Index']
-      end
-
-      if attributes.has_key?(:'EndIndex')
-        self.end_index = attributes[:'EndIndex']
-      end
-
-      if attributes.has_key?(:'Column')
-        self.column = attributes[:'Column']
-      end
-
-      if attributes.has_key?(:'StartIndex')
-        self.start_index = attributes[:'StartIndex']
-      end
-
       if attributes.has_key?(:'PageBreakType')
-        self.page_break_type = attributes[:'PageBreakType']
+          self.page_break_type = attributes[:'PageBreakType']
       end
-
+      if attributes.has_key?(:'Index')
+          self.index = attributes[:'Index']
+      end
       if attributes.has_key?(:'Row')
-        self.row = attributes[:'Row']
+          self.row = attributes[:'Row']
+      end
+      if attributes.has_key?(:'Column')
+          self.column = attributes[:'Column']
+      end
+      if attributes.has_key?(:'StartIndex')
+          self.start_index = attributes[:'StartIndex']
+      end
+      if attributes.has_key?(:'EndIndex')
+          self.end_index = attributes[:'EndIndex']
+      end
+      if attributes.has_key?(:'OperateType')
+          self.operate_type = attributes[:'OperateType']
       end
 
     end
@@ -108,12 +108,41 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @page_break_type.nil?
+          invalid_properties.push("invalid value for 'page_break_type', page_break_type cannot be nil.")
+      end
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
+      end
+      if @row.nil?
+          invalid_properties.push("invalid value for 'row', row cannot be nil.")
+      end
+      if @column.nil?
+          invalid_properties.push("invalid value for 'column', column cannot be nil.")
+      end
+      if @start_index.nil?
+          invalid_properties.push("invalid value for 'start_index', start_index cannot be nil.")
+      end
+      if @end_index.nil?
+          invalid_properties.push("invalid value for 'end_index', end_index cannot be nil.")
+      end
+      if @operate_type.nil?
+          invalid_properties.push("invalid value for 'operate_type', operate_type cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @page_break_type.nil?
+      return false if @index.nil?
+      return false if @row.nil?
+      return false if @column.nil?
+      return false if @start_index.nil?
+      return false if @end_index.nil?
+      return false if @operate_type.nil?
       return true
     end
 
@@ -122,13 +151,14 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          operate_type == o.operate_type &&
+          page_break_type == o.page_break_type &&
           index == o.index &&
-          end_index == o.end_index &&
+          row == o.row &&
           column == o.column &&
           start_index == o.start_index &&
-          page_break_type == o.page_break_type &&
-          row == o.row
+          end_index == o.end_index &&
+          operate_type == o.operate_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -140,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [operate_type, index, end_index, column, start_index, page_break_type, row].hash
+      [ page_break_type , index , row , column , start_index , end_index , operate_type ].hash
     end
 
     # Builds the object from hash

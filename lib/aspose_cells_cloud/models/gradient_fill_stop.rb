@@ -1,36 +1,42 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="GradientFillStoprb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class GradientFillStop
-    attr_accessor :color
-
-    attr_accessor :position
-
-    attr_accessor :transparency
-
+        #            
+        attr_accessor :color
+        #            
+        attr_accessor :position
+        #            
+        attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -59,15 +65,13 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Color')
-        self.color = attributes[:'Color']
+          self.color = attributes[:'Color']
       end
-
       if attributes.has_key?(:'Position')
-        self.position = attributes[:'Position']
+          self.position = attributes[:'Position']
       end
-
       if attributes.has_key?(:'Transparency')
-        self.transparency = attributes[:'Transparency']
+          self.transparency = attributes[:'Transparency']
       end
 
     end
@@ -76,12 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @position.nil?
-        invalid_properties.push("invalid value for 'position', position cannot be nil.")
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
       end
-
+      if @position.nil?
+          invalid_properties.push("invalid value for 'position', position cannot be nil.")
+      end
       if @transparency.nil?
-        invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
+          invalid_properties.push("invalid value for 'transparency', transparency cannot be nil.")
       end
 
       return invalid_properties
@@ -90,6 +96,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @color.nil?
       return false if @position.nil?
       return false if @transparency.nil?
       return true
@@ -102,7 +109,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           color == o.color &&
           position == o.position &&
-          transparency == o.transparency
+          transparency == o.transparency 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -114,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [color, position, transparency].hash
+      [ color , position , transparency ].hash
     end
 
     # Builds the object from hash

@@ -1,56 +1,66 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="AutoFilterrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class AutoFilter
-    attr_accessor :link
-
-    attr_accessor :range
-
-    attr_accessor :filter_columns
-
-    attr_accessor :sorter
-
+        #            
+        attr_accessor :filter_columns
+        #            
+        attr_accessor :range
+        #            
+        attr_accessor :sorter
+        #            
+        attr_accessor :show_filter_button
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
-        :'range' => :'Range',
         :'filter_columns' => :'FilterColumns',
-        :'sorter' => :'Sorter'
+        :'range' => :'Range',
+        :'sorter' => :'Sorter',
+        :'show_filter_button' => :'ShowFilterButton',
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
-        :'range' => :'String',
         :'filter_columns' => :'Array<FilterColumn>',
-        :'sorter' => :'DataSorter'
+        :'range' => :'String',
+        :'sorter' => :'DataSorter',
+        :'show_filter_button' => :'BOOLEAN',
+        :'link' => :'Link'
       }
     end
 
@@ -62,22 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
-      if attributes.has_key?(:'Range')
-        self.range = attributes[:'Range']
-      end
-
       if attributes.has_key?(:'FilterColumns')
-        if (value = attributes[:'FilterColumns']).is_a?(Array)
-          self.filter_columns = value
-        end
+          self.filter_columns = attributes[:'FilterColumns']
       end
-
+      if attributes.has_key?(:'Range')
+          self.range = attributes[:'Range']
+      end
       if attributes.has_key?(:'Sorter')
-        self.sorter = attributes[:'Sorter']
+          self.sorter = attributes[:'Sorter']
+      end
+      if attributes.has_key?(:'ShowFilterButton')
+          self.show_filter_button = attributes[:'ShowFilterButton']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -86,12 +94,33 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @filter_columns.nil?
+          invalid_properties.push("invalid value for 'filter_columns', filter_columns cannot be nil.")
+      end
+      if @range.nil?
+          invalid_properties.push("invalid value for 'range', range cannot be nil.")
+      end
+      if @sorter.nil?
+          invalid_properties.push("invalid value for 'sorter', sorter cannot be nil.")
+      end
+      if @show_filter_button.nil?
+          invalid_properties.push("invalid value for 'show_filter_button', show_filter_button cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @filter_columns.nil?
+      return false if @range.nil?
+      return false if @sorter.nil?
+      return false if @show_filter_button.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -100,10 +129,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
-          range == o.range &&
           filter_columns == o.filter_columns &&
-          sorter == o.sorter
+          range == o.range &&
+          sorter == o.sorter &&
+          show_filter_button == o.show_filter_button &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -115,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, range, filter_columns, sorter].hash
+      [ filter_columns , range , sorter , show_filter_button , link ].hash
     end
 
     # Builds the object from hash

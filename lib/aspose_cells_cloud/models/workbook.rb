@@ -1,66 +1,72 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Workbookrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Workbook
-    attr_accessor :links
-
-    attr_accessor :settings
-
-    attr_accessor :is_protected
-
-    attr_accessor :is_write_protected
-
-    attr_accessor :file_name
-
-    attr_accessor :document_properties
-
-    attr_accessor :names
-
-    attr_accessor :default_style
-
-    attr_accessor :is_encryption
-
-    attr_accessor :worksheets
-
-    attr_accessor :password
-
+        #            
+        attr_accessor :file_name
+        #            
+        attr_accessor :links
+        #            
+        attr_accessor :worksheets
+        #            
+        attr_accessor :default_style
+        #            
+        attr_accessor :document_properties
+        #            
+        attr_accessor :names
+        #            
+        attr_accessor :settings
+        #            
+        attr_accessor :is_write_protected
+        #            
+        attr_accessor :is_protected
+        #            
+        attr_accessor :is_encryption
+        #            
+        attr_accessor :password
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'links' => :'Links',
-        :'settings' => :'Settings',
-        :'is_protected' => :'IsProtected',
-        :'is_write_protected' => :'IsWriteProtected',
         :'file_name' => :'FileName',
+        :'links' => :'Links',
+        :'worksheets' => :'Worksheets',
+        :'default_style' => :'DefaultStyle',
         :'document_properties' => :'DocumentProperties',
         :'names' => :'Names',
-        :'default_style' => :'DefaultStyle',
+        :'settings' => :'Settings',
+        :'is_write_protected' => :'IsWriteProtected',
+        :'is_protected' => :'IsProtected',
         :'is_encryption' => :'IsEncryption',
-        :'worksheets' => :'Worksheets',
         :'password' => :'Password'
       }
     end
@@ -68,16 +74,16 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'links' => :'Array<Link>',
-        :'settings' => :'LinkElement',
-        :'is_protected' => :'String',
-        :'is_write_protected' => :'String',
         :'file_name' => :'String',
+        :'links' => :'Array<Link>',
+        :'worksheets' => :'LinkElement',
+        :'default_style' => :'LinkElement',
         :'document_properties' => :'LinkElement',
         :'names' => :'LinkElement',
-        :'default_style' => :'LinkElement',
+        :'settings' => :'LinkElement',
+        :'is_write_protected' => :'String',
+        :'is_protected' => :'String',
         :'is_encryption' => :'String',
-        :'worksheets' => :'LinkElement',
         :'password' => :'String'
       }
     end
@@ -90,50 +96,38 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Links')
-        if (value = attributes[:'Links']).is_a?(Array)
-          self.links = value
-        end
-      end
-
-      if attributes.has_key?(:'Settings')
-        self.settings = attributes[:'Settings']
-      end
-
-      if attributes.has_key?(:'IsProtected')
-        self.is_protected = attributes[:'IsProtected']
-      end
-
-      if attributes.has_key?(:'IsWriteProtected')
-        self.is_write_protected = attributes[:'IsWriteProtected']
-      end
-
       if attributes.has_key?(:'FileName')
-        self.file_name = attributes[:'FileName']
+          self.file_name = attributes[:'FileName']
       end
-
-      if attributes.has_key?(:'DocumentProperties')
-        self.document_properties = attributes[:'DocumentProperties']
+      if attributes.has_key?(:'Links')
+          self.links = attributes[:'Links']
       end
-
-      if attributes.has_key?(:'Names')
-        self.names = attributes[:'Names']
-      end
-
-      if attributes.has_key?(:'DefaultStyle')
-        self.default_style = attributes[:'DefaultStyle']
-      end
-
-      if attributes.has_key?(:'IsEncryption')
-        self.is_encryption = attributes[:'IsEncryption']
-      end
-
       if attributes.has_key?(:'Worksheets')
-        self.worksheets = attributes[:'Worksheets']
+          self.worksheets = attributes[:'Worksheets']
       end
-
+      if attributes.has_key?(:'DefaultStyle')
+          self.default_style = attributes[:'DefaultStyle']
+      end
+      if attributes.has_key?(:'DocumentProperties')
+          self.document_properties = attributes[:'DocumentProperties']
+      end
+      if attributes.has_key?(:'Names')
+          self.names = attributes[:'Names']
+      end
+      if attributes.has_key?(:'Settings')
+          self.settings = attributes[:'Settings']
+      end
+      if attributes.has_key?(:'IsWriteProtected')
+          self.is_write_protected = attributes[:'IsWriteProtected']
+      end
+      if attributes.has_key?(:'IsProtected')
+          self.is_protected = attributes[:'IsProtected']
+      end
+      if attributes.has_key?(:'IsEncryption')
+          self.is_encryption = attributes[:'IsEncryption']
+      end
       if attributes.has_key?(:'Password')
-        self.password = attributes[:'Password']
+          self.password = attributes[:'Password']
       end
 
     end
@@ -142,12 +136,57 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @file_name.nil?
+          invalid_properties.push("invalid value for 'file_name', file_name cannot be nil.")
+      end
+      if @links.nil?
+          invalid_properties.push("invalid value for 'links', links cannot be nil.")
+      end
+      if @worksheets.nil?
+          invalid_properties.push("invalid value for 'worksheets', worksheets cannot be nil.")
+      end
+      if @default_style.nil?
+          invalid_properties.push("invalid value for 'default_style', default_style cannot be nil.")
+      end
+      if @document_properties.nil?
+          invalid_properties.push("invalid value for 'document_properties', document_properties cannot be nil.")
+      end
+      if @names.nil?
+          invalid_properties.push("invalid value for 'names', names cannot be nil.")
+      end
+      if @settings.nil?
+          invalid_properties.push("invalid value for 'settings', settings cannot be nil.")
+      end
+      if @is_write_protected.nil?
+          invalid_properties.push("invalid value for 'is_write_protected', is_write_protected cannot be nil.")
+      end
+      if @is_protected.nil?
+          invalid_properties.push("invalid value for 'is_protected', is_protected cannot be nil.")
+      end
+      if @is_encryption.nil?
+          invalid_properties.push("invalid value for 'is_encryption', is_encryption cannot be nil.")
+      end
+      if @password.nil?
+          invalid_properties.push("invalid value for 'password', password cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @file_name.nil?
+      return false if @links.nil?
+      return false if @worksheets.nil?
+      return false if @default_style.nil?
+      return false if @document_properties.nil?
+      return false if @names.nil?
+      return false if @settings.nil?
+      return false if @is_write_protected.nil?
+      return false if @is_protected.nil?
+      return false if @is_encryption.nil?
+      return false if @password.nil?
       return true
     end
 
@@ -156,17 +195,18 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          links == o.links &&
-          settings == o.settings &&
-          is_protected == o.is_protected &&
-          is_write_protected == o.is_write_protected &&
           file_name == o.file_name &&
+          links == o.links &&
+          worksheets == o.worksheets &&
+          default_style == o.default_style &&
           document_properties == o.document_properties &&
           names == o.names &&
-          default_style == o.default_style &&
+          settings == o.settings &&
+          is_write_protected == o.is_write_protected &&
+          is_protected == o.is_protected &&
           is_encryption == o.is_encryption &&
-          worksheets == o.worksheets &&
-          password == o.password
+          password == o.password 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -178,7 +218,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [links, settings, is_protected, is_write_protected, file_name, document_properties, names, default_style, is_encryption, worksheets, password].hash
+      [ file_name , links , worksheets , default_style , document_properties , names , settings , is_write_protected , is_protected , is_encryption , password ].hash
     end
 
     # Builds the object from hash

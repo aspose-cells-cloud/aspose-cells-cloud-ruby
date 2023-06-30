@@ -1,56 +1,62 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="Rowsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class Rows
-    attr_accessor :link
-
-    attr_accessor :max_row
-
-    attr_accessor :rows_list
-
-    attr_accessor :rows_count
-
+        #            
+        attr_accessor :max_row
+        #            
+        attr_accessor :rows_count
+        #            
+        attr_accessor :rows_list
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'link' => :'link',
         :'max_row' => :'MaxRow',
+        :'rows_count' => :'RowsCount',
         :'rows_list' => :'RowsList',
-        :'rows_count' => :'RowsCount'
+        :'link' => :'link'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'link' => :'Link',
         :'max_row' => :'Integer',
+        :'rows_count' => :'Integer',
         :'rows_list' => :'Array<LinkElement>',
-        :'rows_count' => :'Integer'
+        :'link' => :'Link'
       }
     end
 
@@ -62,22 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'link')
-        self.link = attributes[:'link']
-      end
-
       if attributes.has_key?(:'MaxRow')
-        self.max_row = attributes[:'MaxRow']
+          self.max_row = attributes[:'MaxRow']
       end
-
-      if attributes.has_key?(:'RowsList')
-        if (value = attributes[:'RowsList']).is_a?(Array)
-          self.rows_list = value
-        end
-      end
-
       if attributes.has_key?(:'RowsCount')
-        self.rows_count = attributes[:'RowsCount']
+          self.rows_count = attributes[:'RowsCount']
+      end
+      if attributes.has_key?(:'RowsList')
+          self.rows_list = attributes[:'RowsList']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -87,11 +88,16 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @max_row.nil?
-        invalid_properties.push("invalid value for 'max_row', max_row cannot be nil.")
+          invalid_properties.push("invalid value for 'max_row', max_row cannot be nil.")
       end
-
       if @rows_count.nil?
-        invalid_properties.push("invalid value for 'rows_count', rows_count cannot be nil.")
+          invalid_properties.push("invalid value for 'rows_count', rows_count cannot be nil.")
+      end
+      if @rows_list.nil?
+          invalid_properties.push("invalid value for 'rows_list', rows_list cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
 
       return invalid_properties
@@ -102,6 +108,8 @@ module AsposeCellsCloud
     def valid?
       return false if @max_row.nil?
       return false if @rows_count.nil?
+      return false if @rows_list.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -110,10 +118,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          link == o.link &&
           max_row == o.max_row &&
+          rows_count == o.rows_count &&
           rows_list == o.rows_list &&
-          rows_count == o.rows_count
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -125,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [link, max_row, rows_list, rows_count].hash
+      [ max_row , rows_count , rows_list , link ].hash
     end
 
     # Builds the object from hash

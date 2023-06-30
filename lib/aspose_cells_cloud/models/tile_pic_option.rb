@@ -1,51 +1,57 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="TilePicOptionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class TilePicOption
-    attr_accessor :alignment_type
-
-    attr_accessor :offset_x
-
-    attr_accessor :scale_x
-
-    attr_accessor :offset_y
-
-    attr_accessor :scale_y
-
-    attr_accessor :mirror_type
-
+        #            
+        attr_accessor :offset_x
+        #            
+        attr_accessor :offset_y
+        #            
+        attr_accessor :scale_x
+        #            
+        attr_accessor :scale_y
+        #            
+        attr_accessor :alignment_type
+        #            
+        attr_accessor :mirror_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'alignment_type' => :'AlignmentType',
         :'offset_x' => :'OffsetX',
-        :'scale_x' => :'ScaleX',
         :'offset_y' => :'OffsetY',
+        :'scale_x' => :'ScaleX',
         :'scale_y' => :'ScaleY',
+        :'alignment_type' => :'AlignmentType',
         :'mirror_type' => :'MirrorType'
       }
     end
@@ -53,11 +59,11 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'alignment_type' => :'String',
         :'offset_x' => :'Float',
-        :'scale_x' => :'Float',
         :'offset_y' => :'Float',
+        :'scale_x' => :'Float',
         :'scale_y' => :'Float',
+        :'alignment_type' => :'String',
         :'mirror_type' => :'String'
       }
     end
@@ -70,28 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'AlignmentType')
-        self.alignment_type = attributes[:'AlignmentType']
-      end
-
       if attributes.has_key?(:'OffsetX')
-        self.offset_x = attributes[:'OffsetX']
+          self.offset_x = attributes[:'OffsetX']
       end
-
-      if attributes.has_key?(:'ScaleX')
-        self.scale_x = attributes[:'ScaleX']
-      end
-
       if attributes.has_key?(:'OffsetY')
-        self.offset_y = attributes[:'OffsetY']
+          self.offset_y = attributes[:'OffsetY']
       end
-
+      if attributes.has_key?(:'ScaleX')
+          self.scale_x = attributes[:'ScaleX']
+      end
       if attributes.has_key?(:'ScaleY')
-        self.scale_y = attributes[:'ScaleY']
+          self.scale_y = attributes[:'ScaleY']
       end
-
+      if attributes.has_key?(:'AlignmentType')
+          self.alignment_type = attributes[:'AlignmentType']
+      end
       if attributes.has_key?(:'MirrorType')
-        self.mirror_type = attributes[:'MirrorType']
+          self.mirror_type = attributes[:'MirrorType']
       end
 
     end
@@ -101,19 +102,22 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @offset_x.nil?
-        invalid_properties.push("invalid value for 'offset_x', offset_x cannot be nil.")
+          invalid_properties.push("invalid value for 'offset_x', offset_x cannot be nil.")
       end
-
-      if @scale_x.nil?
-        invalid_properties.push("invalid value for 'scale_x', scale_x cannot be nil.")
-      end
-
       if @offset_y.nil?
-        invalid_properties.push("invalid value for 'offset_y', offset_y cannot be nil.")
+          invalid_properties.push("invalid value for 'offset_y', offset_y cannot be nil.")
       end
-
+      if @scale_x.nil?
+          invalid_properties.push("invalid value for 'scale_x', scale_x cannot be nil.")
+      end
       if @scale_y.nil?
-        invalid_properties.push("invalid value for 'scale_y', scale_y cannot be nil.")
+          invalid_properties.push("invalid value for 'scale_y', scale_y cannot be nil.")
+      end
+      if @alignment_type.nil?
+          invalid_properties.push("invalid value for 'alignment_type', alignment_type cannot be nil.")
+      end
+      if @mirror_type.nil?
+          invalid_properties.push("invalid value for 'mirror_type', mirror_type cannot be nil.")
       end
 
       return invalid_properties
@@ -123,9 +127,11 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @offset_x.nil?
-      return false if @scale_x.nil?
       return false if @offset_y.nil?
+      return false if @scale_x.nil?
       return false if @scale_y.nil?
+      return false if @alignment_type.nil?
+      return false if @mirror_type.nil?
       return true
     end
 
@@ -134,12 +140,13 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          alignment_type == o.alignment_type &&
           offset_x == o.offset_x &&
-          scale_x == o.scale_x &&
           offset_y == o.offset_y &&
+          scale_x == o.scale_x &&
           scale_y == o.scale_y &&
-          mirror_type == o.mirror_type
+          alignment_type == o.alignment_type &&
+          mirror_type == o.mirror_type 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -151,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [alignment_type, offset_x, scale_x, offset_y, scale_y, mirror_type].hash
+      [ offset_x , offset_y , scale_x , scale_y , alignment_type , mirror_type ].hash
     end
 
     # Builds the object from hash

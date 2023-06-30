@@ -1,69 +1,67 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="TickLabelsrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class TickLabels
-    #  
-    attr_accessor :auto_scale_font
-
-    # 
-    attr_accessor :font
-
-    #  
-    attr_accessor :background_mode
-
-    attr_accessor :number
-
-    #  
-    attr_accessor :number_format
-
-    #  
-    attr_accessor :number_format_linked
-
-    #  
-    attr_accessor :offset
-
-    #  
-    attr_accessor :rotation_angle
-
-    #  
-    attr_accessor :text_direction
-
-    #  
-    attr_accessor :reading_order
-
-    #  
-    attr_accessor :direction_type
-
+        #            
+        attr_accessor :auto_scale_font
+        #            
+        attr_accessor :background_mode
+        #            
+        attr_accessor :font
+        #            
+        attr_accessor :number
+        #            
+        attr_accessor :number_format
+        #            
+        attr_accessor :number_format_linked
+        #            
+        attr_accessor :offset
+        #            
+        attr_accessor :rotation_angle
+        #            
+        attr_accessor :text_direction
+        #            
+        attr_accessor :reading_order
+        #            
+        attr_accessor :direction_type
+        #            
+        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'auto_scale_font' => :'AutoScaleFont',
-        :'font' => :'Font',
         :'background_mode' => :'BackgroundMode',
+        :'font' => :'Font',
         :'number' => :'Number',
         :'number_format' => :'NumberFormat',
         :'number_format_linked' => :'NumberFormatLinked',
@@ -71,7 +69,8 @@ module AsposeCellsCloud
         :'rotation_angle' => :'RotationAngle',
         :'text_direction' => :'TextDirection',
         :'reading_order' => :'ReadingOrder',
-        :'direction_type' => :'DirectionType'
+        :'direction_type' => :'DirectionType',
+        :'link' => :'link'
       }
     end
 
@@ -79,8 +78,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'auto_scale_font' => :'BOOLEAN',
-        :'font' => :'Font',
         :'background_mode' => :'String',
+        :'font' => :'Font',
         :'number' => :'Integer',
         :'number_format' => :'String',
         :'number_format_linked' => :'BOOLEAN',
@@ -88,7 +87,8 @@ module AsposeCellsCloud
         :'rotation_angle' => :'Integer',
         :'text_direction' => :'String',
         :'reading_order' => :'String',
-        :'direction_type' => :'String'
+        :'direction_type' => :'String',
+        :'link' => :'Link'
       }
     end
 
@@ -101,47 +101,40 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'AutoScaleFont')
-        self.auto_scale_font = attributes[:'AutoScaleFont']
+          self.auto_scale_font = attributes[:'AutoScaleFont']
       end
-
-      if attributes.has_key?(:'Font')
-        self.font = attributes[:'Font']
-      end
-
       if attributes.has_key?(:'BackgroundMode')
-        self.background_mode = attributes[:'BackgroundMode']
+          self.background_mode = attributes[:'BackgroundMode']
       end
-
+      if attributes.has_key?(:'Font')
+          self.font = attributes[:'Font']
+      end
       if attributes.has_key?(:'Number')
-        self.number = attributes[:'Number']
+          self.number = attributes[:'Number']
       end
-
       if attributes.has_key?(:'NumberFormat')
-        self.number_format = attributes[:'NumberFormat']
+          self.number_format = attributes[:'NumberFormat']
       end
-
       if attributes.has_key?(:'NumberFormatLinked')
-        self.number_format_linked = attributes[:'NumberFormatLinked']
+          self.number_format_linked = attributes[:'NumberFormatLinked']
       end
-
       if attributes.has_key?(:'Offset')
-        self.offset = attributes[:'Offset']
+          self.offset = attributes[:'Offset']
       end
-
       if attributes.has_key?(:'RotationAngle')
-        self.rotation_angle = attributes[:'RotationAngle']
+          self.rotation_angle = attributes[:'RotationAngle']
       end
-
       if attributes.has_key?(:'TextDirection')
-        self.text_direction = attributes[:'TextDirection']
+          self.text_direction = attributes[:'TextDirection']
       end
-
       if attributes.has_key?(:'ReadingOrder')
-        self.reading_order = attributes[:'ReadingOrder']
+          self.reading_order = attributes[:'ReadingOrder']
       end
-
       if attributes.has_key?(:'DirectionType')
-        self.direction_type = attributes[:'DirectionType']
+          self.direction_type = attributes[:'DirectionType']
+      end
+      if attributes.has_key?(:'link')
+          self.link = attributes[:'link']
       end
 
     end
@@ -150,12 +143,61 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @auto_scale_font.nil?
+          invalid_properties.push("invalid value for 'auto_scale_font', auto_scale_font cannot be nil.")
+      end
+      if @background_mode.nil?
+          invalid_properties.push("invalid value for 'background_mode', background_mode cannot be nil.")
+      end
+      if @font.nil?
+          invalid_properties.push("invalid value for 'font', font cannot be nil.")
+      end
+      if @number.nil?
+          invalid_properties.push("invalid value for 'number', number cannot be nil.")
+      end
+      if @number_format.nil?
+          invalid_properties.push("invalid value for 'number_format', number_format cannot be nil.")
+      end
+      if @number_format_linked.nil?
+          invalid_properties.push("invalid value for 'number_format_linked', number_format_linked cannot be nil.")
+      end
+      if @offset.nil?
+          invalid_properties.push("invalid value for 'offset', offset cannot be nil.")
+      end
+      if @rotation_angle.nil?
+          invalid_properties.push("invalid value for 'rotation_angle', rotation_angle cannot be nil.")
+      end
+      if @text_direction.nil?
+          invalid_properties.push("invalid value for 'text_direction', text_direction cannot be nil.")
+      end
+      if @reading_order.nil?
+          invalid_properties.push("invalid value for 'reading_order', reading_order cannot be nil.")
+      end
+      if @direction_type.nil?
+          invalid_properties.push("invalid value for 'direction_type', direction_type cannot be nil.")
+      end
+      if @link.nil?
+          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @auto_scale_font.nil?
+      return false if @background_mode.nil?
+      return false if @font.nil?
+      return false if @number.nil?
+      return false if @number_format.nil?
+      return false if @number_format_linked.nil?
+      return false if @offset.nil?
+      return false if @rotation_angle.nil?
+      return false if @text_direction.nil?
+      return false if @reading_order.nil?
+      return false if @direction_type.nil?
+      return false if @link.nil?
       return true
     end
 
@@ -165,8 +207,8 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           auto_scale_font == o.auto_scale_font &&
-          font == o.font &&
           background_mode == o.background_mode &&
+          font == o.font &&
           number == o.number &&
           number_format == o.number_format &&
           number_format_linked == o.number_format_linked &&
@@ -174,7 +216,9 @@ module AsposeCellsCloud
           rotation_angle == o.rotation_angle &&
           text_direction == o.text_direction &&
           reading_order == o.reading_order &&
-          direction_type == o.direction_type
+          direction_type == o.direction_type &&
+          link == o.link 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -186,7 +230,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [auto_scale_font, font, background_mode, number, number_format, number_format_linked, offset, rotation_angle, text_direction, reading_order, direction_type].hash
+      [ auto_scale_font , background_mode , font , number , number_format , number_format_linked , offset , rotation_angle , text_direction , reading_order , direction_type , link ].hash
     end
 
     # Builds the object from hash

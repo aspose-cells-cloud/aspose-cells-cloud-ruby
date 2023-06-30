@@ -1,48 +1,60 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2021 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="BatchConvertRequestrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class BatchConvertRequest
-    attr_accessor :source_folder
-
-    attr_accessor :match_condition
-
-    attr_accessor :format
-
-    attr_accessor :out_folder
-
-    attr_accessor :save_options
-
+        #            
+        attr_accessor :source_folder
+        #            
+        attr_accessor :source_storage
+        #            
+        attr_accessor :match_condition
+        #            
+        attr_accessor :format
+        #            
+        attr_accessor :out_folder
+        #            
+        attr_accessor :out_storage
+        #            
+        attr_accessor :save_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'source_folder' => :'SourceFolder',
+        :'source_storage' => :'SourceStorage',
         :'match_condition' => :'MatchCondition',
         :'format' => :'Format',
         :'out_folder' => :'OutFolder',
+        :'out_storage' => :'OutStorage',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -51,9 +63,11 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'source_folder' => :'String',
+        :'source_storage' => :'String',
         :'match_condition' => :'MatchConditionRequest',
         :'format' => :'String',
         :'out_folder' => :'String',
+        :'out_storage' => :'String',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -67,23 +81,25 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'SourceFolder')
-        self.source_folder = attributes[:'SourceFolder']
+          self.source_folder = attributes[:'SourceFolder']
       end
-
+      if attributes.has_key?(:'SourceStorage')
+          self.source_storage = attributes[:'SourceStorage']
+      end
       if attributes.has_key?(:'MatchCondition')
-        self.match_condition = attributes[:'MatchCondition']
+          self.match_condition = attributes[:'MatchCondition']
       end
-
       if attributes.has_key?(:'Format')
-        self.format = attributes[:'Format']
+          self.format = attributes[:'Format']
       end
-
       if attributes.has_key?(:'OutFolder')
-        self.out_folder = attributes[:'OutFolder']
+          self.out_folder = attributes[:'OutFolder']
       end
-
+      if attributes.has_key?(:'OutStorage')
+          self.out_storage = attributes[:'OutStorage']
+      end
       if attributes.has_key?(:'SaveOptions')
-        self.save_options = attributes[:'SaveOptions']
+          self.save_options = attributes[:'SaveOptions']
       end
 
     end
@@ -92,12 +108,41 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @source_folder.nil?
+          invalid_properties.push("invalid value for 'source_folder', source_folder cannot be nil.")
+      end
+      if @source_storage.nil?
+          invalid_properties.push("invalid value for 'source_storage', source_storage cannot be nil.")
+      end
+      if @match_condition.nil?
+          invalid_properties.push("invalid value for 'match_condition', match_condition cannot be nil.")
+      end
+      if @format.nil?
+          invalid_properties.push("invalid value for 'format', format cannot be nil.")
+      end
+      if @out_folder.nil?
+          invalid_properties.push("invalid value for 'out_folder', out_folder cannot be nil.")
+      end
+      if @out_storage.nil?
+          invalid_properties.push("invalid value for 'out_storage', out_storage cannot be nil.")
+      end
+      if @save_options.nil?
+          invalid_properties.push("invalid value for 'save_options', save_options cannot be nil.")
+      end
+
       return invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @source_folder.nil?
+      return false if @source_storage.nil?
+      return false if @match_condition.nil?
+      return false if @format.nil?
+      return false if @out_folder.nil?
+      return false if @out_storage.nil?
+      return false if @save_options.nil?
       return true
     end
 
@@ -107,10 +152,13 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           source_folder == o.source_folder &&
+          source_storage == o.source_storage &&
           match_condition == o.match_condition &&
           format == o.format &&
           out_folder == o.out_folder &&
-          save_options == o.save_options
+          out_storage == o.out_storage &&
+          save_options == o.save_options 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -122,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source_folder, match_condition, format, out_folder, save_options].hash
+      [ source_folder , source_storage , match_condition , format , out_folder , out_storage , save_options ].hash
     end
 
     # Builds the object from hash

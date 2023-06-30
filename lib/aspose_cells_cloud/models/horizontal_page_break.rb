@@ -1,52 +1,58 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="HorizontalPageBreakrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class HorizontalPageBreak
-    attr_accessor :start_column
-
-    attr_accessor :end_column
-
-    attr_accessor :row
-
+        #            
+        attr_accessor :row
+        #            
+        attr_accessor :end_column
+        #            
+        attr_accessor :start_column
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'start_column' => :'StartColumn',
+        :'row' => :'Row',
         :'end_column' => :'EndColumn',
-        :'row' => :'Row'
+        :'start_column' => :'StartColumn'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'start_column' => :'Integer',
+        :'row' => :'Integer',
         :'end_column' => :'Integer',
-        :'row' => :'Integer'
+        :'start_column' => :'Integer'
       }
     end
 
@@ -58,16 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'StartColumn')
-        self.start_column = attributes[:'StartColumn']
-      end
-
-      if attributes.has_key?(:'EndColumn')
-        self.end_column = attributes[:'EndColumn']
-      end
-
       if attributes.has_key?(:'Row')
-        self.row = attributes[:'Row']
+          self.row = attributes[:'Row']
+      end
+      if attributes.has_key?(:'EndColumn')
+          self.end_column = attributes[:'EndColumn']
+      end
+      if attributes.has_key?(:'StartColumn')
+          self.start_column = attributes[:'StartColumn']
       end
 
     end
@@ -76,16 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @start_column.nil?
-        invalid_properties.push("invalid value for 'start_column', start_column cannot be nil.")
-      end
-
-      if @end_column.nil?
-        invalid_properties.push("invalid value for 'end_column', end_column cannot be nil.")
-      end
-
       if @row.nil?
-        invalid_properties.push("invalid value for 'row', row cannot be nil.")
+          invalid_properties.push("invalid value for 'row', row cannot be nil.")
+      end
+      if @end_column.nil?
+          invalid_properties.push("invalid value for 'end_column', end_column cannot be nil.")
+      end
+      if @start_column.nil?
+          invalid_properties.push("invalid value for 'start_column', start_column cannot be nil.")
       end
 
       return invalid_properties
@@ -94,9 +96,9 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @start_column.nil?
-      return false if @end_column.nil?
       return false if @row.nil?
+      return false if @end_column.nil?
+      return false if @start_column.nil?
       return true
     end
 
@@ -105,9 +107,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          start_column == o.start_column &&
+          row == o.row &&
           end_column == o.end_column &&
-          row == o.row
+          start_column == o.start_column 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -119,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [start_column, end_column, row].hash
+      [ row , end_column , start_column ].hash
     end
 
     # Builds the object from hash

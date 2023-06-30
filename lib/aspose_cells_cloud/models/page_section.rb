@@ -1,52 +1,54 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="PageSectionrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
 
   class PageSection
-    attr_accessor :picture
-
-    # 0,1,2  left , middle ,right
-    attr_accessor :section
-
-    # fisrt page context script
-    attr_accessor :fisrt_page_context
-
-    # page context script             
-    attr_accessor :context
-
-    # Even page context script
-    attr_accessor :even_page_context
-
+        #0,1,2  left , middle ,right            
+        attr_accessor :section
+        #page context script                        
+        attr_accessor :context
+        #            
+        attr_accessor :picture
+        #fisrt page context script            
+        attr_accessor :fisrt_page_context
+        #Even page context script            
+        attr_accessor :even_page_context
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'picture' => :'Picture',
         :'section' => :'Section',
-        :'fisrt_page_context' => :'FisrtPageContext',
         :'context' => :'Context',
+        :'picture' => :'Picture',
+        :'fisrt_page_context' => :'FisrtPageContext',
         :'even_page_context' => :'EvenPageContext'
       }
     end
@@ -54,10 +56,10 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'picture' => :'String',
         :'section' => :'Integer',
-        :'fisrt_page_context' => :'String',
         :'context' => :'String',
+        :'picture' => :'String',
+        :'fisrt_page_context' => :'String',
         :'even_page_context' => :'String'
       }
     end
@@ -70,24 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Picture')
-        self.picture = attributes[:'Picture']
-      end
-
       if attributes.has_key?(:'Section')
-        self.section = attributes[:'Section']
+          self.section = attributes[:'Section']
       end
-
-      if attributes.has_key?(:'FisrtPageContext')
-        self.fisrt_page_context = attributes[:'FisrtPageContext']
-      end
-
       if attributes.has_key?(:'Context')
-        self.context = attributes[:'Context']
+          self.context = attributes[:'Context']
       end
-
+      if attributes.has_key?(:'Picture')
+          self.picture = attributes[:'Picture']
+      end
+      if attributes.has_key?(:'FisrtPageContext')
+          self.fisrt_page_context = attributes[:'FisrtPageContext']
+      end
       if attributes.has_key?(:'EvenPageContext')
-        self.even_page_context = attributes[:'EvenPageContext']
+          self.even_page_context = attributes[:'EvenPageContext']
       end
 
     end
@@ -96,12 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@picture.nil? && @picture !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        invalid_properties.push("invalid value for 'picture', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.")
-      end
-
       if @section.nil?
-        invalid_properties.push("invalid value for 'section', section cannot be nil.")
+          invalid_properties.push("invalid value for 'section', section cannot be nil.")
+      end
+      if @context.nil?
+          invalid_properties.push("invalid value for 'context', context cannot be nil.")
+      end
+      if @picture.nil?
+          invalid_properties.push("invalid value for 'picture', picture cannot be nil.")
+      end
+      if @fisrt_page_context.nil?
+          invalid_properties.push("invalid value for 'fisrt_page_context', fisrt_page_context cannot be nil.")
+      end
+      if @even_page_context.nil?
+          invalid_properties.push("invalid value for 'even_page_context', even_page_context cannot be nil.")
       end
 
       return invalid_properties
@@ -110,20 +116,12 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@picture.nil? && @picture !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
       return false if @section.nil?
+      return false if @context.nil?
+      return false if @picture.nil?
+      return false if @fisrt_page_context.nil?
+      return false if @even_page_context.nil?
       return true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] picture Value to be assigned
-    def picture=(picture)
-
-      if !picture.nil? && picture !~ Regexp.new(/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/)
-        fail ArgumentError, "invalid value for 'picture', must conform to the pattern /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/."
-      end
-
-      @picture = picture
     end
 
     # Checks equality by comparing each attribute.
@@ -131,11 +129,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          picture == o.picture &&
           section == o.section &&
-          fisrt_page_context == o.fisrt_page_context &&
           context == o.context &&
-          even_page_context == o.even_page_context
+          picture == o.picture &&
+          fisrt_page_context == o.fisrt_page_context &&
+          even_page_context == o.even_page_context 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -147,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [picture, section, fisrt_page_context, context, even_page_context].hash
+      [ section , context , picture , fisrt_page_context , even_page_context ].hash
     end
 
     # Builds the object from hash

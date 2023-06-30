@@ -1,36 +1,40 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
-Copyright (c) 2022 Aspose.Cells Cloud
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
---------------------------------------------------------------------------------------------------------------------
+ <copyright company="Aspose" file="ObjectExistrb.cs">
+   Copyright (c) 2023 Aspose.Cells Cloud
+ </copyright>
+ <summary>
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ </summary>
+--------------------------------------------------------------------------------------------------------------------
 =end
+
 
 require 'date'
 
 module AsposeCellsCloud
-  # Object exists
+
   class ObjectExist
-    # Indicates that the file or folder exists.
-    attr_accessor :exists
-
-    # True if it is a folder, false if it is a file.
-    attr_accessor :is_folder
-
+        #Indicates that the file or folder exists.            
+        attr_accessor :exists
+        #True if it is a folder, false if it is a file.            
+        attr_accessor :is_folder
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -57,11 +61,10 @@ module AsposeCellsCloud
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'Exists')
-        self.exists = attributes[:'Exists']
+          self.exists = attributes[:'Exists']
       end
-
       if attributes.has_key?(:'IsFolder')
-        self.is_folder = attributes[:'IsFolder']
+          self.is_folder = attributes[:'IsFolder']
       end
 
     end
@@ -71,11 +74,10 @@ module AsposeCellsCloud
     def list_invalid_properties
       invalid_properties = Array.new
       if @exists.nil?
-        invalid_properties.push("invalid value for 'exists', exists cannot be nil.")
+          invalid_properties.push("invalid value for 'exists', exists cannot be nil.")
       end
-
       if @is_folder.nil?
-        invalid_properties.push("invalid value for 'is_folder', is_folder cannot be nil.")
+          invalid_properties.push("invalid value for 'is_folder', is_folder cannot be nil.")
       end
 
       return invalid_properties
@@ -95,7 +97,8 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           exists == o.exists &&
-          is_folder == o.is_folder
+          is_folder == o.is_folder 
+          std_dev == o.std_dev
     end
 
     # @see the `==` method
@@ -107,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [exists, is_folder].hash
+      [ exists , is_folder ].hash
     end
 
     # Builds the object from hash
