@@ -1048,6 +1048,12 @@ module AsposeCellsCloud
        data, _status_code, _headers = post_reverse_request.create_http_request(@api_client,opts )
        return data
     end
+    
+    def post_repair( post_repair_request, opts = {})
+
+       data, _status_code, _headers = post_repair_request.create_http_request(@api_client,opts )
+       return data
+    end
 
     # Reverse rows or columns of Excel files, save as kinds of format files.
 
