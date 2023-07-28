@@ -83,30 +83,32 @@ module AsposeCellsCloud
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      header_params['Accept'] = api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Content-Type'] = api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
       post_body = nil 
+      if(!file.nil?)
       file.each do |filename , context|
         form_params[filename]  = context
       end 
-      header_params['Content-Type'] = @api_client.select_header_content_type(['multipart/form-data'])
+      end
+      header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
          
 
       #auth_names = []
       auth_names = ['JWT']
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+      data, status_code, headers = api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
         :return_type => 'FilesResult')
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CellsApi#cells_auto_filter_delete_worksheet_date_filter\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      if api_client.config.debugging
+        api_client.config.logger.debug "API called: Specification.Name>Api.post_repair\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

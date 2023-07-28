@@ -3373,6 +3373,62 @@ describe 'CellsApi' do
       @instance.post_clear_objects(request);
     end
   end 
+  describe 'post_repair_xlsx test' do
+    it "should work" do
+      book1_xlsx = 'Book1.xlsx'
+
+      format = "xlsx"
+
+      
+     mapFiles = { }   
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      @instance.post_repair(request);
+    end
+  end 
+
+  describe 'post_repair_pdf test' do
+    it "should work" do
+      book1_xlsx = 'Book1.xlsx'
+
+      format = "pdf"
+
+      
+     mapFiles = { }   
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      @instance.post_repair(request);
+    end
+  end 
+
+  describe 'post_repair_csv test' do
+    it "should work" do
+      book1_xlsx = 'Book1.xlsx'
+
+      format = "csv"
+
+      
+     mapFiles = { }   
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      @instance.post_repair(request);
+    end
+  end 
+
+  describe 'post_repair_png test' do
+    it "should work" do
+      book1_xlsx = 'Book1.xlsx'
+
+      format = "png"
+
+      
+     mapFiles = { }   
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      @instance.post_repair(request);
+    end
+  end 
+
 
   describe 'post_reverse_rows_pdf test' do
     it "should work" do
