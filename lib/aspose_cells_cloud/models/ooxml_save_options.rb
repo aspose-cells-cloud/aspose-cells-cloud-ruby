@@ -34,6 +34,14 @@ module AsposeCellsCloud
         #            
         attr_accessor :export_cell_name
         #            
+        attr_accessor :update_zoom
+        #            
+        attr_accessor :enable_zip64
+        #            
+        attr_accessor :embed_ooxml_as_ole_object
+        #            
+        attr_accessor :compression_type
+        #            
         attr_accessor :save_format
         #            
         attr_accessor :cached_file_folder
@@ -54,6 +62,10 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'export_cell_name' => :'ExportCellName',
+        :'update_zoom' => :'UpdateZoom',
+        :'enable_zip64' => :'EnableZip64',
+        :'embed_ooxml_as_ole_object' => :'EmbedOoxmlAsOleObject',
+        :'compression_type' => :'CompressionType',
         :'save_format' => :'SaveFormat',
         :'cached_file_folder' => :'CachedFileFolder',
         :'clear_data' => :'ClearData',
@@ -69,6 +81,10 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'export_cell_name' => :'BOOLEAN',
+        :'update_zoom' => :'BOOLEAN',
+        :'enable_zip64' => :'BOOLEAN',
+        :'embed_ooxml_as_ole_object' => :'BOOLEAN',
+        :'compression_type' => :'String',
         :'save_format' => :'String',
         :'cached_file_folder' => :'String',
         :'clear_data' => :'BOOLEAN',
@@ -90,6 +106,18 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'ExportCellName')
           self.export_cell_name = attributes[:'ExportCellName']
+      end
+      if attributes.has_key?(:'UpdateZoom')
+          self.update_zoom = attributes[:'UpdateZoom']
+      end
+      if attributes.has_key?(:'EnableZip64')
+          self.enable_zip64 = attributes[:'EnableZip64']
+      end
+      if attributes.has_key?(:'EmbedOoxmlAsOleObject')
+          self.embed_ooxml_as_ole_object = attributes[:'EmbedOoxmlAsOleObject']
+      end
+      if attributes.has_key?(:'CompressionType')
+          self.compression_type = attributes[:'CompressionType']
       end
       if attributes.has_key?(:'SaveFormat')
           self.save_format = attributes[:'SaveFormat']
@@ -125,6 +153,18 @@ module AsposeCellsCloud
       if @export_cell_name.nil?
           invalid_properties.push("invalid value for 'export_cell_name', export_cell_name cannot be nil.")
       end
+      if @update_zoom.nil?
+          invalid_properties.push("invalid value for 'update_zoom', update_zoom cannot be nil.")
+      end
+      if @enable_zip64.nil?
+          invalid_properties.push("invalid value for 'enable_zip64', enable_zip64 cannot be nil.")
+      end
+      if @embed_ooxml_as_ole_object.nil?
+          invalid_properties.push("invalid value for 'embed_ooxml_as_ole_object', embed_ooxml_as_ole_object cannot be nil.")
+      end
+      if @compression_type.nil?
+          invalid_properties.push("invalid value for 'compression_type', compression_type cannot be nil.")
+      end
       if @save_format.nil?
           invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
       end
@@ -157,6 +197,10 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @export_cell_name.nil?
+      return false if @update_zoom.nil?
+      return false if @enable_zip64.nil?
+      return false if @embed_ooxml_as_ole_object.nil?
+      return false if @compression_type.nil?
       return false if @save_format.nil?
       return false if @cached_file_folder.nil?
       return false if @clear_data.nil?
@@ -174,6 +218,10 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           export_cell_name == o.export_cell_name &&
+          update_zoom == o.update_zoom &&
+          enable_zip64 == o.enable_zip64 &&
+          embed_ooxml_as_ole_object == o.embed_ooxml_as_ole_object &&
+          compression_type == o.compression_type &&
           save_format == o.save_format &&
           cached_file_folder == o.cached_file_folder &&
           clear_data == o.clear_data &&
@@ -194,7 +242,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ export_cell_name , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ export_cell_name , update_zoom , enable_zip64 , embed_ooxml_as_ole_object , compression_type , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

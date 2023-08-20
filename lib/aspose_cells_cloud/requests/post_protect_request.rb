@@ -32,6 +32,7 @@ module AsposeCellsCloud
   class PostProtectRequest
 
     attr_accessor :file  
+    attr_accessor :protect_workbook_requst  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -43,6 +44,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
+      if attributes.has_key?(:'protectWorkbookRequst')
+          self.protect_workbook_requst = attributes[:'protectWorkbookRequst']
+      end
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
@@ -52,6 +56,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'file' => :'File',
+        :'protect_workbook_requst' => :'protectWorkbookRequst',
         :'password' => :'password'
       }
     end
@@ -60,6 +65,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'file' => :'Hash',
+        :'protect_workbook_requst' => :'ProtectWorkbookRequst',
         :'password' => :'String'
       }
     end
@@ -73,9 +79,9 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && file.nil?
           fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_protect "
       end 
-      # verify the required parameter 'password' is set
-      if api_client.config.client_side_validation && password.nil?
-          fail ArgumentError, "Missing the required parameter 'password' when calling CellsApi.post_protect "
+      # verify the required parameter 'protect_workbook_requst' is set
+      if api_client.config.client_side_validation && protect_workbook_requst.nil?
+          fail ArgumentError, "Missing the required parameter 'protect_workbook_requst' when calling CellsApi.post_protect "
       end 
 
       # resource path
@@ -94,11 +100,10 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if(!file.nil?)
-      file.each do |filename , context|
-        form_params[filename]  = context
-      end 
-      end
+          file.each do |filename , context|
+            form_params[filename]  = context
+          end 
+      form_params['protect_workbook_requst']  = post_body.to_json
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
          
 

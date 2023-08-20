@@ -32,6 +32,24 @@ module AsposeCellsCloud
 
   class PdfSaveOptions
         #            
+        attr_accessor :display_doc_title
+        #            
+        attr_accessor :export_document_structure
+        #            
+        attr_accessor :emf_render_setting
+        #            
+        attr_accessor :custom_properties_export
+        #            
+        attr_accessor :optimization_type
+        #            
+        attr_accessor :producer
+        #            
+        attr_accessor :pdf_compression
+        #            
+        attr_accessor :font_encoding
+        #            
+        attr_accessor :watermark
+        #            
         attr_accessor :calculate_formula
         #            
         attr_accessor :check_font_compatibility
@@ -71,6 +89,15 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'display_doc_title' => :'DisplayDocTitle',
+        :'export_document_structure' => :'ExportDocumentStructure',
+        :'emf_render_setting' => :'EmfRenderSetting',
+        :'custom_properties_export' => :'CustomPropertiesExport',
+        :'optimization_type' => :'OptimizationType',
+        :'producer' => :'Producer',
+        :'pdf_compression' => :'PdfCompression',
+        :'font_encoding' => :'FontEncoding',
+        :'watermark' => :'Watermark',
         :'calculate_formula' => :'CalculateFormula',
         :'check_font_compatibility' => :'CheckFontCompatibility',
         :'compliance' => :'Compliance',
@@ -95,6 +122,15 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'display_doc_title' => :'BOOLEAN',
+        :'export_document_structure' => :'BOOLEAN',
+        :'emf_render_setting' => :'String',
+        :'custom_properties_export' => :'String',
+        :'optimization_type' => :'String',
+        :'producer' => :'String',
+        :'pdf_compression' => :'String',
+        :'font_encoding' => :'String',
+        :'watermark' => :'RenderingWatermark',
         :'calculate_formula' => :'BOOLEAN',
         :'check_font_compatibility' => :'BOOLEAN',
         :'compliance' => :'String',
@@ -124,6 +160,33 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'DisplayDocTitle')
+          self.display_doc_title = attributes[:'DisplayDocTitle']
+      end
+      if attributes.has_key?(:'ExportDocumentStructure')
+          self.export_document_structure = attributes[:'ExportDocumentStructure']
+      end
+      if attributes.has_key?(:'EmfRenderSetting')
+          self.emf_render_setting = attributes[:'EmfRenderSetting']
+      end
+      if attributes.has_key?(:'CustomPropertiesExport')
+          self.custom_properties_export = attributes[:'CustomPropertiesExport']
+      end
+      if attributes.has_key?(:'OptimizationType')
+          self.optimization_type = attributes[:'OptimizationType']
+      end
+      if attributes.has_key?(:'Producer')
+          self.producer = attributes[:'Producer']
+      end
+      if attributes.has_key?(:'PdfCompression')
+          self.pdf_compression = attributes[:'PdfCompression']
+      end
+      if attributes.has_key?(:'FontEncoding')
+          self.font_encoding = attributes[:'FontEncoding']
+      end
+      if attributes.has_key?(:'Watermark')
+          self.watermark = attributes[:'Watermark']
+      end
       if attributes.has_key?(:'CalculateFormula')
           self.calculate_formula = attributes[:'CalculateFormula']
       end
@@ -185,6 +248,33 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @display_doc_title.nil?
+          invalid_properties.push("invalid value for 'display_doc_title', display_doc_title cannot be nil.")
+      end
+      if @export_document_structure.nil?
+          invalid_properties.push("invalid value for 'export_document_structure', export_document_structure cannot be nil.")
+      end
+      if @emf_render_setting.nil?
+          invalid_properties.push("invalid value for 'emf_render_setting', emf_render_setting cannot be nil.")
+      end
+      if @custom_properties_export.nil?
+          invalid_properties.push("invalid value for 'custom_properties_export', custom_properties_export cannot be nil.")
+      end
+      if @optimization_type.nil?
+          invalid_properties.push("invalid value for 'optimization_type', optimization_type cannot be nil.")
+      end
+      if @producer.nil?
+          invalid_properties.push("invalid value for 'producer', producer cannot be nil.")
+      end
+      if @pdf_compression.nil?
+          invalid_properties.push("invalid value for 'pdf_compression', pdf_compression cannot be nil.")
+      end
+      if @font_encoding.nil?
+          invalid_properties.push("invalid value for 'font_encoding', font_encoding cannot be nil.")
+      end
+      if @watermark.nil?
+          invalid_properties.push("invalid value for 'watermark', watermark cannot be nil.")
+      end
       if @calculate_formula.nil?
           invalid_properties.push("invalid value for 'calculate_formula', calculate_formula cannot be nil.")
       end
@@ -246,6 +336,15 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @display_doc_title.nil?
+      return false if @export_document_structure.nil?
+      return false if @emf_render_setting.nil?
+      return false if @custom_properties_export.nil?
+      return false if @optimization_type.nil?
+      return false if @producer.nil?
+      return false if @pdf_compression.nil?
+      return false if @font_encoding.nil?
+      return false if @watermark.nil?
       return false if @calculate_formula.nil?
       return false if @check_font_compatibility.nil?
       return false if @compliance.nil?
@@ -272,6 +371,15 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          display_doc_title == o.display_doc_title &&
+          export_document_structure == o.export_document_structure &&
+          emf_render_setting == o.emf_render_setting &&
+          custom_properties_export == o.custom_properties_export &&
+          optimization_type == o.optimization_type &&
+          producer == o.producer &&
+          pdf_compression == o.pdf_compression &&
+          font_encoding == o.font_encoding &&
+          watermark == o.watermark &&
           calculate_formula == o.calculate_formula &&
           check_font_compatibility == o.check_font_compatibility &&
           compliance == o.compliance &&
@@ -302,7 +410,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ calculate_formula , check_font_compatibility , compliance , default_font , one_page_per_sheet , printing_page_type , security_options , desired_ppi , jpeg_quality , image_type , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ display_doc_title , export_document_structure , emf_render_setting , custom_properties_export , optimization_type , producer , pdf_compression , font_encoding , watermark , calculate_formula , check_font_compatibility , compliance , default_font , one_page_per_sheet , printing_page_type , security_options , desired_ppi , jpeg_quality , image_type , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

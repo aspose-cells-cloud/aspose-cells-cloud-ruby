@@ -32,6 +32,16 @@ module AsposeCellsCloud
 
   class HtmlSaveOptions
         #            
+        attr_accessor :export_page_headers
+        #            
+        attr_accessor :export_page_footers
+        #            
+        attr_accessor :export_row_column_headings
+        #            
+        attr_accessor :show_all_sheets
+        #            
+        attr_accessor :image_options
+        #            
         attr_accessor :save_as_single_file
         #            
         attr_accessor :export_hidden_worksheet
@@ -117,6 +127,11 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'export_page_headers' => :'ExportPageHeaders',
+        :'export_page_footers' => :'ExportPageFooters',
+        :'export_row_column_headings' => :'ExportRowColumnHeadings',
+        :'show_all_sheets' => :'ShowAllSheets',
+        :'image_options' => :'ImageOptions',
         :'save_as_single_file' => :'SaveAsSingleFile',
         :'export_hidden_worksheet' => :'ExportHiddenWorksheet',
         :'export_grid_lines' => :'ExportGridLines',
@@ -164,6 +179,11 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'export_page_headers' => :'BOOLEAN',
+        :'export_page_footers' => :'BOOLEAN',
+        :'export_row_column_headings' => :'BOOLEAN',
+        :'show_all_sheets' => :'BOOLEAN',
+        :'image_options' => :'ImageOrPrintOptions',
         :'save_as_single_file' => :'BOOLEAN',
         :'export_hidden_worksheet' => :'BOOLEAN',
         :'export_grid_lines' => :'BOOLEAN',
@@ -216,6 +236,21 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'ExportPageHeaders')
+          self.export_page_headers = attributes[:'ExportPageHeaders']
+      end
+      if attributes.has_key?(:'ExportPageFooters')
+          self.export_page_footers = attributes[:'ExportPageFooters']
+      end
+      if attributes.has_key?(:'ExportRowColumnHeadings')
+          self.export_row_column_headings = attributes[:'ExportRowColumnHeadings']
+      end
+      if attributes.has_key?(:'ShowAllSheets')
+          self.show_all_sheets = attributes[:'ShowAllSheets']
+      end
+      if attributes.has_key?(:'ImageOptions')
+          self.image_options = attributes[:'ImageOptions']
+      end
       if attributes.has_key?(:'SaveAsSingleFile')
           self.save_as_single_file = attributes[:'SaveAsSingleFile']
       end
@@ -346,6 +381,21 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @export_page_headers.nil?
+          invalid_properties.push("invalid value for 'export_page_headers', export_page_headers cannot be nil.")
+      end
+      if @export_page_footers.nil?
+          invalid_properties.push("invalid value for 'export_page_footers', export_page_footers cannot be nil.")
+      end
+      if @export_row_column_headings.nil?
+          invalid_properties.push("invalid value for 'export_row_column_headings', export_row_column_headings cannot be nil.")
+      end
+      if @show_all_sheets.nil?
+          invalid_properties.push("invalid value for 'show_all_sheets', show_all_sheets cannot be nil.")
+      end
+      if @image_options.nil?
+          invalid_properties.push("invalid value for 'image_options', image_options cannot be nil.")
+      end
       if @save_as_single_file.nil?
           invalid_properties.push("invalid value for 'save_as_single_file', save_as_single_file cannot be nil.")
       end
@@ -476,6 +526,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @export_page_headers.nil?
+      return false if @export_page_footers.nil?
+      return false if @export_row_column_headings.nil?
+      return false if @show_all_sheets.nil?
+      return false if @image_options.nil?
       return false if @save_as_single_file.nil?
       return false if @export_hidden_worksheet.nil?
       return false if @export_grid_lines.nil?
@@ -525,6 +580,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          export_page_headers == o.export_page_headers &&
+          export_page_footers == o.export_page_footers &&
+          export_row_column_headings == o.export_row_column_headings &&
+          show_all_sheets == o.show_all_sheets &&
+          image_options == o.image_options &&
           save_as_single_file == o.save_as_single_file &&
           export_hidden_worksheet == o.export_hidden_worksheet &&
           export_grid_lines == o.export_grid_lines &&
@@ -578,7 +638,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ export_page_headers , export_page_footers , export_row_column_headings , show_all_sheets , image_options , save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash
