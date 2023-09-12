@@ -121,6 +121,42 @@ module AsposeCellsCloud
         attr_accessor :window_top
         #The width of the window, in unit of point.                        
         attr_accessor :window_width
+        #Gets and sets the author of the file.             
+        attr_accessor :author
+        #Indicates whether checking custom number format when setting Style.Custom.             
+        attr_accessor :check_custom_number_format
+        #Gets the protection type of the workbook.             
+        attr_accessor :protection_type
+        #Gets and sets the globalization settings.             
+        attr_accessor :globalization_settings
+        #Represents Workbook file encryption password.             
+        attr_accessor :password
+        #Provides access to the workbook write protection options.             
+        attr_accessor :write_protection
+        #Gets a value that indicates whether a password is required to open this workbook.             
+        attr_accessor :is_encrypted
+        #Gets a value that indicates whether the structure or window of the Workbook is protected.             
+        attr_accessor :is_protected
+        #Gets the max row index, zero-based.             
+        attr_accessor :max_row
+        #Gets the max column index, zero-based.             
+        attr_accessor :max_column
+        #            
+        attr_accessor :significant_digits
+        #Indicates whether check compatibility with earlier versions when saving workbook.             
+        attr_accessor :check_compatibility
+        #Gets and sets the default print paper size.             
+        attr_accessor :paper_size
+        #Gets and sets the max row number of shared formula.             
+        attr_accessor :max_rows_of_shared_formula
+        #Specifies the OOXML version for the output document. The default value is Ecma376_2006.             
+        attr_accessor :compliance
+        #Indicates whether setting  property when entering the string value(which starts  with single quote mark ) to the cell             
+        attr_accessor :quote_prefix_to_style
+        #Gets the settings for formula-related features.             
+        attr_accessor :formula_settings
+        #Fully calculates every time when a calculation is triggered.             
+        attr_accessor :force_full_calculate
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -169,7 +205,25 @@ module AsposeCellsCloud
         :'window_height' => :'WindowHeight',
         :'window_left' => :'WindowLeft',
         :'window_top' => :'WindowTop',
-        :'window_width' => :'WindowWidth'
+        :'window_width' => :'WindowWidth',
+        :'author' => :'Author',
+        :'check_custom_number_format' => :'CheckCustomNumberFormat',
+        :'protection_type' => :'ProtectionType',
+        :'globalization_settings' => :'GlobalizationSettings',
+        :'password' => :'Password',
+        :'write_protection' => :'WriteProtection',
+        :'is_encrypted' => :'IsEncrypted',
+        :'is_protected' => :'IsProtected',
+        :'max_row' => :'MaxRow',
+        :'max_column' => :'MaxColumn',
+        :'significant_digits' => :'SignificantDigits',
+        :'check_compatibility' => :'CheckCompatibility',
+        :'paper_size' => :'PaperSize',
+        :'max_rows_of_shared_formula' => :'MaxRowsOfSharedFormula',
+        :'compliance' => :'Compliance',
+        :'quote_prefix_to_style' => :'QuotePrefixToStyle',
+        :'formula_settings' => :'FormulaSettings',
+        :'force_full_calculate' => :'ForceFullCalculate'
       }
     end
 
@@ -220,7 +274,25 @@ module AsposeCellsCloud
         :'window_height' => :'Float',
         :'window_left' => :'Float',
         :'window_top' => :'Float',
-        :'window_width' => :'Float'
+        :'window_width' => :'Float',
+        :'author' => :'String',
+        :'check_custom_number_format' => :'BOOLEAN',
+        :'protection_type' => :'String',
+        :'globalization_settings' => :'GlobalizationSettings',
+        :'password' => :'String',
+        :'write_protection' => :'WriteProtection',
+        :'is_encrypted' => :'BOOLEAN',
+        :'is_protected' => :'BOOLEAN',
+        :'max_row' => :'Integer',
+        :'max_column' => :'Integer',
+        :'significant_digits' => :'Integer',
+        :'check_compatibility' => :'BOOLEAN',
+        :'paper_size' => :'String',
+        :'max_rows_of_shared_formula' => :'Integer',
+        :'compliance' => :'String',
+        :'quote_prefix_to_style' => :'BOOLEAN',
+        :'formula_settings' => :'FormulaSettings',
+        :'force_full_calculate' => :'BOOLEAN'
       }
     end
 
@@ -367,6 +439,60 @@ module AsposeCellsCloud
       if attributes.has_key?(:'WindowWidth')
           self.window_width = attributes[:'WindowWidth']
       end
+      if attributes.has_key?(:'Author')
+          self.author = attributes[:'Author']
+      end
+      if attributes.has_key?(:'CheckCustomNumberFormat')
+          self.check_custom_number_format = attributes[:'CheckCustomNumberFormat']
+      end
+      if attributes.has_key?(:'ProtectionType')
+          self.protection_type = attributes[:'ProtectionType']
+      end
+      if attributes.has_key?(:'GlobalizationSettings')
+          self.globalization_settings = attributes[:'GlobalizationSettings']
+      end
+      if attributes.has_key?(:'Password')
+          self.password = attributes[:'Password']
+      end
+      if attributes.has_key?(:'WriteProtection')
+          self.write_protection = attributes[:'WriteProtection']
+      end
+      if attributes.has_key?(:'IsEncrypted')
+          self.is_encrypted = attributes[:'IsEncrypted']
+      end
+      if attributes.has_key?(:'IsProtected')
+          self.is_protected = attributes[:'IsProtected']
+      end
+      if attributes.has_key?(:'MaxRow')
+          self.max_row = attributes[:'MaxRow']
+      end
+      if attributes.has_key?(:'MaxColumn')
+          self.max_column = attributes[:'MaxColumn']
+      end
+      if attributes.has_key?(:'SignificantDigits')
+          self.significant_digits = attributes[:'SignificantDigits']
+      end
+      if attributes.has_key?(:'CheckCompatibility')
+          self.check_compatibility = attributes[:'CheckCompatibility']
+      end
+      if attributes.has_key?(:'PaperSize')
+          self.paper_size = attributes[:'PaperSize']
+      end
+      if attributes.has_key?(:'MaxRowsOfSharedFormula')
+          self.max_rows_of_shared_formula = attributes[:'MaxRowsOfSharedFormula']
+      end
+      if attributes.has_key?(:'Compliance')
+          self.compliance = attributes[:'Compliance']
+      end
+      if attributes.has_key?(:'QuotePrefixToStyle')
+          self.quote_prefix_to_style = attributes[:'QuotePrefixToStyle']
+      end
+      if attributes.has_key?(:'FormulaSettings')
+          self.formula_settings = attributes[:'FormulaSettings']
+      end
+      if attributes.has_key?(:'ForceFullCalculate')
+          self.force_full_calculate = attributes[:'ForceFullCalculate']
+      end
 
     end
 
@@ -509,6 +635,60 @@ module AsposeCellsCloud
       if @window_width.nil?
           invalid_properties.push("invalid value for 'window_width', window_width cannot be nil.")
       end
+      if @author.nil?
+          invalid_properties.push("invalid value for 'author', author cannot be nil.")
+      end
+      if @check_custom_number_format.nil?
+          invalid_properties.push("invalid value for 'check_custom_number_format', check_custom_number_format cannot be nil.")
+      end
+      if @protection_type.nil?
+          invalid_properties.push("invalid value for 'protection_type', protection_type cannot be nil.")
+      end
+      if @globalization_settings.nil?
+          invalid_properties.push("invalid value for 'globalization_settings', globalization_settings cannot be nil.")
+      end
+      if @password.nil?
+          invalid_properties.push("invalid value for 'password', password cannot be nil.")
+      end
+      if @write_protection.nil?
+          invalid_properties.push("invalid value for 'write_protection', write_protection cannot be nil.")
+      end
+      if @is_encrypted.nil?
+          invalid_properties.push("invalid value for 'is_encrypted', is_encrypted cannot be nil.")
+      end
+      if @is_protected.nil?
+          invalid_properties.push("invalid value for 'is_protected', is_protected cannot be nil.")
+      end
+      if @max_row.nil?
+          invalid_properties.push("invalid value for 'max_row', max_row cannot be nil.")
+      end
+      if @max_column.nil?
+          invalid_properties.push("invalid value for 'max_column', max_column cannot be nil.")
+      end
+      if @significant_digits.nil?
+          invalid_properties.push("invalid value for 'significant_digits', significant_digits cannot be nil.")
+      end
+      if @check_compatibility.nil?
+          invalid_properties.push("invalid value for 'check_compatibility', check_compatibility cannot be nil.")
+      end
+      if @paper_size.nil?
+          invalid_properties.push("invalid value for 'paper_size', paper_size cannot be nil.")
+      end
+      if @max_rows_of_shared_formula.nil?
+          invalid_properties.push("invalid value for 'max_rows_of_shared_formula', max_rows_of_shared_formula cannot be nil.")
+      end
+      if @compliance.nil?
+          invalid_properties.push("invalid value for 'compliance', compliance cannot be nil.")
+      end
+      if @quote_prefix_to_style.nil?
+          invalid_properties.push("invalid value for 'quote_prefix_to_style', quote_prefix_to_style cannot be nil.")
+      end
+      if @formula_settings.nil?
+          invalid_properties.push("invalid value for 'formula_settings', formula_settings cannot be nil.")
+      end
+      if @force_full_calculate.nil?
+          invalid_properties.push("invalid value for 'force_full_calculate', force_full_calculate cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -561,6 +741,24 @@ module AsposeCellsCloud
       return false if @window_left.nil?
       return false if @window_top.nil?
       return false if @window_width.nil?
+      return false if @author.nil?
+      return false if @check_custom_number_format.nil?
+      return false if @protection_type.nil?
+      return false if @globalization_settings.nil?
+      return false if @password.nil?
+      return false if @write_protection.nil?
+      return false if @is_encrypted.nil?
+      return false if @is_protected.nil?
+      return false if @max_row.nil?
+      return false if @max_column.nil?
+      return false if @significant_digits.nil?
+      return false if @check_compatibility.nil?
+      return false if @paper_size.nil?
+      return false if @max_rows_of_shared_formula.nil?
+      return false if @compliance.nil?
+      return false if @quote_prefix_to_style.nil?
+      return false if @formula_settings.nil?
+      return false if @force_full_calculate.nil?
       return true
     end
 
@@ -613,7 +811,25 @@ module AsposeCellsCloud
           window_height == o.window_height &&
           window_left == o.window_left &&
           window_top == o.window_top &&
-          window_width == o.window_width 
+          window_width == o.window_width &&
+          author == o.author &&
+          check_custom_number_format == o.check_custom_number_format &&
+          protection_type == o.protection_type &&
+          globalization_settings == o.globalization_settings &&
+          password == o.password &&
+          write_protection == o.write_protection &&
+          is_encrypted == o.is_encrypted &&
+          is_protected == o.is_protected &&
+          max_row == o.max_row &&
+          max_column == o.max_column &&
+          significant_digits == o.significant_digits &&
+          check_compatibility == o.check_compatibility &&
+          paper_size == o.paper_size &&
+          max_rows_of_shared_formula == o.max_rows_of_shared_formula &&
+          compliance == o.compliance &&
+          quote_prefix_to_style == o.quote_prefix_to_style &&
+          formula_settings == o.formula_settings &&
+          force_full_calculate == o.force_full_calculate 
           std_dev == o.std_dev
     end
 
@@ -626,7 +842,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_compress_pictures , auto_recover , build_version , calc_mode , calc_stack_size , calculation_id , check_comptiliblity , check_excel_restriction , crash_save , create_calc_chain , data_extract_load , date1904 , display_drawing_objects , enable_macros , first_visible_tab , hide_pivot_field_list , is_default_encrypted , is_hidden , is_h_scroll_bar_visible , is_minimized , is_v_scroll_bar_visible , iteration , language_code , max_change , max_iteration , memory_setting , number_decimal_separator , number_group_separator , parsing_formula_on_open , precision_as_displayed , recalculate_before_save , re_calculate_on_open , recommend_read_only , region , remove_personal_information , repair_load , shared , sheet_tab_bar_width , show_tabs , update_adjacent_cells_border , update_links_type , window_height , window_left , window_top , window_width ].hash
+      [ auto_compress_pictures , auto_recover , build_version , calc_mode , calc_stack_size , calculation_id , check_comptiliblity , check_excel_restriction , crash_save , create_calc_chain , data_extract_load , date1904 , display_drawing_objects , enable_macros , first_visible_tab , hide_pivot_field_list , is_default_encrypted , is_hidden , is_h_scroll_bar_visible , is_minimized , is_v_scroll_bar_visible , iteration , language_code , max_change , max_iteration , memory_setting , number_decimal_separator , number_group_separator , parsing_formula_on_open , precision_as_displayed , recalculate_before_save , re_calculate_on_open , recommend_read_only , region , remove_personal_information , repair_load , shared , sheet_tab_bar_width , show_tabs , update_adjacent_cells_border , update_links_type , window_height , window_left , window_top , window_width , author , check_custom_number_format , protection_type , globalization_settings , password , write_protection , is_encrypted , is_protected , max_row , max_column , significant_digits , check_compatibility , paper_size , max_rows_of_shared_formula , compliance , quote_prefix_to_style , formula_settings , force_full_calculate ].hash
     end
 
     # Builds the object from hash

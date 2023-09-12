@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="CalculationOptionsrb.cs">
+ <copyright company="Aspose" file="QueryTablerb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,45 +30,37 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class CalculationOptions
+  class QueryTable
         #            
-        attr_accessor :calc_stack_size
+        attr_accessor :connection_id
         #            
-        attr_accessor :ignore_error
+        attr_accessor :name
         #            
-        attr_accessor :precision_strategy
+        attr_accessor :result_range
         #            
-        attr_accessor :recursive
-        #The custom formula calculation engine to extend the default calculation engine of Aspose.Cells.             
-        attr_accessor :custom_engine
-        #The monitor for user to track the progress of formula calculation.             
-        attr_accessor :calculation_monitor
-        #Specifies the data sources for external links used in formulas.             
-        attr_accessor :linked_data_sources
+        attr_accessor :preserve_formatting
+        #            
+        attr_accessor :adjust_column_width
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'calc_stack_size' => :'CalcStackSize',
-        :'ignore_error' => :'IgnoreError',
-        :'precision_strategy' => :'PrecisionStrategy',
-        :'recursive' => :'Recursive',
-        :'custom_engine' => :'CustomEngine',
-        :'calculation_monitor' => :'CalculationMonitor',
-        :'linked_data_sources' => :'LinkedDataSources'
+        :'connection_id' => :'ConnectionId',
+        :'name' => :'Name',
+        :'result_range' => :'ResultRange',
+        :'preserve_formatting' => :'PreserveFormatting',
+        :'adjust_column_width' => :'AdjustColumnWidth'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'calc_stack_size' => :'Integer',
-        :'ignore_error' => :'BOOLEAN',
-        :'precision_strategy' => :'String',
-        :'recursive' => :'BOOLEAN',
-        :'custom_engine' => :'AbstractCalculationEngine',
-        :'calculation_monitor' => :'AbstractCalculationMonitor',
-        :'linked_data_sources' => :'Array<Workbook>'
+        :'connection_id' => :'Integer',
+        :'name' => :'String',
+        :'result_range' => :'Range',
+        :'preserve_formatting' => :'BOOLEAN',
+        :'adjust_column_width' => :'BOOLEAN'
       }
     end
 
@@ -80,26 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'CalcStackSize')
-          self.calc_stack_size = attributes[:'CalcStackSize']
+      if attributes.has_key?(:'ConnectionId')
+          self.connection_id = attributes[:'ConnectionId']
       end
-      if attributes.has_key?(:'IgnoreError')
-          self.ignore_error = attributes[:'IgnoreError']
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
       end
-      if attributes.has_key?(:'PrecisionStrategy')
-          self.precision_strategy = attributes[:'PrecisionStrategy']
+      if attributes.has_key?(:'ResultRange')
+          self.result_range = attributes[:'ResultRange']
       end
-      if attributes.has_key?(:'Recursive')
-          self.recursive = attributes[:'Recursive']
+      if attributes.has_key?(:'PreserveFormatting')
+          self.preserve_formatting = attributes[:'PreserveFormatting']
       end
-      if attributes.has_key?(:'CustomEngine')
-          self.custom_engine = attributes[:'CustomEngine']
-      end
-      if attributes.has_key?(:'CalculationMonitor')
-          self.calculation_monitor = attributes[:'CalculationMonitor']
-      end
-      if attributes.has_key?(:'LinkedDataSources')
-          self.linked_data_sources = attributes[:'LinkedDataSources']
+      if attributes.has_key?(:'AdjustColumnWidth')
+          self.adjust_column_width = attributes[:'AdjustColumnWidth']
       end
 
     end
@@ -108,26 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @calc_stack_size.nil?
-          invalid_properties.push("invalid value for 'calc_stack_size', calc_stack_size cannot be nil.")
+      if @connection_id.nil?
+          invalid_properties.push("invalid value for 'connection_id', connection_id cannot be nil.")
       end
-      if @ignore_error.nil?
-          invalid_properties.push("invalid value for 'ignore_error', ignore_error cannot be nil.")
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
       end
-      if @precision_strategy.nil?
-          invalid_properties.push("invalid value for 'precision_strategy', precision_strategy cannot be nil.")
+      if @result_range.nil?
+          invalid_properties.push("invalid value for 'result_range', result_range cannot be nil.")
       end
-      if @recursive.nil?
-          invalid_properties.push("invalid value for 'recursive', recursive cannot be nil.")
+      if @preserve_formatting.nil?
+          invalid_properties.push("invalid value for 'preserve_formatting', preserve_formatting cannot be nil.")
       end
-      if @custom_engine.nil?
-          invalid_properties.push("invalid value for 'custom_engine', custom_engine cannot be nil.")
-      end
-      if @calculation_monitor.nil?
-          invalid_properties.push("invalid value for 'calculation_monitor', calculation_monitor cannot be nil.")
-      end
-      if @linked_data_sources.nil?
-          invalid_properties.push("invalid value for 'linked_data_sources', linked_data_sources cannot be nil.")
+      if @adjust_column_width.nil?
+          invalid_properties.push("invalid value for 'adjust_column_width', adjust_column_width cannot be nil.")
       end
 
       return invalid_properties
@@ -136,13 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @calc_stack_size.nil?
-      return false if @ignore_error.nil?
-      return false if @precision_strategy.nil?
-      return false if @recursive.nil?
-      return false if @custom_engine.nil?
-      return false if @calculation_monitor.nil?
-      return false if @linked_data_sources.nil?
+      return false if @connection_id.nil?
+      return false if @name.nil?
+      return false if @result_range.nil?
+      return false if @preserve_formatting.nil?
+      return false if @adjust_column_width.nil?
       return true
     end
 
@@ -151,13 +129,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          calc_stack_size == o.calc_stack_size &&
-          ignore_error == o.ignore_error &&
-          precision_strategy == o.precision_strategy &&
-          recursive == o.recursive &&
-          custom_engine == o.custom_engine &&
-          calculation_monitor == o.calculation_monitor &&
-          linked_data_sources == o.linked_data_sources 
+          connection_id == o.connection_id &&
+          name == o.name &&
+          result_range == o.result_range &&
+          preserve_formatting == o.preserve_formatting &&
+          adjust_column_width == o.adjust_column_width 
           std_dev == o.std_dev
     end
 
@@ -170,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ calc_stack_size , ignore_error , precision_strategy , recursive , custom_engine , calculation_monitor , linked_data_sources ].hash
+      [ connection_id , name , result_range , preserve_formatting , adjust_column_width ].hash
     end
 
     # Builds the object from hash

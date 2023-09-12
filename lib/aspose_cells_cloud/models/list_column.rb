@@ -39,6 +39,8 @@ module AsposeCellsCloud
         attr_accessor :totals_calculation
         #Gets and sets the formula of the list column.                        
         attr_accessor :formula
+        #Gets and sets the display labels of total row.             
+        attr_accessor :totals_row_label
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -46,7 +48,8 @@ module AsposeCellsCloud
         :'name' => :'Name',
         :'range' => :'Range',
         :'totals_calculation' => :'TotalsCalculation',
-        :'formula' => :'Formula'
+        :'formula' => :'Formula',
+        :'totals_row_label' => :'TotalsRowLabel'
       }
     end
 
@@ -56,7 +59,8 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'range' => :'Range',
         :'totals_calculation' => :'String',
-        :'formula' => :'String'
+        :'formula' => :'String',
+        :'totals_row_label' => :'String'
       }
     end
 
@@ -80,6 +84,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'Formula')
           self.formula = attributes[:'Formula']
       end
+      if attributes.has_key?(:'TotalsRowLabel')
+          self.totals_row_label = attributes[:'TotalsRowLabel']
+      end
 
     end
 
@@ -99,6 +106,9 @@ module AsposeCellsCloud
       if @formula.nil?
           invalid_properties.push("invalid value for 'formula', formula cannot be nil.")
       end
+      if @totals_row_label.nil?
+          invalid_properties.push("invalid value for 'totals_row_label', totals_row_label cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -110,6 +120,7 @@ module AsposeCellsCloud
       return false if @range.nil?
       return false if @totals_calculation.nil?
       return false if @formula.nil?
+      return false if @totals_row_label.nil?
       return true
     end
 
@@ -121,7 +132,8 @@ module AsposeCellsCloud
           name == o.name &&
           range == o.range &&
           totals_calculation == o.totals_calculation &&
-          formula == o.formula 
+          formula == o.formula &&
+          totals_row_label == o.totals_row_label 
           std_dev == o.std_dev
     end
 
@@ -134,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ name , range , totals_calculation , formula ].hash
+      [ name , range , totals_calculation , formula , totals_row_label ].hash
     end
 
     # Builds the object from hash

@@ -1149,6 +1149,22 @@ module AsposeCellsCloud
        return data
     end
 
+    # Remove duplicates on list object.
+
+    def post_worksheet_list_object_remove_duplicates( post_worksheet_list_object_remove_duplicates_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_remove_duplicates_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Insert slicer for list object.
+
+    def post_worksheet_list_object_insert_slicer( post_worksheet_list_object_insert_slicer_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_list_object_insert_slicer_request.create_http_request(@api_client,opts )
+       return data
+    end
+        
     # Update list column properties.
 
     def post_worksheet_list_column( post_worksheet_list_column_request, opts = {})
@@ -1658,6 +1674,13 @@ module AsposeCellsCloud
     def post_worksheet_cells_range_move_to( post_worksheet_cells_range_move_to_request, opts = {})
 
        data, _status_code, _headers = post_worksheet_cells_range_move_to_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Sets outline border around a range of cells.
+    def post_worksheet_cells_range_sort( post_worksheet_cells_range_sort_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_sort_request.create_http_request(@api_client,opts )
        return data
     end
 

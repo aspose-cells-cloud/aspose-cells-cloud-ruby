@@ -39,6 +39,16 @@ module AsposeCellsCloud
         attr_accessor :ignore_hidden
         #            
         attr_accessor :only_auto
+        #            
+        attr_accessor :default_edit_language
+        #            
+        attr_accessor :max_row_height
+        #            
+        attr_accessor :auto_fit_wrapped_text_type
+        #            
+        attr_accessor :format_strategy
+        #            
+        attr_accessor :for_rendering
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -46,7 +56,12 @@ module AsposeCellsCloud
         :'auto_fit_merged_cells_type' => :'AutoFitMergedCellsType',
         :'auto_fit_merged_cells' => :'AutoFitMergedCells',
         :'ignore_hidden' => :'IgnoreHidden',
-        :'only_auto' => :'OnlyAuto'
+        :'only_auto' => :'OnlyAuto',
+        :'default_edit_language' => :'DefaultEditLanguage',
+        :'max_row_height' => :'MaxRowHeight',
+        :'auto_fit_wrapped_text_type' => :'AutoFitWrappedTextType',
+        :'format_strategy' => :'FormatStrategy',
+        :'for_rendering' => :'ForRendering'
       }
     end
 
@@ -56,7 +71,12 @@ module AsposeCellsCloud
         :'auto_fit_merged_cells_type' => :'String',
         :'auto_fit_merged_cells' => :'BOOLEAN',
         :'ignore_hidden' => :'BOOLEAN',
-        :'only_auto' => :'BOOLEAN'
+        :'only_auto' => :'BOOLEAN',
+        :'default_edit_language' => :'String',
+        :'max_row_height' => :'Float',
+        :'auto_fit_wrapped_text_type' => :'String',
+        :'format_strategy' => :'String',
+        :'for_rendering' => :'BOOLEAN'
       }
     end
 
@@ -80,6 +100,21 @@ module AsposeCellsCloud
       if attributes.has_key?(:'OnlyAuto')
           self.only_auto = attributes[:'OnlyAuto']
       end
+      if attributes.has_key?(:'DefaultEditLanguage')
+          self.default_edit_language = attributes[:'DefaultEditLanguage']
+      end
+      if attributes.has_key?(:'MaxRowHeight')
+          self.max_row_height = attributes[:'MaxRowHeight']
+      end
+      if attributes.has_key?(:'AutoFitWrappedTextType')
+          self.auto_fit_wrapped_text_type = attributes[:'AutoFitWrappedTextType']
+      end
+      if attributes.has_key?(:'FormatStrategy')
+          self.format_strategy = attributes[:'FormatStrategy']
+      end
+      if attributes.has_key?(:'ForRendering')
+          self.for_rendering = attributes[:'ForRendering']
+      end
 
     end
 
@@ -99,6 +134,21 @@ module AsposeCellsCloud
       if @only_auto.nil?
           invalid_properties.push("invalid value for 'only_auto', only_auto cannot be nil.")
       end
+      if @default_edit_language.nil?
+          invalid_properties.push("invalid value for 'default_edit_language', default_edit_language cannot be nil.")
+      end
+      if @max_row_height.nil?
+          invalid_properties.push("invalid value for 'max_row_height', max_row_height cannot be nil.")
+      end
+      if @auto_fit_wrapped_text_type.nil?
+          invalid_properties.push("invalid value for 'auto_fit_wrapped_text_type', auto_fit_wrapped_text_type cannot be nil.")
+      end
+      if @format_strategy.nil?
+          invalid_properties.push("invalid value for 'format_strategy', format_strategy cannot be nil.")
+      end
+      if @for_rendering.nil?
+          invalid_properties.push("invalid value for 'for_rendering', for_rendering cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -110,6 +160,11 @@ module AsposeCellsCloud
       return false if @auto_fit_merged_cells.nil?
       return false if @ignore_hidden.nil?
       return false if @only_auto.nil?
+      return false if @default_edit_language.nil?
+      return false if @max_row_height.nil?
+      return false if @auto_fit_wrapped_text_type.nil?
+      return false if @format_strategy.nil?
+      return false if @for_rendering.nil?
       return true
     end
 
@@ -121,7 +176,12 @@ module AsposeCellsCloud
           auto_fit_merged_cells_type == o.auto_fit_merged_cells_type &&
           auto_fit_merged_cells == o.auto_fit_merged_cells &&
           ignore_hidden == o.ignore_hidden &&
-          only_auto == o.only_auto 
+          only_auto == o.only_auto &&
+          default_edit_language == o.default_edit_language &&
+          max_row_height == o.max_row_height &&
+          auto_fit_wrapped_text_type == o.auto_fit_wrapped_text_type &&
+          format_strategy == o.format_strategy &&
+          for_rendering == o.for_rendering 
           std_dev == o.std_dev
     end
 
@@ -134,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_fit_merged_cells_type , auto_fit_merged_cells , ignore_hidden , only_auto ].hash
+      [ auto_fit_merged_cells_type , auto_fit_merged_cells , ignore_hidden , only_auto , default_edit_language , max_row_height , auto_fit_wrapped_text_type , format_strategy , for_rendering ].hash
     end
 
     # Builds the object from hash

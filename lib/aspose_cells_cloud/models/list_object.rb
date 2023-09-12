@@ -62,6 +62,18 @@ module AsposeCellsCloud
         #            
         attr_accessor :table_style_type
         #            
+        attr_accessor :data_range
+        #            
+        attr_accessor :data_source_type
+        #            
+        attr_accessor :comment
+        #            
+        attr_accessor :xml_map
+        #            
+        attr_accessor :alternative_text
+        #            
+        attr_accessor :alternative_description
+        #            
         attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -82,6 +94,12 @@ module AsposeCellsCloud
         :'show_totals' => :'ShowTotals',
         :'table_style_name' => :'TableStyleName',
         :'table_style_type' => :'TableStyleType',
+        :'data_range' => :'DataRange',
+        :'data_source_type' => :'DataSourceType',
+        :'comment' => :'Comment',
+        :'xml_map' => :'XmlMap',
+        :'alternative_text' => :'AlternativeText',
+        :'alternative_description' => :'AlternativeDescription',
         :'link' => :'link'
       }
     end
@@ -104,6 +122,12 @@ module AsposeCellsCloud
         :'show_totals' => :'BOOLEAN',
         :'table_style_name' => :'String',
         :'table_style_type' => :'String',
+        :'data_range' => :'Range',
+        :'data_source_type' => :'String',
+        :'comment' => :'String',
+        :'xml_map' => :'XmlMap',
+        :'alternative_text' => :'String',
+        :'alternative_description' => :'String',
         :'link' => :'Link'
       }
     end
@@ -161,6 +185,24 @@ module AsposeCellsCloud
       if attributes.has_key?(:'TableStyleType')
           self.table_style_type = attributes[:'TableStyleType']
       end
+      if attributes.has_key?(:'DataRange')
+          self.data_range = attributes[:'DataRange']
+      end
+      if attributes.has_key?(:'DataSourceType')
+          self.data_source_type = attributes[:'DataSourceType']
+      end
+      if attributes.has_key?(:'Comment')
+          self.comment = attributes[:'Comment']
+      end
+      if attributes.has_key?(:'XmlMap')
+          self.xml_map = attributes[:'XmlMap']
+      end
+      if attributes.has_key?(:'AlternativeText')
+          self.alternative_text = attributes[:'AlternativeText']
+      end
+      if attributes.has_key?(:'AlternativeDescription')
+          self.alternative_description = attributes[:'AlternativeDescription']
+      end
       if attributes.has_key?(:'link')
           self.link = attributes[:'link']
       end
@@ -216,6 +258,24 @@ module AsposeCellsCloud
       if @table_style_type.nil?
           invalid_properties.push("invalid value for 'table_style_type', table_style_type cannot be nil.")
       end
+      if @data_range.nil?
+          invalid_properties.push("invalid value for 'data_range', data_range cannot be nil.")
+      end
+      if @data_source_type.nil?
+          invalid_properties.push("invalid value for 'data_source_type', data_source_type cannot be nil.")
+      end
+      if @comment.nil?
+          invalid_properties.push("invalid value for 'comment', comment cannot be nil.")
+      end
+      if @xml_map.nil?
+          invalid_properties.push("invalid value for 'xml_map', xml_map cannot be nil.")
+      end
+      if @alternative_text.nil?
+          invalid_properties.push("invalid value for 'alternative_text', alternative_text cannot be nil.")
+      end
+      if @alternative_description.nil?
+          invalid_properties.push("invalid value for 'alternative_description', alternative_description cannot be nil.")
+      end
       if @link.nil?
           invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
@@ -241,6 +301,12 @@ module AsposeCellsCloud
       return false if @show_totals.nil?
       return false if @table_style_name.nil?
       return false if @table_style_type.nil?
+      return false if @data_range.nil?
+      return false if @data_source_type.nil?
+      return false if @comment.nil?
+      return false if @xml_map.nil?
+      return false if @alternative_text.nil?
+      return false if @alternative_description.nil?
       return false if @link.nil?
       return true
     end
@@ -265,6 +331,12 @@ module AsposeCellsCloud
           show_totals == o.show_totals &&
           table_style_name == o.table_style_name &&
           table_style_type == o.table_style_type &&
+          data_range == o.data_range &&
+          data_source_type == o.data_source_type &&
+          comment == o.comment &&
+          xml_map == o.xml_map &&
+          alternative_text == o.alternative_text &&
+          alternative_description == o.alternative_description &&
           link == o.link 
           std_dev == o.std_dev
     end
@@ -278,7 +350,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_filter , display_name , start_column , start_row , end_column , end_row , list_columns , show_header_row , show_table_style_column_stripes , show_table_style_first_column , show_table_style_last_column , show_table_style_row_stripes , show_totals , table_style_name , table_style_type , link ].hash
+      [ auto_filter , display_name , start_column , start_row , end_column , end_row , list_columns , show_header_row , show_table_style_column_stripes , show_table_style_first_column , show_table_style_last_column , show_table_style_row_stripes , show_totals , table_style_name , table_style_type , data_range , data_source_type , comment , xml_map , alternative_text , alternative_description , link ].hash
     end
 
     # Builds the object from hash

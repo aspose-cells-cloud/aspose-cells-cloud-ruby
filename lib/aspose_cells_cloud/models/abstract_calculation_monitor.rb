@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="CalculationOptionsrb.cs">
+ <copyright company="Aspose" file="AbstractCalculationMonitorrb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,45 +30,29 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class CalculationOptions
-        #            
-        attr_accessor :calc_stack_size
-        #            
-        attr_accessor :ignore_error
-        #            
-        attr_accessor :precision_strategy
-        #            
-        attr_accessor :recursive
-        #The custom formula calculation engine to extend the default calculation engine of Aspose.Cells.             
-        attr_accessor :custom_engine
-        #The monitor for user to track the progress of formula calculation.             
-        attr_accessor :calculation_monitor
-        #Specifies the data sources for external links used in formulas.             
-        attr_accessor :linked_data_sources
+  class AbstractCalculationMonitor
+        #Gets the old value of the calculated cell.            Should be used only in  and .             
+        attr_accessor :original_value
+        #Whether the cell's value has been changed after the calculation.            Should be used only in .             
+        attr_accessor :value_changed
+        #Gets the newly calculated value of the cell.            Should be used only in .             
+        attr_accessor :calculated_value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'calc_stack_size' => :'CalcStackSize',
-        :'ignore_error' => :'IgnoreError',
-        :'precision_strategy' => :'PrecisionStrategy',
-        :'recursive' => :'Recursive',
-        :'custom_engine' => :'CustomEngine',
-        :'calculation_monitor' => :'CalculationMonitor',
-        :'linked_data_sources' => :'LinkedDataSources'
+        :'original_value' => :'OriginalValue',
+        :'value_changed' => :'ValueChanged',
+        :'calculated_value' => :'CalculatedValue'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'calc_stack_size' => :'Integer',
-        :'ignore_error' => :'BOOLEAN',
-        :'precision_strategy' => :'String',
-        :'recursive' => :'BOOLEAN',
-        :'custom_engine' => :'AbstractCalculationEngine',
-        :'calculation_monitor' => :'AbstractCalculationMonitor',
-        :'linked_data_sources' => :'Array<Workbook>'
+        :'original_value' => :'Object',
+        :'value_changed' => :'BOOLEAN',
+        :'calculated_value' => :'Object'
       }
     end
 
@@ -80,26 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'CalcStackSize')
-          self.calc_stack_size = attributes[:'CalcStackSize']
+      if attributes.has_key?(:'OriginalValue')
+          self.original_value = attributes[:'OriginalValue']
       end
-      if attributes.has_key?(:'IgnoreError')
-          self.ignore_error = attributes[:'IgnoreError']
+      if attributes.has_key?(:'ValueChanged')
+          self.value_changed = attributes[:'ValueChanged']
       end
-      if attributes.has_key?(:'PrecisionStrategy')
-          self.precision_strategy = attributes[:'PrecisionStrategy']
-      end
-      if attributes.has_key?(:'Recursive')
-          self.recursive = attributes[:'Recursive']
-      end
-      if attributes.has_key?(:'CustomEngine')
-          self.custom_engine = attributes[:'CustomEngine']
-      end
-      if attributes.has_key?(:'CalculationMonitor')
-          self.calculation_monitor = attributes[:'CalculationMonitor']
-      end
-      if attributes.has_key?(:'LinkedDataSources')
-          self.linked_data_sources = attributes[:'LinkedDataSources']
+      if attributes.has_key?(:'CalculatedValue')
+          self.calculated_value = attributes[:'CalculatedValue']
       end
 
     end
@@ -108,26 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @calc_stack_size.nil?
-          invalid_properties.push("invalid value for 'calc_stack_size', calc_stack_size cannot be nil.")
+      if @original_value.nil?
+          invalid_properties.push("invalid value for 'original_value', original_value cannot be nil.")
       end
-      if @ignore_error.nil?
-          invalid_properties.push("invalid value for 'ignore_error', ignore_error cannot be nil.")
+      if @value_changed.nil?
+          invalid_properties.push("invalid value for 'value_changed', value_changed cannot be nil.")
       end
-      if @precision_strategy.nil?
-          invalid_properties.push("invalid value for 'precision_strategy', precision_strategy cannot be nil.")
-      end
-      if @recursive.nil?
-          invalid_properties.push("invalid value for 'recursive', recursive cannot be nil.")
-      end
-      if @custom_engine.nil?
-          invalid_properties.push("invalid value for 'custom_engine', custom_engine cannot be nil.")
-      end
-      if @calculation_monitor.nil?
-          invalid_properties.push("invalid value for 'calculation_monitor', calculation_monitor cannot be nil.")
-      end
-      if @linked_data_sources.nil?
-          invalid_properties.push("invalid value for 'linked_data_sources', linked_data_sources cannot be nil.")
+      if @calculated_value.nil?
+          invalid_properties.push("invalid value for 'calculated_value', calculated_value cannot be nil.")
       end
 
       return invalid_properties
@@ -136,13 +96,9 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @calc_stack_size.nil?
-      return false if @ignore_error.nil?
-      return false if @precision_strategy.nil?
-      return false if @recursive.nil?
-      return false if @custom_engine.nil?
-      return false if @calculation_monitor.nil?
-      return false if @linked_data_sources.nil?
+      return false if @original_value.nil?
+      return false if @value_changed.nil?
+      return false if @calculated_value.nil?
       return true
     end
 
@@ -151,13 +107,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          calc_stack_size == o.calc_stack_size &&
-          ignore_error == o.ignore_error &&
-          precision_strategy == o.precision_strategy &&
-          recursive == o.recursive &&
-          custom_engine == o.custom_engine &&
-          calculation_monitor == o.calculation_monitor &&
-          linked_data_sources == o.linked_data_sources 
+          original_value == o.original_value &&
+          value_changed == o.value_changed &&
+          calculated_value == o.calculated_value 
           std_dev == o.std_dev
     end
 
@@ -170,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ calc_stack_size , ignore_error , precision_strategy , recursive , custom_engine , calculation_monitor , linked_data_sources ].hash
+      [ original_value , value_changed , calculated_value ].hash
     end
 
     # Builds the object from hash

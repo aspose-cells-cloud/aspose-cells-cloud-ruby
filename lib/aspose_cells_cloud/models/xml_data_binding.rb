@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="BarcodeResponserb.cs">
+ <copyright company="Aspose" file="XmlDataBindingrb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,33 +30,21 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class BarcodeResponse
-        #Gets or sets barcode data.                        
-        attr_accessor :barcode_value
-        #Gets or sets type of the barcode.                        
-        attr_accessor :barcode_type
-        #Gets or sets region with barcode.                        
-        attr_accessor :region
-        #Gets or sets checksum of barcode.                        
-        attr_accessor :checksum
+  class XmlDataBinding
+        #Gets source url of this data binding.             
+        attr_accessor :url
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'barcode_value' => :'BarcodeValue',
-        :'barcode_type' => :'BarcodeType',
-        :'region' => :'Region',
-        :'checksum' => :'Checksum'
+        :'url' => :'Url'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'barcode_value' => :'String',
-        :'barcode_type' => :'String',
-        :'region' => :'Array<Point>',
-        :'checksum' => :'String'
+        :'url' => :'String'
       }
     end
 
@@ -68,17 +56,8 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'BarcodeValue')
-          self.barcode_value = attributes[:'BarcodeValue']
-      end
-      if attributes.has_key?(:'BarcodeType')
-          self.barcode_type = attributes[:'BarcodeType']
-      end
-      if attributes.has_key?(:'Region')
-          self.region = attributes[:'Region']
-      end
-      if attributes.has_key?(:'Checksum')
-          self.checksum = attributes[:'Checksum']
+      if attributes.has_key?(:'Url')
+          self.url = attributes[:'Url']
       end
 
     end
@@ -87,17 +66,8 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @barcode_value.nil?
-          invalid_properties.push("invalid value for 'barcode_value', barcode_value cannot be nil.")
-      end
-      if @barcode_type.nil?
-          invalid_properties.push("invalid value for 'barcode_type', barcode_type cannot be nil.")
-      end
-      if @region.nil?
-          invalid_properties.push("invalid value for 'region', region cannot be nil.")
-      end
-      if @checksum.nil?
-          invalid_properties.push("invalid value for 'checksum', checksum cannot be nil.")
+      if @url.nil?
+          invalid_properties.push("invalid value for 'url', url cannot be nil.")
       end
 
       return invalid_properties
@@ -106,10 +76,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @barcode_value.nil?
-      return false if @barcode_type.nil?
-      return false if @region.nil?
-      return false if @checksum.nil?
+      return false if @url.nil?
       return true
     end
 
@@ -118,10 +85,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          barcode_value == o.barcode_value &&
-          barcode_type == o.barcode_type &&
-          region == o.region &&
-          checksum == o.checksum 
+          url == o.url 
           std_dev == o.std_dev
     end
 
@@ -134,7 +98,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ barcode_value , barcode_type , region , checksum ].hash
+      [ url ].hash
     end
 
     # Builds the object from hash

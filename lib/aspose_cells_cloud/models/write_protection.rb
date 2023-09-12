@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="BarcodeResponseListrb.cs">
+ <copyright company="Aspose" file="WriteProtectionrb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,17 +30,33 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class BarcodeResponseList
+  class WriteProtection
+        #Gets and sets the author.             
+        attr_accessor :author
+        #Indicates if the Read Only Recommended option is selected.             
+        attr_accessor :recommend_read_only
+        #Indicates whether this workbook is write protected.             
+        attr_accessor :is_write_protected
+        #Sets the protected password to modify the file.             
+        attr_accessor :password
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'author' => :'Author',
+        :'recommend_read_only' => :'RecommendReadOnly',
+        :'is_write_protected' => :'IsWriteProtected',
+        :'password' => :'Password'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'author' => :'String',
+        :'recommend_read_only' => :'BOOLEAN',
+        :'is_write_protected' => :'BOOLEAN',
+        :'password' => :'String'
       }
     end
 
@@ -52,6 +68,18 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'Author')
+          self.author = attributes[:'Author']
+      end
+      if attributes.has_key?(:'RecommendReadOnly')
+          self.recommend_read_only = attributes[:'RecommendReadOnly']
+      end
+      if attributes.has_key?(:'IsWriteProtected')
+          self.is_write_protected = attributes[:'IsWriteProtected']
+      end
+      if attributes.has_key?(:'Password')
+          self.password = attributes[:'Password']
+      end
 
     end
 
@@ -59,6 +87,18 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @author.nil?
+          invalid_properties.push("invalid value for 'author', author cannot be nil.")
+      end
+      if @recommend_read_only.nil?
+          invalid_properties.push("invalid value for 'recommend_read_only', recommend_read_only cannot be nil.")
+      end
+      if @is_write_protected.nil?
+          invalid_properties.push("invalid value for 'is_write_protected', is_write_protected cannot be nil.")
+      end
+      if @password.nil?
+          invalid_properties.push("invalid value for 'password', password cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -66,6 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @author.nil?
+      return false if @recommend_read_only.nil?
+      return false if @is_write_protected.nil?
+      return false if @password.nil?
       return true
     end
 
@@ -74,6 +118,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          author == o.author &&
+          recommend_read_only == o.recommend_read_only &&
+          is_write_protected == o.is_write_protected &&
+          password == o.password 
           std_dev == o.std_dev
     end
 
@@ -86,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ ].hash
+      [ author , recommend_read_only , is_write_protected , password ].hash
     end
 
     # Builds the object from hash
