@@ -225,4 +225,39 @@ describe 'CellsApi' do
       @instance.post_worksheet_list_columns_total(request);
     end
   end 
+  describe 'post_worksheet_list_object_remove_duplicates test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'TestTables.xlsx'
+      remote_name = 'TestTables.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      request =   AsposeCellsCloud::PostWorksheetListObjectRemoveDuplicatesRequest.new(:name=>remote_name,:sheetName=>'Sheet2',:listObjectIndex=>0,:folder=>remote_folder,:storageName=>'');
+      @instance.post_worksheet_list_object_remove_duplicates(request);
+    end
+  end 
+
+  describe 'post_worksheet_list_object_insert_slicer test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'TestTables.xlsx'
+      remote_name = 'TestTables.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      request =   AsposeCellsCloud::PostWorksheetListObjectInsertSlicerRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:listObjectIndex=>0,:columnIndex=>2,:destCellName=>'j9',:folder=>remote_folder,:storageName=>'');
+      @instance.post_worksheet_list_object_insert_slicer(request);
+    end
+  end 
 end

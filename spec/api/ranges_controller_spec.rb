@@ -242,4 +242,24 @@ describe 'CellsApi' do
       @instance.delete_worksheet_cells_range(request);
     end
   end 
+  describe 'post_worksheet_cells_range_sort test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'Group.xlsx'
+      remote_name = 'Group.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      rangeOperateDataSorter = AsposeCellsCloud::DataSorter.new(:CaseSensitive=>true );
+      rangeOperateCellArea = AsposeCellsCloud::Range.new(:ColumnCount=>3 ,:FirstColumn=>0 ,:FirstRow=>0 ,:RowCount=>15 );
+      rangeOperate = AsposeCellsCloud::RangeSortRequest.new(:DataSorter=>rangeOperateDataSorter ,:CellArea=>rangeOperateCellArea );
+      request =   AsposeCellsCloud::PostWorksheetCellsRangeSortRequest.new(:name=>remote_name,:sheetName=>'book1',:rangeOperate=>rangeOperate,:folder=>remote_folder,:storageName=>'');
+      @instance.post_worksheet_cells_range_sort(request);
+    end
+  end 
 end
