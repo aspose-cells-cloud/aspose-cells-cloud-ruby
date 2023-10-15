@@ -31,73 +31,73 @@ require 'date'
 module AsposeCellsCloud
 
   class Axis
-        #            
+        #Gets the .            
         attr_accessor :area
-        #            
+        #Represents if the value axis crosses the category axis between categories.            
         attr_accessor :axis_between_categories
-        #            
+        #Gets the appearance of an Axis.            
         attr_accessor :axis_line
-        #            
+        #Represents the base unit scale for the category axis.            
         attr_accessor :base_unit_scale
-        #            
+        #Represents the category axis type.            
         attr_accessor :category_type
-        #            
+        #Represents the point on the value axis where the category axis crosses it.            
         attr_accessor :cross_at
-        #            
+        #Represents the  on the specified axis where the other axis crosses.            
         attr_accessor :cross_type
-        #            
+        #Represents the unit label for the specified axis.            
         attr_accessor :display_unit
-        #            
+        #Represents a unit label on an axis in the specified chart.                         Unit labels are useful for charting large values— for example, in the millions or billions.            
         attr_accessor :display_unit_label
-        #            
+        #Indicates whether the labels shall be shown as multi level.            
         attr_accessor :has_multi_level_labels
-        #            
+        #Indicates whether the major unit of the axis is automatically assigned.            
         attr_accessor :is_automatic_major_unit
-        #            
+        #Indicates whether the max value is automatically assigned.            
         attr_accessor :is_automatic_max_value
-        #            
+        #Indicates whether the minor unit of the axis is automatically assigned.            
         attr_accessor :is_automatic_minor_unit
-        #            
+        #Indicates whether the min value is automatically assigned.            
         attr_accessor :is_automatic_min_value
-        #            
+        #Represents if the display unit label is shown on the specified axis.            
         attr_accessor :is_display_unit_label_shown
-        #            
+        #Represents if the value axis scale type is logarithmic or not.            
         attr_accessor :is_logarithmic
-        #            
+        #Represents if Microsoft Excel plots data points from last to first.            
         attr_accessor :is_plot_order_reversed
-        #            
+        #Represents if the axis is visible.            
         attr_accessor :is_visible
-        #            
+        #Represents the logarithmic base. Default value is 10.Only applies for Excel2007.            
         attr_accessor :log_base
-        #            
+        #Represents major gridlines on a chart axis.            
         attr_accessor :major_grid_lines
-        #            
+        #Represents the type of major tick mark for the specified axis.            
         attr_accessor :major_tick_mark
-        #            
+        #Represents the major units for the axis.            
         attr_accessor :major_unit
-        #            
+        #Represents the major unit scale for the category axis.            
         attr_accessor :major_unit_scale
-        #            
+        #Represents the maximum value on the value axis.            
         attr_accessor :max_value
-        #            
+        #Represents minor gridlines on a chart axis.            
         attr_accessor :minor_grid_lines
-        #            
+        #Represents the type of minor tick mark for the specified axis.            
         attr_accessor :minor_tick_mark
-        #            
+        #Represents the minor units for the axis.            
         attr_accessor :minor_unit
-        #            
+        #Represents the major unit scale for the category axis.            
         attr_accessor :minor_unit_scale
-        #            
+        #Represents the minimum value on the value axis.            
         attr_accessor :min_value
-        #            
+        #Represents the position of tick-mark labels on the specified axis.            
         attr_accessor :tick_label_position
-        #            
+        #Returns a  object that represents the tick-mark labels for the specified axis.            
         attr_accessor :tick_labels
-        #            
+        #Represents the number of categories or series between tick-mark labels. Applies only to category and series axes.            
         attr_accessor :tick_label_spacing
-        #            
+        #Returns or sets the number of categories or series between tick marks. Applies only to category and series axes.            
         attr_accessor :tick_mark_spacing
-        #            
+        #Gets the axis' title.            
         attr_accessor :title
         #            
         attr_accessor :link

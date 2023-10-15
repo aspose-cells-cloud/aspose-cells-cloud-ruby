@@ -32,7 +32,7 @@ module AsposeCellsCloud
   class PostProtectWorkbookRequest
 
     attr_accessor :name  
-    attr_accessor :protection  
+    attr_accessor :protect_workbook_request  
     attr_accessor :folder  
     attr_accessor :storage_name  
 
@@ -45,8 +45,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
-      if attributes.has_key?(:'protection')
-          self.protection = attributes[:'protection']
+      if attributes.has_key?(:'protectWorkbookRequest')
+          self.protect_workbook_request = attributes[:'protectWorkbookRequest']
       end
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
@@ -60,7 +60,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'name' => :'name',
-        :'protection' => :'protection',
+        :'protect_workbook_request' => :'protectWorkbookRequest',
         :'folder' => :'folder',
         :'storage_name' => :'storageName'
       }
@@ -70,7 +70,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'name' => :'String',
-        :'protection' => :'WorkbookProtectionRequest',
+        :'protect_workbook_request' => :'ProtectWorkbookRequest',
         :'folder' => :'String',
         :'storage_name' => :'String'
       }
@@ -85,9 +85,9 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && name.nil?
           fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.post_protect_workbook "
       end 
-      # verify the required parameter 'protection' is set
-      if api_client.config.client_side_validation && protection.nil?
-          fail ArgumentError, "Missing the required parameter 'protection' when calling CellsApi.post_protect_workbook "
+      # verify the required parameter 'protect_workbook_request' is set
+      if api_client.config.client_side_validation && protect_workbook_request.nil?
+          fail ArgumentError, "Missing the required parameter 'protect_workbook_request' when calling CellsApi.post_protect_workbook "
       end 
 
       # resource path
@@ -107,7 +107,7 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      post_body = api_client.object_to_http_body(protection) 
+      post_body = api_client.object_to_http_body(protect_workbook_request) 
          
 
       #auth_names = []

@@ -31,77 +31,77 @@ require 'date'
 module AsposeCellsCloud
 
   class Shape
-        #            
+        #Gets and sets the name of the shape.            
         attr_accessor :name
-        #            
+        #Gets mso drawing type.            
         attr_accessor :mso_drawing_type
-        #            
+        #Gets and sets the auto shape type.            
         attr_accessor :auto_shape_type
-        #            
+        #Represents the way the drawing object is attached to the cells below it.                        The property controls the placement of an object on a worksheet.            
         attr_accessor :placement
-        #            
+        #Represents upper left corner row index.            
         attr_accessor :upper_left_row
-        #            
+        #Represents the vertical offset of shape from its top row, in unit of pixels.            
         attr_accessor :top
-        #            
+        #Represents upper left corner column index.            
         attr_accessor :upper_left_column
-        #            
+        #Represents the horizontal offset of shape from its left column, in unit of pixels.            
         attr_accessor :left
-        #            
+        #Represents lower right corner row index.            
         attr_accessor :lower_right_row
-        #            
+        #Represents the width of the shape's vertical offset from its lower bottom corner row, in unit of pixels.            
         attr_accessor :bottom
-        #            
+        #Represents lower right corner column index.            
         attr_accessor :lower_right_column
-        #            
+        #Represents the width of the shape's horizontal  offset from its lower right corner column, in unit of pixels.            
         attr_accessor :right
-        #            
+        #Represents the width of shape, in unit of pixels.            
         attr_accessor :width
-        #            
+        #Represents the height of shape, in unit of pixel.            
         attr_accessor :height
-        #            
+        #Gets and sets the horizontal offset of shape from worksheet left border,in unit of pixels.            
         attr_accessor :x
-        #            
+        #Gets and sets the vertical offset of shape from worksheet top border,in unit of pixels.            
         attr_accessor :y
-        #            
+        #Gets and sets the rotation of the shape.            
         attr_accessor :rotation_angle
-        #            
+        #Gets and sets the html string which contains data and some formats in this textbox.            
         attr_accessor :html_text
-        #            
+        #Represents the string in this TextBox object.            
         attr_accessor :text
-        #            
+        #Returns or sets the descriptive (alternative) text string of the  object.            
         attr_accessor :alternative_text
-        #            
+        #Gets and sets the text horizontal alignment type of the shape.            
         attr_accessor :text_horizontal_alignment
-        #            
+        #Gets and sets the text horizontal overflow type of the shape which contains text.            
         attr_accessor :text_horizontal_overflow
-        #            
+        #Gets and sets the text orientation type of the shape.            
         attr_accessor :text_orientation_type
-        #            
+        #Gets and sets the text vertical alignment type of the shape.            
         attr_accessor :text_vertical_alignment
-        #            
+        #Gets and sets the text vertical overflow type of the shape which contains text.            
         attr_accessor :text_vertical_overflow
-        #            
+        #Indicates whether the shape is a group.            
         attr_accessor :is_group
-        #            
+        #Indicates whether the object is visible.            
         attr_accessor :is_hidden
-        #            
+        #True means that don't allow changes in aspect ratio.            
         attr_accessor :is_lock_aspect_ratio
-        #            
+        #True if the object is locked, False if the object can be modified when the sheet is protected.            
         attr_accessor :is_locked
-        #            
+        #True if the object is printable            
         attr_accessor :is_printable
-        #            
+        #Gets and sets the text wrapped type of the shape which contains text.            
         attr_accessor :is_text_wrapped
-        #            
+        #Indicates whether this shape is a word art.            
         attr_accessor :is_word_art
-        #            
+        #Gets or sets the worksheet range linked to the control's value.            
         attr_accessor :linked_cell
-        #            
+        #Returns the position of a shape in the z-order.            
         attr_accessor :z_order_position
-        #            
+        #Represents the font of shape.            
         attr_accessor :font
-        #            
+        #Gets the hyperlink of the shape.            
         attr_accessor :hyperlink
         #            
         attr_accessor :link

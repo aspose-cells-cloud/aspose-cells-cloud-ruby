@@ -31,29 +31,29 @@ require 'date'
 module AsposeCellsCloud
 
   class ImageSaveOptions
-        #            
+        #Indicate the chart imagetype when converting.            
         attr_accessor :chart_image_type
-        #            
+        #Indicate the filename of embeded image in svg. This should be full path with directory like "c:\\xpsEmbeded"            
         attr_accessor :embeded_image_name_in_svg
-        #            
+        #Gets or sets the horizontal resolution for generated images, in dots per inch.                 Applies generating image method except Emf format images.               The default value is 96.            
         attr_accessor :horizontal_resolution
-        #            
+        #Gets or sets the format of the generated images.  Don't apply the method that returns a Bitmap object.             The default value is ImageFormat.Bmp.  Don't apply the method that returns a Bitmap object.            
         attr_accessor :image_format
-        #            
+        #Indicates whether the width and height of the cells is automatically fitted by cell value. The default value is false.            
         attr_accessor :is_cell_auto_fit
-        #            
+        #If OnePagePerSheet is true , all content of one sheet will output to only                one page in result. The paper size of pagesetup will be invalid, and the                other settings of pagesetup will still take effect.            
         attr_accessor :one_page_per_sheet
-        #            
+        #If this property is true , onle Area will be output, and no scale will take effect.            
         attr_accessor :only_area
-        #            
+        #Indicates which pages will not be printed.            
         attr_accessor :printing_page
-        #            
+        #If PrintWithStatusDialog = true , there will be a dialog that shows current print status.  else no such dialog will show.            
         attr_accessor :print_with_status_dialog
-        #            
+        #Gets or sets a value determining the quality of the generated images to apply only when saving pages to the Jpeg format.            Has effect only when saving to JPEG.  The value must be between 0 and 100. The default value is 100.            
         attr_accessor :quality
-        #            
+        #Gets or sets the type of compression to apply only when saving pages to the Tiff format.            Has effect only when saving to TIFF.  The default value is Lzw.            
         attr_accessor :tiff_compression
-        #            
+        #Gets or sets the vertical resolution for generated images, in dots per inch.            Applies generating image method except Emf format image.            The default value is 96.            
         attr_accessor :vertical_resolution
         #            
         attr_accessor :save_format

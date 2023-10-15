@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class CustomParserConfig
-        #            
+        #Point Column            
         attr_accessor :column_index
-        #            
+        #data parser method.             ToDateTime            ToString            
         attr_accessor :parse_method
         #            
         attr_accessor :custom_style

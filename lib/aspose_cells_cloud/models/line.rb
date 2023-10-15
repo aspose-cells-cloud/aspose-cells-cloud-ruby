@@ -31,43 +31,43 @@ require 'date'
 module AsposeCellsCloud
 
   class Line
-        #            
+        #Specifies the length of the arrowhead for the begin of a line.             
         attr_accessor :begin_arrow_length
-        #            
+        #Specifies the width of the arrowhead for the begin of a line.             
         attr_accessor :begin_arrow_width
-        #            
+        #Specifies an arrowhead for the begin of a line.             
         attr_accessor :begin_type
-        #            
+        #Specifies the ending caps.             
         attr_accessor :cap_type
-        #            
+        #Represents the  of the line.             
         attr_accessor :color
-        #            
+        #Specifies the compound line type             
         attr_accessor :compound_type
-        #            
+        #Specifies the dash line type             
         attr_accessor :dash_type
-        #            
+        #Specifies the length of the arrowhead for the end of a line.             
         attr_accessor :end_arrow_length
-        #            
+        #Specifies the width of the arrowhead for the end of a line.             
         attr_accessor :end_arrow_width
-        #            
+        #Specifies an arrowhead for the end of a line.             
         attr_accessor :end_type
-        #            
+        #Represents gradient fill.             
         attr_accessor :gradient_fill
-        #            
+        #Indicates whether this line style is auto assigned.             
         attr_accessor :is_auto
-        #            
+        #Indicates whether the color of line is automatic assigned.             
         attr_accessor :is_automatic_color
-        #            
+        #Represents whether the line is visible.             
         attr_accessor :is_visible
-        #            
+        #Specifies the joining caps.             
         attr_accessor :join_type
-        #            
+        #Represents the style of the line.             
         attr_accessor :style
-        #            
+        #Returns or sets the degree of transparency of the line as a value from 0.0 (opaque) through 1.0 (clear).             
         attr_accessor :transparency
-        #            
+        #Gets or sets the  of the line.             
         attr_accessor :weight
-        #            
+        #Gets or sets the weight of the line in unit of points.             
         attr_accessor :weight_pt
 
     # Attribute mapping from ruby-style variable name to JSON key.

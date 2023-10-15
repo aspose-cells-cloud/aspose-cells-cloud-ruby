@@ -31,59 +31,59 @@ require 'date'
 module AsposeCellsCloud
 
   class SparklineGroup
-        #Indicates whether to show data in hidden rows and columns.            
+        #Indicates whether to show data in hidden rows and columns.             
         attr_accessor :display_hidden
-        #Gets and sets the color of the first point of data in the sparkline group.            
+        #Gets and sets the color of the first point of data in the sparkline group.             
         attr_accessor :first_point_color
-        #Gets and sets the color of the highest points of data in the sparkline group.            
+        #Gets and sets the color of the highest points of data in the sparkline group.             
         attr_accessor :high_point_color
-        #Gets and sets the color of the horizontal axis in the sparkline group.            
+        #Gets and sets the color of the horizontal axis in the sparkline group.             
         attr_accessor :horizontal_axis_color
-        #Represents the range that contains the date values for the sparkline data.            
+        #Represents the range that contains the date values for the sparkline data.             
         attr_accessor :horizontal_axis_date_range
-        #Gets and sets the color of the last point of data in the sparkline group.            
+        #Gets and sets the color of the last point of data in the sparkline group.             
         attr_accessor :last_point_color
-        #Gets and sets the line weight in each line sparkline in the sparkline group,  in the unit of points.                        
+        #Gets and sets the line weight in each line sparkline in the sparkline group, in the unit of points.             
         attr_accessor :line_weight
-        #Gets and sets the color of the lowest points of data in the sparkline group.            
+        #Gets and sets the color of the lowest points of data in the sparkline group.             
         attr_accessor :low_point_color
-        #Gets and sets the color of points in each line sparkline in the sparkline group.            
+        #Gets and sets the color of points in each line sparkline in the sparkline group.             
         attr_accessor :markers_color
-        #Gets and sets the color of the negative values on the sparkline group.                        
+        #Gets and sets the color of the negative values on the sparkline group.             
         attr_accessor :negative_points_color
-        #Indicates how to plot empty cells.            
+        #Indicates how to plot empty cells.             
         attr_accessor :plot_empty_cells_type
-        #Indicates whether the plot data is right to left.            
+        #Indicates whether the plot data is right to left.             
         attr_accessor :plot_right_to_left
-        #Gets and sets the preset style type of the sparkline group.            
+        #Gets and sets the preset style type of the sparkline group.             
         attr_accessor :preset_style
-        #Gets and sets the color of the sparklines in the sparkline group.                        
+        #Gets and sets the color of the sparklines in the sparkline group.             
         attr_accessor :series_color
-        #Indicates whether to highlight the first point of data in the sparkline group.            
+        #Indicates whether to highlight the first point of data in the sparkline group.             
         attr_accessor :show_first_point
-        #Indicates whether to highlight the highest points of data in the sparkline group.            
+        #Indicates whether to highlight the highest points of data in the sparkline group.             
         attr_accessor :show_high_point
-        #Indicates whether to show the sparkline horizontal axis. The horizontal axis   appears if the sparkline has data that crosses the zero axis.                        
+        #Indicates whether to show the sparkline horizontal axis.            The horizontal axis appears if the sparkline has data that crosses the zero axis.             
         attr_accessor :show_horizontal_axis
-        #Indicates whether to highlight the last point of data in the sparkline group.            
+        #Indicates whether to highlight the last point of data in the sparkline group.             
         attr_accessor :show_last_point
-        #Indicates whether to highlight the lowest points of data in the sparkline group.                        
+        #Indicates whether to highlight the lowest points of data in the sparkline group.             
         attr_accessor :show_low_point
-        #Indicates whether to highlight each point in each line sparkline in the sparkline  group.            
+        #Indicates whether to highlight each point in each line sparkline in the sparkline group.             
         attr_accessor :show_markers
-        #Indicates whether to highlight the negative values on the sparkline group with a different color or marker.            
+        #Indicates whether to highlight the negative values on the sparkline group with a different color or marker.             
         attr_accessor :show_negative_points
-        #Gets the Aspose.Cells.Charts.SparklineGroup.SparklineCollection object of the sparkline group.            
+        #Gets the collection of  object.             
         attr_accessor :sparkline_collection
-        #Indicates the sparkline type of the sparkline group.            
+        #Indicates the sparkline type of the sparkline group.             
         attr_accessor :type
-        #Gets and sets the custom maximum value for the vertical axis.            
+        #Gets and sets the custom maximum value for the vertical axis.             
         attr_accessor :vertical_axis_max_value
-        #Represents the vertical axis maximum value type.            
+        #Represents the vertical axis maximum value type.             
         attr_accessor :vertical_axis_max_value_type
-        #Gets and sets the custom minimum value for the vertical axis.            
+        #Gets and sets the custom minimum value for the vertical axis.             
         attr_accessor :vertical_axis_min_value
-        #Represents the vertical axis minimum value type.                        
+        #Represents the vertical axis minimum value type.             
         attr_accessor :vertical_axis_min_value_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

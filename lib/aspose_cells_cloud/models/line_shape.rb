@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class LineShape
-        #            
+        #Gets and sets the begin arrow head length of the line.            
         attr_accessor :begin_arrowhead_length
-        #            
+        #Gets and sets the begin arrow head style of the line.            
         attr_accessor :begin_arrowhead_style
-        #            
+        #Gets and sets the begin arrow head width of the line.            
         attr_accessor :begin_arrowhead_width
-        #            
+        #Gets and sets the end arrow head length of the line.            
         attr_accessor :end_arrowhead_length
-        #            
+        #Gets and sets the end arrow head style of the line.            
         attr_accessor :end_arrowhead_style
-        #            
+        #Gets and sets the end arrow head width of the line.            
         attr_accessor :end_arrowhead_width
         #            
         attr_accessor :name

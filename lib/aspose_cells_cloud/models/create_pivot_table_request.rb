@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class CreatePivotTableRequest
-        #            
+        #Pivot table name            
         attr_accessor :name
-        #            
+        #The data for the new PivotTable cache.            
         attr_accessor :source_data
-        #            
+        #The cell in the upper-left corner of the PivotTable report's destination range.            
         attr_accessor :dest_cell_name
-        #            
+        #Indicates whether using same data source when another existing pivot table has used this data source.If the property is true, it will save memory.            
         attr_accessor :use_same_source
-        #            
+        #Represents row fields in a PivotTable report.            
         attr_accessor :pivot_field_rows
-        #            
+        #Represents column fields in a PivotTable report.            
         attr_accessor :pivot_field_columns
-        #            
+        #Represents data fields in a PivotTable report.            
         attr_accessor :pivot_field_data
 
     # Attribute mapping from ruby-style variable name to JSON key.

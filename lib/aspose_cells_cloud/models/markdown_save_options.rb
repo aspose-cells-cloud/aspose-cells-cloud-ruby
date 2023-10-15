@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class MarkdownSaveOptions
-        #            
+        #Gets and sets the default encoding.            
         attr_accessor :encoding
-        #            
+        #The Data provider to provide cells data for saving workbook in light mode.            
         attr_accessor :format_strategy
-        #            
+        #Gets and sets the line separator.            
         attr_accessor :line_separator
         #            
         attr_accessor :save_format

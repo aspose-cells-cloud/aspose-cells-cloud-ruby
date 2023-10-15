@@ -78,7 +78,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::GetWorksheetPivotTableFiltersRequest.new(:name=>remote_name,:sheetName=>'Sheet3',:pivotTableIndex=>0,:folder=>remote_folder,:storageName=>'');
+      request =   AsposeCellsCloud::GetWorksheetPivotTableFiltersRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:pivotTableIndex=>0,:folder=>remote_folder,:storageName=>'');
       @instance.get_worksheet_pivot_table_filters(request);
     end
   end 
@@ -114,7 +114,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::PutWorksheetPivotTableRequest.new(:name=>remote_name,:sheetName=>'Sheet3',:folder=>remote_folder,:sourceData=>'=Sheet1!C6:E13',:destCellName=>'C1',:tableName=>'TestPivot',:useSameSource=>true,:storageName=>'');
+      request =   AsposeCellsCloud::PutWorksheetPivotTableRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:folder=>remote_folder,:sourceData=>'=Sheet1!C6:E13',:destCellName=>'C1',:tableName=>'TestPivot',:useSameSource=>true,:storageName=>'');
       @instance.put_worksheet_pivot_table(request);
     end
   end 
@@ -399,7 +399,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::DeleteWorksheetPivotTableFilterRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:pivotTableIndex=>0,:fieldIndex=>0,:needReCalculate=>true,:folder=>remote_folder,:storageName=>'');
+      request =   AsposeCellsCloud::DeleteWorksheetPivotTableFilterRequest.new(:name=>remote_name,:sheetName=>'Sheet3',:pivotTableIndex=>0,:fieldIndex=>0,:needReCalculate=>true,:folder=>remote_folder,:storageName=>'');
       @instance.delete_worksheet_pivot_table_filter(request);
     end
   end 

@@ -3153,8 +3153,22 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      protectWorkbookRequst =  AsposeCellsCloud::ProtectWorkbookRequst.new();
-      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:password=>'123456',:protectWorkbookRequst =>protectWorkbookRequst);
+      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:password=>'123456');
+      @instance.post_protect(request);
+    end
+  end 
+
+  describe 'post_protect__protect_workbook_request test' do
+    it "should work" do
+      assembly_test_xlsx = 'assemblytest.xlsx'
+      data_source_xlsx = 'datasource.xlsx'
+
+      
+     mapFiles = { }   
+      protectWorkbookRequst = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
+      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
+      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles);
       @instance.post_protect(request);
     end
   end 
@@ -3374,6 +3388,7 @@ describe 'CellsApi' do
       @instance.post_clear_objects(request);
     end
   end 
+
   describe 'post_repair_xlsx test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
@@ -3429,7 +3444,6 @@ describe 'CellsApi' do
       @instance.post_repair(request);
     end
   end 
-
 
   describe 'post_reverse_rows_pdf test' do
     it "should work" do

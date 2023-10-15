@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class FilterColumn
-        #            
+        #Gets and sets the column offset in the range.             
         attr_accessor :field_index
-        #            
+        #Gets and sets the type fo filtering data.             
         attr_accessor :filter_type
         #            
         attr_accessor :multiple_filters
@@ -47,7 +47,7 @@ module AsposeCellsCloud
         attr_accessor :icon_filter
         #            
         attr_accessor :top10_filter
-        #            
+        #Indicates whether the AutoFilter button for this column is visible.             
         attr_accessor :visibledropdown
 
     # Attribute mapping from ruby-style variable name to JSON key.

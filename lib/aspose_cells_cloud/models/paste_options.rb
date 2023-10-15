@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class PasteOptions
-        #            
+        #True means only copying visible cells.             
         attr_accessor :only_visible_cells
-        #            
+        #The paste special type.             
         attr_accessor :paste_type
-        #            
+        #Indicates whether skips blank cells.             
         attr_accessor :skip_blanks
-        #            
+        #True to transpose rows and columns when the range is pasted. The default value is False.             
         attr_accessor :transpose
 
     # Attribute mapping from ruby-style variable name to JSON key.

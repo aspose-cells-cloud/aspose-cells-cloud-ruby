@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class TilePicOption
-        #            
+        #Gets or sets the X offset for tiling picture.             
         attr_accessor :offset_x
-        #            
+        #Gets or sets the Y offset for tiling picture.             
         attr_accessor :offset_y
-        #            
+        #Gets or sets the X scale for tiling picture.             
         attr_accessor :scale_x
-        #            
+        #Gets or sets the Y scale for tiling picture.             
         attr_accessor :scale_y
-        #            
+        #Gets or sets the alignment for tiling.             
         attr_accessor :alignment_type
-        #            
+        #Gets or sets the mirror type for tiling.             
         attr_accessor :mirror_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

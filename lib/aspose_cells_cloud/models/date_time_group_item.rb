@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class DateTimeGroupItem
-        #            
+        #Gets and sets the group type.            
         attr_accessor :date_time_grouping_type
-        #            
+        #Gets and sets the day of the grouped date time.            
         attr_accessor :day
-        #            
+        #Gets and sets the hour of the grouped date time.            
         attr_accessor :hour
-        #            
+        #Gets and sets the minute of the grouped date time.            
         attr_accessor :minute
-        #            
+        #Gets and sets the month of the grouped date time.            
         attr_accessor :month
-        #            
+        #Gets and sets the second of the grouped date time.            
         attr_accessor :second
-        #            
+        #Gets and sets the year of the grouped date time.            
         attr_accessor :year
 
     # Attribute mapping from ruby-style variable name to JSON key.

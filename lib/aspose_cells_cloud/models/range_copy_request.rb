@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeCopyRequest
-        #            
+        #copydata, copystyle, copyto, copyvalue.            
         attr_accessor :operate
-        #            
+        #Source range.             
         attr_accessor :source
-        #            
+        #Target range.            
         attr_accessor :target
-        #            
+        #Represents the paste special options.                        
         attr_accessor :paste_options
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoFilter
-        #            
+        #Gets the collection of the filter columns.            
         attr_accessor :filter_columns
-        #            
+        #Represents the range to which the specified AutoFilter applies.            
         attr_accessor :range
-        #            
+        #Gets the data sorter.            
         attr_accessor :sorter
-        #            
+        #Indicates whether the AutoFilter button for this column is visible.            
         attr_accessor :show_filter_button
         #            
         attr_accessor :link

@@ -31,47 +31,47 @@ require 'date'
 module AsposeCellsCloud
 
   class ListObject
-        #            
+        #Gets auto filter.            
         attr_accessor :auto_filter
-        #            
+        #Gets and sets the display name.            
         attr_accessor :display_name
-        #            
+        #Gets the start column of the range.            
         attr_accessor :start_column
-        #            
+        #Gets the start row of the range.            
         attr_accessor :start_row
-        #            
+        #Gets the end column of the range.            
         attr_accessor :end_column
-        #            
+        #Gets the end  row of the range.            
         attr_accessor :end_row
-        #            
+        #Gets ListColumns of the ListObject.            
         attr_accessor :list_columns
-        #            
+        #Gets and sets whether this ListObject show header row.            
         attr_accessor :show_header_row
-        #            
+        #Indicates whether column stripe formatting is applied.            
         attr_accessor :show_table_style_column_stripes
-        #            
+        #Indicates whether the first column in the table should have the style applied.            
         attr_accessor :show_table_style_first_column
-        #            
+        #Indicates whether the last column in the table should have the style applied.            
         attr_accessor :show_table_style_last_column
-        #            
+        #Indicates whether row stripe formatting is applied.            
         attr_accessor :show_table_style_row_stripes
-        #            
+        #Gets and sets whether this ListObject show total row.            
         attr_accessor :show_totals
-        #            
+        #Gets and sets the table style name.            
         attr_accessor :table_style_name
-        #            
+        #Gets and the built-in table style.            
         attr_accessor :table_style_type
-        #            
+        #Gets the data range of the ListObject.            
         attr_accessor :data_range
-        #            
+        #Gets the data source type of the table.            
         attr_accessor :data_source_type
-        #            
+        #Gets and sets the comment of the table.            
         attr_accessor :comment
-        #            
+        #Gets an  used for this list.            
         attr_accessor :xml_map
-        #            
+        #Gets and sets the alternative text.            
         attr_accessor :alternative_text
-        #            
+        #Gets and sets the alternative description.            
         attr_accessor :alternative_description
         #            
         attr_accessor :link

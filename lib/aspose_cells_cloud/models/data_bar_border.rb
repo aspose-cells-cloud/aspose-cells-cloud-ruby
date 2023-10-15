@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DataBarBorder
-        #Gets or sets the border's color of data bars specified by a conditional formatting rule.            
+        #Gets or sets the border's color of data bars specified by a conditional formatting rule.             
         attr_accessor :color
-        #Gets or sets the border's type of data bars specified by a conditional formatting rule.            
+        #Gets or sets the border's type of data bars specified by a conditional formatting rule.             
         attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.

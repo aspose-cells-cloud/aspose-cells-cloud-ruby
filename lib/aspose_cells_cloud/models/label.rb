@@ -67,7 +67,7 @@ module AsposeCellsCloud
         attr_accessor :rotation_angle
         #            
         attr_accessor :html_text
-        #            
+        #Gets or sets the text of display unit label.            
         attr_accessor :text
         #            
         attr_accessor :alternative_text

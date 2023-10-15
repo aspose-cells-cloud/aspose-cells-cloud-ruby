@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class PatternFill
-        #            
+        #Gets or sets the fill pattern type             
         attr_accessor :pattern
-        #            
+        #Gets and sets the foreground  object.             
         attr_accessor :background_cells_color
-        #            
+        #Gets and sets the foreground  object.             
         attr_accessor :foreground_cells_color
-        #            
+        #Gets or sets the foreground .             
         attr_accessor :foreground_color
-        #            
+        #Gets or sets the background  of the .             
         attr_accessor :background_color
-        #            
+        #Gets or sets the transparency of background color.             
         attr_accessor :back_transparency
-        #            
+        #Gets or sets the transparency of foreground color.             
         attr_accessor :fore_transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.

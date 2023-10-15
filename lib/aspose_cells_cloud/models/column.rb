@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Column
-        #            
+        #Gets the group level of the column.            
         attr_accessor :group_level
-        #            
+        #Gets the index of this column.            
         attr_accessor :index
-        #            
+        #Indicates whether the column is hidden.            
         attr_accessor :is_hidden
-        #            
+        #Gets and sets the column width in unit of characters.            
         attr_accessor :width
-        #            
+        #Gets the style of this column.            
         attr_accessor :style
         #            
         attr_accessor :link

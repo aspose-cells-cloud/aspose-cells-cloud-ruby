@@ -31,16 +31,18 @@ require 'date'
 module AsposeCellsCloud
 
   class DataSorter
-        #            
+        #Gets and sets whether case sensitive when comparing string.             
         attr_accessor :case_sensitive
-        #            
+        #Represents whether the range has headers.             
         attr_accessor :has_headers
-        #            
+        #Gets the key list of data sorter.                        
         attr_accessor :key_list
-        #            
+        #True means that sorting orientation is from left to right.            False means that sorting orientation is from top to bottom.            The default value is false.             
         attr_accessor :sort_left_to_right
-        #            
+        #Indicates whether sorting anything that looks like a number.             
         attr_accessor :sort_as_number
+        #Gets the key list of data sorter.             
+        attr_accessor :keys
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -49,7 +51,8 @@ module AsposeCellsCloud
         :'has_headers' => :'HasHeaders',
         :'key_list' => :'KeyList',
         :'sort_left_to_right' => :'SortLeftToRight',
-        :'sort_as_number' => :'SortAsNumber'
+        :'sort_as_number' => :'SortAsNumber',
+        :'keys' => :'Keys'
       }
     end
 
@@ -60,7 +63,8 @@ module AsposeCellsCloud
         :'has_headers' => :'BOOLEAN',
         :'key_list' => :'Array<SortKey>',
         :'sort_left_to_right' => :'BOOLEAN',
-        :'sort_as_number' => :'BOOLEAN'
+        :'sort_as_number' => :'BOOLEAN',
+        :'keys' => :'Array<DataSorterKey>'
       }
     end
 
@@ -87,6 +91,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'SortAsNumber')
           self.sort_as_number = attributes[:'SortAsNumber']
       end
+      if attributes.has_key?(:'Keys')
+          self.keys = attributes[:'Keys']
+      end
 
     end
 
@@ -109,6 +116,9 @@ module AsposeCellsCloud
       if @sort_as_number.nil?
           invalid_properties.push("invalid value for 'sort_as_number', sort_as_number cannot be nil.")
       end
+      if @keys.nil?
+          invalid_properties.push("invalid value for 'keys', keys cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -121,6 +131,7 @@ module AsposeCellsCloud
       return false if @key_list.nil?
       return false if @sort_left_to_right.nil?
       return false if @sort_as_number.nil?
+      return false if @keys.nil?
       return true
     end
 
@@ -133,7 +144,8 @@ module AsposeCellsCloud
           has_headers == o.has_headers &&
           key_list == o.key_list &&
           sort_left_to_right == o.sort_left_to_right &&
-          sort_as_number == o.sort_as_number 
+          sort_as_number == o.sort_as_number &&
+          keys == o.keys 
           std_dev == o.std_dev
     end
 
@@ -146,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ case_sensitive , has_headers , key_list , sort_left_to_right , sort_as_number ].hash
+      [ case_sensitive , has_headers , key_list , sort_left_to_right , sort_as_number , keys ].hash
     end
 
     # Builds the object from hash

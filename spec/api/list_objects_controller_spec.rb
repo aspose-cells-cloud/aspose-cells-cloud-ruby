@@ -225,6 +225,7 @@ describe 'CellsApi' do
       @instance.post_worksheet_list_columns_total(request);
     end
   end 
+
   describe 'post_worksheet_list_object_remove_duplicates test' do
     it "should work" do
       remote_folder = 'TestData/In'

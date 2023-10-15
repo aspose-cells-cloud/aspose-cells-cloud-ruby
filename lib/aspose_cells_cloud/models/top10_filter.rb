@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class Top10Filter
-        #            
+        #             
         attr_accessor :criteria
-        #            
+        #Indicates whether the items is percent.             
         attr_accessor :is_percent
-        #            
+        #Indicates whether it's top filter.             
         attr_accessor :is_top
-        #            
+        #Gets and sets the items of the filter.             
         attr_accessor :items
 
     # Attribute mapping from ruby-style variable name to JSON key.

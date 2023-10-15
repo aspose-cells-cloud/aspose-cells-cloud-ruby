@@ -31,101 +31,101 @@ require 'date'
 module AsposeCellsCloud
 
   class Series
-        #            
+        #Represents the background area of Series object.            
         attr_accessor :area
-        #            
+        #Gets or sets the 3D shape type used with the 3-D bar or column chart.            
         attr_accessor :bar3_d_shape_type
-        #            
+        #Represents border of Series object.            
         attr_accessor :border
-        #            
+        #Gets or sets the scale factor for bubbles in the specified chart group.                         It can be an integer value from 0 (zero) to 300,                         corresponding to a percentage of the default size.                        Applies only to bubble charts.            
         attr_accessor :bubble_scale
-        #            
+        #Gets or sets the bubble sizes values of the chart series.            
         attr_accessor :bubble_sizes
-        #            
+        #Gets the number of the data values.            
         attr_accessor :count_of_data_values
-        #            
+        #Represents the DataLabels object for the specified ASeries.            
         attr_accessor :data_labels
-        #            
+        #Gets the series's name that displays on the chart graph.            
         attr_accessor :display_name
-        #            
+        #Returns or sets the size of the hole in a doughnut chart group.                         The hole size is expressed as a percentage of the chart size, between 10 and 90 percent.            
         attr_accessor :doughnut_hole_size
-        #            
+        #Returns a  object that represents the down bars on a line chart.                        Applies only to line charts.            
         attr_accessor :down_bars
-        #            
+        #Returns a  object that represents the drop lines for a series on the line chart or area chart.                        Applies only to line chart or area charts.            
         attr_accessor :drop_lines
-        #            
+        #The distance of an open pie slice from the center of the pie chart is expressed as a percentage of the pie diameter.            
         attr_accessor :explosion
-        #            
+        #Gets or sets the angle of the first pie-chart or doughnut-chart slice, in degrees (clockwise from vertical).                         Applies only to pie, 3-D pie, and doughnut charts, 0 to 360.            
         attr_accessor :first_slice_angle
-        #            
+        #Returns or sets the space between bar or column clusters, as a percentage of the bar or column width.                        The value of this property must be between 0 and 500.            
         attr_accessor :gap_width
-        #            
+        #True if the series has a three-dimensional appearance.                         Applies only to bubble charts.            
         attr_accessor :has3_d_effect
-        #            
+        #True if the chart has drop lines.                        Applies only to line chart or area charts.            
         attr_accessor :has_drop_lines
-        #            
+        #True if the line chart has high-low lines.                          Applies only to line charts.            
         attr_accessor :has_hi_lo_lines
-        #            
+        #True if the series has leader lines.            
         attr_accessor :has_leader_lines
-        #            
+        #True if a radar chart has category axis labels. Applies only to radar charts.            
         attr_accessor :has_radar_axis_labels
-        #            
+        #True if a stacked column chart or bar chart has series lines or                        if a Pie of Pie chart or Bar of Pie chart has connector lines between the two sections.                         Applies only to stacked column charts, bar charts, Pie of Pie charts, or Bar of Pie charts.            
         attr_accessor :has_series_lines
-        #            
+        #True if a line chart has up and down bars.                        Applies only to line charts.            
         attr_accessor :has_up_down_bars
-        #            
+        #Returns a HiLoLines object that represents the high-low lines for a series on a line chart.                         Applies only to line charts.            
         attr_accessor :hi_lo_lines
-        #            
+        #Indicates whether the threshold value is automatic.            
         attr_accessor :is_auto_split
-        #            
+        #Represents if the color of points is varied.                         The chart must contain only one series.            
         attr_accessor :is_color_varied
-        #            
+        #Represents leader lines on a chart. Leader lines connect data labels to data points.                         This object isn’t a collection; there’s no object that represents a single leader line.            
         attr_accessor :leader_lines
-        #            
+        #Gets the legend entry according to this series.            
         attr_accessor :legend_entry
         #            
         attr_accessor :line
-        #            
+        #Gets the marker.            
         attr_accessor :marker
-        #            
+        #Gets or sets the name of the data series.            
         attr_accessor :name
-        #            
+        #Specifies how bars and columns are positioned.                        Can be a value between – 100 and 100.                         Applies only to 2-D bar and 2-D column charts.            
         attr_accessor :overlap
-        #            
+        #Indicates if this series is plotted on second value axis.            
         attr_accessor :plot_on_second_axis
-        #            
+        #Gets the collection of points in a series in a chart.            
         attr_accessor :points
-        #            
+        #Returns or sets the size of the secondary section of either a pie of pie chart or a bar of pie chart,                         as a percentage of the size of the primary pie.                        Can be a value from 5 to 200.            
         attr_accessor :second_plot_size
-        #            
+        #Returns a SeriesLines object that represents the series lines for a stacked bar chart or a stacked column chart.                        Applies only to stacked bar and stacked column charts.            
         attr_accessor :series_lines
-        #            
+        #True if the series has a shadow.            
         attr_accessor :shadow
-        #            
+        #Gets the  object that holds the visual shape properties of the Series.            
         attr_accessor :shape_properties
-        #            
+        #True if negative bubbles are shown for the chart group. Valid only for bubble charts.            
         attr_accessor :show_negative_bubbles
-        #            
+        #Gets or sets what the bubble size represents on a bubble chart.            
         attr_accessor :size_represents
-        #            
+        #Represents curve smoothing.                         True if curve smoothing is turned on for the line chart or scatter chart.                        Applies only to line and scatter connected by lines charts.            
         attr_accessor :smooth
-        #            
+        #Returns or sets a value that how to determine which data points are in the second pie or bar on a pie of pie or bar of                        pie chart.            
         attr_accessor :split_type
-        #            
+        #Returns or sets a value that shall be used to determine which data points are in the second pie or bar on                        a pie of pie or bar of pie chart.            
         attr_accessor :split_value
-        #            
+        #Returns an object that represents a collection of all the trendlines for the series.            
         attr_accessor :trend_lines
-        #            
+        #Gets or sets a data series' type.            
         attr_accessor :type
-        #            
+        #Returns an DropBars object that represents the up bars on a line chart.                        Applies only to line charts.            
         attr_accessor :up_bars
-        #            
+        #Represents the data of the chart series.            
         attr_accessor :values
-        #            
+        #Represents X direction error bar of the series.            
         attr_accessor :x_error_bar
-        #            
+        #Represents the x values of the chart series.            
         attr_accessor :x_values
-        #            
+        #Represents Y direction error bar of the series.            
         attr_accessor :y_error_bar
         #            
         attr_accessor :link

@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsColor
-        #Gets and sets the RGB color.            
+        #Gets and sets the RGB color.             
         attr_accessor :color
-        #Gets and sets the color index in the color palette. Only applies of indexed color.            
+        #Gets and sets the color index in the color palette. Only applies of indexed color.             
         attr_accessor :color_index
-        #Gets and set the color which should apply to cell or shape.            
+        #Gets and set the color which should apply to cell or shape.             
         attr_accessor :is_shape_color
         #Set the tint of the shape color            
         attr_accessor :tint
-        #Gets and sets the color from a 32-bit ARGB value.            
+        #Gets and sets the color from a 32-bit ARGB value.             
         attr_accessor :argb
-        #Gets the theme color. Only applies for theme color type.                        
+        #Gets the theme color. Only applies for theme color type.             
         attr_accessor :theme_color
-        #The color type.            
+        #The color type.             
         attr_accessor :type
-        #Gets and sets transparency as a value from 0.0 (opaque) through 1.0 (clear).            
+        #Gets and sets transparency as a value from 0.0 (opaque) through 1.0 (clear).             
         attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.

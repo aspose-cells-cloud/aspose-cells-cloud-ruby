@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class MatchConditionRequest
-        #            
+        #Regex Pattern.            
         attr_accessor :regex_pattern
-        #            
+        #Name list.            
         attr_accessor :full_match_conditions
 
     # Attribute mapping from ruby-style variable name to JSON key.

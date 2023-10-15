@@ -31,37 +31,37 @@ require 'date'
 module AsposeCellsCloud
 
   class DataLabels
-        #            
+        #Indicates the text is auto generated.            
         attr_accessor :is_auto_text
         #            
         attr_accessor :is_deleted
         #            
         attr_accessor :linked_source
-        #            
+        #Gets and sets the built-in number format.            
         attr_accessor :number
-        #            
+        #Represents the format string for the DataLabels object.            
         attr_accessor :number_format
-        #            
+        #True if the number format is linked to the cells                         (so that the number format changes in the labels when it changes in the cells).            
         attr_accessor :number_format_linked
-        #            
+        #Represents the position of the data label.            
         attr_accessor :position
         #            
         attr_accessor :rotation_angle
-        #            
+        #Gets or sets the separator type used for the data labels on a chart.            
         attr_accessor :separator
-        #            
+        #Represents a specified chart's data label percentage value display behavior. True displays the percentage value. False to hide.            
         attr_accessor :show_bubble_size
-        #            
+        #Represents a specified chart's data label category name display behavior.True to display the category name for the data labels on a chart. False to hide.            
         attr_accessor :show_category_name
-        #            
+        #Represents a specified chart's data label legend key display behavior.                        True if the data label legend key is visible.            
         attr_accessor :show_legend_key
-        #            
+        #Represents a specified chart's data label percentage value display behavior. True displays the percentage value. False to hide.            
         attr_accessor :show_percentage
-        #            
+        #Returns or sets a Boolean to indicate the series name display behavior for the data labels on a chart.                        True to show the series name. False to hide.            
         attr_accessor :show_series_name
-        #            
+        #Represents a specified chart's data label values display behavior. True displays the values. False to hide.            
         attr_accessor :show_value
-        #            
+        #Gets or sets the text of data label.            
         attr_accessor :text
         #            
         attr_accessor :text_direction

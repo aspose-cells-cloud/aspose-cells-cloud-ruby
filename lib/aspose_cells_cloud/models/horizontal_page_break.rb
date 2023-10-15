@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class HorizontalPageBreak
-        #            
+        #Gets the zero based row index.             
         attr_accessor :row
-        #            
+        #Gets the end column index of this horizontal page break.             
         attr_accessor :end_column
-        #            
+        #Gets the start column index of this horizontal page break.             
         attr_accessor :start_column
 
     # Attribute mapping from ruby-style variable name to JSON key.

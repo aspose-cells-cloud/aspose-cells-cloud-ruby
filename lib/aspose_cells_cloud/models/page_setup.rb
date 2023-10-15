@@ -31,73 +31,73 @@ require 'date'
 module AsposeCellsCloud
 
   class PageSetup
-        #            
+        #Represents if elements of the document will be printed in black and white.            
         attr_accessor :black_and_white
-        #            
+        #Represents the size of the bottom margin, in unit of centimeters.            
         attr_accessor :bottom_margin
-        #            
+        #Represent if the sheet is printed centered horizontally.            
         attr_accessor :center_horizontally
-        #            
+        #Represent if the sheet is printed centered vertically.            
         attr_accessor :center_vertically
-        #            
+        #Represents the first page number that will be used when this sheet is printed.            
         attr_accessor :first_page_number
-        #            
+        #Represents  the number of pages tall the worksheet will be scaled to when it's printed.                        The default value is 1.            
         attr_accessor :fit_to_pages_tall
-        #            
+        #Represents the number of pages wide the worksheet will be scaled to when it's printed.                        The default value is 1.            
         attr_accessor :fit_to_pages_wide
-        #            
+        #Represents the distance from the bottom of the page to the footer, in unit of centimeters.            
         attr_accessor :footer_margin
-        #            
+        #Represents the distance from the top of the page to the header, in unit of centimeters.            
         attr_accessor :header_margin
-        #            
+        #Indicates whether the first the page number is automatically assigned.            
         attr_accessor :is_auto_first_page_number
-        #            
+        #Indicates whether header and footer margins are aligned with the page margins.                        If this property is true, the left header and footer will be aligned with the left margin,                        and the right header and footer will be aligned with the right margin.                        This option is enabled by default.            
         attr_accessor :is_hf_align_margins
-        #            
+        #True means that the header/footer of the first page is different with other pages.            
         attr_accessor :is_hf_diff_first
-        #            
+        #True means that the header/footer of the odd pages is different with odd pages.            
         attr_accessor :is_hf_diff_odd_even
-        #            
+        #Indicates whether header and footer are scaled with document scaling.                        Only applies for Excel 2007.            
         attr_accessor :is_hf_scale_with_doc
-        #            
+        #If this property is False, the FitToPagesWide and FitToPagesTall properties control how the worksheet is scaled.            
         attr_accessor :is_percent_scale
-        #            
+        #Represents the size of the left margin, in unit of centimeters.            
         attr_accessor :left_margin
-        #            
+        #Represents the order that Microsoft Excel uses to number pages when printing a large worksheet.            
         attr_accessor :order
-        #            
+        #Represents page print orientation.            
         attr_accessor :orientation
-        #            
+        #Represents the size of the paper.            
         attr_accessor :paper_size
-        #            
+        #Represents the range to be printed.            
         attr_accessor :print_area
-        #            
+        #Represents the way comments are printed with the sheet.            
         attr_accessor :print_comments
-        #            
+        #Get and sets number of copies to print.            
         attr_accessor :print_copies
-        #            
+        #Represents if the sheet will be printed without graphics.            
         attr_accessor :print_draft
-        #            
+        #Specifies the type of print error displayed.            
         attr_accessor :print_errors
-        #            
+        #Represents if cell gridlines are printed on the page.            
         attr_accessor :print_gridlines
-        #            
+        #Represents if row and column headings are printed with this page.            
         attr_accessor :print_headings
-        #            
+        #Represents the print quality.            
         attr_accessor :print_quality
-        #            
+        #Represents the columns that contain the cells to be repeated on the left side of each page.            
         attr_accessor :print_title_columns
-        #            
+        #Represents the rows that contain the cells to be repeated at the top of each page.            
         attr_accessor :print_title_rows
-        #            
+        #Represents the size of the right margin, in unit of centimeters.            
         attr_accessor :right_margin
-        #            
+        #Represents the size of the top margin, in unit of centimeters.            
         attr_accessor :top_margin
-        #            
+        #Represents the scaling factor in percent. It should be between 10 and 400.            
         attr_accessor :zoom
-        #            
+        #Represents the page header.            
         attr_accessor :header
-        #            
+        #Represents the page footor.            
         attr_accessor :footer
         #            
         attr_accessor :link

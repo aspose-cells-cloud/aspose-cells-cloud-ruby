@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DropBars
-        #            
+        #Gets the .            
         attr_accessor :area
-        #            
+        #Gets the border .            
         attr_accessor :border
         #            
         attr_accessor :link

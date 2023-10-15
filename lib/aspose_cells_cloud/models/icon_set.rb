@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class IconSet
-        #Get theAspose.Cells.ConditionalFormattingIcon from the collection            
+        #Get the from the collection             
         attr_accessor :cf_icons
-        #Get the CFValueObjects instance.            
+        #Get the CFValueObjects instance.             
         attr_accessor :cfvos
-        #Indicates whether the icon set is custom.  Default value is false.            
+        #Indicates whether the icon set is custom.            Default value is false.             
         attr_accessor :is_custom
-        #Get or set the flag indicating whether to reverses the default order of the  icons in this icon set.  Default value is false.                        
+        #Get or set the flag indicating whether to reverses the default order of the icons in this icon set.            Default value is false.             
         attr_accessor :reverse
-        #Get or set the flag indicating whether to show the values of the cells on   which this icon set is applied.  Default value is true.                        
+        #Get or set the flag indicating whether to show the values of the cells on which this icon set is applied.            Default value is true.             
         attr_accessor :show_value
         #Get or Set the icon set type to display.  Setting the type will auto check   if the current Cfvos's count is accord with the new type. If not accord,   old Cfvos will be cleaned and default Cfvos will be added.                        
         attr_accessor :icon_set_type

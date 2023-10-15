@@ -31,23 +31,23 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoFitterOptions
-        #            
+        #Gets and set the type of auto fitting row height of merged cells.            
         attr_accessor :auto_fit_merged_cells_type
-        #            
+        #Indicates whether auto fit row height when the cells is merged in a row.                        The default value is false.            
         attr_accessor :auto_fit_merged_cells
-        #            
+        #Ignores the hidden rows/columns.            
         attr_accessor :ignore_hidden
-        #            
+        #Indicates whether only fit the rows which height are not customed.            
         attr_accessor :only_auto
-        #            
+        #Gets or sets default edit language.            
         attr_accessor :default_edit_language
-        #            
+        #Gets and sets the max row height(in unit of Point) when autofitting rows.            
         attr_accessor :max_row_height
-        #            
+        #Gets and sets the type of auto fitting wrapped text.            
         attr_accessor :auto_fit_wrapped_text_type
-        #            
+        #Gets and sets the formatted strategy.            
         attr_accessor :format_strategy
-        #            
+        #Indicates whether fit for rendering purpose.            
         attr_accessor :for_rendering
 
     # Attribute mapping from ruby-style variable name to JSON key.

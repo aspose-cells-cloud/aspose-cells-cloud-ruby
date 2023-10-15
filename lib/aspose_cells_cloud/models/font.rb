@@ -31,25 +31,25 @@ require 'date'
 module AsposeCellsCloud
 
   class Font
-        #            
+        #Gets or sets the  of the font.             
         attr_accessor :color
-        #            
+        #Gets and sets the double size of the font.             
         attr_accessor :double_size
-        #            
+        #Gets or sets a value indicating whether the font is bold.             
         attr_accessor :is_bold
-        #            
+        #Gets or sets a value indicating whether the font is italic.             
         attr_accessor :is_italic
-        #            
+        #Gets or sets a value indicating whether the font is single strikeout.             
         attr_accessor :is_strikeout
-        #            
+        #Gets or sets a value indicating whether the font is subscript.             
         attr_accessor :is_subscript
-        #            
+        #Gets or sets a value indicating whether the font is super script.             
         attr_accessor :is_superscript
-        #            
+        #Gets  or sets the name of the .             
         attr_accessor :name
-        #            
+        #Gets or sets the size of the font.             
         attr_accessor :size
-        #            
+        #Gets or sets the font underline type.             
         attr_accessor :underline
 
     # Attribute mapping from ruby-style variable name to JSON key.

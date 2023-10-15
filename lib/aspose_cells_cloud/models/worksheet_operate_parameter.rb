@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :name
         #            
         attr_accessor :sheet_type
-        #            
+        #rename worksheet name            
         attr_accessor :new_name
         #            
         attr_accessor :moving_request

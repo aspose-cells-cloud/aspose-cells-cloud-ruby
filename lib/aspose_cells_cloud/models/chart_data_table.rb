@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartDataTable
-        #            
+        #True if the text in the object changes font size when the object size changes.                         The default value is True.            
         attr_accessor :auto_scale_font
-        #            
+        #Gets and sets the display mode of the background            
         attr_accessor :background_mode
-        #            
+        #Returns a Border object that represents the border of the object            
         attr_accessor :border
-        #            
+        #Gets a  object which represents the font setting of the specified chart data table.            
         attr_accessor :font
-        #            
+        #True if the chart data table has horizontal cell borders            
         attr_accessor :has_border_horizontal
-        #            
+        #True if the chart data table has outline borders            
         attr_accessor :has_border_outline
-        #            
+        #True if the chart data table has vertical cell borders            
         attr_accessor :has_border_vertical
-        #            
+        #True if the data label legend key is visible.            
         attr_accessor :show_legend_key
         #            
         attr_accessor :link

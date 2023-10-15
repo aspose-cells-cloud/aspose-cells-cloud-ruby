@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="WorkbookProtectionRequestrb.cs">
+ <copyright company="Aspose" file="ProtectWorkbookRequestrb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,25 +30,41 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class WorkbookProtectionRequest
-        #Protection type. Can be ALL, CONTENTS, NONE, OBJECTS, SCENARIOS, STRUCTURE, WINDOWS            
-        attr_accessor :protection_type
-        #Encription password.            
-        attr_accessor :password
+  class ProtectWorkbookRequest
+        #Indicates aways open read-only.            
+        attr_accessor :aways_open_read_only
+        #Indicates encrypt with password.            
+        attr_accessor :encrypt_with_password
+        #Represents the various types of protection options available for a worksheet.                        
+        attr_accessor :protect_current_sheet
+        #Indicates protect workbook structure. All, Contents, Objects, Scenarios, Structure, Windows, and None.            
+        attr_accessor :protect_workbook_structure
+        #Indicates signature in file.            
+        attr_accessor :digital_signature
+        #Indicates mark as final.            
+        attr_accessor :mark_as_final
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'protection_type' => :'ProtectionType',
-        :'password' => :'Password'
+        :'aways_open_read_only' => :'AwaysOpenReadOnly',
+        :'encrypt_with_password' => :'EncryptWithPassword',
+        :'protect_current_sheet' => :'ProtectCurrentSheet',
+        :'protect_workbook_structure' => :'ProtectWorkbookStructure',
+        :'digital_signature' => :'DigitalSignature',
+        :'mark_as_final' => :'MarkAsFinal'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'protection_type' => :'String',
-        :'password' => :'String'
+        :'aways_open_read_only' => :'BOOLEAN',
+        :'encrypt_with_password' => :'String',
+        :'protect_current_sheet' => :'Protection',
+        :'protect_workbook_structure' => :'String',
+        :'digital_signature' => :'DigitalSignature',
+        :'mark_as_final' => :'BOOLEAN'
       }
     end
 
@@ -60,11 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ProtectionType')
-          self.protection_type = attributes[:'ProtectionType']
+      if attributes.has_key?(:'AwaysOpenReadOnly')
+          self.aways_open_read_only = attributes[:'AwaysOpenReadOnly']
       end
-      if attributes.has_key?(:'Password')
-          self.password = attributes[:'Password']
+      if attributes.has_key?(:'EncryptWithPassword')
+          self.encrypt_with_password = attributes[:'EncryptWithPassword']
+      end
+      if attributes.has_key?(:'ProtectCurrentSheet')
+          self.protect_current_sheet = attributes[:'ProtectCurrentSheet']
+      end
+      if attributes.has_key?(:'ProtectWorkbookStructure')
+          self.protect_workbook_structure = attributes[:'ProtectWorkbookStructure']
+      end
+      if attributes.has_key?(:'DigitalSignature')
+          self.digital_signature = attributes[:'DigitalSignature']
+      end
+      if attributes.has_key?(:'MarkAsFinal')
+          self.mark_as_final = attributes[:'MarkAsFinal']
       end
 
     end
@@ -73,11 +101,23 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @protection_type.nil?
-          invalid_properties.push("invalid value for 'protection_type', protection_type cannot be nil.")
+      if @aways_open_read_only.nil?
+          invalid_properties.push("invalid value for 'aways_open_read_only', aways_open_read_only cannot be nil.")
       end
-      if @password.nil?
-          invalid_properties.push("invalid value for 'password', password cannot be nil.")
+      if @encrypt_with_password.nil?
+          invalid_properties.push("invalid value for 'encrypt_with_password', encrypt_with_password cannot be nil.")
+      end
+      if @protect_current_sheet.nil?
+          invalid_properties.push("invalid value for 'protect_current_sheet', protect_current_sheet cannot be nil.")
+      end
+      if @protect_workbook_structure.nil?
+          invalid_properties.push("invalid value for 'protect_workbook_structure', protect_workbook_structure cannot be nil.")
+      end
+      if @digital_signature.nil?
+          invalid_properties.push("invalid value for 'digital_signature', digital_signature cannot be nil.")
+      end
+      if @mark_as_final.nil?
+          invalid_properties.push("invalid value for 'mark_as_final', mark_as_final cannot be nil.")
       end
 
       return invalid_properties
@@ -86,8 +126,12 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @protection_type.nil?
-      return false if @password.nil?
+      return false if @aways_open_read_only.nil?
+      return false if @encrypt_with_password.nil?
+      return false if @protect_current_sheet.nil?
+      return false if @protect_workbook_structure.nil?
+      return false if @digital_signature.nil?
+      return false if @mark_as_final.nil?
       return true
     end
 
@@ -96,8 +140,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          protection_type == o.protection_type &&
-          password == o.password 
+          aways_open_read_only == o.aways_open_read_only &&
+          encrypt_with_password == o.encrypt_with_password &&
+          protect_current_sheet == o.protect_current_sheet &&
+          protect_workbook_structure == o.protect_workbook_structure &&
+          digital_signature == o.digital_signature &&
+          mark_as_final == o.mark_as_final 
           std_dev == o.std_dev
     end
 
@@ -110,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ protection_type , password ].hash
+      [ aways_open_read_only , encrypt_with_password , protect_current_sheet , protect_workbook_structure , digital_signature , mark_as_final ].hash
     end
 
     # Builds the object from hash

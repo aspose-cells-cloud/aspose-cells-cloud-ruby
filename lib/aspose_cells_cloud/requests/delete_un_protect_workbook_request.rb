@@ -32,7 +32,7 @@ module AsposeCellsCloud
   class DeleteUnProtectWorkbookRequest
 
     attr_accessor :name  
-    attr_accessor :protection  
+    attr_accessor :password  
     attr_accessor :folder  
     attr_accessor :storage_name  
 
@@ -45,8 +45,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
-      if attributes.has_key?(:'protection')
-          self.protection = attributes[:'protection']
+      if attributes.has_key?(:'password')
+          self.password = attributes[:'password']
       end
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
@@ -60,7 +60,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'name' => :'name',
-        :'protection' => :'protection',
+        :'password' => :'password',
         :'folder' => :'folder',
         :'storage_name' => :'storageName'
       }
@@ -70,7 +70,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'name' => :'String',
-        :'protection' => :'WorkbookProtectionRequest',
+        :'password' => :'String',
         :'folder' => :'String',
         :'storage_name' => :'String'
       }
@@ -85,15 +85,16 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && name.nil?
           fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.delete_un_protect_workbook "
       end 
-      # verify the required parameter 'protection' is set
-      if api_client.config.client_side_validation && protection.nil?
-          fail ArgumentError, "Missing the required parameter 'protection' when calling CellsApi.delete_un_protect_workbook "
+      # verify the required parameter 'password' is set
+      if api_client.config.client_side_validation && password.nil?
+          fail ArgumentError, "Missing the required parameter 'password' when calling CellsApi.delete_un_protect_workbook "
       end 
 
       # resource path
       local_var_path = "/cells/{name}/protection".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
+      query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
 
@@ -107,7 +108,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      post_body = api_client.object_to_http_body(protection) 
          
 
       #auth_names = []

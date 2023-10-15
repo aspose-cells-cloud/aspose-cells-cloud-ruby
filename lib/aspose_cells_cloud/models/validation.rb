@@ -31,37 +31,37 @@ require 'date'
 module AsposeCellsCloud
 
   class Validation
-        #            
+        #Represents the validation alert style.            
         attr_accessor :alert_style
-        #            
+        #Represents a collection of Aspose.Cells.CellArea which contains the data                validation settings.            
         attr_accessor :area_list
-        #            
+        #Represents the data validation error message.            
         attr_accessor :error_message
-        #            
+        #Represents the title of the data-validation error dialog box.            
         attr_accessor :error_title
-        #            
+        #Represents the value or expression associated with the data validation.            
         attr_accessor :formula1
-        #            
+        #Represents the value or expression associated with the data validation.            
         attr_accessor :formula2
-        #            
+        #Indicates whether blank values are permitted by the range data validation.            
         attr_accessor :ignore_blank
-        #            
+        #Indicates whether data validation displays a drop-down list that contains acceptable values.            
         attr_accessor :in_cell_drop_down
-        #            
+        #Represents the data validation input message.            
         attr_accessor :input_message
-        #            
+        #Represents the title of the data-validation input dialog box.            
         attr_accessor :input_title
-        #            
+        #Represents the operator for the data validation.            
         attr_accessor :operator
-        #            
+        #Indicates whether the data validation error message will be displayed whenever the user enters invalid data.            
         attr_accessor :show_error
-        #            
+        #Indicates whether the data validation input message will be displayed whenever the user selects a cell in the data validation range.            
         attr_accessor :show_input
-        #            
+        #Represents the data validation type.            
         attr_accessor :type
-        #            
+        #Represents the first value associated with the data validation.            
         attr_accessor :value1
-        #            
+        #Represents the second value associated with the data validation.            
         attr_accessor :value2
         #            
         attr_accessor :link

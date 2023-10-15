@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Hyperlink
-        #            
+        #Represents the address of a hyperlink.            
         attr_accessor :address
-        #            
+        #Gets the range of hyperlink.            
         attr_accessor :area
-        #            
+        #Returns or sets the ScreenTip text for the specified hyperlink.            
         attr_accessor :screen_tip
-        #            
+        #Represents the text to be displayed for the specified hyperlink. The default value is the address of the hyperlink.            
         attr_accessor :text_to_display
-        #            
+        #Gets the link type.            
         attr_accessor :link_type
         #            
         attr_accessor :link

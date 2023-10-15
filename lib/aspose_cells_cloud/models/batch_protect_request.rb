@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class BatchProtectRequest
-        #            
+        #The directory stores files that need to format conversion.                        
         attr_accessor :source_folder
-        #            
+        #Aspose Cloud storage name            
         attr_accessor :source_storage
-        #            
+        #Indicates the match condition that needs to be processed for the file name.            
         attr_accessor :match_condition
         #            
         attr_accessor :protection_type
-        #            
+        #                        
         attr_accessor :password
-        #            
+        #The directory that stores files whose format conversion was successful.            
         attr_accessor :out_folder
-        #            
+        #Aspose Cloud storage name.            
         attr_accessor :out_storage
 
     # Attribute mapping from ruby-style variable name to JSON key.

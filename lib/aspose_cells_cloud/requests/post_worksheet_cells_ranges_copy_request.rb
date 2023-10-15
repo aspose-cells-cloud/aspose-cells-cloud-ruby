@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="PostWorksheetCellsRanges_request.rb.cs">
+ <copyright company="Aspose" file="PostWorksheetCellsRangesCopy_request.rb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,7 +29,7 @@
 require "uri"
 
 module AsposeCellsCloud
-  class PostWorksheetCellsRangesRequest
+  class PostWorksheetCellsRangesCopyRequest
 
     attr_accessor :name  
     attr_accessor :sheet_name  
@@ -84,24 +84,24 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.post_worksheet_cells_ranges ..."
+        api_client.config.logger.debug "Calling API: CellsApi.post_worksheet_cells_ranges_copy ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'name' is set
       if api_client.config.client_side_validation && name.nil?
-          fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.post_worksheet_cells_ranges "
+          fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.post_worksheet_cells_ranges_copy "
       end 
       # verify the required parameter 'sheet_name' is set
       if api_client.config.client_side_validation && sheet_name.nil?
-          fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.post_worksheet_cells_ranges "
+          fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.post_worksheet_cells_ranges_copy "
       end 
       # verify the required parameter 'range_operate' is set
       if api_client.config.client_side_validation && range_operate.nil?
-          fail ArgumentError, "Missing the required parameter 'range_operate' when calling CellsApi.post_worksheet_cells_ranges "
+          fail ArgumentError, "Missing the required parameter 'range_operate' when calling CellsApi.post_worksheet_cells_ranges_copy "
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/ranges".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+      local_var_path = "/cells/{name}/worksheets/{sheetName}/ranges/copy".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
       # query parameters
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 
@@ -130,7 +130,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'CellsCloudResponse')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.post_worksheet_cells_ranges\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.post_worksheet_cells_ranges_copy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

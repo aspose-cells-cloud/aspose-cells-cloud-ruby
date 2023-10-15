@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class Legend
-        #            
+        #Gets or sets the legend position type.            
         attr_accessor :position
-        #            
+        #Gets a collection of all the LegendEntry objects in the specified chart legend.                        Setting the legend entries of the surface chart is not supported.                        So it will return null if the chart type is surface chart type.            
         attr_accessor :legend_entries
         #            
         attr_accessor :area

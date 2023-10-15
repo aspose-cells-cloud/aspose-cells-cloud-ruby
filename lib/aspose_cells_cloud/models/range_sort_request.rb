@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeSortRequest
-        #            
+        #Summary description for DataSorter.            
         attr_accessor :data_sorter
-        #            
+        #Encapsulates the object that represents a range of cells within a spreadsheet.            
         attr_accessor :cell_area
 
     # Attribute mapping from ruby-style variable name to JSON key.

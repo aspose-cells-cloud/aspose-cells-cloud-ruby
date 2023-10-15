@@ -33,67 +33,67 @@ module AsposeCellsCloud
   class Worksheet
         #            
         attr_accessor :links
-        #Indicates if the specified worksheet is displayed from right to left instead   of from left to right.  Default is false.                        
+        #Indicates if the specified worksheet is displayed from right to left instead of from left to right.            Default is false.             
         attr_accessor :display_right_to_left
-        #True if zero values are displayed.            
+        #True if zero values are displayed.             
         attr_accessor :display_zeros
-        #Represents first visible column index.            
+        #Represents first visible column index.             
         attr_accessor :first_visible_column
-        #Represents first visible row index.                        
+        #Represents first visible row index.             
         attr_accessor :first_visible_row
-        #Gets or sets the name of the worksheet.                        
+        #Gets or sets the name of the worksheet.             
         attr_accessor :name
-        #Gets the index of sheet in the worksheets collection.                        
+        #Gets the index of sheet in the worksheet collection.             
         attr_accessor :index
-        #Gets or sets a value indicating whether the gridelines are visible.Default    is true.            
+        #Gets or sets a value indicating whether the gridlines are visible.Default is true.             
         attr_accessor :is_gridlines_visible
-        #Indicates whether show outline.                        
+        #Indicates whether to show outline.             
         attr_accessor :is_outline_shown
-        #Indications the specified worksheet is shown in normal view or page break preview.            
+        #Indicates whether the specified worksheet is shown in normal view or page break preview.             
         attr_accessor :is_page_break_preview
-        #Represents if the worksheet is visible.                        
+        #Represents if the worksheet is visible.             
         attr_accessor :is_visible
-        #Indicates if the worksheet is protected.            
+        #Indicates if the worksheet is protected.             
         attr_accessor :is_protected
-        #Gets or sets a value indicating whether the worksheet will display row and column headers.Default is true.                        
+        #Gets or sets a value indicating whether the worksheet will display row and column headers.            Default is true.             
         attr_accessor :is_row_column_headers_visible
-        #Indicates whether the ruler is visible. Only apply for page break preview.            
+        #Indicates whether the ruler is visible. This property is only applied for page break preview.             
         attr_accessor :is_ruler_visible
-        #Indicates whether this worksheet is selected when the workbook is opened.            
+        #Indicates whether this worksheet is selected when the workbook is opened.             
         attr_accessor :is_selected
-        #Represents worksheet tab color.            
+        #Represents worksheet tab color.             
         attr_accessor :tab_color
-        #Flag indicating whether the Transition Formula Entry (Lotus compatibility) option is enabled.            
+        #Indicates whether the Transition Formula Entry (Lotus compatibility) option is enabled.             
         attr_accessor :transition_entry
-        #Flag indicating whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.                        
+        #Indicates whether the Transition Formula Evaluation (Lotus compatibility) option is enabled.             
         attr_accessor :transition_evaluation
-        #Represents worksheet type            
+        #Represents worksheet type.             
         attr_accessor :type
-        #Gets and sets the view type.            
+        #Gets and sets the view type.             
         attr_accessor :view_type
-        #Indicates the state for this sheet visibility                        
+        #Indicates the visible state for this sheet.             
         attr_accessor :visibility_type
-        #Represents the scaling factor in percent. It should be btween 10 and 400.                        
+        #Represents the scaling factor in percentage. It should be between 10 and 400.             
         attr_accessor :zoom
-        #            
+        #Gets the  collection.             
         attr_accessor :cells
-        #            
+        #Gets a  collection             
         attr_accessor :charts
         #            
         attr_accessor :auto_shapes
-        #            
+        #Represents a collection of  in a worksheet.             
         attr_accessor :ole_objects
-        #            
+        #Gets the  collection.             
         attr_accessor :comments
-        #            
+        #Gets a  collection.             
         attr_accessor :pictures
         #            
         attr_accessor :merged_cells
-        #            
+        #Gets the data validation setting collection in the worksheet.             
         attr_accessor :validations
-        #            
+        #Gets the ConditionalFormattings in the worksheet.             
         attr_accessor :conditional_formattings
-        #            
+        #Gets the  collection.             
         attr_accessor :hyperlinks
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class IconFilter
-        #            
+        #Gets and sets Zero-based index of an icon in an icon set.             
         attr_accessor :icon_id
-        #            
+        #Gets and sets which icon set is used in the filter criteria.             
         attr_accessor :icon_set_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

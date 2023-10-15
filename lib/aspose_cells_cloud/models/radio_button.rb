@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class RadioButton
-        #            
+        #Gets the GroupBox that contains this RadioButton.            
         attr_accessor :group_box
-        #            
+        #Indicates if the radiobutton is checked or not.            
         attr_accessor :is_checked
-        #            
+        #Indicates whether the combobox has 3-D shading.            
         attr_accessor :shadow
         #            
         attr_accessor :name

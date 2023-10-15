@@ -31,33 +31,33 @@ require 'date'
 module AsposeCellsCloud
 
   class SqlScriptSaveOptions
-        #            
+        #Check if the table name exists before creating            
         attr_accessor :check_if_table_exists
-        #            
+        #Gets and sets the map of column type for different database.            
         attr_accessor :column_type_map
-        #            
+        #Check all data to find columns' data type.            
         attr_accessor :check_all_data_for_column_type
-        #            
+        #Insert blank line between each data.            
         attr_accessor :add_blank_line_between_rows
-        #            
+        #Gets and sets character separator of sql script.            
         attr_accessor :separator
-        #            
+        #Gets and sets the operator type of sql.            
         attr_accessor :operator_type
-        #            
+        #Represents which column is primary key of the data table.            
         attr_accessor :primary_key
-        #            
+        #Indicates whether exporting sql of creating table.            
         attr_accessor :create_table
-        #            
+        #Gets and sets the name of id column.            
         attr_accessor :id_name
-        #            
+        #Gets and sets the start id.            
         attr_accessor :start_id
-        #            
+        #Gets and sets the table name.            
         attr_accessor :table_name
-        #            
+        #Indicates whether exporting all data as string value.            
         attr_accessor :export_as_string
-        #            
+        #Gets or sets the exporting range.            
         attr_accessor :export_area
-        #            
+        #Indicates whether the range contains header row.            
         attr_accessor :has_header_row
         #            
         attr_accessor :save_format

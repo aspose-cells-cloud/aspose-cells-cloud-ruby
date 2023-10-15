@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class CalculationOptions
-        #            
+        #Specifies the stack size for calculating cells recursively.             
         attr_accessor :calc_stack_size
-        #            
+        #Indicates whether errors encountered while calculating formulas should be ignored.            The error may be unsupported function, external links, etc.            The default value is true.             
         attr_accessor :ignore_error
-        #            
+        #Specifies the strategy for processing precision of calculation.             
         attr_accessor :precision_strategy
-        #            
+        #Indicates whether calculate the dependent cells recursively when calculating one cell and it depends on other cells.            The default value is true.             
         attr_accessor :recursive
         #The custom formula calculation engine to extend the default calculation engine of Aspose.Cells.             
         attr_accessor :custom_engine

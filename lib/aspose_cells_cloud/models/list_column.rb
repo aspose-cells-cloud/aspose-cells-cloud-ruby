@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class ListColumn
-        #Gets and sets the name of the column.            
+        #Gets and sets the name of the column.             
         attr_accessor :name
-        #Gets the range of this list column.                        
+        #Gets the range of this list column.             
         attr_accessor :range
-        #Gets and sets the type of calculation in the Totals row of the list column.            
+        #Gets and sets the type of calculation in the Totals row of the list column.             
         attr_accessor :totals_calculation
-        #Gets and sets the formula of the list column.                        
+        #Gets and sets the formula of the list column.             
         attr_accessor :formula
         #Gets and sets the display labels of total row.             
         attr_accessor :totals_row_label

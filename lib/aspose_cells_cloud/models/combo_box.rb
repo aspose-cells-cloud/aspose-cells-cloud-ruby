@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class ComboBox
-        #            
+        #Gets or sets the number of list lines displayed in the drop-down portion of a combo box.            
         attr_accessor :drop_down_lines
         #            
         attr_accessor :input_range
-        #            
+        #Gets the selected cell in the input range of the combo box.            
         attr_accessor :selected_cell
-        #            
+        #Gets or sets the index number of the currently selected item in a list box or combo box.                        Zero-based.            
         attr_accessor :selected_index
-        #            
+        #Gets the selected value of the combox box.            
         attr_accessor :selected_value
-        #            
+        #Indicates whether the combobox has 3-D shading.            
         attr_accessor :shadow
         #            
         attr_accessor :name

@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="ProtectWorkbookRequstrb.cs">
+ <copyright company="Aspose" file="DataSorterKeyrb.cs">
    Copyright (c) 2023 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,41 +30,41 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class ProtectWorkbookRequst
-        #            
-        attr_accessor :aways_open_only_ready
-        #            
-        attr_accessor :encrypt_with_password
-        #            
-        attr_accessor :protect_current_sheet
-        #            
-        attr_accessor :protect_workbook_structure
-        #            
-        attr_accessor :digital_signature
-        #            
-        attr_accessor :mark_as_final
+  class DataSorterKey
+        #Indicates the order of sorting.             
+        attr_accessor :order
+        #Gets the sorted column index(absolute position, column A is 0, B is 1, ...).             
+        attr_accessor :index
+        #Represents the type of sorting.             
+        attr_accessor :type
+        #Represents the icon set type.             
+        attr_accessor :icon_set_type
+        #Represents the id of the icon set type.             
+        attr_accessor :icon_id
+        #Gets the sorted color.             
+        attr_accessor :color
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'aways_open_only_ready' => :'AwaysOpenOnlyReady',
-        :'encrypt_with_password' => :'EncryptWithPassword',
-        :'protect_current_sheet' => :'ProtectCurrentSheet',
-        :'protect_workbook_structure' => :'ProtectWorkbookStructure',
-        :'digital_signature' => :'DigitalSignature',
-        :'mark_as_final' => :'MarkAsFinal'
+        :'order' => :'Order',
+        :'index' => :'Index',
+        :'type' => :'Type',
+        :'icon_set_type' => :'IconSetType',
+        :'icon_id' => :'IconId',
+        :'color' => :'Color'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'aways_open_only_ready' => :'BOOLEAN',
-        :'encrypt_with_password' => :'String',
-        :'protect_current_sheet' => :'Protection',
-        :'protect_workbook_structure' => :'String',
-        :'digital_signature' => :'DigitalSignature',
-        :'mark_as_final' => :'BOOLEAN'
+        :'order' => :'String',
+        :'index' => :'Integer',
+        :'type' => :'String',
+        :'icon_set_type' => :'String',
+        :'icon_id' => :'Integer',
+        :'color' => :'Color'
       }
     end
 
@@ -76,23 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'AwaysOpenOnlyReady')
-          self.aways_open_only_ready = attributes[:'AwaysOpenOnlyReady']
+      if attributes.has_key?(:'Order')
+          self.order = attributes[:'Order']
       end
-      if attributes.has_key?(:'EncryptWithPassword')
-          self.encrypt_with_password = attributes[:'EncryptWithPassword']
+      if attributes.has_key?(:'Index')
+          self.index = attributes[:'Index']
       end
-      if attributes.has_key?(:'ProtectCurrentSheet')
-          self.protect_current_sheet = attributes[:'ProtectCurrentSheet']
+      if attributes.has_key?(:'Type')
+          self.type = attributes[:'Type']
       end
-      if attributes.has_key?(:'ProtectWorkbookStructure')
-          self.protect_workbook_structure = attributes[:'ProtectWorkbookStructure']
+      if attributes.has_key?(:'IconSetType')
+          self.icon_set_type = attributes[:'IconSetType']
       end
-      if attributes.has_key?(:'DigitalSignature')
-          self.digital_signature = attributes[:'DigitalSignature']
+      if attributes.has_key?(:'IconId')
+          self.icon_id = attributes[:'IconId']
       end
-      if attributes.has_key?(:'MarkAsFinal')
-          self.mark_as_final = attributes[:'MarkAsFinal']
+      if attributes.has_key?(:'Color')
+          self.color = attributes[:'Color']
       end
 
     end
@@ -101,23 +101,23 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @aways_open_only_ready.nil?
-          invalid_properties.push("invalid value for 'aways_open_only_ready', aways_open_only_ready cannot be nil.")
+      if @order.nil?
+          invalid_properties.push("invalid value for 'order', order cannot be nil.")
       end
-      if @encrypt_with_password.nil?
-          invalid_properties.push("invalid value for 'encrypt_with_password', encrypt_with_password cannot be nil.")
+      if @index.nil?
+          invalid_properties.push("invalid value for 'index', index cannot be nil.")
       end
-      if @protect_current_sheet.nil?
-          invalid_properties.push("invalid value for 'protect_current_sheet', protect_current_sheet cannot be nil.")
+      if @type.nil?
+          invalid_properties.push("invalid value for 'type', type cannot be nil.")
       end
-      if @protect_workbook_structure.nil?
-          invalid_properties.push("invalid value for 'protect_workbook_structure', protect_workbook_structure cannot be nil.")
+      if @icon_set_type.nil?
+          invalid_properties.push("invalid value for 'icon_set_type', icon_set_type cannot be nil.")
       end
-      if @digital_signature.nil?
-          invalid_properties.push("invalid value for 'digital_signature', digital_signature cannot be nil.")
+      if @icon_id.nil?
+          invalid_properties.push("invalid value for 'icon_id', icon_id cannot be nil.")
       end
-      if @mark_as_final.nil?
-          invalid_properties.push("invalid value for 'mark_as_final', mark_as_final cannot be nil.")
+      if @color.nil?
+          invalid_properties.push("invalid value for 'color', color cannot be nil.")
       end
 
       return invalid_properties
@@ -126,12 +126,12 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @aways_open_only_ready.nil?
-      return false if @encrypt_with_password.nil?
-      return false if @protect_current_sheet.nil?
-      return false if @protect_workbook_structure.nil?
-      return false if @digital_signature.nil?
-      return false if @mark_as_final.nil?
+      return false if @order.nil?
+      return false if @index.nil?
+      return false if @type.nil?
+      return false if @icon_set_type.nil?
+      return false if @icon_id.nil?
+      return false if @color.nil?
       return true
     end
 
@@ -140,12 +140,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          aways_open_only_ready == o.aways_open_only_ready &&
-          encrypt_with_password == o.encrypt_with_password &&
-          protect_current_sheet == o.protect_current_sheet &&
-          protect_workbook_structure == o.protect_workbook_structure &&
-          digital_signature == o.digital_signature &&
-          mark_as_final == o.mark_as_final 
+          order == o.order &&
+          index == o.index &&
+          type == o.type &&
+          icon_set_type == o.icon_set_type &&
+          icon_id == o.icon_id &&
+          color == o.color 
           std_dev == o.std_dev
     end
 
@@ -158,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ aways_open_only_ready , encrypt_with_password , protect_current_sheet , protect_workbook_structure , digital_signature , mark_as_final ].hash
+      [ order , index , type , icon_set_type , icon_id , color ].hash
     end
 
     # Builds the object from hash

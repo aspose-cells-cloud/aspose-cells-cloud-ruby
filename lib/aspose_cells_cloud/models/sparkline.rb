@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class Sparkline
-        #Gets the column index of the sparkline.            
+        #Gets the column index of the sparkline.             
         attr_accessor :column
-        #Represents the data range of the sparkline.            
+        #Represents the data range of the sparkline.             
         attr_accessor :data_range
-        #Gets the row index of the sparkline.            
+        #Gets the row index of the sparkline.             
         attr_accessor :row
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -33,17 +33,17 @@ module AsposeCellsCloud
   class ListBox
         #            
         attr_accessor :input_range
-        #            
+        #Gets the number of items in the list box.            
         attr_accessor :item_count
-        #            
+        #Specifies the amount by which the control's value is changed                         when the user clicks on the scrollbar's page up or page down region.            
         attr_accessor :page_change
-        #            
+        #Gets the selected cells.                        Returns null if the input range is not set or no item is selected            
         attr_accessor :selected_cells
-        #            
+        #Gets or sets the index number of the currently selected item in a list box or combo box.                        Zero-based.            
         attr_accessor :selected_index
-        #            
+        #Gets or sets the selection mode of the specified list box.            
         attr_accessor :selection_type
-        #            
+        #Indicates whether the combobox has 3-D shading.            
         attr_accessor :shadow
         #            
         attr_accessor :name

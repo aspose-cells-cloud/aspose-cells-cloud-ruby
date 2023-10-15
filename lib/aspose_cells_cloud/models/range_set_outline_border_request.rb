@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeSetOutlineBorderRequest
-        #            
+        #Encapsulates the object that represents a range of cells within a spreadsheet.            
         attr_accessor :range
-        #            
+        #LeftBorder, RightBorder, TopBorder, BottomBorder, DiagonalDown, DiagonalUp, Vertical and Horizontal.            
         attr_accessor :border_edge
-        #            
+        #None, Thin, Medium, Dashed, Dotted, Thick, Double, Hair, MediumDashed, DashDot, MediumDashDot, DashDotDot, MediumDashDotDot and SlantedDashDot.            
         attr_accessor :border_style
-        #            
+        #Border color.            
         attr_accessor :border_color
 
     # Attribute mapping from ruby-style variable name to JSON key.

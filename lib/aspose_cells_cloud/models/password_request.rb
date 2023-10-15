@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PasswordRequest
-        #            
+        #Password.            
         attr_accessor :password
 
     # Attribute mapping from ruby-style variable name to JSON key.

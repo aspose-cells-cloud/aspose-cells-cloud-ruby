@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class CopyOptions
-        #Indicates whether copying column width in unit of characters.            
+        #Indicates whether copying column width in unit of characters.             
         attr_accessor :column_character_width
-        #If the formula is not valid for the dest destination, only copy values.            
+        #If the formula is not valid for the dest destination, only copy values.             
         attr_accessor :copy_invalid_formulas_as_values
-        #Indicates whether copying the names.            
+        #Indicates whether copying the names.             
         attr_accessor :copy_names
-        #Indicates whether extend ranges when copying the range to adjacent range.            
+        #Indicates whether extend ranges when copying the range to adjacent range.             
         attr_accessor :extend_to_adjacent_range
-        #When copying the range in the same file and the chart refers to the source sheet,  False means the copied chart's data source will not be changed. True means the  copied chart's data source refers to the destination sheet.                        
+        #When copying the range in the same file and the chart refers to the source sheet,            False means the copied chart's data source will not be changed.            True means the copied chart's data source refers to the destination sheet.             
         attr_accessor :refer_to_destination_sheet
-        #            
+        #In ms excel, when copying formulas which refer to other worksheets while copying a worksheet to another one,            the copied formulas should refer to source workbook.            However, for some situations user may need the copied formulas refer to worksheets with the same name            in the same workbook, such as when those worksheets have been copied before this copy operation,            then this property should be kept as true.             
         attr_accessor :refer_to_sheet_with_same_name
 
     # Attribute mapping from ruby-style variable name to JSON key.

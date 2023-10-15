@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Cells
-        #            
+        #Maximum row index of cell which contains data or style.            
         attr_accessor :max_row
-        #            
+        #Maximum column index of those cells that have been instantiated in the collection(does not include the column                        where style is defined for the whole column but no cell has been instantiated in it).            
         attr_accessor :max_column
         #            
         attr_accessor :cell_count
-        #            
+        #Gets the collection of  objects that represents the individual rows in this worksheet.            
         attr_accessor :rows
-        #            
+        #Gets the collection of  objects that represents the individual columns in this worksheet.            
         attr_accessor :columns
         #            
         attr_accessor :cell_list

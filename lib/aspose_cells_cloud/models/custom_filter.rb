@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class CustomFilter
-        #            
+        #Gets and sets the criteria.             
         attr_accessor :criteria
-        #            
+        #Gets and sets the filter operator type.             
         attr_accessor :filter_operator_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

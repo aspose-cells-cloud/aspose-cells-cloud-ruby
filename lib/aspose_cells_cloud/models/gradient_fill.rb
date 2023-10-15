@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class GradientFill
-        #            
+        #Gets the gradient fill type.             
         attr_accessor :fill_type
-        #            
+        #Gets the gradient direction type.             
         attr_accessor :direction_type
-        #            
+        #The angle of linear fill.             
         attr_accessor :angle
-        #            
+        #Represents the gradient stop collection.             
         attr_accessor :gradient_stops
 
     # Attribute mapping from ruby-style variable name to JSON key.

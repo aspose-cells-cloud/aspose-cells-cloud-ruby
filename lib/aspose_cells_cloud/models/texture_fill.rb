@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class TextureFill
-        #            
+        #Gets and sets the texture type             
         attr_accessor :type
-        #            
+        #Returns or sets the degree of transparency of the area as a value from 0.0 (opaque) through 1.0 (clear).             
         attr_accessor :transparency
-        #            
+        #Gets and sets the picture format scale.             
         attr_accessor :scale
-        #            
+        #Gets or sets tile picture option.             
         attr_accessor :tile_pic_option
-        #            
+        #Gets or sets picture format option.             
         attr_accessor :pic_format_option
         #            
         attr_accessor :image

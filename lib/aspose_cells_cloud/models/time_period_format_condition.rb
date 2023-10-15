@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TimePeriodFormatCondition
-        #            
+        #The applicable time period in a "date occurring…" conditional formatting                rule. Valid only for type = timePeriod.  The default value is TimePeriodType.Today            
         attr_accessor :time_period
 
     # Attribute mapping from ruby-style variable name to JSON key.

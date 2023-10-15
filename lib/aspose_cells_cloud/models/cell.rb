@@ -31,37 +31,37 @@ require 'date'
 module AsposeCellsCloud
 
   class Cell
-        #            
+        #Gets the name of the cell.            
         attr_accessor :name
-        #            
+        #Gets row number (zero based) of the cell.            
         attr_accessor :row
-        #            
+        #Gets column number (zero based) of the cell.            
         attr_accessor :column
-        #            
+        #Gets the value contained in this cell.            
         attr_accessor :value
-        #            
+        #Represents cell value type.            
         attr_accessor :type
-        #            
+        #Gets or sets a formula of the .            
         attr_accessor :formula
-        #            
+        #Represents if the specified cell contains formula.            
         attr_accessor :is_formula
-        #            
+        #Checks if a cell is part of a merged range or not.            
         attr_accessor :is_merged
-        #            
+        #Indicates the cell's formula is and array formula                         and it is the first cell of the array.            
         attr_accessor :is_array_header
-        #            
+        #Indicates whether the cell formula is an array formula.            
         attr_accessor :is_in_array
-        #            
+        #Checks if the value of this cell is an error.            
         attr_accessor :is_error_value
-        #            
+        #Indicates whether this cell is part of table formula.            
         attr_accessor :is_in_table
-        #            
+        #Indicates if the cell's style is set. If return false, it means this cell has a default cell format.            
         attr_accessor :is_style_set
-        #            
+        #Gets and sets the html string which contains data and some formats in this cell.            
         attr_accessor :html_string
         #            
         attr_accessor :style
-        #            
+        #Gets the parent worksheet.            
         attr_accessor :worksheet
         #            
         attr_accessor :link

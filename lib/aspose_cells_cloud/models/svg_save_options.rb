@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SvgSaveOptions
-        #            
+        #Gets and sets which worksheet should be exported.  If the value is -1, the                active worksheet will be exported.            
         attr_accessor :sheet_index
         #            
         attr_accessor :save_format

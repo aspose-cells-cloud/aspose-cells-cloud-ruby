@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class Title
-        #            
+        #Represents whether the title is visible.            
         attr_accessor :is_visible
         #            
         attr_accessor :linked_source
         #            
         attr_accessor :rotation_angle
-        #            
+        #Gets or sets the text of display unit label.            
         attr_accessor :text
         #            
         attr_accessor :text_direction

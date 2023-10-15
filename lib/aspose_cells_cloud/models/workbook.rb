@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class Workbook
-        #            
+        #Gets and sets the current file name.             
         attr_accessor :file_name
         #            
         attr_accessor :links
-        #            
+        #Gets the  collection in the spreadsheet.             
         attr_accessor :worksheets
-        #            
+        #Gets or sets the default  object of the workbook.             
         attr_accessor :default_style
         #            
         attr_accessor :document_properties
         #            
         attr_accessor :names
-        #            
+        #Represents the workbook settings.             
         attr_accessor :settings
         #            
         attr_accessor :is_write_protected

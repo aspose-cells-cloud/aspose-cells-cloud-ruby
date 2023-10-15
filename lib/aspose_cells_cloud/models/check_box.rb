@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class CheckBox
-        #            
+        #Gets or set checkbox' value.            
         attr_accessor :checked_value
-        #            
+        #Indicates whether the combobox has 3-D shading.            
         attr_accessor :shadow
-        #            
+        #Indicates if the checkbox is checked or not.            
         attr_accessor :value
         #            
         attr_accessor :name

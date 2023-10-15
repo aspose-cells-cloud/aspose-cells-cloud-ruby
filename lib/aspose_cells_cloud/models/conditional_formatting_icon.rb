@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class ConditionalFormattingIcon
-        #Gets the icon set data.                        
+        #Gets the icon set data.             
         attr_accessor :image_data
-        #Gets and sets the icon's index in the icon set.                        
+        #Gets and sets the icon's index in the icon set.             
         attr_accessor :index
-        #Gets and sets the icon set type.                        
+        #Gets and sets the icon set type.             
         attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.

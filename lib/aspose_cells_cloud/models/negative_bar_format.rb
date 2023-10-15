@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class NegativeBarFormat
-        #Gets or sets a FormatColor object that you can use to specify the border   color for negative data bars.                        
+        #Gets or sets a FormatColor object that you can use to specify the border color for negative data bars.             
         attr_accessor :border_color
-        #Gets whether to use the same border color as positive data bars.                        
+        #Gets whether to use the same border color as positive data bars.             
         attr_accessor :border_color_type
-        #Gets or sets a FormatColor object that you can use to specify the fill color   for negative data bars.                        
+        #Gets or sets a FormatColor object that you can use to specify the fill color for negative data bars.             
         attr_accessor :color
-        #Gets or sets whether to use the same fill color as positive data bars.            
+        #Gets or sets whether to use the same fill color as positive data bars.             
         attr_accessor :color_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

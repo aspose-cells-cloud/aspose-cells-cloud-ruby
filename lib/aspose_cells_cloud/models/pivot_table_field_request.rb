@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTableFieldRequest
-        #            
+        #Intdex array.            
         attr_accessor :data
 
     # Attribute mapping from ruby-style variable name to JSON key.

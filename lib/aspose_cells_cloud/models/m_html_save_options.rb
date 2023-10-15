@@ -31,29 +31,29 @@ require 'date'
 module AsposeCellsCloud
 
   class MHtmlSaveOptions
-        #            
+        #The directory that the attached files will be saved to.  Only for saving to html stream.            
         attr_accessor :attached_files_directory
-        #            
+        #Specify the Url prefix of attached files such as image in the html file. Only for saving to html stream.            
         attr_accessor :attached_files_url_prefix
-        #            
+        #If not set,use Encoding.UTF8 as default enconding type.            
         attr_accessor :encoding
-        #            
+        #Indicates if exporting the whole workbook to html file.            
         attr_accessor :export_active_worksheet_only
-        #            
+        #Get or set the format of chart image before exporting            
         attr_accessor :export_chart_image_format
-        #            
+        #Specifies whether images are saved in Base64 format to HTML, MHTML or EPUB.            
         attr_accessor :export_images_as_base64
-        #            
+        #Hidden column(the width of this column is 0) in excel,before save this into                html format, if HtmlHiddenColDisplayType is "Remove",the hidden column would               ont been output, if the value is "Hidden", the column would been output,but was hidden,the default value is "Hidden"            
         attr_accessor :hidden_col_display_type
-        #            
+        #Hidden row(the height of this row is 0) in excel,before save this into html                format, if HtmlHiddenRowDisplayType is "Remove",the hidden row would ont               been output, if the value is "Hidden", the row would been output,but was               hidden,the default value is "Hidden"            
         attr_accessor :hidden_row_display_type
-        #            
+        #Indicates if a cross-cell string will be displayed in the same way as MS               Excel when saving an Excel file in html format.  By default the value is               Default, so, for cross-cell strings, there is little difference between the               html files created by Aspose.Cells and MS Excel. But the performance for               creating large html files,setting the value to Cross would be several times               faster than setting it to Default or Fit2Cell.            
         attr_accessor :html_cross_string_type
-        #            
+        #Indicates if export image files to temp directory.  Only for saving to html  stream.            
         attr_accessor :is_exp_image_to_temp_dir
-        #            
+        #The title of the html page.  Only for saving to html stream.            
         attr_accessor :page_title
-        #            
+        #Parse html tag in cell,like ,as cell value,or as html tag,default is true            
         attr_accessor :parse_html_tag_in_cell
         #            
         attr_accessor :save_format

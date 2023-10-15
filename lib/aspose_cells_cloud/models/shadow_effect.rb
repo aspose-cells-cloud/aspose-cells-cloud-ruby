@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class ShadowEffect
-        #            
+        #Gets and sets the lighting angle. Range from 0 to 359.9 degrees.             
         attr_accessor :angle
-        #            
+        #Gets and sets the blur of the shadow. Range from 0 to 100 points.             
         attr_accessor :blur
-        #            
+        #Gets and sets the color of the shadow.             
         attr_accessor :color
-        #            
+        #Gets and sets the distance of the shadow. Range from 0 to 200 points.             
         attr_accessor :distance
-        #            
+        #Gets and sets the preset shadow type of the shadow.             
         attr_accessor :preset_type
-        #            
+        #Gets and sets the size of the shadow. Range from 0 to 2.0.             Meaningless in inner shadow.             
         attr_accessor :size
-        #            
+        #Gets and sets the degree of transparency of the shadow. Range from 0.0 (opaque) to 1.0 (clear).             
         attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.

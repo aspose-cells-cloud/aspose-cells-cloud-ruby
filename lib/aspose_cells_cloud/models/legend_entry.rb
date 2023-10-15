@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class LegendEntry
-        #            
+        #True if the text in the object changes font size when the object size changes.                         The default value is True.            
         attr_accessor :auto_scale_font
-        #            
+        #Gets and sets the display mode of the background            
         attr_accessor :background_mode
-        #            
+        #Gets a  object of the specified ChartFrame object.            
         attr_accessor :font
-        #            
+        #Gets and sets whether the legend entry is deleted.            
         attr_accessor :is_deleted
         #            
         attr_accessor :link

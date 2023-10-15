@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class QueryTable
-        #            
+        #Gets the connection id of the query table.            
         attr_accessor :connection_id
-        #            
+        #Gets the name of querytable.            
         attr_accessor :name
-        #            
+        #Gets the range of the result.            
         attr_accessor :result_range
-        #            
+        #Returns or sets the PreserveFormatting of the object.            
         attr_accessor :preserve_formatting
-        #            
+        #Returns or sets the AdjustColumnWidth of the object.            
         attr_accessor :adjust_column_width
 
     # Attribute mapping from ruby-style variable name to JSON key.

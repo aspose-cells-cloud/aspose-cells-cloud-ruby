@@ -31,27 +31,27 @@ require 'date'
 module AsposeCellsCloud
 
   class TickLabels
-        #            
+        #True if the text in the object changes font size when the object size changes. The default value is True.            
         attr_accessor :auto_scale_font
-        #            
+        #Gets and sets the display mode of the background            
         attr_accessor :background_mode
-        #            
+        #Returns a  object that represents the font of the specified TickLabels object.            
         attr_accessor :font
-        #            
+        #Represents the format number for the TickLabels object.            
         attr_accessor :number
-        #            
+        #Represents the format string for the TickLabels object.            
         attr_accessor :number_format
-        #            
+        #True if the number format is linked to the cells                         (so that the number format changes in the labels when it changes in the cells).            
         attr_accessor :number_format_linked
-        #            
+        #Gets and sets the distance of labels from the axis.            
         attr_accessor :offset
-        #            
+        #Represents text rotation angle in clockwise.            
         attr_accessor :rotation_angle
-        #            
+        #Represents text reading order.            
         attr_accessor :text_direction
-        #            
+        #Represents text reading order.            
         attr_accessor :reading_order
-        #            
+        #Gets and sets the direction of text.            
         attr_accessor :direction_type
         #            
         attr_accessor :link

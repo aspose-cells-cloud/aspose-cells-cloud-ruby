@@ -41,7 +41,7 @@ module AsposeCellsCloud
         attr_accessor :lower_right_column
         #            
         attr_accessor :filename
-        #            
+        #base64            
         attr_accessor :data
         #            
         attr_accessor :destination_worksheet

@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class PlotArea
-        #            
+        #Gets or sets the height of plot area in units of 1/4000 of the chart area.            
         attr_accessor :inner_height
-        #            
+        #Gets or sets the width  of plot area in units of 1/4000 of the chart area.            
         attr_accessor :inner_width
-        #            
+        #Gets or gets the x coordinate of the upper top corner of plot area in units of 1/4000 of the chart area.            
         attr_accessor :inner_x
-        #            
+        #Gets or gets the x coordinate of the upper top corner of plot area in units of 1/4000 of the chart area.            
         attr_accessor :inner_y
         #            
         attr_accessor :area

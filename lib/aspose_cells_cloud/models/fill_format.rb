@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class FillFormat
-        #            
+        #Gets and sets the fill type.             
         attr_accessor :type
-        #            
+        #Gets  object.             
         attr_accessor :solid_fill
-        #            
+        #Gets  object.             
         attr_accessor :pattern_fill
-        #            
+        #Gets  object.             
         attr_accessor :texture_fill
-        #            
+        #Gets  object.             
         attr_accessor :gradient_fill
-        #            
+        #Gets and sets the picture image data.             
         attr_accessor :image_data
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class ConditionalFormattingValue
-        #Get or set the Greater Than Or Equal flag. Use only for icon sets, determines   whether this threshold value uses the greater than or equal to operator.   'false' indicates 'greater than' is used instead of 'greater than or equal   to'.  Default value is true.                        
+        #Get or set the Greater Than Or Equal flag.             Use only for icon sets, determines whether this threshold value uses             the greater than or equal to operator.             'false' indicates 'greater than' is used instead of 'greater than or equal to'.            Default value is true.             
         attr_accessor :is_gte
-        #Get or set the type of this conditional formatting value object.  Setting     the type to FormatConditionValueType.Min or FormatConditionValueType.Max     will auto set "Value" to null.             
+        #Get or set the type of this conditional formatting value object.            Setting the type to FormatConditionValueType.Min or FormatConditionValueType.Max             will auto set "Value" to null.             
         attr_accessor :type
-        #Get or set the value of this conditional formatting value object.  It should    be used in conjunction with Type.            
+        #Get or set the value of this conditional formatting value object.            It should be used in conjunction with Type.             
         attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.

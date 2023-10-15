@@ -33,7 +33,7 @@ module AsposeCellsCloud
 
     attr_accessor :name  
     attr_accessor :sheet_name  
-    attr_accessor :range_operate  
+    attr_accessor :range_sort_request  
     attr_accessor :folder  
     attr_accessor :storage_name  
 
@@ -49,8 +49,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
-      if attributes.has_key?(:'rangeOperate')
-          self.range_operate = attributes[:'rangeOperate']
+      if attributes.has_key?(:'rangeSortRequest')
+          self.range_sort_request = attributes[:'rangeSortRequest']
       end
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
@@ -65,7 +65,7 @@ module AsposeCellsCloud
       {
         :'name' => :'name',
         :'sheet_name' => :'sheetName',
-        :'range_operate' => :'rangeOperate',
+        :'range_sort_request' => :'rangeSortRequest',
         :'folder' => :'folder',
         :'storage_name' => :'storageName'
       }
@@ -76,7 +76,7 @@ module AsposeCellsCloud
       {
         :'name' => :'String',
         :'sheet_name' => :'String',
-        :'range_operate' => :'RangeSortRequest',
+        :'range_sort_request' => :'RangeSortRequest',
         :'folder' => :'String',
         :'storage_name' => :'String'
       }
@@ -95,9 +95,9 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && sheet_name.nil?
           fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.post_worksheet_cells_range_sort "
       end 
-      # verify the required parameter 'range_operate' is set
-      if api_client.config.client_side_validation && range_operate.nil?
-          fail ArgumentError, "Missing the required parameter 'range_operate' when calling CellsApi.post_worksheet_cells_range_sort "
+      # verify the required parameter 'range_sort_request' is set
+      if api_client.config.client_side_validation && range_sort_request.nil?
+          fail ArgumentError, "Missing the required parameter 'range_sort_request' when calling CellsApi.post_worksheet_cells_range_sort "
       end 
 
       # resource path
@@ -117,7 +117,7 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      post_body = api_client.object_to_http_body(range_operate) 
+      post_body = api_client.object_to_http_body(range_sort_request) 
          
 
       #auth_names = []

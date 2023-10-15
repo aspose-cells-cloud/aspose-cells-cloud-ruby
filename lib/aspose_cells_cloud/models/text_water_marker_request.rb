@@ -33,13 +33,13 @@ module AsposeCellsCloud
   class TextWaterMarkerRequest
         #            
         attr_accessor :text
-        #            
+        #Indicates font name.            
         attr_accessor :font_name
-        #            
+        #Indicates font size.            
         attr_accessor :font_size
-        #            
+        #Indicates image height.            
         attr_accessor :height
-        #            
+        #Indicates image width.            
         attr_accessor :width
 
     # Attribute mapping from ruby-style variable name to JSON key.

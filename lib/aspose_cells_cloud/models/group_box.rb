@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class GroupBox
-        #            
+        #Indicates whether the groupbox has shadow.            
         attr_accessor :shadow
         #            
         attr_accessor :name

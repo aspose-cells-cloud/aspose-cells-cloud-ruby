@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class ColorScale
-        #Get or set this ColorScale's max value object.  Cannot set null or CFValueObject    with type FormatConditionValueType.Min to it.            
+        #Get or set this ColorScale's max value object.            Cannot set null or CFValueObject with type FormatConditionValueType.Min to it.             
         attr_accessor :max_cfvo
-        #Get or set the max value object's corresponding color.            
+        #Get or set the gradient color for the maximum value in the range.             
         attr_accessor :max_color
-        #Get or set this ColorScale's mid value object.  Cannot set CFValueObject   with type FormatConditionValueType.Max or FormatConditionValueType.Min to   it.                        
+        #Get or set this ColorScale's mid value object.            Cannot set CFValueObject with type FormatConditionValueType.Max or FormatConditionValueType.Min to it.             
         attr_accessor :mid_cfvo
-        #Get or set the mid value object's corresponding color.                        
+        #Get or set the gradient color for the middle value in the range.             
         attr_accessor :mid_color
-        #Get or set this ColorScale's min value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Max to it.                        
+        #Get or set this ColorScale's min value object.            Cannot set null or CFValueObject with type FormatConditionValueType.Max to it.             
         attr_accessor :min_cfvo
-        #Get or set the min value object's corresponding color.            
+        #Get or set the gradient color for the minimum value in the range.             
         attr_accessor :min_color
 
     # Attribute mapping from ruby-style variable name to JSON key.

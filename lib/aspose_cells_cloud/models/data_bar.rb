@@ -31,29 +31,29 @@ require 'date'
 module AsposeCellsCloud
 
   class DataBar
-        #Gets the color of the axis for cells with conditional formatting as data bars.            
+        #Gets the color of the axis for cells with conditional formatting as data bars.             
         attr_accessor :axis_color
-        #Gets or sets the position of the axis of the data bars specified by a conditional   formatting rule.            
+        #Gets or sets the position of the axis of the data bars specified by a conditional formatting rule.             
         attr_accessor :axis_position
-        #Gets an object that specifies the border of a data bar.            
+        #Gets an object that specifies the border of a data bar.             
         attr_accessor :bar_border
-        #Gets or sets how a data bar is filled with color.            
+        #Gets or sets how a data bar is filled with color.             
         attr_accessor :bar_fill_type
-        #Get or set this DataBar's Color.                        
+        #Get or set this DataBar's Color.             
         attr_accessor :color
-        #Gets or sets the direction the databar is displayed.            
+        #Gets or sets the direction the databar is displayed.             
         attr_accessor :direction
-        #Get or set this DataBar's max value object.  Cannot set null or CFValueObject   with type FormatConditionValueType.Min to it.                        
+        #Get or set this DataBar's max value object.            Cannot set null or CFValueObject with type FormatConditionValueType.Min to it.             
         attr_accessor :max_cfvo
-        #Represents the max length of data bar .            
+        #Represents the max length of data bar .             
         attr_accessor :max_length
-        #Get or set this DataBar's min value object.  Cannot set null or CFValueObject  with type FormatConditionValueType.Max to it.                        
+        #Get or set this DataBar's min value object.            Cannot set null or CFValueObject with type FormatConditionValueType.Max to it.             
         attr_accessor :min_cfvo
-        #Represents the min length of data bar .                        
+        #Represents the min length of data bar .             
         attr_accessor :min_length
-        #Gets the NegativeBarFormat object associated with a data bar conditional    formatting rule.            
+        #Gets the NegativeBarFormat object associated with a data bar conditional formatting rule.             
         attr_accessor :negative_bar_format
-        #Get or set the flag indicating whether to show the values of the cells on  which this data bar is applied.  Default value is true.                        
+        #Get or set the flag indicating whether to show the values of the cells on which this data bar is applied.            Default value is true.             
         attr_accessor :show_value
 
     # Attribute mapping from ruby-style variable name to JSON key.

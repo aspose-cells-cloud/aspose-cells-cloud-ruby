@@ -33,29 +33,29 @@ module AsposeCellsCloud
   class Trendline
         #            
         attr_accessor :link
-        #            
+        #Returns or sets the number of periods (or units on a scatter chart) that the trendline extends backward.                         The number of periods must be greater than or equal to zero.                        If the chart type is column ,the number of periods must be between 0 and 0.5            
         attr_accessor :backward
-        #            
+        #Represents the DataLabels object for the specified series.            
         attr_accessor :data_labels
-        #            
+        #Represents if the equation for the trendline is displayed on the chart (in the same data label as the R-squared value). Setting this property to True automatically turns on data labels.            
         attr_accessor :display_equation
-        #            
+        #Represents if the R-squared value of the trendline is displayed on the chart (in the same data label as the equation). Setting this property to True automatically turns on data labels.            
         attr_accessor :display_r_squared
-        #            
+        #Returns or sets the number of periods (or units on a scatter chart) that the trendline extends forward.                        The number of periods must be greater than or equal to zero.            
         attr_accessor :forward
-        #            
+        #Returns or sets the point where the trendline crosses the value axis.            
         attr_accessor :intercept
-        #            
+        #Returns if Microsoft Excel automatically determines the name of the trendline.            
         attr_accessor :is_name_auto
-        #            
+        #Gets the legend entry according to this trendline            
         attr_accessor :legend_entry
-        #            
+        #Returns the name of the trendline.            
         attr_accessor :name
-        #            
+        #Returns or sets the trendline order (an integer greater than 1) when the trendline type is Polynomial.                         The order must be between 2 and 6.            
         attr_accessor :order
-        #            
+        #Returns or sets the period for the moving-average trendline.            
         attr_accessor :period
-        #            
+        #Returns the trendline type.            
         attr_accessor :type
         #            
         attr_accessor :begin_arrow_length

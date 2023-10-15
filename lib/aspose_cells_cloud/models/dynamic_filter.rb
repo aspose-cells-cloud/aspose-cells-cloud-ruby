@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class DynamicFilter
-        #            
+        #Gets and sets the dynamic filter type.             
         attr_accessor :dynamic_filter_type
-        #            
+        #Gets and sets the dynamic filter max value.             
         attr_accessor :max_value
-        #            
+        #Gets and sets the dynamic filter value.             
         attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.

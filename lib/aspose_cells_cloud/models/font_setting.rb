@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class FontSetting
-        #            
+        #Returns the font of this object.             
         attr_accessor :font
-        #            
+        #Gets the length of the characters.             
         attr_accessor :length
-        #            
+        #Gets the start index of the characters.             
         attr_accessor :start_index
-        #            
+        #Returns the text options.             
         attr_accessor :text_options
-        #            
+        #Gets the type of text node.             
         attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.

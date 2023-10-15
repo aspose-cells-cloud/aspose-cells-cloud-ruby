@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class JsonSaveOptions
-        #            
+        #Gets or sets the exporting range.            
         attr_accessor :export_area
-        #            
+        #Indicates whether the range contains header row.            
         attr_accessor :has_header_row
-        #            
+        #Exports the string value of the cells to json.            
         attr_accessor :export_as_string
-        #            
+        #Indicates the indent.            
         attr_accessor :indent
         #            
         attr_accessor :save_format

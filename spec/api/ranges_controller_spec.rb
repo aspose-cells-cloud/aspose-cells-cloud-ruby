@@ -11,7 +11,7 @@ describe 'CellsApi' do
     # run after each test
   end
 
-  describe 'post_worksheet_cells_ranges test' do
+  describe 'post_worksheet_cells_ranges_copy test' do
     it "should work" do
       remote_folder = 'TestData/In'
 
@@ -27,8 +27,8 @@ describe 'CellsApi' do
       rangeOperateSource = AsposeCellsCloud::Range.new(:ColumnCount=>1 ,:ColumnWidth=>10.0 ,:FirstRow=>1 ,:RowCount=>10 );
       rangeOperateTarget = AsposeCellsCloud::Range.new(:ColumnCount=>1 ,:ColumnWidth=>10.0 ,:FirstRow=>10 ,:RowCount=>10 );
       rangeOperate = AsposeCellsCloud::RangeCopyRequest.new(:Operate=>'copydata' ,:Source=>rangeOperateSource ,:Target=>rangeOperateTarget );
-      request =   AsposeCellsCloud::PostWorksheetCellsRangesRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:rangeOperate=>rangeOperate,:folder=>remote_folder,:storageName=>'');
-      @instance.post_worksheet_cells_ranges(request);
+      request =   AsposeCellsCloud::PostWorksheetCellsRangesCopyRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:rangeOperate=>rangeOperate,:folder=>remote_folder,:storageName=>'');
+      @instance.post_worksheet_cells_ranges_copy(request);
     end
   end 
 
@@ -242,6 +242,7 @@ describe 'CellsApi' do
       @instance.delete_worksheet_cells_range(request);
     end
   end 
+
   describe 'post_worksheet_cells_range_sort test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -255,10 +256,10 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      rangeOperateDataSorter = AsposeCellsCloud::DataSorter.new(:CaseSensitive=>true );
-      rangeOperateCellArea = AsposeCellsCloud::Range.new(:ColumnCount=>3 ,:FirstColumn=>0 ,:FirstRow=>0 ,:RowCount=>15 );
-      rangeOperate = AsposeCellsCloud::RangeSortRequest.new(:DataSorter=>rangeOperateDataSorter ,:CellArea=>rangeOperateCellArea );
-      request =   AsposeCellsCloud::PostWorksheetCellsRangeSortRequest.new(:name=>remote_name,:sheetName=>'book1',:rangeOperate=>rangeOperate,:folder=>remote_folder,:storageName=>'');
+      rangeSortRequestDataSorter = AsposeCellsCloud::DataSorter.new(:CaseSensitive=>true );
+      rangeSortRequestCellArea = AsposeCellsCloud::Range.new(:ColumnCount=>3 ,:FirstColumn=>0 ,:FirstRow=>0 ,:RowCount=>15 );
+      rangeSortRequest = AsposeCellsCloud::RangeSortRequest.new(:DataSorter=>rangeSortRequestDataSorter ,:CellArea=>rangeSortRequestCellArea );
+      request =   AsposeCellsCloud::PostWorksheetCellsRangeSortRequest.new(:name=>remote_name,:sheetName=>'book1',:rangeSortRequest=>rangeSortRequest,:folder=>remote_folder,:storageName=>'');
       @instance.post_worksheet_cells_range_sort(request);
     end
   end 

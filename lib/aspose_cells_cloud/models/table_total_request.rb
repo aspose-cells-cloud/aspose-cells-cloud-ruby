@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class TableTotalRequest
-        #            
+        #Indicates list column index.            
         attr_accessor :list_column_index
-        #            
+        #Indicates totals calculation.            
         attr_accessor :totals_calculation
-        #            
+        #Indicates custom formula.            
         attr_accessor :custom_formula
 
     # Attribute mapping from ruby-style variable name to JSON key.

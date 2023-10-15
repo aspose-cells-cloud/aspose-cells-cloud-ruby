@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class ImageOrPrintOptions
-        #            
+        #TextCrossType            
         attr_accessor :text_cross_type
-        #            
+        #GridlineType            
         attr_accessor :gridline_type
         #            
         attr_accessor :output_blank_page_when_nothing_to_print
@@ -65,21 +65,21 @@ module AsposeCellsCloud
         attr_accessor :horizontal_resolution
         #            
         attr_accessor :vertical_resolution
-        #            
+        #DefaultEditLanguage            
         attr_accessor :default_edit_language
-        #            
+        #ColorDepth            
         attr_accessor :tiff_color_depth
-        #            
+        #TiffCompression            
         attr_accessor :tiff_compression
-        #            
+        #PrintingPageType            
         attr_accessor :printing_page
         #            
         attr_accessor :quality
-        #            
+        #ImageType            
         attr_accessor :image_type
         #            
         attr_accessor :one_page_per_sheet
-        #            
+        #ImageBinarizationMethod            
         attr_accessor :tiff_binarization_method
 
     # Attribute mapping from ruby-style variable name to JSON key.

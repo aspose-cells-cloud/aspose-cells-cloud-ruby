@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class OleObject
-        #            
+        #True if the specified object is displayed as an icon                         and the image will not be auto changed.            
         attr_accessor :display_as_icon
-        #            
+        #Gets and sets the file type of the embedded ole object data            
         attr_accessor :file_format_type
-        #            
+        #Gets or sets the path and name of the source file for the linked image.            
         attr_accessor :image_source_full_name
-        #            
+        #True indicates that the size of the ole object will be auto changed as the size of snapshot of the embedded content                        when the ole object is activated.            
         attr_accessor :is_auto_size
-        #            
+        #Returns true if the OleObject links to the file.            
         attr_accessor :is_link
-        #            
+        #Gets or sets the ProgID of the OLE object.            
         attr_accessor :prog_id
-        #            
+        #Returns the source full name of the source file for the linked OLE object.            
         attr_accessor :source_full_name
         #            
         attr_accessor :name

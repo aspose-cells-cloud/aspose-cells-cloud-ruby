@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class Row
-        #            
+        #Gets the group level of the row.            
         attr_accessor :group_level
-        #            
+        #Gets and sets the row height in unit of Points.            
         attr_accessor :height
-        #            
+        #Gets the index of this row.            
         attr_accessor :index
-        #            
+        #Indicates whether the row contains any data            
         attr_accessor :is_blank
-        #            
+        #Indicates that row height and default font height matches.            
         attr_accessor :is_height_matched
-        #            
+        #Indicates whether the row is hidden.            
         attr_accessor :is_hidden
-        #            
+        #Represents the style of this row.            
         attr_accessor :style
         #            
         attr_accessor :link

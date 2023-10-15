@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class FormulaFormatCondition
-        #            
+        #Gets and sets the value or expression associated with conditional formatting.            
         attr_accessor :formula1
-        #            
+        #Gets and sets the value or expression associated with conditional formatting.            
         attr_accessor :formula2
-        #            
+        #Gets and sets the conditional format operator type.            
         attr_accessor :operator
 
     # Attribute mapping from ruby-style variable name to JSON key.

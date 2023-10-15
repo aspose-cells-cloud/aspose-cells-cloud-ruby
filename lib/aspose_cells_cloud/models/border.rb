@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Border
-        #            
+        #Gets or sets the cell border type.             
         attr_accessor :line_style
-        #            
+        #Gets or sets the  of the border.             
         attr_accessor :color
         #            
         attr_accessor :border_type
-        #            
+        #Gets and sets the theme color of the border.             
         attr_accessor :theme_color
-        #            
+        #Gets and sets the color with a 32-bit ARGB value.             
         attr_accessor :argb_color
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CommentShape
-        #            
+        #Gets the comment object.            
         attr_accessor :comment
         #            
         attr_accessor :name

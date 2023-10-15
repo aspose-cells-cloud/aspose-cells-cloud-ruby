@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SplitResultResponse
-        #            
+        #Gets or sets the splitting result.            
         attr_accessor :result
         #            
         attr_accessor :code

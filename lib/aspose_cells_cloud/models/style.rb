@@ -31,51 +31,51 @@ require 'date'
 module AsposeCellsCloud
 
   class Style
-        #            
+        #Gets a  object.             
         attr_accessor :font
-        #            
+        #Gets or sets the name of the style.             
         attr_accessor :name
-        #            
+        #Gets and sets the culture-dependent pattern string for number format.            If no number format has been set for this object, null will be returned.            If number format is builtin, the pattern string corresponding to the builtin number will be returned.             
         attr_accessor :culture_custom
-        #            
+        #Represents the custom number format string of this style object.            If the custom number format is not set(For example, the number format is builtin), "" will be returned.             
         attr_accessor :custom
-        #            
+        #Gets or sets a style's background color.             
         attr_accessor :background_color
-        #            
+        #Gets or sets a style's foreground color.             
         attr_accessor :foreground_color
-        #            
+        #Represents if the formula will be hidden when the worksheet is protected.             
         attr_accessor :is_formula_hidden
-        #            
+        #Indicates whether the number format is a date format.             
         attr_accessor :is_date_time
-        #            
+        #Gets or sets a value indicating whether the text within a cell is wrapped.             
         attr_accessor :is_text_wrapped
-        #            
+        #Indicates whether the cell shading is a gradient pattern.             
         attr_accessor :is_gradient
-        #            
+        #Gets or sets a value indicating whether a cell can be modified or not.             
         attr_accessor :is_locked
-        #            
+        #Indicates whether the number format is a percent format.             
         attr_accessor :is_percent
-        #            
+        #Represents if text automatically shrinks to fit in the available column width.             
         attr_accessor :shrink_to_fit
-        #            
+        #Represents the indent level for the cell or range. Can only be an integer from 0 to 250.             
         attr_accessor :indent_level
-        #            
+        #Gets or sets the display format of numbers and dates. The formatting patterns are different for different regions.             
         attr_accessor :number
-        #            
+        #Represents text rotation angle.             
         attr_accessor :rotation_angle
-        #            
+        #Gets or sets the cell background pattern type.             
         attr_accessor :pattern
-        #            
+        #Represents text reading order.             
         attr_accessor :text_direction
-        #            
+        #Gets or sets the vertical alignment type of the text in a cell.             
         attr_accessor :vertical_alignment
-        #            
+        #Gets or sets the horizontal alignment type of the text in a cell.             
         attr_accessor :horizontal_alignment
         #            
         attr_accessor :border_collection
-        #            
+        #Gets and sets the background theme color.             
         attr_accessor :background_theme_color
-        #            
+        #Gets and sets the foreground theme color.             
         attr_accessor :foreground_theme_color
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class ColorFilterRequest
-        #            
+        #Gets or sets the fill pattern type            
         attr_accessor :pattern
-        #            
+        #Foreground color            
         attr_accessor :foreground_color
-        #            
+        #Background color            
         attr_accessor :background_color
 
     # Attribute mapping from ruby-style variable name to JSON key.

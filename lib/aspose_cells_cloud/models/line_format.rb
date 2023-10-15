@@ -31,27 +31,27 @@ require 'date'
 module AsposeCellsCloud
 
   class LineFormat
-        #            
+        #Gets and sets the begin arrow length type of the line.            
         attr_accessor :begin_arrowhead_length
-        #            
+        #Gets and sets the begin arrow type of the line.            
         attr_accessor :begin_arrowhead_style
-        #            
+        #Gets and sets the begin arrow width type of the line.            
         attr_accessor :begin_arrowhead_width
-        #            
+        #Specifies the ending caps.            
         attr_accessor :cap_type
-        #            
+        #Specifies the line compound type.            
         attr_accessor :compound_type
-        #            
+        #Specifies the line dash type.            
         attr_accessor :dash_style
-        #            
+        #Gets and sets the end arrow length type of the line.            
         attr_accessor :end_arrowhead_length
-        #            
+        #Gets and sets the end arrow type of the line.            
         attr_accessor :end_arrowhead_style
-        #            
+        #Gets and sets the end arrow width type of the line.            
         attr_accessor :end_arrowhead_width
-        #            
+        #Specifies the line join type.            
         attr_accessor :join_type
-        #            
+        #Gets or sets the weight of the line in unit of points.            
         attr_accessor :weight
         #            
         attr_accessor :type

@@ -31,31 +31,31 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartFrame
-        #            
+        #Gets the area.             
         attr_accessor :area
-        #            
+        #True if the text in the object changes font size when the object size changes. The default value is True.             
         attr_accessor :auto_scale_font
-        #            
+        #Gets and sets the display mode of the background             
         attr_accessor :background_mode
-        #            
+        #Gets the border.             
         attr_accessor :border
-        #            
+        #Gets a  object of the specified ChartFrame object.             
         attr_accessor :font
-        #            
+        #Indicates whether the chart frame is automatic sized.             
         attr_accessor :is_automatic_size
-        #            
+        #Indicates whether the size of the plot area size includes the tick marks, and the axis labels.            False specifies that the size shall determine the size of the plot area, the tick marks, and the axis labels.             
         attr_accessor :is_inner_mode
-        #            
+        #True if the frame has a shadow.             
         attr_accessor :shadow
-        #            
+        #Gets the  object.             
         attr_accessor :shape_properties
-        #            
+        #Gets or sets the width of frame in units of 1/4000 of the chart area.             
         attr_accessor :width
-        #            
+        #Gets or sets the height of frame in units of 1/4000 of the chart area.             
         attr_accessor :height
-        #            
+        #Gets or sets the x coordinate of the upper left corner in units of 1/4000 of the chart area.             
         attr_accessor :x
-        #            
+        #Gets or sets the y coordinate of the upper left corner in units of 1/4000 of the chart area.             
         attr_accessor :y
 
     # Attribute mapping from ruby-style variable name to JSON key.

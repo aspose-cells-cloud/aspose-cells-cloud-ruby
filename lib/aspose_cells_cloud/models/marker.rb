@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class Marker
-        #            
+        #Gets the border.            
         attr_accessor :border
-        #            
+        #Gets the area.            
         attr_accessor :area
-        #            
+        #Represents the marker size in unit of points. Applies to line chart, scatter chart, or radar chart.            
         attr_accessor :marker_size
-        #            
+        #Represents the marker style. Applies to line chart, scatter chart, or radar chart.            
         attr_accessor :marker_style
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class Picture
-        #            
+        #Represents the  of the border line of a picture.            
         attr_accessor :border_line_color
-        #            
+        #Gets or sets the weight of the border line of a picture in units of pt.            
         attr_accessor :border_weight
-        #            
+        #Gets the original height of the picture.            
         attr_accessor :original_height
-        #            
+        #Gets the original width of the picture.            
         attr_accessor :original_width
         #            
         attr_accessor :image_format
-        #            
+        #Gets or sets the path and name of the source file for the linked image.            
         attr_accessor :source_full_name
         #            
         attr_accessor :name

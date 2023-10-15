@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class OoxmlSaveOptions
-        #            
+        #Indicates if export cell name to Excel2007 .xlsx (.xlsm, .xltx, .xltm) file.               If the output file may be accessed by SQL Server DTS, this value must be               true.  Setting the value to false will highly increase the performance and               reduce the file size when creating large file.  Default value is false.            
         attr_accessor :export_cell_name
-        #            
+        #Indicates whether update scaling factor before saving the file if the PageSetup.FitToPagesWide and PageSetup.FitToPagesTall properties control how the worksheet is scaled.            
         attr_accessor :update_zoom
-        #            
+        #Always use ZIP64 extensions when writing zip archives, even when unnecessary.            
         attr_accessor :enable_zip64
-        #            
+        #Indicates whether embedding Ooxml files of OleObject as ole object.            
         attr_accessor :embed_ooxml_as_ole_object
-        #            
+        #Gets and sets the compression type for ooxml file.            
         attr_accessor :compression_type
         #            
         attr_accessor :save_format

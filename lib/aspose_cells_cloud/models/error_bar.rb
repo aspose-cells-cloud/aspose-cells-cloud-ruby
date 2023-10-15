@@ -33,17 +33,17 @@ module AsposeCellsCloud
   class ErrorBar
         #            
         attr_accessor :link
-        #            
+        #Represents amount of error bar.                         The amount must be greater than or equal to zero.            
         attr_accessor :amount
-        #            
+        #Represents error bar display type.            
         attr_accessor :display_type
-        #            
+        #Represents negative error amount when error bar type is Custom.            
         attr_accessor :minus_value
-        #            
+        #Represents positive error amount when error bar type is Custom.            
         attr_accessor :plus_value
-        #            
+        #Indicates if formatting error bars with a T-top.            
         attr_accessor :show_marker_t_top
-        #            
+        #Represents error bar amount type.            
         attr_accessor :type
         #            
         attr_accessor :begin_arrow_length

@@ -37,11 +37,11 @@ module AsposeCellsCloud
         attr_accessor :destination_file_position
         #            
         attr_accessor :destination_file_format
-        #            
+        #SheetName /NewGuid            
         attr_accessor :split_name_rule
-        #            
+        #When destination file format is image , vertical resolution can not be null.            
         attr_accessor :vertical_resolution
-        #            
+        #When destination file format is image , horizontal resolution can not be null.            
         attr_accessor :horizontal_resolution
 
     # Attribute mapping from ruby-style variable name to JSON key.

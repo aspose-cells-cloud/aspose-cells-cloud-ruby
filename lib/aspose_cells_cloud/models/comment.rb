@@ -33,25 +33,25 @@ module AsposeCellsCloud
   class Comment
         #            
         attr_accessor :cell_name
-        #            
+        #Gets and sets Name of the original comment author            
         attr_accessor :author
-        #            
+        #Gets and sets the html string which contains data and some formats in this comment.            
         attr_accessor :html_note
-        #            
+        #Represents the content of comment.            
         attr_accessor :note
-        #            
+        #Indicates if size of comment is adjusted automatically according to its content.            
         attr_accessor :auto_size
-        #            
+        #Represents if the comment is visible or not.            
         attr_accessor :is_visible
-        #            
+        #Represents the width of the comment, in unit of pixels.            
         attr_accessor :width
-        #            
+        #Represents the Height of the comment, in unit of pixels.            
         attr_accessor :height
-        #            
+        #Gets and sets the text horizontal alignment type of the comment.            
         attr_accessor :text_horizontal_alignment
-        #            
+        #Gets and sets the text orientation type of the comment.            
         attr_accessor :text_orientation_type
-        #            
+        #Gets and sets the text vertical alignment type of the comment.            
         attr_accessor :text_vertical_alignment
         #            
         attr_accessor :link

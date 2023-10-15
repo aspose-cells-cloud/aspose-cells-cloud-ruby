@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class ThemeColor
-        #            
+        #Gets and sets the theme type.             
         attr_accessor :color_type
-        #            
+        #Gets and sets the tint value.             
         attr_accessor :tint
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class SolidFill
-        #            
+        #Gets or sets the .             
         attr_accessor :color
-        #            
+        #Gets and sets the  object.             
         attr_accessor :cells_color
-        #            
+        #Returns or sets the degree of transparency of the area as a value from 0.0 (opaque) through 1.0 (clear).             
         attr_accessor :transparency
 
     # Attribute mapping from ruby-style variable name to JSON key.

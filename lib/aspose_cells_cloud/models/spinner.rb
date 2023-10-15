@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Spinner
-        #            
+        #Gets or sets the current value.            
         attr_accessor :current_value
-        #            
+        #Gets or sets the amount that the scroll bar or spinner is incremented a line scroll.            
         attr_accessor :incremental_change
-        #            
+        #Gets or sets the maximum value of a scroll bar or spinner range.            
         attr_accessor :max
-        #            
+        #Gets or sets the minimum value of a scroll bar or spinner range.            
         attr_accessor :min
-        #            
+        #Indicates whether the shape has 3-D shading.            
         attr_accessor :shadow
         #            
         attr_accessor :name

@@ -31,43 +31,43 @@ require 'date'
 module AsposeCellsCloud
 
   class PdfSaveOptions
-        #            
+        #Indicates whether the window's title bar should display the document title.            
         attr_accessor :display_doc_title
-        #            
+        #Indicates whether to export document structure.            
         attr_accessor :export_document_structure
-        #            
+        #Setting for rendering Emf metafile.            
         attr_accessor :emf_render_setting
-        #            
+        #Specifies the way CustomDocumentPropertyCollection are exported to PDF file.            
         attr_accessor :custom_properties_export
-        #            
+        #Gets and sets pdf optimization type.            
         attr_accessor :optimization_type
-        #            
+        #Gets and sets producer of generated pdf document.            
         attr_accessor :producer
-        #            
+        #Indicate the compression algorithm.            
         attr_accessor :pdf_compression
-        #            
+        #Gets or sets embedded font encoding in pdf.            
         attr_accessor :font_encoding
-        #            
+        #Gets or sets watermark to output.            
         attr_accessor :watermark
-        #            
+        #Indicates whether calculate formulas before saving pdf file.The default value is false.            
         attr_accessor :calculate_formula
-        #            
+        #Indicates whether check font compatibility for every character in text.                The default value is true.  Disable this property may give better performance.                 But when the default or specified font of text/character cannot be used                to render it, unreadable characters(such as block) maybe occur in the generated                pdf.  For such situation user should keep this property as true so that alternative                font can be searched and used to render the text instead;            
         attr_accessor :check_font_compatibility
-        #            
+        #Workbook converts to pdf will according to PdfCompliance in this property.            
         attr_accessor :compliance
-        #            
+        #When characters in the Excel are unicode and not be set with correct font in cell style,              They may appear as block in pdf,image.  Set the DefaultFont such as MingLiu or MS Gothic to show these characters.               If this property is not set, Aspose.Cells will use system default font to show these unicode characters.            
         attr_accessor :default_font
-        #            
+        #If OnePagePerSheet is true , all content of one sheet will output to only            one page in result. The paper size of pagesetup will be invalid, and the               other settings of pagesetup will still take effect.            
         attr_accessor :one_page_per_sheet
-        #            
+        #Indicates which pages will not be printed.            
         attr_accessor :printing_page_type
-        #            
+        #Set this options, when security is need in xls2pdf result.            
         attr_accessor :security_options
-        #            
+        #Set desired PPI(pixels per inch) of resample images and jpeg quality  All images will be converted to JPEG with the specified quality setting, and images that are greater than the specified PPI (pixels per inch) will be resampled.              Desired pixels per inch. 220 high quality. 150 screen quality. 96 email quality.            
         attr_accessor :desired_ppi
-        #            
+        #Set desired PPI(pixels per inch) of resample images and jpeg quality  All images will be converted to JPEG with the specified quality setting, and images that are greater than the specified PPI (pixels per inch) will be resampled.              0 - 100% JPEG quality.            
         attr_accessor :jpeg_quality
-        #            
+        #Represents the image type when converting the chart and shape .            
         attr_accessor :image_type
         #            
         attr_accessor :save_format

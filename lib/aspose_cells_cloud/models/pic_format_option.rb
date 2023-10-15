@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class PicFormatOption
-        #            
+        #Gets or sets the picture fill type.             
         attr_accessor :type
-        #            
+        #Gets or sets how many the picture stack and scale with.             
         attr_accessor :scale
-        #            
+        #Gets or sets the left offset for stretching picture.             
         attr_accessor :left
-        #            
+        #Gets or sets the right offset for stretching picture.             
         attr_accessor :right
-        #            
+        #Gets or sets the top offset for stretching picture.             
         attr_accessor :top
-        #            
+        #Gets or sets the bottom offset for stretching picture.             
         attr_accessor :bottom
 
     # Attribute mapping from ruby-style variable name to JSON key.

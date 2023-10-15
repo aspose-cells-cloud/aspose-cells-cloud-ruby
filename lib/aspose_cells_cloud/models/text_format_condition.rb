@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TextFormatCondition
-        #            
+        #The text value in a "text contains" conditional formatting rule. Valid only                for type = containsText, notContainsText, beginsWith and endsWith.  The default                value is null.            
         attr_accessor :text
         #            
         attr_accessor :formula1

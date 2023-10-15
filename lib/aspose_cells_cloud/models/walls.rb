@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class Walls
-        #            
+        #Gets the x coordinate of the left-bottom corner of Wall center in units of 1/4000 of chart's width after calls Chart.Calculate() method.            
         attr_accessor :center_x
-        #            
+        #Gets the y coordinate of the left-bottom corner of Wall center in units of 1/4000 of chart's height after calls Chart.Calculate() method.            
         attr_accessor :center_y
-        #            
+        #Gets the depth front to back in units of 1/4000 of chart's width after calls Chart.Calculate() method.            
         attr_accessor :depth
-        #            
+        #Gets the height of top to bottom in units of 1/4000 of chart's height after calls Chart.Calculate() method.            
         attr_accessor :height
-        #            
+        #Gets the width of left to right in units of 1/4000 of chart's width after calls Chart.Calculate() method.            
         attr_accessor :width
         #            
         attr_accessor :border

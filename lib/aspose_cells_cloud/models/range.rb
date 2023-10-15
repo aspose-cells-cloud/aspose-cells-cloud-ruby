@@ -31,23 +31,23 @@ require 'date'
 module AsposeCellsCloud
 
   class Range
-        #Gets the count of columns in the range.            
+        #Gets the count of columns in the range.             
         attr_accessor :column_count
-        #Sets or gets the column width of this range            
+        #Sets or gets the column width of this range             
         attr_accessor :column_width
-        #Gets the index of the first column of the range.            
+        #Gets the index of the first column of the range.             
         attr_accessor :first_column
-        #Gets the index of the first row of the range.            
+        #Gets the index of the first row of the range.             
         attr_accessor :first_row
-        #Gets or sets the name of the range.            
+        #Gets or sets the name of the range.             
         attr_accessor :name
-        #Gets the range's refers to.            
+        #Gets the range's refers to.             
         attr_accessor :refers_to
-        #Gets the count of rows in the range.            
+        #Gets the count of rows in the range.             
         attr_accessor :row_count
-        #Sets or gets the height of rows in this range            
+        #Sets or gets the height of rows in this range             
         attr_accessor :row_height
-        #Gets the Aspose.Cells.Range.Worksheetobject which contains this range.            
+        #Gets the object which contains this range.             
         attr_accessor :worksheet
 
     # Attribute mapping from ruby-style variable name to JSON key.

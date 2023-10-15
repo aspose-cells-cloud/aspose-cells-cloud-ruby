@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeSetStyleRequest
-        #            
+        #Encapsulates the object that represents a range of cells within a spreadsheet.            
         attr_accessor :range
-        #            
+        #Represents display style of excel document,such as font,color,alignment,border,etc.                        
         attr_accessor :style
 
     # Attribute mapping from ruby-style variable name to JSON key.

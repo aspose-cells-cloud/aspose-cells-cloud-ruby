@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartPoint
-        #            
+        #Gets the area.            
         attr_accessor :area
-        #            
+        #Gets the border.            
         attr_accessor :border
-        #            
+        #Returns a DataLabels object that represents the data label associated with the point.            
         attr_accessor :data_labels
-        #            
+        #The distance of an open pie slice from the center of the pie chart is expressed as a percentage of the pie diameter.            
         attr_accessor :explosion
-        #            
+        #Gets the marker.            
         attr_accessor :marker
-        #            
+        #True if the chartpoint has a shadow.            
         attr_accessor :shadow
-        #            
+        #Gets or sets the X value of the chart point.            
         attr_accessor :x_value
-        #            
+        #Gets or sets the Y value of the chart point.            
         attr_accessor :y_value
         #            
         attr_accessor :link

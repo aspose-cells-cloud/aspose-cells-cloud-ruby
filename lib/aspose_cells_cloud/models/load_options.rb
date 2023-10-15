@@ -33,25 +33,25 @@ module AsposeCellsCloud
   class LoadOptions
         #            
         attr_accessor :convert_numeric_data
-        #            
+        #Gets and sets the interrupt monitor.            
         attr_accessor :interrupt_monitor
-        #            
+        #Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.            
         attr_accessor :language_code
         #            
         attr_accessor :load_data_options
-        #            
+        #Gets the load format.            
         attr_accessor :load_format
         #            
         attr_accessor :only_load_document_properties
-        #            
+        #Indicates whether parsing the formula when reading the file.            
         attr_accessor :parsing_formula_on_open
-        #            
+        #Gets and set the password of the workbook.            
         attr_accessor :password
-        #            
+        #Gets or sets the system regional settings based on CountryCode at the time the file was loaded.            
         attr_accessor :region
-        #            
+        #Sets the default standard font name            
         attr_accessor :standard_font
-        #            
+        #Sets the default standard font size.            
         attr_accessor :standard_font_size
 
     # Attribute mapping from ruby-style variable name to JSON key.

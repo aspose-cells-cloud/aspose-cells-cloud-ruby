@@ -31,95 +31,95 @@ require 'date'
 module AsposeCellsCloud
 
   class WorkbookSettings
-        #            
+        #Specifies a boolean value that indicates the application automatically compressed pictures in the workbook.             
         attr_accessor :auto_compress_pictures
-        #            
+        #Indicates whether the file is mark for auto-recovery.             
         attr_accessor :auto_recover
-        #Specifies the incremental public release of the application.                        
+        #Specifies the incremental public release of the application.             
         attr_accessor :build_version
-        #It specifies whether to calculate formulas manually, automatically or automaticallyexcept for multiple table operations.                        
+        #It specifies whether to calculate formulas manually,            automatically or automatically except for multiple table operations.             
         attr_accessor :calc_mode
-        #Specifies the stack size for calculating cells recursively.  The large valuefor this size will give better performance when there are lots of cells needto be calculated recursively.  On the other hand, larger value will raisethe stakes of StackOverflowException.  If use gets StackOverflowExceptionwhen calculating formulas, this value should be decreased.                        
+        #Specifies the stack size for calculating cells recursively.            The large value for this size will give better performance when there are lots of cells need to be calculated recursively.            On the other hand, larger value will raise the risk of StackOverflowException.            If user gets StackOverflowException when calculating formulas, this value should be decreased.             
         attr_accessor :calc_stack_size
-        #Specifies the version of the calculation engine used to calculate valuesin the workbook.                        
+        #Specifies the version of the calculation engine used to calculate values in the workbook.             
         attr_accessor :calculation_id
         #Indicates whether check comptiliblity when saving workbook.                         Remarks: The default value is true.                         
         attr_accessor :check_comptiliblity
-        #Whether check restriction of excel file when user modify cells related objects. For example, excel does not allow inputting string value longer than 32K. When you input a value longer than 32K such as by Cell.PutValue(string),if this property is true, you will get an Exception.  If this property isfalse, we will accept your input string value as the cell's value so thatlater you can output the complete string value for other file formats suchas CSV.  However, if you have set such kind of value that is invalid forexcel file format, you should not save the workbook as excel file formatlater. Otherwise there may be unexpected error for the generated excel file.                        
+        #Whether check restriction of excel file when user modify cells related objects.            For example, excel does not allow inputting string value longer than 32K.            When you input a value longer than 32K such as by Cell.PutValue(string), if this property is true, you will get an Exception.            If this property is false, we will accept your input string value as the cell's value so that later            you can output the complete string value for other file formats such as CSV.            However, if you have set such kind of value that is invalid for excel file format,            you should not save the workbook as excel file format later. Otherwise there may be unexpected error for the generated excel file.             
         attr_accessor :check_excel_restriction
-        #            
+        #indicates whether the application last saved the workbook file after a crash.             
         attr_accessor :crash_save
-        #Indicates whether create calculated formulas chain.                        
+        #Whether creates calculated formulas chain. Default is false.             
         attr_accessor :create_calc_chain
-        #            
+        #indicates whether the application last opened the workbook for data recovery.             
         attr_accessor :data_extract_load
-        #Gets or sets a value which represents if the workbook uses the 1904 datesystem.                        
+        #Gets or sets a value which represents if the workbook uses the 1904 date system.             
         attr_accessor :date1904
-        #Indicates whether and how to show objects in the workbook.                        
+        #Indicates whether and how to show objects in the workbook.             
         attr_accessor :display_drawing_objects
-        #            
+        #Enable macros;             
         attr_accessor :enable_macros
-        #Gets or sets the first visible worksheet tab.                        
+        #Gets or sets the first visible worksheet tab.             
         attr_accessor :first_visible_tab
-        #            
+        #Gets and sets whether hide the field list for the PivotTable.             
         attr_accessor :hide_pivot_field_list
-        #            
+        #Indicates whether encrypting the workbook with default password if Structure and Windows of the workbook are locked.             
         attr_accessor :is_default_encrypted
-        #Indicates whether this workbook is hidden.                        
+        #Indicates whether this workbook is hidden.             
         attr_accessor :is_hidden
-        #Gets or sets a value indicating whether the generated spreadsheet will containa horizontal scroll bar.                         Remarks:The default value is true.                         
+        #Gets or sets a value indicating whether the generated spreadsheet will contain a horizontal scroll bar.             
         attr_accessor :is_h_scroll_bar_visible
-        #Represents whether the generated spreadsheet will be opened Minimized.                        
+        #Represents whether the generated spreadsheet will be opened Minimized.             
         attr_accessor :is_minimized
-        #Gets or sets a value indicating whether the generated spreadsheet will containa vertical scroll bar.                         Remarks:The default value is true.                         
+        #Gets or sets a value indicating whether the generated spreadsheet will contain a vertical scroll bar.             
         attr_accessor :is_v_scroll_bar_visible
-        #Indicates if Aspose.Cells will use iteration to resolve circular references.                        
+        #Indicates whether enable iterative calculation to resolve circular references.             
         attr_accessor :iteration
-        #Gets or sets the user interface language of the Workbook version based onCountryCode that has saved the file.                        
+        #Gets or sets the user interface language of the Workbook version based on CountryCode that has saved the file.             
         attr_accessor :language_code
-        #Returns or sets the maximum number of change that Microsoft Excel can useto resolve a circular reference.                        
+        #Returns or sets the maximum number of change to resolve a circular reference.             
         attr_accessor :max_change
-        #Returns or sets the maximum number of iterations that Aspose.Cells can useto resolve a circular reference.                        
+        #Returns or sets the maximum number of iterations to resolve a circular reference.             
         attr_accessor :max_iteration
-        #            
+        #Gets or sets the memory usage options. The new option will be taken as the default option for newly created worksheets but does not take effect for existing worksheets.             
         attr_accessor :memory_setting
-        #            
+        #Gets or sets the decimal separator for formatting/parsing numeric values. Default is the decimal separator of current Region.             
         attr_accessor :number_decimal_separator
-        #            
+        #Gets or sets the character that separates groups of digits to the left of the decimal in numeric values. Default is the group separator of current Region.             
         attr_accessor :number_group_separator
-        #Indicates whether parsing the formula when reading the file.                         Remarks:Only applies for Excel Xlsx,Xltx, Xltm,Xlsm file because the formulas inthe files are stored with a string formula.                         
+        #Indicates whether parsing the formula when reading the file.             
         attr_accessor :parsing_formula_on_open
-        #True if calculations in this workbook will be done using only the precisionof the numbers as they're displayed                        
+        #True if calculations in this workbook will be done using only the precision of the numbers as they're displayed             
         attr_accessor :precision_as_displayed
-        #Indicates whether to recalculate before saving the document.                        
+        #Indicates whether to recalculate before saving the document.             
         attr_accessor :recalculate_before_save
-        #Indicates whether re-calculate all formulas on opening file.                        
+        #Indicates whether re-calculate all formulas on opening file.             
         attr_accessor :re_calculate_on_open
         #Indicates if the Read Only Recommended option is selected.                        
         attr_accessor :recommend_read_only
-        #Gets or sets the system regional settings based on CountryCode at the timethe file was saved.                         Remarks:If you do not want to use the region saved in the file, please reset it afterreading the file.                         
+        #Gets or sets the regional settings for workbook.             
         attr_accessor :region
-        #            
+        #True if personal information can be removed from the specified workbook.             
         attr_accessor :remove_personal_information
-        #            
+        #Indicates whether the application last opened the workbook in safe or repair mode.             
         attr_accessor :repair_load
-        #Gets or sets a value that indicates whether the Workbook is shared.                         Remarks:The default value is false.                         
+        #Gets or sets a value that indicates whether the Workbook is shared.             
         attr_accessor :shared
-        #Width of worksheet tab bar (in 1/1000 of window width).                        
+        #Width of worksheet tab bar (in 1/1000 of window width).             
         attr_accessor :sheet_tab_bar_width
-        #Get or sets a value whether the Workbook tabs are displayed.                         Remarks:The default value is true.                         
+        #Get or sets a value whether the Workbook tabs are displayed.             
         attr_accessor :show_tabs
-        #Indicates whether update adjacent cells' border.                         Remarks:The default value is true.  For example: the bottom border of the cell A1is update, the top border of the cell A2 should be changed too.                         
+        #Indicates whether update adjacent cells' border.             
         attr_accessor :update_adjacent_cells_border
-        #            
+        #Gets and sets how updates external links when the workbook is opened.             
         attr_accessor :update_links_type
-        #The height of the window, in unit of point.                        
+        #The height of the window, in unit of point.             
         attr_accessor :window_height
-        #The distance from the left edge of the client area to the left edge of thewindow, in unit of point.                        
+        #The distance from the left edge of the client area to the left edge of the window, in unit of point.             
         attr_accessor :window_left
-        #The distance from the top edge of the client area to the top edge of thewindow, in unit of point.                        
+        #The distance from the top edge of the client area to the top edge of the window, in unit of point.             
         attr_accessor :window_top
-        #The width of the window, in unit of point.                        
+        #The width of the window, in unit of point.             
         attr_accessor :window_width
         #Gets and sets the author of the file.             
         attr_accessor :author
@@ -141,7 +141,7 @@ module AsposeCellsCloud
         attr_accessor :max_row
         #Gets the max column index, zero-based.             
         attr_accessor :max_column
-        #            
+        #Gets and sets the number of significant digits.            The default value is .             
         attr_accessor :significant_digits
         #Indicates whether check compatibility with earlier versions when saving workbook.             
         attr_accessor :check_compatibility

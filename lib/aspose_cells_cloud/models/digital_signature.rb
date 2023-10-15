@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class DigitalSignature
-        #            
+        #The purpose to signature.            
         attr_accessor :comments
-        #            
+        #The time when the document was signed.            
         attr_accessor :sign_time
-        #            
+        #Specifies a GUID which can be cross-referenced with the GUID of the signature line stored in the document content. Default value is Empty (all zeroes) Guid.            
         attr_accessor :id
-        #            
+        #Specifies the text of actual signature in the digital signature. Default value is Empty.                        
         attr_accessor :password
-        #            
+        #Specifies an image for the digital signature. Default value is null.            
         attr_accessor :image
-        #            
+        #Specifies the class ID of the signature provider. Default value is Empty (all zeroes) Guid.                        
         attr_accessor :provider_id
-        #            
+        #If this digital signature is valid and the document has not been tampered with, this value will be true.            
         attr_accessor :is_valid
-        #            
+        #XAdES type. Default value is None(XAdES is off).            
         attr_accessor :x_ad_es_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

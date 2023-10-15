@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Floor
-        #            
+        #Gets or sets the border .            
         attr_accessor :border
         #            
         attr_accessor :background_color

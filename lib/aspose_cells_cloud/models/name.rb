@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class Name
-        #            
+        #Gets and sets the comment of the name.                        Only applies for Excel 2007.            
         attr_accessor :comment
         #            
         attr_accessor :worksheet_index
-        #            
+        #Indicates whether this name is referred by other formulas.            
         attr_accessor :is_referred
-        #            
+        #Indicates whether the name is visible.            
         attr_accessor :is_visible
-        #            
+        #Gets or sets a R1C1 reference of the .            
         attr_accessor :r1_c1_refers_to
-        #            
+        #Returns or sets the formula that the name is defined to refer to, beginning with an equal sign.            
         attr_accessor :refers_to
-        #            
+        #Gets the name text of the object.            
         attr_accessor :text
         #            
         attr_accessor :link
