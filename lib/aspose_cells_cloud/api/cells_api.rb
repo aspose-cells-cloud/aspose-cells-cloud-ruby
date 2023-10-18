@@ -1621,9 +1621,9 @@ module AsposeCellsCloud
 
     # Copys content to destination range from source range in worksheet.
 
-    def post_worksheet_cells_ranges( post_worksheet_cells_ranges_request, opts = {})
+    def post_worksheet_cells_ranges_copy( post_worksheet_cells_ranges_copy_request, opts = {})
 
-       data, _status_code, _headers = post_worksheet_cells_ranges_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = post_worksheet_cells_ranges_copy_request.create_http_request(@api_client,opts )
        return data
     end
 

@@ -101,8 +101,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      protection = AsposeCellsCloud::WorkbookProtectionRequest.new(:Password=>'123456' ,:ProtectionType=>'ALL' );
-      request =   AsposeCellsCloud::DeleteUnProtectWorkbookRequest.new(:name=>remote_name,:folder=>remote_folder,:storageName=>'');
+      request =   AsposeCellsCloud::DeleteUnProtectWorkbookRequest.new(:name=>remote_name,:password => "123456" ,:folder=>remote_folder,:storageName=>'');
       @instance.delete_un_protect_workbook(request);
     end
   end 

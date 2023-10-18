@@ -14,13 +14,12 @@ describe 'CellsApi' do
     it "should work" do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
-
-      
-      mapFiles = { }   
+       
+     mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      protectWorkbookRequst =  AsposeCellsCloud::ProtectWorkbookRequst.new();
-      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:password=>'123456',:protectWorkbookRequst =>protectWorkbookRequst);
+      protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:aways_open_read_only=>true, :encrypt_with_password=>'123456')
+      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest ,:password=>'123456');
       @instance.post_protect(request);
     end
   end 
