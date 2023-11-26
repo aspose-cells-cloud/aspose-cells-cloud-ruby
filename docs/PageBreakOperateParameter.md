@@ -1,14 +1,20 @@
-# AsposeCellsCloud::PageBreakOperateParameter
+# AsposeCellsCloud::Object::PageBreakOperateParameter 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::PageBreakOperateParameter;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operate_type** | **String** |  | [optional] 
-**index** | **Integer** |  | [optional] 
-**end_index** | **Integer** |  | [optional] 
-**column** | **Integer** |  | [optional] 
-**start_index** | **Integer** |  | [optional] 
-**page_break_type** | **String** |  | [optional] 
-**row** | **Integer** |  | [optional] 
+**PageBreakType** | **string** |  |
+**Index** | **int** |  |
+**Row** | **int** |  |
+**Column** | **int** |  |
+**StartIndex** | **int** |  |
+**EndIndex** | **int** |  |
+**OperateType** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,10 +1,16 @@
-# AsposeCellsCloud::PivotFiltersResponse
+# AsposeCellsCloud::Object::PivotFiltersResponse 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::PivotFiltersResponse;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** |  | [optional] 
-**code** | **Integer** |  | 
-**pivot_filters** | [**Array&lt;PivotFilter&gt;**](PivotFilter.md) |  | [optional] 
+**PivotFilters** | **ARRAY[PivotFilter]** |  |
+**Code** | **int** |  |
+**Status** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

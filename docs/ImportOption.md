@@ -1,11 +1,17 @@
-# AsposeCellsCloud::ImportOption
+# AsposeCellsCloud::Object::ImportOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**FileSource**](FileSource.md) |  | [optional] 
-**import_data_type** | **String** |  | [optional] 
-**destination_worksheet** | **String** |  | [optional] 
-**is_insert** | **BOOLEAN** |  | [optional] 
+**DestinationWorksheet** | **string** | Destination worksheet name.   |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

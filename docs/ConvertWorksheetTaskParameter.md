@@ -1,15 +1,21 @@
-# AsposeCellsCloud::ConvertWorksheetTaskParameter
+# AsposeCellsCloud::Object::ConvertWorksheetTaskParameter 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ConvertWorksheetTaskParameter;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workbook** | [**FileSource**](FileSource.md) |  | [optional] 
-**sheet** | **String** |  | [optional] 
-**target** | [**FileSource**](FileSource.md) |  | [optional] 
-**format** | **String** |  | [optional] 
-**area** | **String** |  | [optional] 
-**page_index** | **Integer** |  | [optional] 
-**vertical_resolution** | **Integer** |  | [optional] 
-**horizontal_resolution** | **Integer** |  | [optional] 
+**Workbook** | **FileSource** |  |
+**Sheet** | **string** |  |
+**Target** | **FileSource** |  |
+**Format** | **string** |  |
+**Area** | **string** |  |
+**PageIndex** | **int** |  |
+**VerticalResolution** | **int** |  |
+**HorizontalResolution** | **int** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,13 +1,19 @@
-# AsposeCellsCloud::OperateObjectPosition
+# AsposeCellsCloud::Object::OperateObjectPosition 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::OperateObjectPosition;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chart_index** | **Integer** |  | [optional] 
-**list_object_index** | **Integer** |  | [optional] 
-**sheet_name** | **String** |  | [optional] 
-**shape_index** | **Integer** |  | [optional] 
-**cell_name** | **String** |  | [optional] 
-**workbook** | [**FileSource**](FileSource.md) |  | [optional] 
+**Workbook** | **FileSource** |  |
+**SheetName** | **string** |  |
+**ChartIndex** | **int** |  |
+**ShapeIndex** | **int** |  |
+**CellName** | **string** |  |
+**ListObjectIndex** | **int** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

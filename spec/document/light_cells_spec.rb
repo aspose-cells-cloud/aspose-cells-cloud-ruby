@@ -3148,12 +3148,13 @@ describe 'CellsApi' do
     it "should work" do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
-       
+
+      
      mapFiles = { }   
+      protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:aways_open_read_only=>true, :encrypt_with_password=>'123456')
-      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest ,:password=>'123456');
+      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest,:password=>'123456');
       @instance.post_protect(request);
     end
   end 
@@ -3165,10 +3166,10 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      protectWorkbookRequst = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
+      protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest );
+      request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest);
       @instance.post_protect(request);
     end
   end 

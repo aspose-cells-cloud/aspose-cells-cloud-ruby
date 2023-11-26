@@ -1,11 +1,17 @@
-# AsposeCellsCloud::Rows
+# AsposeCellsCloud::Object::Rows 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::Rows;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link** | [**Link**](Link.md) |  | [optional] 
-**max_row** | **Integer** |  | 
-**rows_list** | [**Array&lt;LinkElement&gt;**](LinkElement.md) |  | [optional] 
-**rows_count** | **Integer** |  | 
+**MaxRow** | **int** |  |
+**RowsCount** | **int** |  |
+**RowsList** | **ARRAY[LinkElement]** |  |
+**link** | **Link** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

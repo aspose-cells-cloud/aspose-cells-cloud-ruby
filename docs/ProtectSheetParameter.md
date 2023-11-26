@@ -1,23 +1,29 @@
-# AsposeCellsCloud::ProtectSheetParameter
+# AsposeCellsCloud::Object::ProtectSheetParameter 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ProtectSheetParameter;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allow_selecting_unlocked_cell** | **String** |  | [optional] 
-**allow_filtering** | **String** |  | [optional] 
-**allow_deleting_column** | **String** |  | [optional] 
-**allow_selecting_locked_cell** | **String** |  | [optional] 
-**allow_using_pivot_table** | **String** |  | [optional] 
-**allow_edit_area** | **Array&lt;String&gt;** |  | [optional] 
-**allow_inserting_hyperlink** | **String** |  | [optional] 
-**allow_formatting_cell** | **String** |  | [optional] 
-**allow_formatting_row** | **String** |  | [optional] 
-**allow_inserting_row** | **String** |  | [optional] 
-**allow_formatting_column** | **String** |  | [optional] 
-**allow_sorting** | **String** |  | [optional] 
-**allow_inserting_column** | **String** |  | [optional] 
-**password** | **String** |  | [optional] 
-**allow_deleting_row** | **String** |  | [optional] 
-**protection_type** | **String** |  | [optional] 
+**ProtectionType** | **string** |  |
+**Password** | **string** |  |
+**AllowEditArea** | **ARRAY[string]** |  |
+**AllowDeletingColumn** | **string** |  |
+**AllowDeletingRow** | **string** |  |
+**AllowFiltering** | **string** |  |
+**AllowFormattingCell** | **string** |  |
+**AllowFormattingColumn** | **string** |  |
+**AllowFormattingRow** | **string** |  |
+**AllowInsertingColumn** | **string** |  |
+**AllowInsertingHyperlink** | **string** |  |
+**AllowInsertingRow** | **string** |  |
+**AllowSelectingLockedCell** | **string** |  |
+**AllowSelectingUnlockedCell** | **string** |  |
+**AllowSorting** | **string** |  |
+**AllowUsingPivotTable** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

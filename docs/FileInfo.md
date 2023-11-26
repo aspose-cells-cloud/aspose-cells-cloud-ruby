@@ -1,10 +1,16 @@
-# AsposeCellsCloud::FileInfo
+# AsposeCellsCloud::Object::FileInfo 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::FileInfo;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filename** | **String** |  | [optional] 
-**file_size** | **Integer** |  | 
-**file_content** | **String** |  | [optional] 
+**Filename** | **string** |  |
+**FileSize** | **int** |  |
+**FileContent** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

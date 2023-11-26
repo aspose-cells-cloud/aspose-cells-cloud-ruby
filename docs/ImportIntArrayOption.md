@@ -1,15 +1,21 @@
-# AsposeCellsCloud::ImportIntArrayOption
+# AsposeCellsCloud::Object::ImportIntArrayOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportIntArrayOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**FileSource**](FileSource.md) |  | [optional] 
-**import_data_type** | **String** |  | [optional] 
-**destination_worksheet** | **String** |  | [optional] 
-**is_insert** | **BOOLEAN** |  | [optional] 
-**data** | **Array&lt;Integer&gt;** |  | [optional] 
-**is_vertical** | **BOOLEAN** |  | [optional] 
-**first_row** | **Integer** |  | [optional] 
-**first_column** | **Integer** |  | [optional] 
+**FirstRow** | **int** |  |
+**FirstColumn** | **int** |  |
+**IsVertical** | **boolean** |  |
+**Data** | **ARRAY[int?]** |  |
+**DestinationWorksheet** | **string** |  |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,10 +1,16 @@
-# AsposeCellsCloud::WorkbookEncryptionRequest
+# AsposeCellsCloud::Object::WorkbookEncryptionRequest 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::WorkbookEncryptionRequest;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **String** | Encription password. | [optional] 
-**key_length** | **Integer** | Encription key length. | 
-**encryption_type** | **String** | Workbook encription type. | [optional] 
+**EncryptionType** | **string** | Workbook encription type. |
+**KeyLength** | **int** | Encription key length. |
+**Password** | **string** | Encription password. |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

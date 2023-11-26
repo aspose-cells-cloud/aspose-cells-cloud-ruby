@@ -1,17 +1,25 @@
-# AsposeCellsCloud::ChartOperateParameter
+# AsposeCellsCloud::Object::ChartOperateParameter 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ChartOperateParameter;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**operate_type** | **String** |  | [optional] 
-**title** | **String** |  | [optional] 
-**area** | **String** |  | [optional] 
-**category_data** | **String** |  | [optional] 
-**upper_left_row** | **Integer** |  | [optional] 
-**lower_right_column** | **Integer** |  | [optional] 
-**lower_right_row** | **Integer** |  | [optional] 
-**is_auto_get_serial_name** | **BOOLEAN** |  | [optional] 
-**chart_type** | **String** |  | [optional] 
-**is_vertical** | **BOOLEAN** |  | [optional] 
+**ChartIndex** | **int** |  |
+**ChartType** | **string** |  |
+**UpperLeftRow** | **int** |  |
+**UpperLeftColumn** | **int** |  |
+**LowerRightRow** | **int** |  |
+**LowerRightColumn** | **int** |  |
+**Area** | **string** |  |
+**IsVertical** | **boolean** |  |
+**CategoryData** | **string** |  |
+**IsAutoGetSerialName** | **boolean** |  |
+**Title** | **string** |  |
+**OperateType** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

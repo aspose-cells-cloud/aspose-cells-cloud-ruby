@@ -1,9 +1,15 @@
-# AsposeCellsCloud::MultipleFilters
+# AsposeCellsCloud::Object::MultipleFilters 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::MultipleFilters;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**multiple_filter_list** | [**Array&lt;MultipleFilter&gt;**](MultipleFilter.md) |  | [optional] 
-**match_blank** | **BOOLEAN** |  | [optional] 
+**MatchBlank** | **boolean** |  |
+**MultipleFilterList** | **ARRAY[MultipleFilter]** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

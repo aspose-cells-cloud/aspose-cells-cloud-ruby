@@ -1,17 +1,23 @@
-# AsposeCellsCloud::ImportCSVDataOption
+# AsposeCellsCloud::Object::ImportCSVDataOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportCSVDataOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**FileSource**](FileSource.md) |  | [optional] 
-**import_data_type** | **String** |  | [optional] 
-**destination_worksheet** | **String** |  | [optional] 
-**is_insert** | **BOOLEAN** |  | [optional] 
-**convert_numeric_data** | **BOOLEAN** |  | [optional] 
-**first_column** | **Integer** |  | [optional] 
-**source_file** | **String** |  | [optional] 
-**first_row** | **Integer** |  | [optional] 
-**separator_string** | **String** |  | [optional] 
-**custom_parsers** | [**Array&lt;CustomParserConfig&gt;**](CustomParserConfig.md) |  | [optional] 
+**SeparatorString** | **string** |  |
+**ConvertNumericData** | **boolean** |  |
+**FirstRow** | **int** |  |
+**FirstColumn** | **int** |  |
+**SourceFile** | **string** |  |
+**CustomParsers** | **ARRAY[CustomParserConfig]** |  |
+**DestinationWorksheet** | **string** |  |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

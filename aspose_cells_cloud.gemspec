@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
   s.add_runtime_dependency 'json', '~> 2.1', '>= 2.1.0'
-  s.add_runtime_dependency 'faraday', '~> 1.0'
+  s.add_runtime_dependency 'faraday', '~> 0.14.0'
   s.add_runtime_dependency 'mimemagic', '~> 0.3.2'
 
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
@@ -46,3 +46,4 @@ Gem::Specification.new do |s|
   s.executables   = []
   s.require_paths = ["lib"]
 end
+

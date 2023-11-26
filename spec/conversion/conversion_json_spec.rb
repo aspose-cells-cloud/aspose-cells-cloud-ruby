@@ -187,28 +187,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_tif test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "tif"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
   describe 'convert_workbook_xlsb test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -231,28 +209,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_xlsm test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "xlsm"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
   describe 'convert_workbook_xlsx test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -261,50 +217,6 @@ describe 'CellsApi' do
       remote_name = 'codegen-spec.json'
 
       format = "xlsx"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_xltm test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "xltm"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_xltx test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "xltx"
 
       
      mapFiles = { }   
@@ -363,94 +275,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_jpg test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "jpg"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_gif test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "gif"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_emf test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "emf"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_bmp test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "bmp"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
   describe 'convert_workbook_md test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -481,28 +305,6 @@ describe 'CellsApi' do
       remote_name = 'codegen-spec.json'
 
       format = "numbers"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_wmf test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'codegen-spec.json'
-      remote_name = 'codegen-spec.json'
-
-      format = "wmf"
 
       
      mapFiles = { }   

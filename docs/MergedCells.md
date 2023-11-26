@@ -1,10 +1,16 @@
-# AsposeCellsCloud::MergedCells
+# AsposeCellsCloud::Object::MergedCells 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::MergedCells;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**link** | [**Link**](Link.md) |  | [optional] 
-**count** | **Integer** |  | 
-**merged_cell_list** | [**Array&lt;LinkElement&gt;**](LinkElement.md) |  | [optional] 
+**Count** | **int** |  |
+**MergedCellList** | **ARRAY[LinkElement]** |  |
+**link** | **Link** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

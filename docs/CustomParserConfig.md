@@ -1,10 +1,16 @@
-# AsposeCellsCloud::CustomParserConfig
+# AsposeCellsCloud::Object::CustomParserConfig 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::CustomParserConfig;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**column_index** | **Integer** |  | [optional] 
-**custom_style** | **String** |  | [optional] 
-**parse_method** | **String** |  | [optional] 
+**ColumnIndex** | **int** | Point Column |
+**ParseMethod** | **string** | data parser method.             ToDateTime            ToString |
+**CustomStyle** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

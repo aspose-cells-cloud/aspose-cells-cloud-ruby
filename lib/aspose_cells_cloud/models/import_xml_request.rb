@@ -35,12 +35,15 @@ module AsposeCellsCloud
         attr_accessor :xml_file_source
         #Import position description.            
         attr_accessor :import_position
+        #Base64String default is null            
+        attr_accessor :xml_content
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'xml_file_source' => :'XMLFileSource',
-        :'import_position' => :'ImportPosition'
+        :'import_position' => :'ImportPosition',
+        :'xml_content' => :'XMLContent'
       }
     end
 
@@ -48,7 +51,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'xml_file_source' => :'FileSource',
-        :'import_position' => :'ImportPosition'
+        :'import_position' => :'ImportPosition',
+        :'xml_content' => :'String'
       }
     end
 
@@ -66,6 +70,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ImportPosition')
           self.import_position = attributes[:'ImportPosition']
       end
+      if attributes.has_key?(:'XMLContent')
+          self.xml_content = attributes[:'XMLContent']
+      end
 
     end
 
@@ -79,6 +86,9 @@ module AsposeCellsCloud
       if @import_position.nil?
           invalid_properties.push("invalid value for 'import_position', import_position cannot be nil.")
       end
+      if @xml_content.nil?
+          invalid_properties.push("invalid value for 'xml_content', xml_content cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -88,6 +98,7 @@ module AsposeCellsCloud
     def valid?
       return false if @xml_file_source.nil?
       return false if @import_position.nil?
+      return false if @xml_content.nil?
       return true
     end
 
@@ -97,7 +108,8 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           xml_file_source == o.xml_file_source &&
-          import_position == o.import_position 
+          import_position == o.import_position &&
+          xml_content == o.xml_content 
           std_dev == o.std_dev
     end
 
@@ -110,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ xml_file_source , import_position ].hash
+      [ xml_file_source , import_position , xml_content ].hash
     end
 
     # Builds the object from hash

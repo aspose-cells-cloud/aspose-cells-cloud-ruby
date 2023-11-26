@@ -1,42 +1,50 @@
-# AsposeCellsCloud::AutoShape
+# AsposeCellsCloud::Object::AutoShape 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::AutoShape;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alternative_text** | **String** |  | [optional] 
-**bottom** | **Integer** |  | [optional] 
-**top** | **Integer** |  | [optional] 
-**width** | **Integer** |  | [optional] 
-**html_text** | **String** |  | [optional] 
-**text_vertical_alignment** | **String** |  | [optional] 
-**auto_shape_type** | **String** |  | [optional] 
-**is_printable** | **BOOLEAN** |  | [optional] 
-**upper_left_column** | **Integer** |  | [optional] 
-**is_lock_aspect_ratio** | **BOOLEAN** |  | [optional] 
-**is_group** | **BOOLEAN** |  | [optional] 
-**rotation_angle** | **Float** |  | [optional] 
-**z_order_position** | **Integer** |  | [optional] 
-**text_horizontal_overflow** | **String** |  | [optional] 
-**mso_drawing_type** | **String** |  | [optional] 
-**text_orientation_type** | **String** |  | [optional] 
-**placement** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**is_word_art** | **BOOLEAN** |  | [optional] 
-**linked_cell** | **String** |  | [optional] 
-**upper_left_row** | **Integer** |  | [optional] 
-**is_locked** | **BOOLEAN** |  | [optional] 
-**lower_right_row** | **Integer** |  | [optional] 
-**is_text_wrapped** | **BOOLEAN** |  | [optional] 
-**y** | **Integer** |  | [optional] 
-**x** | **Integer** |  | [optional] 
-**is_hidden** | **BOOLEAN** |  | [optional] 
-**left** | **Integer** |  | [optional] 
-**right** | **Integer** |  | [optional] 
-**text** | **String** |  | [optional] 
-**lower_right_column** | **Integer** |  | [optional] 
-**height** | **Integer** |  | [optional] 
-**text_horizontal_alignment** | **String** |  | [optional] 
-**text_vertical_overflow** | **String** |  | [optional] 
-**link** | [**Link**](Link.md) |  | [optional] 
+**Name** | **string** |  |
+**MsoDrawingType** | **string** |  |
+**AutoShapeType** | **string** |  |
+**Placement** | **string** |  |
+**UpperLeftRow** | **int** |  |
+**Top** | **int** |  |
+**UpperLeftColumn** | **int** |  |
+**Left** | **int** |  |
+**LowerRightRow** | **int** |  |
+**Bottom** | **int** |  |
+**LowerRightColumn** | **int** |  |
+**Right** | **int** |  |
+**Width** | **int** |  |
+**Height** | **int** |  |
+**X** | **int** |  |
+**Y** | **int** |  |
+**RotationAngle** | **double** |  |
+**HtmlText** | **string** |  |
+**Text** | **string** |  |
+**AlternativeText** | **string** |  |
+**TextHorizontalAlignment** | **string** |  |
+**TextHorizontalOverflow** | **string** |  |
+**TextOrientationType** | **string** |  |
+**TextVerticalAlignment** | **string** |  |
+**TextVerticalOverflow** | **string** |  |
+**IsGroup** | **boolean** |  |
+**IsHidden** | **boolean** |  |
+**IsLockAspectRatio** | **boolean** |  |
+**IsLocked** | **boolean** |  |
+**IsPrintable** | **boolean** |  |
+**IsTextWrapped** | **boolean** |  |
+**IsWordArt** | **boolean** |  |
+**LinkedCell** | **string** |  |
+**ZOrderPosition** | **int** |  |
+**Font** | **Font** |  |
+**Hyperlink** | **string** |  |
+**link** | **Link** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

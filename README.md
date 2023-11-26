@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/23.10)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/23.11)
 
 
 # Ruby SDK for Spreadsheet Processing in the Cloud
@@ -22,14 +22,13 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 - [Convert Excel files to popular formats](https://docs.aspose.cloud/cells/convert-excel-workbook-to-different-file-formats/).
 
 
-## Feature & Enhancements in Version 23.10
+## Feature & Enhancements in Version 23.11
 
 Full list of issues covering all changes in this release:
 
-- Fix protect workbook request.
-- Fix range copy API.
-- Optimize workbook protect API.
-
+- Optimize import xml data into Excel file.
+- Optimize import json data into Excel file.
+- **Remove deprecated functions, class and test case.**
 
 ## Read & Write Spreadsheet Formats
 
@@ -93,17 +92,21 @@ class Row
   end
 
   def upload_file(file_name)
-    response =  @instance.upload_file( folder+"/"+name,  ::File.open(File.expand_path("data/"+name),"r") {|io| io.read(io.size) })
+      remote_folder = 'TestData/In'
+      local_name = 'Book1.xlsx'
+      remote_name = 'Book1.xlsx'
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
   end
 
   # Delete worksheet row.
   def delete_worksheet_row
-    name = "myWorkbook.xlsx"
-    upload_file(name)
-
-    sheet_name = "Sheet1"
-    row_index = 1
-    result = @instance.cells_delete_worksheet_row(name, sheet_name, row_index,  { :folder=>folder})
+      remote_folder = 'TestData/In'
+      remote_name = 'Book1.xlsx'   
+      request =   AsposeCellsCloud::DeleteWorksheetRowRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:rowIndex=>1,:folder=>remote_folder,:storageName=>'');
+      @instance.delete_worksheet_row(request);
   end
 
 end

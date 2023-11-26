@@ -1,12 +1,18 @@
-# AsposeCellsCloud::ImportBatchDataOption
+# AsposeCellsCloud::Object::ImportBatchDataOption 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::ImportBatchDataOption;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**FileSource**](FileSource.md) |  | [optional] 
-**import_data_type** | **String** |  | [optional] 
-**destination_worksheet** | **String** |  | [optional] 
-**is_insert** | **BOOLEAN** |  | [optional] 
-**batch_data** | [**Array&lt;CellValue&gt;**](CellValue.md) |  | [optional] 
+**BatchData** | **ARRAY[CellValue]** |  |
+**DestinationWorksheet** | **string** |  |
+**IsInsert** | **boolean** |  |
+**ImportDataType** | **string** |  |
+**Source** | **FileSource** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -42,7 +42,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::CreateFolderRequest.new(:path=>'OutResul/NewFolder',:storageName=>'');
+      request =   AsposeCellsCloud::CreateFolderRequest.new(:path=>'OutResult/NewFolder',:storageName=>'');
       @instance.create_folder(request);
     end
   end 

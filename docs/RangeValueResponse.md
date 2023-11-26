@@ -1,10 +1,16 @@
-# AsposeCellsCloud::RangeValueResponse
+# AsposeCellsCloud::Object::RangeValueResponse 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::RangeValueResponse;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** |  | [optional] 
-**code** | **Integer** |  | 
-**cells_list** | [**Array&lt;Cell&gt;**](Cell.md) |  | [optional] 
+**CellsList** | **ARRAY[Cell]** |  |
+**Code** | **int** |  |
+**Status** | **string** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

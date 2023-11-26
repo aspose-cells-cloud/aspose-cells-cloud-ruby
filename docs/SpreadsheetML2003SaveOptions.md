@@ -1,18 +1,24 @@
-# AsposeCellsCloud::SpreadsheetML2003SaveOptions
+# AsposeCellsCloud::Object::SpreadsheetML2003SaveOptions 
+
+## Load the model package
+```perl
+use AsposeCellsCloud::Object::SpreadsheetML2003SaveOptions;
+```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enable_http_compression** | **BOOLEAN** |  | [optional] 
-**save_format** | **String** |  | [optional] 
-**clear_data** | **BOOLEAN** | Make the workbook empty after saving the file. | [optional] 
-**cached_file_folder** | **String** | The cached file folder is used to store some large data. | [optional] 
-**validate_merged_areas** | **BOOLEAN** | Indicates whether validate merged areas before saving the file. The default value is false.              | [optional] 
-**refresh_chart_cache** | **BOOLEAN** |  | [optional] 
-**create_directory** | **BOOLEAN** | If true and the directory does not exist, the directory will be automatically created before saving the file.              | [optional] 
-**sort_names** | **BOOLEAN** |  | [optional] 
-**export_column_index_of_cell** | **BOOLEAN** |  | [optional] 
-**is_indented_formatting** | **BOOLEAN** |  | [optional] 
-**limit_as_xls** | **BOOLEAN** |  | [optional] 
+**ExportColumnIndexOfCell** | **boolean** | The default value is false, it means that column index will be ignored if the cell is contiguous to the previous cell. |
+**IsIndentedFormatting** | **boolean** | Causes child elements to be indented.The default value is true.  If the value is false, it will reduce the size of the xml file |
+**LimitAsXls** | **boolean** | Limit as xls, the max row index is 65535 and the max column index is 255. |
+**SaveFormat** | **string** |  |
+**CachedFileFolder** | **string** |  |
+**ClearData** | **boolean** |  |
+**CreateDirectory** | **boolean** |  |
+**EnableHTTPCompression** | **boolean** |  |
+**RefreshChartCache** | **boolean** |  |
+**SortNames** | **boolean** |  |
+**ValidateMergedAreas** | **boolean** |  |  
 
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
