@@ -28,7 +28,7 @@ describe 'CellsApi' do
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
       batchConvertRequestMatchCondition = AsposeCellsCloud::MatchConditionRequest.new(:RegexPattern=>'(^Book)(.+)(xlsx$)' );
-      batchConvertRequest = AsposeCellsCloud::BatchConvertRequest.new(:SourceFolder=>remote_folder ,:Format=>'pdf' ,:OutFolder=>'TestResult' ,:MatchCondition=>batchConvertRequestMatchCondition );
+      batchConvertRequest = AsposeCellsCloud::BatchConvertRequest.new(:SourceFolder=>remote_folder ,:Format=>'pdf' ,:OutFolder=>'OutResult' ,:MatchCondition=>batchConvertRequestMatchCondition );
       request =   AsposeCellsCloud::PostBatchConvertRequest.new(:batchConvertRequest=>batchConvertRequest);
       @instance.post_batch_convert(request);
     end
@@ -51,7 +51,7 @@ describe 'CellsApi' do
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
       batchProtectRequestMatchCondition = AsposeCellsCloud::MatchConditionRequest.new(:RegexPattern=>'(^Book)(.+)(xlsx$)' );
-      batchProtectRequest = AsposeCellsCloud::BatchProtectRequest.new(:SourceFolder=>remote_folder ,:ProtectionType=>'All' ,:Password=>'123456' ,:OutFolder=>'TestResult' ,:MatchCondition=>batchProtectRequestMatchCondition );
+      batchProtectRequest = AsposeCellsCloud::BatchProtectRequest.new(:SourceFolder=>remote_folder ,:ProtectionType=>'All' ,:Password=>'123456' ,:OutFolder=>'OutResult' ,:MatchCondition=>batchProtectRequestMatchCondition );
       request =   AsposeCellsCloud::PostBatchProtectRequest.new(:batchProtectRequest=>batchProtectRequest);
       @instance.post_batch_protect(request);
     end
@@ -74,7 +74,7 @@ describe 'CellsApi' do
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
       batchLockRequestMatchCondition = AsposeCellsCloud::MatchConditionRequest.new(:RegexPattern=>'(^Book)(.+)(xlsx$)' );
-      batchLockRequest = AsposeCellsCloud::BatchLockRequest.new(:SourceFolder=>remote_folder ,:Password=>'123456' ,:OutFolder=>'TestResult' ,:MatchCondition=>batchLockRequestMatchCondition );
+      batchLockRequest = AsposeCellsCloud::BatchLockRequest.new(:SourceFolder=>remote_folder ,:Password=>'123456' ,:OutFolder=>'OutResult' ,:MatchCondition=>batchLockRequestMatchCondition );
       request =   AsposeCellsCloud::PostBatchLockRequest.new(:batchLockRequest=>batchLockRequest);
       @instance.post_batch_lock(request);
     end
@@ -97,7 +97,7 @@ describe 'CellsApi' do
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
       batchLockRequestMatchCondition = AsposeCellsCloud::MatchConditionRequest.new(:RegexPattern=>'(^Book)(.+)(xlsx$)' );
-      batchLockRequest = AsposeCellsCloud::BatchLockRequest.new(:SourceFolder=>remote_folder ,:Password=>'123456' ,:OutFolder=>'TestResult' ,:MatchCondition=>batchLockRequestMatchCondition );
+      batchLockRequest = AsposeCellsCloud::BatchLockRequest.new(:SourceFolder=>remote_folder ,:Password=>'123456' ,:OutFolder=>'OutResult' ,:MatchCondition=>batchLockRequestMatchCondition );
       request =   AsposeCellsCloud::PostBatchUnlockRequest.new(:batchLockRequest=>batchLockRequest);
       @instance.post_batch_unlock(request);
     end

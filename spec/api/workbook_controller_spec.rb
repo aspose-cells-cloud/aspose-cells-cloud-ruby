@@ -416,7 +416,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::PostWorkbookSplitRequest.new(:name=>remote_name,:format=>'png',:outFolder=>'OutResult',:from=>1,:to=>5,:splitNameRule=>'sheetname',:folder=>remote_folder,:storageName=>'',:outStorageName=>'');
+      request =   AsposeCellsCloud::PostWorkbookSplitRequest.new(:name=>remote_name,:format=>'png',:outFolder=>'OutResult',:from=>1,:to=>5,:horizontalResolution=>96,:verticalResolution=>96,:splitNameRule=>'sheetname',:folder=>remote_folder,:storageName=>'',:outStorageName=>'');
       @instance.post_workbook_split(request);
     end
   end 

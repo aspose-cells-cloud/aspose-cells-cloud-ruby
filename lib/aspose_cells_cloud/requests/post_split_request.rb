@@ -32,11 +32,12 @@ module AsposeCellsCloud
   class PostSplitRequest
 
     attr_accessor :file  
-    attr_accessor :format  
+    attr_accessor :out_format  
     attr_accessor :password  
     attr_accessor :from  
     attr_accessor :to  
     attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -47,8 +48,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
-      if attributes.has_key?(:'format')
-          self.format = attributes[:'format']
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
       end
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
@@ -62,17 +63,21 @@ module AsposeCellsCloud
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'file' => :'File',
-        :'format' => :'format',
+        :'out_format' => :'outFormat',
         :'password' => :'password',
         :'from' => :'from',
         :'to' => :'to',
-        :'check_excel_restriction' => :'checkExcelRestriction'
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
@@ -80,11 +85,12 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'file' => :'Hash',
-        :'format' => :'String',
+        :'out_format' => :'String',
         :'password' => :'String',
         :'from' => :'Integer',
         :'to' => :'Integer',
-        :'check_excel_restriction' => :'BOOLEAN'
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -97,20 +103,21 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && file.nil?
           fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_split "
       end 
-      # verify the required parameter 'format' is set
-      if api_client.config.client_side_validation && format.nil?
-          fail ArgumentError, "Missing the required parameter 'format' when calling CellsApi.post_split "
+      # verify the required parameter 'out_format' is set
+      if api_client.config.client_side_validation && out_format.nil?
+          fail ArgumentError, "Missing the required parameter 'out_format' when calling CellsApi.post_split "
       end 
 
       # resource path
       local_var_path = "/cells/split"
       # query parameters
       query_params = {}
-      query_params[:'format'] = self.format if !self.format.nil? 
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'from'] = self.from if !self.from.nil? 
       query_params[:'to'] = self.to if !self.to.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}

@@ -41,6 +41,7 @@ module AsposeCellsCloud
     attr_accessor :storage_name  
     attr_accessor :out_storage_name  
     attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -78,6 +79,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -92,7 +96,8 @@ module AsposeCellsCloud
         :'out_path' => :'outPath',
         :'storage_name' => :'storageName',
         :'out_storage_name' => :'outStorageName',
-        :'check_excel_restriction' => :'checkExcelRestriction'
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
@@ -108,7 +113,8 @@ module AsposeCellsCloud
         :'out_path' => :'String',
         :'storage_name' => :'String',
         :'out_storage_name' => :'String',
-        :'check_excel_restriction' => :'BOOLEAN'
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -135,6 +141,7 @@ module AsposeCellsCloud
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}

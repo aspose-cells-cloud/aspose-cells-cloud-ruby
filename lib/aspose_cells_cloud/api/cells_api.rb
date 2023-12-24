@@ -40,7 +40,7 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
-    # Get auto filters description in worksheet.
+    # Retrieve the description of auto filters from a worksheet.
 
     def get_worksheet_auto_filter( get_worksheet_auto_filter_request, opts = {})
 
@@ -48,7 +48,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds date filter in worksheet.
+    # Apply a date filter in the worksheet.
 
     def put_worksheet_date_filter( put_worksheet_date_filter_request, opts = {})
 
@@ -56,8 +56,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a filter for a filter column in worksheet.
-    #             
+    # Add a filter for a column in the worksheet.
 
     def put_worksheet_filter( put_worksheet_filter_request, opts = {})
 
@@ -65,7 +64,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds an icon filter in worksheet.
+    # Add an icon filter in the worksheet.
 
     def put_worksheet_icon_filter( put_worksheet_icon_filter_request, opts = {})
 
@@ -73,8 +72,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Filters a list with a custom criteria in worksheet.
-    #             
+    # Filter a list with custom criteria in the worksheet.
 
     def put_worksheet_custom_filter( put_worksheet_custom_filter_request, opts = {})
 
@@ -82,7 +80,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a dynamic filter in worksheet.
+    # Add a dynamic filter in the worksheet.
 
     def put_worksheet_dynamic_filter( put_worksheet_dynamic_filter_request, opts = {})
 
@@ -90,7 +88,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Filters the top 10 item in the list in worksheet
+    # Filter the top 10 items in the list in the worksheet.
 
     def put_worksheet_filter_top10( put_worksheet_filter_top10_request, opts = {})
 
@@ -98,7 +96,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a color filter in worksheet.
+    # Add a color filter in the worksheet.
 
     def put_worksheet_color_filter( put_worksheet_color_filter_request, opts = {})
 
@@ -106,7 +104,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Match all blank cell in the list.
+    # Match all blank cells in the list.
 
     def post_worksheet_match_blanks( post_worksheet_match_blanks_request, opts = {})
 
@@ -114,8 +112,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Match all not blank cell in the list.
-    #             
+    # Match all not blank cells in the list.
 
     def post_worksheet_match_non_blanks( post_worksheet_match_non_blanks_request, opts = {})
 
@@ -123,7 +120,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Refresh auto filters in worksheet.
+    # Refresh auto filters in the worksheet.
 
     def post_worksheet_auto_filter_refresh( post_worksheet_auto_filter_refresh_request, opts = {})
 
@@ -131,8 +128,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Removes a date filter in worksheet.
-    #             
+    # Remove a date filter in the worksheet.
 
     def delete_worksheet_date_filter( delete_worksheet_date_filter_request, opts = {})
 
@@ -140,8 +136,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a filter for a filter column in worksheet.
-    #             
+    # Delete a filter for a column in the worksheet.
 
     def delete_worksheet_filter( delete_worksheet_filter_request, opts = {})
 
@@ -165,6 +160,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Batch converting files that meet specific matching conditions.
 
     def post_batch_convert( post_batch_convert_request, opts = {})
 
@@ -172,6 +168,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Batch protecting files that meet specific matching conditions.
 
     def post_batch_protect( post_batch_protect_request, opts = {})
 
@@ -179,6 +176,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Batch locking files that meet specific matching conditions.
 
     def post_batch_lock( post_batch_lock_request, opts = {})
 
@@ -186,6 +184,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Batch unlocking files that meet specific matching conditions.
 
     def post_batch_unlock( post_batch_unlock_request, opts = {})
 
@@ -193,6 +192,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Batch splitting files that meet specific matching conditions.
 
     def post_batch_split( post_batch_split_request, opts = {})
 
@@ -200,7 +200,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear cells contents in worksheet.
+    # Clear cell area contents in the worksheet.
 
     def post_clear_contents( post_clear_contents_request, opts = {})
 
@@ -208,7 +208,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear cells formats in worksheet.
+    # Clear cell formats in the worksheet.
 
     def post_clear_formats( post_clear_formats_request, opts = {})
 
@@ -216,7 +216,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates cell's range style in worksheet.
+    # Update cell range styles in the worksheet.
 
     def post_update_worksheet_range_style( post_update_worksheet_range_style_request, opts = {})
 
@@ -224,7 +224,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Merge cells in worksheet.
+    # Merge cells in the worksheet.
 
     def post_worksheet_merge( post_worksheet_merge_request, opts = {})
 
@@ -232,7 +232,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unmerge cells in worksheet.
+    # Unmerge cells in the worksheet.
 
     def post_worksheet_unmerge( post_worksheet_unmerge_request, opts = {})
 
@@ -240,7 +240,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets cells description in some format.
+    # Retrieve cell descriptions in a specified format.
 
     def get_worksheet_cells( get_worksheet_cells_request, opts = {})
 
@@ -248,7 +248,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets cell data by cell or method name in worksheet.
+    # Retrieve cell data using either cell reference or method name in the worksheet.
 
     def get_worksheet_cell( get_worksheet_cell_request, opts = {})
 
@@ -256,7 +256,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets cell's style description in worksheet.
+    # Retrieve cell style descriptions in the worksheet.
 
     def get_worksheet_cell_style( get_worksheet_cell_style_request, opts = {})
 
@@ -264,7 +264,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets cell value by cell name in worksheet.
+    # Set cell value using cell name in the worksheet.
 
     def post_worksheet_cell_set_value( post_worksheet_cell_set_value_request, opts = {})
 
@@ -272,7 +272,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets cell's style by cell name in worksheet.
+    # Set cell style using cell name in the worksheet.
 
     def post_update_worksheet_cell_style( post_update_worksheet_cell_style_request, opts = {})
 
@@ -280,7 +280,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets the value of the range in worksheet.
+    # Set the value of the range in the worksheet.
 
     def post_set_cell_range_value( post_set_cell_range_value_request, opts = {})
 
@@ -288,7 +288,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copies data to destination cell from a source cell in worksheet.
+    # Copy data from a source cell to a destination cell in the worksheet.
 
     def post_copy_cell_into_cell( post_copy_cell_into_cell_request, opts = {})
 
@@ -296,7 +296,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets the html string which contains data and some formats in this cell.
+    # Retrieve the HTML string containing data and specific formats in this cell.
 
     def get_cell_html_string( get_cell_html_string_request, opts = {})
 
@@ -304,7 +304,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets the html string which contains data and some formats in this cell.
+    # Set the HTML string containing data and specific formats in this cell.
 
     def post_set_cell_html_string( post_set_cell_html_string_request, opts = {})
 
@@ -312,7 +312,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Calculates cell formula in worksheet.
+    # Calculate cell formula in the worksheet.
 
     def post_cell_calculate( post_cell_calculate_request, opts = {})
 
@@ -320,7 +320,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets cell characters in worksheet.
+    # Set cell characters in the worksheet.
 
     def post_cell_characters( post_cell_characters_request, opts = {})
 
@@ -513,7 +513,6 @@ module AsposeCellsCloud
     end
 
     # Applies formats for a whole row in worksheet.
-    #             
 
     def post_row_style( post_row_style_request, opts = {})
 
@@ -521,7 +520,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets cells description in some format.
+    # Retrieve cell descriptions in a specified format.
 
     def get_cells_cloud_services_health_check( get_cells_cloud_services_health_check_request, opts = {})
 
@@ -529,7 +528,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Aspose.Cells Cloud service health status check(old). 
+    # Aspose.Cells Cloud service health status check.
 
     def get_cells_cloud_service_status( get_cells_cloud_service_status_request, opts = {})
 
@@ -537,7 +536,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets chart area description in worksheet.
+    # Retrieve chart area description in the worksheet.
 
     def get_chart_area( get_chart_area_request, opts = {})
 
@@ -545,7 +544,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets chart area fill format description in worksheet.
+    # Retrieve chart area fill format description in the worksheet.
 
     def get_chart_area_fill_format( get_chart_area_fill_format_request, opts = {})
 
@@ -553,7 +552,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets chart area border description.
+    # Retrieve chart area border description.
 
     def get_chart_area_border( get_chart_area_border_request, opts = {})
 
@@ -561,7 +560,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheet charts description.
+    # Retrieve descriptions of charts in the worksheet.
 
     def get_worksheet_charts( get_worksheet_charts_request, opts = {})
 
@@ -569,7 +568,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets chart in some format.
+    # Retrieve the chart in a specified format.
 
     def get_worksheet_chart( get_worksheet_chart_request, opts = {})
 
@@ -577,7 +576,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds new chart in worksheet.
+    # Add a new chart in the worksheet.
 
     def put_worksheet_add_chart( put_worksheet_add_chart_request, opts = {})
 
@@ -585,7 +584,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a chart by index in worksheet.
+    # Delete a chart by index in the worksheet.
 
     def delete_worksheet_delete_chart( delete_worksheet_delete_chart_request, opts = {})
 
@@ -593,7 +592,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update chart propreties in worksheet.
+    # Update chart properties in the worksheet.
 
     def post_worksheet_chart( post_worksheet_chart_request, opts = {})
 
@@ -601,7 +600,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets chart legend description in worksheet.
+    # Retrieve chart legend description in the worksheet.
 
     def get_worksheet_chart_legend( get_worksheet_chart_legend_request, opts = {})
 
@@ -609,7 +608,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates chart legend in worksheet.
+    # Update chart legend in the worksheet.
 
     def post_worksheet_chart_legend( post_worksheet_chart_legend_request, opts = {})
 
@@ -815,7 +814,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Exports workbook to some format.
+    # Retrieve workbooks in various formats.
 
     def get_workbook( get_workbook_request, opts = {})
 
@@ -823,7 +822,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Converts workbook from request content to some format.
+    # Convert the workbook from the requested content into files in different formats.
 
     def put_convert_workbook( put_convert_workbook_request, opts = {})
 
@@ -831,7 +830,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Converts document and saves result to storage.
+    # Save an Excel file in various formats.
 
     def post_workbook_save_as( post_workbook_save_as_request, opts = {})
 
@@ -839,6 +838,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to PDF files.
 
     def post_convert_workbook_to_pdf( post_convert_workbook_to_pdf_request, opts = {})
 
@@ -846,6 +846,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to PNG files.
 
     def post_convert_workbook_to_png( post_convert_workbook_to_png_request, opts = {})
 
@@ -853,6 +854,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to Docx files.
 
     def post_convert_workbook_to_docx( post_convert_workbook_to_docx_request, opts = {})
 
@@ -860,6 +862,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to Pptx files.
 
     def post_convert_workbook_to_pptx( post_convert_workbook_to_pptx_request, opts = {})
 
@@ -867,6 +870,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to HTML files.
 
     def post_convert_workbook_to_html( post_convert_workbook_to_html_request, opts = {})
 
@@ -874,6 +878,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to Markdown files.
 
     def post_convert_workbook_to_markdown( post_convert_workbook_to_markdown_request, opts = {})
 
@@ -881,6 +886,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to Json files.
 
     def post_convert_workbook_to_json( post_convert_workbook_to_json_request, opts = {})
 
@@ -888,6 +894,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to SQL Script files.
 
     def post_convert_workbook_to_sql( post_convert_workbook_to_sql_request, opts = {})
 
@@ -895,6 +902,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Convert Excel file to Csv files.
 
     def post_convert_workbook_to_csv( post_convert_workbook_to_csv_request, opts = {})
 
@@ -902,7 +910,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Export excel internal elements or itself to kinds of format files.
+    # Export Excel internal elements or the workbook itself to various format files.
 
     def post_export( post_export_request, opts = {})
 
@@ -910,9 +918,8 @@ module AsposeCellsCloud
        return data
     end
 
-    # Export XML data from Excel file. 
-    # When there are Xml Maps in Excel file, export xml data. 
-    # When there is not xml map in Excel file, convert Excel file to xml file. 
+    # Export XML data from an Excel file.
+    # When there are XML Maps in an Excel file, export XML data. When there is no XML map in the Excel file, convert the Excel file to an XML file.
 
     def post_workbook_export_xml( post_workbook_export_xml_request, opts = {})
 
@@ -920,8 +927,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Imports/Updates an XML data file into the workbook.
-    # The XML data file can be a cloud file or HTTP URI data.
+    # Import a JSON data file into the workbook. The JSON data file can either be a cloud file or data from an HTTP URI.
 
     def post_workbook_import_json( post_workbook_import_json_request, opts = {})
 
@@ -929,8 +935,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Imports/Updates an XML data file into the workbook.
-    # The XML data file can be a cloud file or HTTP URI data.
+    # Import an XML data file into an Excel file. The XML data file can either be a cloud file or data from an HTTP URI.
 
     def post_workbook_import_xml( post_workbook_import_xml_request, opts = {})
 
@@ -938,7 +943,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Imports data into workbook.
+    # Import data into the Excel file.
 
     def post_import_data( post_import_data_request, opts = {})
 
@@ -994,7 +999,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Combine data files and template files to kinds of format files. 
+    # Assemble data files with template files to generate files in various formats.
 
     def post_assemble( post_assemble_request, opts = {})
 
@@ -1002,7 +1007,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Compress XLS, XLSX, XLSM, XLSB, ODS and more
+    # Compress files and generate target files in various formats, supported file formats are include Xls, Xlsx, Xlsm, Xlsb, Ods and more.
 
     def post_compress( post_compress_request, opts = {})
 
@@ -1010,7 +1015,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Merge cells in worksheet.
+    # Merge cells in the worksheet.
 
     def post_merge( post_merge_request, opts = {})
 
@@ -1018,7 +1023,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Split Excel spreadsheet files by worksheet, save as kinds of format files.
+    # Split Excel spreadsheet files based on worksheets and create output files in various formats.
 
     def post_split( post_split_request, opts = {})
 
@@ -1026,7 +1031,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Search specify the text from excel files.
+    # Search for specified text within Excel files.
 
     def post_search( post_search_request, opts = {})
 
@@ -1034,7 +1039,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Use new text to replace specify the text from excel files.
+    # Replace specified text with new text in Excel files.
 
     def post_replace( post_replace_request, opts = {})
 
@@ -1042,7 +1047,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Import data into excel file.
+    # Import data into an Excel file and generate output files in various formats.
 
     def post_import( post_import_request, opts = {})
 
@@ -1050,7 +1055,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Add Text Watermark to Excel files.
+    # Add Text Watermark to Excel files and generate output files in various formats.
 
     def post_watermark( post_watermark_request, opts = {})
 
@@ -1058,7 +1063,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear excel internal elements for excel files
+    # Clear internal elements in Excel files and generate output files in various formats.
 
     def post_clear_objects( post_clear_objects_request, opts = {})
 
@@ -1066,7 +1071,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Reverse rows or columns of Excel files, save as kinds of format files.
+    # Reverse rows or columns in Excel files and create output files in various formats.
 
     def post_reverse( post_reverse_request, opts = {})
 
@@ -1074,6 +1079,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Repair abnormal files and generate files in various formats.
 
     def post_repair( post_repair_request, opts = {})
 
@@ -1081,7 +1087,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Reverse rows or columns of Excel files, save as kinds of format files.
+    # Rotate rows, columns, or other objects in Excel files and save them in various formats.
 
     def post_rotate( post_rotate_request, opts = {})
 
@@ -1089,6 +1095,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update document properties in Excel file, and save them is various formats.
 
     def post_metadata( post_metadata_request, opts = {})
 
@@ -1096,6 +1103,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Get cells document properties.
 
     def get_metadata( get_metadata_request, opts = {})
 
@@ -1103,6 +1111,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Delete cells document properties in Excel file, and save them is various formats.
 
     def delete_metadata( delete_metadata_request, opts = {})
 
@@ -1374,7 +1383,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates page header in worksheet. 
+    # Updates page header in worksheet.
 
     def post_header( post_header_request, opts = {})
 
@@ -1390,7 +1399,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update  page footer description in worksheet. 
+    # Update  page footer description in worksheet.
 
     def post_footer( post_footer_request, opts = {})
 
@@ -1652,7 +1661,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Digital Signature.
+    # Excel file digital signature.
 
     def post_digital_signature( post_digital_signature_request, opts = {})
 
@@ -1660,7 +1669,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Encripts workbook.
+    # Excel Encryption.
 
     def post_encrypt_workbook( post_encrypt_workbook_request, opts = {})
 
@@ -1668,7 +1677,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Decrypts workbook.
+    # Excel files decryption.
 
     def delete_decrypt_workbook( delete_decrypt_workbook_request, opts = {})
 
@@ -1676,7 +1685,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Protects workbook.
+    # Excel protection.
 
     def post_protect_workbook( post_protect_workbook_request, opts = {})
 
@@ -1684,7 +1693,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unprotects workbook.
+    # Excel unprotection.
 
     def delete_un_protect_workbook( delete_un_protect_workbook_request, opts = {})
 
@@ -1692,7 +1701,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Protects document from changes.
+    # Excel file write protection.
 
     def put_document_protect_from_changes( put_document_protect_from_changes_request, opts = {})
 
@@ -1700,7 +1709,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unprotects document from changes.
+    # Excel file cancel write protection.
 
     def delete_document_un_protect_from_changes( delete_document_un_protect_from_changes_request, opts = {})
 
@@ -1708,7 +1717,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unprotect password protected Excel file.
+    # Unlock Excel files.
 
     def post_unlock( post_unlock_request, opts = {})
 
@@ -1716,7 +1725,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Setting access password.
+    # Lock Excel files.
 
     def post_lock( post_lock_request, opts = {})
 
@@ -1724,7 +1733,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Protect MS Excel and OpenDocument Spreadsheet by making them password protected.
+    # Excel files encryption.
 
     def post_protect( post_protect_request, opts = {})
 
@@ -1740,7 +1749,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Combines a range of cells into a single cell. 
+    # Combines a range of cells into a single cell.
 
     def post_worksheet_cells_range_merge( post_worksheet_cells_range_merge_request, opts = {})
 
@@ -1773,7 +1782,6 @@ module AsposeCellsCloud
     end
 
     # Puts a value into the range, if appropriate the value will be converted to other data type and cell's number format will be reset.
-    #             
 
     def post_worksheet_cells_range_value( post_worksheet_cells_range_value_request, opts = {})
 
@@ -1782,7 +1790,6 @@ module AsposeCellsCloud
     end
 
     # Moves the current range to the dest range.
-    #             
 
     def post_worksheet_cells_range_move_to( post_worksheet_cells_range_move_to_request, opts = {})
 
@@ -1790,7 +1797,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets outline border around a range of cells.
+    # Sets data sort around a range of cells.
 
     def post_worksheet_cells_range_sort( post_worksheet_cells_range_sort_request, opts = {})
 
@@ -1823,7 +1830,6 @@ module AsposeCellsCloud
     end
 
     # Inserts a range of cells and shift cells according to the shift option.
-    #             
 
     def put_worksheet_cells_range( put_worksheet_cells_range_request, opts = {})
 
@@ -1997,7 +2003,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update workbook's name. 
+    # Update workbook's name.
 
     def post_workbook_name( post_workbook_name_request, opts = {})
 

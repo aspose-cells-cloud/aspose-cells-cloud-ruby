@@ -16,13 +16,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "csv"
+      out_format = "csv"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -32,13 +32,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "xls"
+      out_format = "xls"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -48,13 +48,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "html"
+      out_format = "html"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -64,13 +64,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "mhtml"
+      out_format = "mhtml"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -80,13 +80,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "ods"
+      out_format = "ods"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -96,13 +96,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "pdf"
+      out_format = "pdf"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -112,13 +112,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "xml"
+      out_format = "xml"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -128,13 +128,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "txt"
+      out_format = "txt"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -144,13 +144,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "tif"
+      out_format = "tif"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -160,29 +160,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "xlsb"
+      out_format = "xlsb"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_xlsm test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "xlsm"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -192,45 +176,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "xlsx"
+      out_format = "xlsx"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_xltm test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "xltm"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_xltx test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "xltx"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -240,13 +192,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "xps"
+      out_format = "xps"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -256,13 +208,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "png"
+      out_format = "png"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -272,61 +224,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "jpg"
+      out_format = "jpg"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_gif test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "gif"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_emf test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "emf"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_bmp test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "bmp"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -336,13 +240,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "md"
+      out_format = "md"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -352,29 +256,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "numbers"
+      out_format = "numbers"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
-      @instance.post_split(request);
-    end
-  end 
-
-  describe 'post_split_wmf test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "wmf"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -384,13 +272,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "svg"
+      out_format = "svg"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -400,13 +288,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "docx"
+      out_format = "docx"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -416,13 +304,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "pptx"
+      out_format = "pptx"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -432,13 +320,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "json"
+      out_format = "json"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -448,13 +336,13 @@ describe 'CellsApi' do
       assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
-      format = "sql"
+      out_format = "sql"
 
       
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
@@ -2668,7 +2556,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2685,7 +2573,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2702,7 +2590,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2719,7 +2607,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2736,7 +2624,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2753,7 +2641,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2770,7 +2658,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2787,7 +2675,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2804,7 +2692,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2821,7 +2709,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2838,7 +2726,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2855,7 +2743,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2872,7 +2760,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2889,7 +2777,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2906,7 +2794,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2923,7 +2811,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2940,7 +2828,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2957,7 +2845,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2974,7 +2862,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -2991,7 +2879,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3008,7 +2896,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3025,7 +2913,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3042,7 +2930,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3059,7 +2947,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3076,7 +2964,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3093,7 +2981,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3110,7 +2998,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3127,7 +3015,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:format=>format,:mergeToOneSheet=>merge_to_one_sheet);
+      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
       @instance.post_merge(request);
     end
   end 
@@ -3399,7 +3287,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:outFormat=>format);
       @instance.post_repair(request);
     end
   end 
@@ -3413,7 +3301,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:outFormat=>format);
       @instance.post_repair(request);
     end
   end 
@@ -3427,7 +3315,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:outFormat=>format);
       @instance.post_repair(request);
     end
   end 
@@ -3441,7 +3329,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:format=>format);
+      request =   AsposeCellsCloud::PostRepairRequest.new(:File=>mapFiles,:outFormat=>format);
       @instance.post_repair(request);
     end
   end 
@@ -3456,7 +3344,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 
@@ -3471,7 +3359,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 
@@ -3486,7 +3374,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 
@@ -3501,7 +3389,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 
@@ -3516,7 +3404,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 
@@ -3531,7 +3419,7 @@ describe 'CellsApi' do
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:format=>format);
+      request =   AsposeCellsCloud::PostReverseRequest.new(:File=>mapFiles,:rotateType=>rotate_type,:outFormat=>format);
       @instance.post_reverse(request);
     end
   end 

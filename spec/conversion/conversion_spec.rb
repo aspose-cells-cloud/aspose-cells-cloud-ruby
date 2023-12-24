@@ -33,28 +33,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'workbook_save_as_xls__out_result_post_excel_save_asxls test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xls"
-      newfilename = "OutResult/PostExcelSaveAs.xls"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
-
   describe 'workbook_save_as_html__out_result_post_excel_save_ashtml test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -218,94 +196,6 @@ describe 'CellsApi' do
 
       format = "xlsb"
       newfilename = "OutResult/PostExcelSaveAs.xlsb"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
-
-  describe 'workbook_save_as_xlsm__out_result_post_excel_save_asxlsm test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xlsm"
-      newfilename = "OutResult/PostExcelSaveAs.xlsm"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
-
-  describe 'workbook_save_as_xlsx__out_result_post_excel_save_asxlsx test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xlsx"
-      newfilename = "OutResult/PostExcelSaveAs.xlsx"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
-
-  describe 'workbook_save_as_xltm__out_result_post_excel_save_asxltm test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xltm"
-      newfilename = "OutResult/PostExcelSaveAs.xltm"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
-
-  describe 'workbook_save_as_xltx__out_result_post_excel_save_asxltx test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xltx"
-      newfilename = "OutResult/PostExcelSaveAs.xltx"
 
       
       mapFiles = { }               
@@ -537,26 +427,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'get_workbook_format_xls test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xls"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::GetWorkbookRequest.new(:name=>remote_name,:format=>format,:folder=>remote_folder);
-      @instance.get_workbook(request);
-    end
-  end 
-
   describe 'get_workbook_format_html test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -697,26 +567,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'get_workbook_format_xlsb test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xlsb"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::GetWorkbookRequest.new(:name=>remote_name,:format=>format,:folder=>remote_folder);
-      @instance.get_workbook(request);
-    end
-  end 
-
   describe 'get_workbook_format_xps test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -785,26 +635,6 @@ describe 'CellsApi' do
       remote_name = 'Book1.xlsx'
 
       format = "numbers"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::GetWorkbookRequest.new(:name=>remote_name,:format=>format,:folder=>remote_folder);
-      @instance.get_workbook(request);
-    end
-  end 
-
-  describe 'get_workbook_format_wmf test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "wmf"
 
       
       mapFiles = { }               
@@ -1587,52 +1417,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_save_cloud_xlsm__out_result_convert_workbookxlsm test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xlsm"
-      out_path = "OutResult/ConvertWorkbook.xlsm"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format,:outPath=>out_path);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_save_cloud_xlsx__out_result_convert_workbookxlsx test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xlsx"
-      out_path = "OutResult/ConvertWorkbook.xlsx"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format,:outPath=>out_path);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
   describe 'convert_workbook_save_cloud_xltm__out_result_convert_workbookxltm test' do
     it "should work" do
       remote_folder = 'TestData/In'
@@ -1642,29 +1426,6 @@ describe 'CellsApi' do
 
       format = "xltm"
       out_path = "OutResult/ConvertWorkbook.xltm"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format,:outPath=>out_path);
-      @instance.put_convert_workbook(request);
-    end
-  end 
-
-  describe 'convert_workbook_save_cloud_xltx__out_result_convert_workbookxltx test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "xltx"
-      out_path = "OutResult/ConvertWorkbook.xltx"
 
       
      mapFiles = { }   

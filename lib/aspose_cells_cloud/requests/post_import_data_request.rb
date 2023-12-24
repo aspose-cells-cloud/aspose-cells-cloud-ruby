@@ -35,6 +35,7 @@ module AsposeCellsCloud
     attr_accessor :import_option  
     attr_accessor :folder  
     attr_accessor :storage_name  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -54,6 +55,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -62,7 +66,8 @@ module AsposeCellsCloud
         :'name' => :'name',
         :'import_option' => :'importOption',
         :'folder' => :'folder',
-        :'storage_name' => :'storageName'
+        :'storage_name' => :'storageName',
+        :'region' => :'region'
       }
     end
 
@@ -72,7 +77,8 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'import_option' => :'ImportOption',
         :'folder' => :'String',
-        :'storage_name' => :'String'
+        :'storage_name' => :'String',
+        :'region' => :'String'
       }
     end
 
@@ -92,6 +98,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}

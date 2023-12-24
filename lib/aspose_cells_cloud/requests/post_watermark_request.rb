@@ -34,8 +34,10 @@ module AsposeCellsCloud
     attr_accessor :file  
     attr_accessor :text  
     attr_accessor :color  
+    attr_accessor :out_format  
     attr_accessor :password  
     attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -52,11 +54,17 @@ module AsposeCellsCloud
       if attributes.has_key?(:'color')
           self.color = attributes[:'color']
       end
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
+      end
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
+      end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
     end    
@@ -66,8 +74,10 @@ module AsposeCellsCloud
         :'file' => :'File',
         :'text' => :'text',
         :'color' => :'color',
+        :'out_format' => :'outFormat',
         :'password' => :'password',
-        :'check_excel_restriction' => :'checkExcelRestriction'
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
@@ -77,8 +87,10 @@ module AsposeCellsCloud
         :'file' => :'Hash',
         :'text' => :'String',
         :'color' => :'String',
+        :'out_format' => :'String',
         :'password' => :'String',
-        :'check_excel_restriction' => :'BOOLEAN'
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -106,8 +118,10 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'text'] = self.text if !self.text.nil? 
       query_params[:'color'] = self.color if !self.color.nil? 
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}

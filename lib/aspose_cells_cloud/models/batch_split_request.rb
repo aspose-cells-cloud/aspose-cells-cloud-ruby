@@ -47,6 +47,8 @@ module AsposeCellsCloud
         attr_accessor :out_folder
         #Aspose Cloud storage name.            
         attr_accessor :out_storage
+        #The regional settings for workbook.            
+        attr_accessor :region
         #Indicates save options.            
         attr_accessor :save_options
 
@@ -61,6 +63,7 @@ module AsposeCellsCloud
         :'to_index' => :'ToIndex',
         :'out_folder' => :'OutFolder',
         :'out_storage' => :'OutStorage',
+        :'region' => :'Region',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -76,6 +79,7 @@ module AsposeCellsCloud
         :'to_index' => :'Integer',
         :'out_folder' => :'String',
         :'out_storage' => :'String',
+        :'region' => :'String',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -112,6 +116,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'OutStorage')
           self.out_storage = attributes[:'OutStorage']
       end
+      if attributes.has_key?(:'Region')
+          self.region = attributes[:'Region']
+      end
       if attributes.has_key?(:'SaveOptions')
           self.save_options = attributes[:'SaveOptions']
       end
@@ -146,6 +153,9 @@ module AsposeCellsCloud
       if @out_storage.nil?
           invalid_properties.push("invalid value for 'out_storage', out_storage cannot be nil.")
       end
+      if @region.nil?
+          invalid_properties.push("invalid value for 'region', region cannot be nil.")
+      end
       if @save_options.nil?
           invalid_properties.push("invalid value for 'save_options', save_options cannot be nil.")
       end
@@ -164,6 +174,7 @@ module AsposeCellsCloud
       return false if @to_index.nil?
       return false if @out_folder.nil?
       return false if @out_storage.nil?
+      return false if @region.nil?
       return false if @save_options.nil?
       return true
     end
@@ -181,6 +192,7 @@ module AsposeCellsCloud
           to_index == o.to_index &&
           out_folder == o.out_folder &&
           out_storage == o.out_storage &&
+          region == o.region &&
           save_options == o.save_options 
           std_dev == o.std_dev
     end
@@ -194,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ source_folder , source_storage , match_condition , format , from_index , to_index , out_folder , out_storage , save_options ].hash
+      [ source_folder , source_storage , match_condition , format , from_index , to_index , out_folder , out_storage , region , save_options ].hash
     end
 
     # Builds the object from hash

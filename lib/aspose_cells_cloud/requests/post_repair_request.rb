@@ -32,7 +32,7 @@ module AsposeCellsCloud
   class PostRepairRequest
 
     attr_accessor :file  
-    attr_accessor :format  
+    attr_accessor :out_format  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -43,8 +43,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
-      if attributes.has_key?(:'format')
-          self.format = attributes[:'format']
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
       end
 
     end    
@@ -52,7 +52,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'file' => :'File',
-        :'format' => :'format'
+        :'out_format' => :'outFormat'
       }
     end
 
@@ -60,7 +60,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'file' => :'Hash',
-        :'format' => :'String'
+        :'out_format' => :'String'
       }
     end
 
@@ -78,7 +78,7 @@ module AsposeCellsCloud
       local_var_path = "/cells/repair"
       # query parameters
       query_params = {}
-      query_params[:'format'] = self.format if !self.format.nil? 
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
 
       # header parameters
       header_params = {}

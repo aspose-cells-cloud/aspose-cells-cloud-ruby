@@ -33,9 +33,10 @@ module AsposeCellsCloud
 
     attr_accessor :file  
     attr_accessor :rotate_type  
-    attr_accessor :format  
+    attr_accessor :out_format  
     attr_accessor :password  
     attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -49,14 +50,17 @@ module AsposeCellsCloud
       if attributes.has_key?(:'rotateType')
           self.rotate_type = attributes[:'rotateType']
       end
-      if attributes.has_key?(:'format')
-          self.format = attributes[:'format']
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
       end
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
+      end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
     end    
@@ -65,9 +69,10 @@ module AsposeCellsCloud
       {
         :'file' => :'File',
         :'rotate_type' => :'rotateType',
-        :'format' => :'format',
+        :'out_format' => :'outFormat',
         :'password' => :'password',
-        :'check_excel_restriction' => :'checkExcelRestriction'
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
@@ -76,9 +81,10 @@ module AsposeCellsCloud
       {
         :'file' => :'Hash',
         :'rotate_type' => :'String',
-        :'format' => :'String',
+        :'out_format' => :'String',
         :'password' => :'String',
-        :'check_excel_restriction' => :'BOOLEAN'
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -101,9 +107,10 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'rotateType'] = self.rotate_type if !self.rotate_type.nil? 
-      query_params[:'format'] = self.format if !self.format.nil? 
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}

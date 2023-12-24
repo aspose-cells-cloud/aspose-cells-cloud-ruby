@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportJsonRequest
-        #XML file source            
+        #Json file source            
         attr_accessor :json_file_source
         #Import position description.            
         attr_accessor :import_position

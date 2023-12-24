@@ -32,6 +32,10 @@ module AsposeCellsCloud
   class PostImportRequest
 
     attr_accessor :file  
+    attr_accessor :out_format  
+    attr_accessor :password  
+    attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -42,19 +46,39 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
+      end
+      if attributes.has_key?(:'password')
+          self.password = attributes[:'password']
+      end
+      if attributes.has_key?(:'checkExcelRestriction')
+          self.check_excel_restriction = attributes[:'checkExcelRestriction']
+      end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'file' => :'File'
+        :'file' => :'File',
+        :'out_format' => :'outFormat',
+        :'password' => :'password',
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'file' => :'Hash'
+        :'file' => :'Hash',
+        :'out_format' => :'String',
+        :'password' => :'String',
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -72,6 +96,11 @@ module AsposeCellsCloud
       local_var_path = "/cells/import"
       # query parameters
       query_params = {}
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
+      query_params[:'password'] = self.password if !self.password.nil? 
+      query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
+
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)

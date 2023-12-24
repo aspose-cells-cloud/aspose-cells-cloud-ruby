@@ -33,6 +33,7 @@ module AsposeCellsCloud
 
     attr_accessor :file  
     attr_accessor :type  
+    attr_accessor :out_format  
     attr_accessor :password  
     attr_accessor :check_excel_restriction  
 
@@ -48,6 +49,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'type')
           self.type = attributes[:'type']
       end
+      if attributes.has_key?(:'outFormat')
+          self.out_format = attributes[:'outFormat']
+      end
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
@@ -61,6 +65,7 @@ module AsposeCellsCloud
       {
         :'file' => :'File',
         :'type' => :'type',
+        :'out_format' => :'outFormat',
         :'password' => :'password',
         :'check_excel_restriction' => :'checkExcelRestriction'
       }
@@ -71,6 +76,7 @@ module AsposeCellsCloud
       {
         :'file' => :'Hash',
         :'type' => :'String',
+        :'out_format' => :'String',
         :'password' => :'String',
         :'check_excel_restriction' => :'BOOLEAN'
       }
@@ -91,6 +97,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'type'] = self.type if !self.type.nil? 
+      query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
 

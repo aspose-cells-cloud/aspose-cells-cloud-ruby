@@ -36,6 +36,8 @@ module AsposeCellsCloud
         #            
         attr_accessor :destination_file
         #            
+        attr_accessor :region
+        #            
         attr_accessor :save_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -43,6 +45,7 @@ module AsposeCellsCloud
       {
         :'workbook' => :'Workbook',
         :'destination_file' => :'DestinationFile',
+        :'region' => :'Region',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -52,6 +55,7 @@ module AsposeCellsCloud
       {
         :'workbook' => :'FileSource',
         :'destination_file' => :'String',
+        :'region' => :'String',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -70,6 +74,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'DestinationFile')
           self.destination_file = attributes[:'DestinationFile']
       end
+      if attributes.has_key?(:'Region')
+          self.region = attributes[:'Region']
+      end
       if attributes.has_key?(:'SaveOptions')
           self.save_options = attributes[:'SaveOptions']
       end
@@ -86,6 +93,9 @@ module AsposeCellsCloud
       if @destination_file.nil?
           invalid_properties.push("invalid value for 'destination_file', destination_file cannot be nil.")
       end
+      if @region.nil?
+          invalid_properties.push("invalid value for 'region', region cannot be nil.")
+      end
       if @save_options.nil?
           invalid_properties.push("invalid value for 'save_options', save_options cannot be nil.")
       end
@@ -98,6 +108,7 @@ module AsposeCellsCloud
     def valid?
       return false if @workbook.nil?
       return false if @destination_file.nil?
+      return false if @region.nil?
       return false if @save_options.nil?
       return true
     end
@@ -109,6 +120,7 @@ module AsposeCellsCloud
       self.class == o.class &&
           workbook == o.workbook &&
           destination_file == o.destination_file &&
+          region == o.region &&
           save_options == o.save_options 
           std_dev == o.std_dev
     end
@@ -122,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ workbook , destination_file , save_options ].hash
+      [ workbook , destination_file , region , save_options ].hash
     end
 
     # Builds the object from hash

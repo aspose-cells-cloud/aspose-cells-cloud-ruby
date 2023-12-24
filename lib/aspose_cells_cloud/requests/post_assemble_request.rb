@@ -36,6 +36,7 @@ module AsposeCellsCloud
     attr_accessor :format  
     attr_accessor :password  
     attr_accessor :check_excel_restriction  
+    attr_accessor :region  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -58,6 +59,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -67,7 +71,8 @@ module AsposeCellsCloud
         :'datasource' => :'datasource',
         :'format' => :'format',
         :'password' => :'password',
-        :'check_excel_restriction' => :'checkExcelRestriction'
+        :'check_excel_restriction' => :'checkExcelRestriction',
+        :'region' => :'region'
       }
     end
 
@@ -78,7 +83,8 @@ module AsposeCellsCloud
         :'datasource' => :'String',
         :'format' => :'String',
         :'password' => :'String',
-        :'check_excel_restriction' => :'BOOLEAN'
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -104,6 +110,7 @@ module AsposeCellsCloud
       query_params[:'format'] = self.format if !self.format.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
 
       # header parameters
       header_params = {}
