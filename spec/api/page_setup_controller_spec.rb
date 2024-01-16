@@ -137,4 +137,40 @@ describe 'CellsApi' do
       @instance.post_footer(request);
     end
   end 
+
+  describe 'post_fit_wide_to_pages test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'Book1.xlsx'
+      remote_name = 'Book1.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      request =   AsposeCellsCloud::PostFitWideToPagesRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:folder=>remote_folder,:storageName=>'');
+      @instance.post_fit_wide_to_pages(request);
+    end
+  end 
+
+  describe 'post_fit_tall_to_pages test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'Book1.xlsx'
+      remote_name = 'Book1.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      request =   AsposeCellsCloud::PostFitTallToPagesRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:folder=>remote_folder,:storageName=>'');
+      @instance.post_fit_tall_to_pages(request);
+    end
+  end 
 end

@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="BatchConvertRequestrb.cs">
-   Copyright (c) 2023 Aspose.Cells Cloud
+   Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,6 +45,10 @@ module AsposeCellsCloud
         attr_accessor :out_storage
         #The regional settings for workbook.            
         attr_accessor :region
+        #            
+        attr_accessor :page_wide_fit_on_per_sheet
+        #            
+        attr_accessor :page_tall_fit_on_per_sheet
         #Indicates save options.            
         attr_accessor :save_options
 
@@ -58,6 +62,8 @@ module AsposeCellsCloud
         :'out_folder' => :'OutFolder',
         :'out_storage' => :'OutStorage',
         :'region' => :'Region',
+        :'page_wide_fit_on_per_sheet' => :'PageWideFitOnPerSheet',
+        :'page_tall_fit_on_per_sheet' => :'PageTallFitOnPerSheet',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -72,6 +78,8 @@ module AsposeCellsCloud
         :'out_folder' => :'String',
         :'out_storage' => :'String',
         :'region' => :'String',
+        :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
+        :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
         :'save_options' => :'SaveOptions'
       }
     end
@@ -105,6 +113,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'Region')
           self.region = attributes[:'Region']
       end
+      if attributes.has_key?(:'PageWideFitOnPerSheet')
+          self.page_wide_fit_on_per_sheet = attributes[:'PageWideFitOnPerSheet']
+      end
+      if attributes.has_key?(:'PageTallFitOnPerSheet')
+          self.page_tall_fit_on_per_sheet = attributes[:'PageTallFitOnPerSheet']
+      end
       if attributes.has_key?(:'SaveOptions')
           self.save_options = attributes[:'SaveOptions']
       end
@@ -136,6 +150,12 @@ module AsposeCellsCloud
       if @region.nil?
           invalid_properties.push("invalid value for 'region', region cannot be nil.")
       end
+      if @page_wide_fit_on_per_sheet.nil?
+          invalid_properties.push("invalid value for 'page_wide_fit_on_per_sheet', page_wide_fit_on_per_sheet cannot be nil.")
+      end
+      if @page_tall_fit_on_per_sheet.nil?
+          invalid_properties.push("invalid value for 'page_tall_fit_on_per_sheet', page_tall_fit_on_per_sheet cannot be nil.")
+      end
       if @save_options.nil?
           invalid_properties.push("invalid value for 'save_options', save_options cannot be nil.")
       end
@@ -153,6 +173,8 @@ module AsposeCellsCloud
       return false if @out_folder.nil?
       return false if @out_storage.nil?
       return false if @region.nil?
+      return false if @page_wide_fit_on_per_sheet.nil?
+      return false if @page_tall_fit_on_per_sheet.nil?
       return false if @save_options.nil?
       return true
     end
@@ -169,6 +191,8 @@ module AsposeCellsCloud
           out_folder == o.out_folder &&
           out_storage == o.out_storage &&
           region == o.region &&
+          page_wide_fit_on_per_sheet == o.page_wide_fit_on_per_sheet &&
+          page_tall_fit_on_per_sheet == o.page_tall_fit_on_per_sheet &&
           save_options == o.save_options 
           std_dev == o.std_dev
     end
@@ -182,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ source_folder , source_storage , match_condition , format , out_folder , out_storage , region , save_options ].hash
+      [ source_folder , source_storage , match_condition , format , out_folder , out_storage , region , page_wide_fit_on_per_sheet , page_tall_fit_on_per_sheet , save_options ].hash
     end
 
     # Builds the object from hash

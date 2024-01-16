@@ -47,7 +47,7 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'put_worksheet_add_chart test' do
+  describe 'put_worksheet_chart test' do
     it "should work" do
       remote_folder = 'TestData/In'
 
@@ -60,12 +60,12 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::PutWorksheetAddChartRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:chartType=>'Pie',:upperLeftRow=>5,:upperLeftColumn=>5,:lowerRightRow=>10,:lowerRightColumn=>10,:area=>'C7:D11',:isVertical=>true,:title=>'Aspose Chart',:folder=>remote_folder,:storageName=>'');
-      @instance.put_worksheet_add_chart(request);
+      request =   AsposeCellsCloud::PutWorksheetChartRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:chartType=>'Pie',:upperLeftRow=>5,:upperLeftColumn=>5,:lowerRightRow=>10,:lowerRightColumn=>10,:area=>'C7:D11',:isVertical=>true,:title=>'Aspose Chart',:folder=>remote_folder,:storageName=>'');
+      @instance.put_worksheet_chart(request);
     end
   end 
 
-  describe 'delete_worksheet_delete_chart test' do
+  describe 'delete_worksheet_chart test' do
     it "should work" do
       remote_folder = 'TestData/In'
 
@@ -78,8 +78,8 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::DeleteWorksheetDeleteChartRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:chartIndex=>0,:folder=>remote_folder,:storageName=>'');
-      @instance.delete_worksheet_delete_chart(request);
+      request =   AsposeCellsCloud::DeleteWorksheetChartRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:chartIndex=>0,:folder=>remote_folder,:storageName=>'');
+      @instance.delete_worksheet_chart(request);
     end
   end 
 
@@ -175,7 +175,7 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'delete_worksheet_clear_charts test' do
+  describe 'delete_worksheet_charts test' do
     it "should work" do
       remote_folder = 'TestData/In'
 
@@ -188,8 +188,8 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::DeleteWorksheetClearChartsRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:folder=>remote_folder,:storageName=>'');
-      @instance.delete_worksheet_clear_charts(request);
+      request =   AsposeCellsCloud::DeleteWorksheetChartsRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:folder=>remote_folder,:storageName=>'');
+      @instance.delete_worksheet_charts(request);
     end
   end 
 

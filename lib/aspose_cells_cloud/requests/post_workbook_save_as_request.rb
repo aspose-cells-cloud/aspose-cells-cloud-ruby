@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="PostWorkbookSaveAs_request.rb.cs">
-   Copyright (c) 2023 Aspose.Cells Cloud
+   Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,8 @@ module AsposeCellsCloud
     attr_accessor :out_storage_name  
     attr_accessor :check_excel_restriction  
     attr_accessor :region  
+    attr_accessor :page_wide_fit_on_per_sheet  
+    attr_accessor :page_tall_fit_on_per_sheet  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -78,6 +80,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
+      if attributes.has_key?(:'pageWideFitOnPerSheet')
+          self.page_wide_fit_on_per_sheet = attributes[:'pageWideFitOnPerSheet']
+      end
+      if attributes.has_key?(:'pageTallFitOnPerSheet')
+          self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -92,7 +100,9 @@ module AsposeCellsCloud
         :'storage_name' => :'storageName',
         :'out_storage_name' => :'outStorageName',
         :'check_excel_restriction' => :'checkExcelRestriction',
-        :'region' => :'region'
+        :'region' => :'region',
+        :'page_wide_fit_on_per_sheet' => :'pageWideFitOnPerSheet',
+        :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet'
       }
     end
 
@@ -108,7 +118,9 @@ module AsposeCellsCloud
         :'storage_name' => :'String',
         :'out_storage_name' => :'String',
         :'check_excel_restriction' => :'BOOLEAN',
-        :'region' => :'String'
+        :'region' => :'String',
+        :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
+        :'page_tall_fit_on_per_sheet' => :'BOOLEAN'
       }
     end
 
@@ -138,6 +150,8 @@ module AsposeCellsCloud
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
       query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
+      query_params[:'pageWideFitOnPerSheet'] = self.page_wide_fit_on_per_sheet if !self.page_wide_fit_on_per_sheet.nil? 
+      query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
 
       # header parameters
       header_params = {}

@@ -431,7 +431,7 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'post_worsheet_text_replace test' do
+  describe 'post_worksheet_text_replace test' do
     it "should work" do
       remote_folder = 'TestData/In'
 
@@ -444,8 +444,8 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::PostWorsheetTextReplaceRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:oldValue=>'123',:newValue=>'456',:folder=>remote_folder,:storageName=>'');
-      @instance.post_worsheet_text_replace(request);
+      request =   AsposeCellsCloud::PostWorksheetTextReplaceRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:oldValue=>'123',:newValue=>'456',:folder=>remote_folder,:storageName=>'');
+      @instance.post_worksheet_text_replace(request);
     end
   end 
 

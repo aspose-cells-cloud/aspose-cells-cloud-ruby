@@ -358,7 +358,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -374,7 +374,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -390,7 +390,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -406,7 +406,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -422,7 +422,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -438,7 +438,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -454,7 +454,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -470,7 +470,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -486,7 +486,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -502,7 +502,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -518,7 +518,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -534,7 +534,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -550,7 +550,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -566,7 +566,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -582,7 +582,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -598,7 +598,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -614,7 +614,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -630,7 +630,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -646,7 +646,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -662,7 +662,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -678,7 +678,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -694,7 +694,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -710,7 +710,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -726,7 +726,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -742,7 +742,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -758,7 +758,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -774,7 +774,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 
@@ -790,7 +790,7 @@ describe 'CellsApi' do
      mapFiles = { }   
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:format=>format);
+      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
       @instance.post_assemble(request);
     end
   end 

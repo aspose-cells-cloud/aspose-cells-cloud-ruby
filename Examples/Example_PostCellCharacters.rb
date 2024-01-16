@@ -1,0 +1,24 @@
+require 'openssl'
+require 'bundler'
+require 'aspose_cells_cloud'
+
+@instance = AsposeCellsCloud::CellsApi.new(ENV['CellsCloudClientId'], ENV['CellsCloudClientSecret'],'v3.0',ENV['CellsCloudApiBaseUrl'])
+
+remote_folder = 'TestData/In'
+
+local_name = 'Book1.xlsx'
+remote_name = 'Book1.xlsx'
+
+    
+mapFiles = { }               
+mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+ 
+uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+@instance.upload_file(uploadrequest)
+optionsvalue0Font = AsposeCellsCloud::Font.new(:IsBold=>true ,:Size=>16 );
+optionsvalue0 = AsposeCellsCloud::FontSetting.new(:Length=>5 ,:StartIndex=>0 ,:Font=>optionsvalue0Font );
+options = [
+    optionsvalue0
+];
+request =   AsposeCellsCloud::PostCellCharactersRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:cellName=>'E36',:options=>options,:folder=>remote_folder,:storageName=>'');
+@instance.post_cell_characters(request);

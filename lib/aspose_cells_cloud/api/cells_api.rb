@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="CellsApi.cs">
-   Copyright (c) 2023 Aspose.Cells Cloud
+   Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -328,7 +328,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheet columns description.
+    # Retrieve descriptions of worksheet columns.
 
     def get_worksheet_columns( get_worksheet_columns_request, opts = {})
 
@@ -336,7 +336,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets worksheet column width.
+    # Set worksheet column width.
 
     def post_set_worksheet_column_width( post_set_worksheet_column_width_request, opts = {})
 
@@ -344,7 +344,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets worksheet column data by column's index.
+    # Retrieve worksheet column data by column index.
 
     def get_worksheet_column( get_worksheet_column_request, opts = {})
 
@@ -352,7 +352,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Insert worksheet columns.
+    # Insert worksheet columns in the worksheet.
 
     def put_insert_worksheet_columns( put_insert_worksheet_columns_request, opts = {})
 
@@ -360,7 +360,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete worksheet columns.
+    # Delete worksheet columns in the worksheet.
 
     def delete_worksheet_columns( delete_worksheet_columns_request, opts = {})
 
@@ -368,7 +368,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Hide worksheet columns.
+    # Hide worksheet columns in the worksheet.
 
     def post_hide_worksheet_columns( post_hide_worksheet_columns_request, opts = {})
 
@@ -376,7 +376,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unhide worksheet columns.
+    # Unhide worksheet columns in the worksheet.
 
     def post_unhide_worksheet_columns( post_unhide_worksheet_columns_request, opts = {})
 
@@ -384,7 +384,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Group worksheet columns.
+    # Group worksheet columns in the worksheet.
 
     def post_group_worksheet_columns( post_group_worksheet_columns_request, opts = {})
 
@@ -400,7 +400,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copy data to destination columns from source columns in worksheet.
+    # Copy data from source columns to destination columns in the worksheet.
 
     def post_copy_worksheet_columns( post_copy_worksheet_columns_request, opts = {})
 
@@ -408,7 +408,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets column style in worksheet.
+    # Set column style in the worksheet.
 
     def post_column_style( post_column_style_request, opts = {})
 
@@ -416,7 +416,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get rows description in worksheet.
+    # Retrieve descriptions of rows in the worksheet.
 
     def get_worksheet_rows( get_worksheet_rows_request, opts = {})
 
@@ -424,7 +424,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets row data by row's index in worksheet.
+    # Retrieve row data by the row's index in the worksheet.
 
     def get_worksheet_row( get_worksheet_row_request, opts = {})
 
@@ -432,7 +432,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes row in worksheet.
+    # Delete a row in the worksheet.
 
     def delete_worksheet_row( delete_worksheet_row_request, opts = {})
 
@@ -440,7 +440,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete several rows in worksheet.
+    # Delete several rows in the worksheet.
 
     def delete_worksheet_rows( delete_worksheet_rows_request, opts = {})
 
@@ -448,7 +448,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Insert several new rows in worksheet.
+    # Insert several new rows in the worksheet.
 
     def put_insert_worksheet_rows( put_insert_worksheet_rows_request, opts = {})
 
@@ -456,7 +456,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Inserts new row in worksheet.
+    # Insert a new row in the worksheet.
 
     def put_insert_worksheet_row( put_insert_worksheet_row_request, opts = {})
 
@@ -464,7 +464,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates row in worksheet.
+    # Update height of rows in the worksheet.
 
     def post_update_worksheet_row( post_update_worksheet_row_request, opts = {})
 
@@ -480,7 +480,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unhide rows in worksheet.
+    # Unhide rows in the worksheet.
 
     def post_unhide_worksheet_rows( post_unhide_worksheet_rows_request, opts = {})
 
@@ -488,7 +488,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Group rows in worksheet.
+    # Group rows in the worksheet.
 
     def post_group_worksheet_rows( post_group_worksheet_rows_request, opts = {})
 
@@ -496,7 +496,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Ungroup rows in worksheet.
+    # Ungroup rows in the worksheet.
 
     def post_ungroup_worksheet_rows( post_ungroup_worksheet_rows_request, opts = {})
 
@@ -504,7 +504,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copies data and formats of some whole rows in worksheet.
+    # Copy data and formats from specific entire rows in the worksheet.
 
     def post_copy_worksheet_rows( post_copy_worksheet_rows_request, opts = {})
 
@@ -512,7 +512,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Applies formats for a whole row in worksheet.
+    # Apply formats to an entire row in the worksheet.
 
     def post_row_style( post_row_style_request, opts = {})
 
@@ -578,17 +578,17 @@ module AsposeCellsCloud
 
     # Add a new chart in the worksheet.
 
-    def put_worksheet_add_chart( put_worksheet_add_chart_request, opts = {})
+    def put_worksheet_chart( put_worksheet_chart_request, opts = {})
 
-       data, _status_code, _headers = put_worksheet_add_chart_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = put_worksheet_chart_request.create_http_request(@api_client,opts )
        return data
     end
 
     # Delete a chart by index in the worksheet.
 
-    def delete_worksheet_delete_chart( delete_worksheet_delete_chart_request, opts = {})
+    def delete_worksheet_chart( delete_worksheet_chart_request, opts = {})
 
-       data, _status_code, _headers = delete_worksheet_delete_chart_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = delete_worksheet_chart_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -616,7 +616,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Show chart legend in worksheet.
+    # Show chart legend in the worksheet.
 
     def put_worksheet_chart_legend( put_worksheet_chart_legend_request, opts = {})
 
@@ -624,7 +624,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Hides chart legend in worksheet.
+    # Hides chart legend in the worksheet.
 
     def delete_worksheet_chart_legend( delete_worksheet_chart_legend_request, opts = {})
 
@@ -632,15 +632,15 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear the charts in worksheets.
+    # Clear the charts in the worksheets.
 
-    def delete_worksheet_clear_charts( delete_worksheet_clear_charts_request, opts = {})
+    def delete_worksheet_charts( delete_worksheet_charts_request, opts = {})
 
-       data, _status_code, _headers = delete_worksheet_clear_charts_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = delete_worksheet_charts_request.create_http_request(@api_client,opts )
        return data
     end
 
-    # Gets chart title description in worksheet.
+    # Retrieve chart title description in the worksheet.
 
     def get_worksheet_chart_title( get_worksheet_chart_title_request, opts = {})
 
@@ -648,7 +648,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update chart title in worksheet.
+    # Update chart title in the worksheet.
 
     def post_worksheet_chart_title( post_worksheet_chart_title_request, opts = {})
 
@@ -656,7 +656,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Add chart title / Set chart title visible
+    # Set chart title in the worksheet.
 
     def put_worksheet_chart_title( put_worksheet_chart_title_request, opts = {})
 
@@ -664,7 +664,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Hides chart title in worksheet.
+    # Hide chart title in the worksheet.
 
     def delete_worksheet_chart_title( delete_worksheet_chart_title_request, opts = {})
 
@@ -672,6 +672,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Retrieve descriptions of chart seriesaxis in the chart.
 
     def get_chart_series_axis( get_chart_series_axis_request, opts = {})
 
@@ -679,6 +680,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Retrieve descriptions of chart series axis in the chart.
 
     def get_chart_category_axis( get_chart_category_axis_request, opts = {})
 
@@ -686,6 +688,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Retrieve chart value axis in the chart.
 
     def get_chart_value_axis( get_chart_value_axis_request, opts = {})
 
@@ -693,6 +696,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Retrieve chart second category axis in the chart
 
     def get_chart_second_category_axis( get_chart_second_category_axis_request, opts = {})
 
@@ -700,6 +704,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Retrieve chart second value axis in the chart.
 
     def get_chart_second_value_axis( get_chart_second_value_axis_request, opts = {})
 
@@ -707,6 +712,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update chart series axis in the chart.
 
     def post_chart_series_axis( post_chart_series_axis_request, opts = {})
 
@@ -714,6 +720,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update chart category axis in the chart.
 
     def post_chart_category_axis( post_chart_category_axis_request, opts = {})
 
@@ -721,6 +728,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update chart value axis in the chart.
 
     def post_chart_value_axis( post_chart_value_axis_request, opts = {})
 
@@ -728,6 +736,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update chart sencond category axis in the chart.
 
     def post_chart_second_category_axis( post_chart_second_category_axis_request, opts = {})
 
@@ -735,6 +744,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update chart sencond value axis in the chart.
 
     def post_chart_second_value_axis( post_chart_second_value_axis_request, opts = {})
 
@@ -742,7 +752,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get conditional formattings description.
+    # Retrieve descriptions of conditional formattings in a worksheet.
 
     def get_worksheet_conditional_formattings( get_worksheet_conditional_formattings_request, opts = {})
 
@@ -750,7 +760,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets conditional formatting description in worksheet.
+    # Retrieve conditional formatting descriptions in the worksheet.
 
     def get_worksheet_conditional_formatting( get_worksheet_conditional_formatting_request, opts = {})
 
@@ -758,7 +768,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a condition formatting in worksheet.
+    # Add conditional formatting in the worksheet.
 
     def put_worksheet_conditional_formatting( put_worksheet_conditional_formatting_request, opts = {})
 
@@ -766,7 +776,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a format condition in worksheet.
+    # Add a format condition in the worksheet.
 
     def put_worksheet_format_condition( put_worksheet_format_condition_request, opts = {})
 
@@ -774,7 +784,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a cell area for format condition.
+    # Add a cell area for the format condition in the worksheet.
 
     def put_worksheet_format_condition_area( put_worksheet_format_condition_area_request, opts = {})
 
@@ -782,7 +792,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a condition for format condition.
+    # Add a condition for the format condition in the worksheet.
 
     def put_worksheet_format_condition_condition( put_worksheet_format_condition_condition_request, opts = {})
 
@@ -790,7 +800,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear all condition formattings.
+    # Clear all conditional formattings in the worksheet.
 
     def delete_worksheet_conditional_formattings( delete_worksheet_conditional_formattings_request, opts = {})
 
@@ -806,7 +816,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Removes cell area from conditional formatting.
+    # Remove cell area from conditional formatting.
 
     def delete_worksheet_conditional_formatting_area( delete_worksheet_conditional_formatting_area_request, opts = {})
 
@@ -951,7 +961,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get hyperlinks description in worksheet.
+    # Retrieve descriptions of hyperlinks in the worksheet.
 
     def get_worksheet_hyperlinks( get_worksheet_hyperlinks_request, opts = {})
 
@@ -959,7 +969,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets hyperlink description by index in worksheet.
+    # Retrieve hyperlink description by index in the worksheet.
 
     def get_worksheet_hyperlink( get_worksheet_hyperlink_request, opts = {})
 
@@ -967,7 +977,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes hyperlink by index in worksheet.
+    # Delete hyperlink by index in the worksheet.
 
     def delete_worksheet_hyperlink( delete_worksheet_hyperlink_request, opts = {})
 
@@ -975,7 +985,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates hyperlink by index in worksheet.
+    # Update hyperlink by index in the worksheet.
 
     def post_worksheet_hyperlink( post_worksheet_hyperlink_request, opts = {})
 
@@ -983,7 +993,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds hyperlink in worksheet.
+    # Add hyperlink in the worksheet.
 
     def put_worksheet_hyperlink( put_worksheet_hyperlink_request, opts = {})
 
@@ -991,7 +1001,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all hyperlinks in worksheet.
+    # Delete all hyperlinks in the worksheet.
 
     def delete_worksheet_hyperlinks( delete_worksheet_hyperlinks_request, opts = {})
 
@@ -1119,7 +1129,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get listobjects description in worksheet.
+    # Retrieve descriptions of ListObjects in the worksheet.
 
     def get_worksheet_list_objects( get_worksheet_list_objects_request, opts = {})
 
@@ -1127,7 +1137,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets list object description by index in worksheet.
+    # Retrieve list object description by index in the worksheet.
 
     def get_worksheet_list_object( get_worksheet_list_object_request, opts = {})
 
@@ -1135,7 +1145,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a list object in worksheet.
+    # Add a ListObject in the worksheet.
 
     def put_worksheet_list_object( put_worksheet_list_object_request, opts = {})
 
@@ -1143,7 +1153,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete worksheet list objects in worksheet.
+    # Delete ListObjects in the worksheet.
 
     def delete_worksheet_list_objects( delete_worksheet_list_objects_request, opts = {})
 
@@ -1151,7 +1161,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes list object by index in worksheet.
+    # Delete list object by index in the worksheet.
 
     def delete_worksheet_list_object( delete_worksheet_list_object_request, opts = {})
 
@@ -1159,7 +1169,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates list object in worksheet.
+    # Update list object by index in the worksheet.
 
     def post_worksheet_list_object( post_worksheet_list_object_request, opts = {})
 
@@ -1167,7 +1177,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Converts list object to range in worksheet.
+    # Convert list object to range in the worksheet.
 
     def post_worksheet_list_object_convert_to_range( post_worksheet_list_object_convert_to_range_request, opts = {})
 
@@ -1175,7 +1185,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Creates pivot table with list object in worksheet.
+    # Create a pivot table with a list object in the worksheet.
 
     def post_worksheet_list_object_summarize_with_pivot_table( post_worksheet_list_object_summarize_with_pivot_table_request, opts = {})
 
@@ -1183,7 +1193,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sorts list object in worksheet.
+    # Sort list object in the worksheet.
 
     def post_worksheet_list_object_sort_table( post_worksheet_list_object_sort_table_request, opts = {})
 
@@ -1191,7 +1201,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Remove duplicates on list object.
+    # Remove duplicates in list object.
 
     def post_worksheet_list_object_remove_duplicates( post_worksheet_list_object_remove_duplicates_request, opts = {})
 
@@ -1207,7 +1217,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update list column properties.
+    # Update list column in list object.
 
     def post_worksheet_list_column( post_worksheet_list_column_request, opts = {})
 
@@ -1215,7 +1225,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update table total of list columns.
+    # Update total of list columns in the table.
 
     def post_worksheet_list_columns_total( post_worksheet_list_columns_total_request, opts = {})
 
@@ -1223,7 +1233,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get OLE objects description in worksheet.
+    # Retrieve descriptions of OLE objects in the worksheet.
 
     def get_worksheet_ole_objects( get_worksheet_ole_objects_request, opts = {})
 
@@ -1231,7 +1241,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets OLE object info or get the OLE object in some format.
+    # Retrieve the OLE object in a specified format in the worksheet.
 
     def get_worksheet_ole_object( get_worksheet_ole_object_request, opts = {})
 
@@ -1239,7 +1249,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all OLE objects in  worksheet.
+    # Delete all OLE objects in the worksheet.
 
     def delete_worksheet_ole_objects( delete_worksheet_ole_objects_request, opts = {})
 
@@ -1247,7 +1257,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes an OLE object in worksheet.
+    # Delete an OLE object in the worksheet.
 
     def delete_worksheet_ole_object( delete_worksheet_ole_object_request, opts = {})
 
@@ -1263,7 +1273,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Add an OLE object in worksheet.
+    # Add an OLE object in the worksheet.
 
     def put_worksheet_ole_object( put_worksheet_ole_object_request, opts = {})
 
@@ -1271,7 +1281,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get vertical page breaks description in worksheet.
+    # Retrieve descriptions of vertical page breaks in the worksheet.
 
     def get_vertical_page_breaks( get_vertical_page_breaks_request, opts = {})
 
@@ -1279,7 +1289,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get horizontal page breaks descripton in worksheet.
+    # Retrieve descriptions of horizontal page breaks in the worksheet.
 
     def get_horizontal_page_breaks( get_horizontal_page_breaks_request, opts = {})
 
@@ -1287,7 +1297,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets a vertical page break description in worksheet.
+    # Retrieve a vertical page break description in the worksheet.
 
     def get_vertical_page_break( get_vertical_page_break_request, opts = {})
 
@@ -1295,7 +1305,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets a horizontal page breaks descripton in worksheet.
+    # Retrieve a horizontal page break descripton in the worksheet.
 
     def get_horizontal_page_break( get_horizontal_page_break_request, opts = {})
 
@@ -1303,7 +1313,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a vertical page break in worksheet.
+    # Add a vertical page break in the worksheet.
 
     def put_vertical_page_break( put_vertical_page_break_request, opts = {})
 
@@ -1311,7 +1321,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a horizontal page breaks in worksheet.
+    # Add a horizontal page breaks in the worksheet.
 
     def put_horizontal_page_break( put_horizontal_page_break_request, opts = {})
 
@@ -1319,7 +1329,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete vertical page breaks in worksheet.
+    # Delete vertical page breaks in the worksheet.
 
     def delete_vertical_page_breaks( delete_vertical_page_breaks_request, opts = {})
 
@@ -1327,7 +1337,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete horizontal page breaks in worksheet.
+    # Delete horizontal page breaks in the worksheet.
 
     def delete_horizontal_page_breaks( delete_horizontal_page_breaks_request, opts = {})
 
@@ -1335,7 +1345,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete a vertical page breaks in worksheet.
+    # Delete a vertical page break in the worksheet.
 
     def delete_vertical_page_break( delete_vertical_page_break_request, opts = {})
 
@@ -1343,7 +1353,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete a horizontal page breaks in worksheet.
+    # Delete a horizontal page break in the worksheet.
 
     def delete_horizontal_page_break( delete_horizontal_page_break_request, opts = {})
 
@@ -1351,7 +1361,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets page setup description in worksheet.
+    # Retrieve page setup description in the worksheet.
 
     def get_page_setup( get_page_setup_request, opts = {})
 
@@ -1359,7 +1369,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates page setup in worksheet.
+    # Update page setup in the worksheet.
 
     def post_page_setup( post_page_setup_request, opts = {})
 
@@ -1367,7 +1377,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clears header footer in worksheet.
+    # Clear header and footer in the worksheet.
 
     def delete_header_footer( delete_header_footer_request, opts = {})
 
@@ -1375,7 +1385,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets page header description in worksheet.
+    # Retrieve page header description in the worksheet.
 
     def get_header( get_header_request, opts = {})
 
@@ -1383,7 +1393,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates page header in worksheet.
+    # Update page header in the worksheet.
 
     def post_header( post_header_request, opts = {})
 
@@ -1391,7 +1401,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets page footer description in worksheet.
+    # Retrieve page footer description in the worksheet.
 
     def get_footer( get_footer_request, opts = {})
 
@@ -1399,7 +1409,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update  page footer description in worksheet.
+    # Update page footer in the worksheet.
 
     def post_footer( post_footer_request, opts = {})
 
@@ -1407,7 +1417,23 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get pictures description in worksheet.
+    # Set the scale at which the page will fit wide when printed on the sheet.
+
+    def post_fit_wide_to_pages( post_fit_wide_to_pages_request, opts = {})
+
+       data, _status_code, _headers = post_fit_wide_to_pages_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Set the scale at which the page will fit tall when printed on the sheet.
+
+    def post_fit_tall_to_pages( post_fit_tall_to_pages_request, opts = {})
+
+       data, _status_code, _headers = post_fit_tall_to_pages_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Retrieve descriptions of pictures in the worksheet.
 
     def get_worksheet_pictures( get_worksheet_pictures_request, opts = {})
 
@@ -1415,7 +1441,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets a picture by number in worksheet.
+    # Retrieve a picture by number in the worksheet.
 
     def get_worksheet_picture_with_format( get_worksheet_picture_with_format_request, opts = {})
 
@@ -1423,7 +1449,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a new picture in worksheet.
+    # Add a new picture in the worksheet.
 
     def put_worksheet_add_picture( put_worksheet_add_picture_request, opts = {})
 
@@ -1431,7 +1457,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates a picture by index in worksheet.
+    # Update a picture by index in the worksheet.
 
     def post_worksheet_picture( post_worksheet_picture_request, opts = {})
 
@@ -1439,7 +1465,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a picture object in worksheet
+    # Delete a picture object by index in the worksheet.
 
     def delete_worksheet_picture( delete_worksheet_picture_request, opts = {})
 
@@ -1447,7 +1473,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all pictures in worksheet.
+    # Delete all pictures in the worksheet.
 
     def delete_worksheet_pictures( delete_worksheet_pictures_request, opts = {})
 
@@ -1455,7 +1481,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheet pivottables description.
+    # Retrieve descriptions of pivottables  in the worksheet.
 
     def get_worksheet_pivot_tables( get_worksheet_pivot_tables_request, opts = {})
 
@@ -1463,7 +1489,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets a pivottable info by index in worksheet.
+    # Retrieve PivotTable information by index in the worksheet.
 
     def get_worksheet_pivot_table( get_worksheet_pivot_table_request, opts = {})
 
@@ -1471,7 +1497,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets pivot field description in pivot table.
+    # Retrieve descriptions of pivot fields in the PivotTable.
 
     def get_pivot_table_field( get_pivot_table_field_request, opts = {})
 
@@ -1479,7 +1505,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets pivot table filters in worksheet.
+    # Gets PivotTable filters in worksheet.
 
     def get_worksheet_pivot_table_filters( get_worksheet_pivot_table_filters_request, opts = {})
 
@@ -1487,7 +1513,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets pivot table filters in worksheet.
+    # Retrieve PivotTable filters in the worksheet.
 
     def get_worksheet_pivot_table_filter( get_worksheet_pivot_table_filter_request, opts = {})
 
@@ -1495,7 +1521,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a pivot table in worksheet.
+    # Add a PivotTable in the worksheet.
 
     def put_worksheet_pivot_table( put_worksheet_pivot_table_request, opts = {})
 
@@ -1503,7 +1529,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a pivot field in pivot table
+    # Add a pivot field in the PivotTable.
 
     def put_pivot_table_field( put_pivot_table_field_request, opts = {})
 
@@ -1511,7 +1537,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a pivot filter for piovt table index
+    # Add a pivot filter to the PivotTable.
 
     def put_worksheet_pivot_table_filter( put_worksheet_pivot_table_filter_request, opts = {})
 
@@ -1519,7 +1545,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Hides pivot field item in pivot table.
+    # Hide a pivot field item in the PivotTable.
 
     def post_pivot_table_field_hide_item( post_pivot_table_field_hide_item_request, opts = {})
 
@@ -1527,7 +1553,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Moves pivot field in pivot table.
+    # Move a pivot field in the PivotTable.
 
     def post_pivot_table_field_move_to( post_pivot_table_field_move_to_request, opts = {})
 
@@ -1535,7 +1561,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates cell style in pivot table.
+    # Update cell style in the PivotTable.
 
     def post_pivot_table_cell_style( post_pivot_table_cell_style_request, opts = {})
 
@@ -1543,7 +1569,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates style in pivot table.
+    # Update style in the PivotTable.
 
     def post_pivot_table_style( post_pivot_table_style_request, opts = {})
 
@@ -1551,6 +1577,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update pivot fields in the PivotTable.
 
     def post_pivot_table_update_pivot_fields( post_pivot_table_update_pivot_fields_request, opts = {})
 
@@ -1558,6 +1585,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Update pivot field in the PivotTable.
 
     def post_pivot_table_update_pivot_field( post_pivot_table_update_pivot_field_request, opts = {})
 
@@ -1565,7 +1593,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Calculates pivottable's data to cells.
+    # Calculate pivottable's data to cells.
 
     def post_worksheet_pivot_table_calculate( post_worksheet_pivot_table_calculate_request, opts = {})
 
@@ -1573,7 +1601,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Moves pivot table in worksheet.
+    # Move PivotTable in the worksheet.
 
     def post_worksheet_pivot_table_move( post_worksheet_pivot_table_move_request, opts = {})
 
@@ -1581,7 +1609,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete pivot tables in worksheet.
+    # Delete PivotTables in the worksheet.
 
     def delete_worksheet_pivot_tables( delete_worksheet_pivot_tables_request, opts = {})
 
@@ -1589,7 +1617,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes  pivot table by index in worksheet.
+    # Delete PivotTable by index in the worksheet.
 
     def delete_worksheet_pivot_table( delete_worksheet_pivot_table_request, opts = {})
 
@@ -1597,7 +1625,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes pivot field in pivot table.
+    # Delete a pivot field in the PivotTable.
 
     def delete_pivot_table_field( delete_pivot_table_field_request, opts = {})
 
@@ -1605,7 +1633,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all pivot filters in piovt table.
+    # Delete all pivot filters in the PivotTable.
 
     def delete_worksheet_pivot_table_filters( delete_worksheet_pivot_table_filters_request, opts = {})
 
@@ -1613,7 +1641,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a pivot filter in piovt table.
+    # Delete a pivot filter in the PivotTable.
 
     def delete_worksheet_pivot_table_filter( delete_worksheet_pivot_table_filter_request, opts = {})
 
@@ -1621,7 +1649,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get document properties description.
+    # Retrieve descriptions of Excel file properties.
 
     def get_document_properties( get_document_properties_request, opts = {})
 
@@ -1629,7 +1657,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets/creates a sdocument property.
+    # Set or add an Excel property.
 
     def put_document_property( put_document_property_request, opts = {})
 
@@ -1637,7 +1665,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets document property by name.
+    # Get Excel property by name.
 
     def get_document_property( get_document_property_request, opts = {})
 
@@ -1645,7 +1673,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a document property.
+    # Delete an Excel property.
 
     def delete_document_property( delete_document_property_request, opts = {})
 
@@ -1653,7 +1681,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all custom document properties and clean built-in ones.
+    # Delete all custom document properties and reset built-in ones.
 
     def delete_document_properties( delete_document_properties_request, opts = {})
 
@@ -1741,7 +1769,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copys content to destination range from source range in worksheet.
+    # Copy content from the source range to the destination range in the worksheet.
 
     def post_worksheet_cells_ranges_copy( post_worksheet_cells_ranges_copy_request, opts = {})
 
@@ -1749,7 +1777,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Combines a range of cells into a single cell.
+    # Merge a range of cells into a single cell.
 
     def post_worksheet_cells_range_merge( post_worksheet_cells_range_merge_request, opts = {})
 
@@ -1757,7 +1785,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unmerges merged cells of this range.
+    # Unmerge merged cells within this range.
 
     def post_worksheet_cells_range_un_merge( post_worksheet_cells_range_un_merge_request, opts = {})
 
@@ -1765,7 +1793,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets the style of the range.
+    # Set the style for the specified range.
 
     def post_worksheet_cells_range_style( post_worksheet_cells_range_style_request, opts = {})
 
@@ -1773,7 +1801,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get the value of cells in range.
+    # Retrieve the values of cells within the specified range.
 
     def get_worksheet_cells_range_value( get_worksheet_cells_range_value_request, opts = {})
 
@@ -1781,7 +1809,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Puts a value into the range, if appropriate the value will be converted to other data type and cell's number format will be reset.
+    # Assign a value to the range; if necessary, the value will be converted to another data type, and the cell's number format will be reset.
 
     def post_worksheet_cells_range_value( post_worksheet_cells_range_value_request, opts = {})
 
@@ -1789,7 +1817,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Moves the current range to the dest range.
+    # Move the current range to the destination range.
 
     def post_worksheet_cells_range_move_to( post_worksheet_cells_range_move_to_request, opts = {})
 
@@ -1797,7 +1825,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets data sort around a range of cells.
+    # Perform data sorting around a range of cells.
 
     def post_worksheet_cells_range_sort( post_worksheet_cells_range_sort_request, opts = {})
 
@@ -1805,7 +1833,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets outline border around a range of cells.
+    # Apply an outline border around a range of cells.
 
     def post_worksheet_cells_range_outline_border( post_worksheet_cells_range_outline_border_request, opts = {})
 
@@ -1813,7 +1841,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets column width of range.
+    # Set the column width of the specified range.
 
     def post_worksheet_cells_range_column_width( post_worksheet_cells_range_column_width_request, opts = {})
 
@@ -1829,7 +1857,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Inserts a range of cells and shift cells according to the shift option.
+    # Insert a range of cells and shift existing cells based on the specified shift option.
 
     def put_worksheet_cells_range( put_worksheet_cells_range_request, opts = {})
 
@@ -1837,7 +1865,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a range of cells and shift cells according to the shift option.
+    # Delete a range of cells and shift existing cells based on the specified shift option.
 
     def delete_worksheet_cells_range( delete_worksheet_cells_range_request, opts = {})
 
@@ -1845,7 +1873,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get shapes description in worksheet.
+    # Retrieve descriptions of shapes in the worksheet.
 
     def get_worksheet_shapes( get_worksheet_shapes_request, opts = {})
 
@@ -1853,7 +1881,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets shape description in worksheet.
+    # Retrieve description of shape in the worksheet.
 
     def get_worksheet_shape( get_worksheet_shape_request, opts = {})
 
@@ -1861,7 +1889,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds shape in worksheet.
+    # Add a shape in the worksheet.
 
     def put_worksheet_shape( put_worksheet_shape_request, opts = {})
 
@@ -1869,7 +1897,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # delete all shapes in worksheet.
+    # Delete all shapes in the worksheet.
 
     def delete_worksheet_shapes( delete_worksheet_shapes_request, opts = {})
 
@@ -1877,7 +1905,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a shape in worksheet.
+    # Delete a shape in the worksheet.
 
     def delete_worksheet_shape( delete_worksheet_shape_request, opts = {})
 
@@ -1885,7 +1913,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates a shape in worksheet.
+    # Update a shape in the worksheet.
 
     def post_worksheet_shape( post_worksheet_shape_request, opts = {})
 
@@ -1893,6 +1921,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Group shapes in the worksheet.
 
     def post_worksheet_group_shape( post_worksheet_group_shape_request, opts = {})
 
@@ -1900,6 +1929,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Ungroup shapes in the worksheet.
 
     def post_worksheet_ungroup_shape( post_worksheet_ungroup_shape_request, opts = {})
 
@@ -1907,7 +1937,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheet sparkline groups description.
+    # Retrieve descriptions of sparkline groups in the worksheet.
 
     def get_worksheet_sparkline_groups( get_worksheet_sparkline_groups_request, opts = {})
 
@@ -1915,7 +1945,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheet sparkline group description.
+    # Retrieve description of a sparkline group in the worksheet.
 
     def get_worksheet_sparkline_group( get_worksheet_sparkline_group_request, opts = {})
 
@@ -1923,7 +1953,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete worksheet sparkline groups description.
+    # Delete sparkline groups in the worksheet.
 
     def delete_worksheet_sparkline_groups( delete_worksheet_sparkline_groups_request, opts = {})
 
@@ -1931,7 +1961,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete worksheet sparkline group description.
+    # Delete a sparkline group in the worksheet.
 
     def delete_worksheet_sparkline_group( delete_worksheet_sparkline_group_request, opts = {})
 
@@ -1939,7 +1969,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Put worksheet sparkline group description.
+    # Add a sparkline group in the worksheet.
 
     def put_worksheet_sparkline_group( put_worksheet_sparkline_group_request, opts = {})
 
@@ -1947,7 +1977,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Post worksheet sparkline group description.
+    # Update a sparkline group in the worksheet.
 
     def post_worksheet_sparkline_group( post_worksheet_sparkline_group_request, opts = {})
 
@@ -1963,7 +1993,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets workbook default style description.
+    # Retrieve the description of the default style for the workbook.
 
     def get_workbook_default_style( get_workbook_default_style_request, opts = {})
 
@@ -1971,7 +2001,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get workbook's text items.
+    # Retrieve text items in the workbook.
 
     def get_workbook_text_items( get_workbook_text_items_request, opts = {})
 
@@ -1979,7 +2009,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get workbook's names.
+    # Retrieve named ranges in the workbook.
 
     def get_workbook_names( get_workbook_names_request, opts = {})
 
@@ -1987,7 +2017,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Defines a new name in workbook.
+    # Define a new name in the workbook.
 
     def put_workbook_name( put_workbook_name_request, opts = {})
 
@@ -1995,7 +2025,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets workbook's name description.
+    # Retrieve description of a named range in the workbook.
 
     def get_workbook_name( get_workbook_name_request, opts = {})
 
@@ -2003,7 +2033,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update workbook's name.
+    # Update a named range in the workbook.
 
     def post_workbook_name( post_workbook_name_request, opts = {})
 
@@ -2011,7 +2041,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets workbook's name value.
+    # Retrieve the value of a named range in the workbook.
 
     def get_workbook_name_value( get_workbook_name_value_request, opts = {})
 
@@ -2019,7 +2049,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete workbook's names.
+    # Delete all named ranges in the workbook.
 
     def delete_workbook_names( delete_workbook_names_request, opts = {})
 
@@ -2027,7 +2057,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets workbook's name description.
+    # Delete a named range in the workbook.
 
     def delete_workbook_name( delete_workbook_name_request, opts = {})
 
@@ -2035,7 +2065,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Merge workbooks.
+    # Merge a workbook into the existing workbook.
 
     def post_workbooks_merge( post_workbooks_merge_request, opts = {})
 
@@ -2043,7 +2073,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Search text in workbook.
+    # Search for text in the workbook.
 
     def post_workbooks_text_search( post_workbooks_text_search_request, opts = {})
 
@@ -2051,7 +2081,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Replaces text in workbook.
+    # Replace text in the workbook.
 
     def post_workbook_text_replace( post_workbook_text_replace_request, opts = {})
 
@@ -2059,7 +2089,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Smart marker processing result.
+    # Smart marker processing.
 
     def post_workbook_get_smart_marker_result( post_workbook_get_smart_marker_result_request, opts = {})
 
@@ -2067,7 +2097,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Creates new workbook using deferent methods.
+    # Create a new workbook using different methods.
 
     def put_workbook_create( put_workbook_create_request, opts = {})
 
@@ -2075,7 +2105,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Splits workbook.
+    # Split the workbook with a specific format.
 
     def post_workbook_split( post_workbook_split_request, opts = {})
 
@@ -2083,7 +2113,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Calculate all formulas in workbook.
+    # Calculate all formulas in the workbook.
 
     def post_workbook_calculate_formula( post_workbook_calculate_formula_request, opts = {})
 
@@ -2091,7 +2121,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Autofit workbook rows.
+    # Autofit rows in the workbook.
 
     def post_autofit_workbook_rows( post_autofit_workbook_rows_request, opts = {})
 
@@ -2099,6 +2129,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Autofit columns in the workbook.
 
     def post_autofit_workbook_columns( post_autofit_workbook_columns_request, opts = {})
 
@@ -2106,7 +2137,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets workbook settings description.
+    # Retrieve descriptions of workbook settings.
 
     def get_workbook_settings( get_workbook_settings_request, opts = {})
 
@@ -2114,7 +2145,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates workbook setting.
+    # Update setting in the workbook.
 
     def post_workbook_settings( post_workbook_settings_request, opts = {})
 
@@ -2122,7 +2153,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Set workbook background.
+    # Set background in the workbook.
 
     def put_workbook_background( put_workbook_background_request, opts = {})
 
@@ -2130,7 +2161,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete workbook background.
+    # Delete background in the workbook.
 
     def delete_workbook_background( delete_workbook_background_request, opts = {})
 
@@ -2138,7 +2169,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Set workbook water marker.
+    # Set water marker in the workbook.
 
     def put_workbook_water_marker( put_workbook_water_marker_request, opts = {})
 
@@ -2146,6 +2177,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Get page count in the workbook.
 
     def get_page_count( get_page_count_request, opts = {})
 
@@ -2153,7 +2185,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheets description.
+    # Retrieve the description of worksheets from a workbook.
 
     def get_worksheets( get_worksheets_request, opts = {})
 
@@ -2161,7 +2193,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets worksheet in some format.
+    # Retrieve the worksheet in a specified format from the workbook.
 
     def get_worksheet_with_format( get_worksheet_with_format_request, opts = {})
 
@@ -2169,7 +2201,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Changes worksheet visibility.
+    # Change worksheet visibility in the workbook.
 
     def put_change_visibility_worksheet( put_change_visibility_worksheet_request, opts = {})
 
@@ -2177,7 +2209,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Active sheet
+    # Set active worksheet index in the workbook.
 
     def put_active_worksheet( put_active_worksheet_request, opts = {})
 
@@ -2185,7 +2217,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Inserts new worksheet in workbook.
+    # Insert a new worksheet in the workbook.
 
     def put_insert_new_worksheet( put_insert_new_worksheet_request, opts = {})
 
@@ -2193,7 +2225,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds new worksheet in workbook.
+    # Add a new worksheet in the workbook.
 
     def put_add_new_worksheet( put_add_new_worksheet_request, opts = {})
 
@@ -2201,7 +2233,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a worksheet in workbook.
+    # Delete a worksheet in the workbook.
 
     def delete_worksheet( delete_worksheet_request, opts = {})
 
@@ -2209,6 +2241,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Delete matched worksheets in the workbook.
 
     def delete_worksheets( delete_worksheets_request, opts = {})
 
@@ -2216,7 +2249,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Move worksheet in workbook.
+    # Move worksheet in the workbook.
 
     def post_move_worksheet( post_move_worksheet_request, opts = {})
 
@@ -2224,7 +2257,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Protects worksheet.
+    # Protect worksheet.
 
     def put_protect_worksheet( put_protect_worksheet_request, opts = {})
 
@@ -2232,7 +2265,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unprotects worksheet.
+    # Unprotect worksheet.
 
     def delete_unprotect_worksheet( delete_unprotect_worksheet_request, opts = {})
 
@@ -2240,7 +2273,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get text items in worksheet.
+    # Retrieve text items in the worksheet.
 
     def get_worksheet_text_items( get_worksheet_text_items_request, opts = {})
 
@@ -2248,7 +2281,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get comments description in worksheet.
+    # Retrieve the description of comments in the worksheet.
 
     def get_worksheet_comments( get_worksheet_comments_request, opts = {})
 
@@ -2256,7 +2289,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets comment by cell name in worksheet.
+    # Retrieve the description of comment in the worksheet.
 
     def get_worksheet_comment( get_worksheet_comment_request, opts = {})
 
@@ -2264,7 +2297,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds cell comment in worksheet.
+    # Add cell comment in the worksheet.
 
     def put_worksheet_comment( put_worksheet_comment_request, opts = {})
 
@@ -2272,7 +2305,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates cell comment in worksheet.
+    # Update cell comment in the worksheet.
 
     def post_worksheet_comment( post_worksheet_comment_request, opts = {})
 
@@ -2280,7 +2313,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes cell comment in worksheet.
+    # Delete cell comment in the worksheet.
 
     def delete_worksheet_comment( delete_worksheet_comment_request, opts = {})
 
@@ -2288,7 +2321,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all comments in worksheet.
+    # Delete all comments in the worksheet.
 
     def delete_worksheet_comments( delete_worksheet_comments_request, opts = {})
 
@@ -2304,7 +2337,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets merged cell description by its index in worksheet.
+    # Retrieve description of a merged cell by its index in the worksheet.
 
     def get_worksheet_merged_cell( get_worksheet_merged_cell_request, opts = {})
 
@@ -2312,7 +2345,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Calculates formula value in worksheet.
+    # Calculate formula in the worksheet.
 
     def get_worksheet_calculate_formula( get_worksheet_calculate_formula_request, opts = {})
 
@@ -2320,7 +2353,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Calculates formula value in worksheet.
+    # Calculate formula in the worksheet.
 
     def post_worksheet_calculate_formula( post_worksheet_calculate_formula_request, opts = {})
 
@@ -2328,7 +2361,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Searchs text in worksheet.
+    # Search for text in the worksheet.
 
     def post_worksheet_text_search( post_worksheet_text_search_request, opts = {})
 
@@ -2336,15 +2369,15 @@ module AsposeCellsCloud
        return data
     end
 
-    # Replaces text in worksheet.
+    # Replace old text with new text in the worksheet.
 
-    def post_worsheet_text_replace( post_worsheet_text_replace_request, opts = {})
+    def post_worksheet_text_replace( post_worksheet_text_replace_request, opts = {})
 
-       data, _status_code, _headers = post_worsheet_text_replace_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = post_worksheet_text_replace_request.create_http_request(@api_client,opts )
        return data
     end
 
-    # Sorts range in worksheet.
+    # Sort a range in the worksheet.
 
     def post_worksheet_range_sort( post_worksheet_range_sort_request, opts = {})
 
@@ -2352,7 +2385,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Autofits row in worksheet.
+    # Autofit a row in the worksheet.
 
     def post_autofit_worksheet_row( post_autofit_worksheet_row_request, opts = {})
 
@@ -2360,7 +2393,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Autofit rows in worksheet.
+    # Autofit rows in the worksheet.
 
     def post_autofit_worksheet_rows( post_autofit_worksheet_rows_request, opts = {})
 
@@ -2368,6 +2401,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Autofit columns in the worksheet.
 
     def post_autofit_worksheet_columns( post_autofit_worksheet_columns_request, opts = {})
 
@@ -2375,7 +2409,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets background image in worksheet.
+    # Set background image in the worksheet.
 
     def put_worksheet_background( put_worksheet_background_request, opts = {})
 
@@ -2383,7 +2417,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete background image in worksheet.
+    # Delete background image in the worksheet.
 
     def delete_worksheet_background( delete_worksheet_background_request, opts = {})
 
@@ -2391,7 +2425,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Sets freeze panes in worksheet.
+    # Set freeze panes in the worksheet.
 
     def put_worksheet_freeze_panes( put_worksheet_freeze_panes_request, opts = {})
 
@@ -2399,7 +2433,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Unfreezes panes in worksheet.
+    # Unfreeze panes in worksheet.
 
     def delete_worksheet_freeze_panes( delete_worksheet_freeze_panes_request, opts = {})
 
@@ -2407,7 +2441,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copies contents and formats from another worksheet.
+    # Copy contents and formats from another worksheet.
 
     def post_copy_worksheet( post_copy_worksheet_request, opts = {})
 
@@ -2415,7 +2449,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Rename worksheet.
+    # Rename worksheet in the workbook.
 
     def post_rename_worksheet( post_rename_worksheet_request, opts = {})
 
@@ -2423,7 +2457,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Update worksheet properties.
+    # Update worksheet properties in the workbook.
 
     def post_update_worksheet_property( post_update_worksheet_property_request, opts = {})
 
@@ -2431,7 +2465,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get worksheets ranges description.
+    # Retrieve descriptions of ranges in the worksheets.
 
     def get_named_ranges( get_named_ranges_request, opts = {})
 
@@ -2439,7 +2473,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get range values.
+    # Retrieve values in range.
 
     def get_named_range_value( get_named_range_value_request, opts = {})
 
@@ -2447,7 +2481,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates worksheet zoom.
+    # Update the scaling percentage in the worksheet. It should be between 10 and 400.
 
     def post_update_worksheet_zoom( post_update_worksheet_zoom_request, opts = {})
 
@@ -2455,6 +2489,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Get page count in the worksheet.
 
     def get_worksheet_page_count( get_worksheet_page_count_request, opts = {})
 
@@ -2462,7 +2497,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get validations description in worksheet.
+    # Retrieve descriptions of validations in the worksheet.
 
     def get_worksheet_validations( get_worksheet_validations_request, opts = {})
 
@@ -2470,7 +2505,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Gets a validation by index in worksheet.
+    # Retrieve a validation by its index in the worksheet.
 
     def get_worksheet_validation( get_worksheet_validation_request, opts = {})
 
@@ -2478,7 +2513,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds a validation at index in worksheet.
+    # Add a validation at index in the worksheet.
 
     def put_worksheet_validation( put_worksheet_validation_request, opts = {})
 
@@ -2486,7 +2521,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Updates a validation by index in worksheet.
+    # Update a validation by index in the worksheet.
 
     def post_worksheet_validation( post_worksheet_validation_request, opts = {})
 
@@ -2494,7 +2529,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Deletes a validation by index in worksheet.
+    # Delete a validation by index in worksheet.
 
     def delete_worksheet_validation( delete_worksheet_validation_request, opts = {})
 
@@ -2502,7 +2537,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all validations in worksheet.
+    # Delete all validations in the worksheet.
 
     def delete_worksheet_validations( delete_worksheet_validations_request, opts = {})
 
