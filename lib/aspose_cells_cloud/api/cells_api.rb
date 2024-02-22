@@ -40,6 +40,14 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
+    # Perform business analysis of data in Excel files.
+
+    def post_analyze_excel( post_analyze_excel_request, opts = {})
+
+       data, _status_code, _headers = post_analyze_excel_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Retrieve the description of auto filters from a worksheet.
 
     def get_worksheet_auto_filter( get_worksheet_auto_filter_request, opts = {})

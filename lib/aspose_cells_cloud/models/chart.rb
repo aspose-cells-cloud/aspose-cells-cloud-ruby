@@ -107,9 +107,9 @@ module AsposeCellsCloud
         attr_accessor :size_with_window
         #Gets and sets the builtin style.            
         attr_accessor :style
-        #Gets the chart's title.            
+        #            
         attr_accessor :title
-        #Gets or sets a chart's type.            
+        #            
         attr_accessor :type
         #Gets the chart's Y axis.            
         attr_accessor :value_axis

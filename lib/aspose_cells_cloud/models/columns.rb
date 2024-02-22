@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class Columns
-        #            
+        #The max column index.            
         attr_accessor :max_column
-        #            
+        #Column count.            
         attr_accessor :columns_count
-        #            
+        #Columns list.            
         attr_accessor :columns_list
         #            
         attr_accessor :link

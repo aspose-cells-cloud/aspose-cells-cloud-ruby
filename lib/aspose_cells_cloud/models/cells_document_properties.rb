@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsDocumentProperties
-        #            
+        #Document property list.            
         attr_accessor :document_property_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

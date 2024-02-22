@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ColorFilter
-        #Flag indicating whether filter by the cell's fill color.             
+        #Whether filter by the cell's fill color.                        
         attr_accessor :filter_by_fill_color
         #            
         attr_accessor :pattern

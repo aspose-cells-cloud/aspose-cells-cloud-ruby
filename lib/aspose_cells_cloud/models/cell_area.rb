@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class CellArea
-        #            
+        #The end column index.            
         attr_accessor :end_column
-        #            
+        #The end row index.            
         attr_accessor :end_row
-        #            
+        #The start column index.            
         attr_accessor :start_column
-        #            
+        #The start row index.            
         attr_accessor :start_row
 
     # Attribute mapping from ruby-style variable name to JSON key.

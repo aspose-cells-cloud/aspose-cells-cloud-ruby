@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class Color
-        #            
+        #Gets the alpha component value of this System.Drawing.Color structure.                        
         attr_accessor :a
-        #            
+        #Gets the red component value of this System.Drawing.Color structure.                        
         attr_accessor :r
-        #            
+        #Gets the green component value of this System.Drawing.Color structure.            
         attr_accessor :g
-        #            
+        #Gets the blue component value of this System.Drawing.Color structure.                        
         attr_accessor :b
 
     # Attribute mapping from ruby-style variable name to JSON key.

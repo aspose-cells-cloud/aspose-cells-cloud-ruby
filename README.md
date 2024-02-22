@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/23.12)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/24.2.1)
 
 
 # Ruby SDK for Spreadsheet Processing in the Cloud
@@ -22,20 +22,11 @@ Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Mic
 - [Convert Excel files to popular formats](https://docs.aspose.cloud/cells/convert-excel-workbook-to-different-file-formats/).
 
 
-## Feature & Enhancements in Version 23.12
+## Feature & Enhancements in Version 24.2.1
 
 Full list of issues covering all changes in this release:
 
-- Conversion APIs add region parameter.
-- Protection APIs add region parameter.
-- Assemble data API adds region parameter.
-- Merge files API adds region parameter.
-- Split files API adds region parameter.
-- Import data API adds region parameter.
-- Watermark API adds region parameter.
-- Clear object API adds region parameter.
-- Reverse data API adds region parameter.
-- Rotate data API adds region parameter.
+- Add the analyze excel api for analyze controller.
 
 ## Read & Write Spreadsheet Formats
 

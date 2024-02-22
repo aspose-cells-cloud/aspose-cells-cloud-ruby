@@ -33,8 +33,6 @@ module AsposeCellsCloud
   class AutoFitterOptions
         #Gets and set the type of auto fitting row height of merged cells.            
         attr_accessor :auto_fit_merged_cells_type
-        #Indicates whether auto fit row height when the cells is merged in a row.                        The default value is false.            
-        attr_accessor :auto_fit_merged_cells
         #Ignores the hidden rows/columns.            
         attr_accessor :ignore_hidden
         #Indicates whether only fit the rows which height are not customed.            
@@ -54,7 +52,6 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'auto_fit_merged_cells_type' => :'AutoFitMergedCellsType',
-        :'auto_fit_merged_cells' => :'AutoFitMergedCells',
         :'ignore_hidden' => :'IgnoreHidden',
         :'only_auto' => :'OnlyAuto',
         :'default_edit_language' => :'DefaultEditLanguage',
@@ -69,7 +66,6 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'auto_fit_merged_cells_type' => :'String',
-        :'auto_fit_merged_cells' => :'BOOLEAN',
         :'ignore_hidden' => :'BOOLEAN',
         :'only_auto' => :'BOOLEAN',
         :'default_edit_language' => :'String',
@@ -90,9 +86,6 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'AutoFitMergedCellsType')
           self.auto_fit_merged_cells_type = attributes[:'AutoFitMergedCellsType']
-      end
-      if attributes.has_key?(:'AutoFitMergedCells')
-          self.auto_fit_merged_cells = attributes[:'AutoFitMergedCells']
       end
       if attributes.has_key?(:'IgnoreHidden')
           self.ignore_hidden = attributes[:'IgnoreHidden']
@@ -125,9 +118,6 @@ module AsposeCellsCloud
       if @auto_fit_merged_cells_type.nil?
           invalid_properties.push("invalid value for 'auto_fit_merged_cells_type', auto_fit_merged_cells_type cannot be nil.")
       end
-      if @auto_fit_merged_cells.nil?
-          invalid_properties.push("invalid value for 'auto_fit_merged_cells', auto_fit_merged_cells cannot be nil.")
-      end
       if @ignore_hidden.nil?
           invalid_properties.push("invalid value for 'ignore_hidden', ignore_hidden cannot be nil.")
       end
@@ -157,7 +147,6 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @auto_fit_merged_cells_type.nil?
-      return false if @auto_fit_merged_cells.nil?
       return false if @ignore_hidden.nil?
       return false if @only_auto.nil?
       return false if @default_edit_language.nil?
@@ -174,7 +163,6 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           auto_fit_merged_cells_type == o.auto_fit_merged_cells_type &&
-          auto_fit_merged_cells == o.auto_fit_merged_cells &&
           ignore_hidden == o.ignore_hidden &&
           only_auto == o.only_auto &&
           default_edit_language == o.default_edit_language &&
@@ -194,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_fit_merged_cells_type , auto_fit_merged_cells , ignore_hidden , only_auto , default_edit_language , max_row_height , auto_fit_wrapped_text_type , format_strategy , for_rendering ].hash
+      [ auto_fit_merged_cells_type , ignore_hidden , only_auto , default_edit_language , max_row_height , auto_fit_wrapped_text_type , format_strategy , for_rendering ].hash
     end
 
     # Builds the object from hash

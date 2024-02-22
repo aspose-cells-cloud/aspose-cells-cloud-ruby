@@ -38,8 +38,6 @@ module AsposeCellsCloud
         #            
         attr_accessor :extract_content_permission
         #            
-        attr_accessor :extract_content_permission_obsolete
-        #            
         attr_accessor :fill_forms_permission
         #            
         attr_accessor :full_quality_print_permission
@@ -58,7 +56,6 @@ module AsposeCellsCloud
         :'annotations_permission' => :'AnnotationsPermission',
         :'assemble_document_permission' => :'AssembleDocumentPermission',
         :'extract_content_permission' => :'ExtractContentPermission',
-        :'extract_content_permission_obsolete' => :'ExtractContentPermissionObsolete',
         :'fill_forms_permission' => :'FillFormsPermission',
         :'full_quality_print_permission' => :'FullQualityPrintPermission',
         :'modify_document_permission' => :'ModifyDocumentPermission',
@@ -74,7 +71,6 @@ module AsposeCellsCloud
         :'annotations_permission' => :'BOOLEAN',
         :'assemble_document_permission' => :'BOOLEAN',
         :'extract_content_permission' => :'BOOLEAN',
-        :'extract_content_permission_obsolete' => :'BOOLEAN',
         :'fill_forms_permission' => :'BOOLEAN',
         :'full_quality_print_permission' => :'BOOLEAN',
         :'modify_document_permission' => :'BOOLEAN',
@@ -100,9 +96,6 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'ExtractContentPermission')
           self.extract_content_permission = attributes[:'ExtractContentPermission']
-      end
-      if attributes.has_key?(:'ExtractContentPermissionObsolete')
-          self.extract_content_permission_obsolete = attributes[:'ExtractContentPermissionObsolete']
       end
       if attributes.has_key?(:'FillFormsPermission')
           self.fill_forms_permission = attributes[:'FillFormsPermission']
@@ -138,9 +131,6 @@ module AsposeCellsCloud
       if @extract_content_permission.nil?
           invalid_properties.push("invalid value for 'extract_content_permission', extract_content_permission cannot be nil.")
       end
-      if @extract_content_permission_obsolete.nil?
-          invalid_properties.push("invalid value for 'extract_content_permission_obsolete', extract_content_permission_obsolete cannot be nil.")
-      end
       if @fill_forms_permission.nil?
           invalid_properties.push("invalid value for 'fill_forms_permission', fill_forms_permission cannot be nil.")
       end
@@ -169,7 +159,6 @@ module AsposeCellsCloud
       return false if @annotations_permission.nil?
       return false if @assemble_document_permission.nil?
       return false if @extract_content_permission.nil?
-      return false if @extract_content_permission_obsolete.nil?
       return false if @fill_forms_permission.nil?
       return false if @full_quality_print_permission.nil?
       return false if @modify_document_permission.nil?
@@ -187,7 +176,6 @@ module AsposeCellsCloud
           annotations_permission == o.annotations_permission &&
           assemble_document_permission == o.assemble_document_permission &&
           extract_content_permission == o.extract_content_permission &&
-          extract_content_permission_obsolete == o.extract_content_permission_obsolete &&
           fill_forms_permission == o.fill_forms_permission &&
           full_quality_print_permission == o.full_quality_print_permission &&
           modify_document_permission == o.modify_document_permission &&
@@ -206,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ annotations_permission , assemble_document_permission , extract_content_permission , extract_content_permission_obsolete , fill_forms_permission , full_quality_print_permission , modify_document_permission , owner_password , print_permission , user_password ].hash
+      [ annotations_permission , assemble_document_permission , extract_content_permission , fill_forms_permission , full_quality_print_permission , modify_document_permission , owner_password , print_permission , user_password ].hash
     end
 
     # Builds the object from hash
