@@ -39,8 +39,6 @@ module AsposeCellsCloud
         attr_accessor :build_version
         #It specifies whether to calculate formulas manually,            automatically or automatically except for multiple table operations.             
         attr_accessor :calc_mode
-        #Specifies the stack size for calculating cells recursively.            The large value for this size will give better performance when there are lots of cells need to be calculated recursively.            On the other hand, larger value will raise the risk of StackOverflowException.            If user gets StackOverflowException when calculating formulas, this value should be decreased.             
-        attr_accessor :calc_stack_size
         #Specifies the version of the calculation engine used to calculate values in the workbook.             
         attr_accessor :calculation_id
         #Indicates whether check comptiliblity when saving workbook.                         Remarks: The default value is true.                         
@@ -165,7 +163,6 @@ module AsposeCellsCloud
         :'auto_recover' => :'AutoRecover',
         :'build_version' => :'BuildVersion',
         :'calc_mode' => :'CalcMode',
-        :'calc_stack_size' => :'CalcStackSize',
         :'calculation_id' => :'CalculationId',
         :'check_comptiliblity' => :'CheckComptiliblity',
         :'check_excel_restriction' => :'CheckExcelRestriction',
@@ -234,7 +231,6 @@ module AsposeCellsCloud
         :'auto_recover' => :'BOOLEAN',
         :'build_version' => :'String',
         :'calc_mode' => :'String',
-        :'calc_stack_size' => :'Integer',
         :'calculation_id' => :'String',
         :'check_comptiliblity' => :'BOOLEAN',
         :'check_excel_restriction' => :'BOOLEAN',
@@ -315,9 +311,6 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'CalcMode')
           self.calc_mode = attributes[:'CalcMode']
-      end
-      if attributes.has_key?(:'CalcStackSize')
-          self.calc_stack_size = attributes[:'CalcStackSize']
       end
       if attributes.has_key?(:'CalculationId')
           self.calculation_id = attributes[:'CalculationId']
@@ -512,9 +505,6 @@ module AsposeCellsCloud
       if @calc_mode.nil?
           invalid_properties.push("invalid value for 'calc_mode', calc_mode cannot be nil.")
       end
-      if @calc_stack_size.nil?
-          invalid_properties.push("invalid value for 'calc_stack_size', calc_stack_size cannot be nil.")
-      end
       if @calculation_id.nil?
           invalid_properties.push("invalid value for 'calculation_id', calculation_id cannot be nil.")
       end
@@ -700,7 +690,6 @@ module AsposeCellsCloud
       return false if @auto_recover.nil?
       return false if @build_version.nil?
       return false if @calc_mode.nil?
-      return false if @calc_stack_size.nil?
       return false if @calculation_id.nil?
       return false if @check_comptiliblity.nil?
       return false if @check_excel_restriction.nil?
@@ -771,7 +760,6 @@ module AsposeCellsCloud
           auto_recover == o.auto_recover &&
           build_version == o.build_version &&
           calc_mode == o.calc_mode &&
-          calc_stack_size == o.calc_stack_size &&
           calculation_id == o.calculation_id &&
           check_comptiliblity == o.check_comptiliblity &&
           check_excel_restriction == o.check_excel_restriction &&
@@ -842,7 +830,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_compress_pictures , auto_recover , build_version , calc_mode , calc_stack_size , calculation_id , check_comptiliblity , check_excel_restriction , crash_save , create_calc_chain , data_extract_load , date1904 , display_drawing_objects , enable_macros , first_visible_tab , hide_pivot_field_list , is_default_encrypted , is_hidden , is_h_scroll_bar_visible , is_minimized , is_v_scroll_bar_visible , iteration , language_code , max_change , max_iteration , memory_setting , number_decimal_separator , number_group_separator , parsing_formula_on_open , precision_as_displayed , recalculate_before_save , re_calculate_on_open , recommend_read_only , region , remove_personal_information , repair_load , shared , sheet_tab_bar_width , show_tabs , update_adjacent_cells_border , update_links_type , window_height , window_left , window_top , window_width , author , check_custom_number_format , protection_type , globalization_settings , password , write_protection , is_encrypted , is_protected , max_row , max_column , significant_digits , check_compatibility , paper_size , max_rows_of_shared_formula , compliance , quote_prefix_to_style , formula_settings , force_full_calculate ].hash
+      [ auto_compress_pictures , auto_recover , build_version , calc_mode , calculation_id , check_comptiliblity , check_excel_restriction , crash_save , create_calc_chain , data_extract_load , date1904 , display_drawing_objects , enable_macros , first_visible_tab , hide_pivot_field_list , is_default_encrypted , is_hidden , is_h_scroll_bar_visible , is_minimized , is_v_scroll_bar_visible , iteration , language_code , max_change , max_iteration , memory_setting , number_decimal_separator , number_group_separator , parsing_formula_on_open , precision_as_displayed , recalculate_before_save , re_calculate_on_open , recommend_read_only , region , remove_personal_information , repair_load , shared , sheet_tab_bar_width , show_tabs , update_adjacent_cells_border , update_links_type , window_height , window_left , window_top , window_width , author , check_custom_number_format , protection_type , globalization_settings , password , write_protection , is_encrypted , is_protected , max_row , max_column , significant_digits , check_compatibility , paper_size , max_rows_of_shared_formula , compliance , quote_prefix_to_style , formula_settings , force_full_calculate ].hash
     end
 
     # Builds the object from hash

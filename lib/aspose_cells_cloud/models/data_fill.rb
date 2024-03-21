@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="FileInforb.cs">
+ <copyright company="Aspose" file="DataFillrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,29 +30,29 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class FileInfo
-        #Filename.             
-        attr_accessor :filename
-        #File size.            
-        attr_accessor :file_size
-        #File content,  byte to base64 string.            
-        attr_accessor :file_content
+  class DataFill
+        #            
+        attr_accessor :ranges
+        #            
+        attr_accessor :data_fill_default_value
+        #            
+        attr_accessor :data_column_fill_value_list
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'filename' => :'Filename',
-        :'file_size' => :'FileSize',
-        :'file_content' => :'FileContent'
+        :'ranges' => :'Ranges',
+        :'data_fill_default_value' => :'DataFillDefaultValue',
+        :'data_column_fill_value_list' => :'DataColumnFillValueList'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'filename' => :'String',
-        :'file_size' => :'Integer',
-        :'file_content' => :'String'
+        :'ranges' => :'Array<Range>',
+        :'data_fill_default_value' => :'DataFillValue',
+        :'data_column_fill_value_list' => :'Array<DataColumnFillValue>'
       }
     end
 
@@ -64,14 +64,14 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Filename')
-          self.filename = attributes[:'Filename']
+      if attributes.has_key?(:'Ranges')
+          self.ranges = attributes[:'Ranges']
       end
-      if attributes.has_key?(:'FileSize')
-          self.file_size = attributes[:'FileSize']
+      if attributes.has_key?(:'DataFillDefaultValue')
+          self.data_fill_default_value = attributes[:'DataFillDefaultValue']
       end
-      if attributes.has_key?(:'FileContent')
-          self.file_content = attributes[:'FileContent']
+      if attributes.has_key?(:'DataColumnFillValueList')
+          self.data_column_fill_value_list = attributes[:'DataColumnFillValueList']
       end
 
     end
@@ -80,14 +80,14 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @filename.nil?
-          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
+      if @ranges.nil?
+          invalid_properties.push("invalid value for 'ranges', ranges cannot be nil.")
       end
-      if @file_size.nil?
-          invalid_properties.push("invalid value for 'file_size', file_size cannot be nil.")
+      if @data_fill_default_value.nil?
+          invalid_properties.push("invalid value for 'data_fill_default_value', data_fill_default_value cannot be nil.")
       end
-      if @file_content.nil?
-          invalid_properties.push("invalid value for 'file_content', file_content cannot be nil.")
+      if @data_column_fill_value_list.nil?
+          invalid_properties.push("invalid value for 'data_column_fill_value_list', data_column_fill_value_list cannot be nil.")
       end
 
       return invalid_properties
@@ -96,9 +96,9 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @filename.nil?
-      return false if @file_size.nil?
-      return false if @file_content.nil?
+      return false if @ranges.nil?
+      return false if @data_fill_default_value.nil?
+      return false if @data_column_fill_value_list.nil?
       return true
     end
 
@@ -107,9 +107,9 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          filename == o.filename &&
-          file_size == o.file_size &&
-          file_content == o.file_content 
+          ranges == o.ranges &&
+          data_fill_default_value == o.data_fill_default_value &&
+          data_column_fill_value_list == o.data_column_fill_value_list 
           std_dev == o.std_dev
     end
 
@@ -122,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ filename , file_size , file_content ].hash
+      [ ranges , data_fill_default_value , data_column_fill_value_list ].hash
     end
 
     # Builds the object from hash

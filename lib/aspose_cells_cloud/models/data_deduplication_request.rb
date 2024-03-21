@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="FileInforb.cs">
+ <copyright company="Aspose" file="DataDeduplicationRequestrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,29 +30,37 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class FileInfo
-        #Filename.             
-        attr_accessor :filename
-        #File size.            
-        attr_accessor :file_size
-        #File content,  byte to base64 string.            
-        attr_accessor :file_content
+  class DataDeduplicationRequest
+        #Spreadsheet files that require data fulling.             
+        attr_accessor :file
+        #            
+        attr_accessor :deduplication_region
+        #finish to data cleansing, outfile`s file format.            
+        attr_accessor :out_file_format
+        #Whether check restriction of Spreadsheet file when user modify cells related objects.            
+        attr_accessor :check_excel_restriction
+        #The regional settings for workbook.            
+        attr_accessor :region
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'filename' => :'Filename',
-        :'file_size' => :'FileSize',
-        :'file_content' => :'FileContent'
+        :'file' => :'File',
+        :'deduplication_region' => :'DeduplicationRegion',
+        :'out_file_format' => :'OutFileFormat',
+        :'check_excel_restriction' => :'CheckExcelRestriction',
+        :'region' => :'Region'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'filename' => :'String',
-        :'file_size' => :'Integer',
-        :'file_content' => :'String'
+        :'file' => :'FileInfo',
+        :'deduplication_region' => :'DeduplicationRegion',
+        :'out_file_format' => :'String',
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'region' => :'String'
       }
     end
 
@@ -64,14 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Filename')
-          self.filename = attributes[:'Filename']
+      if attributes.has_key?(:'File')
+          self.file = attributes[:'File']
       end
-      if attributes.has_key?(:'FileSize')
-          self.file_size = attributes[:'FileSize']
+      if attributes.has_key?(:'DeduplicationRegion')
+          self.deduplication_region = attributes[:'DeduplicationRegion']
       end
-      if attributes.has_key?(:'FileContent')
-          self.file_content = attributes[:'FileContent']
+      if attributes.has_key?(:'OutFileFormat')
+          self.out_file_format = attributes[:'OutFileFormat']
+      end
+      if attributes.has_key?(:'CheckExcelRestriction')
+          self.check_excel_restriction = attributes[:'CheckExcelRestriction']
+      end
+      if attributes.has_key?(:'Region')
+          self.region = attributes[:'Region']
       end
 
     end
@@ -80,14 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @filename.nil?
-          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
+      if @file.nil?
+          invalid_properties.push("invalid value for 'file', file cannot be nil.")
       end
-      if @file_size.nil?
-          invalid_properties.push("invalid value for 'file_size', file_size cannot be nil.")
+      if @deduplication_region.nil?
+          invalid_properties.push("invalid value for 'deduplication_region', deduplication_region cannot be nil.")
       end
-      if @file_content.nil?
-          invalid_properties.push("invalid value for 'file_content', file_content cannot be nil.")
+      if @out_file_format.nil?
+          invalid_properties.push("invalid value for 'out_file_format', out_file_format cannot be nil.")
+      end
+      if @check_excel_restriction.nil?
+          invalid_properties.push("invalid value for 'check_excel_restriction', check_excel_restriction cannot be nil.")
+      end
+      if @region.nil?
+          invalid_properties.push("invalid value for 'region', region cannot be nil.")
       end
 
       return invalid_properties
@@ -96,9 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @filename.nil?
-      return false if @file_size.nil?
-      return false if @file_content.nil?
+      return false if @file.nil?
+      return false if @deduplication_region.nil?
+      return false if @out_file_format.nil?
+      return false if @check_excel_restriction.nil?
+      return false if @region.nil?
       return true
     end
 
@@ -107,9 +129,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          filename == o.filename &&
-          file_size == o.file_size &&
-          file_content == o.file_content 
+          file == o.file &&
+          deduplication_region == o.deduplication_region &&
+          out_file_format == o.out_file_format &&
+          check_excel_restriction == o.check_excel_restriction &&
+          region == o.region 
           std_dev == o.std_dev
     end
 
@@ -122,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ filename , file_size , file_content ].hash
+      [ file , deduplication_region , out_file_format , check_excel_restriction , region ].hash
     end
 
     # Builds the object from hash

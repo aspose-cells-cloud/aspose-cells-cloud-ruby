@@ -65,7 +65,7 @@ module AsposeCellsCloud
         attr_accessor :is_rectangular_cornered
         #Gets the chart legend.            
         attr_accessor :legend
-        #Gets and sets the name of the chart.            
+        #            
         attr_accessor :name
         #Gets a  collection representing the data series in the chart.            
         attr_accessor :n_series

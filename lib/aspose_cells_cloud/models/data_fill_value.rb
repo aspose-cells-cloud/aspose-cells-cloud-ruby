@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="FileInforb.cs">
+ <copyright company="Aspose" file="DataFillValuerb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,29 +30,37 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class FileInfo
-        #Filename.             
-        attr_accessor :filename
-        #File size.            
-        attr_accessor :file_size
-        #File content,  byte to base64 string.            
-        attr_accessor :file_content
+  class DataFillValue
+        #            
+        attr_accessor :default_boolean
+        #            
+        attr_accessor :default_string
+        #            
+        attr_accessor :default_number
+        #            
+        attr_accessor :default_double
+        #            
+        attr_accessor :default_date
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'filename' => :'Filename',
-        :'file_size' => :'FileSize',
-        :'file_content' => :'FileContent'
+        :'default_boolean' => :'DefaultBoolean',
+        :'default_string' => :'DefaultString',
+        :'default_number' => :'DefaultNumber',
+        :'default_double' => :'DefaultDouble',
+        :'default_date' => :'DefaultDate'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'filename' => :'String',
-        :'file_size' => :'Integer',
-        :'file_content' => :'String'
+        :'default_boolean' => :'BOOLEAN',
+        :'default_string' => :'String',
+        :'default_number' => :'Integer',
+        :'default_double' => :'Float',
+        :'default_date' => :'String'
       }
     end
 
@@ -64,14 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Filename')
-          self.filename = attributes[:'Filename']
+      if attributes.has_key?(:'DefaultBoolean')
+          self.default_boolean = attributes[:'DefaultBoolean']
       end
-      if attributes.has_key?(:'FileSize')
-          self.file_size = attributes[:'FileSize']
+      if attributes.has_key?(:'DefaultString')
+          self.default_string = attributes[:'DefaultString']
       end
-      if attributes.has_key?(:'FileContent')
-          self.file_content = attributes[:'FileContent']
+      if attributes.has_key?(:'DefaultNumber')
+          self.default_number = attributes[:'DefaultNumber']
+      end
+      if attributes.has_key?(:'DefaultDouble')
+          self.default_double = attributes[:'DefaultDouble']
+      end
+      if attributes.has_key?(:'DefaultDate')
+          self.default_date = attributes[:'DefaultDate']
       end
 
     end
@@ -80,14 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @filename.nil?
-          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
+      if @default_boolean.nil?
+          invalid_properties.push("invalid value for 'default_boolean', default_boolean cannot be nil.")
       end
-      if @file_size.nil?
-          invalid_properties.push("invalid value for 'file_size', file_size cannot be nil.")
+      if @default_string.nil?
+          invalid_properties.push("invalid value for 'default_string', default_string cannot be nil.")
       end
-      if @file_content.nil?
-          invalid_properties.push("invalid value for 'file_content', file_content cannot be nil.")
+      if @default_number.nil?
+          invalid_properties.push("invalid value for 'default_number', default_number cannot be nil.")
+      end
+      if @default_double.nil?
+          invalid_properties.push("invalid value for 'default_double', default_double cannot be nil.")
+      end
+      if @default_date.nil?
+          invalid_properties.push("invalid value for 'default_date', default_date cannot be nil.")
       end
 
       return invalid_properties
@@ -96,9 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @filename.nil?
-      return false if @file_size.nil?
-      return false if @file_content.nil?
+      return false if @default_boolean.nil?
+      return false if @default_string.nil?
+      return false if @default_number.nil?
+      return false if @default_double.nil?
+      return false if @default_date.nil?
       return true
     end
 
@@ -107,9 +129,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          filename == o.filename &&
-          file_size == o.file_size &&
-          file_content == o.file_content 
+          default_boolean == o.default_boolean &&
+          default_string == o.default_string &&
+          default_number == o.default_number &&
+          default_double == o.default_double &&
+          default_date == o.default_date 
           std_dev == o.std_dev
     end
 
@@ -122,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ filename , file_size , file_content ].hash
+      [ default_boolean , default_string , default_number , default_double , default_date ].hash
     end
 
     # Builds the object from hash

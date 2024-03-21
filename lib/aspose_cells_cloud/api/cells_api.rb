@@ -969,6 +969,62 @@ module AsposeCellsCloud
        return data
     end
 
+    # Data cleaning of spreadsheet files is a data management process used to identify, correct, and remove errors, incompleteness, duplicates, or inaccuracies in tables and ranges.
+
+    def post_workbook_data_cleansing( post_workbook_data_cleansing_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_data_cleansing_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Data cleansing of spreadsheet files is a data management process used to identify, correct, and remove errors, incompleteness, duplicates, or inaccuracies in tables and ranges.
+
+    def post_data_cleansing( post_data_cleansing_request, opts = {})
+
+       data, _status_code, _headers = post_data_cleansing_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Data deduplication of spreadsheet files is mainly used to eliminate duplicate data in tables and ranges.
+
+    def post_workbook_data_deduplication( post_workbook_data_deduplication_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_data_deduplication_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Data deduplication of spreadsheet files is mainly used to eliminate duplicate data in tables and ranges.
+
+    def post_data_deduplication( post_data_deduplication_request, opts = {})
+
+       data, _status_code, _headers = post_data_deduplication_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Data filling for spreadsheet files is primarily used to fill empty data in tables and ranges.
+
+    def post_workbook_data_fill( post_workbook_data_fill_request, opts = {})
+
+       data, _status_code, _headers = post_workbook_data_fill_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Data filling for spreadsheet files is primarily used to fill empty data in tables and ranges.
+
+    def post_data_fill( post_data_fill_request, opts = {})
+
+       data, _status_code, _headers = post_data_fill_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deleting incomplete rows of spreadsheet files is mainly used to eliminate incomplete rows in tables and ranges.
+
+    def post_delete_incomplete_rows( post_delete_incomplete_rows_request, opts = {})
+
+       data, _status_code, _headers = post_delete_incomplete_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Retrieve descriptions of hyperlinks in the worksheet.
 
     def get_worksheet_hyperlinks( get_worksheet_hyperlinks_request, opts = {})
