@@ -21,9 +21,10 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Aspose Cells Cloud"]
   s.email       = ["aspose.cloud@asposeptyltd.com"]
-  s.homepage    = "https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby"
-  s.summary     = "This Cloud SDK enhances your Ruby cloud-based apps to [process & manipulate Microsoft Excel spreadsheets](https://products.aspose.cloud/cells/ruby) in the cloud, without MS Office."
-  s.description = "This Cloud SDK enhances your Ruby cloud-based apps to [process & manipulate Microsoft Excel spreadsheets](https://products.aspose.cloud/cells/ruby) in the cloud, without MS Office.)"
+  s.homepage    = "https://products.aspose.cloud/cells/ruby"
+  s.metadata    = { "source_code_uri" => "https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby" }
+  s.summary     = "Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own applications."
+  s.description = "Aspose.Cells Cloud for Ruby enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats."
   # TODO uncommnet and update below with a proper license 
   s.license     = "MIT"
   s.required_ruby_version = ">= 1.9"
