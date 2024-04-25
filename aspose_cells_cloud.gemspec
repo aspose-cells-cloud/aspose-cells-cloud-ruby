@@ -23,8 +23,9 @@ Gem::Specification.new do |s|
   s.email       = ["aspose.cloud@asposeptyltd.com"]
   s.homepage    = "https://products.aspose.cloud/cells/ruby"
   s.metadata    = { "source_code_uri" => "https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby" }
-  s.summary     = "Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own applications."
-  s.description = "Aspose.Cells Cloud for Ruby enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats."
+  s.summary     = "Effortlessly handle Excel and other spreadsheet documents with features like opening, generating, editing, splitting, merging, comparing, and converting. Seamlessly integrate Cloud API into your solutions to efficiently manipulate documents. Convert Excel or other spreadsheets to CSV, PDF, JSON, XML, HTML, images, and more."
+  s.description = "Ruby Cloud SDK wraps Aspose.Cells REST API so you could seamlessly integrate Microsoft Excel® spreadsheet generation, manipulation, conversion & inspection features into your own applications. Aspose.Cells Cloud for Ruby enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats."
+  s.metadata['keywords'] = "excel, spreadsheet, convert, xlsx, pdf, json, cloud, rest api ,merge, split, protect"
   # TODO uncommnet and update below with a proper license 
   s.license     = "MIT"
   s.required_ruby_version = ">= 1.9"

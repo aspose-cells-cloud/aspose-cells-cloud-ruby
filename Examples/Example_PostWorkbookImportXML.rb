@@ -17,7 +17,7 @@ mapFiles[data_xml] = ::File.open(File.expand_path("TestData/"+data_xml),"r")
  
 uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
 @instance.upload_file(uploadrequest)
-importXMLRequestXMLFileSource = AsposeCellsCloud::FileSource.new(:FileSourceType=>'CloudFileSystem' ,:FilePath=>remote_folder + '/data.xml' );
+importXMLRequestXMLFileSource = AsposeCellsCloud::DataSource.new(:DataSourceType=>'CloudFileSystem' ,:DataPath=>remote_folder + '/data.xml' );
 importXMLRequestImportPosition = AsposeCellsCloud::ImportPosition.new(:SheetName=>'Sheet1' ,:RowIndex=>3 ,:ColumnIndex=>4 );
 importXMLRequest = AsposeCellsCloud::ImportXMLRequest.new(:XMLFileSource=>importXMLRequestXMLFileSource ,:ImportPosition=>importXMLRequestImportPosition );
 request =   AsposeCellsCloud::PostWorkbookImportXMLRequest.new(:name=>remote_name,:importXMLRequest=>importXMLRequest,:folder=>remote_folder,:storageName=>'');

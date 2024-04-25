@@ -40,6 +40,8 @@ module AsposeCellsCloud
         #            
         attr_accessor :import_data_type
         #            
+        attr_accessor :data_source
+        #            
         attr_accessor :source
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -49,6 +51,7 @@ module AsposeCellsCloud
         :'destination_worksheet' => :'DestinationWorksheet',
         :'is_insert' => :'IsInsert',
         :'import_data_type' => :'ImportDataType',
+        :'data_source' => :'DataSource',
         :'source' => :'Source'
       }
     end
@@ -60,6 +63,7 @@ module AsposeCellsCloud
         :'destination_worksheet' => :'String',
         :'is_insert' => :'BOOLEAN',
         :'import_data_type' => :'String',
+        :'data_source' => :'DataSource',
         :'source' => :'FileSource'
       }
     end
@@ -84,6 +88,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ImportDataType')
           self.import_data_type = attributes[:'ImportDataType']
       end
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
       if attributes.has_key?(:'Source')
           self.source = attributes[:'Source']
       end
@@ -106,6 +113,9 @@ module AsposeCellsCloud
       if @import_data_type.nil?
           invalid_properties.push("invalid value for 'import_data_type', import_data_type cannot be nil.")
       end
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
       if @source.nil?
           invalid_properties.push("invalid value for 'source', source cannot be nil.")
       end
@@ -120,6 +130,7 @@ module AsposeCellsCloud
       return false if @destination_worksheet.nil?
       return false if @is_insert.nil?
       return false if @import_data_type.nil?
+      return false if @data_source.nil?
       return false if @source.nil?
       return true
     end
@@ -133,6 +144,7 @@ module AsposeCellsCloud
           destination_worksheet == o.destination_worksheet &&
           is_insert == o.is_insert &&
           import_data_type == o.import_data_type &&
+          data_source == o.data_source &&
           source == o.source 
           std_dev == o.std_dev
     end
@@ -146,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ batch_data , destination_worksheet , is_insert , import_data_type , source ].hash
+      [ batch_data , destination_worksheet , is_insert , import_data_type , data_source , source ].hash
     end
 
     # Builds the object from hash

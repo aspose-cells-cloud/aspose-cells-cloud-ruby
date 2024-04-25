@@ -36,6 +36,10 @@ module AsposeCellsCloud
         #            
         attr_accessor :destination_file_position
         #            
+        attr_accessor :data_source
+        #            
+        attr_accessor :target_data_source
+        #            
         attr_accessor :destination_file_format
         #SheetName /NewGuid            
         attr_accessor :split_name_rule
@@ -49,6 +53,8 @@ module AsposeCellsCloud
       {
         :'workbook' => :'Workbook',
         :'destination_file_position' => :'DestinationFilePosition',
+        :'data_source' => :'DataSource',
+        :'target_data_source' => :'TargetDataSource',
         :'destination_file_format' => :'DestinationFileFormat',
         :'split_name_rule' => :'SplitNameRule',
         :'vertical_resolution' => :'VerticalResolution',
@@ -61,6 +67,8 @@ module AsposeCellsCloud
       {
         :'workbook' => :'FileSource',
         :'destination_file_position' => :'FileSource',
+        :'data_source' => :'DataSource',
+        :'target_data_source' => :'DataSource',
         :'destination_file_format' => :'String',
         :'split_name_rule' => :'String',
         :'vertical_resolution' => :'Integer',
@@ -81,6 +89,12 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'DestinationFilePosition')
           self.destination_file_position = attributes[:'DestinationFilePosition']
+      end
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
+      if attributes.has_key?(:'TargetDataSource')
+          self.target_data_source = attributes[:'TargetDataSource']
       end
       if attributes.has_key?(:'DestinationFileFormat')
           self.destination_file_format = attributes[:'DestinationFileFormat']
@@ -107,6 +121,12 @@ module AsposeCellsCloud
       if @destination_file_position.nil?
           invalid_properties.push("invalid value for 'destination_file_position', destination_file_position cannot be nil.")
       end
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
+      if @target_data_source.nil?
+          invalid_properties.push("invalid value for 'target_data_source', target_data_source cannot be nil.")
+      end
       if @destination_file_format.nil?
           invalid_properties.push("invalid value for 'destination_file_format', destination_file_format cannot be nil.")
       end
@@ -128,6 +148,8 @@ module AsposeCellsCloud
     def valid?
       return false if @workbook.nil?
       return false if @destination_file_position.nil?
+      return false if @data_source.nil?
+      return false if @target_data_source.nil?
       return false if @destination_file_format.nil?
       return false if @split_name_rule.nil?
       return false if @vertical_resolution.nil?
@@ -142,6 +164,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           workbook == o.workbook &&
           destination_file_position == o.destination_file_position &&
+          data_source == o.data_source &&
+          target_data_source == o.target_data_source &&
           destination_file_format == o.destination_file_format &&
           split_name_rule == o.split_name_rule &&
           vertical_resolution == o.vertical_resolution &&
@@ -158,7 +182,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ workbook , destination_file_position , destination_file_format , split_name_rule , vertical_resolution , horizontal_resolution ].hash
+      [ workbook , destination_file_position , data_source , target_data_source , destination_file_format , split_name_rule , vertical_resolution , horizontal_resolution ].hash
     end
 
     # Builds the object from hash

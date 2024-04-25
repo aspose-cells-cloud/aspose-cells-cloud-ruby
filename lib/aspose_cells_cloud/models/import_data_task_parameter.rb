@@ -32,17 +32,23 @@ module AsposeCellsCloud
 
   class ImportDataTaskParameter
         #            
+        attr_accessor :data_source
+        #            
         attr_accessor :workbook
         #            
         attr_accessor :import_option
+        #            
+        attr_accessor :target_data_source
         #            
         attr_accessor :destination_workbook
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'Workbook',
         :'import_option' => :'ImportOption',
+        :'target_data_source' => :'TargetDataSource',
         :'destination_workbook' => :'DestinationWorkbook'
       }
     end
@@ -50,8 +56,10 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'FileSource',
         :'import_option' => :'ImportOption',
+        :'target_data_source' => :'DataSource',
         :'destination_workbook' => :'FileSource'
       }
     end
@@ -64,11 +72,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
       if attributes.has_key?(:'Workbook')
           self.workbook = attributes[:'Workbook']
       end
       if attributes.has_key?(:'ImportOption')
           self.import_option = attributes[:'ImportOption']
+      end
+      if attributes.has_key?(:'TargetDataSource')
+          self.target_data_source = attributes[:'TargetDataSource']
       end
       if attributes.has_key?(:'DestinationWorkbook')
           self.destination_workbook = attributes[:'DestinationWorkbook']
@@ -80,11 +94,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
       if @workbook.nil?
           invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
       end
       if @import_option.nil?
           invalid_properties.push("invalid value for 'import_option', import_option cannot be nil.")
+      end
+      if @target_data_source.nil?
+          invalid_properties.push("invalid value for 'target_data_source', target_data_source cannot be nil.")
       end
       if @destination_workbook.nil?
           invalid_properties.push("invalid value for 'destination_workbook', destination_workbook cannot be nil.")
@@ -96,8 +116,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @data_source.nil?
       return false if @workbook.nil?
       return false if @import_option.nil?
+      return false if @target_data_source.nil?
       return false if @destination_workbook.nil?
       return true
     end
@@ -107,8 +129,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          data_source == o.data_source &&
           workbook == o.workbook &&
           import_option == o.import_option &&
+          target_data_source == o.target_data_source &&
           destination_workbook == o.destination_workbook 
           std_dev == o.std_dev
     end
@@ -122,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ workbook , import_option , destination_workbook ].hash
+      [ data_source , workbook , import_option , target_data_source , destination_workbook ].hash
     end
 
     # Builds the object from hash

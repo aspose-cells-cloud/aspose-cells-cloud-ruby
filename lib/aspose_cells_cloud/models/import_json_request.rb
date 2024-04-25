@@ -50,7 +50,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'json_file_source' => :'FileSource',
+        :'json_file_source' => :'DataSource',
         :'import_position' => :'ImportPosition',
         :'json_content' => :'String'
       }

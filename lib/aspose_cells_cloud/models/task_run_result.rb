@@ -48,7 +48,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'description' => :'String',
-        :'out_file_list' => :'Array<FileSource>'
+        :'out_file_list' => :'Array<DataSource>'
       }
     end
 

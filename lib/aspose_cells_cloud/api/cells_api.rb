@@ -1025,6 +1025,14 @@ module AsposeCellsCloud
        return data
     end
 
+    # Transform spreadsheet data is mainly used to pivot columns, unpivot columns.
+
+    def post_data_transformation( post_data_transformation_request, opts = {})
+
+       data, _status_code, _headers = post_data_transformation_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Retrieve descriptions of hyperlinks in the worksheet.
 
     def get_worksheet_hyperlinks( get_worksheet_hyperlinks_request, opts = {})

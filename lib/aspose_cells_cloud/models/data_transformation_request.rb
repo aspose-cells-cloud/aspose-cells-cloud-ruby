@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="Import2DimensionStringArrayOptionrb.cs">
+ <copyright company="Aspose" file="DataTransformationRequestrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,49 +30,37 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class Import2DimensionStringArrayOption
+  class DataTransformationRequest
         #            
-        attr_accessor :first_row
+        attr_accessor :file_info
         #            
-        attr_accessor :first_column
+        attr_accessor :transformation
         #            
-        attr_accessor :data
+        attr_accessor :load_data
         #            
-        attr_accessor :destination_worksheet
+        attr_accessor :region
         #            
-        attr_accessor :is_insert
-        #            
-        attr_accessor :import_data_type
-        #            
-        attr_accessor :data_source
-        #            
-        attr_accessor :source
+        attr_accessor :out_format
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'first_row' => :'FirstRow',
-        :'first_column' => :'FirstColumn',
-        :'data' => :'Data',
-        :'destination_worksheet' => :'DestinationWorksheet',
-        :'is_insert' => :'IsInsert',
-        :'import_data_type' => :'ImportDataType',
-        :'data_source' => :'DataSource',
-        :'source' => :'Source'
+        :'file_info' => :'FileInfo',
+        :'transformation' => :'Transformation',
+        :'load_data' => :'LoadData',
+        :'region' => :'Region',
+        :'out_format' => :'OutFormat'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'first_row' => :'Integer',
-        :'first_column' => :'Integer',
-        :'data' => :'Array<String>',
-        :'destination_worksheet' => :'String',
-        :'is_insert' => :'BOOLEAN',
-        :'import_data_type' => :'String',
-        :'data_source' => :'DataSource',
-        :'source' => :'FileSource'
+        :'file_info' => :'FileInfo',
+        :'transformation' => :'Transformation',
+        :'load_data' => :'LoadData',
+        :'region' => :'String',
+        :'out_format' => :'String'
       }
     end
 
@@ -84,29 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'FirstRow')
-          self.first_row = attributes[:'FirstRow']
+      if attributes.has_key?(:'FileInfo')
+          self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'FirstColumn')
-          self.first_column = attributes[:'FirstColumn']
+      if attributes.has_key?(:'Transformation')
+          self.transformation = attributes[:'Transformation']
       end
-      if attributes.has_key?(:'Data')
-          self.data = attributes[:'Data']
+      if attributes.has_key?(:'LoadData')
+          self.load_data = attributes[:'LoadData']
       end
-      if attributes.has_key?(:'DestinationWorksheet')
-          self.destination_worksheet = attributes[:'DestinationWorksheet']
+      if attributes.has_key?(:'Region')
+          self.region = attributes[:'Region']
       end
-      if attributes.has_key?(:'IsInsert')
-          self.is_insert = attributes[:'IsInsert']
-      end
-      if attributes.has_key?(:'ImportDataType')
-          self.import_data_type = attributes[:'ImportDataType']
-      end
-      if attributes.has_key?(:'DataSource')
-          self.data_source = attributes[:'DataSource']
-      end
-      if attributes.has_key?(:'Source')
-          self.source = attributes[:'Source']
+      if attributes.has_key?(:'OutFormat')
+          self.out_format = attributes[:'OutFormat']
       end
 
     end
@@ -115,29 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @first_row.nil?
-          invalid_properties.push("invalid value for 'first_row', first_row cannot be nil.")
+      if @file_info.nil?
+          invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @first_column.nil?
-          invalid_properties.push("invalid value for 'first_column', first_column cannot be nil.")
+      if @transformation.nil?
+          invalid_properties.push("invalid value for 'transformation', transformation cannot be nil.")
       end
-      if @data.nil?
-          invalid_properties.push("invalid value for 'data', data cannot be nil.")
+      if @load_data.nil?
+          invalid_properties.push("invalid value for 'load_data', load_data cannot be nil.")
       end
-      if @destination_worksheet.nil?
-          invalid_properties.push("invalid value for 'destination_worksheet', destination_worksheet cannot be nil.")
+      if @region.nil?
+          invalid_properties.push("invalid value for 'region', region cannot be nil.")
       end
-      if @is_insert.nil?
-          invalid_properties.push("invalid value for 'is_insert', is_insert cannot be nil.")
-      end
-      if @import_data_type.nil?
-          invalid_properties.push("invalid value for 'import_data_type', import_data_type cannot be nil.")
-      end
-      if @data_source.nil?
-          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
-      end
-      if @source.nil?
-          invalid_properties.push("invalid value for 'source', source cannot be nil.")
+      if @out_format.nil?
+          invalid_properties.push("invalid value for 'out_format', out_format cannot be nil.")
       end
 
       return invalid_properties
@@ -146,14 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @first_row.nil?
-      return false if @first_column.nil?
-      return false if @data.nil?
-      return false if @destination_worksheet.nil?
-      return false if @is_insert.nil?
-      return false if @import_data_type.nil?
-      return false if @data_source.nil?
-      return false if @source.nil?
+      return false if @file_info.nil?
+      return false if @transformation.nil?
+      return false if @load_data.nil?
+      return false if @region.nil?
+      return false if @out_format.nil?
       return true
     end
 
@@ -162,14 +129,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          first_row == o.first_row &&
-          first_column == o.first_column &&
-          data == o.data &&
-          destination_worksheet == o.destination_worksheet &&
-          is_insert == o.is_insert &&
-          import_data_type == o.import_data_type &&
-          data_source == o.data_source &&
-          source == o.source 
+          file_info == o.file_info &&
+          transformation == o.transformation &&
+          load_data == o.load_data &&
+          region == o.region &&
+          out_format == o.out_format 
           std_dev == o.std_dev
     end
 
@@ -182,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ first_row , first_column , data , destination_worksheet , is_insert , import_data_type , data_source , source ].hash
+      [ file_info , transformation , load_data , region , out_format ].hash
     end
 
     # Builds the object from hash

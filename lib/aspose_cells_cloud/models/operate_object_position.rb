@@ -32,6 +32,8 @@ module AsposeCellsCloud
 
   class OperateObjectPosition
         #            
+        attr_accessor :data_source
+        #            
         attr_accessor :workbook
         #            
         attr_accessor :sheet_name
@@ -47,6 +49,7 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'Workbook',
         :'sheet_name' => :'SheetName',
         :'chart_index' => :'ChartIndex',
@@ -59,6 +62,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'FileSource',
         :'sheet_name' => :'String',
         :'chart_index' => :'Integer',
@@ -76,6 +80,9 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
       if attributes.has_key?(:'Workbook')
           self.workbook = attributes[:'Workbook']
       end
@@ -101,6 +108,9 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
       if @workbook.nil?
           invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
       end
@@ -126,6 +136,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @data_source.nil?
       return false if @workbook.nil?
       return false if @sheet_name.nil?
       return false if @chart_index.nil?
@@ -140,6 +151,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          data_source == o.data_source &&
           workbook == o.workbook &&
           sheet_name == o.sheet_name &&
           chart_index == o.chart_index &&
@@ -158,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ workbook , sheet_name , chart_index , shape_index , cell_name , list_object_index ].hash
+      [ data_source , workbook , sheet_name , chart_index , shape_index , cell_name , list_object_index ].hash
     end
 
     # Builds the object from hash

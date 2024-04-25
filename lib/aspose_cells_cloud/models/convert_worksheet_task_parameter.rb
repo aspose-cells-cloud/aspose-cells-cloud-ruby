@@ -32,9 +32,13 @@ module AsposeCellsCloud
 
   class ConvertWorksheetTaskParameter
         #            
+        attr_accessor :data_source
+        #            
         attr_accessor :workbook
         #            
         attr_accessor :sheet
+        #            
+        attr_accessor :target_data_source
         #            
         attr_accessor :target
         #            
@@ -51,8 +55,10 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'Workbook',
         :'sheet' => :'Sheet',
+        :'target_data_source' => :'TargetDataSource',
         :'target' => :'Target',
         :'format' => :'Format',
         :'area' => :'Area',
@@ -65,8 +71,10 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'data_source' => :'DataSource',
         :'workbook' => :'FileSource',
         :'sheet' => :'String',
+        :'target_data_source' => :'DataSource',
         :'target' => :'FileSource',
         :'format' => :'String',
         :'area' => :'String',
@@ -84,11 +92,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
       if attributes.has_key?(:'Workbook')
           self.workbook = attributes[:'Workbook']
       end
       if attributes.has_key?(:'Sheet')
           self.sheet = attributes[:'Sheet']
+      end
+      if attributes.has_key?(:'TargetDataSource')
+          self.target_data_source = attributes[:'TargetDataSource']
       end
       if attributes.has_key?(:'Target')
           self.target = attributes[:'Target']
@@ -115,11 +129,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
       if @workbook.nil?
           invalid_properties.push("invalid value for 'workbook', workbook cannot be nil.")
       end
       if @sheet.nil?
           invalid_properties.push("invalid value for 'sheet', sheet cannot be nil.")
+      end
+      if @target_data_source.nil?
+          invalid_properties.push("invalid value for 'target_data_source', target_data_source cannot be nil.")
       end
       if @target.nil?
           invalid_properties.push("invalid value for 'target', target cannot be nil.")
@@ -146,8 +166,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @data_source.nil?
       return false if @workbook.nil?
       return false if @sheet.nil?
+      return false if @target_data_source.nil?
       return false if @target.nil?
       return false if @format.nil?
       return false if @area.nil?
@@ -162,8 +184,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          data_source == o.data_source &&
           workbook == o.workbook &&
           sheet == o.sheet &&
+          target_data_source == o.target_data_source &&
           target == o.target &&
           format == o.format &&
           area == o.area &&
@@ -182,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ workbook , sheet , target , format , area , page_index , vertical_resolution , horizontal_resolution ].hash
+      [ data_source , workbook , sheet , target_data_source , target , format , area , page_index , vertical_resolution , horizontal_resolution ].hash
     end
 
     # Builds the object from hash

@@ -52,7 +52,7 @@ module AsposeCellsCloud
       {
         :'saved_files' => :'Array<Link>',
         :'description' => :'String',
-        :'out_file_list' => :'Array<FileSource>'
+        :'out_file_list' => :'Array<DataSource>'
       }
     end
 

@@ -37,13 +37,22 @@ module AsposeCellsCloud
         attr_accessor :destination_workbook
         #            
         attr_accessor :xml_file
+        #            
+        attr_accessor :data_source
+        #            
+        attr_accessor :target_data_source
+        #            
+        attr_accessor :xml_file_data_source
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'source_workbook' => :'SourceWorkbook',
         :'destination_workbook' => :'DestinationWorkbook',
-        :'xml_file' => :'xmlFile'
+        :'xml_file' => :'xmlFile',
+        :'data_source' => :'DataSource',
+        :'target_data_source' => :'TargetDataSource',
+        :'xml_file_data_source' => :'XMLFileDataSource'
       }
     end
 
@@ -52,7 +61,10 @@ module AsposeCellsCloud
       {
         :'source_workbook' => :'FileSource',
         :'destination_workbook' => :'FileSource',
-        :'xml_file' => :'FileSource'
+        :'xml_file' => :'FileSource',
+        :'data_source' => :'DataSource',
+        :'target_data_source' => :'DataSource',
+        :'xml_file_data_source' => :'DataSource'
       }
     end
 
@@ -73,6 +85,15 @@ module AsposeCellsCloud
       if attributes.has_key?(:'xmlFile')
           self.xml_file = attributes[:'xmlFile']
       end
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
+      end
+      if attributes.has_key?(:'TargetDataSource')
+          self.target_data_source = attributes[:'TargetDataSource']
+      end
+      if attributes.has_key?(:'XMLFileDataSource')
+          self.xml_file_data_source = attributes[:'XMLFileDataSource']
+      end
 
     end
 
@@ -89,6 +110,15 @@ module AsposeCellsCloud
       if @xml_file.nil?
           invalid_properties.push("invalid value for 'xml_file', xml_file cannot be nil.")
       end
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
+      if @target_data_source.nil?
+          invalid_properties.push("invalid value for 'target_data_source', target_data_source cannot be nil.")
+      end
+      if @xml_file_data_source.nil?
+          invalid_properties.push("invalid value for 'xml_file_data_source', xml_file_data_source cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -99,6 +129,9 @@ module AsposeCellsCloud
       return false if @source_workbook.nil?
       return false if @destination_workbook.nil?
       return false if @xml_file.nil?
+      return false if @data_source.nil?
+      return false if @target_data_source.nil?
+      return false if @xml_file_data_source.nil?
       return true
     end
 
@@ -109,7 +142,10 @@ module AsposeCellsCloud
       self.class == o.class &&
           source_workbook == o.source_workbook &&
           destination_workbook == o.destination_workbook &&
-          xml_file == o.xml_file 
+          xml_file == o.xml_file &&
+          data_source == o.data_source &&
+          target_data_source == o.target_data_source &&
+          xml_file_data_source == o.xml_file_data_source 
           std_dev == o.std_dev
     end
 
@@ -122,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ source_workbook , destination_workbook , xml_file ].hash
+      [ source_workbook , destination_workbook , xml_file , data_source , target_data_source , xml_file_data_source ].hash
     end
 
     # Builds the object from hash

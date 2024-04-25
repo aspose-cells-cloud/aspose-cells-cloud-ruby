@@ -1,17 +1,15 @@
-# AsposeCellsCloud::Object::CellsObjectOperateTaskParameter 
+# AsposeCellsCloud::Object::DataItem 
 
 ## Load the model package
 ```perl
-use AsposeCellsCloud::Object::CellsObjectOperateTaskParameter;
+use AsposeCellsCloud::Object::DataItem;
 ```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OperateObject** | **OperateObject** |  |
-**OperateParameter** | **OperateParameter** |  |
-**DestinatioDataSource** | **DataSource** |  |
-**DestinationWorkbook** | **FileSource** |  |  
+**DataItemType** | **string** |  |
+**Value** | **string** |  |  
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
