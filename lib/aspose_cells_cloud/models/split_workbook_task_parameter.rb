@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class SplitWorkbookTaskParameter
-        #            
+        #Represents data source of task object.            
         attr_accessor :workbook
-        #            
+        #Represents data source of task object.            
         attr_accessor :destination_file_position
-        #            
+        #Represents destination data source.            
         attr_accessor :data_source
-        #            
+        #Represents destination data source.            
         attr_accessor :target_data_source
-        #            
+        #Represents destination data file format.            
         attr_accessor :destination_file_format
         #SheetName /NewGuid            
         attr_accessor :split_name_rule

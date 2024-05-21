@@ -31,27 +31,27 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartOperateParameter
-        #            
+        #Represents chart index.            
         attr_accessor :chart_index
-        #            
+        #Represents chart type.            
         attr_accessor :chart_type
-        #            
+        #Represents upper left row index of chart.            
         attr_accessor :upper_left_row
-        #            
+        #Represents upper left column index of chart.            
         attr_accessor :upper_left_column
-        #            
+        #Represents lower right row index of chart.            
         attr_accessor :lower_right_row
-        #            
+        #Represents lower right column index of chart.            
         attr_accessor :lower_right_column
-        #            
+        #Represents chart area.            
         attr_accessor :area
-        #            
+        #Represents whether to plot the series from a range of cell values by row or by column.            
         attr_accessor :is_vertical
-        #            
+        #Represents chart category data.            
         attr_accessor :category_data
-        #            
+        #Represents whether auto get serial name.            
         attr_accessor :is_auto_get_serial_name
-        #            
+        #Represents chart title.            
         attr_accessor :title
         #            
         attr_accessor :operate_type

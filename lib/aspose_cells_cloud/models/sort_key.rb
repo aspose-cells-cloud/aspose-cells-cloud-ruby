@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class SortKey
-        #            
+        #Represents the key of sorting.            
         attr_accessor :key
-        #            
+        #Represents the order of sorting.            
         attr_accessor :sort_order
         #            
         attr_accessor :custom_list

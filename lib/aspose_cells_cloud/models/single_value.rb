@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class SingleValue
-        #            
+        #Represents value.            
         attr_accessor :value
-        #            
+        #Represents value type.            
         attr_accessor :value_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

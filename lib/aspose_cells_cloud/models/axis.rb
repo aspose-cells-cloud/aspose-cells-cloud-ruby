@@ -154,7 +154,7 @@ module AsposeCellsCloud
         :'cross_at' => :'Float',
         :'cross_type' => :'String',
         :'display_unit' => :'String',
-        :'display_unit_label' => :'LinkElement',
+        :'display_unit_label' => :'DisplayUnitLabel',
         :'has_multi_level_labels' => :'BOOLEAN',
         :'is_automatic_major_unit' => :'BOOLEAN',
         :'is_automatic_max_value' => :'BOOLEAN',

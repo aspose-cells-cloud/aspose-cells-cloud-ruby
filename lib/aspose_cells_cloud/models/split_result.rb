@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SplitResult
-        #            
+        #Represents cells cloud file information.            
         attr_accessor :documents
 
     # Attribute mapping from ruby-style variable name to JSON key.

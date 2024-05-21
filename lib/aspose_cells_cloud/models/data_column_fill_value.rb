@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DataColumnFillValue
-        #            
+        #Represents specified column index.            
         attr_accessor :column_index
-        #            
+        #Represents specified data fill value.            
         attr_accessor :data_fill_value
 
     # Attribute mapping from ruby-style variable name to JSON key.

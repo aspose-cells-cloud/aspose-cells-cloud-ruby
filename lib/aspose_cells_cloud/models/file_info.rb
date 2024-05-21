@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class FileInfo
-        #Filename.             
+        #Represents filename.             
         attr_accessor :filename
-        #File size.            
+        #Represents file size.            
         attr_accessor :file_size
-        #File content,  byte to base64 string.            
+        #Represents file content,  byte to base64 string.            
         attr_accessor :file_content
 
     # Attribute mapping from ruby-style variable name to JSON key.

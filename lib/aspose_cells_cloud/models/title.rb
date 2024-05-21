@@ -62,8 +62,6 @@ module AsposeCellsCloud
         #            
         attr_accessor :shadow
         #            
-        attr_accessor :shape_properties
-        #            
         attr_accessor :width
         #            
         attr_accessor :height
@@ -90,7 +88,6 @@ module AsposeCellsCloud
         :'is_automatic_size' => :'IsAutomaticSize',
         :'is_inner_mode' => :'IsInnerMode',
         :'shadow' => :'Shadow',
-        :'shape_properties' => :'ShapeProperties',
         :'width' => :'Width',
         :'height' => :'Height',
         :'x' => :'X',
@@ -116,7 +113,6 @@ module AsposeCellsCloud
         :'is_automatic_size' => :'BOOLEAN',
         :'is_inner_mode' => :'BOOLEAN',
         :'shadow' => :'BOOLEAN',
-        :'shape_properties' => :'Array<LinkElement>',
         :'width' => :'Integer',
         :'height' => :'Integer',
         :'x' => :'Integer',
@@ -176,9 +172,6 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'Shadow')
           self.shadow = attributes[:'Shadow']
-      end
-      if attributes.has_key?(:'ShapeProperties')
-          self.shape_properties = attributes[:'ShapeProperties']
       end
       if attributes.has_key?(:'Width')
           self.width = attributes[:'Width']
@@ -244,9 +237,6 @@ module AsposeCellsCloud
       if @shadow.nil?
           invalid_properties.push("invalid value for 'shadow', shadow cannot be nil.")
       end
-      if @shape_properties.nil?
-          invalid_properties.push("invalid value for 'shape_properties', shape_properties cannot be nil.")
-      end
       if @width.nil?
           invalid_properties.push("invalid value for 'width', width cannot be nil.")
       end
@@ -281,7 +271,6 @@ module AsposeCellsCloud
       return false if @is_automatic_size.nil?
       return false if @is_inner_mode.nil?
       return false if @shadow.nil?
-      return false if @shape_properties.nil?
       return false if @width.nil?
       return false if @height.nil?
       return false if @x.nil?
@@ -309,7 +298,6 @@ module AsposeCellsCloud
           is_automatic_size == o.is_automatic_size &&
           is_inner_mode == o.is_inner_mode &&
           shadow == o.shadow &&
-          shape_properties == o.shape_properties &&
           width == o.width &&
           height == o.height &&
           x == o.x &&
@@ -326,7 +314,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ is_visible , linked_source , rotation_angle , text , text_direction , text_horizontal_alignment , text_vertical_alignment , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , shape_properties , width , height , x , y ].hash
+      [ is_visible , linked_source , rotation_angle , text , text_direction , text_horizontal_alignment , text_vertical_alignment , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , width , height , x , y ].hash
     end
 
     # Builds the object from hash

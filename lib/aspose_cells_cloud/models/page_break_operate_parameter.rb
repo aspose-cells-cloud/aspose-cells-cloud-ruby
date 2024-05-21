@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class PageBreakOperateParameter
-        #            
+        #Represents page break type.            
         attr_accessor :page_break_type
-        #            
+        #Represents page break index.            
         attr_accessor :index
-        #            
+        #Represents row index of page break.            
         attr_accessor :row
-        #            
+        #Represents column index of page break.            
         attr_accessor :column
-        #            
+        #Represents start row index of page break.            
         attr_accessor :start_index
-        #            
+        #Represents end row index of page break.            
         attr_accessor :end_index
         #            
         attr_accessor :operate_type

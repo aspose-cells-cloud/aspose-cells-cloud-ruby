@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class DataFill
-        #            
+        #Represents range of data filling.            
         attr_accessor :ranges
-        #            
+        #Represents that the data column is populated with the default value.            
         attr_accessor :data_fill_default_value
-        #            
+        #Represents that the data column is populated with the specified value.            
         attr_accessor :data_column_fill_value_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class WorksheetOperateParameter
-        #            
+        #Represents worksheet name.            
         attr_accessor :name
-        #            
+        #Represents worksheet type.            
         attr_accessor :sheet_type
         #rename worksheet name            
         attr_accessor :new_name
-        #            
+        #Represents move position.            
         attr_accessor :moving_request
         #            
         attr_accessor :operate_type

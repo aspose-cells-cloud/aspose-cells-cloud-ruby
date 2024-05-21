@@ -83,8 +83,6 @@ module AsposeCellsCloud
         attr_accessor :leader_lines
         #Gets the legend entry according to this series.            
         attr_accessor :legend_entry
-        #            
-        attr_accessor :line
         #Gets the marker.            
         attr_accessor :marker
         #Gets or sets the name of the data series.            
@@ -101,8 +99,6 @@ module AsposeCellsCloud
         attr_accessor :series_lines
         #True if the series has a shadow.            
         attr_accessor :shadow
-        #Gets the  object that holds the visual shape properties of the Series.            
-        attr_accessor :shape_properties
         #True if negative bubbles are shown for the chart group. Valid only for bubble charts.            
         attr_accessor :show_negative_bubbles
         #Gets or sets what the bubble size represents on a bubble chart.            
@@ -159,7 +155,6 @@ module AsposeCellsCloud
         :'is_color_varied' => :'IsColorVaried',
         :'leader_lines' => :'LeaderLines',
         :'legend_entry' => :'LegendEntry',
-        :'line' => :'Line',
         :'marker' => :'Marker',
         :'name' => :'Name',
         :'overlap' => :'Overlap',
@@ -168,7 +163,6 @@ module AsposeCellsCloud
         :'second_plot_size' => :'SecondPlotSize',
         :'series_lines' => :'SeriesLines',
         :'shadow' => :'Shadow',
-        :'shape_properties' => :'ShapeProperties',
         :'show_negative_bubbles' => :'ShowNegativeBubbles',
         :'size_represents' => :'SizeRepresents',
         :'smooth' => :'Smooth',
@@ -194,10 +188,10 @@ module AsposeCellsCloud
         :'bubble_scale' => :'Integer',
         :'bubble_sizes' => :'String',
         :'count_of_data_values' => :'Integer',
-        :'data_labels' => :'LinkElement',
+        :'data_labels' => :'DataLabels',
         :'display_name' => :'String',
         :'doughnut_hole_size' => :'Integer',
-        :'down_bars' => :'LinkElement',
+        :'down_bars' => :'DropBars',
         :'drop_lines' => :'Line',
         :'explosion' => :'Integer',
         :'first_slice_angle' => :'Integer',
@@ -213,8 +207,7 @@ module AsposeCellsCloud
         :'is_auto_split' => :'BOOLEAN',
         :'is_color_varied' => :'BOOLEAN',
         :'leader_lines' => :'Line',
-        :'legend_entry' => :'LinkElement',
-        :'line' => :'Line',
+        :'legend_entry' => :'LegendEntry',
         :'marker' => :'Marker',
         :'name' => :'String',
         :'overlap' => :'Integer',
@@ -223,19 +216,18 @@ module AsposeCellsCloud
         :'second_plot_size' => :'Integer',
         :'series_lines' => :'Line',
         :'shadow' => :'BOOLEAN',
-        :'shape_properties' => :'LinkElement',
         :'show_negative_bubbles' => :'BOOLEAN',
         :'size_represents' => :'String',
         :'smooth' => :'BOOLEAN',
         :'split_type' => :'String',
         :'split_value' => :'Float',
-        :'trend_lines' => :'LinkElement',
+        :'trend_lines' => :'Trendlines',
         :'type' => :'String',
-        :'up_bars' => :'LinkElement',
+        :'up_bars' => :'DropBars',
         :'values' => :'String',
-        :'x_error_bar' => :'LinkElement',
+        :'x_error_bar' => :'ErrorBar',
         :'x_values' => :'String',
-        :'y_error_bar' => :'LinkElement',
+        :'y_error_bar' => :'ErrorBar',
         :'link' => :'Link'
       }
     end
@@ -326,9 +318,6 @@ module AsposeCellsCloud
       if attributes.has_key?(:'LegendEntry')
           self.legend_entry = attributes[:'LegendEntry']
       end
-      if attributes.has_key?(:'Line')
-          self.line = attributes[:'Line']
-      end
       if attributes.has_key?(:'Marker')
           self.marker = attributes[:'Marker']
       end
@@ -352,9 +341,6 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'Shadow')
           self.shadow = attributes[:'Shadow']
-      end
-      if attributes.has_key?(:'ShapeProperties')
-          self.shape_properties = attributes[:'ShapeProperties']
       end
       if attributes.has_key?(:'ShowNegativeBubbles')
           self.show_negative_bubbles = attributes[:'ShowNegativeBubbles']
@@ -480,9 +466,6 @@ module AsposeCellsCloud
       if @legend_entry.nil?
           invalid_properties.push("invalid value for 'legend_entry', legend_entry cannot be nil.")
       end
-      if @line.nil?
-          invalid_properties.push("invalid value for 'line', line cannot be nil.")
-      end
       if @marker.nil?
           invalid_properties.push("invalid value for 'marker', marker cannot be nil.")
       end
@@ -506,9 +489,6 @@ module AsposeCellsCloud
       end
       if @shadow.nil?
           invalid_properties.push("invalid value for 'shadow', shadow cannot be nil.")
-      end
-      if @shape_properties.nil?
-          invalid_properties.push("invalid value for 'shape_properties', shape_properties cannot be nil.")
       end
       if @show_negative_bubbles.nil?
           invalid_properties.push("invalid value for 'show_negative_bubbles', show_negative_bubbles cannot be nil.")
@@ -582,7 +562,6 @@ module AsposeCellsCloud
       return false if @is_color_varied.nil?
       return false if @leader_lines.nil?
       return false if @legend_entry.nil?
-      return false if @line.nil?
       return false if @marker.nil?
       return false if @name.nil?
       return false if @overlap.nil?
@@ -591,7 +570,6 @@ module AsposeCellsCloud
       return false if @second_plot_size.nil?
       return false if @series_lines.nil?
       return false if @shadow.nil?
-      return false if @shape_properties.nil?
       return false if @show_negative_bubbles.nil?
       return false if @size_represents.nil?
       return false if @smooth.nil?
@@ -639,7 +617,6 @@ module AsposeCellsCloud
           is_color_varied == o.is_color_varied &&
           leader_lines == o.leader_lines &&
           legend_entry == o.legend_entry &&
-          line == o.line &&
           marker == o.marker &&
           name == o.name &&
           overlap == o.overlap &&
@@ -648,7 +625,6 @@ module AsposeCellsCloud
           second_plot_size == o.second_plot_size &&
           series_lines == o.series_lines &&
           shadow == o.shadow &&
-          shape_properties == o.shape_properties &&
           show_negative_bubbles == o.show_negative_bubbles &&
           size_represents == o.size_represents &&
           smooth == o.smooth &&
@@ -674,7 +650,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ area , bar3_d_shape_type , border , bubble_scale , bubble_sizes , count_of_data_values , data_labels , display_name , doughnut_hole_size , down_bars , drop_lines , explosion , first_slice_angle , gap_width , has3_d_effect , has_drop_lines , has_hi_lo_lines , has_leader_lines , has_radar_axis_labels , has_series_lines , has_up_down_bars , hi_lo_lines , is_auto_split , is_color_varied , leader_lines , legend_entry , line , marker , name , overlap , plot_on_second_axis , points , second_plot_size , series_lines , shadow , shape_properties , show_negative_bubbles , size_represents , smooth , split_type , split_value , trend_lines , type , up_bars , values , x_error_bar , x_values , y_error_bar , link ].hash
+      [ area , bar3_d_shape_type , border , bubble_scale , bubble_sizes , count_of_data_values , data_labels , display_name , doughnut_hole_size , down_bars , drop_lines , explosion , first_slice_angle , gap_width , has3_d_effect , has_drop_lines , has_hi_lo_lines , has_leader_lines , has_radar_axis_labels , has_series_lines , has_up_down_bars , hi_lo_lines , is_auto_split , is_color_varied , leader_lines , legend_entry , marker , name , overlap , plot_on_second_axis , points , second_plot_size , series_lines , shadow , show_negative_bubbles , size_represents , smooth , split_type , split_value , trend_lines , type , up_bars , values , x_error_bar , x_values , y_error_bar , link ].hash
     end
 
     # Builds the object from hash

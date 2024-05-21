@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TextItem
-        #            
+        #Represents text content.            
         attr_accessor :text
         #            
         attr_accessor :link

@@ -33,9 +33,9 @@ module AsposeCellsCloud
   class DataCleansing
         #            
         attr_accessor :ranges
-        #            
+        #Represents whether the data needs to be populated.            
         attr_accessor :need_fill_data
-        #            
+        #Represents data fill.            
         attr_accessor :data_fill
 
     # Attribute mapping from ruby-style variable name to JSON key.

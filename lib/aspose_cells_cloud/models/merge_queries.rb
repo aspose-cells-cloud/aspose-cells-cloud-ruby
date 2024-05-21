@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="AnalyzeSuggestionrb.cs">
+ <copyright company="Aspose" file="MergeQueriesrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,49 +30,53 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class AnalyzeSuggestion
+  class MergeQueries
+        #Indicates the source of the mount data.            
+        attr_accessor :data_source_a
         #            
-        attr_accessor :name
-        #Excel file name.            
-        attr_accessor :filename
-        #The worksheet where the data is aAnalyzed.            
-        attr_accessor :sheet_name
-        #The type of data being analyzed.            
-        attr_accessor :date_source_type
-        #Based on the results of the data analysis, suggestions for creating new data types are given.            
-        attr_accessor :suggested_output_type
-        #Based on the results of the data analysis, a business description of the new data object is created.            
-        attr_accessor :description
+        attr_accessor :file_info_a
+        #Represents data item.            
+        attr_accessor :data_item_a
+        #Represents index field  of DataA            
+        attr_accessor :data_a_index_field
+        #Indicates the source of the mount data.            
+        attr_accessor :data_source_b
         #            
-        attr_accessor :data_souce_thumbnail
+        attr_accessor :file_info_b
+        #Represents data item.            
+        attr_accessor :data_item_b
+        #Represents index field  of DataB            
+        attr_accessor :data_b_index_field
         #            
-        attr_accessor :thumbnail
+        attr_accessor :join_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'Name',
-        :'filename' => :'Filename',
-        :'sheet_name' => :'SheetName',
-        :'date_source_type' => :'DateSourceType',
-        :'suggested_output_type' => :'SuggestedOutputType',
-        :'description' => :'Description',
-        :'data_souce_thumbnail' => :'DataSouceThumbnail',
-        :'thumbnail' => :'Thumbnail'
+        :'data_source_a' => :'DataSourceA',
+        :'file_info_a' => :'FileInfoA',
+        :'data_item_a' => :'DataItemA',
+        :'data_a_index_field' => :'DataAIndexField',
+        :'data_source_b' => :'DataSourceB',
+        :'file_info_b' => :'FileInfoB',
+        :'data_item_b' => :'DataItemB',
+        :'data_b_index_field' => :'DataBIndexField',
+        :'join_type' => :'JoinType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String',
-        :'filename' => :'String',
-        :'sheet_name' => :'String',
-        :'date_source_type' => :'String',
-        :'suggested_output_type' => :'String',
-        :'description' => :'String',
-        :'data_souce_thumbnail' => :'String',
-        :'thumbnail' => :'String'
+        :'data_source_a' => :'DataSource',
+        :'file_info_a' => :'FileInfo',
+        :'data_item_a' => :'DataItem',
+        :'data_a_index_field' => :'String',
+        :'data_source_b' => :'DataSource',
+        :'file_info_b' => :'FileInfo',
+        :'data_item_b' => :'DataItem',
+        :'data_b_index_field' => :'String',
+        :'join_type' => :'String'
       }
     end
 
@@ -84,29 +88,32 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Name')
-          self.name = attributes[:'Name']
+      if attributes.has_key?(:'DataSourceA')
+          self.data_source_a = attributes[:'DataSourceA']
       end
-      if attributes.has_key?(:'Filename')
-          self.filename = attributes[:'Filename']
+      if attributes.has_key?(:'FileInfoA')
+          self.file_info_a = attributes[:'FileInfoA']
       end
-      if attributes.has_key?(:'SheetName')
-          self.sheet_name = attributes[:'SheetName']
+      if attributes.has_key?(:'DataItemA')
+          self.data_item_a = attributes[:'DataItemA']
       end
-      if attributes.has_key?(:'DateSourceType')
-          self.date_source_type = attributes[:'DateSourceType']
+      if attributes.has_key?(:'DataAIndexField')
+          self.data_a_index_field = attributes[:'DataAIndexField']
       end
-      if attributes.has_key?(:'SuggestedOutputType')
-          self.suggested_output_type = attributes[:'SuggestedOutputType']
+      if attributes.has_key?(:'DataSourceB')
+          self.data_source_b = attributes[:'DataSourceB']
       end
-      if attributes.has_key?(:'Description')
-          self.description = attributes[:'Description']
+      if attributes.has_key?(:'FileInfoB')
+          self.file_info_b = attributes[:'FileInfoB']
       end
-      if attributes.has_key?(:'DataSouceThumbnail')
-          self.data_souce_thumbnail = attributes[:'DataSouceThumbnail']
+      if attributes.has_key?(:'DataItemB')
+          self.data_item_b = attributes[:'DataItemB']
       end
-      if attributes.has_key?(:'Thumbnail')
-          self.thumbnail = attributes[:'Thumbnail']
+      if attributes.has_key?(:'DataBIndexField')
+          self.data_b_index_field = attributes[:'DataBIndexField']
+      end
+      if attributes.has_key?(:'JoinType')
+          self.join_type = attributes[:'JoinType']
       end
 
     end
@@ -115,29 +122,32 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @name.nil?
-          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      if @data_source_a.nil?
+          invalid_properties.push("invalid value for 'data_source_a', data_source_a cannot be nil.")
       end
-      if @filename.nil?
-          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
+      if @file_info_a.nil?
+          invalid_properties.push("invalid value for 'file_info_a', file_info_a cannot be nil.")
       end
-      if @sheet_name.nil?
-          invalid_properties.push("invalid value for 'sheet_name', sheet_name cannot be nil.")
+      if @data_item_a.nil?
+          invalid_properties.push("invalid value for 'data_item_a', data_item_a cannot be nil.")
       end
-      if @date_source_type.nil?
-          invalid_properties.push("invalid value for 'date_source_type', date_source_type cannot be nil.")
+      if @data_a_index_field.nil?
+          invalid_properties.push("invalid value for 'data_a_index_field', data_a_index_field cannot be nil.")
       end
-      if @suggested_output_type.nil?
-          invalid_properties.push("invalid value for 'suggested_output_type', suggested_output_type cannot be nil.")
+      if @data_source_b.nil?
+          invalid_properties.push("invalid value for 'data_source_b', data_source_b cannot be nil.")
       end
-      if @description.nil?
-          invalid_properties.push("invalid value for 'description', description cannot be nil.")
+      if @file_info_b.nil?
+          invalid_properties.push("invalid value for 'file_info_b', file_info_b cannot be nil.")
       end
-      if @data_souce_thumbnail.nil?
-          invalid_properties.push("invalid value for 'data_souce_thumbnail', data_souce_thumbnail cannot be nil.")
+      if @data_item_b.nil?
+          invalid_properties.push("invalid value for 'data_item_b', data_item_b cannot be nil.")
       end
-      if @thumbnail.nil?
-          invalid_properties.push("invalid value for 'thumbnail', thumbnail cannot be nil.")
+      if @data_b_index_field.nil?
+          invalid_properties.push("invalid value for 'data_b_index_field', data_b_index_field cannot be nil.")
+      end
+      if @join_type.nil?
+          invalid_properties.push("invalid value for 'join_type', join_type cannot be nil.")
       end
 
       return invalid_properties
@@ -146,14 +156,15 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @name.nil?
-      return false if @filename.nil?
-      return false if @sheet_name.nil?
-      return false if @date_source_type.nil?
-      return false if @suggested_output_type.nil?
-      return false if @description.nil?
-      return false if @data_souce_thumbnail.nil?
-      return false if @thumbnail.nil?
+      return false if @data_source_a.nil?
+      return false if @file_info_a.nil?
+      return false if @data_item_a.nil?
+      return false if @data_a_index_field.nil?
+      return false if @data_source_b.nil?
+      return false if @file_info_b.nil?
+      return false if @data_item_b.nil?
+      return false if @data_b_index_field.nil?
+      return false if @join_type.nil?
       return true
     end
 
@@ -162,14 +173,15 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          filename == o.filename &&
-          sheet_name == o.sheet_name &&
-          date_source_type == o.date_source_type &&
-          suggested_output_type == o.suggested_output_type &&
-          description == o.description &&
-          data_souce_thumbnail == o.data_souce_thumbnail &&
-          thumbnail == o.thumbnail 
+          data_source_a == o.data_source_a &&
+          file_info_a == o.file_info_a &&
+          data_item_a == o.data_item_a &&
+          data_a_index_field == o.data_a_index_field &&
+          data_source_b == o.data_source_b &&
+          file_info_b == o.file_info_b &&
+          data_item_b == o.data_item_b &&
+          data_b_index_field == o.data_b_index_field &&
+          join_type == o.join_type 
           std_dev == o.std_dev
     end
 
@@ -182,7 +194,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ name , filename , sheet_name , date_source_type , suggested_output_type , description , data_souce_thumbnail , thumbnail ].hash
+      [ data_source_a , file_info_a , data_item_a , data_a_index_field , data_source_b , file_info_b , data_item_b , data_b_index_field , join_type ].hash
     end
 
     # Builds the object from hash

@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveResultTaskParameter
-        #            
+        #Represents result data source.            
         attr_accessor :result_source
-        #            
+        #Represents result destination data.            
         attr_accessor :result_destination
 
     # Attribute mapping from ruby-style variable name to JSON key.

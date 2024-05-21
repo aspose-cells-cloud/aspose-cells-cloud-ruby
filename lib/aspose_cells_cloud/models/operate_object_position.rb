@@ -31,19 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class OperateObjectPosition
-        #            
+        #Represents data source of operate object.            
         attr_accessor :data_source
-        #            
+        #Represents data source of operate object.            
         attr_accessor :workbook
-        #            
+        #Represents worksheet name of operate object.            
         attr_accessor :sheet_name
-        #            
+        #Represents chart index of operate object.            
         attr_accessor :chart_index
-        #            
+        #Represents shape index of operate object.            
         attr_accessor :shape_index
-        #            
+        #Represents cell name of operate object.            
         attr_accessor :cell_name
-        #            
+        #Represents list object index of operate object.            
         attr_accessor :list_object_index
 
     # Attribute mapping from ruby-style variable name to JSON key.

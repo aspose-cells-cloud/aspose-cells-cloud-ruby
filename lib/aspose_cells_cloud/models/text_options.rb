@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class TextOptions
-        #            
+        #Represents fill format.            
         attr_accessor :fill
-        #            
+        #Represents kerning.            
         attr_accessor :kerning
-        #            
+        #Represents outline format.            
         attr_accessor :outline
-        #            
+        #Represents shadow effect.            
         attr_accessor :shadow
-        #            
+        #Represents spacing.            
         attr_accessor :spacing
-        #            
+        #Represents under line color.            
         attr_accessor :underline_color
         #            
         attr_accessor :color

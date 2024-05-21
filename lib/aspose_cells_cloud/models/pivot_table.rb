@@ -99,7 +99,7 @@ module AsposeCellsCloud
         attr_accessor :merge_labels
         #            
         attr_accessor :missing_items_limit
-        #            
+        #Represents pivot table name.            
         attr_accessor :name
         #            
         attr_accessor :null_string

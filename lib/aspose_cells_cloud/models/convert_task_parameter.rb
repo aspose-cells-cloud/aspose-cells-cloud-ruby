@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class ConvertTaskParameter
-        #            
+        #Represents data source of task object.            
         attr_accessor :data_source
-        #            
+        #Represents data source of task object.            
         attr_accessor :workbook
-        #            
+        #Represents destination file.            
         attr_accessor :destination_file
-        #            
+        #Represents Excel data region.            
         attr_accessor :region
-        #            
+        #Represents save options.            
         attr_accessor :save_options
 
     # Attribute mapping from ruby-style variable name to JSON key.

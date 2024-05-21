@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DataSource
-        #            
+        #Represents data source type.            
         attr_accessor :data_source_type
-        #            
+        #Represents data path.            
         attr_accessor :data_path
 
     # Attribute mapping from ruby-style variable name to JSON key.

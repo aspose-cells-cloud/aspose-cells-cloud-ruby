@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class OperateParameter
-        #            
+        #Represents task operate type.            
         attr_accessor :operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

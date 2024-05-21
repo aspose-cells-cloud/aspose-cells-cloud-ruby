@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListObjectOperateParameter
-        #            
+        #Represents list object of operate object.            
         attr_accessor :list_object
         #            
         attr_accessor :operate_type

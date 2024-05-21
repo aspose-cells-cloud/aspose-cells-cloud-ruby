@@ -31,24 +31,20 @@ require 'date'
 module AsposeCellsCloud
 
   class ExcelDataStatistics
-        #            
+        #Represents worksheet data statistics list.            
         attr_accessor :worksheet_data_statistics
-        #            
-        attr_accessor :names_count
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'worksheet_data_statistics' => :'WorksheetDataStatistics',
-        :'names_count' => :'NamesCount'
+        :'worksheet_data_statistics' => :'WorksheetDataStatistics'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'worksheet_data_statistics' => :'Array<WorksheetDataStatistics>',
-        :'names_count' => :'Integer'
+        :'worksheet_data_statistics' => :'Array<WorksheetDataStatistics>'
       }
     end
 
@@ -63,9 +59,6 @@ module AsposeCellsCloud
       if attributes.has_key?(:'WorksheetDataStatistics')
           self.worksheet_data_statistics = attributes[:'WorksheetDataStatistics']
       end
-      if attributes.has_key?(:'NamesCount')
-          self.names_count = attributes[:'NamesCount']
-      end
 
     end
 
@@ -76,9 +69,6 @@ module AsposeCellsCloud
       if @worksheet_data_statistics.nil?
           invalid_properties.push("invalid value for 'worksheet_data_statistics', worksheet_data_statistics cannot be nil.")
       end
-      if @names_count.nil?
-          invalid_properties.push("invalid value for 'names_count', names_count cannot be nil.")
-      end
 
       return invalid_properties
     end
@@ -87,7 +77,6 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @worksheet_data_statistics.nil?
-      return false if @names_count.nil?
       return true
     end
 
@@ -96,8 +85,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          worksheet_data_statistics == o.worksheet_data_statistics &&
-          names_count == o.names_count 
+          worksheet_data_statistics == o.worksheet_data_statistics 
           std_dev == o.std_dev
     end
 
@@ -110,7 +98,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ worksheet_data_statistics , names_count ].hash
+      [ worksheet_data_statistics ].hash
     end
 
     # Builds the object from hash

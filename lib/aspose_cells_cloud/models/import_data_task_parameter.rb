@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportDataTaskParameter
-        #            
+        #Represents data source of task object.            
         attr_accessor :data_source
-        #            
+        #Represents data source of task object.            
         attr_accessor :workbook
-        #            
+        #Represents import option.            
         attr_accessor :import_option
-        #            
+        #Represents destination data source.            
         attr_accessor :target_data_source
-        #            
+        #Represents destination data source.            
         attr_accessor :destination_workbook
 
     # Attribute mapping from ruby-style variable name to JSON key.

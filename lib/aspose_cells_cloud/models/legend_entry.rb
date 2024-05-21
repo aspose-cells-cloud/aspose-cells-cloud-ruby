@@ -56,10 +56,10 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'auto_scale_font' => :'String',
+        :'auto_scale_font' => :'BOOLEAN',
         :'background_mode' => :'String',
         :'font' => :'Font',
-        :'is_deleted' => :'String',
+        :'is_deleted' => :'BOOLEAN',
         :'link' => :'Link'
       }
     end

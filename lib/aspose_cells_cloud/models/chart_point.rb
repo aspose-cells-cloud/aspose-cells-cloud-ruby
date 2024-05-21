@@ -47,6 +47,8 @@ module AsposeCellsCloud
         attr_accessor :x_value
         #Gets or sets the Y value of the chart point.            
         attr_accessor :y_value
+        #Gets or sets a value indicates whether this data points is in the second pie or bar on a pie of pie or bar of pie chart.            
+        attr_accessor :is_in_secondary_plot
         #            
         attr_accessor :link
 
@@ -61,6 +63,7 @@ module AsposeCellsCloud
         :'shadow' => :'Shadow',
         :'x_value' => :'XValue',
         :'y_value' => :'YValue',
+        :'is_in_secondary_plot' => :'IsInSecondaryPlot',
         :'link' => :'link'
       }
     end
@@ -74,8 +77,9 @@ module AsposeCellsCloud
         :'explosion' => :'Integer',
         :'marker' => :'Marker',
         :'shadow' => :'BOOLEAN',
-        :'x_value' => :'String',
-        :'y_value' => :'String',
+        :'x_value' => :'Object',
+        :'y_value' => :'Object',
+        :'is_in_secondary_plot' => :'BOOLEAN',
         :'link' => :'Link'
       }
     end
@@ -112,6 +116,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'YValue')
           self.y_value = attributes[:'YValue']
       end
+      if attributes.has_key?(:'IsInSecondaryPlot')
+          self.is_in_secondary_plot = attributes[:'IsInSecondaryPlot']
+      end
       if attributes.has_key?(:'link')
           self.link = attributes[:'link']
       end
@@ -146,6 +153,9 @@ module AsposeCellsCloud
       if @y_value.nil?
           invalid_properties.push("invalid value for 'y_value', y_value cannot be nil.")
       end
+      if @is_in_secondary_plot.nil?
+          invalid_properties.push("invalid value for 'is_in_secondary_plot', is_in_secondary_plot cannot be nil.")
+      end
       if @link.nil?
           invalid_properties.push("invalid value for 'link', link cannot be nil.")
       end
@@ -164,6 +174,7 @@ module AsposeCellsCloud
       return false if @shadow.nil?
       return false if @x_value.nil?
       return false if @y_value.nil?
+      return false if @is_in_secondary_plot.nil?
       return false if @link.nil?
       return true
     end
@@ -181,6 +192,7 @@ module AsposeCellsCloud
           shadow == o.shadow &&
           x_value == o.x_value &&
           y_value == o.y_value &&
+          is_in_secondary_plot == o.is_in_secondary_plot &&
           link == o.link 
           std_dev == o.std_dev
     end
@@ -194,7 +206,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ area , border , data_labels , explosion , marker , shadow , x_value , y_value , link ].hash
+      [ area , border , data_labels , explosion , marker , shadow , x_value , y_value , is_in_secondary_plot , link ].hash
     end
 
     # Builds the object from hash

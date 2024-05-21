@@ -31,37 +31,37 @@ require 'date'
 module AsposeCellsCloud
 
   class AnalyzedTableDescription
-        #            
+        #Represents table name.            
         attr_accessor :name
-        #            
+        #Represents worksheet name which is where the table is located.            
         attr_accessor :sheet_name
-        #            
+        #Represents analyzed description about table columns.            
         attr_accessor :columns
-        #            
+        #Represents date columns list.            
         attr_accessor :date_columns
-        #            
+        #Represents number columns list.            
         attr_accessor :number_columns
-        #            
+        #Represents string columns list.            
         attr_accessor :text_columns
-        #            
+        #Represents exception columns list.            
         attr_accessor :exception_columns
-        #            
+        #Represents there is a table header in the table.            
         attr_accessor :has_table_header_row
-        #            
+        #Represents there is a total row in the table.            
         attr_accessor :has_table_total_row
-        #            
+        #Represents the column index as the start data column.            
         attr_accessor :start_data_column_index
-        #            
+        #Represents the column index as the end data column.            
         attr_accessor :end_data_column_index
-        #            
+        #Represents the row index as the start data row.            
         attr_accessor :start_data_row_index
-        #            
+        #Represents the row index as the end data row.            
         attr_accessor :end_data_row_index
-        #Base64String            
+        #Represents table thumbnail. Base64String            
         attr_accessor :thumbnail
-        #            
+        #Represents a collection of charts, which is a collection of charts created based on data analysis of a table.            
         attr_accessor :discover_charts
-        #            
+        #Represents a collection of pivot tables, which is a collection of pivot tables created based on data analysis of a table.            
         attr_accessor :discover_pivot_tables
 
     # Attribute mapping from ruby-style variable name to JSON key.

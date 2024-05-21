@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ShapeOperateParameter
-        #            
+        #Represents shape object.            
         attr_accessor :shape
         #            
         attr_accessor :operate_type

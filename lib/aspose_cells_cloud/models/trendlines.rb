@@ -47,7 +47,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'trendline_list' => :'Array<LinkElement>',
+        :'trendline_list' => :'Array<Trendline>',
         :'link' => :'Link'
       }
     end

@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class DiscoverChart
-        #            
+        #Represents chart name.            
         attr_accessor :name
-        #            
+        #Represents worksheet name which is where the chart is located.            
         attr_accessor :sheet_name
-        #            
+        #Represents chart title.            
         attr_accessor :title
-        #            
+        #Represents chart type.            
         attr_accessor :type
-        #            
+        #Represents chart data range.            
         attr_accessor :data_range
-        #Base64String            
+        #Represents chart thumbnail. Base64String            
         attr_accessor :thumbnail
 
     # Attribute mapping from ruby-style variable name to JSON key.

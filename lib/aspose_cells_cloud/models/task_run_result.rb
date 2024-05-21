@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class TaskRunResult
-        #            
+        #Represents task run result description.            
         attr_accessor :description
-        #            
+        #Represents out data file list.            
         attr_accessor :out_file_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

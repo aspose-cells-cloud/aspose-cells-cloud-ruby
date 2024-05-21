@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PageSetupOperateParameter
-        #            
+        #Represents worksheet page setup.            
         attr_accessor :page_setup
         #            
         attr_accessor :operate_type

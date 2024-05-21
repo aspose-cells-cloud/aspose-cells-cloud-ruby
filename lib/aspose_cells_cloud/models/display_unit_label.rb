@@ -38,8 +38,6 @@ module AsposeCellsCloud
         #Gets or sets the text of display unit label.            
         attr_accessor :text
         #            
-        attr_accessor :text_direction
-        #            
         attr_accessor :text_horizontal_alignment
         #            
         attr_accessor :text_vertical_alignment
@@ -60,8 +58,6 @@ module AsposeCellsCloud
         #            
         attr_accessor :shadow
         #            
-        attr_accessor :shape_properties
-        #            
         attr_accessor :width
         #            
         attr_accessor :height
@@ -76,7 +72,6 @@ module AsposeCellsCloud
         :'linked_source' => :'LinkedSource',
         :'rotation_angle' => :'RotationAngle',
         :'text' => :'Text',
-        :'text_direction' => :'TextDirection',
         :'text_horizontal_alignment' => :'TextHorizontalAlignment',
         :'text_vertical_alignment' => :'TextVerticalAlignment',
         :'area' => :'Area',
@@ -87,7 +82,6 @@ module AsposeCellsCloud
         :'is_automatic_size' => :'IsAutomaticSize',
         :'is_inner_mode' => :'IsInnerMode',
         :'shadow' => :'Shadow',
-        :'shape_properties' => :'ShapeProperties',
         :'width' => :'Width',
         :'height' => :'Height',
         :'x' => :'X',
@@ -101,7 +95,6 @@ module AsposeCellsCloud
         :'linked_source' => :'String',
         :'rotation_angle' => :'Integer',
         :'text' => :'String',
-        :'text_direction' => :'String',
         :'text_horizontal_alignment' => :'String',
         :'text_vertical_alignment' => :'String',
         :'area' => :'Area',
@@ -112,7 +105,6 @@ module AsposeCellsCloud
         :'is_automatic_size' => :'BOOLEAN',
         :'is_inner_mode' => :'BOOLEAN',
         :'shadow' => :'BOOLEAN',
-        :'shape_properties' => :'Array<LinkElement>',
         :'width' => :'Integer',
         :'height' => :'Integer',
         :'x' => :'Integer',
@@ -136,9 +128,6 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'Text')
           self.text = attributes[:'Text']
-      end
-      if attributes.has_key?(:'TextDirection')
-          self.text_direction = attributes[:'TextDirection']
       end
       if attributes.has_key?(:'TextHorizontalAlignment')
           self.text_horizontal_alignment = attributes[:'TextHorizontalAlignment']
@@ -170,9 +159,6 @@ module AsposeCellsCloud
       if attributes.has_key?(:'Shadow')
           self.shadow = attributes[:'Shadow']
       end
-      if attributes.has_key?(:'ShapeProperties')
-          self.shape_properties = attributes[:'ShapeProperties']
-      end
       if attributes.has_key?(:'Width')
           self.width = attributes[:'Width']
       end
@@ -200,9 +186,6 @@ module AsposeCellsCloud
       end
       if @text.nil?
           invalid_properties.push("invalid value for 'text', text cannot be nil.")
-      end
-      if @text_direction.nil?
-          invalid_properties.push("invalid value for 'text_direction', text_direction cannot be nil.")
       end
       if @text_horizontal_alignment.nil?
           invalid_properties.push("invalid value for 'text_horizontal_alignment', text_horizontal_alignment cannot be nil.")
@@ -234,9 +217,6 @@ module AsposeCellsCloud
       if @shadow.nil?
           invalid_properties.push("invalid value for 'shadow', shadow cannot be nil.")
       end
-      if @shape_properties.nil?
-          invalid_properties.push("invalid value for 'shape_properties', shape_properties cannot be nil.")
-      end
       if @width.nil?
           invalid_properties.push("invalid value for 'width', width cannot be nil.")
       end
@@ -259,7 +239,6 @@ module AsposeCellsCloud
       return false if @linked_source.nil?
       return false if @rotation_angle.nil?
       return false if @text.nil?
-      return false if @text_direction.nil?
       return false if @text_horizontal_alignment.nil?
       return false if @text_vertical_alignment.nil?
       return false if @area.nil?
@@ -270,7 +249,6 @@ module AsposeCellsCloud
       return false if @is_automatic_size.nil?
       return false if @is_inner_mode.nil?
       return false if @shadow.nil?
-      return false if @shape_properties.nil?
       return false if @width.nil?
       return false if @height.nil?
       return false if @x.nil?
@@ -286,7 +264,6 @@ module AsposeCellsCloud
           linked_source == o.linked_source &&
           rotation_angle == o.rotation_angle &&
           text == o.text &&
-          text_direction == o.text_direction &&
           text_horizontal_alignment == o.text_horizontal_alignment &&
           text_vertical_alignment == o.text_vertical_alignment &&
           area == o.area &&
@@ -297,7 +274,6 @@ module AsposeCellsCloud
           is_automatic_size == o.is_automatic_size &&
           is_inner_mode == o.is_inner_mode &&
           shadow == o.shadow &&
-          shape_properties == o.shape_properties &&
           width == o.width &&
           height == o.height &&
           x == o.x &&
@@ -314,7 +290,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ linked_source , rotation_angle , text , text_direction , text_horizontal_alignment , text_vertical_alignment , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , shape_properties , width , height , x , y ].hash
+      [ linked_source , rotation_angle , text , text_horizontal_alignment , text_vertical_alignment , area , auto_scale_font , background_mode , border , font , is_automatic_size , is_inner_mode , shadow , width , height , x , y ].hash
     end
 
     # Builds the object from hash

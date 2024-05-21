@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class DataFillValue
-        #            
+        #Represents default bool value.             
         attr_accessor :default_boolean
-        #            
+        #Represents default string value.                         
         attr_accessor :default_string
-        #            
+        #Represents default number value.                         
         attr_accessor :default_number
-        #            
+        #Represents default double value.                         
         attr_accessor :default_double
-        #            
+        #Represents default date value.                         
         attr_accessor :default_date
 
     # Attribute mapping from ruby-style variable name to JSON key.

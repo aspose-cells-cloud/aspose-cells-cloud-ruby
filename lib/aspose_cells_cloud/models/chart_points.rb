@@ -47,7 +47,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'chart_point_list' => :'Array<LinkElement>',
+        :'chart_point_list' => :'Array<ChartPoint>',
         :'link' => :'Link'
       }
     end

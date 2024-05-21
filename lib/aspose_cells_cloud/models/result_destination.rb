@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class ResultDestination
-        #            
+        #Represents destination data type.            
         attr_accessor :destination_type
-        #            
+        #Represents input file.            
         attr_accessor :input_file
-        #            
+        #Represents output file.            
         attr_accessor :output_file
 
     # Attribute mapping from ruby-style variable name to JSON key.

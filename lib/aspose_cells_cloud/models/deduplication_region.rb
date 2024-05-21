@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DeduplicationRegion
-        #            
+        #Represents data range.            
         attr_accessor :ranges
-        #            
+        #Represents worksheet name list.            
         attr_accessor :worksheet_name_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

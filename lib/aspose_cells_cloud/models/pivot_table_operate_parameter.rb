@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTableOperateParameter
-        #            
+        #Represents source data of pivot table.            
         attr_accessor :source_data
-        #            
+        #Represents start cell name of the pivot table.            
         attr_accessor :dest_cell_name
-        #            
+        #Represents table name of pivot table.            
         attr_accessor :table_name
-        #            
+        #Represents whether the same source is used.            
         attr_accessor :use_same_source
-        #            
+        #Represents pivot table index.            
         attr_accessor :pivot_table_index
-        #            
+        #Represents pivot row fields.            
         attr_accessor :pivot_field_rows
-        #            
+        #Represents pivot column fields.            
         attr_accessor :pivot_field_columns
-        #            
+        #Represents pivot data field.            
         attr_accessor :pivot_field_data
         #            
         attr_accessor :operate_type

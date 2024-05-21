@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorkbookSettingsOperateParameter
-        #            
+        #Represents workbook setting.            
         attr_accessor :workbook_settings
         #            
         attr_accessor :operate_type

@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class TaskDescription
-        #            
+        #Represents task type.            
         attr_accessor :task_type
-        #            
+        #Represents task parameter.            
         attr_accessor :task_parameter
 
     # Attribute mapping from ruby-style variable name to JSON key.

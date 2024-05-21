@@ -39,6 +39,8 @@ module AsposeCellsCloud
         attr_accessor :file_info
         #The specific data object type and name.            
         attr_accessor :data_item
+        #            
+        attr_accessor :merge_queries
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -46,7 +48,8 @@ module AsposeCellsCloud
         :'load_to' => :'LoadTo',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'data_item' => :'DataItem'
+        :'data_item' => :'DataItem',
+        :'merge_queries' => :'MergeQueries'
       }
     end
 
@@ -56,7 +59,8 @@ module AsposeCellsCloud
         :'load_to' => :'LoadTo',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'data_item' => :'DataItem'
+        :'data_item' => :'DataItem',
+        :'merge_queries' => :'MergeQueries'
       }
     end
 
@@ -80,6 +84,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'DataItem')
           self.data_item = attributes[:'DataItem']
       end
+      if attributes.has_key?(:'MergeQueries')
+          self.merge_queries = attributes[:'MergeQueries']
+      end
 
     end
 
@@ -99,6 +106,9 @@ module AsposeCellsCloud
       if @data_item.nil?
           invalid_properties.push("invalid value for 'data_item', data_item cannot be nil.")
       end
+      if @merge_queries.nil?
+          invalid_properties.push("invalid value for 'merge_queries', merge_queries cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -110,6 +120,7 @@ module AsposeCellsCloud
       return false if @data_source.nil?
       return false if @file_info.nil?
       return false if @data_item.nil?
+      return false if @merge_queries.nil?
       return true
     end
 
@@ -121,7 +132,8 @@ module AsposeCellsCloud
           load_to == o.load_to &&
           data_source == o.data_source &&
           file_info == o.file_info &&
-          data_item == o.data_item 
+          data_item == o.data_item &&
+          merge_queries == o.merge_queries 
           std_dev == o.std_dev
     end
 
@@ -134,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ load_to , data_source , file_info , data_item ].hash
+      [ load_to , data_source , file_info , data_item , merge_queries ].hash
     end
 
     # Builds the object from hash

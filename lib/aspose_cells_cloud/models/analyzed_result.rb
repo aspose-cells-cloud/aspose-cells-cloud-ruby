@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class AnalyzedResult
-        #            
+        #Represents the file name of data file.            
         attr_accessor :filename
-        #            
+        #Represents summary about results of analyzed data.            
         attr_accessor :description
-        #            
+        #Represents Excel data statistics.            
         attr_accessor :basic_statistics
-        #            
+        #Represents analyzed table description.            
         attr_accessor :results
         #base64String Excel file            
         attr_accessor :suggested_file

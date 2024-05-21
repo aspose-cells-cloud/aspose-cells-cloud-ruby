@@ -31,25 +31,25 @@ require 'date'
 module AsposeCellsCloud
 
   class ConvertWorksheetTaskParameter
-        #            
+        #Represents data source of task object.            
         attr_accessor :data_source
-        #            
+        #Represents data source of task object.            
         attr_accessor :workbook
-        #            
+        #Represents worksheet.            
         attr_accessor :sheet
-        #            
+        #Represents destination data source.            
         attr_accessor :target_data_source
-        #            
+        #Represents destination data source.            
         attr_accessor :target
-        #            
+        #Represents destination data format.            
         attr_accessor :format
-        #            
+        #Represents converted data area.            
         attr_accessor :area
-        #            
+        #Represents converted page index.            
         attr_accessor :page_index
-        #            
+        #Represents vertical resolution.            
         attr_accessor :vertical_resolution
-        #            
+        #Represents horizontal resolution.            
         attr_accessor :horizontal_resolution
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -65,7 +65,7 @@ module AsposeCellsCloud
         attr_accessor :is_rectangular_cornered
         #Gets the chart legend.            
         attr_accessor :legend
-        #            
+        #Represents chart name.            
         attr_accessor :name
         #Gets a  collection representing the data series in the chart.            
         attr_accessor :n_series
@@ -107,9 +107,9 @@ module AsposeCellsCloud
         attr_accessor :size_with_window
         #Gets and sets the builtin style.            
         attr_accessor :style
-        #            
+        #Represents chart title.            
         attr_accessor :title
-        #            
+        #Represents chart type.            
         attr_accessor :type
         #Gets the chart's Y axis.            
         attr_accessor :value_axis
@@ -174,29 +174,29 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'auto_scaling' => :'BOOLEAN',
-        :'back_wall' => :'LinkElement',
-        :'category_axis' => :'LinkElement',
-        :'chart_area' => :'LinkElement',
-        :'chart_data_table' => :'LinkElement',
+        :'back_wall' => :'Walls',
+        :'category_axis' => :'Axis',
+        :'chart_area' => :'ChartArea',
+        :'chart_data_table' => :'ChartDataTable',
         :'chart_object' => :'LinkElement',
         :'depth_percent' => :'Integer',
         :'elevation' => :'Integer',
         :'first_slice_angle' => :'Integer',
-        :'floor' => :'LinkElement',
+        :'floor' => :'Floor',
         :'gap_depth' => :'Integer',
         :'gap_width' => :'Integer',
         :'height_percent' => :'Integer',
         :'hide_pivot_field_buttons' => :'BOOLEAN',
         :'is3_d' => :'BOOLEAN',
         :'is_rectangular_cornered' => :'BOOLEAN',
-        :'legend' => :'LinkElement',
+        :'legend' => :'Legend',
         :'name' => :'String',
-        :'n_series' => :'LinkElement',
+        :'n_series' => :'SeriesItems',
         :'page_setup' => :'LinkElement',
         :'perspective' => :'Integer',
         :'pivot_source' => :'String',
         :'placement' => :'String',
-        :'plot_area' => :'LinkElement',
+        :'plot_area' => :'PlotArea',
         :'plot_empty_cells_type' => :'String',
         :'plot_visible_cells' => :'BOOLEAN',
         :'print_size' => :'String',
@@ -213,7 +213,7 @@ module AsposeCellsCloud
         :'style' => :'Integer',
         :'title' => :'LinkElement',
         :'type' => :'String',
-        :'value_axis' => :'LinkElement',
+        :'value_axis' => :'Axis',
         :'walls' => :'LinkElement',
         :'walls_and_gridlines2_d' => :'BOOLEAN',
         :'link' => :'Link'

@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class DataItem
-        #            
+        #Represents data item type.                        
         attr_accessor :data_item_type
-        #            
+        #Represents data item value.                        
         attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -59,7 +59,7 @@ module AsposeCellsCloud
         :'category_data' => :'String',
         :'is_color_varied' => :'BOOLEAN',
         :'second_catergory_data' => :'String',
-        :'series_list' => :'Array<LinkElement>',
+        :'series_list' => :'Array<Series>',
         :'link' => :'Link'
       }
     end

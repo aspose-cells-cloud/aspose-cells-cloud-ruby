@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class DiscoverPivotTable
-        #            
+        #Represents pivot table name.            
         attr_accessor :name
-        #            
+        #Represents pivot table title.            
         attr_accessor :title
-        #            
+        #Represents pivot table data range.            
         attr_accessor :data_range
         #Represents row fields in a PivotTable report.            
         attr_accessor :pivot_field_rows
@@ -43,7 +43,7 @@ module AsposeCellsCloud
         attr_accessor :pivot_field_columns
         #Represents data fields in a PivotTable report.            
         attr_accessor :pivot_field_data
-        #Base64String            
+        #Represents pivot table thumbnail. Base64String            
         attr_accessor :thumbnail
 
     # Attribute mapping from ruby-style variable name to JSON key.

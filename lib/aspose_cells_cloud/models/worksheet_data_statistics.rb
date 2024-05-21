@@ -31,25 +31,25 @@ require 'date'
 module AsposeCellsCloud
 
   class WorksheetDataStatistics
-        #            
+        #Represents worksheet name.            
         attr_accessor :name
-        #            
+        #Represents chart number.            
         attr_accessor :charts_count
-        #            
+        #Represents list object number.            
         attr_accessor :tables_count
-        #            
+        #Represents pivot table number.            
         attr_accessor :pivot_tables_count
-        #            
+        #Represents shape number.            
         attr_accessor :shapes_count
-        #            
+        #Represents shape number.            
         attr_accessor :hyperlinks_count
-        #            
+        #Represents hyperlink number.            
         attr_accessor :query_tables_count
-        #            
+        #Represents query table number.            
         attr_accessor :cells_count
-        #            
+        #Represents cell number.            
         attr_accessor :cells_count_in_table
-        #            
+        #Represents formula number.            
         attr_accessor :cells_count_is_formula
 
     # Attribute mapping from ruby-style variable name to JSON key.

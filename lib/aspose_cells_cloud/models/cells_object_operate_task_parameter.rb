@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsObjectOperateTaskParameter
-        #            
+        #Represents object operate.            
         attr_accessor :operate_object
-        #            
+        #Represents operate parameter.            
         attr_accessor :operate_parameter
-        #            
-        attr_accessor :destinatio_data_source
-        #            
+        #Represents destination data source.            
+        attr_accessor :destination_data_source
+        #Represents destination data source.            
         attr_accessor :destination_workbook
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -45,7 +45,7 @@ module AsposeCellsCloud
       {
         :'operate_object' => :'OperateObject',
         :'operate_parameter' => :'OperateParameter',
-        :'destinatio_data_source' => :'DestinatioDataSource',
+        :'destination_data_source' => :'DestinationDataSource',
         :'destination_workbook' => :'DestinationWorkbook'
       }
     end
@@ -55,7 +55,7 @@ module AsposeCellsCloud
       {
         :'operate_object' => :'OperateObject',
         :'operate_parameter' => :'OperateParameter',
-        :'destinatio_data_source' => :'DataSource',
+        :'destination_data_source' => :'DataSource',
         :'destination_workbook' => :'FileSource'
       }
     end
@@ -74,8 +74,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'OperateParameter')
           self.operate_parameter = attributes[:'OperateParameter']
       end
-      if attributes.has_key?(:'DestinatioDataSource')
-          self.destinatio_data_source = attributes[:'DestinatioDataSource']
+      if attributes.has_key?(:'DestinationDataSource')
+          self.destination_data_source = attributes[:'DestinationDataSource']
       end
       if attributes.has_key?(:'DestinationWorkbook')
           self.destination_workbook = attributes[:'DestinationWorkbook']
@@ -93,8 +93,8 @@ module AsposeCellsCloud
       if @operate_parameter.nil?
           invalid_properties.push("invalid value for 'operate_parameter', operate_parameter cannot be nil.")
       end
-      if @destinatio_data_source.nil?
-          invalid_properties.push("invalid value for 'destinatio_data_source', destinatio_data_source cannot be nil.")
+      if @destination_data_source.nil?
+          invalid_properties.push("invalid value for 'destination_data_source', destination_data_source cannot be nil.")
       end
       if @destination_workbook.nil?
           invalid_properties.push("invalid value for 'destination_workbook', destination_workbook cannot be nil.")
@@ -108,7 +108,7 @@ module AsposeCellsCloud
     def valid?
       return false if @operate_object.nil?
       return false if @operate_parameter.nil?
-      return false if @destinatio_data_source.nil?
+      return false if @destination_data_source.nil?
       return false if @destination_workbook.nil?
       return true
     end
@@ -120,7 +120,7 @@ module AsposeCellsCloud
       self.class == o.class &&
           operate_object == o.operate_object &&
           operate_parameter == o.operate_parameter &&
-          destinatio_data_source == o.destinatio_data_source &&
+          destination_data_source == o.destination_data_source &&
           destination_workbook == o.destination_workbook 
           std_dev == o.std_dev
     end
@@ -134,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ operate_object , operate_parameter , destinatio_data_source , destination_workbook ].hash
+      [ operate_object , operate_parameter , destination_data_source , destination_workbook ].hash
     end
 
     # Builds the object from hash

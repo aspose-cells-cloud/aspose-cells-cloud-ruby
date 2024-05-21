@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class SmartMarkerTaskParameter
-        #            
+        #Represents data source of task object.            
         attr_accessor :source_workbook
-        #            
+        #Represents data source of task object.            
         attr_accessor :destination_workbook
-        #            
+        #Represents xml file.            
         attr_accessor :xml_file
-        #            
+        #Represents destination data source.            
         attr_accessor :data_source
-        #            
+        #Represents destination data source.            
         attr_accessor :target_data_source
-        #            
+        #Represents xml file.            
         attr_accessor :xml_file_data_source
 
     # Attribute mapping from ruby-style variable name to JSON key.
