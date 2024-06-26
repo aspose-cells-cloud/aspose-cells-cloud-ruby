@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class LoadTo
-        #            
+        #The worksheet name.            
         attr_accessor :worksheet
-        #            
+        #The begin row index of worksheet.            
         attr_accessor :begin_row_index
-        #            
+        #The begin column index of worksheet.            
         attr_accessor :begin_column_index
 
     # Attribute mapping from ruby-style variable name to JSON key.

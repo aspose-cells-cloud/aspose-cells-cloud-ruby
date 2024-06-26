@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="QueryTablerb.cs">
+ <copyright company="Aspose" file="AppliedSteprb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,37 +30,25 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class QueryTable
-        #Gets the connection id of the query table.            
-        attr_accessor :connection_id
-        #Gets the name of querytable.            
-        attr_accessor :name
-        #Gets the range of the result.            
-        attr_accessor :result_range
-        #Returns or sets the PreserveFormatting of the object.            
-        attr_accessor :preserve_formatting
-        #Returns or sets the AdjustColumnWidth of the object.            
-        attr_accessor :adjust_column_width
+  class AppliedStep
+        #Data manipulation step name.            
+        attr_accessor :step_name
+        #Data manipulation name.            
+        attr_accessor :applied_operate
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'connection_id' => :'ConnectionId',
-        :'name' => :'Name',
-        :'result_range' => :'ResultRange',
-        :'preserve_formatting' => :'PreserveFormatting',
-        :'adjust_column_width' => :'AdjustColumnWidth'
+        :'step_name' => :'StepName',
+        :'applied_operate' => :'AppliedOperate'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'connection_id' => :'Integer',
-        :'name' => :'String',
-        :'result_range' => :'Range',
-        :'preserve_formatting' => :'BOOLEAN',
-        :'adjust_column_width' => :'BOOLEAN'
+        :'step_name' => :'String',
+        :'applied_operate' => :'AppliedOperate'
       }
     end
 
@@ -72,20 +60,11 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'ConnectionId')
-          self.connection_id = attributes[:'ConnectionId']
+      if attributes.has_key?(:'StepName')
+          self.step_name = attributes[:'StepName']
       end
-      if attributes.has_key?(:'Name')
-          self.name = attributes[:'Name']
-      end
-      if attributes.has_key?(:'ResultRange')
-          self.result_range = attributes[:'ResultRange']
-      end
-      if attributes.has_key?(:'PreserveFormatting')
-          self.preserve_formatting = attributes[:'PreserveFormatting']
-      end
-      if attributes.has_key?(:'AdjustColumnWidth')
-          self.adjust_column_width = attributes[:'AdjustColumnWidth']
+      if attributes.has_key?(:'AppliedOperate')
+          self.applied_operate = attributes[:'AppliedOperate']
       end
 
     end
@@ -94,20 +73,11 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @connection_id.nil?
-          invalid_properties.push("invalid value for 'connection_id', connection_id cannot be nil.")
+      if @step_name.nil?
+          invalid_properties.push("invalid value for 'step_name', step_name cannot be nil.")
       end
-      if @name.nil?
-          invalid_properties.push("invalid value for 'name', name cannot be nil.")
-      end
-      if @result_range.nil?
-          invalid_properties.push("invalid value for 'result_range', result_range cannot be nil.")
-      end
-      if @preserve_formatting.nil?
-          invalid_properties.push("invalid value for 'preserve_formatting', preserve_formatting cannot be nil.")
-      end
-      if @adjust_column_width.nil?
-          invalid_properties.push("invalid value for 'adjust_column_width', adjust_column_width cannot be nil.")
+      if @applied_operate.nil?
+          invalid_properties.push("invalid value for 'applied_operate', applied_operate cannot be nil.")
       end
 
       return invalid_properties
@@ -116,11 +86,8 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @connection_id.nil?
-      return false if @name.nil?
-      return false if @result_range.nil?
-      return false if @preserve_formatting.nil?
-      return false if @adjust_column_width.nil?
+      return false if @step_name.nil?
+      return false if @applied_operate.nil?
       return true
     end
 
@@ -129,11 +96,8 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          connection_id == o.connection_id &&
-          name == o.name &&
-          result_range == o.result_range &&
-          preserve_formatting == o.preserve_formatting &&
-          adjust_column_width == o.adjust_column_width 
+          step_name == o.step_name &&
+          applied_operate == o.applied_operate 
           std_dev == o.std_dev
     end
 
@@ -146,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ connection_id , name , result_range , preserve_formatting , adjust_column_width ].hash
+      [ step_name , applied_operate ].hash
     end
 
     # Builds the object from hash

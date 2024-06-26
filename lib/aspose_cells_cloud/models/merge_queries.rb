@@ -31,52 +31,40 @@ require 'date'
 module AsposeCellsCloud
 
   class MergeQueries
-        #Indicates the source of the mount data.            
-        attr_accessor :data_source_a
-        #            
-        attr_accessor :file_info_a
-        #Represents data item.            
-        attr_accessor :data_item_a
-        #Represents index field  of DataA            
+        #Indicates the name of the data query , it is matched in the data query set.            
+        attr_accessor :data_query_name_a
+        #Represents index field  of DataA.            
         attr_accessor :data_a_index_field
-        #Indicates the source of the mount data.            
-        attr_accessor :data_source_b
-        #            
-        attr_accessor :file_info_b
-        #Represents data item.            
-        attr_accessor :data_item_b
-        #Represents index field  of DataB            
+        #Indicates the name of the data query , it is matched in the data query set.            
+        attr_accessor :data_query_name_b
+        #Represents index field  of DataB.            
         attr_accessor :data_b_index_field
-        #            
+        #Represents ethods of data consolidation.            
         attr_accessor :join_type
+        #            
+        attr_accessor :applied_operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data_source_a' => :'DataSourceA',
-        :'file_info_a' => :'FileInfoA',
-        :'data_item_a' => :'DataItemA',
+        :'data_query_name_a' => :'DataQueryNameA',
         :'data_a_index_field' => :'DataAIndexField',
-        :'data_source_b' => :'DataSourceB',
-        :'file_info_b' => :'FileInfoB',
-        :'data_item_b' => :'DataItemB',
+        :'data_query_name_b' => :'DataQueryNameB',
         :'data_b_index_field' => :'DataBIndexField',
-        :'join_type' => :'JoinType'
+        :'join_type' => :'JoinType',
+        :'applied_operate_type' => :'AppliedOperateType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data_source_a' => :'DataSource',
-        :'file_info_a' => :'FileInfo',
-        :'data_item_a' => :'DataItem',
+        :'data_query_name_a' => :'String',
         :'data_a_index_field' => :'String',
-        :'data_source_b' => :'DataSource',
-        :'file_info_b' => :'FileInfo',
-        :'data_item_b' => :'DataItem',
+        :'data_query_name_b' => :'String',
         :'data_b_index_field' => :'String',
-        :'join_type' => :'String'
+        :'join_type' => :'String',
+        :'applied_operate_type' => :'String'
       }
     end
 
@@ -88,32 +76,23 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'DataSourceA')
-          self.data_source_a = attributes[:'DataSourceA']
-      end
-      if attributes.has_key?(:'FileInfoA')
-          self.file_info_a = attributes[:'FileInfoA']
-      end
-      if attributes.has_key?(:'DataItemA')
-          self.data_item_a = attributes[:'DataItemA']
+      if attributes.has_key?(:'DataQueryNameA')
+          self.data_query_name_a = attributes[:'DataQueryNameA']
       end
       if attributes.has_key?(:'DataAIndexField')
           self.data_a_index_field = attributes[:'DataAIndexField']
       end
-      if attributes.has_key?(:'DataSourceB')
-          self.data_source_b = attributes[:'DataSourceB']
-      end
-      if attributes.has_key?(:'FileInfoB')
-          self.file_info_b = attributes[:'FileInfoB']
-      end
-      if attributes.has_key?(:'DataItemB')
-          self.data_item_b = attributes[:'DataItemB']
+      if attributes.has_key?(:'DataQueryNameB')
+          self.data_query_name_b = attributes[:'DataQueryNameB']
       end
       if attributes.has_key?(:'DataBIndexField')
           self.data_b_index_field = attributes[:'DataBIndexField']
       end
       if attributes.has_key?(:'JoinType')
           self.join_type = attributes[:'JoinType']
+      end
+      if attributes.has_key?(:'AppliedOperateType')
+          self.applied_operate_type = attributes[:'AppliedOperateType']
       end
 
     end
@@ -122,32 +101,23 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @data_source_a.nil?
-          invalid_properties.push("invalid value for 'data_source_a', data_source_a cannot be nil.")
-      end
-      if @file_info_a.nil?
-          invalid_properties.push("invalid value for 'file_info_a', file_info_a cannot be nil.")
-      end
-      if @data_item_a.nil?
-          invalid_properties.push("invalid value for 'data_item_a', data_item_a cannot be nil.")
+      if @data_query_name_a.nil?
+          invalid_properties.push("invalid value for 'data_query_name_a', data_query_name_a cannot be nil.")
       end
       if @data_a_index_field.nil?
           invalid_properties.push("invalid value for 'data_a_index_field', data_a_index_field cannot be nil.")
       end
-      if @data_source_b.nil?
-          invalid_properties.push("invalid value for 'data_source_b', data_source_b cannot be nil.")
-      end
-      if @file_info_b.nil?
-          invalid_properties.push("invalid value for 'file_info_b', file_info_b cannot be nil.")
-      end
-      if @data_item_b.nil?
-          invalid_properties.push("invalid value for 'data_item_b', data_item_b cannot be nil.")
+      if @data_query_name_b.nil?
+          invalid_properties.push("invalid value for 'data_query_name_b', data_query_name_b cannot be nil.")
       end
       if @data_b_index_field.nil?
           invalid_properties.push("invalid value for 'data_b_index_field', data_b_index_field cannot be nil.")
       end
       if @join_type.nil?
           invalid_properties.push("invalid value for 'join_type', join_type cannot be nil.")
+      end
+      if @applied_operate_type.nil?
+          invalid_properties.push("invalid value for 'applied_operate_type', applied_operate_type cannot be nil.")
       end
 
       return invalid_properties
@@ -156,15 +126,12 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @data_source_a.nil?
-      return false if @file_info_a.nil?
-      return false if @data_item_a.nil?
+      return false if @data_query_name_a.nil?
       return false if @data_a_index_field.nil?
-      return false if @data_source_b.nil?
-      return false if @file_info_b.nil?
-      return false if @data_item_b.nil?
+      return false if @data_query_name_b.nil?
       return false if @data_b_index_field.nil?
       return false if @join_type.nil?
+      return false if @applied_operate_type.nil?
       return true
     end
 
@@ -173,15 +140,12 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data_source_a == o.data_source_a &&
-          file_info_a == o.file_info_a &&
-          data_item_a == o.data_item_a &&
+          data_query_name_a == o.data_query_name_a &&
           data_a_index_field == o.data_a_index_field &&
-          data_source_b == o.data_source_b &&
-          file_info_b == o.file_info_b &&
-          data_item_b == o.data_item_b &&
+          data_query_name_b == o.data_query_name_b &&
           data_b_index_field == o.data_b_index_field &&
-          join_type == o.join_type 
+          join_type == o.join_type &&
+          applied_operate_type == o.applied_operate_type 
           std_dev == o.std_dev
     end
 
@@ -194,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ data_source_a , file_info_a , data_item_a , data_a_index_field , data_source_b , file_info_b , data_item_b , data_b_index_field , join_type ].hash
+      [ data_query_name_a , data_a_index_field , data_query_name_b , data_b_index_field , join_type , applied_operate_type ].hash
     end
 
     # Builds the object from hash

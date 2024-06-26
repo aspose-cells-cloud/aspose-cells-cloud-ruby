@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="Transformationrb.cs">
+ <copyright company="Aspose" file="AppliedOperaterb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,25 +30,21 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class Transformation
-        #long table to a wide table.            
-        attr_accessor :pivot_column
-        #wide table to a long table            
-        attr_accessor :unpivot_column
+  class AppliedOperate
+        #            
+        attr_accessor :applied_operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'pivot_column' => :'PivotColumn',
-        :'unpivot_column' => :'UnpivotColumn'
+        :'applied_operate_type' => :'AppliedOperateType'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'pivot_column' => :'PivotColumn',
-        :'unpivot_column' => :'UnpivotColumn'
+        :'applied_operate_type' => :'String'
       }
     end
 
@@ -60,11 +56,8 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'PivotColumn')
-          self.pivot_column = attributes[:'PivotColumn']
-      end
-      if attributes.has_key?(:'UnpivotColumn')
-          self.unpivot_column = attributes[:'UnpivotColumn']
+      if attributes.has_key?(:'AppliedOperateType')
+          self.applied_operate_type = attributes[:'AppliedOperateType']
       end
 
     end
@@ -73,11 +66,8 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @pivot_column.nil?
-          invalid_properties.push("invalid value for 'pivot_column', pivot_column cannot be nil.")
-      end
-      if @unpivot_column.nil?
-          invalid_properties.push("invalid value for 'unpivot_column', unpivot_column cannot be nil.")
+      if @applied_operate_type.nil?
+          invalid_properties.push("invalid value for 'applied_operate_type', applied_operate_type cannot be nil.")
       end
 
       return invalid_properties
@@ -86,8 +76,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @pivot_column.nil?
-      return false if @unpivot_column.nil?
+      return false if @applied_operate_type.nil?
       return true
     end
 
@@ -96,8 +85,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          pivot_column == o.pivot_column &&
-          unpivot_column == o.unpivot_column 
+          applied_operate_type == o.applied_operate_type 
           std_dev == o.std_dev
     end
 
@@ -110,7 +98,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ pivot_column , unpivot_column ].hash
+      [ applied_operate_type ].hash
     end
 
     # Builds the object from hash

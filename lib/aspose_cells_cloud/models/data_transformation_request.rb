@@ -31,23 +31,26 @@ require 'date'
 module AsposeCellsCloud
 
   class DataTransformationRequest
-        #            
+        #Indicates the source of the mount data.            
         attr_accessor :file_info
-        #            
-        attr_accessor :transformation
-        #            
+        #Indicates the source of the mount data.            
+        attr_accessor :data_source
+        #Indicates load data.            
         attr_accessor :load_data
+        #Indicates applied step list.             
+        attr_accessor :applied_steps
         #            
         attr_accessor :region
-        #            
+        #Indicates output format             
         attr_accessor :out_format
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'file_info' => :'FileInfo',
-        :'transformation' => :'Transformation',
+        :'data_source' => :'DataSource',
         :'load_data' => :'LoadData',
+        :'applied_steps' => :'AppliedSteps',
         :'region' => :'Region',
         :'out_format' => :'OutFormat'
       }
@@ -57,8 +60,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'file_info' => :'FileInfo',
-        :'transformation' => :'Transformation',
+        :'data_source' => :'DataSource',
         :'load_data' => :'LoadData',
+        :'applied_steps' => :'Array<AppliedStep>',
         :'region' => :'String',
         :'out_format' => :'String'
       }
@@ -75,11 +79,14 @@ module AsposeCellsCloud
       if attributes.has_key?(:'FileInfo')
           self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'Transformation')
-          self.transformation = attributes[:'Transformation']
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
       end
       if attributes.has_key?(:'LoadData')
           self.load_data = attributes[:'LoadData']
+      end
+      if attributes.has_key?(:'AppliedSteps')
+          self.applied_steps = attributes[:'AppliedSteps']
       end
       if attributes.has_key?(:'Region')
           self.region = attributes[:'Region']
@@ -97,11 +104,14 @@ module AsposeCellsCloud
       if @file_info.nil?
           invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @transformation.nil?
-          invalid_properties.push("invalid value for 'transformation', transformation cannot be nil.")
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
       end
       if @load_data.nil?
           invalid_properties.push("invalid value for 'load_data', load_data cannot be nil.")
+      end
+      if @applied_steps.nil?
+          invalid_properties.push("invalid value for 'applied_steps', applied_steps cannot be nil.")
       end
       if @region.nil?
           invalid_properties.push("invalid value for 'region', region cannot be nil.")
@@ -117,8 +127,9 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @file_info.nil?
-      return false if @transformation.nil?
+      return false if @data_source.nil?
       return false if @load_data.nil?
+      return false if @applied_steps.nil?
       return false if @region.nil?
       return false if @out_format.nil?
       return true
@@ -130,8 +141,9 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           file_info == o.file_info &&
-          transformation == o.transformation &&
+          data_source == o.data_source &&
           load_data == o.load_data &&
+          applied_steps == o.applied_steps &&
           region == o.region &&
           out_format == o.out_format 
           std_dev == o.std_dev
@@ -146,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ file_info , transformation , load_data , region , out_format ].hash
+      [ file_info , data_source , load_data , applied_steps , region , out_format ].hash
     end
 
     # Builds the object from hash

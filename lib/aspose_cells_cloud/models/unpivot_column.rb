@@ -31,19 +31,22 @@ require 'date'
 module AsposeCellsCloud
 
   class UnpivotColumn
-        #            
+        #Indicates unpivot column names.            
         attr_accessor :unpivot_column_names
-        #            
+        #Indicates the column is used to store the name of unpivot columns.            
         attr_accessor :column_map_name
-        #            
+        #Indicates the column is used to store the value of unpivot columns.            
         attr_accessor :value_map_name
+        #            
+        attr_accessor :applied_operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'unpivot_column_names' => :'UnpivotColumnNames',
         :'column_map_name' => :'ColumnMapName',
-        :'value_map_name' => :'ValueMapName'
+        :'value_map_name' => :'ValueMapName',
+        :'applied_operate_type' => :'AppliedOperateType'
       }
     end
 
@@ -52,7 +55,8 @@ module AsposeCellsCloud
       {
         :'unpivot_column_names' => :'Array<String>',
         :'column_map_name' => :'String',
-        :'value_map_name' => :'String'
+        :'value_map_name' => :'String',
+        :'applied_operate_type' => :'String'
       }
     end
 
@@ -73,6 +77,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ValueMapName')
           self.value_map_name = attributes[:'ValueMapName']
       end
+      if attributes.has_key?(:'AppliedOperateType')
+          self.applied_operate_type = attributes[:'AppliedOperateType']
+      end
 
     end
 
@@ -89,6 +96,9 @@ module AsposeCellsCloud
       if @value_map_name.nil?
           invalid_properties.push("invalid value for 'value_map_name', value_map_name cannot be nil.")
       end
+      if @applied_operate_type.nil?
+          invalid_properties.push("invalid value for 'applied_operate_type', applied_operate_type cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -99,6 +109,7 @@ module AsposeCellsCloud
       return false if @unpivot_column_names.nil?
       return false if @column_map_name.nil?
       return false if @value_map_name.nil?
+      return false if @applied_operate_type.nil?
       return true
     end
 
@@ -109,7 +120,8 @@ module AsposeCellsCloud
       self.class == o.class &&
           unpivot_column_names == o.unpivot_column_names &&
           column_map_name == o.column_map_name &&
-          value_map_name == o.value_map_name 
+          value_map_name == o.value_map_name &&
+          applied_operate_type == o.applied_operate_type 
           std_dev == o.std_dev
     end
 
@@ -122,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ unpivot_column_names , column_map_name , value_map_name ].hash
+      [ unpivot_column_names , column_map_name , value_map_name , applied_operate_type ].hash
     end
 
     # Builds the object from hash

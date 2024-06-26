@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="QueryDataSourcerb.cs">
+ <copyright company="Aspose" file="DataQueryrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,29 +30,37 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class QueryDataSource
-        #            
+  class DataQuery
+        #Define a name for data query. Unique identification.            
+        attr_accessor :name
+        #The specific data object type. When the value is File, DataItem is invalid.            
         attr_accessor :data_source_data_type
-        #            
-        attr_accessor :data_file
-        #            
+        #Indicates the source of the mount data.            
         attr_accessor :data_source
+        #When data souce is request files, FileInfo store the contents of the file.            
+        attr_accessor :file_info
+        #The specific data object type and name.            
+        attr_accessor :data_item
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'name' => :'Name',
         :'data_source_data_type' => :'DataSourceDataType',
-        :'data_file' => :'DataFile',
-        :'data_source' => :'DataSource'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'data_item' => :'DataItem'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'name' => :'String',
         :'data_source_data_type' => :'String',
-        :'data_file' => :'DataSource',
-        :'data_source' => :'String'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'data_item' => :'DataItem'
       }
     end
 
@@ -64,14 +72,20 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'Name')
+          self.name = attributes[:'Name']
+      end
       if attributes.has_key?(:'DataSourceDataType')
           self.data_source_data_type = attributes[:'DataSourceDataType']
       end
-      if attributes.has_key?(:'DataFile')
-          self.data_file = attributes[:'DataFile']
-      end
       if attributes.has_key?(:'DataSource')
           self.data_source = attributes[:'DataSource']
+      end
+      if attributes.has_key?(:'FileInfo')
+          self.file_info = attributes[:'FileInfo']
+      end
+      if attributes.has_key?(:'DataItem')
+          self.data_item = attributes[:'DataItem']
       end
 
     end
@@ -80,14 +94,20 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @name.nil?
+          invalid_properties.push("invalid value for 'name', name cannot be nil.")
+      end
       if @data_source_data_type.nil?
           invalid_properties.push("invalid value for 'data_source_data_type', data_source_data_type cannot be nil.")
       end
-      if @data_file.nil?
-          invalid_properties.push("invalid value for 'data_file', data_file cannot be nil.")
-      end
       if @data_source.nil?
           invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
+      end
+      if @file_info.nil?
+          invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
+      end
+      if @data_item.nil?
+          invalid_properties.push("invalid value for 'data_item', data_item cannot be nil.")
       end
 
       return invalid_properties
@@ -96,9 +116,11 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @name.nil?
       return false if @data_source_data_type.nil?
-      return false if @data_file.nil?
       return false if @data_source.nil?
+      return false if @file_info.nil?
+      return false if @data_item.nil?
       return true
     end
 
@@ -107,9 +129,11 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          name == o.name &&
           data_source_data_type == o.data_source_data_type &&
-          data_file == o.data_file &&
-          data_source == o.data_source 
+          data_source == o.data_source &&
+          file_info == o.file_info &&
+          data_item == o.data_item 
           std_dev == o.std_dev
     end
 
@@ -122,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ data_source_data_type , data_file , data_source ].hash
+      [ name , data_source_data_type , data_source , file_info , data_item ].hash
     end
 
     # Builds the object from hash

@@ -31,16 +31,19 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotColumn
-        #            
+        #Represents pivot column name.            
         attr_accessor :pivot_column_name
-        #            
+        #Represents column name that sets the column's value to the value of the pivot column.            
         attr_accessor :value_column_names
+        #            
+        attr_accessor :applied_operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'pivot_column_name' => :'PivotColumnName',
-        :'value_column_names' => :'ValueColumnNames'
+        :'value_column_names' => :'ValueColumnNames',
+        :'applied_operate_type' => :'AppliedOperateType'
       }
     end
 
@@ -48,7 +51,8 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'pivot_column_name' => :'String',
-        :'value_column_names' => :'Array<String>'
+        :'value_column_names' => :'Array<String>',
+        :'applied_operate_type' => :'String'
       }
     end
 
@@ -66,6 +70,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ValueColumnNames')
           self.value_column_names = attributes[:'ValueColumnNames']
       end
+      if attributes.has_key?(:'AppliedOperateType')
+          self.applied_operate_type = attributes[:'AppliedOperateType']
+      end
 
     end
 
@@ -79,6 +86,9 @@ module AsposeCellsCloud
       if @value_column_names.nil?
           invalid_properties.push("invalid value for 'value_column_names', value_column_names cannot be nil.")
       end
+      if @applied_operate_type.nil?
+          invalid_properties.push("invalid value for 'applied_operate_type', applied_operate_type cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -88,6 +98,7 @@ module AsposeCellsCloud
     def valid?
       return false if @pivot_column_name.nil?
       return false if @value_column_names.nil?
+      return false if @applied_operate_type.nil?
       return true
     end
 
@@ -97,7 +108,8 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           pivot_column_name == o.pivot_column_name &&
-          value_column_names == o.value_column_names 
+          value_column_names == o.value_column_names &&
+          applied_operate_type == o.applied_operate_type 
           std_dev == o.std_dev
     end
 
@@ -110,7 +122,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ pivot_column_name , value_column_names ].hash
+      [ pivot_column_name , value_column_names , applied_operate_type ].hash
     end
 
     # Builds the object from hash

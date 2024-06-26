@@ -33,23 +33,14 @@ module AsposeCellsCloud
   class LoadData
         #Indicates begin position for loading data.             
         attr_accessor :load_to
-        #Indicates the source of the mount data.            
-        attr_accessor :data_source
-        #When data souce is request files, FileInfo store the contents of the file.            
-        attr_accessor :file_info
-        #The specific data object type and name.            
-        attr_accessor :data_item
-        #            
-        attr_accessor :merge_queries
+        #Indicates data query for data loading.             
+        attr_accessor :data_query
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'load_to' => :'LoadTo',
-        :'data_source' => :'DataSource',
-        :'file_info' => :'FileInfo',
-        :'data_item' => :'DataItem',
-        :'merge_queries' => :'MergeQueries'
+        :'data_query' => :'DataQuery'
       }
     end
 
@@ -57,10 +48,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'load_to' => :'LoadTo',
-        :'data_source' => :'DataSource',
-        :'file_info' => :'FileInfo',
-        :'data_item' => :'DataItem',
-        :'merge_queries' => :'MergeQueries'
+        :'data_query' => :'DataQuery'
       }
     end
 
@@ -75,17 +63,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'LoadTo')
           self.load_to = attributes[:'LoadTo']
       end
-      if attributes.has_key?(:'DataSource')
-          self.data_source = attributes[:'DataSource']
-      end
-      if attributes.has_key?(:'FileInfo')
-          self.file_info = attributes[:'FileInfo']
-      end
-      if attributes.has_key?(:'DataItem')
-          self.data_item = attributes[:'DataItem']
-      end
-      if attributes.has_key?(:'MergeQueries')
-          self.merge_queries = attributes[:'MergeQueries']
+      if attributes.has_key?(:'DataQuery')
+          self.data_query = attributes[:'DataQuery']
       end
 
     end
@@ -97,17 +76,8 @@ module AsposeCellsCloud
       if @load_to.nil?
           invalid_properties.push("invalid value for 'load_to', load_to cannot be nil.")
       end
-      if @data_source.nil?
-          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
-      end
-      if @file_info.nil?
-          invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
-      end
-      if @data_item.nil?
-          invalid_properties.push("invalid value for 'data_item', data_item cannot be nil.")
-      end
-      if @merge_queries.nil?
-          invalid_properties.push("invalid value for 'merge_queries', merge_queries cannot be nil.")
+      if @data_query.nil?
+          invalid_properties.push("invalid value for 'data_query', data_query cannot be nil.")
       end
 
       return invalid_properties
@@ -117,10 +87,7 @@ module AsposeCellsCloud
     # @return true if the model is valid
     def valid?
       return false if @load_to.nil?
-      return false if @data_source.nil?
-      return false if @file_info.nil?
-      return false if @data_item.nil?
-      return false if @merge_queries.nil?
+      return false if @data_query.nil?
       return true
     end
 
@@ -130,10 +97,7 @@ module AsposeCellsCloud
       return true if self.equal?(o)
       self.class == o.class &&
           load_to == o.load_to &&
-          data_source == o.data_source &&
-          file_info == o.file_info &&
-          data_item == o.data_item &&
-          merge_queries == o.merge_queries 
+          data_query == o.data_query 
           std_dev == o.std_dev
     end
 
@@ -146,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ load_to , data_source , file_info , data_item , merge_queries ].hash
+      [ load_to , data_query ].hash
     end
 
     # Builds the object from hash
