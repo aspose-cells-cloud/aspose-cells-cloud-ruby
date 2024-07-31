@@ -208,6 +208,14 @@ module AsposeCellsCloud
        return data
     end
 
+    # Get Access Token Result
+
+    def post_access_token( post_access_token_request, opts = {})
+
+       data, _status_code, _headers = post_access_token_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Clear cell area contents in the worksheet.
 
     def post_clear_contents( post_clear_contents_request, opts = {})
@@ -2065,7 +2073,14 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve the description of the default style for the workbook.
+
+    def post_add_text_content( post_add_text_content_request, opts = {})
+
+       data, _status_code, _headers = post_add_text_content_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Retrieve the description of the default style for the workbook .
 
     def get_workbook_default_style( get_workbook_default_style_request, opts = {})
 

@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/24.6)
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/24.7)
 
 
 Aspose.Cells Cloud for Ruby enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
@@ -22,12 +22,12 @@ Enhance your Ruby applications with the [Aspose.Cells Cloud](https://products.as
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
 
-## Feature & Enhancements in Version 24.6
+## Feature & Enhancements in Version 24.7
 
 Full list of issues covering all changes in this release:
 
-- Optimize load data function of data transformation.
-- Optimize the data conversion applied steps.
+- Add a new feature about adding text content. 
+- Add get access token by client id and client secret.
 
 ## Support file format
 
@@ -125,6 +125,11 @@ request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:for
 [Product Page](https://products.aspose.cloud/cells/ruby) | [Documentation](https://docs.aspose.cloud/cells/) | [Live Demo](https://products.aspose.app/cells/family) | [API Reference](https://apireference.aspose.cloud/cells/) | [Code Samples](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/tree/master/spec) | [Blog](https://blog.aspose.cloud/category/cells/) | [Free Support](https://forum.aspose.cloud/c/cells) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
 
 # Release history version
+
+## Enhancements in Version 24.6
+
+- Optimize load data function of data transformation.
+- Optimize the data conversion applied steps.
 
 ## Enhancements in Version 24.5
 
