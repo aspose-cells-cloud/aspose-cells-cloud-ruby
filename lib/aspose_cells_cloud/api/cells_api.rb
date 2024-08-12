@@ -2080,6 +2080,13 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def post_trim_content( post_trim_content_request, opts = {})
+
+       data, _status_code, _headers = post_trim_content_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Retrieve the description of the default style for the workbook .
 
     def get_workbook_default_style( get_workbook_default_style_request, opts = {})
