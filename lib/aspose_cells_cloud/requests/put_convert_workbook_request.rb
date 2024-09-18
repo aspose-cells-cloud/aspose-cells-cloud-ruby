@@ -41,6 +41,8 @@ module AsposeCellsCloud
     attr_accessor :region  
     attr_accessor :page_wide_fit_on_per_sheet  
     attr_accessor :page_tall_fit_on_per_sheet  
+    attr_accessor :sheet_name  
+    attr_accessor :page_index  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -78,6 +80,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageTallFitOnPerSheet')
           self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
       end
+      if attributes.has_key?(:'sheetName')
+          self.sheet_name = attributes[:'sheetName']
+      end
+      if attributes.has_key?(:'pageIndex')
+          self.page_index = attributes[:'pageIndex']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -92,7 +100,9 @@ module AsposeCellsCloud
         :'stream_format' => :'streamFormat',
         :'region' => :'region',
         :'page_wide_fit_on_per_sheet' => :'pageWideFitOnPerSheet',
-        :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet'
+        :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet',
+        :'sheet_name' => :'sheetName',
+        :'page_index' => :'pageIndex'
       }
     end
 
@@ -108,7 +118,9 @@ module AsposeCellsCloud
         :'stream_format' => :'String',
         :'region' => :'String',
         :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
-        :'page_tall_fit_on_per_sheet' => :'BOOLEAN'
+        :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
+        :'sheet_name' => :'String',
+        :'page_index' => :'Integer'
       }
     end
 
@@ -135,6 +147,8 @@ module AsposeCellsCloud
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'pageWideFitOnPerSheet'] = self.page_wide_fit_on_per_sheet if !self.page_wide_fit_on_per_sheet.nil? 
       query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
+      query_params[:'sheetName'] = self.sheet_name if !self.sheet_name.nil? 
+      query_params[:'pageIndex'] = self.page_index if !self.page_index.nil? 
 
       # header parameters
       header_params = {}

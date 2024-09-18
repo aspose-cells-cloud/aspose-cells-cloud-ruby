@@ -66,40 +66,4 @@ describe 'CellsApi' do
       @instance.copy_file(request);
     end
   end 
-
-  describe 'move_file test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::MoveFileRequest.new(:srcPath=>remote_folder + '/' + remote_name,:destPath=>'OutResult/' + remote_name,:srcStorageName=>'',:destStorageName=>'',:versionId=>'');
-      @instance.move_file(request);
-    end
-  end 
-
-  describe 'delete_file test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::DeleteFileRequest.new(:path=>remote_folder + '/' + remote_name,:storageName=>'',:versionId=>'');
-      @instance.delete_file(request);
-    end
-  end 
 end

@@ -445,9 +445,9 @@ module AsposeCellsCloud
         local_var_path ="/oauth2/token"
       end
       url = build_request_url(local_var_path)
-      # url = build_request_url(local_var_path).gsub('/'+config.api_version, '')
-      # url = build_request_url(local_var_path).gsub('/v3.0', '')
-      # print  url
+      #url = build_request_url(local_var_path).gsub('/'+config.api_version, '')
+      #url = build_request_url(local_var_path).gsub('/v3.0', '')
+
       # header parameters
       header_params = {}
       # HTTP header 'Content-Type'

@@ -37,6 +37,8 @@ module AsposeCellsCloud
         attr_accessor :encrypt_with_password
         #Represents the various types of protection options available for a worksheet.                        
         attr_accessor :protect_current_sheet
+        #Represents the various types of protection options available for all worksheets.                        
+        attr_accessor :protect_all_sheets
         #Indicates protect workbook structure. All, Contents, Objects, Scenarios, Structure, Windows, and None.            
         attr_accessor :protect_workbook_structure
         #Indicates signature in file.            
@@ -50,6 +52,7 @@ module AsposeCellsCloud
         :'aways_open_read_only' => :'AwaysOpenReadOnly',
         :'encrypt_with_password' => :'EncryptWithPassword',
         :'protect_current_sheet' => :'ProtectCurrentSheet',
+        :'protect_all_sheets' => :'ProtectAllSheets',
         :'protect_workbook_structure' => :'ProtectWorkbookStructure',
         :'digital_signature' => :'DigitalSignature',
         :'mark_as_final' => :'MarkAsFinal'
@@ -62,6 +65,7 @@ module AsposeCellsCloud
         :'aways_open_read_only' => :'BOOLEAN',
         :'encrypt_with_password' => :'String',
         :'protect_current_sheet' => :'Protection',
+        :'protect_all_sheets' => :'Protection',
         :'protect_workbook_structure' => :'String',
         :'digital_signature' => :'DigitalSignature',
         :'mark_as_final' => :'BOOLEAN'
@@ -84,6 +88,9 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'ProtectCurrentSheet')
           self.protect_current_sheet = attributes[:'ProtectCurrentSheet']
+      end
+      if attributes.has_key?(:'ProtectAllSheets')
+          self.protect_all_sheets = attributes[:'ProtectAllSheets']
       end
       if attributes.has_key?(:'ProtectWorkbookStructure')
           self.protect_workbook_structure = attributes[:'ProtectWorkbookStructure']
@@ -110,6 +117,9 @@ module AsposeCellsCloud
       if @protect_current_sheet.nil?
           invalid_properties.push("invalid value for 'protect_current_sheet', protect_current_sheet cannot be nil.")
       end
+      if @protect_all_sheets.nil?
+          invalid_properties.push("invalid value for 'protect_all_sheets', protect_all_sheets cannot be nil.")
+      end
       if @protect_workbook_structure.nil?
           invalid_properties.push("invalid value for 'protect_workbook_structure', protect_workbook_structure cannot be nil.")
       end
@@ -129,6 +139,7 @@ module AsposeCellsCloud
       return false if @aways_open_read_only.nil?
       return false if @encrypt_with_password.nil?
       return false if @protect_current_sheet.nil?
+      return false if @protect_all_sheets.nil?
       return false if @protect_workbook_structure.nil?
       return false if @digital_signature.nil?
       return false if @mark_as_final.nil?
@@ -143,6 +154,7 @@ module AsposeCellsCloud
           aways_open_read_only == o.aways_open_read_only &&
           encrypt_with_password == o.encrypt_with_password &&
           protect_current_sheet == o.protect_current_sheet &&
+          protect_all_sheets == o.protect_all_sheets &&
           protect_workbook_structure == o.protect_workbook_structure &&
           digital_signature == o.digital_signature &&
           mark_as_final == o.mark_as_final 
@@ -158,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ aways_open_read_only , encrypt_with_password , protect_current_sheet , protect_workbook_structure , digital_signature , mark_as_final ].hash
+      [ aways_open_read_only , encrypt_with_password , protect_current_sheet , protect_all_sheets , protect_workbook_structure , digital_signature , mark_as_final ].hash
     end
 
     # Builds the object from hash

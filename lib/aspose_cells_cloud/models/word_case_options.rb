@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="TextWaterMarkerRequestrb.cs">
+ <copyright company="Aspose" file="WordCaseOptionsrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,41 +30,33 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class TextWaterMarkerRequest
+  class WordCaseOptions
         #            
-        attr_accessor :text
-        #Indicates font name.            
-        attr_accessor :font_name
-        #Indicates font size.            
-        attr_accessor :font_size
-        #Indicates image height.            
-        attr_accessor :height
-        #Indicates image width.            
-        attr_accessor :width
+        attr_accessor :data_source
         #            
-        attr_accessor :image_adapt_option
+        attr_accessor :file_info
+        #            
+        attr_accessor :word_case_type
+        #            
+        attr_accessor :scope_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'text' => :'Text',
-        :'font_name' => :'FontName',
-        :'font_size' => :'FontSize',
-        :'height' => :'Height',
-        :'width' => :'Width',
-        :'image_adapt_option' => :'ImageAdaptOption'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'word_case_type' => :'WordCaseType',
+        :'scope_options' => :'ScopeOptions'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'text' => :'String',
-        :'font_name' => :'String',
-        :'font_size' => :'Integer',
-        :'height' => :'Integer',
-        :'width' => :'Integer',
-        :'image_adapt_option' => :'String'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'word_case_type' => :'String',
+        :'scope_options' => :'ScopeOptions'
       }
     end
 
@@ -76,23 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Text')
-          self.text = attributes[:'Text']
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
       end
-      if attributes.has_key?(:'FontName')
-          self.font_name = attributes[:'FontName']
+      if attributes.has_key?(:'FileInfo')
+          self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'FontSize')
-          self.font_size = attributes[:'FontSize']
+      if attributes.has_key?(:'WordCaseType')
+          self.word_case_type = attributes[:'WordCaseType']
       end
-      if attributes.has_key?(:'Height')
-          self.height = attributes[:'Height']
-      end
-      if attributes.has_key?(:'Width')
-          self.width = attributes[:'Width']
-      end
-      if attributes.has_key?(:'ImageAdaptOption')
-          self.image_adapt_option = attributes[:'ImageAdaptOption']
+      if attributes.has_key?(:'ScopeOptions')
+          self.scope_options = attributes[:'ScopeOptions']
       end
 
     end
@@ -101,23 +87,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @text.nil?
-          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
       end
-      if @font_name.nil?
-          invalid_properties.push("invalid value for 'font_name', font_name cannot be nil.")
+      if @file_info.nil?
+          invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @font_size.nil?
-          invalid_properties.push("invalid value for 'font_size', font_size cannot be nil.")
+      if @word_case_type.nil?
+          invalid_properties.push("invalid value for 'word_case_type', word_case_type cannot be nil.")
       end
-      if @height.nil?
-          invalid_properties.push("invalid value for 'height', height cannot be nil.")
-      end
-      if @width.nil?
-          invalid_properties.push("invalid value for 'width', width cannot be nil.")
-      end
-      if @image_adapt_option.nil?
-          invalid_properties.push("invalid value for 'image_adapt_option', image_adapt_option cannot be nil.")
+      if @scope_options.nil?
+          invalid_properties.push("invalid value for 'scope_options', scope_options cannot be nil.")
       end
 
       return invalid_properties
@@ -126,12 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @text.nil?
-      return false if @font_name.nil?
-      return false if @font_size.nil?
-      return false if @height.nil?
-      return false if @width.nil?
-      return false if @image_adapt_option.nil?
+      return false if @data_source.nil?
+      return false if @file_info.nil?
+      return false if @word_case_type.nil?
+      return false if @scope_options.nil?
       return true
     end
 
@@ -140,12 +118,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          text == o.text &&
-          font_name == o.font_name &&
-          font_size == o.font_size &&
-          height == o.height &&
-          width == o.width &&
-          image_adapt_option == o.image_adapt_option 
+          data_source == o.data_source &&
+          file_info == o.file_info &&
+          word_case_type == o.word_case_type &&
+          scope_options == o.scope_options 
           std_dev == o.std_dev
     end
 
@@ -158,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ text , font_name , font_size , height , width , image_adapt_option ].hash
+      [ data_source , file_info , word_case_type , scope_options ].hash
     end
 
     # Builds the object from hash

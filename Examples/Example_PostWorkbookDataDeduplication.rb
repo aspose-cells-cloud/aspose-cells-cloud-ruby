@@ -15,6 +15,8 @@ mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")
  
 uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
 @instance.upload_file(uploadrequest)
-deduplicationRegion = AsposeCellsCloud::DeduplicationRegion.new();
+deduplicationRegionRanges = [
+];
+deduplicationRegion = AsposeCellsCloud::DeduplicationRegion.new(:Ranges=>deduplicationRegionRanges );
 request =   AsposeCellsCloud::PostWorkbookDataDeduplicationRequest.new(:name=>remote_name,:deduplicationRegion=>deduplicationRegion,:folder=>remote_folder,:storageName=>'');
 @instance.post_workbook_data_deduplication(request);

@@ -95,9 +95,9 @@ module AsposeCellsCloud
         attr_accessor :export_chart_image_format
         #            
         attr_accessor :export_images_as_base64
-        #Hidden column(the width of this column is 0) in excel,before save this into                html format, if HtmlHiddenColDisplayType is "Remove",the hidden column would               ont been output, if the value is "Hidden", the column would been output,but was hidden,the default value is "Hidden"            
+        #Hidden column(the width of this column is 0) in excel,before save this into               html format, if HtmlHiddenColDisplayType is "Remove",the hidden column would               ont been output, if the value is "Hidden", the column would been output,but was hidden,the default value is "Hidden"            
         attr_accessor :hidden_col_display_type
-        #Hidden row(the height of this row is 0) in excel,before save this into html                format, if HtmlHiddenRowDisplayType is "Remove",the hidden row would ont               been output, if the value is "Hidden", the row would been output,but was               hidden,the default value is "Hidden"            
+        #Hidden row(the height of this row is 0) in excel,before save this into html               format, if HtmlHiddenRowDisplayType is "Remove",the hidden row would ont               been output, if the value is "Hidden", the row would been output,but was               hidden,the default value is "Hidden"            
         attr_accessor :hidden_row_display_type
         #Indicates if a cross-cell string will be displayed in the same way as MS               Excel when saving an Excel file in html format.  By default the value is               Default, so, for cross-cell strings, there is little difference between the               html files created by Aspose.Cells and MS Excel. But the performance for               creating large html files,setting the value to Cross would be several times               faster than setting it to Default or Fit2Cell.            
         attr_accessor :html_cross_string_type
@@ -107,6 +107,8 @@ module AsposeCellsCloud
         attr_accessor :page_title
         #Parse html tag in cell,like ,as cell value,or as html tag,default is true            
         attr_accessor :parse_html_tag_in_cell
+        #            
+        attr_accessor :cell_name_attribute
         #            
         attr_accessor :save_format
         #            
@@ -165,6 +167,7 @@ module AsposeCellsCloud
         :'is_exp_image_to_temp_dir' => :'IsExpImageToTempDir',
         :'page_title' => :'PageTitle',
         :'parse_html_tag_in_cell' => :'ParseHtmlTagInCell',
+        :'cell_name_attribute' => :'CellNameAttribute',
         :'save_format' => :'SaveFormat',
         :'cached_file_folder' => :'CachedFileFolder',
         :'clear_data' => :'ClearData',
@@ -217,6 +220,7 @@ module AsposeCellsCloud
         :'is_exp_image_to_temp_dir' => :'BOOLEAN',
         :'page_title' => :'String',
         :'parse_html_tag_in_cell' => :'BOOLEAN',
+        :'cell_name_attribute' => :'String',
         :'save_format' => :'String',
         :'cached_file_folder' => :'String',
         :'clear_data' => :'BOOLEAN',
@@ -349,6 +353,9 @@ module AsposeCellsCloud
       end
       if attributes.has_key?(:'ParseHtmlTagInCell')
           self.parse_html_tag_in_cell = attributes[:'ParseHtmlTagInCell']
+      end
+      if attributes.has_key?(:'CellNameAttribute')
+          self.cell_name_attribute = attributes[:'CellNameAttribute']
       end
       if attributes.has_key?(:'SaveFormat')
           self.save_format = attributes[:'SaveFormat']
@@ -495,6 +502,9 @@ module AsposeCellsCloud
       if @parse_html_tag_in_cell.nil?
           invalid_properties.push("invalid value for 'parse_html_tag_in_cell', parse_html_tag_in_cell cannot be nil.")
       end
+      if @cell_name_attribute.nil?
+          invalid_properties.push("invalid value for 'cell_name_attribute', cell_name_attribute cannot be nil.")
+      end
       if @save_format.nil?
           invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
       end
@@ -564,6 +574,7 @@ module AsposeCellsCloud
       return false if @is_exp_image_to_temp_dir.nil?
       return false if @page_title.nil?
       return false if @parse_html_tag_in_cell.nil?
+      return false if @cell_name_attribute.nil?
       return false if @save_format.nil?
       return false if @cached_file_folder.nil?
       return false if @clear_data.nil?
@@ -618,6 +629,7 @@ module AsposeCellsCloud
           is_exp_image_to_temp_dir == o.is_exp_image_to_temp_dir &&
           page_title == o.page_title &&
           parse_html_tag_in_cell == o.parse_html_tag_in_cell &&
+          cell_name_attribute == o.cell_name_attribute &&
           save_format == o.save_format &&
           cached_file_folder == o.cached_file_folder &&
           clear_data == o.clear_data &&
@@ -638,7 +650,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ export_page_headers , export_page_footers , export_row_column_headings , show_all_sheets , image_options , save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ export_page_headers , export_page_footers , export_row_column_headings , show_all_sheets , image_options , save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , cell_name_attribute , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
     end
 
     # Builds the object from hash

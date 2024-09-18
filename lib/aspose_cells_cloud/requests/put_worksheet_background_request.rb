@@ -34,6 +34,7 @@ module AsposeCellsCloud
     attr_accessor :name  
     attr_accessor :sheet_name  
     attr_accessor :pic_path  
+    attr_accessor :image_adapt_option  
     attr_accessor :folder  
     attr_accessor :storage_name  
     attr_accessor :file  
@@ -53,6 +54,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'picPath')
           self.pic_path = attributes[:'picPath']
       end
+      if attributes.has_key?(:'imageAdaptOption')
+          self.image_adapt_option = attributes[:'imageAdaptOption']
+      end
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
@@ -70,6 +74,7 @@ module AsposeCellsCloud
         :'name' => :'name',
         :'sheet_name' => :'sheetName',
         :'pic_path' => :'picPath',
+        :'image_adapt_option' => :'imageAdaptOption',
         :'folder' => :'folder',
         :'storage_name' => :'storageName',
         :'file' => :'File'
@@ -82,6 +87,7 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'sheet_name' => :'String',
         :'pic_path' => :'String',
+        :'image_adapt_option' => :'String',
         :'folder' => :'String',
         :'storage_name' => :'String',
         :'file' => :'Hash'
@@ -107,6 +113,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'picPath'] = self.pic_path if !self.pic_path.nil? 
+      query_params[:'imageAdaptOption'] = self.image_adapt_option if !self.image_adapt_option.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
 

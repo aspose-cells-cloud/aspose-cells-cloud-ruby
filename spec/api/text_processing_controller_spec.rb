@@ -51,4 +51,25 @@ describe 'CellsApi' do
       @instance.post_trim_content(request);
     end
   end 
+
+  describe 'post_update_word_case test' do
+    it "should work" do
+      remote_folder = 'TestData/In'
+
+      local_name = 'BookText.xlsx'
+      remote_name = 'BookText.xlsx'
+
+      
+      mapFiles = { }               
+      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
+   
+      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
+      @instance.upload_file(uploadrequest)
+      wordCaseOptionsDataSource = AsposeCellsCloud::DataSource.new(:DataSourceType=>'CloudFileSystem' ,:DataPath=>'BookText.xlsx' );
+      wordCaseOptionsScopeOptions = AsposeCellsCloud::ScopeOptions.new(:Scope=>'EntireWorkbook' );
+      wordCaseOptions = AsposeCellsCloud::WordCaseOptions.new(:DataSource=>wordCaseOptionsDataSource ,:WordCaseType=>'None' ,:ScopeOptions=>wordCaseOptionsScopeOptions );
+      request =   AsposeCellsCloud::PostUpdateWordCaseRequest.new(:wordCaseOptions=>wordCaseOptions);
+      @instance.post_update_word_case(request);
+    end
+  end 
 end
