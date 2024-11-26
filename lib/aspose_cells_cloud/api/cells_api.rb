@@ -2101,6 +2101,13 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def post_convert_text( post_convert_text_request, opts = {})
+
+       data, _status_code, _headers = post_convert_text_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Retrieve the description of the default style for the workbook .
 
     def get_workbook_default_style( get_workbook_default_style_request, opts = {})

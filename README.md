@@ -1,8 +1,6 @@
-![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/24.10)
-
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_cells_cloud) ![Gem](https://img.shields.io/gem/dt/aspose_cells_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-cells-cloud/aspose-cells-cloud-ruby)](https://github.com/aspose-cells-cloud/aspose-cells-cloud-ruby/blob/master/LICENSE) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/aspose-cells-cloud/aspose-cells-cloud-ruby/24.11)
 
 Aspose.Cells Cloud for Ruby enables you to handle various aspects of Excel files, including cell data, styles, formulas, charts, pivot tables, data validation, comments, drawing objects, images, hyperlinks, and so on. Additionally, it supports operations such as splitting, merging, repairing, and converting to other compatible file formats.
-
 
 # Ruby package for Aspose.Cells Cloud
 
@@ -21,13 +19,9 @@ Enhance your Ruby applications with the [Aspose.Cells Cloud](https://products.as
 - Import/Export: Facilitates importing data from various sources into spreadsheets and exporting spreadsheet data to other formats.
 - Security Management: Offers a range of security features like data encryption, access control, and permission management to safeguard the security and integrity of spreadsheet data.
 
-
-## Feature & Enhancements in Version 24.10
+## Feature & Enhancements in Version 24.11
 
 Full list of issues covering all changes in this release:
-
-- Add the new feature about removing characters on TextProcessingController.
-
 
 ## Support file format
 
@@ -67,14 +61,14 @@ Full list of issues covering all changes in this release:
 |[DOCX](https://docs.fileformat.com/word-processing/docx/)|A well-known format for Microsoft Word documents that is a combination of XML and binary files.||&radic;|
 |[PPTX](https://docs.fileformat.com/presentation/pptx/)|The PPTX format is based on the Microsoft PowerPoint open XML presentation file format.||&radic;|
 
-
 ## Quick Start Guide
 
 To begin with Aspose.Cells Cloud, here's what you need to do:
 
 1. Sign up for an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to obtain your application details.
 2. Install the Aspose.Cells Cloud Ruby Package from [RubyGems](https://rubygems.org/).
-  -  execute the following command to get the latest Gem package.
+
+- execute the following command to get the latest Gem package.
 
 ```console
 gem 'aspose_cells_cloud', '~> 20.10'
@@ -126,6 +120,10 @@ request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:for
 
 # Release history version
 
+## Enhancements in Version 24.10
+
+- Add the new feature about removing characters on TextProcessingController.
+
 ## Enhancements in Version 24.9
 
 - Add word case function for TextProcessingController.
@@ -137,7 +135,7 @@ request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:for
 
 ## Enhancements in Version 24.7
 
-- Add a new feature about adding text content. 
+- Add a new feature about adding text content.
 - Add get access token by client id and client secret.
 
 ## Enhancements in Version 24.6
