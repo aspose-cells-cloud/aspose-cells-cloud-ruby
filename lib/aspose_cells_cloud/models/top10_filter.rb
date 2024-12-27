@@ -31,6 +31,8 @@ require 'date'
 module AsposeCellsCloud
 
   class Top10Filter
+        #            
+        attr_accessor :field_index
         #             
         attr_accessor :criteria
         #Indicates whether the items is percent.             
@@ -43,6 +45,7 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'field_index' => :'FieldIndex',
         :'criteria' => :'Criteria',
         :'is_percent' => :'IsPercent',
         :'is_top' => :'IsTop',
@@ -53,6 +56,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'field_index' => :'Integer',
         :'criteria' => :'String',
         :'is_percent' => :'BOOLEAN',
         :'is_top' => :'BOOLEAN',
@@ -68,6 +72,9 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'FieldIndex')
+          self.field_index = attributes[:'FieldIndex']
+      end
       if attributes.has_key?(:'Criteria')
           self.criteria = attributes[:'Criteria']
       end
@@ -87,6 +94,9 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @field_index.nil?
+          invalid_properties.push("invalid value for 'field_index', field_index cannot be nil.")
+      end
       if @criteria.nil?
           invalid_properties.push("invalid value for 'criteria', criteria cannot be nil.")
       end
@@ -106,6 +116,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @field_index.nil?
       return false if @criteria.nil?
       return false if @is_percent.nil?
       return false if @is_top.nil?
@@ -118,6 +129,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          field_index == o.field_index &&
           criteria == o.criteria &&
           is_percent == o.is_percent &&
           is_top == o.is_top &&
@@ -134,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ criteria , is_percent , is_top , items ].hash
+      [ field_index , criteria , is_percent , is_top , items ].hash
     end
 
     # Builds the object from hash

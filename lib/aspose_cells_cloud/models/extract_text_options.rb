@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="PivotFilterrb.cs">
+ <copyright company="Aspose" file="ExtractTextOptionsrb.cs">
    Copyright (c) 2024 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,57 +30,61 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class PivotFilter
-        #Gets the autofilter of the pivot filter.            
-        attr_accessor :auto_filter
-        #Gets the Evaluation Order of the pivot filter.            
-        attr_accessor :evaluation_order
-        #Gets the field index of the pivot filter.            
-        attr_accessor :field_index
-        #Gets the autofilter type of the pivot filter.            
-        attr_accessor :filter_type
-        #Gets the measure field index of the pivot filter.                        
-        attr_accessor :value_field_index
-        #Gets the member property field index of the pivot filter.                        
-        attr_accessor :member_property_field_index
-        #Gets the name of the pivot filter.            
-        attr_accessor :name
-        #Gets the string value1 of the label pivot filter.                        
-        attr_accessor :value1
-        #Gets the string value2 of the label pivot filter.                        
-        attr_accessor :value2
+  class ExtractTextOptions
         #            
-        attr_accessor :top10_filter
+        attr_accessor :name
+        #            
+        attr_accessor :data_source
+        #            
+        attr_accessor :file_info
+        #            
+        attr_accessor :worksheet
+        #            
+        attr_accessor :range
+        #            
+        attr_accessor :extract_text_type
+        #            
+        attr_accessor :before_text
+        #            
+        attr_accessor :after_text
+        #            
+        attr_accessor :before_position
+        #            
+        attr_accessor :after_position
+        #            
+        attr_accessor :out_position_range
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'auto_filter' => :'AutoFilter',
-        :'evaluation_order' => :'EvaluationOrder',
-        :'field_index' => :'FieldIndex',
-        :'filter_type' => :'FilterType',
-        :'value_field_index' => :'ValueFieldIndex',
-        :'member_property_field_index' => :'MemberPropertyFieldIndex',
         :'name' => :'Name',
-        :'value1' => :'Value1',
-        :'value2' => :'Value2',
-        :'top10_filter' => :'Top10Filter'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'worksheet' => :'Worksheet',
+        :'range' => :'Range',
+        :'extract_text_type' => :'ExtractTextType',
+        :'before_text' => :'BeforeText',
+        :'after_text' => :'AfterText',
+        :'before_position' => :'BeforePosition',
+        :'after_position' => :'AfterPosition',
+        :'out_position_range' => :'OutPositionRange'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'auto_filter' => :'AutoFilter',
-        :'evaluation_order' => :'Integer',
-        :'field_index' => :'Integer',
-        :'filter_type' => :'String',
-        :'value_field_index' => :'Integer',
-        :'member_property_field_index' => :'Integer',
         :'name' => :'String',
-        :'value1' => :'String',
-        :'value2' => :'String',
-        :'top10_filter' => :'Top10Filter'
+        :'data_source' => :'DataSource',
+        :'file_info' => :'FileInfo',
+        :'worksheet' => :'String',
+        :'range' => :'String',
+        :'extract_text_type' => :'String',
+        :'before_text' => :'String',
+        :'after_text' => :'String',
+        :'before_position' => :'Integer',
+        :'after_position' => :'Integer',
+        :'out_position_range' => :'String'
       }
     end
 
@@ -92,35 +96,38 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'AutoFilter')
-          self.auto_filter = attributes[:'AutoFilter']
-      end
-      if attributes.has_key?(:'EvaluationOrder')
-          self.evaluation_order = attributes[:'EvaluationOrder']
-      end
-      if attributes.has_key?(:'FieldIndex')
-          self.field_index = attributes[:'FieldIndex']
-      end
-      if attributes.has_key?(:'FilterType')
-          self.filter_type = attributes[:'FilterType']
-      end
-      if attributes.has_key?(:'ValueFieldIndex')
-          self.value_field_index = attributes[:'ValueFieldIndex']
-      end
-      if attributes.has_key?(:'MemberPropertyFieldIndex')
-          self.member_property_field_index = attributes[:'MemberPropertyFieldIndex']
-      end
       if attributes.has_key?(:'Name')
           self.name = attributes[:'Name']
       end
-      if attributes.has_key?(:'Value1')
-          self.value1 = attributes[:'Value1']
+      if attributes.has_key?(:'DataSource')
+          self.data_source = attributes[:'DataSource']
       end
-      if attributes.has_key?(:'Value2')
-          self.value2 = attributes[:'Value2']
+      if attributes.has_key?(:'FileInfo')
+          self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'Top10Filter')
-          self.top10_filter = attributes[:'Top10Filter']
+      if attributes.has_key?(:'Worksheet')
+          self.worksheet = attributes[:'Worksheet']
+      end
+      if attributes.has_key?(:'Range')
+          self.range = attributes[:'Range']
+      end
+      if attributes.has_key?(:'ExtractTextType')
+          self.extract_text_type = attributes[:'ExtractTextType']
+      end
+      if attributes.has_key?(:'BeforeText')
+          self.before_text = attributes[:'BeforeText']
+      end
+      if attributes.has_key?(:'AfterText')
+          self.after_text = attributes[:'AfterText']
+      end
+      if attributes.has_key?(:'BeforePosition')
+          self.before_position = attributes[:'BeforePosition']
+      end
+      if attributes.has_key?(:'AfterPosition')
+          self.after_position = attributes[:'AfterPosition']
+      end
+      if attributes.has_key?(:'OutPositionRange')
+          self.out_position_range = attributes[:'OutPositionRange']
       end
 
     end
@@ -129,35 +136,38 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @auto_filter.nil?
-          invalid_properties.push("invalid value for 'auto_filter', auto_filter cannot be nil.")
-      end
-      if @evaluation_order.nil?
-          invalid_properties.push("invalid value for 'evaluation_order', evaluation_order cannot be nil.")
-      end
-      if @field_index.nil?
-          invalid_properties.push("invalid value for 'field_index', field_index cannot be nil.")
-      end
-      if @filter_type.nil?
-          invalid_properties.push("invalid value for 'filter_type', filter_type cannot be nil.")
-      end
-      if @value_field_index.nil?
-          invalid_properties.push("invalid value for 'value_field_index', value_field_index cannot be nil.")
-      end
-      if @member_property_field_index.nil?
-          invalid_properties.push("invalid value for 'member_property_field_index', member_property_field_index cannot be nil.")
-      end
       if @name.nil?
           invalid_properties.push("invalid value for 'name', name cannot be nil.")
       end
-      if @value1.nil?
-          invalid_properties.push("invalid value for 'value1', value1 cannot be nil.")
+      if @data_source.nil?
+          invalid_properties.push("invalid value for 'data_source', data_source cannot be nil.")
       end
-      if @value2.nil?
-          invalid_properties.push("invalid value for 'value2', value2 cannot be nil.")
+      if @file_info.nil?
+          invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @top10_filter.nil?
-          invalid_properties.push("invalid value for 'top10_filter', top10_filter cannot be nil.")
+      if @worksheet.nil?
+          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
+      end
+      if @range.nil?
+          invalid_properties.push("invalid value for 'range', range cannot be nil.")
+      end
+      if @extract_text_type.nil?
+          invalid_properties.push("invalid value for 'extract_text_type', extract_text_type cannot be nil.")
+      end
+      if @before_text.nil?
+          invalid_properties.push("invalid value for 'before_text', before_text cannot be nil.")
+      end
+      if @after_text.nil?
+          invalid_properties.push("invalid value for 'after_text', after_text cannot be nil.")
+      end
+      if @before_position.nil?
+          invalid_properties.push("invalid value for 'before_position', before_position cannot be nil.")
+      end
+      if @after_position.nil?
+          invalid_properties.push("invalid value for 'after_position', after_position cannot be nil.")
+      end
+      if @out_position_range.nil?
+          invalid_properties.push("invalid value for 'out_position_range', out_position_range cannot be nil.")
       end
 
       return invalid_properties
@@ -166,16 +176,17 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @auto_filter.nil?
-      return false if @evaluation_order.nil?
-      return false if @field_index.nil?
-      return false if @filter_type.nil?
-      return false if @value_field_index.nil?
-      return false if @member_property_field_index.nil?
       return false if @name.nil?
-      return false if @value1.nil?
-      return false if @value2.nil?
-      return false if @top10_filter.nil?
+      return false if @data_source.nil?
+      return false if @file_info.nil?
+      return false if @worksheet.nil?
+      return false if @range.nil?
+      return false if @extract_text_type.nil?
+      return false if @before_text.nil?
+      return false if @after_text.nil?
+      return false if @before_position.nil?
+      return false if @after_position.nil?
+      return false if @out_position_range.nil?
       return true
     end
 
@@ -184,16 +195,17 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          auto_filter == o.auto_filter &&
-          evaluation_order == o.evaluation_order &&
-          field_index == o.field_index &&
-          filter_type == o.filter_type &&
-          value_field_index == o.value_field_index &&
-          member_property_field_index == o.member_property_field_index &&
           name == o.name &&
-          value1 == o.value1 &&
-          value2 == o.value2 &&
-          top10_filter == o.top10_filter 
+          data_source == o.data_source &&
+          file_info == o.file_info &&
+          worksheet == o.worksheet &&
+          range == o.range &&
+          extract_text_type == o.extract_text_type &&
+          before_text == o.before_text &&
+          after_text == o.after_text &&
+          before_position == o.before_position &&
+          after_position == o.after_position &&
+          out_position_range == o.out_position_range 
           std_dev == o.std_dev
     end
 
@@ -206,7 +218,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ auto_filter , evaluation_order , field_index , filter_type , value_field_index , member_property_field_index , name , value1 , value2 , top10_filter ].hash
+      [ name , data_source , file_info , worksheet , range , extract_text_type , before_text , after_text , before_position , after_position , out_position_range ].hash
     end
 
     # Builds the object from hash
