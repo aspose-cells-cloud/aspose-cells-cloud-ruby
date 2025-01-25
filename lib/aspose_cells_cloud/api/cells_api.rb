@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="CellsApi.cs">
-   Copyright (c) 2024 Aspose.Cells Cloud
+   Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,6 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
-    # Perform business analysis of data in Excel files.
 
     def post_analyze_excel( post_analyze_excel_request, opts = {})
 
@@ -48,7 +47,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve the description of auto filters from a worksheet.
 
     def get_worksheet_auto_filter( get_worksheet_auto_filter_request, opts = {})
 
@@ -152,7 +150,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Get autoshapes description in worksheet.
 
     def get_worksheet_autoshapes( get_worksheet_autoshapes_request, opts = {})
 
@@ -168,7 +165,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Batch converting files that meet specific matching conditions.
 
     def post_batch_convert( post_batch_convert_request, opts = {})
 
@@ -216,7 +212,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Clear cell area contents in the worksheet.
 
     def post_clear_contents( post_clear_contents_request, opts = {})
 
@@ -344,7 +339,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of worksheet columns.
 
     def get_worksheet_columns( get_worksheet_columns_request, opts = {})
 
@@ -432,7 +426,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of rows in the worksheet.
 
     def get_worksheet_rows( get_worksheet_rows_request, opts = {})
 
@@ -552,7 +545,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve chart area description in the worksheet.
 
     def get_chart_area( get_chart_area_request, opts = {})
 
@@ -576,7 +568,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of charts in the worksheet.
 
     def get_worksheet_charts( get_worksheet_charts_request, opts = {})
 
@@ -768,7 +759,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of conditional formattings in a worksheet.
 
     def get_worksheet_conditional_formattings( get_worksheet_conditional_formattings_request, opts = {})
 
@@ -840,7 +830,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve workbooks in various formats.
 
     def get_workbook( get_workbook_request, opts = {})
 
@@ -936,7 +925,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Export Excel internal elements or the workbook itself to various format files.
 
     def post_export( post_export_request, opts = {})
 
@@ -1041,7 +1029,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of hyperlinks in the worksheet.
 
     def get_worksheet_hyperlinks( get_worksheet_hyperlinks_request, opts = {})
 
@@ -1089,7 +1076,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Assemble data files with template files to generate files in various formats.
 
     def post_assemble( post_assemble_request, opts = {})
 
@@ -1209,7 +1195,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of ListObjects in the worksheet.
 
     def get_worksheet_list_objects( get_worksheet_list_objects_request, opts = {})
 
@@ -1313,7 +1298,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of OLE objects in the worksheet.
 
     def get_worksheet_ole_objects( get_worksheet_ole_objects_request, opts = {})
 
@@ -1361,7 +1345,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of vertical page breaks in the worksheet.
 
     def get_vertical_page_breaks( get_vertical_page_breaks_request, opts = {})
 
@@ -1441,7 +1424,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve page setup description in the worksheet.
 
     def get_page_setup( get_page_setup_request, opts = {})
 
@@ -1513,7 +1495,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of pictures in the worksheet.
 
     def get_worksheet_pictures( get_worksheet_pictures_request, opts = {})
 
@@ -1561,7 +1542,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of pivottables  in the worksheet.
 
     def get_worksheet_pivot_tables( get_worksheet_pivot_tables_request, opts = {})
 
@@ -1729,7 +1709,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of Excel file properties.
 
     def get_document_properties( get_document_properties_request, opts = {})
 
@@ -1769,7 +1748,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Excel file digital signature.
 
     def post_digital_signature( post_digital_signature_request, opts = {})
 
@@ -1849,7 +1827,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Copy content from the source range to the destination range in the worksheet.
 
     def post_worksheet_cells_ranges_copy( post_worksheet_cells_ranges_copy_request, opts = {})
 
@@ -1953,7 +1930,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of shapes in the worksheet.
 
     def get_worksheet_shapes( get_worksheet_shapes_request, opts = {})
 
@@ -2017,7 +1993,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of sparkline groups in the worksheet.
 
     def get_worksheet_sparkline_groups( get_worksheet_sparkline_groups_request, opts = {})
 
@@ -2122,7 +2097,13 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve the description of the default style for the workbook .
+
+    def post_split_text( post_split_text_request, opts = {})
+
+       data, _status_code, _headers = post_split_text_request.create_http_request(@api_client,opts )
+       return data
+    end
+
 
     def get_workbook_default_style( get_workbook_default_style_request, opts = {})
 
@@ -2314,7 +2295,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve the description of worksheets from a workbook.
 
     def get_worksheets( get_worksheets_request, opts = {})
 
@@ -2626,7 +2606,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # Retrieve descriptions of validations in the worksheet.
 
     def get_worksheet_validations( get_worksheet_validations_request, opts = {})
 

@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="versionrb.cs">
-   Copyright (c) 2024 Aspose.Cells Cloud
+   Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,5 +27,5 @@
 
 
 module AsposeCellsCloud
-  VERSION = "24.12"
+  VERSION = "25.1"
 end

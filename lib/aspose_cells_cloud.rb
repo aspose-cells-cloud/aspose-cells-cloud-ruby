@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="ApiErrorrb.cs">
-   Copyright (c) 2024 Aspose.Cells Cloud
+   Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -359,6 +359,7 @@ require 'aspose_cells_cloud/models/remove_characters_options'
 require 'aspose_cells_cloud/models/remove_duplicates_options'
 require 'aspose_cells_cloud/models/scope_item'
 require 'aspose_cells_cloud/models/scope_options'
+require 'aspose_cells_cloud/models/split_text_options'
 require 'aspose_cells_cloud/models/trim_content_options'
 require 'aspose_cells_cloud/models/word_case_options'
 require 'aspose_cells_cloud/models/cell_value'
@@ -716,6 +717,7 @@ require 'aspose_cells_cloud/requests/post_remove_characters_request'
 require 'aspose_cells_cloud/requests/post_convert_text_request'
 require 'aspose_cells_cloud/requests/post_remove_duplicates_request'
 require 'aspose_cells_cloud/requests/post_extract_text_request'
+require 'aspose_cells_cloud/requests/post_split_text_request'
 require 'aspose_cells_cloud/requests/get_workbook_default_style_request'
 require 'aspose_cells_cloud/requests/get_workbook_text_items_request'
 require 'aspose_cells_cloud/requests/get_workbook_names_request'
