@@ -23,7 +23,8 @@ Enhance your Ruby applications with the [Aspose.Cells Cloud](https://products.as
 
 Full list of issues covering all changes in this release:
 
--  Add the new API for splitting text in the cell.-  Optimize pivot table filter-related APIs.
+- Add the new API for splitting text in the cell.
+- Optimize pivot table filter-related APIs.
 
 ## Support file format
 
