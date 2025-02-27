@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartAreaResponse
-        #            
+        #This class has a property named "ChartArea" of type ChartArea with a getter and setter.            
         attr_accessor :chart_area
         #            
         attr_accessor :code

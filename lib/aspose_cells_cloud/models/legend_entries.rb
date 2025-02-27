@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LegendEntries
-        #            
+        #Property: Utilizes XML element "LengendEntry" to represent a list of LinkElement items in the class.            
         attr_accessor :legend_entry_list
         #            
         attr_accessor :link

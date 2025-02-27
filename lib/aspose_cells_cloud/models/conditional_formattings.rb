@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ConditionalFormattings
-        #            
+        #The property "Count" is decorated with [XmlElement("count")] attribute for XML serialization.            
         attr_accessor :count
         #            
         attr_accessor :conditional_formatting_list

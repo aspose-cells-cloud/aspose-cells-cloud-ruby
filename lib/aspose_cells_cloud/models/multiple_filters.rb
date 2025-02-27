@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class MultipleFilters
-        #            
+        #A nullable boolean property that determines if a blank space should be matched.            
         attr_accessor :match_blank
         #            
         attr_accessor :multiple_filter_list

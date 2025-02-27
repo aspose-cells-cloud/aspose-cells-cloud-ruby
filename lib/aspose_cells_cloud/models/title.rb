@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class Title
         #Represents whether the title is visible.            
         attr_accessor :is_visible
-        #            
+        #A property named LinkedSource with both set and get accessors is defined.            
         attr_accessor :linked_source
         #            
         attr_accessor :rotation_angle

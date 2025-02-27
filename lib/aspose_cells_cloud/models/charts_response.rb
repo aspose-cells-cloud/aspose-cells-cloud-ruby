@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartsResponse
-        #            
+        #Property Summary: Includes an XML element named "charts" that contains a property of type Charts.Charts.            
         attr_accessor :charts
         #            
         attr_accessor :code

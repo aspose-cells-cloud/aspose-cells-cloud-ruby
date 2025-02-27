@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportBatchDataOption
-        #            
+        #The class has a property named BatchData which is a list of CellValue objects and can be both read and written.            
         attr_accessor :batch_data
         #            
         attr_accessor :destination_worksheet

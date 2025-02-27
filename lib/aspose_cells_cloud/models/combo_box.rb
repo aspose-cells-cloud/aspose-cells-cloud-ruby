@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class ComboBox
         #Gets or sets the number of list lines displayed in the drop-down portion of a combo box.            
         attr_accessor :drop_down_lines
-        #            
+        #Property Summary: Contains a public string property named "InputRange" with both get and set accessors.            
         attr_accessor :input_range
         #Gets the selected cell in the input range of the combo box.            
         attr_accessor :selected_cell

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SparklineGroupResponse
-        #            
+        #A property that allows access to a Sparkline group containing multiple Sparkline objects.            
         attr_accessor :sparkline_group
         #            
         attr_accessor :code

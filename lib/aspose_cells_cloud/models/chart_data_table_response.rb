@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartDataTableResponse
-        #            
+        #This property allows access to a ChartDataTable object for storing and manipulating data related to a chart.            
         attr_accessor :chart_data_table
         #            
         attr_accessor :code

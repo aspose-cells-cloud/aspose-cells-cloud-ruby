@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class MergedCell
-        #            
+        #An integer property named "EndColumn" with the XML element name "endcolumn".            
         attr_accessor :end_column
         #            
         attr_accessor :end_row

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorksheetReplaceResponse
-        #            
+        #"An integer property named Matches decorated with the XmlElement attribute."            
         attr_accessor :matches
         #            
         attr_accessor :worksheet

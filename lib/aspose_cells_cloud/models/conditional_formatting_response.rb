@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ConditionalFormattingResponse
-        #            
+        #This class has a property named ConditionalFormatting of type ConditionalFormatting that can be accessed and modified.            
         attr_accessor :conditional_formatting
         #            
         attr_accessor :code

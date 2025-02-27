@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FloorResponse
-        #            
+        #This class has a public property "Floor" of type "Floor" with both a getter and a setter.            
         attr_accessor :floor
         #            
         attr_accessor :code

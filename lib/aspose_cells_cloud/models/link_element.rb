@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LinkElement
-        #            
+        #The class has a property named "link" of type Link, which has a public get and set accessors.            
         attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.

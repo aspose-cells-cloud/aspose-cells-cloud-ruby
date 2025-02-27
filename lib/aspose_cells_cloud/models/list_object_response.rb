@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListObjectResponse
-        #            
+        #A property that represents a list object within the Tables class.            
         attr_accessor :list_object
         #            
         attr_accessor :code

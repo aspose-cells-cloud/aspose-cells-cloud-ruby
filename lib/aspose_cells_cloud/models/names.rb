@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Names
-        #            
+        #This class property is tagged as an XML element named "count" and stores an integer value.            
         attr_accessor :count
         #            
         attr_accessor :name_list

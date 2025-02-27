@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoShapeResponse
-        #            
+        #A public property named "AutoShape" of type "AutoShape" with both getter and setter methods.            
         attr_accessor :auto_shape
         #            
         attr_accessor :code

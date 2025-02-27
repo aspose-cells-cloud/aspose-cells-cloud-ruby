@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PlotAreaResponse
-        #            
+        #A property that allows getting and setting the PlotArea for the class.            
         attr_accessor :plot_area
         #            
         attr_accessor :code

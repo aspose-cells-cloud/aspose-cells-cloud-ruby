@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Link
-        #            
+        #Has a property named Href with the attribute ElementName set to "href".            
         attr_accessor :href
         #            
         attr_accessor :rel

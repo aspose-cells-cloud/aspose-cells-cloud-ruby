@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class GradientFillStop
-        #            
+        #Color property of type DTO.Color that has a getter and a setter.            
         attr_accessor :color
         #            
         attr_accessor :position

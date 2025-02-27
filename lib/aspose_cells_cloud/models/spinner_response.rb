@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SpinnerResponse
-        #            
+        #A property named Shape of type Spinner, with both get and set accessors.            
         attr_accessor :shape
         #            
         attr_accessor :code

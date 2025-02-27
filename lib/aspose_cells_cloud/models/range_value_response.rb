@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeValueResponse
-        #            
+        #Property Summary: Contains a list of elements labeled as "Cell".            
         attr_accessor :cells_list
         #            
         attr_accessor :code

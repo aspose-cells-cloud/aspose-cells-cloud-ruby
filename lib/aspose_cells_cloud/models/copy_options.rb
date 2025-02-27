@@ -43,6 +43,8 @@ module AsposeCellsCloud
         attr_accessor :refer_to_destination_sheet
         #In ms excel, when copying formulas which refer to other worksheets while copying a worksheet to another one,            the copied formulas should refer to source workbook.            However, for some situations user may need the copied formulas refer to worksheets with the same name            in the same workbook, such as when those worksheets have been copied before this copy operation,            then this property should be kept as true.             
         attr_accessor :refer_to_sheet_with_same_name
+        #            
+        attr_accessor :copy_theme
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -52,7 +54,8 @@ module AsposeCellsCloud
         :'copy_names' => :'CopyNames',
         :'extend_to_adjacent_range' => :'ExtendToAdjacentRange',
         :'refer_to_destination_sheet' => :'ReferToDestinationSheet',
-        :'refer_to_sheet_with_same_name' => :'ReferToSheetWithSameName'
+        :'refer_to_sheet_with_same_name' => :'ReferToSheetWithSameName',
+        :'copy_theme' => :'CopyTheme'
       }
     end
 
@@ -64,7 +67,8 @@ module AsposeCellsCloud
         :'copy_names' => :'BOOLEAN',
         :'extend_to_adjacent_range' => :'BOOLEAN',
         :'refer_to_destination_sheet' => :'BOOLEAN',
-        :'refer_to_sheet_with_same_name' => :'BOOLEAN'
+        :'refer_to_sheet_with_same_name' => :'BOOLEAN',
+        :'copy_theme' => :'BOOLEAN'
       }
     end
 
@@ -94,6 +98,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ReferToSheetWithSameName')
           self.refer_to_sheet_with_same_name = attributes[:'ReferToSheetWithSameName']
       end
+      if attributes.has_key?(:'CopyTheme')
+          self.copy_theme = attributes[:'CopyTheme']
+      end
 
     end
 
@@ -119,6 +126,9 @@ module AsposeCellsCloud
       if @refer_to_sheet_with_same_name.nil?
           invalid_properties.push("invalid value for 'refer_to_sheet_with_same_name', refer_to_sheet_with_same_name cannot be nil.")
       end
+      if @copy_theme.nil?
+          invalid_properties.push("invalid value for 'copy_theme', copy_theme cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -132,6 +142,7 @@ module AsposeCellsCloud
       return false if @extend_to_adjacent_range.nil?
       return false if @refer_to_destination_sheet.nil?
       return false if @refer_to_sheet_with_same_name.nil?
+      return false if @copy_theme.nil?
       return true
     end
 
@@ -145,7 +156,8 @@ module AsposeCellsCloud
           copy_names == o.copy_names &&
           extend_to_adjacent_range == o.extend_to_adjacent_range &&
           refer_to_destination_sheet == o.refer_to_destination_sheet &&
-          refer_to_sheet_with_same_name == o.refer_to_sheet_with_same_name 
+          refer_to_sheet_with_same_name == o.refer_to_sheet_with_same_name &&
+          copy_theme == o.copy_theme 
           std_dev == o.std_dev
     end
 
@@ -158,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ column_character_width , copy_invalid_formulas_as_values , copy_names , extend_to_adjacent_range , refer_to_destination_sheet , refer_to_sheet_with_same_name ].hash
+      [ column_character_width , copy_invalid_formulas_as_values , copy_names , extend_to_adjacent_range , refer_to_destination_sheet , refer_to_sheet_with_same_name , copy_theme ].hash
     end
 
     # Builds the object from hash

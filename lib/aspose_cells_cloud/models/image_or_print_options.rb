@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :text_cross_type
         #GridlineType            
         attr_accessor :gridline_type
-        #            
+        #Indicates whether to output a blank page when there is nothing to print.            
         attr_accessor :output_blank_page_when_nothing_to_print
         #            
         attr_accessor :check_workbook_default_font

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ErrorBar
-        #            
+        #A property named "Link" of type "Link" that can be accessed and modified.            
         attr_accessor :link
         #Represents amount of error bar.                         The amount must be greater than or equal to zero.            
         attr_accessor :amount

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SingleValueResponse
-        #            
+        #A property named "Value" of type "SingleValue" that can be accessed and modified is declared in the class.            
         attr_accessor :value
         #            
         attr_accessor :code

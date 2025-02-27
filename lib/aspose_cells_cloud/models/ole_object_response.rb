@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class OleObjectResponse
-        #            
+        #This class has a property named OleObject of type OleObject with both read and write capabilities.            
         attr_accessor :ole_object
         #            
         attr_accessor :code

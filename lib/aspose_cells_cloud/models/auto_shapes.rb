@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoShapes
-        #            
+        #Property Summary: Contains a list of LinkElement objects identified by the XML element "autoshape".            
         attr_accessor :auto_shape_list
         #            
         attr_accessor :link

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotItem
-        #            
+        #Gets the index of the pivot item in cache field.            
         attr_accessor :index
         #Represents whether the specified item visible.            
         attr_accessor :is_hidden

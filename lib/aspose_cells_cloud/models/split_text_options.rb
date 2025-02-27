@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SplitTextOptions
-        #            
+        #The property "Name" is a publicly accessible and overridable property of type string in the class.            
         attr_accessor :name
         #            
         attr_accessor :data_source

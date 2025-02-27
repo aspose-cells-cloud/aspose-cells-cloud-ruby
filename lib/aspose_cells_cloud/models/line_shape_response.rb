@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LineShapeResponse
-        #            
+        #The class has a public property called Shape of type LineShape that can be both accessed and modified.            
         attr_accessor :shape
         #            
         attr_accessor :code

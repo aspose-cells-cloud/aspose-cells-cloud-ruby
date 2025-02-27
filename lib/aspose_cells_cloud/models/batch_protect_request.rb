@@ -37,7 +37,7 @@ module AsposeCellsCloud
         attr_accessor :source_storage
         #Indicates the match condition that needs to be processed for the file name.            
         attr_accessor :match_condition
-        #            
+        #This property defines the protection type of an object.            
         attr_accessor :protection_type
         #                        
         attr_accessor :password

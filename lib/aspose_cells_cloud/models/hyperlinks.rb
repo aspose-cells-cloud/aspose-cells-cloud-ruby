@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Hyperlinks
-        #            
+        #Property Summary: An integer property named Count with an XML element name "count."            
         attr_accessor :count
         #            
         attr_accessor :hyperlink_list

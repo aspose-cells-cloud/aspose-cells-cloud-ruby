@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ArcShapeResponse
-        #            
+        #A public property Shape of type ArcShape that can be accessed and modified.            
         attr_accessor :shape
         #            
         attr_accessor :code

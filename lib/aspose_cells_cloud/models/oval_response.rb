@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class OvalResponse
-        #            
+        #The class has a public property called "Shape" of type "Oval" with both get and set accessors.            
         attr_accessor :shape
         #            
         attr_accessor :code

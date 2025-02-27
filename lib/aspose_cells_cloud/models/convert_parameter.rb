@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ConvertParameter
-        #            
+        #A property "Name" of type string with a getter and setter is declared in the class.            
         attr_accessor :name
         #            
         attr_accessor :value

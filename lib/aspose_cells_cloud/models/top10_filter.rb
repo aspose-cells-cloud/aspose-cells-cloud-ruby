@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Top10Filter
-        #            
+        #An integer property named FieldIndex that can be accessed and modified.                        
         attr_accessor :field_index
         #             
         attr_accessor :criteria

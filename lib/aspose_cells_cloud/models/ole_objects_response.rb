@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class OleObjectsResponse
-        #            
+        #Property `OleObjects` of type `OleObjects` that can be accessed and modified publicly within the class.            
         attr_accessor :ole_objects
         #            
         attr_accessor :code

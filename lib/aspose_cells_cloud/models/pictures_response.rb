@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PicturesResponse
-        #            
+        #This class has a property called "Pictures" with the feature of being serialized as "pictures" in XML elements.            
         attr_accessor :pictures
         #            
         attr_accessor :code

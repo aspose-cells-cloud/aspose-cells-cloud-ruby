@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SeriesesResponse
-        #            
+        #A property named "Serieses" of type "SeriesItems" is defined in the class with both getter and setter access.            
         attr_accessor :serieses
         #            
         attr_accessor :code

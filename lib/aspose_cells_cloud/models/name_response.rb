@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class NameResponse
-        #            
+        #A public property that allows getting and setting a value of type "Name".            
         attr_accessor :name
         #            
         attr_accessor :code

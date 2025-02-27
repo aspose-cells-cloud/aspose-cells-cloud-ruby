@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Comments
-        #            
+        #Property Summary: The CommentList property is annotated to be serialized as XML elements under the tag "comment" and holds a collection of LinkElement objects.            
         attr_accessor :comment_list
         #            
         attr_accessor :link

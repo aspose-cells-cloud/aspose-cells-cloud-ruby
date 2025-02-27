@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Rows
-        #            
+        #This property allows access to set and retrieve the maximum row value in the class.            
         attr_accessor :max_row
         #            
         attr_accessor :rows_count

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LineResponse
-        #            
+        #A public property named "Line" of type Line with both getter and setter methods.            
         attr_accessor :line
         #            
         attr_accessor :code

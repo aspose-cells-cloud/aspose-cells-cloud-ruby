@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TextBoxResponse
-        #            
+        #A public property named "Shape" of type TextBox is defined with both get and set accessors.            
         attr_accessor :shape
         #            
         attr_accessor :code

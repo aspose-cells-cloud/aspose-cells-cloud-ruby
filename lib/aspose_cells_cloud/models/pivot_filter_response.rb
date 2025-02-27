@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotFilterResponse
-        #            
+        #Property Summary: Contains a pivot filter for data manipulation.            
         attr_accessor :pivot_filter
         #            
         attr_accessor :code

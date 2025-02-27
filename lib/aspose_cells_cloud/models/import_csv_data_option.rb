@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportCSVDataOption
-        #            
+        #A property named SeparatorString of type string that can be accessed and modified publicly.            
         attr_accessor :separator_string
         #            
         attr_accessor :convert_numeric_data

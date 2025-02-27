@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTables
-        #            
+        #Xml property "PivotTableList" of the class contains a list of "LinkElement" objects with the element name "PivotTable".            
         attr_accessor :pivot_table_list
         #            
         attr_accessor :link

@@ -39,7 +39,7 @@ module AsposeCellsCloud
         attr_accessor :check_excel_restriction
         #The regional settings for workbook.            
         attr_accessor :region
-        #            
+        #A property named "Ranges" of type IList of Range, with a default value of an empty List of Range.            
         attr_accessor :ranges
 
     # Attribute mapping from ruby-style variable name to JSON key.

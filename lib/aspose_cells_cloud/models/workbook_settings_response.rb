@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorkbookSettingsResponse
-        #            
+        #The class has a public property called "settings" of type WorkbookSettings that can be accessed and modified.            
         attr_accessor :settings
         #            
         attr_accessor :code

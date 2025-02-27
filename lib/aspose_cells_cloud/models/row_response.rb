@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RowResponse
-        #            
+        #This class has a public property named "Row" of type "Row" with both get and set accessors.            
         attr_accessor :row
         #            
         attr_accessor :code

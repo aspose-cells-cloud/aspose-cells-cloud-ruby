@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FileSource
-        #            
+        #A property named FileSourceType of type FileSourceType that can be accessed and modified.            
         attr_accessor :file_source_type
         #            
         attr_accessor :file_path

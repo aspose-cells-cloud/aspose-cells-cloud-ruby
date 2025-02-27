@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ComboBoxResponse
-        #            
+        #A public property of type ComboBox named Shape with get and set accessors.            
         attr_accessor :shape
         #            
         attr_accessor :code

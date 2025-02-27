@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Worksheets
-        #            
+        #A property named "WorksheetList" that contains a list of elements with the XML element name "worksheet".            
         attr_accessor :worksheet_list
         #            
         attr_accessor :link

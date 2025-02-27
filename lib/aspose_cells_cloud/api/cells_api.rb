@@ -926,6 +926,13 @@ module AsposeCellsCloud
     end
 
 
+    def post_convert_worksheet_to_image( post_convert_worksheet_to_image_request, opts = {})
+
+       data, _status_code, _headers = post_convert_worksheet_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
     def post_export( post_export_request, opts = {})
 
        data, _status_code, _headers = post_export_request.create_http_request(@api_client,opts )
@@ -1914,6 +1921,13 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def post_worksheet_cells_range_to_image( post_worksheet_cells_range_to_image_request, opts = {})
+
+       data, _status_code, _headers = post_worksheet_cells_range_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Insert a range of cells and shift existing cells based on the specified shift option.
 
     def put_worksheet_cells_range( put_worksheet_cells_range_request, opts = {})
@@ -2040,6 +2054,27 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def post_character_count( post_character_count_request, opts = {})
+
+       data, _status_code, _headers = post_character_count_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_words_count( post_words_count_request, opts = {})
+
+       data, _status_code, _headers = post_words_count_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def post_specify_words_count( post_specify_words_count_request, opts = {})
+
+       data, _status_code, _headers = post_specify_words_count_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Run tasks.
 
     def post_run_task( post_run_task_request, opts = {})
@@ -2048,6 +2083,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Adds text content to a workbook at specified positions within cells based on provided options using ASP.NET Core Web API.
 
     def post_add_text_content( post_add_text_content_request, opts = {})
 

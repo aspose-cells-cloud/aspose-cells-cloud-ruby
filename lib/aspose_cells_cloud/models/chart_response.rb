@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartResponse
-        #            
+        #A property named "Chart" of type Chart is defined with a getter and setter in the class.            
         attr_accessor :chart
         #            
         attr_accessor :code

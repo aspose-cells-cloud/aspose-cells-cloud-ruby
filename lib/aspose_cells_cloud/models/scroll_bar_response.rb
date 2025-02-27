@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ScrollBarResponse
-        #            
+        #The class has a public property named `Shape` of type `ScrollBar` that can be both read and written.            
         attr_accessor :shape
         #            
         attr_accessor :code

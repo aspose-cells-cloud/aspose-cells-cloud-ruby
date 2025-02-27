@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportStringArrayOption
-        #            
+        #A property named "FirstRow" of type integer with both a getter and a setter is defined in the class.            
         attr_accessor :first_row
         #            
         attr_accessor :first_column

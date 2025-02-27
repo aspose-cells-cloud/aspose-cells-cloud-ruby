@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RemoveCharactersByCharacter
-        #            
+        #Property: "RemoveTextMethod" is serialized using a string representation of the enum value.            
         attr_accessor :remove_text_method
         #            
         attr_accessor :remove_characters

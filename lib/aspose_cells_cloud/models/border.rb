@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :line_style
         #Gets or sets the  of the border.             
         attr_accessor :color
-        #            
+        #This class has a property called "BorderType" of type string that can be both get and set.            
         attr_accessor :border_type
         #Gets and sets the theme color of the border.             
         attr_accessor :theme_color

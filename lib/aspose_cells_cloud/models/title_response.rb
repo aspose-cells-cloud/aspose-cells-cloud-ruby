@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TitleResponse
-        #            
+        #This class has a property called "Title" of type "Title" with both a getter and a setter.            
         attr_accessor :title
         #            
         attr_accessor :code

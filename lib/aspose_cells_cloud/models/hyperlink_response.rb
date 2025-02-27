@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class HyperlinkResponse
-        #            
+        #A public property named "Hyperlink" of type Hyperlink with both getter and setter methods.            
         attr_accessor :hyperlink
         #            
         attr_accessor :code

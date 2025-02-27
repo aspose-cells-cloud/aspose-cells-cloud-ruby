@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TrendlineResponse
-        #            
+        #The class has a public property called "Trendline" of type "Trendline" that can be accessed and modified.            
         attr_accessor :trendline
         #            
         attr_accessor :code

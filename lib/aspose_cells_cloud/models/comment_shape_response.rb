@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CommentShapeResponse
-        #            
+        #The class has a public property named Comment of type CommentShape that can be accessed and modified.            
         attr_accessor :comment
         #            
         attr_accessor :code

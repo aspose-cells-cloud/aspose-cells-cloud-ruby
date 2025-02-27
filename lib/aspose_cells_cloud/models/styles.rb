@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Styles
-        #            
+        #This property contains a list of elements with the tag "style".            
         attr_accessor :style_list
         #            
         attr_accessor :link

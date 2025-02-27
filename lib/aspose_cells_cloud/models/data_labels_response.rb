@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class DataLabelsResponse
-        #            
+        #This class has a property named DataLabels of type DataLabels that can be accessed and modified.            
         attr_accessor :data_labels
         #            
         attr_accessor :code

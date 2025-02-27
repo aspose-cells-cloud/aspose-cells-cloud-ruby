@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTableResponse
-        #            
+        #PivotTable property of type PivotTable that can be both read and written.            
         attr_accessor :pivot_table
         #            
         attr_accessor :code

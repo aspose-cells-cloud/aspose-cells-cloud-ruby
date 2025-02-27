@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RectangleShapeResponse
-        #            
+        #A public property named "Shape" that is of type RectangleShape and can be both accessed and modified.            
         attr_accessor :shape
         #            
         attr_accessor :code

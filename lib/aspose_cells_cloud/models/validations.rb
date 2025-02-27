@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Validations
-        #            
+        #Property summary: The property "Count" with an XML element name "count" returns the number of items in the "ValidationList".            
         attr_accessor :count
         #            
         attr_accessor :validation_list

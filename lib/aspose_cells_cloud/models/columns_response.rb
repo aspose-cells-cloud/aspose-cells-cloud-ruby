@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ColumnsResponse
-        #            
+        #This property allows access to the columns within the class.            
         attr_accessor :columns
         #            
         attr_accessor :code

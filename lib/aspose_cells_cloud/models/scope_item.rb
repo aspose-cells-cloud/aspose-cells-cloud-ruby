@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ScopeItem
-        #            
+        #A property "WorksheetName" of type string with an initial value of an empty string.                        
         attr_accessor :worksheet_name
         #            
         attr_accessor :ranges

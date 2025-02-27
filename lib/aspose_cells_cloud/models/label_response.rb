@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LabelResponse
-        #            
+        #The property "Shape" is of type Label and has both a getter and a setter.            
         attr_accessor :shape
         #            
         attr_accessor :code

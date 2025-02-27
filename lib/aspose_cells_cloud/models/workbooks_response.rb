@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorkbooksResponse
-        #            
+        #Property Summary: Contains a list of "Workbook" elements under the "Workbooks" array in XML format.            
         attr_accessor :workbooks
         #            
         attr_accessor :code

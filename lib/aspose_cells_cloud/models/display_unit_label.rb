@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class DisplayUnitLabel
-        #            
+        #A public property named "LinkedSource" with a string data type can be set and accessed.            
         attr_accessor :linked_source
         #            
         attr_accessor :rotation_angle

@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :key
         #Represents the order of sorting.            
         attr_accessor :sort_order
-        #            
+        #This class includes a property named CustomList that is an array of strings with both getter and setter methods.            
         attr_accessor :custom_list
         #Indicates the order of sorting.            
         attr_accessor :order

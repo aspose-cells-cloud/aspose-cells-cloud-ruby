@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class HorizontalPageBreakResponse
-        #            
+        #HorizontalPageBreak is a property of the class that represents a horizontal page break.            
         attr_accessor :horizontal_page_break
         #            
         attr_accessor :code

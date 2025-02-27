@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class GroupBoxResponse
-        #            
+        #The class has a property named "Shape" of type GroupBox that can be accessed and modified.            
         attr_accessor :shape
         #            
         attr_accessor :code

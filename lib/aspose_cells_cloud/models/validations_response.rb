@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ValidationsResponse
-        #            
+        #This class has a public property named "Validations" of type "Validations" that includes both a getter and a setter.            
         attr_accessor :validations
         #            
         attr_accessor :code

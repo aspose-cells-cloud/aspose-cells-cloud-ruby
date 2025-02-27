@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportPosition
-        #            
+        #"Property SheetName of type string with a public get and set accessor."            
         attr_accessor :sheet_name
         #            
         attr_accessor :row_index

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RemoveDuplicatesOptions
-        #            
+        #The class has a public property "Name" of type string that can be both read and written.            
         attr_accessor :name
         #            
         attr_accessor :data_source

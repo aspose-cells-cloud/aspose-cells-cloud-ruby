@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WallsResponse
-        #            
+        #The class has a public property named `Walls` of type `Walls`.            
         attr_accessor :walls
         #            
         attr_accessor :code

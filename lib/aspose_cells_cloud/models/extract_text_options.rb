@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ExtractTextOptions
-        #            
+        #This class has a public property for storing and retrieving a name value.            
         attr_accessor :name
         #            
         attr_accessor :data_source

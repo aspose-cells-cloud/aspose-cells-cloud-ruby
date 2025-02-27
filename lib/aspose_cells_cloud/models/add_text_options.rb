@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AddTextOptions
-        #            
+        #The class has a public property named "Name" with a getter and setter method.            
         attr_accessor :name
         #            
         attr_accessor :data_source

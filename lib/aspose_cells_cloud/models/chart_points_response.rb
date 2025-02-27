@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartPointsResponse
-        #            
+        #This class has a property named `ChartPoints` of type `ChartPoints` that can be accessed and modified.            
         attr_accessor :chart_points
         #            
         attr_accessor :code

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotField
-        #            
+        #Represent the number of top or bottom items            that are automatically shown in the specified PivotTable field.            
         attr_accessor :auto_show_count
         #            
         attr_accessor :auto_show_field

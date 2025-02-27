@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveFilesToCloudResultResponse
-        #            
+        #Property: SaveFilesToCloudResult that allows getting and setting an object of type SaveFilesToCloudResult.            
         attr_accessor :save_files_to_cloud_result
         #            
         attr_accessor :code

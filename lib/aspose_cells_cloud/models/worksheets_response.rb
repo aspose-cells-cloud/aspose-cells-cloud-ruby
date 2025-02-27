@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorksheetsResponse
-        #            
+        #Property `Worksheets` of type `Worksheets` with the XML element name "worksheets" is defined in the class.            
         attr_accessor :worksheets
         #            
         attr_accessor :code

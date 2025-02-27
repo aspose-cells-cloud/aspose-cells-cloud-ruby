@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class NamesResponse
-        #            
+        #Property: This property represents an XML element named "names" and holds a Names object.            
         attr_accessor :names
         #            
         attr_accessor :code

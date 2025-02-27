@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :section
         #page context script                        
         attr_accessor :context
-        #            
+        #A property named "Picture" with both getter and setter methods of type string is defined.            
         attr_accessor :picture
         #fisrt page context script            
         attr_accessor :fisrt_page_context

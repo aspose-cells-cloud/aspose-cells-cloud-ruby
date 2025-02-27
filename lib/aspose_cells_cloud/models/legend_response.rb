@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LegendResponse
-        #            
+        #This class has a public property called "Legend" of type "Legend" which has both a getter and a setter.            
         attr_accessor :legend
         #            
         attr_accessor :code

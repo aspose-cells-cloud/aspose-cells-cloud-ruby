@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ButtonResponse
-        #            
+        #The class has a property named "Shape" of type Button that can be both read and written.            
         attr_accessor :shape
         #            
         attr_accessor :code

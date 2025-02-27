@@ -39,7 +39,7 @@ module AsposeCellsCloud
         attr_accessor :original_height
         #Gets the original width of the picture.            
         attr_accessor :original_width
-        #            
+        #This class has a property called "ImageFormat" that allows getting and setting a string value.            
         attr_accessor :image_format
         #Gets or sets the path and name of the source file for the linked image.            
         attr_accessor :source_full_name

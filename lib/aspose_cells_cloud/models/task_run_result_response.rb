@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TaskRunResultResponse
-        #            
+        #This class has a property named "TaskRunResult" of type "TaskRunResult" that can be both accessed and modified.            
         attr_accessor :task_run_result
         #            
         attr_accessor :code

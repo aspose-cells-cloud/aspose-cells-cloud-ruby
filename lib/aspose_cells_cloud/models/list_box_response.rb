@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListBoxResponse
-        #            
+        #A property "Shape" of type ListBox with read and write access is available for the class.            
         attr_accessor :shape
         #            
         attr_accessor :code

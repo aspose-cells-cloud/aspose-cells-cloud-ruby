@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Import2DimensionDoubleArrayOption
-        #            
+        #The class has a property named "FirstRow" of type integer with get and set accessors.            
         attr_accessor :first_row
         #            
         attr_accessor :first_column

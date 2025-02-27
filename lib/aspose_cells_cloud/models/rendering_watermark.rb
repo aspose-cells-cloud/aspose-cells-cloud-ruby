@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RenderingWatermark
-        #            
+        #Gets or sets roation of the watermark in degrees.            
         attr_accessor :rotation
         #            
         attr_accessor :scale_to_page_percent

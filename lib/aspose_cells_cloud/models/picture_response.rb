@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PictureResponse
-        #            
+        #Property Summary: This class has a public property named "Picture" of type "Picture" that has both getter and setter methods.            
         attr_accessor :picture
         #            
         attr_accessor :code

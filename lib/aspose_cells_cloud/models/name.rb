@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class Name
         #Gets and sets the comment of the name.                        Only applies for Excel 2007.            
         attr_accessor :comment
-        #            
+        #Property Summary: WorksheetIndex is an optional integer property marked with the XmlElement attribute "worksheetindex".            
         attr_accessor :worksheet_index
         #Indicates whether this name is referred by other formulas.            
         attr_accessor :is_referred

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoShapesResponse
-        #            
+        #The class has a property named "AutoShapes" decorated with the XmlElement attribute "shapes".            
         attr_accessor :auto_shapes
         #            
         attr_accessor :code

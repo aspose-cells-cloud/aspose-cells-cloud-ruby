@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class OleObjects
-        #            
+        #Property Summary: Contains a list of elements identified as "oleobject" within XML data.            
         attr_accessor :ole_object_list
         #            
         attr_accessor :link

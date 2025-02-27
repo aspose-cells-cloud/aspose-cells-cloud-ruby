@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotFieldResponse
-        #            
+        #This class has a property named "PivotField" of type PivotField which can be accessed and modified.            
         attr_accessor :pivot_field
         #            
         attr_accessor :code

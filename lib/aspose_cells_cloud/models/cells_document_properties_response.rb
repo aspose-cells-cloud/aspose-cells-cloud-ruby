@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsDocumentPropertiesResponse
-        #            
+        #The class has a property that represents the document properties of cells.            
         attr_accessor :document_properties
         #            
         attr_accessor :code

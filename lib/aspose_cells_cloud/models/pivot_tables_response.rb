@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTablesResponse
-        #            
+        #This class has a property named PivotTables of type PivotTables that can be both accessed and modified.            
         attr_accessor :pivot_tables
         #            
         attr_accessor :code

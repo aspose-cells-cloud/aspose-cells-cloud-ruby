@@ -59,7 +59,7 @@ module AsposeCellsCloud
         attr_accessor :is_style_set
         #Gets and sets the html string which contains data and some formats in this cell.            
         attr_accessor :html_string
-        #            
+        #This class property represents a style element with the specified XML element name.            
         attr_accessor :style
         #Gets the parent worksheet.            
         attr_accessor :worksheet

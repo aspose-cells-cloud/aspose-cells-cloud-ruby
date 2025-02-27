@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AnalyzeExcelRequest
-        #            
+        #The class has a property called "Files" that is a list of FileInfo objects with a default value of an empty list.            
         attr_accessor :files
         #            
         attr_accessor :need_thumbnail

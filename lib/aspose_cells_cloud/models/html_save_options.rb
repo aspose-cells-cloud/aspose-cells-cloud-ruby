@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class HtmlSaveOptions
-        #            
+        #Indicates whether exporting page headers.            
         attr_accessor :export_page_headers
         #            
         attr_accessor :export_page_footers

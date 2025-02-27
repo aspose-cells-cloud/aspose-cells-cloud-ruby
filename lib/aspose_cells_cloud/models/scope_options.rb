@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ScopeOptions
-        #            
+        #Property Summary: The Scope property in the class is decorated with a JsonConverter attribute using StringEnumConverter.                        
         attr_accessor :scope
         #            
         attr_accessor :scope_items

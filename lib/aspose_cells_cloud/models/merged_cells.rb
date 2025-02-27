@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class MergedCells
-        #            
+        #An integer property labeled as "count" and marked as an XML element in the class.            
         attr_accessor :count
         #            
         attr_accessor :merged_cell_list

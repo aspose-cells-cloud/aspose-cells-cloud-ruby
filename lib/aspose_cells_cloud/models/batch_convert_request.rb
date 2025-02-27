@@ -45,7 +45,7 @@ module AsposeCellsCloud
         attr_accessor :out_storage
         #The regional settings for workbook.            
         attr_accessor :region
-        #            
+        #A nullable Boolean property that determines whether the content should be fit to the entire page width on each sheet.            
         attr_accessor :page_wide_fit_on_per_sheet
         #            
         attr_accessor :page_tall_fit_on_per_sheet

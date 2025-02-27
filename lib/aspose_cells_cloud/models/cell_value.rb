@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellValue
-        #            
+        #A public integer property called "rowIndex" with both getter and setter.            
         attr_accessor :row_index
         #            
         attr_accessor :column_index

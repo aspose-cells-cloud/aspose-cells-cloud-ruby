@@ -49,7 +49,7 @@ module AsposeCellsCloud
         attr_accessor :value1
         #Gets the string value2 of the label pivot filter.                        
         attr_accessor :value2
-        #            
+        #A property that allows for setting and getting a Top10Filter object for filtering data.            
         attr_accessor :top10_filter
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :index
         #The true position index value of the column.            
         attr_accessor :column_index
-        #            
+        #This class has a public property "Title" of type string with a default value of an empty string.            
         attr_accessor :title
         #When the repetition rate is high, can it be viewed as a group display?            
         attr_accessor :repetition_rate

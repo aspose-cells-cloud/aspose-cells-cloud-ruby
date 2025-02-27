@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Form
-        #            
+        #A property named "FormType" of type string which can be both accessed and modified.            
         attr_accessor :form_type
         #            
         attr_accessor :checked_value

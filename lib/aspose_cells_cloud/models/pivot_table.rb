@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PivotTable
-        #            
+        #Gets the description of the alt text            
         attr_accessor :alt_text_description
         #            
         attr_accessor :alt_text_title

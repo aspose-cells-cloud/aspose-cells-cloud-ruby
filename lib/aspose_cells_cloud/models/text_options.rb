@@ -57,7 +57,7 @@ module AsposeCellsCloud
         attr_accessor :is_subscript
         #            
         attr_accessor :is_superscript
-        #            
+        #The class has a public property named "Name" with a getter and setter method.            
         attr_accessor :name
         #            
         attr_accessor :size

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PdfSecurityOptions
-        #            
+        #Indicates whether to allow to add or modify text annotations, fill in interactive form fields.            
         attr_accessor :annotations_permission
         #            
         attr_accessor :assemble_document_permission

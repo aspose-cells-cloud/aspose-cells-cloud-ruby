@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Forms
-        #            
+        #Property: FormList is a list of LinkElements that are serialized as "form" XML elements.            
         attr_accessor :form_list
         #            
         attr_accessor :link

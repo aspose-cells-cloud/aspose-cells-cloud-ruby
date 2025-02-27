@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListObjectsResponse
-        #            
+        #A property named "ListObjects" of type "Tables.ListObjects" that can be both accessed and modified.            
         attr_accessor :list_objects
         #            
         attr_accessor :code

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FillFormatResponse
-        #            
+        #Property Summary: Allows access to the FillFormat property to get or set fill formatting properties for an object.            
         attr_accessor :fill_format
         #            
         attr_accessor :code

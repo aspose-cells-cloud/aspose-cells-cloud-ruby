@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AppliedOperate
-        #            
+        #Property summary: Utilizes a custom JSON converter to serialize and deserialize an enum property.            
         attr_accessor :applied_operate_type
 
     # Attribute mapping from ruby-style variable name to JSON key.

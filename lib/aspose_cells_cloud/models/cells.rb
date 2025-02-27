@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :max_row
         #Maximum column index of those cells that have been instantiated in the collection(does not include the column                        where style is defined for the whole column but no cell has been instantiated in it).            
         attr_accessor :max_column
-        #            
+        #The class has a public property "CellCount" of type integer that can be read and modified.            
         attr_accessor :cell_count
         #Gets the collection of  objects that represents the individual rows in this worksheet.            
         attr_accessor :rows

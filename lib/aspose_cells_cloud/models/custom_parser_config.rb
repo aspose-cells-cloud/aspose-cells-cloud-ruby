@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :column_index
         #data parser method.             ToDateTime            ToString            
         attr_accessor :parse_method
-        #            
+        #A property that allows storing and retrieving custom styling information for an object.            
         attr_accessor :custom_style
 
     # Attribute mapping from ruby-style variable name to JSON key.

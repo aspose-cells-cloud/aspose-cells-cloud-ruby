@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FindResponse
-        #            
+        #Property Summary: This property is annotated with the XML element name "count" and represents an integer value.            
         attr_accessor :count
         #            
         attr_accessor :text_items

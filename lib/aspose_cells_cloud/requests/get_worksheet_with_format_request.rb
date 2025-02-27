@@ -38,6 +38,8 @@ module AsposeCellsCloud
     attr_accessor :horizontal_resolution  
     attr_accessor :area  
     attr_accessor :page_index  
+    attr_accessor :one_page_per_sheet  
+    attr_accessor :print_headings  
     attr_accessor :folder  
     attr_accessor :storage_name  
 
@@ -68,6 +70,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageIndex')
           self.page_index = attributes[:'pageIndex']
       end
+      if attributes.has_key?(:'onePagePerSheet')
+          self.one_page_per_sheet = attributes[:'onePagePerSheet']
+      end
+      if attributes.has_key?(:'printHeadings')
+          self.print_headings = attributes[:'printHeadings']
+      end
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
@@ -86,6 +94,8 @@ module AsposeCellsCloud
         :'horizontal_resolution' => :'horizontalResolution',
         :'area' => :'area',
         :'page_index' => :'pageIndex',
+        :'one_page_per_sheet' => :'onePagePerSheet',
+        :'print_headings' => :'printHeadings',
         :'folder' => :'folder',
         :'storage_name' => :'storageName'
       }
@@ -101,6 +111,8 @@ module AsposeCellsCloud
         :'horizontal_resolution' => :'Integer',
         :'area' => :'String',
         :'page_index' => :'Integer',
+        :'one_page_per_sheet' => :'BOOLEAN',
+        :'print_headings' => :'BOOLEAN',
         :'folder' => :'String',
         :'storage_name' => :'String'
       }
@@ -129,6 +141,8 @@ module AsposeCellsCloud
       query_params[:'horizontalResolution'] = self.horizontal_resolution if !self.horizontal_resolution.nil? 
       query_params[:'area'] = self.area if !self.area.nil? 
       query_params[:'pageIndex'] = self.page_index if !self.page_index.nil? 
+      query_params[:'onePagePerSheet'] = self.one_page_per_sheet if !self.one_page_per_sheet.nil? 
+      query_params[:'printHeadings'] = self.print_headings if !self.print_headings.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
 

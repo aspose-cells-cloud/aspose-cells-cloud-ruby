@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RemoveCharactersOptions
-        #            
+        #Name property with a getter and setter override that returns a string.            
         attr_accessor :name
         #            
         attr_accessor :data_source

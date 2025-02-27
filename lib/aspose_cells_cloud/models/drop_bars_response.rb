@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class DropBarsResponse
-        #            
+        #The class has a property named `DropBars` of type `DropBars` with both getter and setter methods.            
         attr_accessor :drop_bars
         #            
         attr_accessor :code

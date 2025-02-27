@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class StyleResponse
-        #            
+        #A property named "Style" of type "Style" is defined with both getter and setter methods.            
         attr_accessor :style
         #            
         attr_accessor :code

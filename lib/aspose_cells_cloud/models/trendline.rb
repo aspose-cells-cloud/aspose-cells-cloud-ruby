@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Trendline
-        #            
+        #The class has a property named "link" of type "Link" that can be accessed and modified.            
         attr_accessor :link
         #Returns or sets the number of periods (or units on a scatter chart) that the trendline extends backward.                         The number of periods must be greater than or equal to zero.                        If the chart type is column ,the number of periods must be between 0 and 0.5            
         attr_accessor :backward

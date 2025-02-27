@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsCloudResponse
-        #            
+        #The property "Code" allows for accessing and modifying the HTTP status code of the response.            
         attr_accessor :code
         #            
         attr_accessor :status

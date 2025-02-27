@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RemoveCharactersByPosition
-        #            
+        #This property allows access to a public integer named "TheFirstNCharacters" for getting and setting its value.            
         attr_accessor :the_first_n_characters
         #            
         attr_accessor :the_last_n_characters

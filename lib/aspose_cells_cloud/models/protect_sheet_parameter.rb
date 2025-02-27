@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ProtectSheetParameter
-        #            
+        #Property Summary: Defines a public string property for the ProtectionType.            
         attr_accessor :protection_type
         #            
         attr_accessor :password

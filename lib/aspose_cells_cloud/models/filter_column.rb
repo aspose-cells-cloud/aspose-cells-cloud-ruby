@@ -35,7 +35,7 @@ module AsposeCellsCloud
         attr_accessor :field_index
         #Gets and sets the type fo filtering data.             
         attr_accessor :filter_type
-        #            
+        #This class contains a property named "MultipleFilters" of type "MultipleFilters" that can be both read and written.            
         attr_accessor :multiple_filters
         #            
         attr_accessor :color_filter

@@ -41,7 +41,7 @@ module AsposeCellsCloud
         attr_accessor :tile_pic_option
         #Gets or sets picture format option.             
         attr_accessor :pic_format_option
-        #            
+        #The class has a public property named "Image" of type LinkElement that can be accessed and set.            
         attr_accessor :image
 
     # Attribute mapping from ruby-style variable name to JSON key.

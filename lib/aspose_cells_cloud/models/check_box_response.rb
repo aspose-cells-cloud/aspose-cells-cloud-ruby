@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CheckBoxResponse
-        #            
+        #A public property named Shape of type CheckBox is defined with both get and set accessors.            
         attr_accessor :shape
         #            
         attr_accessor :code

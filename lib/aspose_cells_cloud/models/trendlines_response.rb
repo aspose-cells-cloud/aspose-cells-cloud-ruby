@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TrendlinesResponse
-        #            
+        #This property allows access to the Trendlines feature and set new values for it.            
         attr_accessor :trendlines
         #            
         attr_accessor :code

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PageSetupResponse
-        #            
+        #Property Summary: The class has a public property named PageSetup of type PageSetup that can be accessed and modified.            
         attr_accessor :page_setup
         #            
         attr_accessor :code

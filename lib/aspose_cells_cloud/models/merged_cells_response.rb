@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class MergedCellsResponse
-        #            
+        #Property Summary: Contains information about merged cells within a spreadsheet.            
         attr_accessor :merged_cells
         #            
         attr_accessor :code

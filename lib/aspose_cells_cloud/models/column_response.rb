@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ColumnResponse
-        #            
+        #This class has a public property called "Column" of type "Column" with both getter and setter methods.            
         attr_accessor :column
         #            
         attr_accessor :code

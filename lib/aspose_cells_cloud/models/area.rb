@@ -37,7 +37,7 @@ module AsposeCellsCloud
         attr_accessor :fill_format
         #Gets or sets the foreground .             
         attr_accessor :foreground_color
-        #            
+        #This class has a property named "Format" of type string with both getter and setter methods.            
         attr_accessor :format
         #If the property is true and the value of chart point is a negative number,            the foreground color and background color will be exchanged.             
         attr_accessor :invert_if_negative

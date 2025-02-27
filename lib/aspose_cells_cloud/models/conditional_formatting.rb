@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ConditionalFormatting
-        #            
+        #A public property called "sqref" of type string with a getter and a setter is defined in the class.            
         attr_accessor :sqref
         #            
         attr_accessor :format_conditions

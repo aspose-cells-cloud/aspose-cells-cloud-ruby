@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListObjects
-        #            
+        #A property named ListObjectList that is a list of LinkElement objects.            
         attr_accessor :list_object_list
         #            
         attr_accessor :link

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TextWaterMarkerRequest
-        #            
+        #A property named Text of type string that can be accessed and modified.            
         attr_accessor :text
         #Indicates font name.            
         attr_accessor :font_name

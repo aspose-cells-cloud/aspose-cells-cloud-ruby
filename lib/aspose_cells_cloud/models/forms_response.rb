@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FormsResponse
-        #            
+        #This class has a property named Forms of type Forms that has both a getter and setter.            
         attr_accessor :forms
         #            
         attr_accessor :code

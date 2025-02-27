@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class ImportOption
         #Destination worksheet name.              
         attr_accessor :destination_worksheet
-        #            
+        #A boolean property `IsInsert` that can be both read and written.            
         attr_accessor :is_insert
         #            
         attr_accessor :import_data_type

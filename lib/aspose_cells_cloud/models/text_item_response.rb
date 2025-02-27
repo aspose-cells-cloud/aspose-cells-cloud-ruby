@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TextItemResponse
-        #            
+        #The class has a property that allows getting and setting a TextItem object.            
         attr_accessor :text_item
         #            
         attr_accessor :code

@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class DataLabels
         #Indicates the text is auto generated.            
         attr_accessor :is_auto_text
-        #            
+        #A nullable boolean property "IsDeleted" indicating whether an object has been deleted.            
         attr_accessor :is_deleted
         #            
         attr_accessor :linked_source

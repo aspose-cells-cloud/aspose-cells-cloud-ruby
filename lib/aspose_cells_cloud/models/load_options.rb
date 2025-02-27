@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LoadOptions
-        #            
+        #This class has a public property named "ConvertNumericData" of type string that can be read from and written to.            
         attr_accessor :convert_numeric_data
         #Gets and sets the interrupt monitor.            
         attr_accessor :interrupt_monitor

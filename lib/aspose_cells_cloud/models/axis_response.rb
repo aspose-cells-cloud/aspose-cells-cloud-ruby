@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AxisResponse
-        #            
+        #A property named "Axis" of type "Axis" with both getter and setter methods is present in the class.            
         attr_accessor :axis
         #            
         attr_accessor :code

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class WorksheetResponse
-        #            
+        #The class has a property called "Worksheet" of type "Worksheet" that can be accessed and modified.            
         attr_accessor :worksheet
         #            
         attr_accessor :code

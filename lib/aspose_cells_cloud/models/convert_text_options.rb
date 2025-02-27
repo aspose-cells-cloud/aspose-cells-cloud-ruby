@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ConvertTextOptions
-        #            
+        #The class has a public property called "Name" of type string that can be accessed and modified.            
         attr_accessor :name
         #            
         attr_accessor :data_source

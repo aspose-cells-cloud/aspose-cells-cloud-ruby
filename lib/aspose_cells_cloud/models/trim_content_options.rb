@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TrimContentOptions
-        #            
+        #This class has a public property named DataSource of type DataSource that has both a getter and a setter method.                        
         attr_accessor :data_source
         #            
         attr_accessor :file_info

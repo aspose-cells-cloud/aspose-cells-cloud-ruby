@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ListBox
-        #            
+        #This property stores the input range for the class.            
         attr_accessor :input_range
         #Gets the number of items in the list box.            
         attr_accessor :item_count

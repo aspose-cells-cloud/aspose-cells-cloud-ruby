@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartPointResponse
-        #            
+        #A public property "ChartPoint" that can store and retrieve instances of the "ChartPoint" data type.            
         attr_accessor :chart_point
         #            
         attr_accessor :code

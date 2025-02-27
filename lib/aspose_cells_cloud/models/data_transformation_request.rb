@@ -39,7 +39,7 @@ module AsposeCellsCloud
         attr_accessor :load_data
         #Indicates applied step list.             
         attr_accessor :applied_steps
-        #            
+        #This class has a property named "Region" of type string with both a getter and a setter.            
         attr_accessor :region
         #Indicates output format             
         attr_accessor :out_format

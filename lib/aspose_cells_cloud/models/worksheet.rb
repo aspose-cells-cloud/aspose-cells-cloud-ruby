@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Worksheet
-        #            
+        #Property Summary: Contains a list of links represented by the class link.            
         attr_accessor :links
         #Indicates if the specified worksheet is displayed from right to left instead of from left to right.            Default is false.             
         attr_accessor :display_right_to_left

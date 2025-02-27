@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FormResponse
-        #            
+        #Property summary: A public property named "Form" with both get and set accessors, allowing access to a Form object.            
         attr_accessor :form
         #            
         attr_accessor :code

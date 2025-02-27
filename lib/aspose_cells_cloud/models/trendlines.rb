@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Trendlines
-        #            
+        #This property allows for a list of Trendline objects to be stored under the XmlElement "TrendLine".            
         attr_accessor :trendline_list
         #            
         attr_accessor :link

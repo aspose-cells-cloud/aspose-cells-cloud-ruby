@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsCloudFileInfoResponse
-        #            
+        #A property named `FileInfo` of type `CellsCloudFileInfo` is defined for the class.            
         attr_accessor :file_info
         #            
         attr_accessor :code

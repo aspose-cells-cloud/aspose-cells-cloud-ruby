@@ -37,6 +37,8 @@ module AsposeCellsCloud
         attr_accessor :source
         #Target range.            
         attr_accessor :target
+        #            
+        attr_accessor :target_workbook
         #Represents the paste special options.                        
         attr_accessor :paste_options
 
@@ -46,6 +48,7 @@ module AsposeCellsCloud
         :'operate' => :'Operate',
         :'source' => :'Source',
         :'target' => :'Target',
+        :'target_workbook' => :'TargetWorkbook',
         :'paste_options' => :'PasteOptions'
       }
     end
@@ -56,6 +59,7 @@ module AsposeCellsCloud
         :'operate' => :'String',
         :'source' => :'Range',
         :'target' => :'Range',
+        :'target_workbook' => :'String',
         :'paste_options' => :'PasteOptions'
       }
     end
@@ -77,6 +81,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'Target')
           self.target = attributes[:'Target']
       end
+      if attributes.has_key?(:'TargetWorkbook')
+          self.target_workbook = attributes[:'TargetWorkbook']
+      end
       if attributes.has_key?(:'PasteOptions')
           self.paste_options = attributes[:'PasteOptions']
       end
@@ -96,6 +103,9 @@ module AsposeCellsCloud
       if @target.nil?
           invalid_properties.push("invalid value for 'target', target cannot be nil.")
       end
+      if @target_workbook.nil?
+          invalid_properties.push("invalid value for 'target_workbook', target_workbook cannot be nil.")
+      end
       if @paste_options.nil?
           invalid_properties.push("invalid value for 'paste_options', paste_options cannot be nil.")
       end
@@ -109,6 +119,7 @@ module AsposeCellsCloud
       return false if @operate.nil?
       return false if @source.nil?
       return false if @target.nil?
+      return false if @target_workbook.nil?
       return false if @paste_options.nil?
       return true
     end
@@ -121,6 +132,7 @@ module AsposeCellsCloud
           operate == o.operate &&
           source == o.source &&
           target == o.target &&
+          target_workbook == o.target_workbook &&
           paste_options == o.paste_options 
           std_dev == o.std_dev
     end
@@ -134,7 +146,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ operate , source , target , paste_options ].hash
+      [ operate , source , target , target_workbook , paste_options ].hash
     end
 
     # Builds the object from hash

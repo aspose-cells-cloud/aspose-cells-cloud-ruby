@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellResponse
-        #            
+        #A property named "Cell" of type "Cell" that has both a getter and a setter.            
         attr_accessor :cell
         #            
         attr_accessor :code

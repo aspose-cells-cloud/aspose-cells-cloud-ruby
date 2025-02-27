@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SeriesItems
-        #            
+        #This property allows setting and getting data for the category.            
         attr_accessor :category_data
         #            
         attr_accessor :is_color_varied

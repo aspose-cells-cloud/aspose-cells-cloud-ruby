@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class TickLabelsResponse
-        #            
+        #Property that represents tick labels for a class.            
         attr_accessor :tick_labels
         #            
         attr_accessor :code

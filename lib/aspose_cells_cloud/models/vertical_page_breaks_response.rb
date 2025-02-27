@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class VerticalPageBreaksResponse
-        #            
+        #This class has a property named VerticalPageBreaks of type VerticalPageBreaks that can be both read from and written to.            
         attr_accessor :vertical_page_breaks
         #            
         attr_accessor :code

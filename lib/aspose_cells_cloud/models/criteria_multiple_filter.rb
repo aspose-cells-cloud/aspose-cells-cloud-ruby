@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CriteriaMultipleFilter
-        #            
+        #A property named "Criteria" of type string, allowing both getting and setting its value.            
         attr_accessor :criteria
 
     # Attribute mapping from ruby-style variable name to JSON key.

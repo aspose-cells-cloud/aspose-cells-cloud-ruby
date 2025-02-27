@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ImportPictureOption
-        #            
+        #A property "UpperLeftRow" of type integer with a public getter and setter is defined.            
         attr_accessor :upper_left_row
         #            
         attr_accessor :upper_left_column

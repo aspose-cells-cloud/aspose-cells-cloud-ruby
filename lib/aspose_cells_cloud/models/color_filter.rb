@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class ColorFilter
         #Whether filter by the cell's fill color.                        
         attr_accessor :filter_by_fill_color
-        #            
+        #A property "Pattern" of type string with a getter and setter is defined.            
         attr_accessor :pattern
         #            
         attr_accessor :color

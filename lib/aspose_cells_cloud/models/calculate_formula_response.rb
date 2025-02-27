@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CalculateFormulaResponse
-        #            
+        #A public property "Result" that can be accessed and modified with a string data type.            
         attr_accessor :result
         #            
         attr_accessor :code

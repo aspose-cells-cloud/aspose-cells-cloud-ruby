@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RadioButtonResponse
-        #            
+        #This class has a public property named "Shape" of type RadioButton with both getter and setter.            
         attr_accessor :shape
         #            
         attr_accessor :code

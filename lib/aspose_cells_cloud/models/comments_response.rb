@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CommentsResponse
-        #            
+        #Property Summary: "The Comments property represents an XML element named 'comments' within the class."            
         attr_accessor :comments
         #            
         attr_accessor :code

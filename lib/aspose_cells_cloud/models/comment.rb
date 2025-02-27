@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Comment
-        #            
+        #Property: CellName attribute with XmlElement tag in the class.            
         attr_accessor :cell_name
         #Gets and sets Name of the original comment author            
         attr_accessor :author

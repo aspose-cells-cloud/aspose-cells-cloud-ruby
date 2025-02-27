@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SparklineGroupsResponse
-        #            
+        #This class has a property named "SparklineGroups" of type "SparklineGroups" for managing sparkline groups.            
         attr_accessor :sparkline_groups
         #            
         attr_accessor :code

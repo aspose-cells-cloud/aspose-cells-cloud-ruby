@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class LegendEntriesResponse
-        #            
+        #Property Summary: The class includes a property for managing legend entries.            
         attr_accessor :legend_entries
         #            
         attr_accessor :code

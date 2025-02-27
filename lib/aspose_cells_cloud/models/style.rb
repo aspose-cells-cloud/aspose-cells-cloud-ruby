@@ -71,7 +71,7 @@ module AsposeCellsCloud
         attr_accessor :vertical_alignment
         #Gets or sets the horizontal alignment type of the text in a cell.             
         attr_accessor :horizontal_alignment
-        #            
+        #A public property named `BorderCollection` that is a list of `Border` objects.            
         attr_accessor :border_collection
         #Gets and sets the background theme color.             
         attr_accessor :background_theme_color

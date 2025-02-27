@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class DisplayUnitLabelResponse
-        #            
+        #This property allows access to the display unit label for the class.            
         attr_accessor :display_unit_label
         #            
         attr_accessor :code

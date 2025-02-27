@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RangeResponse
-        #            
+        #This class has a property named "Range" of type Range with both getter and setter methods.            
         attr_accessor :range
         #            
         attr_accessor :code

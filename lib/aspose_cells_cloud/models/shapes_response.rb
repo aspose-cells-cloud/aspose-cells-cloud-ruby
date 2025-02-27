@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ShapesResponse
-        #            
+        #The class has a property called "Shapes" with XML serialization attribute "XmlElement" for specifying the element name in the XML representation.            
         attr_accessor :shapes
         #            
         attr_accessor :code

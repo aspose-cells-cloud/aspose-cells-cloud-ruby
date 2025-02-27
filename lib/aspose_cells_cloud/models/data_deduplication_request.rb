@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class DataDeduplicationRequest
         #Spreadsheet files that require data fulling.             
         attr_accessor :file
-        #            
+        #This class has a property named "DeduplicationRegion" of type "DeduplicationRegion" with a default value of a new instance of the "DeduplicationRegion" class.            
         attr_accessor :deduplication_region
         #finish to data cleansing, outfile`s file format.            
         attr_accessor :out_file_format

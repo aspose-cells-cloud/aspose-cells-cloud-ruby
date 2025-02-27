@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Ranges
-        #            
+        #Property Summary: Contains a list of ranges specified by the XmlElement "Range".            
         attr_accessor :range_list
 
     # Attribute mapping from ruby-style variable name to JSON key.

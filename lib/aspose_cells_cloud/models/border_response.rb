@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class BorderResponse
-        #            
+        #This class has a public property named Border of type Border that can be both read from and written to.            
         attr_accessor :border
         #            
         attr_accessor :code

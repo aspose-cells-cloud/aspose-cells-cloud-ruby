@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class AutoFilterResponse
-        #            
+        #A property named "AutoFilter" with a type of "AutoFilter" that can be read from and written to.            
         attr_accessor :auto_filter
         #            
         attr_accessor :code

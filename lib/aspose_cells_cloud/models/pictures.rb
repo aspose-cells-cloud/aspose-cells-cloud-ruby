@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Pictures
-        #            
+        #Property Summary: Contains a list of elements with the XML element name "picture."            
         attr_accessor :picture_list
         #            
         attr_accessor :link

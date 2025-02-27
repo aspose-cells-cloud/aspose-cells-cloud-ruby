@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsDrawingResponse
-        #            
+        #This class has a public property named Shape of type CellsDrawing.            
         attr_accessor :shape
         #            
         attr_accessor :code

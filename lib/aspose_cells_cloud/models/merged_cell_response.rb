@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class MergedCellResponse
-        #            
+        #A property named "MergedCell" of type "MergedCell" which allows getting and setting its value.            
         attr_accessor :merged_cell
         #            
         attr_accessor :code

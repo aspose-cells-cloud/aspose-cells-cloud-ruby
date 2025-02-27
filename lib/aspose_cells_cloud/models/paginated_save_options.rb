@@ -59,7 +59,7 @@ module AsposeCellsCloud
         attr_accessor :text_cross_type
         #Gets or sets default edit language.            
         attr_accessor :default_edit_language
-        #            
+        #Setting for rendering Emf metafile.            
         attr_accessor :emf_render_setting
         #            
         attr_accessor :merge_areas

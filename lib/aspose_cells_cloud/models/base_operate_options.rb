@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class BaseOperateOptions
-        #            
+        #The property "Name" is a virtual string type with a public access modifier and a default value of an empty string.            
         attr_accessor :name
 
     # Attribute mapping from ruby-style variable name to JSON key.
