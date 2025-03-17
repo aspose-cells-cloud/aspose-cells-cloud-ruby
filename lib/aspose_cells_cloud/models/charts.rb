@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Charts
-        #            
+        #A property named ChartList of type List LinkElement  that is publicly accessible with both read and write capabilities.            
         attr_accessor :chart_list
         #            
         attr_accessor :link

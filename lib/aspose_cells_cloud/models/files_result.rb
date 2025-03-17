@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class FilesResult
-        #            
+        #A property named **Files** of type **IList FileInfo ** containing a collection of file information objects.            
         attr_accessor :files
 
     # Attribute mapping from ruby-style variable name to JSON key.

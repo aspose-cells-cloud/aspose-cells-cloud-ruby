@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class PageSectionsResponse
-        #            
+        #A property named PageSections of type List PageSection  to store a collection of PageSection objects.            
         attr_accessor :page_sections
         #            
         attr_accessor :code

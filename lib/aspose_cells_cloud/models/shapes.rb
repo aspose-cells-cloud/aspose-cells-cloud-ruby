@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class Shapes
-        #            
+        #A public property named "ShapeList" of type List LinkElement for storing a collection of link elements.            
         attr_accessor :shape_list
         #            
         attr_accessor :link

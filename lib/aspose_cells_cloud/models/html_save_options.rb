@@ -125,6 +125,16 @@ module AsposeCellsCloud
         attr_accessor :sort_names
         #            
         attr_accessor :validate_merged_areas
+        #            
+        attr_accessor :merge_areas
+        #            
+        attr_accessor :sort_external_names
+        #            
+        attr_accessor :check_excel_restriction
+        #            
+        attr_accessor :update_smart_art
+        #            
+        attr_accessor :encrypt_document_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -175,7 +185,12 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'EnableHTTPCompression',
         :'refresh_chart_cache' => :'RefreshChartCache',
         :'sort_names' => :'SortNames',
-        :'validate_merged_areas' => :'ValidateMergedAreas'
+        :'validate_merged_areas' => :'ValidateMergedAreas',
+        :'merge_areas' => :'MergeAreas',
+        :'sort_external_names' => :'SortExternalNames',
+        :'check_excel_restriction' => :'CheckExcelRestriction',
+        :'update_smart_art' => :'UpdateSmartArt',
+        :'encrypt_document_properties' => :'EncryptDocumentProperties'
       }
     end
 
@@ -228,7 +243,12 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'BOOLEAN',
         :'refresh_chart_cache' => :'BOOLEAN',
         :'sort_names' => :'BOOLEAN',
-        :'validate_merged_areas' => :'BOOLEAN'
+        :'validate_merged_areas' => :'BOOLEAN',
+        :'merge_areas' => :'BOOLEAN',
+        :'sort_external_names' => :'BOOLEAN',
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'update_smart_art' => :'BOOLEAN',
+        :'encrypt_document_properties' => :'BOOLEAN'
       }
     end
 
@@ -381,6 +401,21 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ValidateMergedAreas')
           self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
+      if attributes.has_key?(:'MergeAreas')
+          self.merge_areas = attributes[:'MergeAreas']
+      end
+      if attributes.has_key?(:'SortExternalNames')
+          self.sort_external_names = attributes[:'SortExternalNames']
+      end
+      if attributes.has_key?(:'CheckExcelRestriction')
+          self.check_excel_restriction = attributes[:'CheckExcelRestriction']
+      end
+      if attributes.has_key?(:'UpdateSmartArt')
+          self.update_smart_art = attributes[:'UpdateSmartArt']
+      end
+      if attributes.has_key?(:'EncryptDocumentProperties')
+          self.encrypt_document_properties = attributes[:'EncryptDocumentProperties']
+      end
 
     end
 
@@ -529,6 +564,21 @@ module AsposeCellsCloud
       if @validate_merged_areas.nil?
           invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
       end
+      if @merge_areas.nil?
+          invalid_properties.push("invalid value for 'merge_areas', merge_areas cannot be nil.")
+      end
+      if @sort_external_names.nil?
+          invalid_properties.push("invalid value for 'sort_external_names', sort_external_names cannot be nil.")
+      end
+      if @check_excel_restriction.nil?
+          invalid_properties.push("invalid value for 'check_excel_restriction', check_excel_restriction cannot be nil.")
+      end
+      if @update_smart_art.nil?
+          invalid_properties.push("invalid value for 'update_smart_art', update_smart_art cannot be nil.")
+      end
+      if @encrypt_document_properties.nil?
+          invalid_properties.push("invalid value for 'encrypt_document_properties', encrypt_document_properties cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -583,6 +633,11 @@ module AsposeCellsCloud
       return false if @refresh_chart_cache.nil?
       return false if @sort_names.nil?
       return false if @validate_merged_areas.nil?
+      return false if @merge_areas.nil?
+      return false if @sort_external_names.nil?
+      return false if @check_excel_restriction.nil?
+      return false if @update_smart_art.nil?
+      return false if @encrypt_document_properties.nil?
       return true
     end
 
@@ -637,7 +692,12 @@ module AsposeCellsCloud
           enable_http_compression == o.enable_http_compression &&
           refresh_chart_cache == o.refresh_chart_cache &&
           sort_names == o.sort_names &&
-          validate_merged_areas == o.validate_merged_areas 
+          validate_merged_areas == o.validate_merged_areas &&
+          merge_areas == o.merge_areas &&
+          sort_external_names == o.sort_external_names &&
+          check_excel_restriction == o.check_excel_restriction &&
+          update_smart_art == o.update_smart_art &&
+          encrypt_document_properties == o.encrypt_document_properties 
           std_dev == o.std_dev
     end
 
@@ -650,7 +710,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ export_page_headers , export_page_footers , export_row_column_headings , show_all_sheets , image_options , save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , cell_name_attribute , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ export_page_headers , export_page_footers , export_row_column_headings , show_all_sheets , image_options , save_as_single_file , export_hidden_worksheet , export_grid_lines , presentation_preference , cell_css_prefix , table_css_id , is_full_path_link , export_worksheet_css_separately , export_similar_border_style , merge_empty_td_forcely , export_cell_coordinate , export_extra_headings , export_headings , export_formula , add_tooltip_text , export_bogus_row_data , exclude_unused_styles , export_document_properties , export_worksheet_properties , export_workbook_properties , export_frame_scripts_and_properties , attached_files_directory , attached_files_url_prefix , encoding , export_active_worksheet_only , export_chart_image_format , export_images_as_base64 , hidden_col_display_type , hidden_row_display_type , html_cross_string_type , is_exp_image_to_temp_dir , page_title , parse_html_tag_in_cell , cell_name_attribute , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas , merge_areas , sort_external_names , check_excel_restriction , update_smart_art , encrypt_document_properties ].hash
     end
 
     # Builds the object from hash

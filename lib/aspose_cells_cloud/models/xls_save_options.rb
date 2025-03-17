@@ -32,6 +32,10 @@ module AsposeCellsCloud
 
   class XlsSaveOptions
         #            
+        attr_accessor :match_color
+        #            
+        attr_accessor :wps_compatibility
+        #            
         attr_accessor :save_format
         #            
         attr_accessor :cached_file_folder
@@ -47,10 +51,22 @@ module AsposeCellsCloud
         attr_accessor :sort_names
         #            
         attr_accessor :validate_merged_areas
+        #            
+        attr_accessor :merge_areas
+        #            
+        attr_accessor :sort_external_names
+        #            
+        attr_accessor :check_excel_restriction
+        #            
+        attr_accessor :update_smart_art
+        #            
+        attr_accessor :encrypt_document_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'match_color' => :'MatchColor',
+        :'wps_compatibility' => :'WpsCompatibility',
         :'save_format' => :'SaveFormat',
         :'cached_file_folder' => :'CachedFileFolder',
         :'clear_data' => :'ClearData',
@@ -58,13 +74,20 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'EnableHTTPCompression',
         :'refresh_chart_cache' => :'RefreshChartCache',
         :'sort_names' => :'SortNames',
-        :'validate_merged_areas' => :'ValidateMergedAreas'
+        :'validate_merged_areas' => :'ValidateMergedAreas',
+        :'merge_areas' => :'MergeAreas',
+        :'sort_external_names' => :'SortExternalNames',
+        :'check_excel_restriction' => :'CheckExcelRestriction',
+        :'update_smart_art' => :'UpdateSmartArt',
+        :'encrypt_document_properties' => :'EncryptDocumentProperties'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'match_color' => :'BOOLEAN',
+        :'wps_compatibility' => :'BOOLEAN',
         :'save_format' => :'String',
         :'cached_file_folder' => :'String',
         :'clear_data' => :'BOOLEAN',
@@ -72,7 +95,12 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'BOOLEAN',
         :'refresh_chart_cache' => :'BOOLEAN',
         :'sort_names' => :'BOOLEAN',
-        :'validate_merged_areas' => :'BOOLEAN'
+        :'validate_merged_areas' => :'BOOLEAN',
+        :'merge_areas' => :'BOOLEAN',
+        :'sort_external_names' => :'BOOLEAN',
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'update_smart_art' => :'BOOLEAN',
+        :'encrypt_document_properties' => :'BOOLEAN'
       }
     end
 
@@ -84,6 +112,12 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'MatchColor')
+          self.match_color = attributes[:'MatchColor']
+      end
+      if attributes.has_key?(:'WpsCompatibility')
+          self.wps_compatibility = attributes[:'WpsCompatibility']
+      end
       if attributes.has_key?(:'SaveFormat')
           self.save_format = attributes[:'SaveFormat']
       end
@@ -108,6 +142,21 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ValidateMergedAreas')
           self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
+      if attributes.has_key?(:'MergeAreas')
+          self.merge_areas = attributes[:'MergeAreas']
+      end
+      if attributes.has_key?(:'SortExternalNames')
+          self.sort_external_names = attributes[:'SortExternalNames']
+      end
+      if attributes.has_key?(:'CheckExcelRestriction')
+          self.check_excel_restriction = attributes[:'CheckExcelRestriction']
+      end
+      if attributes.has_key?(:'UpdateSmartArt')
+          self.update_smart_art = attributes[:'UpdateSmartArt']
+      end
+      if attributes.has_key?(:'EncryptDocumentProperties')
+          self.encrypt_document_properties = attributes[:'EncryptDocumentProperties']
+      end
 
     end
 
@@ -115,6 +164,12 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @match_color.nil?
+          invalid_properties.push("invalid value for 'match_color', match_color cannot be nil.")
+      end
+      if @wps_compatibility.nil?
+          invalid_properties.push("invalid value for 'wps_compatibility', wps_compatibility cannot be nil.")
+      end
       if @save_format.nil?
           invalid_properties.push("invalid value for 'save_format', save_format cannot be nil.")
       end
@@ -139,6 +194,21 @@ module AsposeCellsCloud
       if @validate_merged_areas.nil?
           invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
       end
+      if @merge_areas.nil?
+          invalid_properties.push("invalid value for 'merge_areas', merge_areas cannot be nil.")
+      end
+      if @sort_external_names.nil?
+          invalid_properties.push("invalid value for 'sort_external_names', sort_external_names cannot be nil.")
+      end
+      if @check_excel_restriction.nil?
+          invalid_properties.push("invalid value for 'check_excel_restriction', check_excel_restriction cannot be nil.")
+      end
+      if @update_smart_art.nil?
+          invalid_properties.push("invalid value for 'update_smart_art', update_smart_art cannot be nil.")
+      end
+      if @encrypt_document_properties.nil?
+          invalid_properties.push("invalid value for 'encrypt_document_properties', encrypt_document_properties cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -146,6 +216,8 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @match_color.nil?
+      return false if @wps_compatibility.nil?
       return false if @save_format.nil?
       return false if @cached_file_folder.nil?
       return false if @clear_data.nil?
@@ -154,6 +226,11 @@ module AsposeCellsCloud
       return false if @refresh_chart_cache.nil?
       return false if @sort_names.nil?
       return false if @validate_merged_areas.nil?
+      return false if @merge_areas.nil?
+      return false if @sort_external_names.nil?
+      return false if @check_excel_restriction.nil?
+      return false if @update_smart_art.nil?
+      return false if @encrypt_document_properties.nil?
       return true
     end
 
@@ -162,6 +239,8 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          match_color == o.match_color &&
+          wps_compatibility == o.wps_compatibility &&
           save_format == o.save_format &&
           cached_file_folder == o.cached_file_folder &&
           clear_data == o.clear_data &&
@@ -169,7 +248,12 @@ module AsposeCellsCloud
           enable_http_compression == o.enable_http_compression &&
           refresh_chart_cache == o.refresh_chart_cache &&
           sort_names == o.sort_names &&
-          validate_merged_areas == o.validate_merged_areas 
+          validate_merged_areas == o.validate_merged_areas &&
+          merge_areas == o.merge_areas &&
+          sort_external_names == o.sort_external_names &&
+          check_excel_restriction == o.check_excel_restriction &&
+          update_smart_art == o.update_smart_art &&
+          encrypt_document_properties == o.encrypt_document_properties 
           std_dev == o.std_dev
     end
 
@@ -182,7 +266,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ match_color , wps_compatibility , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas , merge_areas , sort_external_names , check_excel_restriction , update_smart_art , encrypt_document_properties ].hash
     end
 
     # Builds the object from hash

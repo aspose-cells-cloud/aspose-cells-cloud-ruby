@@ -128,7 +128,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsCloudResponse')
+        :return_type => 'File')
       if api_client.config.debugging
         api_client.config.logger.debug "API called: Specification.Name>Api.post_worksheet_cells_range_to_image\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

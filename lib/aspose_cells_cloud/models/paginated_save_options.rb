@@ -83,6 +83,10 @@ module AsposeCellsCloud
         attr_accessor :sort_names
         #            
         attr_accessor :validate_merged_areas
+        #            
+        attr_accessor :check_excel_restriction
+        #            
+        attr_accessor :encrypt_document_properties
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -112,7 +116,9 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'EnableHTTPCompression',
         :'refresh_chart_cache' => :'RefreshChartCache',
         :'sort_names' => :'SortNames',
-        :'validate_merged_areas' => :'ValidateMergedAreas'
+        :'validate_merged_areas' => :'ValidateMergedAreas',
+        :'check_excel_restriction' => :'CheckExcelRestriction',
+        :'encrypt_document_properties' => :'EncryptDocumentProperties'
       }
     end
 
@@ -144,7 +150,9 @@ module AsposeCellsCloud
         :'enable_http_compression' => :'BOOLEAN',
         :'refresh_chart_cache' => :'BOOLEAN',
         :'sort_names' => :'BOOLEAN',
-        :'validate_merged_areas' => :'BOOLEAN'
+        :'validate_merged_areas' => :'BOOLEAN',
+        :'check_excel_restriction' => :'BOOLEAN',
+        :'encrypt_document_properties' => :'BOOLEAN'
       }
     end
 
@@ -234,6 +242,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'ValidateMergedAreas')
           self.validate_merged_areas = attributes[:'ValidateMergedAreas']
       end
+      if attributes.has_key?(:'CheckExcelRestriction')
+          self.check_excel_restriction = attributes[:'CheckExcelRestriction']
+      end
+      if attributes.has_key?(:'EncryptDocumentProperties')
+          self.encrypt_document_properties = attributes[:'EncryptDocumentProperties']
+      end
 
     end
 
@@ -319,6 +333,12 @@ module AsposeCellsCloud
       if @validate_merged_areas.nil?
           invalid_properties.push("invalid value for 'validate_merged_areas', validate_merged_areas cannot be nil.")
       end
+      if @check_excel_restriction.nil?
+          invalid_properties.push("invalid value for 'check_excel_restriction', check_excel_restriction cannot be nil.")
+      end
+      if @encrypt_document_properties.nil?
+          invalid_properties.push("invalid value for 'encrypt_document_properties', encrypt_document_properties cannot be nil.")
+      end
 
       return invalid_properties
     end
@@ -352,6 +372,8 @@ module AsposeCellsCloud
       return false if @refresh_chart_cache.nil?
       return false if @sort_names.nil?
       return false if @validate_merged_areas.nil?
+      return false if @check_excel_restriction.nil?
+      return false if @encrypt_document_properties.nil?
       return true
     end
 
@@ -385,7 +407,9 @@ module AsposeCellsCloud
           enable_http_compression == o.enable_http_compression &&
           refresh_chart_cache == o.refresh_chart_cache &&
           sort_names == o.sort_names &&
-          validate_merged_areas == o.validate_merged_areas 
+          validate_merged_areas == o.validate_merged_areas &&
+          check_excel_restriction == o.check_excel_restriction &&
+          encrypt_document_properties == o.encrypt_document_properties 
           std_dev == o.std_dev
     end
 
@@ -398,7 +422,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ default_font , check_workbook_default_font , check_font_compatibility , is_font_substitution_char_granularity , one_page_per_sheet , all_columns_in_one_page_per_sheet , ignore_error , output_blank_page_when_nothing_to_print , page_index , page_count , printing_page_type , gridline_type , text_cross_type , default_edit_language , emf_render_setting , merge_areas , sort_external_names , update_smart_art , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas ].hash
+      [ default_font , check_workbook_default_font , check_font_compatibility , is_font_substitution_char_granularity , one_page_per_sheet , all_columns_in_one_page_per_sheet , ignore_error , output_blank_page_when_nothing_to_print , page_index , page_count , printing_page_type , gridline_type , text_cross_type , default_edit_language , emf_render_setting , merge_areas , sort_external_names , update_smart_art , save_format , cached_file_folder , clear_data , create_directory , enable_http_compression , refresh_chart_cache , sort_names , validate_merged_areas , check_excel_restriction , encrypt_document_properties ].hash
     end
 
     # Builds the object from hash

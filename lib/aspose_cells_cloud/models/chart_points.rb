@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class ChartPoints
-        #            
+        #This class has a property named ChartPointList of type List ChartPoint  with an XmlElement attribute "ChartPoint".            
         attr_accessor :chart_point_list
         #            
         attr_accessor :link

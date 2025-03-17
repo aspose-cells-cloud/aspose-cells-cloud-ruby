@@ -33,7 +33,7 @@ module AsposeCellsCloud
   class Workbook
         #Gets and sets the current file name.             
         attr_accessor :file_name
-        #            
+        #A property of type List Link  named Links is specified to be serialized as an XmlElement with the tag "link".            
         attr_accessor :links
         #Gets the  collection in the spreadsheet.             
         attr_accessor :worksheets

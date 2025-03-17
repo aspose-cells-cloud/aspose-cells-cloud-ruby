@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveFilesToCloudResult
-        #            
+        #This class has a property named SavedFiles of type List Link.            
         attr_accessor :saved_files
         #            
         attr_accessor :description
