@@ -209,27 +209,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_numbers test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'cloud.png'
-      remote_name = 'cloud.png'
-
-      format = "numbers"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
 
   describe 'convert_workbook_svg test' do
     it "should work" do

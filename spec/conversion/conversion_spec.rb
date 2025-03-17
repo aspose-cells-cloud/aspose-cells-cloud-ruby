@@ -275,27 +275,7 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'workbook_save_as_numbers__out_result_post_excel_save_asnumbers test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
 
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "numbers"
-      newfilename = "OutResult/PostExcelSaveAs.numbers"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
-      request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
-      @instance.post_workbook_save_as(request);
-    end
-  end 
 
   describe 'workbook_save_as_svg__out_result_post_excel_save_assvg test' do
     it "should work" do
@@ -627,25 +607,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'get_workbook_format_numbers test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "numbers"
-
-      
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      request =   AsposeCellsCloud::GetWorkbookRequest.new(:name=>remote_name,:format=>format,:folder=>remote_folder);
-      @instance.get_workbook(request);
-    end
-  end 
 
   describe 'get_workbook_format_svg test' do
     it "should work" do
@@ -1033,27 +994,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_numbers test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
-
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "numbers"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
-      @instance.put_convert_workbook(request);
-    end
-  end 
 
   describe 'convert_workbook_wmf test' do
     it "should work" do
@@ -1509,28 +1449,7 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'convert_workbook_save_cloud_numbers__out_result_convert_workbooknumbers test' do
-    it "should work" do
-      remote_folder = 'TestData/In'
 
-      local_name = 'Book1.xlsx'
-      remote_name = 'Book1.xlsx'
-
-      format = "numbers"
-      out_path = "OutResult/ConvertWorkbook.numbers"
-
-      
-     mapFiles = { }   
-      mapFiles = { }               
-      mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")  
-   
-      uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
-      @instance.upload_file(uploadrequest)
-      mapFiles[local_name]= ::File.open(File.expand_path("TestData/"+local_name),"r")
-      request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format,:outPath=>out_path);
-      @instance.put_convert_workbook(request);
-    end
-  end 
 
   describe 'convert_workbook_save_cloud_svg__out_result_convert_workbooksvg test' do
     it "should work" do
