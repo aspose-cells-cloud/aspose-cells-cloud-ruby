@@ -251,21 +251,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'post_split_numbers test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      out_format = "numbers"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
-      @instance.post_split(request);
-    end
-  end 
 
   describe 'post_split_svg test' do
     it "should work" do
@@ -673,22 +658,6 @@ describe 'CellsApi' do
       data_source_xlsx = 'datasource.xlsx'
 
       format = "md"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostAssembleRequest.new(:File=>mapFiles,:datasource=>'ds',:outFormat=>format);
-      @instance.post_assemble(request);
-    end
-  end 
-
-  describe 'post_assemble_numbers test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "numbers"
 
       
      mapFiles = { }   
@@ -1152,22 +1121,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'post_export_numbers_workbook test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      book1_xlsx = 'Book1.xlsx'
-
-      format = "numbers"
-      object_type = "workbook"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
-      @instance.post_export(request);
-    end
-  end 
 
   describe 'post_export_wmf_workbook test' do
     it "should work" do
@@ -1617,23 +1570,6 @@ describe 'CellsApi' do
       book1_xlsx = 'Book1.xlsx'
 
       format = "md"
-      object_type = "worksheet"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
-      @instance.post_export(request);
-    end
-  end 
-
-  describe 'post_export_numbers_worksheet test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      book1_xlsx = 'Book1.xlsx'
-
-      format = "numbers"
       object_type = "worksheet"
 
       
@@ -2308,23 +2244,6 @@ describe 'CellsApi' do
     end
   end 
 
-  describe 'post_export_numbers_listobject test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      book1_xlsx = 'Book1.xlsx'
-
-      format = "numbers"
-      object_type = "listobject"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
-      @instance.post_export(request);
-    end
-  end 
-
   describe 'post_export_wmf_listobject test' do
     it "should work" do
       assembly_test_xlsx = 'assemblytest.xlsx'
@@ -2890,23 +2809,6 @@ describe 'CellsApi' do
       data_source_xlsx = 'datasource.xlsx'
 
       format = "md"
-      merge_to_one_sheet = true
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
-      request =   AsposeCellsCloud::PostMergeRequest.new(:File=>mapFiles,:outFormat=>format,:mergeToOneSheet=>merge_to_one_sheet);
-      @instance.post_merge(request);
-    end
-  end 
-
-  describe 'post_merge_numbers_true test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
-
-      format = "numbers"
       merge_to_one_sheet = true
 
       
