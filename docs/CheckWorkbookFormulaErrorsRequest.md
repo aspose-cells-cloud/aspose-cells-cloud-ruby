@@ -1,15 +1,14 @@
-# AsposeCellsCloud::Request::PostConvertWorksheetToImage 
+# AsposeCellsCloud::Request::CheckWorkbookFormulaErrors 
 
 ## Load the model package
 ```perl
-use AsposeCellsCloud::Request::PostConvertWorksheetToImage;
+use AsposeCellsCloud::Request::CheckWorkbookFormulaErrors;
 ```
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**convert_worksheet_options** | **ConvertWorksheetOptions** |  |
-**fonts_location** | **string** | Use Custom fonts. |  
+**formula_error_options** | **CheckFormulaErrorOptions** |  |  
 
 [[Back to Model list]](../README.md#documentation-for-requests) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

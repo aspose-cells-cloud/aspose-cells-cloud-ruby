@@ -32,6 +32,7 @@ module AsposeCellsCloud
   class PostConvertWorkbookRequest
 
     attr_accessor :convert_workbook_options  
+    attr_accessor :fonts_location  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -42,19 +43,24 @@ module AsposeCellsCloud
       if attributes.has_key?(:'convertWorkbookOptions')
           self.convert_workbook_options = attributes[:'convertWorkbookOptions']
       end
+      if attributes.has_key?(:'FontsLocation')
+          self.fonts_location = attributes[:'FontsLocation']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'convert_workbook_options' => :'convertWorkbookOptions'
+        :'convert_workbook_options' => :'convertWorkbookOptions',
+        :'fonts_location' => :'FontsLocation'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'convert_workbook_options' => :'ConvertWorkbookOptions'
+        :'convert_workbook_options' => :'ConvertWorkbookOptions',
+        :'fonts_location' => :'String'
       }
     end
 
@@ -72,6 +78,8 @@ module AsposeCellsCloud
       local_var_path = "/cells/convertWorkbook"
       # query parameters
       query_params = {}
+      query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
+
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)

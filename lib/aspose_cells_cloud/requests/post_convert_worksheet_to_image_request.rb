@@ -32,6 +32,7 @@ module AsposeCellsCloud
   class PostConvertWorksheetToImageRequest
 
     attr_accessor :convert_worksheet_options  
+    attr_accessor :fonts_location  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -42,19 +43,24 @@ module AsposeCellsCloud
       if attributes.has_key?(:'convertWorksheetOptions')
           self.convert_worksheet_options = attributes[:'convertWorksheetOptions']
       end
+      if attributes.has_key?(:'FontsLocation')
+          self.fonts_location = attributes[:'FontsLocation']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'convert_worksheet_options' => :'convertWorksheetOptions'
+        :'convert_worksheet_options' => :'convertWorksheetOptions',
+        :'fonts_location' => :'FontsLocation'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'convert_worksheet_options' => :'ConvertWorksheetOptions'
+        :'convert_worksheet_options' => :'ConvertWorksheetOptions',
+        :'fonts_location' => :'String'
       }
     end
 
@@ -72,6 +78,8 @@ module AsposeCellsCloud
       local_var_path = "/cells/convertWorksheetToImage"
       # query parameters
       query_params = {}
+      query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
+
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)

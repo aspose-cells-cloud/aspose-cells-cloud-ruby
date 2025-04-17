@@ -27,7 +27,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -49,7 +49,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -71,7 +71,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -93,7 +93,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -115,7 +115,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -137,7 +137,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -159,7 +159,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -181,7 +181,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -203,7 +203,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -225,7 +225,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -247,7 +247,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -269,13 +269,11 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
   end 
-
-
 
   describe 'workbook_save_as_svg__out_result_post_excel_save_assvg test' do
     it "should work" do
@@ -293,7 +291,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -315,7 +313,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -337,7 +335,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -359,7 +357,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -381,7 +379,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+      saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
       request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
       @instance.post_workbook_save_as(request);
     end
@@ -606,7 +604,6 @@ describe 'CellsApi' do
       @instance.get_workbook(request);
     end
   end 
-
 
   describe 'get_workbook_format_svg test' do
     it "should work" do
@@ -992,8 +989,7 @@ describe 'CellsApi' do
       request =   AsposeCellsCloud::PutConvertWorkbookRequest.new(:File=>mapFiles,:format=>format);
       @instance.put_convert_workbook(request);
     end
-  end 
-
+  end   
 
   describe 'convert_workbook_wmf test' do
     it "should work" do
@@ -1448,7 +1444,6 @@ describe 'CellsApi' do
       @instance.put_convert_workbook(request);
     end
   end 
-
 
 
   describe 'convert_workbook_save_cloud_svg__out_result_convert_workbooksvg test' do

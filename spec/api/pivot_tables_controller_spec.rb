@@ -154,10 +154,7 @@ describe 'CellsApi' do
    
       uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
       @instance.upload_file(uploadrequest)
-      top10Filter = AsposeCellsCloud::Top10Filter.new(:ItemCount=>1 ,:IsPercent=>true ,:FieldIndex=>0 );
-      filterColumn = AsposeCellsCloud::FilterColumn.new(:FilterType=>'Top10Filter', :Top10Filter=>top10Filter );
-      autoFilter = AsposeCellsCloud::AutoFilter.new(:FilterColumns=>[filterColumn] );
-      filter = AsposeCellsCloud::PivotFilter.new(:FieldIndex=>0 ,:FilterType=>'Count' , :AutoFilter=>autoFilter );
+      filter = AsposeCellsCloud::PivotFilter.new(:FieldIndex=>0 ,:FilterType=>'Count' );
       request =   AsposeCellsCloud::PutWorksheetPivotTableFilterRequest.new(:name=>remote_name,:sheetName=>'Sheet4',:pivotTableIndex=>0,:filter=>filter,:needReCalculate=>true,:folder=>remote_folder,:storageName=>'');
       @instance.put_worksheet_pivot_table_filter(request);
     end

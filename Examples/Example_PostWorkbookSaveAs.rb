@@ -18,6 +18,6 @@ mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")
  
 uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
 @instance.upload_file(uploadrequest)
-saveOptions = AsposeCellsCloud::PdfSaveOptions.new(:SaveFormat=>format );
+saveOptions = AsposeCellsCloud::SaveOptions.new(:SaveFormat=>format );
 request =   AsposeCellsCloud::PostWorkbookSaveAsRequest.new(:name=>remote_name,:newfilename=>newfilename,:saveOptions=>saveOptions,:folder=>remote_folder);
 @instance.post_workbook_save_as(request);

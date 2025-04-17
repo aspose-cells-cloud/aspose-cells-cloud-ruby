@@ -253,7 +253,6 @@ describe 'CellsApi' do
     end
   end 
 
-
   describe 'convert_workbook_svg test' do
     it "should work" do
       remote_folder = 'TestData/In'

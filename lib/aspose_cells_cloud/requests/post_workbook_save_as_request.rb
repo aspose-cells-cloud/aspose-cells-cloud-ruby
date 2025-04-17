@@ -43,6 +43,7 @@ module AsposeCellsCloud
     attr_accessor :region  
     attr_accessor :page_wide_fit_on_per_sheet  
     attr_accessor :page_tall_fit_on_per_sheet  
+    attr_accessor :fonts_location  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -86,6 +87,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageTallFitOnPerSheet')
           self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
       end
+      if attributes.has_key?(:'FontsLocation')
+          self.fonts_location = attributes[:'FontsLocation']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -102,7 +106,8 @@ module AsposeCellsCloud
         :'check_excel_restriction' => :'checkExcelRestriction',
         :'region' => :'region',
         :'page_wide_fit_on_per_sheet' => :'pageWideFitOnPerSheet',
-        :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet'
+        :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet',
+        :'fonts_location' => :'FontsLocation'
       }
     end
 
@@ -120,7 +125,8 @@ module AsposeCellsCloud
         :'check_excel_restriction' => :'BOOLEAN',
         :'region' => :'String',
         :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
-        :'page_tall_fit_on_per_sheet' => :'BOOLEAN'
+        :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
+        :'fonts_location' => :'String'
       }
     end
 
@@ -152,6 +158,7 @@ module AsposeCellsCloud
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'pageWideFitOnPerSheet'] = self.page_wide_fit_on_per_sheet if !self.page_wide_fit_on_per_sheet.nil? 
       query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
+      query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
 
       # header parameters
       header_params = {}

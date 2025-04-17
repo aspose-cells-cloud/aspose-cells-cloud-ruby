@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="PostConvertWorkbookToHtml_request.rb.cs">
+ <copyright company="Aspose" file="CheckWrokbookExternalReference_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,13 +29,9 @@
 require "uri"
 
 module AsposeCellsCloud
-  class PostConvertWorkbookToHtmlRequest
+  class CheckWrokbookExternalReferenceRequest
 
-    attr_accessor :file  
-    attr_accessor :password  
-    attr_accessor :check_excel_restriction  
-    attr_accessor :region  
-    attr_accessor :fonts_location  
+    attr_accessor :check_external_reference_options  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -43,64 +39,39 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'File')
-          self.file = attributes[:'File']
-      end
-      if attributes.has_key?(:'password')
-          self.password = attributes[:'password']
-      end
-      if attributes.has_key?(:'checkExcelRestriction')
-          self.check_excel_restriction = attributes[:'checkExcelRestriction']
-      end
-      if attributes.has_key?(:'region')
-          self.region = attributes[:'region']
-      end
-      if attributes.has_key?(:'FontsLocation')
-          self.fonts_location = attributes[:'FontsLocation']
+      if attributes.has_key?(:'checkExternalReferenceOptions')
+          self.check_external_reference_options = attributes[:'checkExternalReferenceOptions']
       end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'file' => :'File',
-        :'password' => :'password',
-        :'check_excel_restriction' => :'checkExcelRestriction',
-        :'region' => :'region',
-        :'fonts_location' => :'FontsLocation'
+        :'check_external_reference_options' => :'checkExternalReferenceOptions'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'file' => :'Hash',
-        :'password' => :'String',
-        :'check_excel_restriction' => :'BOOLEAN',
-        :'region' => :'String',
-        :'fonts_location' => :'String'
+        :'check_external_reference_options' => :'CheckExternalReferenceOptions'
       }
     end
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.post_convert_workbook_to_html ..."
+        api_client.config.logger.debug "Calling API: CellsApi.check_wrokbook_external_reference ..."
       end
       api_client.request_token_if_needed
-      # verify the required parameter 'file' is set
-      if api_client.config.client_side_validation && file.nil?
-          fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.post_convert_workbook_to_html "
+      # verify the required parameter 'check_external_reference_options' is set
+      if api_client.config.client_side_validation && check_external_reference_options.nil?
+          fail ArgumentError, "Missing the required parameter 'check_external_reference_options' when calling CellsApi.check_wrokbook_external_reference "
       end 
 
       # resource path
-      local_var_path = "/cells/convert/html"
+      local_var_path = "/cells/checkexternalreference"
       # query parameters
       query_params = {}
-      query_params[:'password'] = self.password if !self.password.nil? 
-      query_params[:'checkExcelRestriction'] = self.check_excel_restriction if !self.check_excel_restriction.nil? 
-      query_params[:'region'] = self.region if !self.region.nil? 
-      query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
-
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
@@ -111,12 +82,7 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if(!file.nil?)
-      file.each do |filename , context|
-        form_params[filename]  = context
-      end 
-      end
-      header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
+      post_body = api_client.object_to_http_body(check_external_reference_options) 
          
 
       #auth_names = []
@@ -127,9 +93,9 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'FileInfo')
+        :return_type => 'CheckedExternalReferenceResponse')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.post_convert_workbook_to_html\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.check_wrokbook_external_reference\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

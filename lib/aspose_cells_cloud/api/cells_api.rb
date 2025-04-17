@@ -952,6 +952,21 @@ module AsposeCellsCloud
 
     # Export Excel internal elements or the workbook itself to various format files.
 
+    def check_wrokbook_external_reference( check_wrokbook_external_reference_request, opts = {})
+
+       data, _status_code, _headers = check_wrokbook_external_reference_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def check_workbook_formula_errors( check_workbook_formula_errors_request, opts = {})
+
+       data, _status_code, _headers = check_workbook_formula_errors_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Export Excel internal elements or the workbook itself to various format files.
+
     def post_export( post_export_request, opts = {})
 
        data, _status_code, _headers = post_export_request.create_http_request(@api_client,opts )

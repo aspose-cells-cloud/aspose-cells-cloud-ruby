@@ -13,15 +13,13 @@ describe 'CellsApi' do
 
   describe 'post_split_csv test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "csv"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -29,15 +27,13 @@ describe 'CellsApi' do
 
   describe 'post_split_xls test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "xls"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -45,15 +41,13 @@ describe 'CellsApi' do
 
   describe 'post_split_html test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "html"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -61,15 +55,13 @@ describe 'CellsApi' do
 
   describe 'post_split_mhtml test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "mhtml"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -77,15 +69,13 @@ describe 'CellsApi' do
 
   describe 'post_split_ods test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "ods"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -93,15 +83,13 @@ describe 'CellsApi' do
 
   describe 'post_split_pdf test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "pdf"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -109,15 +97,13 @@ describe 'CellsApi' do
 
   describe 'post_split_xml test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "xml"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -125,15 +111,13 @@ describe 'CellsApi' do
 
   describe 'post_split_txt test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "txt"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -141,15 +125,13 @@ describe 'CellsApi' do
 
   describe 'post_split_tif test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "tif"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -157,15 +139,13 @@ describe 'CellsApi' do
 
   describe 'post_split_xlsb test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "xlsb"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -173,15 +153,13 @@ describe 'CellsApi' do
 
   describe 'post_split_xlsx test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "xlsx"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -189,15 +167,13 @@ describe 'CellsApi' do
 
   describe 'post_split_xps test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "xps"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -205,15 +181,13 @@ describe 'CellsApi' do
 
   describe 'post_split_png test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "png"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -221,15 +195,13 @@ describe 'CellsApi' do
 
   describe 'post_split_jpg test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "jpg"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -237,32 +209,27 @@ describe 'CellsApi' do
 
   describe 'post_split_md test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "md"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
   end 
 
-
   describe 'post_split_svg test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "svg"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -270,15 +237,13 @@ describe 'CellsApi' do
 
   describe 'post_split_docx test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "docx"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -286,15 +251,13 @@ describe 'CellsApi' do
 
   describe 'post_split_pptx test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "pptx"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -302,15 +265,13 @@ describe 'CellsApi' do
 
   describe 'post_split_json test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "json"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -318,15 +279,13 @@ describe 'CellsApi' do
 
   describe 'post_split_sql test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
+      book1_xlsx = 'Book1.xlsx'
 
       out_format = "sql"
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
+      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostSplitRequest.new(:File=>mapFiles,:outFormat=>out_format);
       @instance.post_split(request);
     end
@@ -766,7 +725,6 @@ describe 'CellsApi' do
 
   describe 'post_export_csv_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "csv"
@@ -774,7 +732,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -783,7 +740,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xls_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xls"
@@ -791,7 +747,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -800,7 +755,6 @@ describe 'CellsApi' do
 
   describe 'post_export_html_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "html"
@@ -808,7 +762,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -817,7 +770,6 @@ describe 'CellsApi' do
 
   describe 'post_export_mhtml_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "mhtml"
@@ -825,7 +777,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -834,7 +785,6 @@ describe 'CellsApi' do
 
   describe 'post_export_ods_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "ods"
@@ -842,7 +792,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -851,7 +800,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pdf_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pdf"
@@ -859,7 +807,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -868,7 +815,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xml_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xml"
@@ -876,7 +822,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -885,7 +830,6 @@ describe 'CellsApi' do
 
   describe 'post_export_txt_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "txt"
@@ -893,7 +837,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -902,7 +845,6 @@ describe 'CellsApi' do
 
   describe 'post_export_tif_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "tif"
@@ -910,7 +852,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -919,7 +860,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsb_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsb"
@@ -927,7 +867,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -936,7 +875,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsm_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsm"
@@ -944,7 +882,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -953,7 +890,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsx_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsx"
@@ -961,7 +897,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -970,7 +905,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltm_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltm"
@@ -978,7 +912,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -987,7 +920,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltx_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltx"
@@ -995,7 +927,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1004,7 +935,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xps_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xps"
@@ -1012,7 +942,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1021,7 +950,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -1029,7 +957,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1038,7 +965,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -1046,7 +972,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1055,7 +980,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -1063,7 +987,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1072,7 +995,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -1080,7 +1002,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1089,7 +1010,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -1097,7 +1017,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1106,7 +1025,6 @@ describe 'CellsApi' do
 
   describe 'post_export_md_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "md"
@@ -1114,17 +1032,15 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
     end
   end 
 
-
+  
   describe 'post_export_wmf_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "wmf"
@@ -1132,7 +1048,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1141,7 +1056,6 @@ describe 'CellsApi' do
 
   describe 'post_export_svg_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "svg"
@@ -1149,7 +1063,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1158,7 +1071,6 @@ describe 'CellsApi' do
 
   describe 'post_export_docx_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "docx"
@@ -1166,7 +1078,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1175,7 +1086,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pptx_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pptx"
@@ -1183,7 +1093,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1192,7 +1101,6 @@ describe 'CellsApi' do
 
   describe 'post_export_json_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "json"
@@ -1200,7 +1108,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1209,7 +1116,6 @@ describe 'CellsApi' do
 
   describe 'post_export_sql_workbook test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "sql"
@@ -1217,7 +1123,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1226,7 +1131,6 @@ describe 'CellsApi' do
 
   describe 'post_export_csv_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "csv"
@@ -1234,7 +1138,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1243,7 +1146,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xls_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xls"
@@ -1251,7 +1153,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1260,7 +1161,6 @@ describe 'CellsApi' do
 
   describe 'post_export_html_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "html"
@@ -1268,7 +1168,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1277,7 +1176,6 @@ describe 'CellsApi' do
 
   describe 'post_export_mhtml_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "mhtml"
@@ -1285,7 +1183,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1294,7 +1191,6 @@ describe 'CellsApi' do
 
   describe 'post_export_ods_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "ods"
@@ -1302,7 +1198,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1311,7 +1206,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pdf_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pdf"
@@ -1319,7 +1213,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1328,7 +1221,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xml_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xml"
@@ -1336,7 +1228,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1345,7 +1236,6 @@ describe 'CellsApi' do
 
   describe 'post_export_txt_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "txt"
@@ -1353,7 +1243,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1362,7 +1251,6 @@ describe 'CellsApi' do
 
   describe 'post_export_tif_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "tif"
@@ -1370,7 +1258,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1379,7 +1266,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsb_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsb"
@@ -1387,7 +1273,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1396,7 +1281,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsm_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsm"
@@ -1404,7 +1288,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1413,7 +1296,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsx_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsx"
@@ -1421,7 +1303,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1430,7 +1311,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltm_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltm"
@@ -1438,7 +1318,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1447,7 +1326,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltx_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltx"
@@ -1455,7 +1333,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1464,7 +1341,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xps_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xps"
@@ -1472,7 +1348,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1481,7 +1356,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -1489,7 +1363,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1498,7 +1371,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -1506,7 +1378,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1515,7 +1386,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -1523,7 +1393,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1532,7 +1401,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -1540,7 +1408,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1549,7 +1416,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -1557,7 +1423,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1566,7 +1431,6 @@ describe 'CellsApi' do
 
   describe 'post_export_md_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "md"
@@ -1574,16 +1438,14 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
     end
-  end 
+  end  
 
   describe 'post_export_wmf_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "wmf"
@@ -1591,7 +1453,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1600,7 +1461,6 @@ describe 'CellsApi' do
 
   describe 'post_export_svg_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "svg"
@@ -1608,7 +1468,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1617,7 +1476,6 @@ describe 'CellsApi' do
 
   describe 'post_export_docx_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "docx"
@@ -1625,7 +1483,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1634,7 +1491,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pptx_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pptx"
@@ -1642,7 +1498,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1651,7 +1506,6 @@ describe 'CellsApi' do
 
   describe 'post_export_json_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "json"
@@ -1659,7 +1513,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1668,7 +1521,6 @@ describe 'CellsApi' do
 
   describe 'post_export_sql_worksheet test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "sql"
@@ -1676,7 +1528,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1685,7 +1536,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pdf_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pdf"
@@ -1693,7 +1543,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1702,7 +1551,6 @@ describe 'CellsApi' do
 
   describe 'post_export_tif_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "tif"
@@ -1710,7 +1558,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1719,7 +1566,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -1727,7 +1573,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1736,7 +1581,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -1744,7 +1588,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1753,7 +1596,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -1761,7 +1603,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1770,7 +1611,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -1778,7 +1618,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1787,7 +1626,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_chart test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -1795,7 +1633,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1804,7 +1641,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_picture test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -1812,7 +1648,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1821,7 +1656,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_picture test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -1829,7 +1663,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1838,7 +1671,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_picture test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -1846,7 +1678,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1855,7 +1686,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_picture test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -1863,7 +1693,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1872,7 +1701,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_picture test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -1880,7 +1708,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1889,7 +1716,6 @@ describe 'CellsApi' do
 
   describe 'post_export_csv_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "csv"
@@ -1897,7 +1723,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1906,7 +1731,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xls_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xls"
@@ -1914,7 +1738,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1923,7 +1746,6 @@ describe 'CellsApi' do
 
   describe 'post_export_html_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "html"
@@ -1931,7 +1753,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1940,7 +1761,6 @@ describe 'CellsApi' do
 
   describe 'post_export_mhtml_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "mhtml"
@@ -1948,7 +1768,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1957,7 +1776,6 @@ describe 'CellsApi' do
 
   describe 'post_export_ods_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "ods"
@@ -1965,7 +1783,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1974,7 +1791,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pdf_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pdf"
@@ -1982,7 +1798,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -1991,7 +1806,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xml_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xml"
@@ -1999,7 +1813,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2008,7 +1821,6 @@ describe 'CellsApi' do
 
   describe 'post_export_txt_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "txt"
@@ -2016,7 +1828,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2025,7 +1836,6 @@ describe 'CellsApi' do
 
   describe 'post_export_tif_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "tif"
@@ -2033,7 +1843,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2042,7 +1851,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsb_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsb"
@@ -2050,7 +1858,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2059,7 +1866,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsm_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsm"
@@ -2067,7 +1873,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2076,7 +1881,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xlsx_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xlsx"
@@ -2084,7 +1888,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2093,7 +1896,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltm_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltm"
@@ -2101,7 +1903,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2110,7 +1911,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xltx_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xltx"
@@ -2118,7 +1918,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2127,7 +1926,6 @@ describe 'CellsApi' do
 
   describe 'post_export_xps_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "xps"
@@ -2135,7 +1933,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2144,7 +1941,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -2152,7 +1948,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2161,7 +1956,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -2169,7 +1963,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2178,7 +1971,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -2186,7 +1978,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2195,7 +1986,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -2203,7 +1993,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2212,7 +2001,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -2220,7 +2008,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2229,7 +2016,6 @@ describe 'CellsApi' do
 
   describe 'post_export_md_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "md"
@@ -2237,24 +2023,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
-      @instance.post_export(request);
-    end
-  end 
-
-  describe 'post_export_wmf_listobject test' do
-    it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
-      book1_xlsx = 'Book1.xlsx'
-
-      format = "wmf"
-      object_type = "listobject"
-
-      
-     mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2263,7 +2031,6 @@ describe 'CellsApi' do
 
   describe 'post_export_svg_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "svg"
@@ -2271,7 +2038,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2280,7 +2046,6 @@ describe 'CellsApi' do
 
   describe 'post_export_docx_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "docx"
@@ -2288,7 +2053,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2297,7 +2061,6 @@ describe 'CellsApi' do
 
   describe 'post_export_pptx_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "pptx"
@@ -2305,7 +2068,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2314,7 +2076,6 @@ describe 'CellsApi' do
 
   describe 'post_export_json_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "json"
@@ -2322,7 +2083,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2331,7 +2091,6 @@ describe 'CellsApi' do
 
   describe 'post_export_sql_listobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "sql"
@@ -2339,7 +2098,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2348,7 +2106,6 @@ describe 'CellsApi' do
 
   describe 'post_export_png_oleobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "png"
@@ -2356,7 +2113,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2365,7 +2121,6 @@ describe 'CellsApi' do
 
   describe 'post_export_jpg_oleobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "jpg"
@@ -2373,7 +2128,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2382,7 +2136,6 @@ describe 'CellsApi' do
 
   describe 'post_export_gif_oleobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "gif"
@@ -2390,7 +2143,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2399,7 +2151,6 @@ describe 'CellsApi' do
 
   describe 'post_export_emf_oleobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "emf"
@@ -2407,7 +2158,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2416,7 +2166,6 @@ describe 'CellsApi' do
 
   describe 'post_export_bmp_oleobject test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       book1_xlsx = 'Book1.xlsx'
 
       format = "bmp"
@@ -2424,7 +2173,6 @@ describe 'CellsApi' do
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
       request =   AsposeCellsCloud::PostExportRequest.new(:File=>mapFiles,:objectType=>object_type,:format=>format);
       @instance.post_export(request);
@@ -2433,14 +2181,12 @@ describe 'CellsApi' do
 
   describe 'post_compress_50 test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       compress_level = 50
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostCompressRequest.new(:File=>mapFiles,:CompressLevel=>compress_level);
       @instance.post_compress(request);
@@ -2449,14 +2195,12 @@ describe 'CellsApi' do
 
   describe 'post_compress_90 test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       compress_level = 90
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostCompressRequest.new(:File=>mapFiles,:CompressLevel=>compress_level);
       @instance.post_compress(request);
@@ -2934,16 +2678,26 @@ describe 'CellsApi' do
     end
   end 
 
+  describe 'post_lock test' do
+    it "should work" do
+      needlock_xlsx = 'needlock.xlsx'
+
+      
+     mapFiles = { }   
+      mapFiles[needlock_xlsx]= ::File.open(File.expand_path("TestData/"+needlock_xlsx),"r")
+      request =   AsposeCellsCloud::PostLockRequest.new(:File=>mapFiles,:password=>'123456');
+      @instance.post_lock(request);
+    end
+  end 
+
   describe 'post_protect test' do
     it "should work" do
       assembly_test_xlsx = 'assemblytest.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
       protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
       mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest,:password=>'123456');
       @instance.post_protect(request);
     end
@@ -2951,13 +2705,11 @@ describe 'CellsApi' do
 
   describe 'post_protect__protect_workbook_request test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
       protectWorkbookRequest = AsposeCellsCloud::ProtectWorkbookRequest.new(:AwaysOpenReadOnly=>true ,:EncryptWithPassword=>'123456' );
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostProtectRequest.new(:File=>mapFiles,:protectWorkbookRequest=>protectWorkbookRequest);
       @instance.post_protect(request);
@@ -2966,12 +2718,10 @@ describe 'CellsApi' do
 
   describe 'post_search test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostSearchRequest.new(:File=>mapFiles,:text=>'12');
       @instance.post_search(request);
@@ -2980,12 +2730,10 @@ describe 'CellsApi' do
 
   describe 'post_replace test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostReplaceRequest.new(:File=>mapFiles,:text=>'12',:newtext=>'newtext');
       @instance.post_replace(request);
@@ -2994,12 +2742,10 @@ describe 'CellsApi' do
 
   describe 'post_replace_only_sheetname test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostReplaceRequest.new(:File=>mapFiles,:text=>'12',:newtext=>'newtext',:sheetname=>'Sheet1');
       @instance.post_replace(request);
@@ -3008,12 +2754,10 @@ describe 'CellsApi' do
 
   describe 'post_watermark test' do
     it "should work" do
-      assembly_test_xlsx = 'assemblytest.xlsx'
       data_source_xlsx = 'datasource.xlsx'
 
       
      mapFiles = { }   
-      mapFiles[assembly_test_xlsx]= ::File.open(File.expand_path("TestData/"+assembly_test_xlsx),"r")
       mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostWatermarkRequest.new(:File=>mapFiles,:text=>'aspose.cells cloud sdk',:color=>'#773322');
       @instance.post_watermark(request);
@@ -3023,14 +2767,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_chart test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "chart"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3039,14 +2781,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_comment test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "comment"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3055,14 +2795,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_picture test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "picture"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3071,14 +2809,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_shape test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "shape"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3087,14 +2823,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_listobject test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "listobject"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3103,14 +2837,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_hyperlink test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "hyperlink"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3119,14 +2851,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_oleobject test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "oleobject"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3135,14 +2865,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_pivottable test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "pivottable"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3151,14 +2879,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects_validation test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "validation"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end
@@ -3167,14 +2893,12 @@ describe 'CellsApi' do
   describe 'post_clear_objects__background test' do
     it "should work" do
       book1_xlsx = 'Book1.xlsx'
-      data_source_xlsx = 'datasource.xlsx'
 
       objecttype = "Background"
 
       
      mapFiles = { }   
       mapFiles[book1_xlsx]= ::File.open(File.expand_path("TestData/"+book1_xlsx),"r")
-      mapFiles[data_source_xlsx]= ::File.open(File.expand_path("TestData/"+data_source_xlsx),"r")
       request =   AsposeCellsCloud::PostClearObjectsRequest.new(:File=>mapFiles,:objecttype=>objecttype);
       @instance.post_clear_objects(request);
     end

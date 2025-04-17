@@ -43,6 +43,7 @@ module AsposeCellsCloud
     attr_accessor :page_tall_fit_on_per_sheet  
     attr_accessor :sheet_name  
     attr_accessor :page_index  
+    attr_accessor :fonts_location  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -86,6 +87,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageIndex')
           self.page_index = attributes[:'pageIndex']
       end
+      if attributes.has_key?(:'FontsLocation')
+          self.fonts_location = attributes[:'FontsLocation']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -102,7 +106,8 @@ module AsposeCellsCloud
         :'page_wide_fit_on_per_sheet' => :'pageWideFitOnPerSheet',
         :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet',
         :'sheet_name' => :'sheetName',
-        :'page_index' => :'pageIndex'
+        :'page_index' => :'pageIndex',
+        :'fonts_location' => :'FontsLocation'
       }
     end
 
@@ -120,7 +125,8 @@ module AsposeCellsCloud
         :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
         :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
         :'sheet_name' => :'String',
-        :'page_index' => :'Integer'
+        :'page_index' => :'Integer',
+        :'fonts_location' => :'String'
       }
     end
 
@@ -132,6 +138,10 @@ module AsposeCellsCloud
       # verify the required parameter 'file' is set
       if api_client.config.client_side_validation && file.nil?
           fail ArgumentError, "Missing the required parameter 'file' when calling CellsApi.put_convert_workbook "
+      end 
+      # verify the required parameter 'format' is set
+      if api_client.config.client_side_validation && format.nil?
+          fail ArgumentError, "Missing the required parameter 'format' when calling CellsApi.put_convert_workbook "
       end 
 
       # resource path
@@ -149,6 +159,7 @@ module AsposeCellsCloud
       query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
       query_params[:'sheetName'] = self.sheet_name if !self.sheet_name.nil? 
       query_params[:'pageIndex'] = self.page_index if !self.page_index.nil? 
+      query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
 
       # header parameters
       header_params = {}

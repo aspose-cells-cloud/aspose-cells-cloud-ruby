@@ -15,8 +15,8 @@ mapFiles[local_name] = ::File.open(File.expand_path("TestData/"+local_name),"r")
  
 uploadrequest = AsposeCellsCloud::UploadFileRequest.new( { :UploadFiles=>mapFiles,:path=>remote_folder })
 @instance.upload_file(uploadrequest)
-rangeOperateSource = AsposeCellsCloud::Range.new(:ColumnCount=>1 ,:ColumnWidth=>10.0 ,:FirstRow=>1 ,:RowCount=>10 );
-rangeOperateTarget = AsposeCellsCloud::Range.new(:ColumnCount=>1 ,:ColumnWidth=>10.0 ,:FirstRow=>10 ,:RowCount=>10 );
+rangeOperateSource = AsposeCellsCloud::Range.new(:ColumnCount=>3 ,:FirstColumn=>8 ,:FirstRow=>3 ,:RowCount=>2 );
+rangeOperateTarget = AsposeCellsCloud::Range.new(:ColumnCount=>3 ,:FirstColumn=>8 ,:FirstRow=>13 ,:RowCount=>2 );
 rangeOperate = AsposeCellsCloud::RangeCopyRequest.new(:Operate=>'copydata' ,:Source=>rangeOperateSource ,:Target=>rangeOperateTarget );
 request =   AsposeCellsCloud::PostWorksheetCellsRangesCopyRequest.new(:name=>remote_name,:sheetName=>'Sheet1',:rangeOperate=>rangeOperate,:folder=>remote_folder,:storageName=>'');
 @instance.post_worksheet_cells_ranges_copy(request);
