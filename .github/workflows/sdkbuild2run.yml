@@ -32,6 +32,7 @@ jobs:
         gem install typhoeus
         gem install json
         gem install faraday
+        gem install faraday-multipart
         bundle install
         gem build aspose_cells_cloud.gemspec
         gem install aspose_cells_cloud-*.gem
