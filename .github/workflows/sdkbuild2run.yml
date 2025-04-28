@@ -25,10 +25,13 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true  
-
+        
     - name: Install Dependencies
       run: |
         gem install bundler  
+        gem install typhoeus
+        gem install json
+        gem install faraday
         bundle install
         gem build aspose_cells_cloud.gemspec
         gem install aspose_cells_cloud-*.gem
