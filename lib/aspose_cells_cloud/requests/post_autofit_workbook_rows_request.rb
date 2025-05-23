@@ -37,6 +37,8 @@ module AsposeCellsCloud
     attr_accessor :only_auto  
     attr_accessor :folder  
     attr_accessor :storage_name  
+    attr_accessor :first_column  
+    attr_accessor :last_column  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -62,6 +64,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+      if attributes.has_key?(:'firstColumn')
+          self.first_column = attributes[:'firstColumn']
+      end
+      if attributes.has_key?(:'lastColumn')
+          self.last_column = attributes[:'lastColumn']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -72,7 +80,9 @@ module AsposeCellsCloud
         :'end_row' => :'endRow',
         :'only_auto' => :'onlyAuto',
         :'folder' => :'folder',
-        :'storage_name' => :'storageName'
+        :'storage_name' => :'storageName',
+        :'first_column' => :'firstColumn',
+        :'last_column' => :'lastColumn'
       }
     end
 
@@ -84,7 +94,9 @@ module AsposeCellsCloud
         :'end_row' => :'Integer',
         :'only_auto' => :'BOOLEAN',
         :'folder' => :'String',
-        :'storage_name' => :'String'
+        :'storage_name' => :'String',
+        :'first_column' => :'Integer',
+        :'last_column' => :'Integer'
       }
     end
 
@@ -99,7 +111,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/autofitrows".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/autofitrows".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'startRow'] = self.start_row if !self.start_row.nil? 
@@ -107,6 +119,8 @@ module AsposeCellsCloud
       query_params[:'onlyAuto'] = self.only_auto if !self.only_auto.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
+      query_params[:'firstColumn'] = self.first_column if !self.first_column.nil? 
+      query_params[:'lastColumn'] = self.last_column if !self.last_column.nil? 
 
       # header parameters
       header_params = {}

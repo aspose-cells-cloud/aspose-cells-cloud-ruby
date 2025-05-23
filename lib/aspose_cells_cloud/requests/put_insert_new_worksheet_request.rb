@@ -117,7 +117,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/insert".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/worksheets/insert".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'sheetName'] = self.sheet_name if !self.sheet_name.nil? 

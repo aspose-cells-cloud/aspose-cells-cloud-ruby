@@ -97,7 +97,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/storage/file/move/{srcPath}".sub('{' + 'srcPath' + '}', src_path.to_s)
+      local_var_path = "v3.0/cells/storage/file/move/{srcPath}".sub('{' + 'srcPath' + '}', src_path.to_s)
       # query parameters
       query_params = {}
       query_params[:'destPath'] = self.dest_path if !self.dest_path.nil? 

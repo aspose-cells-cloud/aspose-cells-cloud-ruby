@@ -87,7 +87,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/compress"
+      local_var_path = "v3.0/cells/compress"
       # query parameters
       query_params = {}
       query_params[:'CompressLevel'] = self.compress_level if !self.compress_level.nil? 

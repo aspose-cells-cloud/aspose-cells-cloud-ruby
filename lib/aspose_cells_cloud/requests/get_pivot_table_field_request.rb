@@ -121,7 +121,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotField".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'pivotTableIndex' + '}', pivot_table_index.to_s)
+      local_var_path = "v3.0/cells/{name}/worksheets/{sheetName}/pivottables/{pivotTableIndex}/PivotField".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'pivotTableIndex' + '}', pivot_table_index.to_s)
       # query parameters
       query_params = {}
       query_params[:'pivotFieldIndex'] = self.pivot_field_index if !self.pivot_field_index.nil? 

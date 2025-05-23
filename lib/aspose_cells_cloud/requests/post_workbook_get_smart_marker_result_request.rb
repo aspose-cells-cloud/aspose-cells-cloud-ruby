@@ -99,7 +99,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/smartmarker".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/smartmarker".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'xmlFile'] = self.xml_file if !self.xml_file.nil? 

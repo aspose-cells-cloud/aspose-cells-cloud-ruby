@@ -75,7 +75,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/repair"
+      local_var_path = "v3.0/cells/repair"
       # query parameters
       query_params = {}
       query_params[:'outFormat'] = self.out_format if !self.out_format.nil? 

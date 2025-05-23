@@ -93,7 +93,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/calculateformula".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/calculateformula".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'ignoreError'] = self.ignore_error if !self.ignore_error.nil? 

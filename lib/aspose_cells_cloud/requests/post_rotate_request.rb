@@ -103,7 +103,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/rotate"
+      local_var_path = "v3.0/cells/rotate"
       # query parameters
       query_params = {}
       query_params[:'rotateType'] = self.rotate_type if !self.rotate_type.nil? 

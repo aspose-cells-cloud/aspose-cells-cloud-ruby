@@ -59,7 +59,7 @@ module AsposeCellsCloud
       api_client.request_token_if_needed
 
       # resource path
-      local_var_path = "/cells"
+      local_var_path = "v3.0/cells"
       # query parameters
       query_params = {}
       # header parameters

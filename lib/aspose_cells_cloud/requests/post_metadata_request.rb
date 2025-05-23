@@ -103,7 +103,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/metadata/update"
+      local_var_path = "v3.0/cells/metadata/update"
       # query parameters
       query_params = {}
       query_params[:'password'] = self.password if !self.password.nil? 

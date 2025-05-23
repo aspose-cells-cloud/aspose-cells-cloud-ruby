@@ -164,7 +164,7 @@ module AsposeCellsCloud
 
     def base_url
       #url = "#{scheme}://#{[host, '/v3.0'].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
-      url = "#{scheme}://#{[host, '/'+ api_version ].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
+      url = "#{scheme}://#{[host, '/' ].join('/').gsub(/\/+/, '/')}".sub(/\/+\z/, '')
       # URI.encode(url)
       # URI.encode_www_form_component(url)
       url

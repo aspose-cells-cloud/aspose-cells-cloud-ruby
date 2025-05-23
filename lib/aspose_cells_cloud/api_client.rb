@@ -440,7 +440,7 @@ module AsposeCellsCloud
       end
 
       # resource path
-      local_var_path = "/cells/connect/token"
+      local_var_path = "/v3.0/cells/connect/token"
       if @config.api_version === "v1.1"
         local_var_path ="/oauth2/token"
       end

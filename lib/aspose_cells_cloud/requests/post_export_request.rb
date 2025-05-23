@@ -105,7 +105,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/export"
+      local_var_path = "v3.0/cells/export"
       # query parameters
       query_params = {}
       query_params[:'objectType'] = self.object_type if !self.object_type.nil? 

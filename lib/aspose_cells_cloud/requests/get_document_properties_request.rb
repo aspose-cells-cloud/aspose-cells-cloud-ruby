@@ -87,7 +87,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/documentproperties".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/documentproperties".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'type'] = self.type if !self.type.nil? 

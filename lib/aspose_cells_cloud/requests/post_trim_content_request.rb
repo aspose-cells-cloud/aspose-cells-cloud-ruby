@@ -69,7 +69,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/trimcontent"
+      local_var_path = "v3.0/cells/trimcontent"
       # query parameters
       query_params = {}
       # header parameters

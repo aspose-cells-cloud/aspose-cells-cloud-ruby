@@ -109,7 +109,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/autofitrows".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+      local_var_path = "v3.0/cells/{name}/worksheets/{sheetName}/autofitrows".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
       # query parameters
       query_params = {}
       query_params[:'startRow'] = self.start_row if !self.start_row.nil? 

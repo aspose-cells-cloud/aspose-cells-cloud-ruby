@@ -109,7 +109,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/clearobjects"
+      local_var_path = "v3.0/cells/clearobjects"
       # query parameters
       query_params = {}
       query_params[:'objecttype'] = self.objecttype if !self.objecttype.nil? 

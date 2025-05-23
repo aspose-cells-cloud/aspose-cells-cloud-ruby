@@ -97,7 +97,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/search"
+      local_var_path = "v3.0/cells/search"
       # query parameters
       query_params = {}
       query_params[:'text'] = self.text if !self.text.nil? 

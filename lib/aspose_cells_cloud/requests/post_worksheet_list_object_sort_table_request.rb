@@ -111,7 +111,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/sort".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'listObjectIndex' + '}', list_object_index.to_s)
+      local_var_path = "v3.0/cells/{name}/worksheets/{sheetName}/listobjects/{listObjectIndex}/sort".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s).sub('{' + 'listObjectIndex' + '}', list_object_index.to_s)
       # query parameters
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 

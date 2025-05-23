@@ -38,6 +38,7 @@ module AsposeCellsCloud
     attr_accessor :last_column  
     attr_accessor :folder  
     attr_accessor :storage_name  
+    attr_accessor :row_count  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -66,6 +67,9 @@ module AsposeCellsCloud
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+      if attributes.has_key?(:'rowCount')
+          self.row_count = attributes[:'rowCount']
+      end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -77,7 +81,8 @@ module AsposeCellsCloud
         :'first_column' => :'firstColumn',
         :'last_column' => :'lastColumn',
         :'folder' => :'folder',
-        :'storage_name' => :'storageName'
+        :'storage_name' => :'storageName',
+        :'row_count' => :'rowCount'
       }
     end
 
@@ -90,7 +95,8 @@ module AsposeCellsCloud
         :'first_column' => :'Integer',
         :'last_column' => :'Integer',
         :'folder' => :'String',
-        :'storage_name' => :'String'
+        :'storage_name' => :'String',
+        :'row_count' => :'Integer'
       }
     end
 
@@ -111,17 +117,9 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && row_index.nil?
           fail ArgumentError, "Missing the required parameter 'row_index' when calling CellsApi.post_autofit_worksheet_row "
       end 
-      # verify the required parameter 'first_column' is set
-      if api_client.config.client_side_validation && first_column.nil?
-          fail ArgumentError, "Missing the required parameter 'first_column' when calling CellsApi.post_autofit_worksheet_row "
-      end 
-      # verify the required parameter 'last_column' is set
-      if api_client.config.client_side_validation && last_column.nil?
-          fail ArgumentError, "Missing the required parameter 'last_column' when calling CellsApi.post_autofit_worksheet_row "
-      end 
 
       # resource path
-      local_var_path = "/cells/{name}/worksheets/{sheetName}/autofitrow".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+      local_var_path = "v3.0/cells/{name}/worksheets/{sheetName}/autofitrow".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
       # query parameters
       query_params = {}
       query_params[:'rowIndex'] = self.row_index if !self.row_index.nil? 
@@ -129,6 +127,7 @@ module AsposeCellsCloud
       query_params[:'lastColumn'] = self.last_column if !self.last_column.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
+      query_params[:'rowCount'] = self.row_count if !self.row_count.nil? 
 
       # header parameters
       header_params = {}

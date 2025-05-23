@@ -81,7 +81,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/storage/folder/{path}".sub('{' + 'path' + '}', path.to_s)
+      local_var_path = "v3.0/cells/storage/folder/{path}".sub('{' + 'path' + '}', path.to_s)
       # query parameters
       query_params = {}
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 

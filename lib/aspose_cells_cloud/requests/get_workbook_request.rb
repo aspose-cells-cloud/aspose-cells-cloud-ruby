@@ -44,6 +44,8 @@ module AsposeCellsCloud
     attr_accessor :region  
     attr_accessor :page_wide_fit_on_per_sheet  
     attr_accessor :page_tall_fit_on_per_sheet  
+    attr_accessor :one_page_per_sheet  
+    attr_accessor :only_autofit_table  
     attr_accessor :fonts_location  
 
     def initialize(attributes = {})
@@ -91,6 +93,12 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageTallFitOnPerSheet')
           self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
       end
+      if attributes.has_key?(:'onePagePerSheet')
+          self.one_page_per_sheet = attributes[:'onePagePerSheet']
+      end
+      if attributes.has_key?(:'onlyAutofitTable')
+          self.only_autofit_table = attributes[:'onlyAutofitTable']
+      end
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -112,6 +120,8 @@ module AsposeCellsCloud
         :'region' => :'region',
         :'page_wide_fit_on_per_sheet' => :'pageWideFitOnPerSheet',
         :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet',
+        :'one_page_per_sheet' => :'onePagePerSheet',
+        :'only_autofit_table' => :'onlyAutofitTable',
         :'fonts_location' => :'FontsLocation'
       }
     end
@@ -132,6 +142,8 @@ module AsposeCellsCloud
         :'region' => :'String',
         :'page_wide_fit_on_per_sheet' => :'BOOLEAN',
         :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
+        :'one_page_per_sheet' => :'BOOLEAN',
+        :'only_autofit_table' => :'BOOLEAN',
         :'fonts_location' => :'String'
       }
     end
@@ -147,7 +159,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'format'] = self.format if !self.format.nil? 
@@ -162,6 +174,8 @@ module AsposeCellsCloud
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'pageWideFitOnPerSheet'] = self.page_wide_fit_on_per_sheet if !self.page_wide_fit_on_per_sheet.nil? 
       query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
+      query_params[:'onePagePerSheet'] = self.one_page_per_sheet if !self.one_page_per_sheet.nil? 
+      query_params[:'onlyAutofitTable'] = self.only_autofit_table if !self.only_autofit_table.nil? 
       query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
 
       # header parameters

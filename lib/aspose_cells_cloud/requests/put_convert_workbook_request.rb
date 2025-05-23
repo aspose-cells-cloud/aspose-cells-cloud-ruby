@@ -43,6 +43,9 @@ module AsposeCellsCloud
     attr_accessor :page_tall_fit_on_per_sheet  
     attr_accessor :sheet_name  
     attr_accessor :page_index  
+    attr_accessor :one_page_per_sheet  
+    attr_accessor :auto_rows_fit  
+    attr_accessor :auto_columns_fit  
     attr_accessor :fonts_location  
 
     def initialize(attributes = {})
@@ -87,6 +90,15 @@ module AsposeCellsCloud
       if attributes.has_key?(:'pageIndex')
           self.page_index = attributes[:'pageIndex']
       end
+      if attributes.has_key?(:'onePagePerSheet')
+          self.one_page_per_sheet = attributes[:'onePagePerSheet']
+      end
+      if attributes.has_key?(:'AutoRowsFit')
+          self.auto_rows_fit = attributes[:'AutoRowsFit']
+      end
+      if attributes.has_key?(:'AutoColumnsFit')
+          self.auto_columns_fit = attributes[:'AutoColumnsFit']
+      end
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -107,6 +119,9 @@ module AsposeCellsCloud
         :'page_tall_fit_on_per_sheet' => :'pageTallFitOnPerSheet',
         :'sheet_name' => :'sheetName',
         :'page_index' => :'pageIndex',
+        :'one_page_per_sheet' => :'onePagePerSheet',
+        :'auto_rows_fit' => :'AutoRowsFit',
+        :'auto_columns_fit' => :'AutoColumnsFit',
         :'fonts_location' => :'FontsLocation'
       }
     end
@@ -126,6 +141,9 @@ module AsposeCellsCloud
         :'page_tall_fit_on_per_sheet' => :'BOOLEAN',
         :'sheet_name' => :'String',
         :'page_index' => :'Integer',
+        :'one_page_per_sheet' => :'BOOLEAN',
+        :'auto_rows_fit' => :'BOOLEAN',
+        :'auto_columns_fit' => :'BOOLEAN',
         :'fonts_location' => :'String'
       }
     end
@@ -145,7 +163,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/convert"
+      local_var_path = "v3.0/cells/convert"
       # query parameters
       query_params = {}
       query_params[:'format'] = self.format if !self.format.nil? 
@@ -159,6 +177,9 @@ module AsposeCellsCloud
       query_params[:'pageTallFitOnPerSheet'] = self.page_tall_fit_on_per_sheet if !self.page_tall_fit_on_per_sheet.nil? 
       query_params[:'sheetName'] = self.sheet_name if !self.sheet_name.nil? 
       query_params[:'pageIndex'] = self.page_index if !self.page_index.nil? 
+      query_params[:'onePagePerSheet'] = self.one_page_per_sheet if !self.one_page_per_sheet.nil? 
+      query_params[:'AutoRowsFit'] = self.auto_rows_fit if !self.auto_rows_fit.nil? 
+      query_params[:'AutoColumnsFit'] = self.auto_columns_fit if !self.auto_columns_fit.nil? 
       query_params[:'FontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
 
       # header parameters

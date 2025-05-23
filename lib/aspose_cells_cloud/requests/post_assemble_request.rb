@@ -103,7 +103,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/assemble"
+      local_var_path = "v3.0/cells/assemble"
       # query parameters
       query_params = {}
       query_params[:'datasource'] = self.datasource if !self.datasource.nil? 

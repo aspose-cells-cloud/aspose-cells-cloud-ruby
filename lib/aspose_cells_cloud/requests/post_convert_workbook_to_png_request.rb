@@ -87,7 +87,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/convert/png"
+      local_var_path = "v3.0/cells/convert/png"
       # query parameters
       query_params = {}
       query_params[:'password'] = self.password if !self.password.nil? 

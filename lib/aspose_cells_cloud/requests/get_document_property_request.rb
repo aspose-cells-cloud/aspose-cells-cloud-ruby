@@ -91,7 +91,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/documentproperties/{propertyName}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'propertyName' + '}', property_name.to_s)
+      local_var_path = "v3.0/cells/{name}/documentproperties/{propertyName}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'propertyName' + '}', property_name.to_s)
       # query parameters
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 

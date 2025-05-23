@@ -79,7 +79,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/unlock"
+      local_var_path = "v3.0/cells/unlock"
       # query parameters
       query_params = {}
       query_params[:'password'] = self.password if !self.password.nil? 

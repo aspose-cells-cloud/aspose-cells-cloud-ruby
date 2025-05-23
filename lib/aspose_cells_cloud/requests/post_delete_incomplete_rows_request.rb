@@ -69,7 +69,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/deleteincompleterows"
+      local_var_path = "v3.0/cells/deleteincompleterows"
       # query parameters
       query_params = {}
       # header parameters

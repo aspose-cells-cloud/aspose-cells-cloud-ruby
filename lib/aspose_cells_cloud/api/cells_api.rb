@@ -1118,6 +1118,14 @@ module AsposeCellsCloud
        return data
     end
 
+    # Get publi key.
+
+    def get_public_key( get_public_key_request, opts = {})
+
+       data, _status_code, _headers = get_public_key_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Assemble data files with template files to generate files in various formats.
 
     def post_assemble( post_assemble_request, opts = {})

@@ -87,7 +87,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/metadata/get"
+      local_var_path = "v3.0/cells/metadata/get"
       # query parameters
       query_params = {}
       query_params[:'type'] = self.type if !self.type.nil? 

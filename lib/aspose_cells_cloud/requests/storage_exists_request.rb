@@ -69,7 +69,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/storage/{storageName}/exist".sub('{' + 'storageName' + '}', storage_name.to_s)
+      local_var_path = "v3.0/cells/storage/{storageName}/exist".sub('{' + 'storageName' + '}', storage_name.to_s)
       # query parameters
       query_params = {}
       # header parameters

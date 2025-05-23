@@ -69,7 +69,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/datafill"
+      local_var_path = "v3.0/cells/datafill"
       # query parameters
       query_params = {}
       # header parameters

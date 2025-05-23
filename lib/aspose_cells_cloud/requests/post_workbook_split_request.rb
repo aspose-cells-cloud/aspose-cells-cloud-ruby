@@ -129,7 +129,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/split".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/split".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'format'] = self.format if !self.format.nil? 

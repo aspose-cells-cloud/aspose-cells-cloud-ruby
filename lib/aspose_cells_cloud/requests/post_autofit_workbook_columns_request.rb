@@ -93,7 +93,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/{name}/autofitcolumns".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v3.0/cells/{name}/autofitcolumns".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
       query_params[:'startColumn'] = self.start_column if !self.start_column.nil? 

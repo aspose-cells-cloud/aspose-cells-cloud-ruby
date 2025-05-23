@@ -93,7 +93,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "/cells/metadata/delete"
+      local_var_path = "v3.0/cells/metadata/delete"
       # query parameters
       query_params = {}
       query_params[:'type'] = self.type if !self.type.nil? 
