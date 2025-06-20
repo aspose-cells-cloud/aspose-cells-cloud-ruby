@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class SpreadsheetML2003SaveOptions
-        #The default value is false, it means that column index will be ignored if the cell is contiguous to the previous cell.            
+        #            
         attr_accessor :export_column_index_of_cell
-        #Causes child elements to be indented.The default value is true.  If the value is false, it will reduce the size of the xml file            
+        #            
         attr_accessor :is_indented_formatting
-        #Limit as xls, the max row index is 65535 and the max column index is 255.            
+        #            
         attr_accessor :limit_as_xls
         #            
         attr_accessor :save_format

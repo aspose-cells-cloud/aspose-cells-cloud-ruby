@@ -53,36 +53,47 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'shapeDTO')
           self.shape_dto = attributes[:'shapeDTO']
       end
+
       if attributes.has_key?(:'DrawingType')
           self.drawing_type = attributes[:'DrawingType']
       end
+
       if attributes.has_key?(:'upperLeftRow')
           self.upper_left_row = attributes[:'upperLeftRow']
       end
+
       if attributes.has_key?(:'upperLeftColumn')
           self.upper_left_column = attributes[:'upperLeftColumn']
       end
+
       if attributes.has_key?(:'top')
           self.top = attributes[:'top']
       end
+
       if attributes.has_key?(:'left')
           self.left = attributes[:'left']
       end
+
       if attributes.has_key?(:'width')
           self.width = attributes[:'width']
       end
+
       if attributes.has_key?(:'height')
           self.height = attributes[:'height']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -163,7 +174,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(shape_dto) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

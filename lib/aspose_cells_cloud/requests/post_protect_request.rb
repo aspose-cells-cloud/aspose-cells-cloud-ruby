@@ -44,9 +44,11 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
+
       if attributes.has_key?(:'protectWorkbookRequest')
           self.protect_workbook_request = attributes[:'protectWorkbookRequest']
       end
+
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
@@ -100,12 +102,11 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-          file.each do |filename , context|
-            form_params[filename]  = context
-          end 
-      form_params['protect_workbook_request']  = post_body.to_json
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-         
+      file.each do |filename , context|
+      form_params[File.basename(filename)]  = context
+      end
+      form_params['protect_workbook_request']  = post_body.to_json
 
       #auth_names = []
       auth_names = ['JWT']

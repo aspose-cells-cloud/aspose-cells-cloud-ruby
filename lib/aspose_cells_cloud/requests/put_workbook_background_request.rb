@@ -47,18 +47,23 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'picPath')
           self.pic_path = attributes[:'picPath']
       end
+
       if attributes.has_key?(:'imageAdaptOption')
           self.image_adapt_option = attributes[:'imageAdaptOption']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
@@ -117,13 +122,10 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if(!file.nil?)
-      file.each do |filename , context|
-        form_params[filename]  = context
-      end 
-      end
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-         
+      file.each do |filename , context|
+      form_params[File.basename(filename)]  = context
+      end
 
       #auth_names = []
       auth_names = ['JWT']

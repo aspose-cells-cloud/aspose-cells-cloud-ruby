@@ -31,35 +31,35 @@ require 'date'
 module AsposeCellsCloud
 
   class PaginatedSaveOptions
-        #When characters in the Excel are Unicode and not be set with correct font in cell style,They may appear as block in pdf,image.Set the DefaultFont such as MingLiu or MS Gothic to show these characters. If this property is not set, Aspose.Cells will use system default font to show these unicode characters.            
+        #            
         attr_accessor :default_font
-        #When characters in the Excel are Unicode and not be set with correct font in cell style,They may appear as block in pdf,image.Set this to true to try to use workbook's default font to show these characters first.            
+        #            
         attr_accessor :check_workbook_default_font
-        #Indicates whether to check font compatibility for every character in text.            
+        #            
         attr_accessor :check_font_compatibility
-        #Indicates whether to only substitute the font of character when the cell font is not compatibility for it.            
+        #            
         attr_accessor :is_font_substitution_char_granularity
-        #If OnePagePerSheet is true , all content of one sheet will output to only one page in result.The paper size of pagesetup will be invalid, and the other settings of pagesetup will still take effect.            
+        #            
         attr_accessor :one_page_per_sheet
-        #If AllColumnsInOnePagePerSheet is true , all column content of one sheet will output to only one page in result.The width of paper size of pagesetup will be ignored, and the other settings of pagesetup will still take effect.            
+        #            
         attr_accessor :all_columns_in_one_page_per_sheet
-        #Indicates if you need to hide the error while rendering.The error can be error in shape, image, chart rendering, etc.            
+        #            
         attr_accessor :ignore_error
-        #Indicates whether to output a blank page when there is nothing to print.            
+        #            
         attr_accessor :output_blank_page_when_nothing_to_print
-        #Gets or sets the 0-based index of the first page to save.            
+        #            
         attr_accessor :page_index
-        #Gets or sets the number of pages to save.            
+        #            
         attr_accessor :page_count
-        #Indicates which pages will not be printed.            
+        #            
         attr_accessor :printing_page_type
-        #Gets or sets gridline type.            
+        #            
         attr_accessor :gridline_type
-        #Gets or sets displaying text type when the text width is larger than cell width.            
+        #            
         attr_accessor :text_cross_type
-        #Gets or sets default edit language.            
+        #            
         attr_accessor :default_edit_language
-        #Setting for rendering Emf metafile.            
+        #            
         attr_accessor :emf_render_setting
         #            
         attr_accessor :merge_areas

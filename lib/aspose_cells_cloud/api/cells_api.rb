@@ -40,6 +40,344 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
+    # Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,
+    # forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client.
+
+    def post_access_token( post_access_token_request, opts = {})
+
+       data, _status_code, _headers = post_access_token_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Check the Health Status of Aspose.Cells Cloud Service.
+
+    def get_aspose_cells_cloud_status( get_aspose_cells_cloud_status_request, opts = {})
+
+       data, _status_code, _headers = get_aspose_cells_cloud_status_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Check the Health Status of Aspose.Cells Cloud Service.
+
+    def check_cloud_service_health( check_cloud_service_health_request, opts = {})
+
+       data, _status_code, _headers = check_cloud_service_health_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a spreadsheet in cloud storage to the specified format.
+
+    def export_spreadsheet_as_format( export_spreadsheet_as_format_request, opts = {})
+
+       data, _status_code, _headers = export_spreadsheet_as_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a chart of spreadsheet in cloud storage to the specified format.
+
+    def export_chart_as_format( export_chart_as_format_request, opts = {})
+
+       data, _status_code, _headers = export_chart_as_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a spreadsheet on a local drive to the specified format.
+
+    def convert_spreadsheet( convert_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = convert_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a chart of spreadsheet on a local drive to image.
+
+    def convert_chart_to_image( convert_chart_to_image_request, opts = {})
+
+       data, _status_code, _headers = convert_chart_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a chart of spreadsheet on a local drive to pdf.
+
+    def convert_chart_to_pdf( convert_chart_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = convert_chart_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a spreadsheet in cloud storage to the specified format.
+
+    def save_spreadsheet_as( save_spreadsheet_as_request, opts = {})
+
+       data, _status_code, _headers = save_spreadsheet_as_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge local spreadsheet files into a specified format file.
+
+    def merge_spreadsheets( merge_spreadsheets_request, opts = {})
+
+       data, _status_code, _headers = merge_spreadsheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge spreadsheet files in folder of cloud storage into a specified format file.
+
+    def merge_spreadsheets_in_remote_folder( merge_spreadsheets_in_remote_folder_request, opts = {})
+
+       data, _status_code, _headers = merge_spreadsheets_in_remote_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Merge a spreadsheet file into other spreadsheet in cloud storage, and output a specified format file.
+
+    def merge_remote_spreadsheet( merge_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = merge_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Split a local spreadsheet into the specified format, multi-file.
+
+    def split_spreadsheet( split_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = split_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Split a spreadsheet in cloud storage into the specified format, multi-file.
+
+    def split_remote_spreadsheet( split_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = split_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get an asymmetric public key.
+
+    def get_public_key( get_public_key_request, opts = {})
+
+       data, _status_code, _headers = get_public_key_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search text in the local spreadsheet.
+
+    def search_spreadsheet_content( search_spreadsheet_content_request, opts = {})
+
+       data, _status_code, _headers = search_spreadsheet_content_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search text in the remoted spreadsheet.
+
+    def search_content_in_remote_spreadsheet( search_content_in_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = search_content_in_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search text in the worksheet of remoted spreadsheet.
+
+    def search_content_in_remote_worksheet( search_content_in_remote_worksheet_request, opts = {})
+
+       data, _status_code, _headers = search_content_in_remote_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search text in the range of remoted spreadsheet.
+
+    def search_content_in_remote_range( search_content_in_remote_range_request, opts = {})
+
+       data, _status_code, _headers = search_content_in_remote_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replace text in the local spreadsheet.
+
+    def replace_spreadsheet_content( replace_spreadsheet_content_request, opts = {})
+
+       data, _status_code, _headers = replace_spreadsheet_content_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replace text in the remoted spreadsheet.
+
+    def replace_content_in_remote_spreadsheet( replace_content_in_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = replace_content_in_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replace text in the worksheet of remoted spreadsheet.
+
+    def replace_content_in_remote_worksheet( replace_content_in_remote_worksheet_request, opts = {})
+
+       data, _status_code, _headers = replace_content_in_remote_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Replace text in the range of remoted spreadsheet.
+
+    def replace_content_in_remote_range( replace_content_in_remote_range_request, opts = {})
+
+       data, _status_code, _headers = replace_content_in_remote_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search broken links in the local spreadsheet.
+
+    def search_spreadsheet_broken_links( search_spreadsheet_broken_links_request, opts = {})
+
+       data, _status_code, _headers = search_spreadsheet_broken_links_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search broken links in the remoted spreadsheet.
+
+    def search_broken_links_in_remote_spreadsheet( search_broken_links_in_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = search_broken_links_in_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search broken links in the worksheet of remoted spreadsheet.
+
+    def search_broken_links_in_remote_worksheet( search_broken_links_in_remote_worksheet_request, opts = {})
+
+       data, _status_code, _headers = search_broken_links_in_remote_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Search broken links in the range of remoted spreadsheet.
+
+    def search_broken_links_in_remote_range( search_broken_links_in_remote_range_request, opts = {})
+
+       data, _status_code, _headers = search_broken_links_in_remote_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+    # Delete all blank rows which do not contain any data or other object.
+
+    def delete_spreadsheet_blank_rows( delete_spreadsheet_blank_rows_request, opts = {})
+
+       data, _status_code, _headers = delete_spreadsheet_blank_rows_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all blank columns which do not contain any data.
+
+    def delete_spreadsheet_blank_columns( delete_spreadsheet_blank_columns_request, opts = {})
+
+       data, _status_code, _headers = delete_spreadsheet_blank_columns_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all blank worksheets which do not contain any data or other object.
+
+    def delete_spreadsheet_blank_worksheets( delete_spreadsheet_blank_worksheets_request, opts = {})
+
+       data, _status_code, _headers = delete_spreadsheet_blank_worksheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def download_file( download_file_request, opts = {})
+
+       data, _status_code, _headers = download_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def upload_file( upload_file_request, opts = {})
+
+       data, _status_code, _headers = upload_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def copy_file( copy_file_request, opts = {})
+
+       data, _status_code, _headers = copy_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def move_file( move_file_request, opts = {})
+
+       data, _status_code, _headers = move_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_file( delete_file_request, opts = {})
+
+       data, _status_code, _headers = delete_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_files_list( get_files_list_request, opts = {})
+
+       data, _status_code, _headers = get_files_list_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def create_folder( create_folder_request, opts = {})
+
+       data, _status_code, _headers = create_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def copy_folder( copy_folder_request, opts = {})
+
+       data, _status_code, _headers = copy_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def move_folder( move_folder_request, opts = {})
+
+       data, _status_code, _headers = move_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def delete_folder( delete_folder_request, opts = {})
+
+       data, _status_code, _headers = delete_folder_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def storage_exists( storage_exists_request, opts = {})
+
+       data, _status_code, _headers = storage_exists_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def object_exists( object_exists_request, opts = {})
+
+       data, _status_code, _headers = object_exists_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_disc_usage( get_disc_usage_request, opts = {})
+
+       data, _status_code, _headers = get_disc_usage_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def get_file_versions( get_file_versions_request, opts = {})
+
+       data, _status_code, _headers = get_file_versions_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Perform business analysis of data in Excel files.
 
     def post_analyze_excel( post_analyze_excel_request, opts = {})
@@ -205,14 +543,6 @@ module AsposeCellsCloud
     def post_batch_split( post_batch_split_request, opts = {})
 
        data, _status_code, _headers = post_batch_split_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-    # Get Access Token Result
-
-    def post_access_token( post_access_token_request, opts = {})
-
-       data, _status_code, _headers = post_access_token_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -1115,14 +1445,6 @@ module AsposeCellsCloud
     def delete_worksheet_hyperlinks( delete_worksheet_hyperlinks_request, opts = {})
 
        data, _status_code, _headers = delete_worksheet_hyperlinks_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-    # Get publi key.
-
-    def get_public_key( get_public_key_request, opts = {})
-
-       data, _status_code, _headers = get_public_key_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -2760,104 +3082,6 @@ module AsposeCellsCloud
     def delete_worksheet_validations( delete_worksheet_validations_request, opts = {})
 
        data, _status_code, _headers = delete_worksheet_validations_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def download_file( download_file_request, opts = {})
-
-       data, _status_code, _headers = download_file_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def upload_file( upload_file_request, opts = {})
-
-       data, _status_code, _headers = upload_file_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def copy_file( copy_file_request, opts = {})
-
-       data, _status_code, _headers = copy_file_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def move_file( move_file_request, opts = {})
-
-       data, _status_code, _headers = move_file_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def delete_file( delete_file_request, opts = {})
-
-       data, _status_code, _headers = delete_file_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def get_files_list( get_files_list_request, opts = {})
-
-       data, _status_code, _headers = get_files_list_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def create_folder( create_folder_request, opts = {})
-
-       data, _status_code, _headers = create_folder_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def copy_folder( copy_folder_request, opts = {})
-
-       data, _status_code, _headers = copy_folder_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def move_folder( move_folder_request, opts = {})
-
-       data, _status_code, _headers = move_folder_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def delete_folder( delete_folder_request, opts = {})
-
-       data, _status_code, _headers = delete_folder_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def storage_exists( storage_exists_request, opts = {})
-
-       data, _status_code, _headers = storage_exists_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def object_exists( object_exists_request, opts = {})
-
-       data, _status_code, _headers = object_exists_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def get_disc_usage( get_disc_usage_request, opts = {})
-
-       data, _status_code, _headers = get_disc_usage_request.create_http_request(@api_client,opts )
-       return data
-    end
-
-
-    def get_file_versions( get_file_versions_request, opts = {})
-
-       data, _status_code, _headers = get_file_versions_request.create_http_request(@api_client,opts )
        return data
     end
   end

@@ -31,24 +31,32 @@ require 'date'
 module AsposeCellsCloud
 
   class TextItem
-        #Represents text content.            
-        attr_accessor :text
         #            
-        attr_accessor :link
+        attr_accessor :filename
+        #            
+        attr_accessor :worksheet
+        #            
+        attr_accessor :position
+        #            
+        attr_accessor :content
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'text' => :'Text',
-        :'link' => :'link'
+        :'filename' => :'Filename',
+        :'worksheet' => :'Worksheet',
+        :'position' => :'Position',
+        :'content' => :'Content'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'text' => :'String',
-        :'link' => :'Link'
+        :'filename' => :'String',
+        :'worksheet' => :'String',
+        :'position' => :'String',
+        :'content' => :'String'
       }
     end
 
@@ -60,11 +68,17 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'Text')
-          self.text = attributes[:'Text']
+      if attributes.has_key?(:'Filename')
+          self.filename = attributes[:'Filename']
       end
-      if attributes.has_key?(:'link')
-          self.link = attributes[:'link']
+      if attributes.has_key?(:'Worksheet')
+          self.worksheet = attributes[:'Worksheet']
+      end
+      if attributes.has_key?(:'Position')
+          self.position = attributes[:'Position']
+      end
+      if attributes.has_key?(:'Content')
+          self.content = attributes[:'Content']
       end
 
     end
@@ -73,11 +87,17 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @text.nil?
-          invalid_properties.push("invalid value for 'text', text cannot be nil.")
+      if @filename.nil?
+          invalid_properties.push("invalid value for 'filename', filename cannot be nil.")
       end
-      if @link.nil?
-          invalid_properties.push("invalid value for 'link', link cannot be nil.")
+      if @worksheet.nil?
+          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
+      end
+      if @position.nil?
+          invalid_properties.push("invalid value for 'position', position cannot be nil.")
+      end
+      if @content.nil?
+          invalid_properties.push("invalid value for 'content', content cannot be nil.")
       end
 
       return invalid_properties
@@ -86,8 +106,10 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @text.nil?
-      return false if @link.nil?
+      return false if @filename.nil?
+      return false if @worksheet.nil?
+      return false if @position.nil?
+      return false if @content.nil?
       return true
     end
 
@@ -96,8 +118,10 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          text == o.text &&
-          link == o.link 
+          filename == o.filename &&
+          worksheet == o.worksheet &&
+          position == o.position &&
+          content == o.content 
           std_dev == o.std_dev
     end
 
@@ -110,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ text , link ].hash
+      [ filename , worksheet , position , content ].hash
     end
 
     # Builds the object from hash

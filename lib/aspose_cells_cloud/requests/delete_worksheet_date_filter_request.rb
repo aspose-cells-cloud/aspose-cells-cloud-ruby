@@ -53,36 +53,47 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'fieldIndex')
           self.field_index = attributes[:'fieldIndex']
       end
+
       if attributes.has_key?(:'dateTimeGroupingType')
           self.date_time_grouping_type = attributes[:'dateTimeGroupingType']
       end
+
       if attributes.has_key?(:'year')
           self.year = attributes[:'year']
       end
+
       if attributes.has_key?(:'month')
           self.month = attributes[:'month']
       end
+
       if attributes.has_key?(:'day')
           self.day = attributes[:'day']
       end
+
       if attributes.has_key?(:'hour')
           self.hour = attributes[:'hour']
       end
+
       if attributes.has_key?(:'minute')
           self.minute = attributes[:'minute']
       end
+
       if attributes.has_key?(:'second')
           self.second = attributes[:'second']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -171,7 +182,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']

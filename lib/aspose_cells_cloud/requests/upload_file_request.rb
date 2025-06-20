@@ -44,9 +44,11 @@ module AsposeCellsCloud
       if attributes.has_key?(:'UploadFiles')
           self.upload_files = attributes[:'UploadFiles']
       end
+
       if attributes.has_key?(:'path')
           self.path = attributes[:'path']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -64,7 +66,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'upload_files' => :'Hash',
+        :'upload_files' => :'String',
         :'path' => :'String',
         :'storage_name' => :'String'
       }
@@ -85,7 +87,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "v3.0/cells/storage/file/{path}".sub('{' + 'path' + '}', path.to_s)
+      local_var_path = "v4.0/cells/storage/file/{path}".sub('{' + 'path' + '}', path.to_s)
       # query parameters
       query_params = {}
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
@@ -100,13 +102,8 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if(!upload_files.nil?)
-      upload_files.each do |filename , context|
-        form_params[filename]  = context
-      end 
-      end
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-         
+      form_params[File.basename(upload_files)] =  ::File.open(upload_files,"r")   
 
       #auth_names = []
       auth_names = ['JWT']

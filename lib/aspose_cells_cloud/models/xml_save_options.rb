@@ -31,17 +31,17 @@ require 'date'
 module AsposeCellsCloud
 
   class XmlSaveOptions
-        #Represents the indexes of exported sheets.            
+        #            
         attr_accessor :sheet_indexes
-        #Gets or sets the exporting range.            
+        #            
         attr_accessor :export_area
-        #Indicates whether the range contains header row.            
+        #            
         attr_accessor :has_header_row
-        #Indicates whether exporting xml map in the file.            
+        #            
         attr_accessor :xml_map_name
-        #Indicates whether exporting sheet's name as the name of the element.            
+        #            
         attr_accessor :sheet_name_as_element_name
-        #Indicates whether exporting data as attributes of element.            
+        #            
         attr_accessor :data_as_attribute
         #            
         attr_accessor :save_format

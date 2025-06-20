@@ -52,33 +52,43 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'format')
           self.format = attributes[:'format']
       end
+
       if attributes.has_key?(:'outFolder')
           self.out_folder = attributes[:'outFolder']
       end
+
       if attributes.has_key?(:'from')
           self.from = attributes[:'from']
       end
+
       if attributes.has_key?(:'to')
           self.to = attributes[:'to']
       end
+
       if attributes.has_key?(:'horizontalResolution')
           self.horizontal_resolution = attributes[:'horizontalResolution']
       end
+
       if attributes.has_key?(:'verticalResolution')
           self.vertical_resolution = attributes[:'verticalResolution']
       end
+
       if attributes.has_key?(:'splitNameRule')
           self.split_name_rule = attributes[:'splitNameRule']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'outStorageName')
           self.out_storage_name = attributes[:'outStorageName']
       end
@@ -153,7 +163,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']

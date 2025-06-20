@@ -45,12 +45,15 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'textWaterMarkerRequest')
           self.text_water_marker_request = attributes[:'textWaterMarkerRequest']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -108,7 +111,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(text_water_marker_request) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

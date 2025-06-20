@@ -47,18 +47,23 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'formatcondition')
           self.formatcondition = attributes[:'formatcondition']
       end
+
       if attributes.has_key?(:'cellArea')
           self.cell_area = attributes[:'cellArea']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -129,7 +134,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(formatcondition) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

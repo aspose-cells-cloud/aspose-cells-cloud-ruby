@@ -31,13 +31,13 @@ require 'date'
 module AsposeCellsCloud
 
   class CellsCloudFileInfo
-        #The file name.            
+        #            
         attr_accessor :name
-        #The file size.            
+        #            
         attr_accessor :size
-        #The file position.            
+        #            
         attr_accessor :folder
-        #The storage name.            
+        #            
         attr_accessor :storage
 
     # Attribute mapping from ruby-style variable name to JSON key.

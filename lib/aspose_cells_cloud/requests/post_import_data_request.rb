@@ -47,18 +47,23 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'importOption')
           self.import_option = attributes[:'importOption']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
+
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -118,7 +123,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(import_option) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

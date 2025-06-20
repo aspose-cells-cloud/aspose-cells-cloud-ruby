@@ -51,30 +51,39 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'index')
           self.index = attributes[:'index']
       end
+
       if attributes.has_key?(:'cellArea')
           self.cell_area = attributes[:'cellArea']
       end
+
       if attributes.has_key?(:'type')
           self.type = attributes[:'type']
       end
+
       if attributes.has_key?(:'operatorType')
           self.operator_type = attributes[:'operatorType']
       end
+
       if attributes.has_key?(:'formula1')
           self.formula1 = attributes[:'formula1']
       end
+
       if attributes.has_key?(:'formula2')
           self.formula2 = attributes[:'formula2']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -172,7 +181,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']

@@ -43,6 +43,7 @@ module AsposeCellsCloud
       if attributes.has_key?(:'convertWorkbookOptions')
           self.convert_workbook_options = attributes[:'convertWorkbookOptions']
       end
+
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -91,7 +92,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(convert_workbook_options) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

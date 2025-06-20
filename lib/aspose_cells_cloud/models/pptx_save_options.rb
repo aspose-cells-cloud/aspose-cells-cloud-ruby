@@ -31,11 +31,11 @@ require 'date'
 module AsposeCellsCloud
 
   class PptxSaveOptions
-        #Ignore hidden rows            
+        #            
         attr_accessor :ignore_hidden_rows
-        #Adjust font size for row type            
+        #            
         attr_accessor :adjust_font_size_for_row_type
-        #Gets and sets the display type when exporting to PowerPoint. The default exporting type is working as printing.            
+        #            
         attr_accessor :export_view_type
         #            
         attr_accessor :default_font

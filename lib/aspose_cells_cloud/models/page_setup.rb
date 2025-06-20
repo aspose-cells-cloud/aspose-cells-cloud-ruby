@@ -31,76 +31,74 @@ require 'date'
 module AsposeCellsCloud
 
   class PageSetup
-        #Represents if elements of the document will be printed in black and white.            
+        #Represents if elements of the document will be printed in black and white.             
         attr_accessor :black_and_white
-        #Represents the size of the bottom margin, in unit of centimeters.            
+        #Represents the size of the bottom margin, in unit of centimeters.             
         attr_accessor :bottom_margin
-        #Represent if the sheet is printed centered horizontally.            
+        #Represent if the sheet is printed centered horizontally.             
         attr_accessor :center_horizontally
-        #Represent if the sheet is printed centered vertically.            
+        #Represent if the sheet is printed centered vertically.             
         attr_accessor :center_vertically
-        #Represents the first page number that will be used when this sheet is printed.            
+        #Represents the first page number that will be used when this sheet is printed.             
         attr_accessor :first_page_number
-        #Represents  the number of pages tall the worksheet will be scaled to when it's printed.                        The default value is 1.            
+        #Represents  the number of pages tall the worksheet will be scaled to when it's printed.            The default value is 1.             
         attr_accessor :fit_to_pages_tall
-        #Represents the number of pages wide the worksheet will be scaled to when it's printed.                        The default value is 1.            
+        #Represents the number of pages wide the worksheet will be scaled to when it's printed.            The default value is 1.             
         attr_accessor :fit_to_pages_wide
-        #Represents the distance from the bottom of the page to the footer, in unit of centimeters.            
+        #Represents the distance from the bottom of the page to the footer, in unit of centimeters.             
         attr_accessor :footer_margin
-        #Represents the distance from the top of the page to the header, in unit of centimeters.            
+        #Represents the distance from the top of the page to the header, in unit of centimeters.             
         attr_accessor :header_margin
-        #Indicates whether the first the page number is automatically assigned.            
+        #Indicates whether the first the page number is automatically assigned.             
         attr_accessor :is_auto_first_page_number
-        #Indicates whether header and footer margins are aligned with the page margins.                        If this property is true, the left header and footer will be aligned with the left margin,                        and the right header and footer will be aligned with the right margin.                        This option is enabled by default.            
+        #Indicates whether header and footer margins are aligned with the page margins.            If this property is true, the left header and footer will be aligned with the left margin,            and the right header and footer will be aligned with the right margin.            This option is enabled by default.             
         attr_accessor :is_hf_align_margins
-        #True means that the header/footer of the first page is different with other pages.            
+        #True means that the header/footer of the first page is different with other pages.             
         attr_accessor :is_hf_diff_first
-        #True means that the header/footer of the odd pages is different with odd pages.            
+        #True means that the header/footer of the odd pages is different with odd pages.             
         attr_accessor :is_hf_diff_odd_even
-        #Indicates whether header and footer are scaled with document scaling.                        Only applies for Excel 2007.            
+        #Indicates whether header and footer are scaled with document scaling.            Only applies for Excel 2007.             
         attr_accessor :is_hf_scale_with_doc
-        #If this property is False, the FitToPagesWide and FitToPagesTall properties control how the worksheet is scaled.            
+        #If this property is False, the FitToPagesWide and FitToPagesTall properties control how the worksheet is scaled.             
         attr_accessor :is_percent_scale
-        #Represents the size of the left margin, in unit of centimeters.            
+        #Represents the size of the left margin, in unit of centimeters.             
         attr_accessor :left_margin
-        #Represents the order that Microsoft Excel uses to number pages when printing a large worksheet.            
+        #Represents the order that Microsoft Excel uses to number pages when printing a large worksheet.             
         attr_accessor :order
-        #Represents page print orientation.            
+        #Represents page print orientation.             
         attr_accessor :orientation
-        #Represents the size of the paper.            
+        #Represents the size of the paper.             
         attr_accessor :paper_size
-        #Represents the range to be printed.            
+        #Represents the range to be printed.             
         attr_accessor :print_area
-        #Represents the way comments are printed with the sheet.            
+        #Represents the way comments are printed with the sheet.             
         attr_accessor :print_comments
-        #Get and sets number of copies to print.            
+        #Get and sets number of copies to print.             
         attr_accessor :print_copies
-        #Represents if the sheet will be printed without graphics.            
+        #Represents if the sheet will be printed without graphics.             
         attr_accessor :print_draft
-        #Specifies the type of print error displayed.            
+        #Specifies the type of print error displayed.             
         attr_accessor :print_errors
-        #Represents if cell gridlines are printed on the page.            
+        #Represents if cell gridlines are printed on the page.             
         attr_accessor :print_gridlines
-        #Represents if row and column headings are printed with this page.            
+        #Represents if row and column headings are printed with this page.             
         attr_accessor :print_headings
-        #Represents the print quality.            
+        #Represents the print quality.             
         attr_accessor :print_quality
-        #Represents the columns that contain the cells to be repeated on the left side of each page.            
+        #Represents the columns that contain the cells to be repeated on the left side of each page.             
         attr_accessor :print_title_columns
-        #Represents the rows that contain the cells to be repeated at the top of each page.            
+        #Represents the rows that contain the cells to be repeated at the top of each page.             
         attr_accessor :print_title_rows
-        #Represents the size of the right margin, in unit of centimeters.            
+        #Represents the size of the right margin, in unit of centimeters.             
         attr_accessor :right_margin
-        #Represents the size of the top margin, in unit of centimeters.            
+        #Represents the size of the top margin, in unit of centimeters.             
         attr_accessor :top_margin
-        #Represents the scaling factor in percent. It should be between 10 and 400.            
+        #Represents the scaling factor in percent. It should be between 10 and 400.             
         attr_accessor :zoom
         #Represents the page header.            
         attr_accessor :header
         #Represents the page footor.            
         attr_accessor :footer
-        #            
-        attr_accessor :link
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -138,8 +136,7 @@ module AsposeCellsCloud
         :'top_margin' => :'TopMargin',
         :'zoom' => :'Zoom',
         :'header' => :'Header',
-        :'footer' => :'Footer',
-        :'link' => :'link'
+        :'footer' => :'Footer'
       }
     end
 
@@ -179,8 +176,7 @@ module AsposeCellsCloud
         :'top_margin' => :'Float',
         :'zoom' => :'Integer',
         :'header' => :'Array<PageSection>',
-        :'footer' => :'Array<PageSection>',
-        :'link' => :'Link'
+        :'footer' => :'Array<PageSection>'
       }
     end
 
@@ -294,9 +290,6 @@ module AsposeCellsCloud
       if attributes.has_key?(:'Footer')
           self.footer = attributes[:'Footer']
       end
-      if attributes.has_key?(:'link')
-          self.link = attributes[:'link']
-      end
 
     end
 
@@ -406,9 +399,6 @@ module AsposeCellsCloud
       if @footer.nil?
           invalid_properties.push("invalid value for 'footer', footer cannot be nil.")
       end
-      if @link.nil?
-          invalid_properties.push("invalid value for 'link', link cannot be nil.")
-      end
 
       return invalid_properties
     end
@@ -450,7 +440,6 @@ module AsposeCellsCloud
       return false if @zoom.nil?
       return false if @header.nil?
       return false if @footer.nil?
-      return false if @link.nil?
       return true
     end
 
@@ -492,8 +481,7 @@ module AsposeCellsCloud
           top_margin == o.top_margin &&
           zoom == o.zoom &&
           header == o.header &&
-          footer == o.footer &&
-          link == o.link 
+          footer == o.footer 
           std_dev == o.std_dev
     end
 
@@ -506,7 +494,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ black_and_white , bottom_margin , center_horizontally , center_vertically , first_page_number , fit_to_pages_tall , fit_to_pages_wide , footer_margin , header_margin , is_auto_first_page_number , is_hf_align_margins , is_hf_diff_first , is_hf_diff_odd_even , is_hf_scale_with_doc , is_percent_scale , left_margin , order , orientation , paper_size , print_area , print_comments , print_copies , print_draft , print_errors , print_gridlines , print_headings , print_quality , print_title_columns , print_title_rows , right_margin , top_margin , zoom , header , footer , link ].hash
+      [ black_and_white , bottom_margin , center_horizontally , center_vertically , first_page_number , fit_to_pages_tall , fit_to_pages_wide , footer_margin , header_margin , is_auto_first_page_number , is_hf_align_margins , is_hf_diff_first , is_hf_diff_odd_even , is_hf_scale_with_doc , is_percent_scale , left_margin , order , orientation , paper_size , print_area , print_comments , print_copies , print_draft , print_errors , print_gridlines , print_headings , print_quality , print_title_columns , print_title_rows , right_margin , top_margin , zoom , header , footer ].hash
     end
 
     # Builds the object from hash

@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class RenderingFont
-        #Gets name of the font.            
+        #            
         attr_accessor :name
         #            
         attr_accessor :size

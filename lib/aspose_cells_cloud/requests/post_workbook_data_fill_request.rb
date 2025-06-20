@@ -48,21 +48,27 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'dataFill')
           self.data_fill = attributes[:'dataFill']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
+
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
+
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
@@ -129,7 +135,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(data_fill) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

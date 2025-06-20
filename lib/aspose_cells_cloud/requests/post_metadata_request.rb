@@ -47,18 +47,23 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
+
       if attributes.has_key?(:'cellsDocuments')
           self.cells_documents = attributes[:'cellsDocuments']
       end
+
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
+
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+
       if attributes.has_key?(:'outFormat')
           self.out_format = attributes[:'outFormat']
       end
+
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
@@ -121,12 +126,11 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-          file.each do |filename , context|
-            form_params[filename]  = context
-          end 
-      form_params['cells_documents']  = post_body.to_json
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-         
+      file.each do |filename , context|
+      form_params[File.basename(filename)]  = context
+      end
+      form_params['cells_documents']  = post_body.to_json
 
       #auth_names = []
       auth_names = ['JWT']

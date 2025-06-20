@@ -31,7 +31,7 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveResponse
-        #This class property represents a "SaveResult" XML element.            
+        #            
         attr_accessor :save_result
         #            
         attr_accessor :code

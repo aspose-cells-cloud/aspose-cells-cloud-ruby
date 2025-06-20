@@ -65,7 +65,7 @@ module AsposeCellsCloud
       api_client.request_token_if_needed
 
       # resource path
-      local_var_path = "v3.0/cells/storage/disc"
+      local_var_path = "v4.0/cells/storage/disc"
       # query parameters
       query_params = {}
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
@@ -80,7 +80,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']

@@ -31,21 +31,21 @@ require 'date'
 module AsposeCellsCloud
 
   class SaveOptions
-        #Save format name            
+        #            
         attr_accessor :save_format
-        #The cached file folder is used to store some large data.            
+        #            
         attr_accessor :cached_file_folder
-        #Make the workbook empty after saving the file.            
+        #            
         attr_accessor :clear_data
-        #If true and the directory does not exist, the directory will be automatically created before saving the file.                        
+        #            
         attr_accessor :create_directory
-        #whether http compression is to be used.            
+        #            
         attr_accessor :enable_http_compression
-        #Indicates whether refreshing chart cache data            
+        #            
         attr_accessor :refresh_chart_cache
-        #Indicates whether sorting defined names before saving file.            
+        #            
         attr_accessor :sort_names
-        #Indicates whether validate merged areas before saving the file.The default value is false.                        
+        #            
         attr_accessor :validate_merged_areas
         #            
         attr_accessor :merge_areas

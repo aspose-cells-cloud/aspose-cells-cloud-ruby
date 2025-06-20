@@ -57,48 +57,63 @@ module AsposeCellsCloud
       if attributes.has_key?(:'File')
           self.file = attributes[:'File']
       end
+
       if attributes.has_key?(:'format')
           self.format = attributes[:'format']
       end
+
       if attributes.has_key?(:'password')
           self.password = attributes[:'password']
       end
+
       if attributes.has_key?(:'outPath')
           self.out_path = attributes[:'outPath']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+
       if attributes.has_key?(:'streamFormat')
           self.stream_format = attributes[:'streamFormat']
       end
+
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
+
       if attributes.has_key?(:'pageWideFitOnPerSheet')
           self.page_wide_fit_on_per_sheet = attributes[:'pageWideFitOnPerSheet']
       end
+
       if attributes.has_key?(:'pageTallFitOnPerSheet')
           self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'pageIndex')
           self.page_index = attributes[:'pageIndex']
       end
+
       if attributes.has_key?(:'onePagePerSheet')
           self.one_page_per_sheet = attributes[:'onePagePerSheet']
       end
+
       if attributes.has_key?(:'AutoRowsFit')
           self.auto_rows_fit = attributes[:'AutoRowsFit']
       end
+
       if attributes.has_key?(:'AutoColumnsFit')
           self.auto_columns_fit = attributes[:'AutoColumnsFit']
       end
+
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -192,13 +207,10 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if(!file.nil?)
-      file.each do |filename , context|
-        form_params[filename]  = context
-      end 
-      end
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-         
+      file.each do |filename , context|
+      form_params[File.basename(filename)]  = context
+      end
 
       #auth_names = []
       auth_names = ['JWT']

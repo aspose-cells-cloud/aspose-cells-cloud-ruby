@@ -59,54 +59,71 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'sheetName')
           self.sheet_name = attributes[:'sheetName']
       end
+
       if attributes.has_key?(:'chartType')
           self.chart_type = attributes[:'chartType']
       end
+
       if attributes.has_key?(:'upperLeftRow')
           self.upper_left_row = attributes[:'upperLeftRow']
       end
+
       if attributes.has_key?(:'upperLeftColumn')
           self.upper_left_column = attributes[:'upperLeftColumn']
       end
+
       if attributes.has_key?(:'lowerRightRow')
           self.lower_right_row = attributes[:'lowerRightRow']
       end
+
       if attributes.has_key?(:'lowerRightColumn')
           self.lower_right_column = attributes[:'lowerRightColumn']
       end
+
       if attributes.has_key?(:'area')
           self.area = attributes[:'area']
       end
+
       if attributes.has_key?(:'isVertical')
           self.is_vertical = attributes[:'isVertical']
       end
+
       if attributes.has_key?(:'categoryData')
           self.category_data = attributes[:'categoryData']
       end
+
       if attributes.has_key?(:'isAutoGetSerialName')
           self.is_auto_get_serial_name = attributes[:'isAutoGetSerialName']
       end
+
       if attributes.has_key?(:'title')
           self.title = attributes[:'title']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'dataLabels')
           self.data_labels = attributes[:'dataLabels']
       end
+
       if attributes.has_key?(:'dataLabelsPosition')
           self.data_labels_position = attributes[:'dataLabelsPosition']
       end
+
       if attributes.has_key?(:'pivotTableSheet')
           self.pivot_table_sheet = attributes[:'pivotTableSheet']
       end
+
       if attributes.has_key?(:'pivotTableName')
           self.pivot_table_name = attributes[:'pivotTableName']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
@@ -209,7 +226,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']

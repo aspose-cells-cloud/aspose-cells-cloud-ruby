@@ -55,42 +55,55 @@ module AsposeCellsCloud
       if attributes.has_key?(:'name')
           self.name = attributes[:'name']
       end
+
       if attributes.has_key?(:'newfilename')
           self.newfilename = attributes[:'newfilename']
       end
+
       if attributes.has_key?(:'saveOptions')
           self.save_options = attributes[:'saveOptions']
       end
+
       if attributes.has_key?(:'isAutoFitRows')
           self.is_auto_fit_rows = attributes[:'isAutoFitRows']
       end
+
       if attributes.has_key?(:'isAutoFitColumns')
           self.is_auto_fit_columns = attributes[:'isAutoFitColumns']
       end
+
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
+
       if attributes.has_key?(:'storageName')
           self.storage_name = attributes[:'storageName']
       end
+
       if attributes.has_key?(:'outStorageName')
           self.out_storage_name = attributes[:'outStorageName']
       end
+
       if attributes.has_key?(:'checkExcelRestriction')
           self.check_excel_restriction = attributes[:'checkExcelRestriction']
       end
+
       if attributes.has_key?(:'region')
           self.region = attributes[:'region']
       end
+
       if attributes.has_key?(:'pageWideFitOnPerSheet')
           self.page_wide_fit_on_per_sheet = attributes[:'pageWideFitOnPerSheet']
       end
+
       if attributes.has_key?(:'pageTallFitOnPerSheet')
           self.page_tall_fit_on_per_sheet = attributes[:'pageTallFitOnPerSheet']
       end
+
       if attributes.has_key?(:'onePagePerSheet')
           self.one_page_per_sheet = attributes[:'onePagePerSheet']
       end
+
       if attributes.has_key?(:'FontsLocation')
           self.fonts_location = attributes[:'FontsLocation']
       end
@@ -178,7 +191,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(save_options) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

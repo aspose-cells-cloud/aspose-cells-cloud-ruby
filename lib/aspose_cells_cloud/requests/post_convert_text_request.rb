@@ -83,7 +83,6 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       post_body = api_client.object_to_http_body(convert_text_options) 
-         
 
       #auth_names = []
       auth_names = ['JWT']

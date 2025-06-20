@@ -45,12 +45,15 @@ module AsposeCellsCloud
       if attributes.has_key?(:'srcPath')
           self.src_path = attributes[:'srcPath']
       end
+
       if attributes.has_key?(:'destPath')
           self.dest_path = attributes[:'destPath']
       end
+
       if attributes.has_key?(:'srcStorageName')
           self.src_storage_name = attributes[:'srcStorageName']
       end
+
       if attributes.has_key?(:'destStorageName')
           self.dest_storage_name = attributes[:'destStorageName']
       end
@@ -91,7 +94,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "v3.0/cells/storage/folder/move/{srcPath}".sub('{' + 'srcPath' + '}', src_path.to_s)
+      local_var_path = "v4.0/cells/storage/folder/move/{srcPath}".sub('{' + 'srcPath' + '}', src_path.to_s)
       # query parameters
       query_params = {}
       query_params[:'destPath'] = self.dest_path if !self.dest_path.nil? 
@@ -108,7 +111,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-         
 
       #auth_names = []
       auth_names = ['JWT']
