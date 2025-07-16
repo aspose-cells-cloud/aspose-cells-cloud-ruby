@@ -33,14 +33,12 @@ module AsposeCellsCloud
   class RemoveCharactersOptions
         #Name property with a getter and setter override that returns a string.            
         attr_accessor :name
-        #            
+        #Represents data source.  There are three types of data, they are CloudFileSystem, RequestFiles, HttpUri.            
         attr_accessor :data_source
-        #            
+        #Represents file information. Include of filename, filesize, and file content(base64String).            
         attr_accessor :file_info
-        #            
-        attr_accessor :worksheet
-        #            
-        attr_accessor :range
+        #Specifies the range of cells within the worksheet where the spreadsheet operations will be performed. This parameter allows users to define the exact area to be processed, ensuring that operations are applied only to the designated cells.            
+        attr_accessor :scope_options
         #            
         attr_accessor :remove_characters_by_character
         #            
@@ -52,8 +50,7 @@ module AsposeCellsCloud
         :'name' => :'Name',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'Worksheet',
-        :'range' => :'Range',
+        :'scope_options' => :'ScopeOptions',
         :'remove_characters_by_character' => :'RemoveCharactersByCharacter',
         :'remove_characters_by_position' => :'RemoveCharactersByPosition'
       }
@@ -65,8 +62,7 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'String',
-        :'range' => :'String',
+        :'scope_options' => :'ScopeOptions',
         :'remove_characters_by_character' => :'RemoveCharactersByCharacter',
         :'remove_characters_by_position' => :'RemoveCharactersByPosition'
       }
@@ -89,11 +85,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'FileInfo')
           self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'Worksheet')
-          self.worksheet = attributes[:'Worksheet']
-      end
-      if attributes.has_key?(:'Range')
-          self.range = attributes[:'Range']
+      if attributes.has_key?(:'ScopeOptions')
+          self.scope_options = attributes[:'ScopeOptions']
       end
       if attributes.has_key?(:'RemoveCharactersByCharacter')
           self.remove_characters_by_character = attributes[:'RemoveCharactersByCharacter']
@@ -117,11 +110,8 @@ module AsposeCellsCloud
       if @file_info.nil?
           invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @worksheet.nil?
-          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
-      end
-      if @range.nil?
-          invalid_properties.push("invalid value for 'range', range cannot be nil.")
+      if @scope_options.nil?
+          invalid_properties.push("invalid value for 'scope_options', scope_options cannot be nil.")
       end
       if @remove_characters_by_character.nil?
           invalid_properties.push("invalid value for 'remove_characters_by_character', remove_characters_by_character cannot be nil.")
@@ -139,8 +129,7 @@ module AsposeCellsCloud
       return false if @name.nil?
       return false if @data_source.nil?
       return false if @file_info.nil?
-      return false if @worksheet.nil?
-      return false if @range.nil?
+      return false if @scope_options.nil?
       return false if @remove_characters_by_character.nil?
       return false if @remove_characters_by_position.nil?
       return true
@@ -154,8 +143,7 @@ module AsposeCellsCloud
           name == o.name &&
           data_source == o.data_source &&
           file_info == o.file_info &&
-          worksheet == o.worksheet &&
-          range == o.range &&
+          scope_options == o.scope_options &&
           remove_characters_by_character == o.remove_characters_by_character &&
           remove_characters_by_position == o.remove_characters_by_position 
           std_dev == o.std_dev
@@ -170,7 +158,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ name , data_source , file_info , worksheet , range , remove_characters_by_character , remove_characters_by_position ].hash
+      [ name , data_source , file_info , scope_options , remove_characters_by_character , remove_characters_by_position ].hash
     end
 
     # Builds the object from hash

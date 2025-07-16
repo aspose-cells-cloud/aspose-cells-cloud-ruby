@@ -31,15 +31,15 @@ require 'date'
 module AsposeCellsCloud
 
   class ScopeItem
-        #A property "WorksheetName" of type string with an initial value of an empty string.                        
-        attr_accessor :worksheet_name
-        #            
+        #The specific worksheet of spreadsheet.            
+        attr_accessor :worksheet
+        #The specific ranges of worksheet.            
         attr_accessor :ranges
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'worksheet_name' => :'WorksheetName',
+        :'worksheet' => :'Worksheet',
         :'ranges' => :'Ranges'
       }
     end
@@ -47,7 +47,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'worksheet_name' => :'String',
+        :'worksheet' => :'String',
         :'ranges' => :'Array<String>'
       }
     end
@@ -60,8 +60,8 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'WorksheetName')
-          self.worksheet_name = attributes[:'WorksheetName']
+      if attributes.has_key?(:'Worksheet')
+          self.worksheet = attributes[:'Worksheet']
       end
       if attributes.has_key?(:'Ranges')
           self.ranges = attributes[:'Ranges']
@@ -73,8 +73,8 @@ module AsposeCellsCloud
     # @return Array for valid properies with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @worksheet_name.nil?
-          invalid_properties.push("invalid value for 'worksheet_name', worksheet_name cannot be nil.")
+      if @worksheet.nil?
+          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
       end
       if @ranges.nil?
           invalid_properties.push("invalid value for 'ranges', ranges cannot be nil.")
@@ -86,7 +86,7 @@ module AsposeCellsCloud
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @worksheet_name.nil?
+      return false if @worksheet.nil?
       return false if @ranges.nil?
       return true
     end
@@ -96,7 +96,7 @@ module AsposeCellsCloud
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          worksheet_name == o.worksheet_name &&
+          worksheet == o.worksheet &&
           ranges == o.ranges 
           std_dev == o.std_dev
     end
@@ -110,7 +110,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ worksheet_name , ranges ].hash
+      [ worksheet , ranges ].hash
     end
 
     # Builds the object from hash

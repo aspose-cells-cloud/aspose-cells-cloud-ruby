@@ -33,9 +33,9 @@ module AsposeCellsCloud
   class ExtractTextOptions
         #This class has a public property for storing and retrieving a name value.            
         attr_accessor :name
-        #            
+        #Represents data source.  There are three types of data, they are CloudFileSystem, RequestFiles, HttpUri.            
         attr_accessor :data_source
-        #            
+        #Represents file information. Include of filename, filesize, and file content(base64String).            
         attr_accessor :file_info
         #            
         attr_accessor :worksheet

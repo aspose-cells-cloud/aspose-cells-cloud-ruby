@@ -33,14 +33,12 @@ module AsposeCellsCloud
   class ConvertTextOptions
         #The class has a public property called "Name" of type string that can be accessed and modified.            
         attr_accessor :name
-        #            
+        #Represents data source.  There are three types of data, they are CloudFileSystem, RequestFiles, HttpUri.            
         attr_accessor :data_source
-        #            
+        #Represents file information. Include of filename, filesize, and file content(base64String).            
         attr_accessor :file_info
-        #            
-        attr_accessor :worksheet
-        #            
-        attr_accessor :range
+        #Specifies the range of cells within the worksheet where the spreadsheet operations will be performed. This parameter allows users to define the exact area to be processed, ensuring that operations are applied only to the designated cells.            
+        attr_accessor :scope_options
         #            
         attr_accessor :convert_text_type
         #            
@@ -54,8 +52,7 @@ module AsposeCellsCloud
         :'name' => :'Name',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'Worksheet',
-        :'range' => :'Range',
+        :'scope_options' => :'ScopeOptions',
         :'convert_text_type' => :'ConvertTextType',
         :'source_characters' => :'SourceCharacters',
         :'target_characters' => :'TargetCharacters'
@@ -68,8 +65,7 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'String',
-        :'range' => :'String',
+        :'scope_options' => :'ScopeOptions',
         :'convert_text_type' => :'String',
         :'source_characters' => :'String',
         :'target_characters' => :'String'
@@ -93,11 +89,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'FileInfo')
           self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'Worksheet')
-          self.worksheet = attributes[:'Worksheet']
-      end
-      if attributes.has_key?(:'Range')
-          self.range = attributes[:'Range']
+      if attributes.has_key?(:'ScopeOptions')
+          self.scope_options = attributes[:'ScopeOptions']
       end
       if attributes.has_key?(:'ConvertTextType')
           self.convert_text_type = attributes[:'ConvertTextType']
@@ -124,11 +117,8 @@ module AsposeCellsCloud
       if @file_info.nil?
           invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @worksheet.nil?
-          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
-      end
-      if @range.nil?
-          invalid_properties.push("invalid value for 'range', range cannot be nil.")
+      if @scope_options.nil?
+          invalid_properties.push("invalid value for 'scope_options', scope_options cannot be nil.")
       end
       if @convert_text_type.nil?
           invalid_properties.push("invalid value for 'convert_text_type', convert_text_type cannot be nil.")
@@ -149,8 +139,7 @@ module AsposeCellsCloud
       return false if @name.nil?
       return false if @data_source.nil?
       return false if @file_info.nil?
-      return false if @worksheet.nil?
-      return false if @range.nil?
+      return false if @scope_options.nil?
       return false if @convert_text_type.nil?
       return false if @source_characters.nil?
       return false if @target_characters.nil?
@@ -165,8 +154,7 @@ module AsposeCellsCloud
           name == o.name &&
           data_source == o.data_source &&
           file_info == o.file_info &&
-          worksheet == o.worksheet &&
-          range == o.range &&
+          scope_options == o.scope_options &&
           convert_text_type == o.convert_text_type &&
           source_characters == o.source_characters &&
           target_characters == o.target_characters 
@@ -182,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ name , data_source , file_info , worksheet , range , convert_text_type , source_characters , target_characters ].hash
+      [ name , data_source , file_info , scope_options , convert_text_type , source_characters , target_characters ].hash
     end
 
     # Builds the object from hash

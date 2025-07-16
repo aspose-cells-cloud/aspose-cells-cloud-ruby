@@ -33,16 +33,12 @@ module AsposeCellsCloud
   class RemoveDuplicatesOptions
         #The class has a public property "Name" of type string that can be both read and written.            
         attr_accessor :name
-        #            
+        #Represents data source.  There are three types of data, they are CloudFileSystem, RequestFiles, HttpUri.            
         attr_accessor :data_source
-        #            
+        #Represents file information. Include of filename, filesize, and file content(base64String).            
         attr_accessor :file_info
-        #            
-        attr_accessor :worksheet
-        #            
-        attr_accessor :remove_duplicates_area
-        #            
-        attr_accessor :remove_duplicates_area_value
+        #Specifies the range of cells within the worksheet where the spreadsheet operations will be performed. This parameter allows users to define the exact area to be processed, ensuring that operations are applied only to the designated cells.            
+        attr_accessor :scope_options
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -50,9 +46,7 @@ module AsposeCellsCloud
         :'name' => :'Name',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'Worksheet',
-        :'remove_duplicates_area' => :'RemoveDuplicatesArea',
-        :'remove_duplicates_area_value' => :'RemoveDuplicatesAreaValue'
+        :'scope_options' => :'ScopeOptions'
       }
     end
 
@@ -62,9 +56,7 @@ module AsposeCellsCloud
         :'name' => :'String',
         :'data_source' => :'DataSource',
         :'file_info' => :'FileInfo',
-        :'worksheet' => :'String',
-        :'remove_duplicates_area' => :'String',
-        :'remove_duplicates_area_value' => :'String'
+        :'scope_options' => :'ScopeOptions'
       }
     end
 
@@ -85,14 +77,8 @@ module AsposeCellsCloud
       if attributes.has_key?(:'FileInfo')
           self.file_info = attributes[:'FileInfo']
       end
-      if attributes.has_key?(:'Worksheet')
-          self.worksheet = attributes[:'Worksheet']
-      end
-      if attributes.has_key?(:'RemoveDuplicatesArea')
-          self.remove_duplicates_area = attributes[:'RemoveDuplicatesArea']
-      end
-      if attributes.has_key?(:'RemoveDuplicatesAreaValue')
-          self.remove_duplicates_area_value = attributes[:'RemoveDuplicatesAreaValue']
+      if attributes.has_key?(:'ScopeOptions')
+          self.scope_options = attributes[:'ScopeOptions']
       end
 
     end
@@ -110,14 +96,8 @@ module AsposeCellsCloud
       if @file_info.nil?
           invalid_properties.push("invalid value for 'file_info', file_info cannot be nil.")
       end
-      if @worksheet.nil?
-          invalid_properties.push("invalid value for 'worksheet', worksheet cannot be nil.")
-      end
-      if @remove_duplicates_area.nil?
-          invalid_properties.push("invalid value for 'remove_duplicates_area', remove_duplicates_area cannot be nil.")
-      end
-      if @remove_duplicates_area_value.nil?
-          invalid_properties.push("invalid value for 'remove_duplicates_area_value', remove_duplicates_area_value cannot be nil.")
+      if @scope_options.nil?
+          invalid_properties.push("invalid value for 'scope_options', scope_options cannot be nil.")
       end
 
       return invalid_properties
@@ -129,9 +109,7 @@ module AsposeCellsCloud
       return false if @name.nil?
       return false if @data_source.nil?
       return false if @file_info.nil?
-      return false if @worksheet.nil?
-      return false if @remove_duplicates_area.nil?
-      return false if @remove_duplicates_area_value.nil?
+      return false if @scope_options.nil?
       return true
     end
 
@@ -143,9 +121,7 @@ module AsposeCellsCloud
           name == o.name &&
           data_source == o.data_source &&
           file_info == o.file_info &&
-          worksheet == o.worksheet &&
-          remove_duplicates_area == o.remove_duplicates_area &&
-          remove_duplicates_area_value == o.remove_duplicates_area_value 
+          scope_options == o.scope_options 
           std_dev == o.std_dev
     end
 
@@ -158,7 +134,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ name , data_source , file_info , worksheet , remove_duplicates_area , remove_duplicates_area_value ].hash
+      [ name , data_source , file_info , scope_options ].hash
     end
 
     # Builds the object from hash

@@ -73,6 +73,14 @@ module AsposeCellsCloud
        return data
     end
 
+    # Converts a worksheet of spreadsheet in cloud storage to the specified format.
+
+    def export_worksheet_as_format( export_worksheet_as_format_request, opts = {})
+
+       data, _status_code, _headers = export_worksheet_as_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Converts a chart of spreadsheet in cloud storage to the specified format.
 
     def export_chart_as_format( export_chart_as_format_request, opts = {})
@@ -81,11 +89,123 @@ module AsposeCellsCloud
        return data
     end
 
+    # Converts a table of spreadsheet in cloud storage to the specified format.
+
+    def export_table_as_format( export_table_as_format_request, opts = {})
+
+       data, _status_code, _headers = export_table_as_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts the range of spreadsheet in cloud storage to the specified format.
+
+    def export_range_as_format( export_range_as_format_request, opts = {})
+
+       data, _status_code, _headers = export_range_as_format_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Converts a spreadsheet on a local drive to the specified format.
 
     def convert_spreadsheet( convert_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = convert_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a worksheet of spreadsheet on a local drive to the image format.
+
+    def convert_worksheet_to_image( convert_worksheet_to_image_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a worksheet of spreadsheet on a local drive to the pdf file.
+
+    def convert_worksheet_to_pdf( convert_worksheet_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a table of spreadsheet on a local drive to the image file.
+
+    def convert_table_to_image( convert_table_to_image_request, opts = {})
+
+       data, _status_code, _headers = convert_table_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a table of spreadsheet on a local drive to the pdf file.
+
+    def convert_table_to_pdf( convert_table_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = convert_table_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a table of spreadsheet on a local drive to the csv file.
+
+    def convert_table_to_csv( convert_table_to_csv_request, opts = {})
+
+       data, _status_code, _headers = convert_table_to_csv_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a table of spreadsheet on a local drive to the html file.
+
+    def convert_table_to_html( convert_table_to_html_request, opts = {})
+
+       data, _status_code, _headers = convert_table_to_html_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a table of spreadsheet on a local drive to the json file.
+
+    def convert_table_to_json( convert_table_to_json_request, opts = {})
+
+       data, _status_code, _headers = convert_table_to_json_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a range of spreadsheet on a local drive to the image file.
+
+    def convert_range_to_image( convert_range_to_image_request, opts = {})
+
+       data, _status_code, _headers = convert_range_to_image_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a range of spreadsheet on a local drive to the pdf file.
+
+    def convert_range_to_pdf( convert_range_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = convert_range_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a range of spreadsheet on a local drive to the csv file.
+
+    def convert_range_to_csv( convert_range_to_csv_request, opts = {})
+
+       data, _status_code, _headers = convert_range_to_csv_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a range of spreadsheet on a local drive to the html file.
+
+    def convert_range_to_html( convert_range_to_html_request, opts = {})
+
+       data, _status_code, _headers = convert_range_to_html_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a range of spreadsheet on a local drive to the json file.
+
+    def convert_range_to_json( convert_range_to_json_request, opts = {})
+
+       data, _status_code, _headers = convert_range_to_json_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -158,6 +278,22 @@ module AsposeCellsCloud
     def get_public_key( get_public_key_request, opts = {})
 
        data, _status_code, _headers = get_public_key_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Applies dual-layer password protection to Excel spreadsheets, supporting both open and modify passwords with encryption.
+
+    def protect_spreadsheet( protect_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = protect_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Removes dual-layer password protection from Excel spreadsheets, supporting both open and modify passwords with encryption.
+
+    def unprotect_spreadsheet( unprotect_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = unprotect_spreadsheet_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -256,6 +392,22 @@ module AsposeCellsCloud
        data, _status_code, _headers = search_broken_links_in_remote_range_request.create_http_request(@api_client,opts )
        return data
     end
+
+    # Get the specifications
+
+    def spec( spec_request, opts = {})
+
+       data, _status_code, _headers = spec_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def codegen_spec( codegen_spec_request, opts = {})
+
+       data, _status_code, _headers = codegen_spec_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Delete all blank rows which do not contain any data or other object.
 
     def delete_spreadsheet_blank_rows( delete_spreadsheet_blank_rows_request, opts = {})
@@ -2468,7 +2620,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Adds text content to a workbook at specified positions within cells based on provided options using ASP.NET Core Web API.
+    # Adds text content to a specified location within a document. It requires an object that defines the text to be added and the insertion location.
 
     def post_add_text_content( post_add_text_content_request, opts = {})
 
@@ -2476,6 +2628,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # The PostTrimContent API is designed to process and trim content within a specified range in a spreadsheet. This API allows users to remove extra spaces, line breaks, or other unnecessary characters from the content of selected cells. It is particularly useful for cleaning up data entries and ensuring consistency in spreadsheet formatting
 
     def post_trim_content( post_trim_content_request, opts = {})
 
@@ -2483,6 +2636,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Managing inconsistent text case in spreadsheets (Excel, Google Sheets, CSV) can be frustrating, especially with large datasets. The PostUpdateWordCase WEB API solves this by automating text case conversions, ensuring clean and standardized data.
 
     def post_update_word_case( post_update_word_case_request, opts = {})
 
@@ -2490,6 +2644,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # A comprehensive set of tools for cleaning text content within selected cells. It allows users to remove specific characters, character sets, and substrings, ensuring that the text is standardized and free from unwanted symbols or sequences.
 
     def post_remove_characters( post_remove_characters_request, opts = {})
 
@@ -2497,6 +2652,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Enhance Excel data through essential text conversions: convert text to numbers, replace characters and line breaks, and remove accents.
 
     def post_convert_text( post_convert_text_request, opts = {})
 
@@ -2504,6 +2660,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Efficiently remove duplicate substrings from Excel cells. Select a range, specify delimiters, and apply options to eliminate repeated text segments.
 
     def post_remove_duplicates( post_remove_duplicates_request, opts = {})
 
@@ -2511,6 +2668,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Effortlessly extract text and numbers from Excel cells with precise options. This API allows extraction of first/last characters, text between delimiters, and numbers from strings, with output as static values or formulas.
 
     def post_extract_text( post_extract_text_request, opts = {})
 
@@ -2518,6 +2676,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Efficiently divides Excel cell content into columns or rows based on specified delimiters or patterns. Supports Character-based splitting, Custom string splitting, Mask and wildcard splitting for pattern-based division, Line break division, Column or row splitting, Delimiter removal or retention.
 
     def post_split_text( post_split_text_request, opts = {})
 

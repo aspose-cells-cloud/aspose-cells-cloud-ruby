@@ -31,25 +31,25 @@ require 'date'
 module AsposeCellsCloud
 
   class TrimContentOptions
-        #This class has a public property named DataSource of type DataSource that has both a getter and a setter method.                        
+        #Represents data source.  There are three types of data, they are CloudFileSystem, RequestFiles, HttpUri.            
         attr_accessor :data_source
-        #            
+        #Represents file information. Include of filename, filesize, and file content(base64String).            
         attr_accessor :file_info
-        #            
+        #Trim Content            
         attr_accessor :trim_content
-        #            
+        #If the trim leading value is true, the trim content before and after cell values will be deleted.            
         attr_accessor :trim_leading
-        #            
+        #If the trim trailing value is true, the trim content before and after cell values will be deleted.            
         attr_accessor :trim_trailing
-        #            
+        #When the trim space between word to 1 parameter is true, it enables the removal of extra spaces between words within a cell, ensuring that only a single space is maintained between words.            
         attr_accessor :trim_space_between_word_to1
         #            
         attr_accessor :trim_non_breaking_spaces
-        #            
+        #When this parameter is enabled (set to True), it deletes extra line breaks within the selected range, ensuring that only necessary line breaks are retained.            
         attr_accessor :remove_extra_line_breaks
-        #            
+        #When this parameter is enabled (set to True), it removes all line breaks within the selected range, resulting in a continuous block of text without any line breaks.            
         attr_accessor :remove_all_line_breaks
-        #            
+        #Specifies the range of cells within the worksheet where the spreadsheet operations will be performed. This parameter allows users to define the exact area to be processed, ensuring that operations are applied only to the designated cells.            
         attr_accessor :scope_options
 
     # Attribute mapping from ruby-style variable name to JSON key.

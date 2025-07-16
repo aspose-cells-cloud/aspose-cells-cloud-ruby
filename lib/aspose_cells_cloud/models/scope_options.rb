@@ -31,9 +31,9 @@ require 'date'
 module AsposeCellsCloud
 
   class ScopeOptions
-        #Property Summary: The Scope property in the class is decorated with a JsonConverter attribute using StringEnumConverter.                        
+        #ScopeOptionsType is a type that represents options or settings that are specific to a particular scope.            
         attr_accessor :scope
-        #            
+        #Specifies the designated work area within the worksheet where operations are to be performed.             
         attr_accessor :scope_items
 
     # Attribute mapping from ruby-style variable name to JSON key.
