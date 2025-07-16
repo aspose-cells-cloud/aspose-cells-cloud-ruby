@@ -1,5 +1,14 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.6
+
+|**Summary**| **Category** |
+| :- |:-------------|
+| Support delete blank rows, columns, and worksheets. | New Feature |
+| Optimize search context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
+| Optimize search broken links for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
+| Optimize replace context for remote spreadsheet features by splitting them into independent APIs, each dedicated to a specific operational area. | New Feature |
+
 ## Feature & Enhancements in Version 25.5
 
 - Add the new API for getting the public key for encrypting the password.
