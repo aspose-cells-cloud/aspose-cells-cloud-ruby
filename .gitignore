@@ -39,3 +39,5 @@ build/
 .rvmrc
 data/roywang.pfx
 package-lock.json
+spec/
+TestData/

@@ -133,9 +133,11 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-      file.each do |filename , context|
-      form_params[File.basename(filename)]  = context
+      if  file && !file.empty?
+        header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
+        file.each do |filename , context|
+        form_params[File.basename(filename)]  = context
+        end
       end
 
       #auth_names = []
