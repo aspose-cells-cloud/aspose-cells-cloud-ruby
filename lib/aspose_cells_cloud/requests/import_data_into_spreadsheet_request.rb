@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="ReplaceSpreadsheetContent_request.rb.cs">
+ <copyright company="Aspose" file="ImportDataIntoSpreadsheet_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,13 +29,18 @@
 require "uri"
 
 module AsposeCellsCloud
-  class ReplaceSpreadsheetContentRequest
+  class ImportDataIntoSpreadsheetRequest
 
+    attr_accessor :datafile  
     attr_accessor :spreadsheet  
-    attr_accessor :search_text  
-    attr_accessor :replace_text  
     attr_accessor :worksheet  
-    attr_accessor :cell_area  
+    attr_accessor :startcell  
+    attr_accessor :insert  
+    attr_accessor :convert_numeric_data  
+    attr_accessor :splitter  
+    attr_accessor :out_path  
+    attr_accessor :out_storage_name  
+    attr_accessor :fonts_location  
     attr_accessor :regoin  
     attr_accessor :password  
 
@@ -45,24 +50,44 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'datafile')
+          self.datafile = attributes[:'datafile']
+      end
+
       if attributes.has_key?(:'Spreadsheet')
           self.spreadsheet = attributes[:'Spreadsheet']
-      end
-
-      if attributes.has_key?(:'searchText')
-          self.search_text = attributes[:'searchText']
-      end
-
-      if attributes.has_key?(:'replaceText')
-          self.replace_text = attributes[:'replaceText']
       end
 
       if attributes.has_key?(:'worksheet')
           self.worksheet = attributes[:'worksheet']
       end
 
-      if attributes.has_key?(:'cellArea')
-          self.cell_area = attributes[:'cellArea']
+      if attributes.has_key?(:'startcell')
+          self.startcell = attributes[:'startcell']
+      end
+
+      if attributes.has_key?(:'insert')
+          self.insert = attributes[:'insert']
+      end
+
+      if attributes.has_key?(:'convertNumericData')
+          self.convert_numeric_data = attributes[:'convertNumericData']
+      end
+
+      if attributes.has_key?(:'splitter')
+          self.splitter = attributes[:'splitter']
+      end
+
+      if attributes.has_key?(:'outPath')
+          self.out_path = attributes[:'outPath']
+      end
+
+      if attributes.has_key?(:'outStorageName')
+          self.out_storage_name = attributes[:'outStorageName']
+      end
+
+      if attributes.has_key?(:'fontsLocation')
+          self.fonts_location = attributes[:'fontsLocation']
       end
 
       if attributes.has_key?(:'regoin')
@@ -77,11 +102,16 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'datafile' => :'datafile',
         :'spreadsheet' => :'Spreadsheet',
-        :'search_text' => :'searchText',
-        :'replace_text' => :'replaceText',
         :'worksheet' => :'worksheet',
-        :'cell_area' => :'cellArea',
+        :'startcell' => :'startcell',
+        :'insert' => :'insert',
+        :'convert_numeric_data' => :'convertNumericData',
+        :'splitter' => :'splitter',
+        :'out_path' => :'outPath',
+        :'out_storage_name' => :'outStorageName',
+        :'fonts_location' => :'fontsLocation',
         :'regoin' => :'regoin',
         :'password' => :'password'
       }
@@ -90,11 +120,16 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'datafile' => :'String',
         :'spreadsheet' => :'String',
-        :'search_text' => :'String',
-        :'replace_text' => :'String',
         :'worksheet' => :'String',
-        :'cell_area' => :'String',
+        :'startcell' => :'String',
+        :'insert' => :'BOOLEAN',
+        :'convert_numeric_data' => :'BOOLEAN',
+        :'splitter' => :'String',
+        :'out_path' => :'String',
+        :'out_storage_name' => :'String',
+        :'fonts_location' => :'String',
         :'regoin' => :'String',
         :'password' => :'String'
       }
@@ -102,30 +137,38 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.replace_spreadsheet_content ..."
+        api_client.config.logger.debug "Calling API: CellsApi.import_data_into_spreadsheet ..."
       end
       api_client.request_token_if_needed
+      # verify the required parameter 'datafile' is set
+      if api_client.config.client_side_validation && datafile.nil?
+          fail ArgumentError, "Missing the required parameter 'datafile' when calling CellsApi.import_data_into_spreadsheet "
+      end 
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.replace_spreadsheet_content "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.import_data_into_spreadsheet "
       end 
-      # verify the required parameter 'search_text' is set
-      if api_client.config.client_side_validation && search_text.nil?
-          fail ArgumentError, "Missing the required parameter 'search_text' when calling CellsApi.replace_spreadsheet_content "
+      # verify the required parameter 'worksheet' is set
+      if api_client.config.client_side_validation && worksheet.nil?
+          fail ArgumentError, "Missing the required parameter 'worksheet' when calling CellsApi.import_data_into_spreadsheet "
       end 
-      # verify the required parameter 'replace_text' is set
-      if api_client.config.client_side_validation && replace_text.nil?
-          fail ArgumentError, "Missing the required parameter 'replace_text' when calling CellsApi.replace_spreadsheet_content "
+      # verify the required parameter 'startcell' is set
+      if api_client.config.client_side_validation && startcell.nil?
+          fail ArgumentError, "Missing the required parameter 'startcell' when calling CellsApi.import_data_into_spreadsheet "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/replace/content"
+      local_var_path = "v4.0/cells/import/data"
       # query parameters
       query_params = {}
-      query_params[:'searchText'] = self.search_text if !self.search_text.nil? 
-      query_params[:'replaceText'] = self.replace_text if !self.replace_text.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
-      query_params[:'cellArea'] = self.cell_area if !self.cell_area.nil? 
+      query_params[:'startcell'] = self.startcell if !self.startcell.nil? 
+      query_params[:'insert'] = self.insert if !self.insert.nil? 
+      query_params[:'convertNumericData'] = self.convert_numeric_data if !self.convert_numeric_data.nil? 
+      query_params[:'splitter'] = self.splitter if !self.splitter.nil? 
+      query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
+      query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
+      query_params[:'fontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
       query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
@@ -140,6 +183,9 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
+      if !datafile.empty? && File.exist?(datafile )
+          form_params[File.basename(datafile)] =  ::File.open(datafile,"r")   
+      end 
       if !spreadsheet.empty? && File.exist?(spreadsheet )
           form_params[File.basename(spreadsheet)] =  ::File.open(spreadsheet,"r")   
       end 
@@ -154,7 +200,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.replace_spreadsheet_content\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.import_data_into_spreadsheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

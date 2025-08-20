@@ -103,7 +103,9 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-      form_params[File.basename(upload_files)] =  ::File.open(upload_files,"r")   
+      if !upload_files.empty? && File.exist?(upload_files )
+          form_params[File.basename(upload_files)] =  ::File.open(upload_files,"r")   
+      end 
 
       #auth_names = []
       auth_names = ['JWT']

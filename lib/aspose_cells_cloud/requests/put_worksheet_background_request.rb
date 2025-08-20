@@ -133,10 +133,10 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if  file && !file.empty?
+      if file != nil
         header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
         file.each do |filename , context|
-        form_params[File.basename(filename)]  = context
+          form_params[File.basename(filename)]  = context
         end
       end
 

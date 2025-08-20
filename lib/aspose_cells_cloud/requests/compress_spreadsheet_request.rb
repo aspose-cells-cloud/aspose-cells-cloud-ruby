@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="ReplaceSpreadsheetContent_request.rb.cs">
+ <copyright company="Aspose" file="CompressSpreadsheet_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,13 +29,12 @@
 require "uri"
 
 module AsposeCellsCloud
-  class ReplaceSpreadsheetContentRequest
+  class CompressSpreadsheetRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :search_text  
-    attr_accessor :replace_text  
-    attr_accessor :worksheet  
-    attr_accessor :cell_area  
+    attr_accessor :level  
+    attr_accessor :out_path  
+    attr_accessor :out_storage_name  
     attr_accessor :regoin  
     attr_accessor :password  
 
@@ -49,20 +48,16 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'searchText')
-          self.search_text = attributes[:'searchText']
+      if attributes.has_key?(:'level')
+          self.level = attributes[:'level']
       end
 
-      if attributes.has_key?(:'replaceText')
-          self.replace_text = attributes[:'replaceText']
+      if attributes.has_key?(:'outPath')
+          self.out_path = attributes[:'outPath']
       end
 
-      if attributes.has_key?(:'worksheet')
-          self.worksheet = attributes[:'worksheet']
-      end
-
-      if attributes.has_key?(:'cellArea')
-          self.cell_area = attributes[:'cellArea']
+      if attributes.has_key?(:'outStorageName')
+          self.out_storage_name = attributes[:'outStorageName']
       end
 
       if attributes.has_key?(:'regoin')
@@ -78,10 +73,9 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'search_text' => :'searchText',
-        :'replace_text' => :'replaceText',
-        :'worksheet' => :'worksheet',
-        :'cell_area' => :'cellArea',
+        :'level' => :'level',
+        :'out_path' => :'outPath',
+        :'out_storage_name' => :'outStorageName',
         :'regoin' => :'regoin',
         :'password' => :'password'
       }
@@ -91,10 +85,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'search_text' => :'String',
-        :'replace_text' => :'String',
-        :'worksheet' => :'String',
-        :'cell_area' => :'String',
+        :'level' => :'Integer',
+        :'out_path' => :'String',
+        :'out_storage_name' => :'String',
         :'regoin' => :'String',
         :'password' => :'String'
       }
@@ -102,30 +95,25 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.replace_spreadsheet_content ..."
+        api_client.config.logger.debug "Calling API: CellsApi.compress_spreadsheet ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.replace_spreadsheet_content "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.compress_spreadsheet "
       end 
-      # verify the required parameter 'search_text' is set
-      if api_client.config.client_side_validation && search_text.nil?
-          fail ArgumentError, "Missing the required parameter 'search_text' when calling CellsApi.replace_spreadsheet_content "
-      end 
-      # verify the required parameter 'replace_text' is set
-      if api_client.config.client_side_validation && replace_text.nil?
-          fail ArgumentError, "Missing the required parameter 'replace_text' when calling CellsApi.replace_spreadsheet_content "
+      # verify the required parameter 'level' is set
+      if api_client.config.client_side_validation && level.nil?
+          fail ArgumentError, "Missing the required parameter 'level' when calling CellsApi.compress_spreadsheet "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/replace/content"
+      local_var_path = "v4.0/cells/spreadsheet/compress"
       # query parameters
       query_params = {}
-      query_params[:'searchText'] = self.search_text if !self.search_text.nil? 
-      query_params[:'replaceText'] = self.replace_text if !self.replace_text.nil? 
-      query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
-      query_params[:'cellArea'] = self.cell_area if !self.cell_area.nil? 
+      query_params[:'level'] = self.level if !self.level.nil? 
+      query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
+      query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
       query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
@@ -154,7 +142,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.replace_spreadsheet_content\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.compress_spreadsheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

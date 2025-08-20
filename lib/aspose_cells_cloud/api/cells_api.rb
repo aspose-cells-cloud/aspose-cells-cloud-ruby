@@ -40,6 +40,22 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
+    # The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions.
+
+    def aggregate_cells_by_color( aggregate_cells_by_color_request, opts = {})
+
+       data, _status_code, _headers = aggregate_cells_by_color_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Math Calculate API enables you to perform a variety of mathematical operations on a selected range of cells. You can add or subtract a specific number from all selected cells, as well as multiply or divide individual cells and entire columns. This API simplifies complex calculations and enhances data manipulation capabilities.
+
+    def math_calculate( math_calculate_request, opts = {})
+
+       data, _status_code, _headers = math_calculate_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Get Access Token Result: The Cells Cloud Get Token API acts as a proxy service,
     # forwarding user requests to the Aspose Cloud authentication server and returning the resulting access token to the client.
 
@@ -273,11 +289,66 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def import_data_into_spreadsheet( import_data_into_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = import_data_into_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Get an asymmetric public key.
 
     def get_public_key( get_public_key_request, opts = {})
 
        data, _status_code, _headers = get_public_key_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API allows users to create a new spreadsheet with a specified name. Optionally, a template can be provided to initialize the spreadsheet with predefined content or formatting.
+
+    def create_spreadsheet( create_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = create_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API enables users to add a new worksheet to a workbook, specifying the worksheet's type, position, and name. This function provides flexibility in managing workbook structure by allowing detailed control over worksheet addition.
+
+    def add_worksheet_to_spreadsheet( add_worksheet_to_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = add_worksheet_to_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API endpoint allows users to delete a specified worksheet from a workbook. This function provides a straightforward way to manage workbook structure by removing unnecessary or redundant worksheets.
+
+    def delete_worksheet_from_spreadsheet( delete_worksheet_from_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = delete_worksheet_from_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API endpoint allows users to rename a specified worksheet within a workbook. This function provides a straightforward way to update worksheet names, enhancing workbook organization and readability.
+
+    def rename_worksheet_in_spreadsheet( rename_worksheet_in_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = rename_worksheet_in_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API endpoint allows users to move a specified worksheet within a workbook. This function provides a straightforward way to move a worksheet, enhancing workbook organization.
+
+    def move_worksheet_in_spreadsheet( move_worksheet_in_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = move_worksheet_in_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Web API endpoint allows users to compress a spreadsheet to reduce its file size. This function provides a straightforward way to optimize the storage and performance of spreadsheets by applying a specified compression level.
+
+    def compress_spreadsheet( compress_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = compress_spreadsheet_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -429,6 +500,14 @@ module AsposeCellsCloud
     def delete_spreadsheet_blank_worksheets( delete_spreadsheet_blank_worksheets_request, opts = {})
 
        data, _status_code, _headers = delete_spreadsheet_blank_worksheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # The Swap Ranges for Excel API provides a powerful tool to move any two columns, rows, ranges, or individual cells within an Excel file. This API allows users to re-arrange their tables quickly and efficiently, ensuring that the original data formatting is preserved and all existing formulas continue to function correctly. By leveraging this API, users can streamline their data manipulation tasks and maintain the integrity of their spreadsheets.
+
+    def sawp_range( sawp_range_request, opts = {})
+
+       data, _status_code, _headers = sawp_range_request.create_http_request(@api_client,opts )
        return data
     end
 
