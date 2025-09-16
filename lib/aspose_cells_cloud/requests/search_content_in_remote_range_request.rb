@@ -38,7 +38,7 @@ module AsposeCellsCloud
     attr_accessor :ignoring_case  
     attr_accessor :folder  
     attr_accessor :storage_name  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -75,8 +75,8 @@ module AsposeCellsCloud
           self.storage_name = attributes[:'storageName']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -94,7 +94,7 @@ module AsposeCellsCloud
         :'ignoring_case' => :'ignoringCase',
         :'folder' => :'folder',
         :'storage_name' => :'storageName',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -109,7 +109,7 @@ module AsposeCellsCloud
         :'ignoring_case' => :'BOOLEAN',
         :'folder' => :'String',
         :'storage_name' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -144,7 +144,7 @@ module AsposeCellsCloud
       query_params[:'ignoringCase'] = self.ignoring_case if !self.ignoring_case.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

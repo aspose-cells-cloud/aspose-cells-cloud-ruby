@@ -36,7 +36,7 @@ module AsposeCellsCloud
     attr_accessor :position  
     attr_accessor :out_path  
     attr_accessor :out_storage_name  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -65,8 +65,8 @@ module AsposeCellsCloud
           self.out_storage_name = attributes[:'outStorageName']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -82,7 +82,7 @@ module AsposeCellsCloud
         :'position' => :'position',
         :'out_path' => :'outPath',
         :'out_storage_name' => :'outStorageName',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -95,7 +95,7 @@ module AsposeCellsCloud
         :'position' => :'Integer',
         :'out_path' => :'String',
         :'out_storage_name' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -126,7 +126,7 @@ module AsposeCellsCloud
       query_params[:'position'] = self.position if !self.position.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

@@ -31,7 +31,7 @@ require "uri"
 module AsposeCellsCloud
   class CodegenSpecRequest
 
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -40,8 +40,8 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -52,7 +52,7 @@ module AsposeCellsCloud
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -60,7 +60,7 @@ module AsposeCellsCloud
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -75,7 +75,7 @@ module AsposeCellsCloud
       local_var_path = "v4.0/cells/codegen/spec"
       # query parameters
       query_params = {}
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

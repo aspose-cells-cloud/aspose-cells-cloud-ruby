@@ -45,8 +45,6 @@ module AsposeCellsCloud
         attr_accessor :min_value
         #            
         attr_accessor :average_value
-        #            
-        attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -57,8 +55,7 @@ module AsposeCellsCloud
         :'sum' => :'Sum',
         :'max_value' => :'MaxValue',
         :'min_value' => :'MinValue',
-        :'average_value' => :'AverageValue',
-        :'value' => :'Value'
+        :'average_value' => :'AverageValue'
       }
     end
 
@@ -71,8 +68,7 @@ module AsposeCellsCloud
         :'sum' => :'Float',
         :'max_value' => :'Float',
         :'min_value' => :'Float',
-        :'average_value' => :'Float',
-        :'value' => :'Float'
+        :'average_value' => :'Float'
       }
     end
 
@@ -105,9 +101,6 @@ module AsposeCellsCloud
       if attributes.has_key?(:'AverageValue')
           self.average_value = attributes[:'AverageValue']
       end
-      if attributes.has_key?(:'Value')
-          self.value = attributes[:'Value']
-      end
 
     end
 
@@ -136,9 +129,6 @@ module AsposeCellsCloud
       if @average_value.nil?
           invalid_properties.push("invalid value for 'average_value', average_value cannot be nil.")
       end
-      if @value.nil?
-          invalid_properties.push("invalid value for 'value', value cannot be nil.")
-      end
 
       return invalid_properties
     end
@@ -153,7 +143,6 @@ module AsposeCellsCloud
       return false if @max_value.nil?
       return false if @min_value.nil?
       return false if @average_value.nil?
-      return false if @value.nil?
       return true
     end
 
@@ -168,8 +157,7 @@ module AsposeCellsCloud
           sum == o.sum &&
           max_value == o.max_value &&
           min_value == o.min_value &&
-          average_value == o.average_value &&
-          value == o.value 
+          average_value == o.average_value 
           std_dev == o.std_dev
     end
 
@@ -182,7 +170,7 @@ module AsposeCellsCloud
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [ aggregate_operation , color_name , count , sum , max_value , min_value , average_value , value ].hash
+      [ aggregate_operation , color_name , count , sum , max_value , min_value , average_value ].hash
     end
 
     # Builds the object from hash

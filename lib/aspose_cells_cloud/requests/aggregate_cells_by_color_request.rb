@@ -36,7 +36,7 @@ module AsposeCellsCloud
     attr_accessor :range  
     attr_accessor :operation  
     attr_accessor :color_position  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -65,8 +65,8 @@ module AsposeCellsCloud
           self.color_position = attributes[:'colorPosition']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -82,7 +82,7 @@ module AsposeCellsCloud
         :'range' => :'range',
         :'operation' => :'operation',
         :'color_position' => :'colorPosition',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -95,7 +95,7 @@ module AsposeCellsCloud
         :'range' => :'String',
         :'operation' => :'String',
         :'color_position' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -118,7 +118,7 @@ module AsposeCellsCloud
       query_params[:'range'] = self.range if !self.range.nil? 
       query_params[:'operation'] = self.operation if !self.operation.nil? 
       query_params[:'colorPosition'] = self.color_position if !self.color_position.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

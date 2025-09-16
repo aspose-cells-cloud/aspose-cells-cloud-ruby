@@ -32,7 +32,7 @@ module AsposeCellsCloud
   class SpecRequest
 
     attr_accessor :version  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -45,8 +45,8 @@ module AsposeCellsCloud
           self.version = attributes[:'version']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -58,7 +58,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'version' => :'version',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -67,7 +67,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'version' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -87,7 +87,7 @@ module AsposeCellsCloud
       # query parameters
       query_params = {}
       query_params[:'version'] = self.version if !self.version.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

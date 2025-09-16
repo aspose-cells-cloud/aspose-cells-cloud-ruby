@@ -36,7 +36,7 @@ module AsposeCellsCloud
     attr_accessor :cell_area  
     attr_accessor :folder  
     attr_accessor :storage_name  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -65,8 +65,8 @@ module AsposeCellsCloud
           self.storage_name = attributes[:'storageName']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -82,7 +82,7 @@ module AsposeCellsCloud
         :'cell_area' => :'cellArea',
         :'folder' => :'folder',
         :'storage_name' => :'storageName',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -95,7 +95,7 @@ module AsposeCellsCloud
         :'cell_area' => :'String',
         :'folder' => :'String',
         :'storage_name' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -124,7 +124,7 @@ module AsposeCellsCloud
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters
@@ -146,7 +146,7 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'BrokenLinksReponse')
+        :return_type => 'BrokenLinksResponse')
       if api_client.config.debugging
         api_client.config.logger.debug "API called: Specification.Name>Api.search_broken_links_in_remote_range\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

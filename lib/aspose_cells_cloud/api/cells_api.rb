@@ -48,7 +48,6 @@ module AsposeCellsCloud
        return data
     end
 
-    # The Math Calculate API enables you to perform a variety of mathematical operations on a selected range of cells. You can add or subtract a specific number from all selected cells, as well as multiply or divide individual cells and entire columns. This API simplifies complex calculations and enhances data manipulation capabilities.
 
     def math_calculate( math_calculate_request, opts = {})
 
@@ -126,6 +125,22 @@ module AsposeCellsCloud
     def convert_spreadsheet( convert_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = convert_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a spreadsheet on a local drive to the pdf file.
+
+    def convert_spreadsheet_to_pdf( convert_spreadsheet_to_pdf_request, opts = {})
+
+       data, _status_code, _headers = convert_spreadsheet_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a spreadsheet on a local drive to the csv file.
+
+    def convert_spreadsheet_to_csv( convert_spreadsheet_to_csv_request, opts = {})
+
+       data, _status_code, _headers = convert_spreadsheet_to_csv_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -289,6 +304,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Import data into a spreadsheet from a supported data file format.
 
     def import_data_into_spreadsheet( import_data_into_spreadsheet_request, opts = {})
 
@@ -479,7 +495,22 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all blank rows which do not contain any data or other object.
+    # The TrimSpreadsheetContent API is designed to process and trim content within a spreadsheet. This API allows users to remove extra spaces, line breaks, or other unnecessary characters from the content of selected cells. It is particularly useful for cleaning up data entries and ensuring consistency in spreadsheet formatting
+
+    def trim_spreadsheet_content( trim_spreadsheet_content_request, opts = {})
+
+       data, _status_code, _headers = trim_spreadsheet_content_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def trim_worksheet_range( trim_worksheet_range_request, opts = {})
+
+       data, _status_code, _headers = trim_worksheet_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Delete all blank rows that do not contain any data or other objects.
 
     def delete_spreadsheet_blank_rows( delete_spreadsheet_blank_rows_request, opts = {})
 
@@ -487,7 +518,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all blank columns which do not contain any data.
+    # Delete all blank rows that do not contain any data or other objects.
 
     def delete_spreadsheet_blank_columns( delete_spreadsheet_blank_columns_request, opts = {})
 
@@ -495,7 +526,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Delete all blank worksheets which do not contain any data or other object.
+    # Delete all blank rows that do not contain any data or other objects.
 
     def delete_spreadsheet_blank_worksheets( delete_spreadsheet_blank_worksheets_request, opts = {})
 
@@ -505,9 +536,9 @@ module AsposeCellsCloud
 
     # The Swap Ranges for Excel API provides a powerful tool to move any two columns, rows, ranges, or individual cells within an Excel file. This API allows users to re-arrange their tables quickly and efficiently, ensuring that the original data formatting is preserved and all existing formulas continue to function correctly. By leveraging this API, users can streamline their data manipulation tasks and maintain the integrity of their spreadsheets.
 
-    def sawp_range( sawp_range_request, opts = {})
+    def swap_range( swap_range_request, opts = {})
 
-       data, _status_code, _headers = sawp_range_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = swap_range_request.create_http_request(@api_client,opts )
        return data
     end
 

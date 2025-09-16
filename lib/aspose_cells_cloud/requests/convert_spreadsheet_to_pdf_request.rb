@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="SawpRange_request.rb.cs">
+ <copyright company="Aspose" file="ConvertSpreadsheetToPdf_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,16 +29,13 @@
 require "uri"
 
 module AsposeCellsCloud
-  class SawpRangeRequest
+  class ConvertSpreadsheetToPdfRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :worksheet1  
-    attr_accessor :range1  
-    attr_accessor :worksheet2  
-    attr_accessor :range2  
     attr_accessor :out_path  
     attr_accessor :out_storage_name  
-    attr_accessor :regoin  
+    attr_accessor :fonts_location  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -51,22 +48,6 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'worksheet1')
-          self.worksheet1 = attributes[:'worksheet1']
-      end
-
-      if attributes.has_key?(:'range1')
-          self.range1 = attributes[:'range1']
-      end
-
-      if attributes.has_key?(:'worksheet2')
-          self.worksheet2 = attributes[:'worksheet2']
-      end
-
-      if attributes.has_key?(:'range2')
-          self.range2 = attributes[:'range2']
-      end
-
       if attributes.has_key?(:'outPath')
           self.out_path = attributes[:'outPath']
       end
@@ -75,8 +56,12 @@ module AsposeCellsCloud
           self.out_storage_name = attributes[:'outStorageName']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'fontsLocation')
+          self.fonts_location = attributes[:'fontsLocation']
+      end
+
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -88,13 +73,10 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'worksheet1' => :'worksheet1',
-        :'range1' => :'range1',
-        :'worksheet2' => :'worksheet2',
-        :'range2' => :'range2',
         :'out_path' => :'outPath',
         :'out_storage_name' => :'outStorageName',
-        :'regoin' => :'regoin',
+        :'fonts_location' => :'fontsLocation',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -103,54 +85,32 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'worksheet1' => :'String',
-        :'range1' => :'String',
-        :'worksheet2' => :'String',
-        :'range2' => :'String',
         :'out_path' => :'String',
         :'out_storage_name' => :'String',
-        :'regoin' => :'String',
+        :'fonts_location' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.sawp_range ..."
+        api_client.config.logger.debug "Calling API: CellsApi.convert_spreadsheet_to_pdf ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.sawp_range "
-      end 
-      # verify the required parameter 'worksheet1' is set
-      if api_client.config.client_side_validation && worksheet1.nil?
-          fail ArgumentError, "Missing the required parameter 'worksheet1' when calling CellsApi.sawp_range "
-      end 
-      # verify the required parameter 'range1' is set
-      if api_client.config.client_side_validation && range1.nil?
-          fail ArgumentError, "Missing the required parameter 'range1' when calling CellsApi.sawp_range "
-      end 
-      # verify the required parameter 'worksheet2' is set
-      if api_client.config.client_side_validation && worksheet2.nil?
-          fail ArgumentError, "Missing the required parameter 'worksheet2' when calling CellsApi.sawp_range "
-      end 
-      # verify the required parameter 'range2' is set
-      if api_client.config.client_side_validation && range2.nil?
-          fail ArgumentError, "Missing the required parameter 'range2' when calling CellsApi.sawp_range "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.convert_spreadsheet_to_pdf "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/swap/range"
+      local_var_path = "v4.0/cells/convert/spreadsheet/pdf"
       # query parameters
       query_params = {}
-      query_params[:'worksheet1'] = self.worksheet1 if !self.worksheet1.nil? 
-      query_params[:'range1'] = self.range1 if !self.range1.nil? 
-      query_params[:'worksheet2'] = self.worksheet2 if !self.worksheet2.nil? 
-      query_params[:'range2'] = self.range2 if !self.range2.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'fontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters
@@ -178,7 +138,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.sawp_range\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.convert_spreadsheet_to_pdf\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

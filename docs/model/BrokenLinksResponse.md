@@ -1,8 +1,8 @@
-# AsposeCellsCloud::Object::BrokenLinksReponse 
+# AsposeCellsCloud::Object::BrokenLinksResponse 
 
 ## Load the model package
 ```perl
-use AsposeCellsCloud::Object::BrokenLinksReponse;
+use AsposeCellsCloud::Object::BrokenLinksResponse;
 ```
 
 ## Properties

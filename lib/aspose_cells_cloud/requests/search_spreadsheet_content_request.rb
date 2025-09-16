@@ -36,7 +36,7 @@ module AsposeCellsCloud
     attr_accessor :ignoring_case  
     attr_accessor :worksheet  
     attr_accessor :cell_area  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -65,8 +65,8 @@ module AsposeCellsCloud
           self.cell_area = attributes[:'cellArea']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -82,7 +82,7 @@ module AsposeCellsCloud
         :'ignoring_case' => :'ignoringCase',
         :'worksheet' => :'worksheet',
         :'cell_area' => :'cellArea',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -95,7 +95,7 @@ module AsposeCellsCloud
         :'ignoring_case' => :'BOOLEAN',
         :'worksheet' => :'String',
         :'cell_area' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -122,7 +122,7 @@ module AsposeCellsCloud
       query_params[:'ignoringCase'] = self.ignoring_case if !self.ignoring_case.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
       query_params[:'cellArea'] = self.cell_area if !self.cell_area.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

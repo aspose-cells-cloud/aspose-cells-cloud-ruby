@@ -36,7 +36,7 @@ module AsposeCellsCloud
     attr_accessor :value  
     attr_accessor :worksheet  
     attr_accessor :range  
-    attr_accessor :regoin  
+    attr_accessor :region  
     attr_accessor :password  
 
     def initialize(attributes = {})
@@ -65,8 +65,8 @@ module AsposeCellsCloud
           self.range = attributes[:'range']
       end
 
-      if attributes.has_key?(:'regoin')
-          self.regoin = attributes[:'regoin']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
       if attributes.has_key?(:'password')
@@ -82,7 +82,7 @@ module AsposeCellsCloud
         :'value' => :'value',
         :'worksheet' => :'worksheet',
         :'range' => :'range',
-        :'regoin' => :'regoin',
+        :'region' => :'region',
         :'password' => :'password'
       }
     end
@@ -95,7 +95,7 @@ module AsposeCellsCloud
         :'value' => :'String',
         :'worksheet' => :'String',
         :'range' => :'String',
-        :'regoin' => :'String',
+        :'region' => :'String',
         :'password' => :'String'
       }
     end
@@ -126,7 +126,7 @@ module AsposeCellsCloud
       query_params[:'value'] = self.value if !self.value.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
       query_params[:'range'] = self.range if !self.range.nil? 
-      query_params[:'regoin'] = self.regoin if !self.regoin.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters

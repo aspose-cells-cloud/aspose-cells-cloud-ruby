@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="BrokenLinksReponserb.cs">
+ <copyright company="Aspose" file="BrokenLinksResponserb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -30,7 +30,7 @@ require 'date'
 
 module AsposeCellsCloud
 
-  class BrokenLinksReponse
+  class BrokenLinksResponse
         #            
         attr_accessor :broken_links
         #            
