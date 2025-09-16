@@ -40,6 +40,7 @@ jobs:
     - name: Run examples
       run: |
         cd examples
-        ruby ./Example_QuickStart.rb
+        ruby -I ../lib ./Example_QuickStart.rb
+        ruby -I ../lib ./Example_UploadFile.rb
   
 
