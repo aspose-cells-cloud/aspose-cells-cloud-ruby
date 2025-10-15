@@ -133,13 +133,13 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if file != nil
+      if !file.nil?
         header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
         file.each do |filename , context|
-          form_params[File.basename(filename)]  = context
+        form_params[File.basename(filename)]  = context
         end
       end
-
+      
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = api_client.call_api(:PUT, local_var_path,

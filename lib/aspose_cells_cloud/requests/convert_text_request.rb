@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="TrimSpreadsheetContent_request.rb.cs">
+ <copyright company="Aspose" file="ConvertText_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,16 +29,14 @@
 require "uri"
 
 module AsposeCellsCloud
-  class TrimSpreadsheetContentRequest
+  class ConvertTextRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :trim_content  
-    attr_accessor :trim_leading  
-    attr_accessor :trim_trailing  
-    attr_accessor :trim_space_between_word_to1  
-    attr_accessor :trim_non_breaking_spaces  
-    attr_accessor :remove_extra_line_breaks  
-    attr_accessor :remove_all_line_breaks  
+    attr_accessor :convert_text_type  
+    attr_accessor :source_characters  
+    attr_accessor :target_characters  
+    attr_accessor :worksheet  
+    attr_accessor :range  
     attr_accessor :out_path  
     attr_accessor :out_storage_name  
     attr_accessor :region  
@@ -54,32 +52,24 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'trimContent')
-          self.trim_content = attributes[:'trimContent']
+      if attributes.has_key?(:'convertTextType')
+          self.convert_text_type = attributes[:'convertTextType']
       end
 
-      if attributes.has_key?(:'trimLeading')
-          self.trim_leading = attributes[:'trimLeading']
+      if attributes.has_key?(:'sourceCharacters')
+          self.source_characters = attributes[:'sourceCharacters']
       end
 
-      if attributes.has_key?(:'trimTrailing')
-          self.trim_trailing = attributes[:'trimTrailing']
+      if attributes.has_key?(:'targetCharacters')
+          self.target_characters = attributes[:'targetCharacters']
       end
 
-      if attributes.has_key?(:'trimSpaceBetweenWordTo1')
-          self.trim_space_between_word_to1 = attributes[:'trimSpaceBetweenWordTo1']
+      if attributes.has_key?(:'worksheet')
+          self.worksheet = attributes[:'worksheet']
       end
 
-      if attributes.has_key?(:'trimNonBreakingSpaces')
-          self.trim_non_breaking_spaces = attributes[:'trimNonBreakingSpaces']
-      end
-
-      if attributes.has_key?(:'removeExtraLineBreaks')
-          self.remove_extra_line_breaks = attributes[:'removeExtraLineBreaks']
-      end
-
-      if attributes.has_key?(:'removeAllLineBreaks')
-          self.remove_all_line_breaks = attributes[:'removeAllLineBreaks']
+      if attributes.has_key?(:'range')
+          self.range = attributes[:'range']
       end
 
       if attributes.has_key?(:'outPath')
@@ -103,13 +93,11 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'trim_content' => :'trimContent',
-        :'trim_leading' => :'trimLeading',
-        :'trim_trailing' => :'trimTrailing',
-        :'trim_space_between_word_to1' => :'trimSpaceBetweenWordTo1',
-        :'trim_non_breaking_spaces' => :'trimNonBreakingSpaces',
-        :'remove_extra_line_breaks' => :'removeExtraLineBreaks',
-        :'remove_all_line_breaks' => :'removeAllLineBreaks',
+        :'convert_text_type' => :'convertTextType',
+        :'source_characters' => :'sourceCharacters',
+        :'target_characters' => :'targetCharacters',
+        :'worksheet' => :'worksheet',
+        :'range' => :'range',
         :'out_path' => :'outPath',
         :'out_storage_name' => :'outStorageName',
         :'region' => :'region',
@@ -121,13 +109,11 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'trim_content' => :'String',
-        :'trim_leading' => :'BOOLEAN',
-        :'trim_trailing' => :'BOOLEAN',
-        :'trim_space_between_word_to1' => :'BOOLEAN',
-        :'trim_non_breaking_spaces' => :'BOOLEAN',
-        :'remove_extra_line_breaks' => :'BOOLEAN',
-        :'remove_all_line_breaks' => :'BOOLEAN',
+        :'convert_text_type' => :'String',
+        :'source_characters' => :'String',
+        :'target_characters' => :'String',
+        :'worksheet' => :'String',
+        :'range' => :'String',
         :'out_path' => :'String',
         :'out_storage_name' => :'String',
         :'region' => :'String',
@@ -137,25 +123,35 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.trim_spreadsheet_content ..."
+        api_client.config.logger.debug "Calling API: CellsApi.convert_text ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.trim_spreadsheet_content "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.convert_text "
+      end 
+      # verify the required parameter 'convert_text_type' is set
+      if api_client.config.client_side_validation && convert_text_type.nil?
+          fail ArgumentError, "Missing the required parameter 'convert_text_type' when calling CellsApi.convert_text "
+      end 
+      # verify the required parameter 'source_characters' is set
+      if api_client.config.client_side_validation && source_characters.nil?
+          fail ArgumentError, "Missing the required parameter 'source_characters' when calling CellsApi.convert_text "
+      end 
+      # verify the required parameter 'target_characters' is set
+      if api_client.config.client_side_validation && target_characters.nil?
+          fail ArgumentError, "Missing the required parameter 'target_characters' when calling CellsApi.convert_text "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/content/trim"
+      local_var_path = "v4.0/cells/content/convert/text"
       # query parameters
       query_params = {}
-      query_params[:'trimContent'] = self.trim_content if !self.trim_content.nil? 
-      query_params[:'trimLeading'] = self.trim_leading if !self.trim_leading.nil? 
-      query_params[:'trimTrailing'] = self.trim_trailing if !self.trim_trailing.nil? 
-      query_params[:'trimSpaceBetweenWordTo1'] = self.trim_space_between_word_to1 if !self.trim_space_between_word_to1.nil? 
-      query_params[:'trimNonBreakingSpaces'] = self.trim_non_breaking_spaces if !self.trim_non_breaking_spaces.nil? 
-      query_params[:'removeExtraLineBreaks'] = self.remove_extra_line_breaks if !self.remove_extra_line_breaks.nil? 
-      query_params[:'removeAllLineBreaks'] = self.remove_all_line_breaks if !self.remove_all_line_breaks.nil? 
+      query_params[:'convertTextType'] = self.convert_text_type if !self.convert_text_type.nil? 
+      query_params[:'sourceCharacters'] = self.source_characters if !self.source_characters.nil? 
+      query_params[:'targetCharacters'] = self.target_characters if !self.target_characters.nil? 
+      query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
+      query_params[:'range'] = self.range if !self.range.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
@@ -186,7 +182,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.trim_spreadsheet_content\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.convert_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

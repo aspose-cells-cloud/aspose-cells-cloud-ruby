@@ -4,6 +4,12 @@
 
 |**Summary**|**Category**|
 | :- | :- |
+| Support trim spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support trim worksheet range content in Cells Cloud 4.0. | Improvement  |
+| Fix few issues about spelling error. | Bug  |
+
+|**Summary**|**Category**|
+| :- | :- |
 | Support of Authorization in Aspose.Cells Cloud Docker Container | New Feature  |
 | New Feature: Aggregate cells by color in CalculateController. | New Feature  |
 | New Feature: Math Calculations in CalculateController. | New Feature  |

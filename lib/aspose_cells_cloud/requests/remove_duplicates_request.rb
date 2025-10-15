@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="DeleteSpreadsheetBlankColumns_request.rb.cs">
+ <copyright company="Aspose" file="RemoveDuplicates_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,9 +29,12 @@
 require "uri"
 
 module AsposeCellsCloud
-  class DeleteSpreadsheetBlankColumnsRequest
+  class RemoveDuplicatesRequest
 
     attr_accessor :spreadsheet  
+    attr_accessor :worksheet  
+    attr_accessor :range  
+    attr_accessor :table  
     attr_accessor :out_path  
     attr_accessor :out_storage_name  
     attr_accessor :region  
@@ -45,6 +48,18 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'Spreadsheet')
           self.spreadsheet = attributes[:'Spreadsheet']
+      end
+
+      if attributes.has_key?(:'worksheet')
+          self.worksheet = attributes[:'worksheet']
+      end
+
+      if attributes.has_key?(:'range')
+          self.range = attributes[:'range']
+      end
+
+      if attributes.has_key?(:'table')
+          self.table = attributes[:'table']
       end
 
       if attributes.has_key?(:'outPath')
@@ -68,6 +83,9 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
+        :'worksheet' => :'worksheet',
+        :'range' => :'range',
+        :'table' => :'table',
         :'out_path' => :'outPath',
         :'out_storage_name' => :'outStorageName',
         :'region' => :'region',
@@ -79,6 +97,9 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
+        :'worksheet' => :'String',
+        :'range' => :'String',
+        :'table' => :'String',
         :'out_path' => :'String',
         :'out_storage_name' => :'String',
         :'region' => :'String',
@@ -88,18 +109,21 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.delete_spreadsheet_blank_columns ..."
+        api_client.config.logger.debug "Calling API: CellsApi.remove_duplicates ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.delete_spreadsheet_blank_columns "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.remove_duplicates "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/delete/blank-columns"
+      local_var_path = "v4.0/cells/remove/duplicates"
       # query parameters
       query_params = {}
+      query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
+      query_params[:'range'] = self.range if !self.range.nil? 
+      query_params[:'table'] = self.table if !self.table.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
       query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
@@ -130,7 +154,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.delete_spreadsheet_blank_columns\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.remove_duplicates\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

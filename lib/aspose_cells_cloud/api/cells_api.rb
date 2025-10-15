@@ -368,6 +368,13 @@ module AsposeCellsCloud
        return data
     end
 
+
+    def repair_spreadsheet( repair_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = repair_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Applies dual-layer password protection to Excel spreadsheets, supporting both open and modify passwords with encryption.
 
     def protect_spreadsheet( protect_spreadsheet_request, opts = {})
@@ -381,6 +388,13 @@ module AsposeCellsCloud
     def unprotect_spreadsheet( unprotect_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = unprotect_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def spreadsheet_digitalsignature( spreadsheet_digitalsignature_request, opts = {})
+
+       data, _status_code, _headers = spreadsheet_digitalsignature_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -497,40 +511,88 @@ module AsposeCellsCloud
 
     # The TrimSpreadsheetContent API is designed to process and trim content within a spreadsheet. This API allows users to remove extra spaces, line breaks, or other unnecessary characters from the content of selected cells. It is particularly useful for cleaning up data entries and ensuring consistency in spreadsheet formatting
 
-    def trim_spreadsheet_content( trim_spreadsheet_content_request, opts = {})
+    def trim_character( trim_character_request, opts = {})
 
-       data, _status_code, _headers = trim_spreadsheet_content_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = trim_character_request.create_http_request(@api_client,opts )
        return data
     end
 
+    # Specify changing the text case in a spreadsheet to switch between uppercase, lowercase, capitalizing the first letter of each word, or capitalizing the first letter of a sentence, and adjust the text according to specific needs.
 
-    def trim_worksheet_range( trim_worksheet_range_request, opts = {})
+    def update_word_case( update_word_case_request, opts = {})
 
-       data, _status_code, _headers = trim_worksheet_range_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = update_word_case_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Perform operations or delete any custom characters, character sets, and substrings within a selected range for a specific position.
+
+    def remove_characters( remove_characters_request, opts = {})
+
+       data, _status_code, _headers = remove_characters_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Specify appending text to multiple cells at once, allowing you to add prefixes, suffixes, labels, or any specific characters. You can choose the exact position of the text—in the beginning, at the end, or before or after certain characters in the cell.
+
+    def add_text( add_text_request, opts = {})
+
+       data, _status_code, _headers = add_text_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Indicates converting the numbers stored as text into the correct number format, replacing unwanted characters and line breaks with the desired characters, and converting accented characters to their equivalent characters without accents.
+
+    def convert_text( convert_text_request, opts = {})
+
+       data, _status_code, _headers = convert_text_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Indicates extracting substrings, text characters, and numbers from a spreadsheet cell into another cell without having to use complex FIND, MIN, LEFT, or RIGHT formulas.
+
+    def extract_text( extract_text_request, opts = {})
+
+       data, _status_code, _headers = extract_text_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Indicates performing text segmentation on the specified area according to the segmentation method, and outputting to the designated interval.
+
+    def split_text( split_text_request, opts = {})
+
+       data, _status_code, _headers = split_text_request.create_http_request(@api_client,opts )
        return data
     end
 
     # Delete all blank rows that do not contain any data or other objects.
 
-    def delete_spreadsheet_blank_rows( delete_spreadsheet_blank_rows_request, opts = {})
+    def remove_spreadsheet_blank_rows( remove_spreadsheet_blank_rows_request, opts = {})
 
-       data, _status_code, _headers = delete_spreadsheet_blank_rows_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = remove_spreadsheet_blank_rows_request.create_http_request(@api_client,opts )
        return data
     end
 
     # Delete all blank rows that do not contain any data or other objects.
 
-    def delete_spreadsheet_blank_columns( delete_spreadsheet_blank_columns_request, opts = {})
+    def remove_spreadsheet_blank_columns( remove_spreadsheet_blank_columns_request, opts = {})
 
-       data, _status_code, _headers = delete_spreadsheet_blank_columns_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = remove_spreadsheet_blank_columns_request.create_http_request(@api_client,opts )
        return data
     end
 
     # Delete all blank rows that do not contain any data or other objects.
 
-    def delete_spreadsheet_blank_worksheets( delete_spreadsheet_blank_worksheets_request, opts = {})
+    def remove_spreadsheet_blank_worksheets( remove_spreadsheet_blank_worksheets_request, opts = {})
 
-       data, _status_code, _headers = delete_spreadsheet_blank_worksheets_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = remove_spreadsheet_blank_worksheets_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def remove_duplicates( remove_duplicates_request, opts = {})
+
+       data, _status_code, _headers = remove_duplicates_request.create_http_request(@api_client,opts )
        return data
     end
 

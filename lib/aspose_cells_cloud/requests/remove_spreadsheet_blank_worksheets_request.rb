@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="DeleteSpreadsheetBlankWorksheets_request.rb.cs">
+ <copyright company="Aspose" file="RemoveSpreadsheetBlankWorksheets_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,7 +29,7 @@
 require "uri"
 
 module AsposeCellsCloud
-  class DeleteSpreadsheetBlankWorksheetsRequest
+  class RemoveSpreadsheetBlankWorksheetsRequest
 
     attr_accessor :spreadsheet  
     attr_accessor :out_path  
@@ -88,16 +88,16 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.delete_spreadsheet_blank_worksheets ..."
+        api_client.config.logger.debug "Calling API: CellsApi.remove_spreadsheet_blank_worksheets ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.delete_spreadsheet_blank_worksheets "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.remove_spreadsheet_blank_worksheets "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/delete/blank-worksheets"
+      local_var_path = "v4.0/cells/remove/blank-worksheets"
       # query parameters
       query_params = {}
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
@@ -130,7 +130,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.delete_spreadsheet_blank_worksheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.remove_spreadsheet_blank_worksheets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

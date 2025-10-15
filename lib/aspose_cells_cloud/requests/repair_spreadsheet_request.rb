@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="PutWorkbookBackground_request.rb.cs">
+ <copyright company="Aspose" file="RepairSpreadsheet_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,14 +29,13 @@
 require "uri"
 
 module AsposeCellsCloud
-  class PutWorkbookBackgroundRequest
+  class RepairSpreadsheetRequest
 
-    attr_accessor :name  
-    attr_accessor :pic_path  
-    attr_accessor :image_adapt_option  
-    attr_accessor :folder  
-    attr_accessor :storage_name  
-    attr_accessor :file  
+    attr_accessor :spreadsheet  
+    attr_accessor :out_path  
+    attr_accessor :out_storage_name  
+    attr_accessor :region  
+    attr_accessor :password  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -44,73 +43,67 @@ module AsposeCellsCloud
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'name')
-          self.name = attributes[:'name']
+      if attributes.has_key?(:'Spreadsheet')
+          self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'picPath')
-          self.pic_path = attributes[:'picPath']
+      if attributes.has_key?(:'outPath')
+          self.out_path = attributes[:'outPath']
       end
 
-      if attributes.has_key?(:'imageAdaptOption')
-          self.image_adapt_option = attributes[:'imageAdaptOption']
+      if attributes.has_key?(:'outStorageName')
+          self.out_storage_name = attributes[:'outStorageName']
       end
 
-      if attributes.has_key?(:'folder')
-          self.folder = attributes[:'folder']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
       end
 
-      if attributes.has_key?(:'storageName')
-          self.storage_name = attributes[:'storageName']
-      end
-
-      if attributes.has_key?(:'File')
-          self.file = attributes[:'File']
+      if attributes.has_key?(:'password')
+          self.password = attributes[:'password']
       end
 
     end    
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name',
-        :'pic_path' => :'picPath',
-        :'image_adapt_option' => :'imageAdaptOption',
-        :'folder' => :'folder',
-        :'storage_name' => :'storageName',
-        :'file' => :'File'
+        :'spreadsheet' => :'Spreadsheet',
+        :'out_path' => :'outPath',
+        :'out_storage_name' => :'outStorageName',
+        :'region' => :'region',
+        :'password' => :'password'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'name' => :'String',
-        :'pic_path' => :'String',
-        :'image_adapt_option' => :'String',
-        :'folder' => :'String',
-        :'storage_name' => :'String',
-        :'file' => :'Hash'
+        :'spreadsheet' => :'String',
+        :'out_path' => :'String',
+        :'out_storage_name' => :'String',
+        :'region' => :'String',
+        :'password' => :'String'
       }
     end
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.put_workbook_background ..."
+        api_client.config.logger.debug "Calling API: CellsApi.repair_spreadsheet ..."
       end
       api_client.request_token_if_needed
-      # verify the required parameter 'name' is set
-      if api_client.config.client_side_validation && name.nil?
-          fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.put_workbook_background "
+      # verify the required parameter 'spreadsheet' is set
+      if api_client.config.client_side_validation && spreadsheet.nil?
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.repair_spreadsheet "
       end 
 
       # resource path
-      local_var_path = "v3.0/cells/{name}/background".sub('{' + 'name' + '}', name.to_s)
+      local_var_path = "v4.0/cells/spreadsheet/repair"
       # query parameters
       query_params = {}
-      query_params[:'picPath'] = self.pic_path if !self.pic_path.nil? 
-      query_params[:'imageAdaptOption'] = self.image_adapt_option if !self.image_adapt_option.nil? 
-      query_params[:'folder'] = self.folder if !self.folder.nil? 
-      query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
+      query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
+      query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
+      query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters
       header_params = {}
@@ -123,12 +116,10 @@ module AsposeCellsCloud
       form_params = {}
       post_body = nil 
       header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-      if !file.nil?
-        file.each do |filename , context|
-        form_params[File.basename(filename)]  = context
-        end
-      end
-      
+      if !spreadsheet.empty? && File.exist?(spreadsheet )
+          form_params[File.basename(spreadsheet)] =  ::File.open(spreadsheet,"r")   
+      end 
+
       #auth_names = []
       auth_names = ['JWT']
       data, status_code, headers = api_client.call_api(:PUT, local_var_path,
@@ -137,9 +128,9 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsCloudResponse')
+        :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.put_workbook_background\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.repair_spreadsheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
