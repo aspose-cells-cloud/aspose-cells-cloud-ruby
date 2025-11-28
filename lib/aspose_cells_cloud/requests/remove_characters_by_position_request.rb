@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="ExtractText_request.rb.cs">
+ <copyright company="Aspose" file="RemoveCharactersByPosition_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,15 +29,14 @@
 require "uri"
 
 module AsposeCellsCloud
-  class ExtractTextRequest
+  class RemoveCharactersByPositionRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :extract_text_type  
-    attr_accessor :out_position_range  
-    attr_accessor :before_text  
-    attr_accessor :after_text  
-    attr_accessor :before_position  
-    attr_accessor :after_position  
+    attr_accessor :the_first_n_characters  
+    attr_accessor :the_last_n_characters  
+    attr_accessor :all_characters_before_text  
+    attr_accessor :all_characters_after_text  
+    attr_accessor :case_sensitive  
     attr_accessor :worksheet  
     attr_accessor :range  
     attr_accessor :out_path  
@@ -55,28 +54,24 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'extractTextType')
-          self.extract_text_type = attributes[:'extractTextType']
+      if attributes.has_key?(:'theFirstNCharacters')
+          self.the_first_n_characters = attributes[:'theFirstNCharacters']
       end
 
-      if attributes.has_key?(:'outPositionRange')
-          self.out_position_range = attributes[:'outPositionRange']
+      if attributes.has_key?(:'theLastNCharacters')
+          self.the_last_n_characters = attributes[:'theLastNCharacters']
       end
 
-      if attributes.has_key?(:'beforeText')
-          self.before_text = attributes[:'beforeText']
+      if attributes.has_key?(:'allCharactersBeforeText')
+          self.all_characters_before_text = attributes[:'allCharactersBeforeText']
       end
 
-      if attributes.has_key?(:'afterText')
-          self.after_text = attributes[:'afterText']
+      if attributes.has_key?(:'allCharactersAfterText')
+          self.all_characters_after_text = attributes[:'allCharactersAfterText']
       end
 
-      if attributes.has_key?(:'beforePosition')
-          self.before_position = attributes[:'beforePosition']
-      end
-
-      if attributes.has_key?(:'afterPosition')
-          self.after_position = attributes[:'afterPosition']
+      if attributes.has_key?(:'caseSensitive')
+          self.case_sensitive = attributes[:'caseSensitive']
       end
 
       if attributes.has_key?(:'worksheet')
@@ -108,12 +103,11 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'extract_text_type' => :'extractTextType',
-        :'out_position_range' => :'outPositionRange',
-        :'before_text' => :'beforeText',
-        :'after_text' => :'afterText',
-        :'before_position' => :'beforePosition',
-        :'after_position' => :'afterPosition',
+        :'the_first_n_characters' => :'theFirstNCharacters',
+        :'the_last_n_characters' => :'theLastNCharacters',
+        :'all_characters_before_text' => :'allCharactersBeforeText',
+        :'all_characters_after_text' => :'allCharactersAfterText',
+        :'case_sensitive' => :'caseSensitive',
         :'worksheet' => :'worksheet',
         :'range' => :'range',
         :'out_path' => :'outPath',
@@ -127,12 +121,11 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'extract_text_type' => :'String',
-        :'out_position_range' => :'String',
-        :'before_text' => :'String',
-        :'after_text' => :'String',
-        :'before_position' => :'Integer',
-        :'after_position' => :'Integer',
+        :'the_first_n_characters' => :'Integer',
+        :'the_last_n_characters' => :'Integer',
+        :'all_characters_before_text' => :'String',
+        :'all_characters_after_text' => :'String',
+        :'case_sensitive' => :'BOOLEAN',
         :'worksheet' => :'String',
         :'range' => :'String',
         :'out_path' => :'String',
@@ -144,32 +137,23 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.extract_text ..."
+        api_client.config.logger.debug "Calling API: CellsApi.remove_characters_by_position ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.extract_text "
-      end 
-      # verify the required parameter 'extract_text_type' is set
-      if api_client.config.client_side_validation && extract_text_type.nil?
-          fail ArgumentError, "Missing the required parameter 'extract_text_type' when calling CellsApi.extract_text "
-      end 
-      # verify the required parameter 'out_position_range' is set
-      if api_client.config.client_side_validation && out_position_range.nil?
-          fail ArgumentError, "Missing the required parameter 'out_position_range' when calling CellsApi.extract_text "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.remove_characters_by_position "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/content/extract/text"
+      local_var_path = "v4.0/cells/content/remove/characters-by-position"
       # query parameters
       query_params = {}
-      query_params[:'extractTextType'] = self.extract_text_type if !self.extract_text_type.nil? 
-      query_params[:'outPositionRange'] = self.out_position_range if !self.out_position_range.nil? 
-      query_params[:'beforeText'] = self.before_text if !self.before_text.nil? 
-      query_params[:'afterText'] = self.after_text if !self.after_text.nil? 
-      query_params[:'beforePosition'] = self.before_position if !self.before_position.nil? 
-      query_params[:'afterPosition'] = self.after_position if !self.after_position.nil? 
+      query_params[:'theFirstNCharacters'] = self.the_first_n_characters if !self.the_first_n_characters.nil? 
+      query_params[:'theLastNCharacters'] = self.the_last_n_characters if !self.the_last_n_characters.nil? 
+      query_params[:'allCharactersBeforeText'] = self.all_characters_before_text if !self.all_characters_before_text.nil? 
+      query_params[:'allCharactersAfterText'] = self.all_characters_after_text if !self.all_characters_after_text.nil? 
+      query_params[:'caseSensitive'] = self.case_sensitive if !self.case_sensitive.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
       query_params[:'range'] = self.range if !self.range.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
@@ -202,7 +186,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.extract_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.remove_characters_by_position\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

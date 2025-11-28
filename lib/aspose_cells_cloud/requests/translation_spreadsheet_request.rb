@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="AddText_request.rb.cs">
+ <copyright company="Aspose" file="TranslationSpreadsheet_request.rb.cs">
    Copyright (c) 2025 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,17 +29,10 @@
 require "uri"
 
 module AsposeCellsCloud
-  class AddTextRequest
+  class TranslationSpreadsheetRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :text  
-    attr_accessor :position  
-    attr_accessor :select_text  
-    attr_accessor :skip_empty_cells  
-    attr_accessor :worksheet  
-    attr_accessor :range  
-    attr_accessor :out_path  
-    attr_accessor :out_storage_name  
+    attr_accessor :target_language  
     attr_accessor :region  
     attr_accessor :password  
 
@@ -53,36 +46,8 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'text')
-          self.text = attributes[:'text']
-      end
-
-      if attributes.has_key?(:'position')
-          self.position = attributes[:'position']
-      end
-
-      if attributes.has_key?(:'selectText')
-          self.select_text = attributes[:'selectText']
-      end
-
-      if attributes.has_key?(:'skipEmptyCells')
-          self.skip_empty_cells = attributes[:'skipEmptyCells']
-      end
-
-      if attributes.has_key?(:'worksheet')
-          self.worksheet = attributes[:'worksheet']
-      end
-
-      if attributes.has_key?(:'range')
-          self.range = attributes[:'range']
-      end
-
-      if attributes.has_key?(:'outPath')
-          self.out_path = attributes[:'outPath']
-      end
-
-      if attributes.has_key?(:'outStorageName')
-          self.out_storage_name = attributes[:'outStorageName']
+      if attributes.has_key?(:'targetLanguage')
+          self.target_language = attributes[:'targetLanguage']
       end
 
       if attributes.has_key?(:'region')
@@ -98,14 +63,7 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'text' => :'text',
-        :'position' => :'position',
-        :'select_text' => :'selectText',
-        :'skip_empty_cells' => :'skipEmptyCells',
-        :'worksheet' => :'worksheet',
-        :'range' => :'range',
-        :'out_path' => :'outPath',
-        :'out_storage_name' => :'outStorageName',
+        :'target_language' => :'targetLanguage',
         :'region' => :'region',
         :'password' => :'password'
       }
@@ -115,14 +73,7 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'text' => :'String',
-        :'position' => :'String',
-        :'select_text' => :'String',
-        :'skip_empty_cells' => :'BOOLEAN',
-        :'worksheet' => :'String',
-        :'range' => :'String',
-        :'out_path' => :'String',
-        :'out_storage_name' => :'String',
+        :'target_language' => :'String',
         :'region' => :'String',
         :'password' => :'String'
       }
@@ -130,34 +81,23 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.add_text ..."
+        api_client.config.logger.debug "Calling API: CellsApi.translation_spreadsheet ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.add_text "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.translation_spreadsheet "
       end 
-      # verify the required parameter 'text' is set
-      if api_client.config.client_side_validation && text.nil?
-          fail ArgumentError, "Missing the required parameter 'text' when calling CellsApi.add_text "
-      end 
-      # verify the required parameter 'position' is set
-      if api_client.config.client_side_validation && position.nil?
-          fail ArgumentError, "Missing the required parameter 'position' when calling CellsApi.add_text "
+      # verify the required parameter 'target_language' is set
+      if api_client.config.client_side_validation && target_language.nil?
+          fail ArgumentError, "Missing the required parameter 'target_language' when calling CellsApi.translation_spreadsheet "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/content/add/text"
+      local_var_path = "v4.0/cells/translate/spreadsheet"
       # query parameters
       query_params = {}
-      query_params[:'text'] = self.text if !self.text.nil? 
-      query_params[:'position'] = self.position if !self.position.nil? 
-      query_params[:'selectText'] = self.select_text if !self.select_text.nil? 
-      query_params[:'skipEmptyCells'] = self.skip_empty_cells if !self.skip_empty_cells.nil? 
-      query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
-      query_params[:'range'] = self.range if !self.range.nil? 
-      query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
-      query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
+      query_params[:'targetLanguage'] = self.target_language if !self.target_language.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
@@ -186,7 +126,7 @@ module AsposeCellsCloud
         :auth_names => auth_names,
         :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.add_text\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.translation_spreadsheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -119,7 +119,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/{name}/worksheets/{worksheet}/ranges/{cellArea}search/broken-links".sub('{' + 'name' + '}', name.to_s).sub('{' + 'worksheet' + '}', worksheet.to_s).sub('{' + 'cellArea' + '}', cell_area.to_s)
+      local_var_path = "v4.0/cells/{name}/worksheets/{worksheet}/ranges/{cellArea}/search/broken-links".sub('{' + 'name' + '}', name.to_s).sub('{' + 'worksheet' + '}', worksheet.to_s).sub('{' + 'cellArea' + '}', cell_area.to_s)
       # query parameters
       query_params = {}
       query_params[:'folder'] = self.folder if !self.folder.nil? 

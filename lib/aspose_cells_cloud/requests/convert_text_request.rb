@@ -134,14 +134,6 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && convert_text_type.nil?
           fail ArgumentError, "Missing the required parameter 'convert_text_type' when calling CellsApi.convert_text "
       end 
-      # verify the required parameter 'source_characters' is set
-      if api_client.config.client_side_validation && source_characters.nil?
-          fail ArgumentError, "Missing the required parameter 'source_characters' when calling CellsApi.convert_text "
-      end 
-      # verify the required parameter 'target_characters' is set
-      if api_client.config.client_side_validation && target_characters.nil?
-          fail ArgumentError, "Missing the required parameter 'target_characters' when calling CellsApi.convert_text "
-      end 
 
       # resource path
       local_var_path = "v4.0/cells/content/convert/text"

@@ -40,6 +40,21 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
+    # Translates the entire spreadsheet to the specified target language.
+
+    def translation_spreadsheet( translation_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = translation_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def translate_text_file( translate_text_file_request, opts = {})
+
+       data, _status_code, _headers = translate_text_file_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # The Aggregate by Color API provides a convenient way to perform calculations on cells that share the same fill or font color. This API supports a range of aggregate operations, including count, sum, maximum value, minimum value, and average value, enabling you to analyze and summarize data based on color distinctions.
 
     def aggregate_cells_by_color( aggregate_cells_by_color_request, opts = {})
@@ -133,6 +148,13 @@ module AsposeCellsCloud
     def convert_spreadsheet_to_pdf( convert_spreadsheet_to_pdf_request, opts = {})
 
        data, _status_code, _headers = convert_spreadsheet_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def convert_spreadsheet_to_json( convert_spreadsheet_to_json_request, opts = {})
+
+       data, _status_code, _headers = convert_spreadsheet_to_json_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -525,11 +547,27 @@ module AsposeCellsCloud
        return data
     end
 
-    # Perform operations or delete any custom characters, character sets, and substrings within a selected range for a specific position.
+    # Deletes user-defined characters, predefined symbol sets, or any substring from every cell in the chosen range while preserving formulas, formatting and data-validation.
 
     def remove_characters( remove_characters_request, opts = {})
 
        data, _status_code, _headers = remove_characters_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Deletes characters from every cell in the target range by position (first/last N, before/after a substring, or between two delimiters) while preserving formulas, formatting and data-validation.
+
+    def remove_characters_by_position( remove_characters_by_position_request, opts = {})
+
+       data, _status_code, _headers = remove_characters_by_position_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Finds and removes repeated substrings inside every cell of the chosen range, using user-defined or preset delimiters, while preserving formulas, formatting and data-validation.
+
+    def remove_duplicate_substrings( remove_duplicate_substrings_request, opts = {})
+
+       data, _status_code, _headers = remove_duplicate_substrings_request.create_http_request(@api_client,opts )
        return data
     end
 

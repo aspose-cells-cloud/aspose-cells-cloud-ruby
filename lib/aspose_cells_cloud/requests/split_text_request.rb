@@ -32,11 +32,11 @@ module AsposeCellsCloud
   class SplitTextRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :split_delimiters_type  
-    attr_accessor :custom_delimiter  
+    attr_accessor :delimiters  
     attr_accessor :keep_delimiters_in_resulting_cells  
     attr_accessor :keep_delimiters_position  
     attr_accessor :how_to_split  
+    attr_accessor :out_position_range  
     attr_accessor :worksheet  
     attr_accessor :range  
     attr_accessor :out_path  
@@ -54,12 +54,8 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'splitDelimitersType')
-          self.split_delimiters_type = attributes[:'splitDelimitersType']
-      end
-
-      if attributes.has_key?(:'customDelimiter')
-          self.custom_delimiter = attributes[:'customDelimiter']
+      if attributes.has_key?(:'delimiters')
+          self.delimiters = attributes[:'delimiters']
       end
 
       if attributes.has_key?(:'keepDelimitersInResultingCells')
@@ -72,6 +68,10 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'HowToSplit')
           self.how_to_split = attributes[:'HowToSplit']
+      end
+
+      if attributes.has_key?(:'outPositionRange')
+          self.out_position_range = attributes[:'outPositionRange']
       end
 
       if attributes.has_key?(:'worksheet')
@@ -103,11 +103,11 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'split_delimiters_type' => :'splitDelimitersType',
-        :'custom_delimiter' => :'customDelimiter',
+        :'delimiters' => :'delimiters',
         :'keep_delimiters_in_resulting_cells' => :'keepDelimitersInResultingCells',
         :'keep_delimiters_position' => :'keepDelimitersPosition',
         :'how_to_split' => :'HowToSplit',
+        :'out_position_range' => :'outPositionRange',
         :'worksheet' => :'worksheet',
         :'range' => :'range',
         :'out_path' => :'outPath',
@@ -121,11 +121,11 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'split_delimiters_type' => :'String',
-        :'custom_delimiter' => :'String',
+        :'delimiters' => :'String',
         :'keep_delimiters_in_resulting_cells' => :'BOOLEAN',
         :'keep_delimiters_position' => :'String',
         :'how_to_split' => :'String',
+        :'out_position_range' => :'String',
         :'worksheet' => :'String',
         :'range' => :'String',
         :'out_path' => :'String',
@@ -144,36 +144,20 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && spreadsheet.nil?
           fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.split_text "
       end 
-      # verify the required parameter 'split_delimiters_type' is set
-      if api_client.config.client_side_validation && split_delimiters_type.nil?
-          fail ArgumentError, "Missing the required parameter 'split_delimiters_type' when calling CellsApi.split_text "
-      end 
-      # verify the required parameter 'custom_delimiter' is set
-      if api_client.config.client_side_validation && custom_delimiter.nil?
-          fail ArgumentError, "Missing the required parameter 'custom_delimiter' when calling CellsApi.split_text "
-      end 
-      # verify the required parameter 'keep_delimiters_in_resulting_cells' is set
-      if api_client.config.client_side_validation && keep_delimiters_in_resulting_cells.nil?
-          fail ArgumentError, "Missing the required parameter 'keep_delimiters_in_resulting_cells' when calling CellsApi.split_text "
-      end 
-      # verify the required parameter 'keep_delimiters_position' is set
-      if api_client.config.client_side_validation && keep_delimiters_position.nil?
-          fail ArgumentError, "Missing the required parameter 'keep_delimiters_position' when calling CellsApi.split_text "
-      end 
-      # verify the required parameter 'how_to_split' is set
-      if api_client.config.client_side_validation && how_to_split.nil?
-          fail ArgumentError, "Missing the required parameter 'how_to_split' when calling CellsApi.split_text "
+      # verify the required parameter 'delimiters' is set
+      if api_client.config.client_side_validation && delimiters.nil?
+          fail ArgumentError, "Missing the required parameter 'delimiters' when calling CellsApi.split_text "
       end 
 
       # resource path
       local_var_path = "v4.0/cells/content/split/text"
       # query parameters
       query_params = {}
-      query_params[:'splitDelimitersType'] = self.split_delimiters_type if !self.split_delimiters_type.nil? 
-      query_params[:'customDelimiter'] = self.custom_delimiter if !self.custom_delimiter.nil? 
+      query_params[:'delimiters'] = self.delimiters if !self.delimiters.nil? 
       query_params[:'keepDelimitersInResultingCells'] = self.keep_delimiters_in_resulting_cells if !self.keep_delimiters_in_resulting_cells.nil? 
       query_params[:'keepDelimitersPosition'] = self.keep_delimiters_position if !self.keep_delimiters_position.nil? 
       query_params[:'HowToSplit'] = self.how_to_split if !self.how_to_split.nil? 
+      query_params[:'outPositionRange'] = self.out_position_range if !self.out_position_range.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
       query_params[:'range'] = self.range if !self.range.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 

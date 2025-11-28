@@ -32,13 +32,10 @@ module AsposeCellsCloud
   class RemoveCharactersRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :the_first_n_characters  
-    attr_accessor :the_last_n_characters  
-    attr_accessor :all_characters_before_text  
-    attr_accessor :all_characters_after_text  
     attr_accessor :remove_text_method  
     attr_accessor :character_sets  
     attr_accessor :remove_custom_value  
+    attr_accessor :case_sensitive  
     attr_accessor :worksheet  
     attr_accessor :range  
     attr_accessor :out_path  
@@ -56,22 +53,6 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'theFirstNCharacters')
-          self.the_first_n_characters = attributes[:'theFirstNCharacters']
-      end
-
-      if attributes.has_key?(:'theLastNCharacters')
-          self.the_last_n_characters = attributes[:'theLastNCharacters']
-      end
-
-      if attributes.has_key?(:'allCharactersBeforeText')
-          self.all_characters_before_text = attributes[:'allCharactersBeforeText']
-      end
-
-      if attributes.has_key?(:'allCharactersAfterText')
-          self.all_characters_after_text = attributes[:'allCharactersAfterText']
-      end
-
       if attributes.has_key?(:'removeTextMethod')
           self.remove_text_method = attributes[:'removeTextMethod']
       end
@@ -82,6 +63,10 @@ module AsposeCellsCloud
 
       if attributes.has_key?(:'removeCustomValue')
           self.remove_custom_value = attributes[:'removeCustomValue']
+      end
+
+      if attributes.has_key?(:'caseSensitive')
+          self.case_sensitive = attributes[:'caseSensitive']
       end
 
       if attributes.has_key?(:'worksheet')
@@ -113,13 +98,10 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'the_first_n_characters' => :'theFirstNCharacters',
-        :'the_last_n_characters' => :'theLastNCharacters',
-        :'all_characters_before_text' => :'allCharactersBeforeText',
-        :'all_characters_after_text' => :'allCharactersAfterText',
         :'remove_text_method' => :'removeTextMethod',
         :'character_sets' => :'characterSets',
         :'remove_custom_value' => :'removeCustomValue',
+        :'case_sensitive' => :'caseSensitive',
         :'worksheet' => :'worksheet',
         :'range' => :'range',
         :'out_path' => :'outPath',
@@ -133,13 +115,10 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'the_first_n_characters' => :'Integer',
-        :'the_last_n_characters' => :'Integer',
-        :'all_characters_before_text' => :'String',
-        :'all_characters_after_text' => :'String',
         :'remove_text_method' => :'String',
         :'character_sets' => :'String',
         :'remove_custom_value' => :'String',
+        :'case_sensitive' => :'BOOLEAN',
         :'worksheet' => :'String',
         :'range' => :'String',
         :'out_path' => :'String',
@@ -158,54 +137,15 @@ module AsposeCellsCloud
       if api_client.config.client_side_validation && spreadsheet.nil?
           fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.remove_characters "
       end 
-      # verify the required parameter 'the_first_n_characters' is set
-      if api_client.config.client_side_validation && the_first_n_characters.nil?
-          fail ArgumentError, "Missing the required parameter 'the_first_n_characters' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'the_last_n_characters' is set
-      if api_client.config.client_side_validation && the_last_n_characters.nil?
-          fail ArgumentError, "Missing the required parameter 'the_last_n_characters' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'all_characters_before_text' is set
-      if api_client.config.client_side_validation && all_characters_before_text.nil?
-          fail ArgumentError, "Missing the required parameter 'all_characters_before_text' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'all_characters_after_text' is set
-      if api_client.config.client_side_validation && all_characters_after_text.nil?
-          fail ArgumentError, "Missing the required parameter 'all_characters_after_text' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'remove_text_method' is set
-      if api_client.config.client_side_validation && remove_text_method.nil?
-          fail ArgumentError, "Missing the required parameter 'remove_text_method' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'character_sets' is set
-      if api_client.config.client_side_validation && character_sets.nil?
-          fail ArgumentError, "Missing the required parameter 'character_sets' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'remove_custom_value' is set
-      if api_client.config.client_side_validation && remove_custom_value.nil?
-          fail ArgumentError, "Missing the required parameter 'remove_custom_value' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'worksheet' is set
-      if api_client.config.client_side_validation && worksheet.nil?
-          fail ArgumentError, "Missing the required parameter 'worksheet' when calling CellsApi.remove_characters "
-      end 
-      # verify the required parameter 'range' is set
-      if api_client.config.client_side_validation && range.nil?
-          fail ArgumentError, "Missing the required parameter 'range' when calling CellsApi.remove_characters "
-      end 
 
       # resource path
       local_var_path = "v4.0/cells/content/remove/characters"
       # query parameters
       query_params = {}
-      query_params[:'theFirstNCharacters'] = self.the_first_n_characters if !self.the_first_n_characters.nil? 
-      query_params[:'theLastNCharacters'] = self.the_last_n_characters if !self.the_last_n_characters.nil? 
-      query_params[:'allCharactersBeforeText'] = self.all_characters_before_text if !self.all_characters_before_text.nil? 
-      query_params[:'allCharactersAfterText'] = self.all_characters_after_text if !self.all_characters_after_text.nil? 
       query_params[:'removeTextMethod'] = self.remove_text_method if !self.remove_text_method.nil? 
       query_params[:'characterSets'] = self.character_sets if !self.character_sets.nil? 
       query_params[:'removeCustomValue'] = self.remove_custom_value if !self.remove_custom_value.nil? 
+      query_params[:'caseSensitive'] = self.case_sensitive if !self.case_sensitive.nil? 
       query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
       query_params[:'range'] = self.range if !self.range.nil? 
       query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
