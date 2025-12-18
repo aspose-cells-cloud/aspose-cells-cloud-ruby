@@ -318,6 +318,14 @@ module AsposeCellsCloud
        return data
     end
 
+    # Split an Excel worksheet into multiple sheets by column value.
+
+    def split_table( split_table_request, opts = {})
+
+       data, _status_code, _headers = split_table_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Split a spreadsheet in cloud storage into the specified format, multi-file.
 
     def split_remote_spreadsheet( split_remote_spreadsheet_request, opts = {})
