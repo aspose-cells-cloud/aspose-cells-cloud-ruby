@@ -1,5 +1,33 @@
 # Release History Version
 
+## Feature & Enhancements in Version 25.11
+
+|**Summary**|**Category**|
+| :- | :- |
+| Fix the APIs query parameters default for TextProcessingController. | Bug  |
+| Fix the extract text API of the text processing controller | Bug  |
+| Developing API functions for AI translation of Excel files | New Feature  |
+| Fix SearchBrokenLinksInRemoteRange API route error. | Bug  |
+| Supports positional character removal—delete from any index, any length. | New Feature  |
+| Supports duplicate sub string removal—keep the first occurrence, drop the rest. | New Feature  |
+| Refactored Split Text API: optimize delimiter parsing and on-demand position output. | Improvement  |
+| Develop API functions for AI-powered translation of TXT articles. | New Feature  |
+| Enhance format conversion by accepting full save-option settings via query parameters. | Improvement  |
+| Enhanced format conversion with auto-fit support in Aspose.Cells Cloud Services 4.0. | Improvement  |
+
+## Feature & Enhancements in Version 25.10
+
+|**Summary**|**Category**|
+| :- | :- |
+| Optimize data Transform API: replace delete with remove. | Improvement  |
+| Support to update the spreadsheet content words case in Cells Cloud 4.0. | Improvement  |
+| Support to remove characters from spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to add text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to convert text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to extract text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+| Support to split text for spreadsheet content in Cells Cloud 4.0. | Improvement  |
+
 ## Feature & Enhancements in Version 25.9
 
 |**Summary**|**Category**|
