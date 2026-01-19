@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="ApiErrorrb.cs">
-   Copyright (c) 2025 Aspose.Cells Cloud
+   Copyright (c) 2026 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -484,6 +484,7 @@ require 'aspose_cells_cloud/models/excel_data_statistics'
 require 'aspose_cells_cloud/models/worksheet_data_statistics'
 
 # Requests
+require 'aspose_cells_cloud/requests/decompose_user_task_request'
 require 'aspose_cells_cloud/requests/translation_spreadsheet_request'
 require 'aspose_cells_cloud/requests/translate_text_file_request'
 require 'aspose_cells_cloud/requests/aggregate_cells_by_color_request'
@@ -502,6 +503,8 @@ require 'aspose_cells_cloud/requests/convert_spreadsheet_to_json_request'
 require 'aspose_cells_cloud/requests/convert_spreadsheet_to_csv_request'
 require 'aspose_cells_cloud/requests/convert_worksheet_to_image_request'
 require 'aspose_cells_cloud/requests/convert_worksheet_to_pdf_request'
+require 'aspose_cells_cloud/requests/convert_worksheet_to_html_request'
+require 'aspose_cells_cloud/requests/convert_worksheet_to_html_table_request'
 require 'aspose_cells_cloud/requests/convert_table_to_image_request'
 require 'aspose_cells_cloud/requests/convert_table_to_pdf_request'
 require 'aspose_cells_cloud/requests/convert_table_to_csv_request'
@@ -522,6 +525,9 @@ require 'aspose_cells_cloud/requests/split_spreadsheet_request'
 require 'aspose_cells_cloud/requests/split_table_request'
 require 'aspose_cells_cloud/requests/split_remote_spreadsheet_request'
 require 'aspose_cells_cloud/requests/import_data_into_spreadsheet_request'
+require 'aspose_cells_cloud/requests/import_json_data_into_spreadsheet_request'
+require 'aspose_cells_cloud/requests/import_xml_data_into_spreadsheet_request'
+require 'aspose_cells_cloud/requests/import_csv_data_into_spreadsheet_request'
 require 'aspose_cells_cloud/requests/get_public_key_request'
 require 'aspose_cells_cloud/requests/create_spreadsheet_request'
 require 'aspose_cells_cloud/requests/add_worksheet_to_spreadsheet_request'
@@ -561,6 +567,7 @@ require 'aspose_cells_cloud/requests/remove_spreadsheet_blank_columns_request'
 require 'aspose_cells_cloud/requests/remove_spreadsheet_blank_worksheets_request'
 require 'aspose_cells_cloud/requests/remove_duplicates_request'
 require 'aspose_cells_cloud/requests/swap_range_request'
+require 'aspose_cells_cloud/requests/flip_data_request'
 require 'aspose_cells_cloud/requests/download_file_request'
 require 'aspose_cells_cloud/requests/upload_file_request'
 require 'aspose_cells_cloud/requests/copy_file_request'

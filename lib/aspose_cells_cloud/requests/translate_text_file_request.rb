@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="TranslateTextFile_request.rb.cs">
-   Copyright (c) 2025 Aspose.Cells Cloud
+   Copyright (c) 2026 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,7 +94,7 @@ module AsposeCellsCloud
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/translate/text"
+      local_var_path = "v4.0/cells/ai/translate/text"
       # query parameters
       query_params = {}
       query_params[:'targetLanguage'] = self.target_language if !self.target_language.nil? 

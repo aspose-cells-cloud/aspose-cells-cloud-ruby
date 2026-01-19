@@ -1,7 +1,7 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
  <copyright company="Aspose" file="CellsApi.cs">
-   Copyright (c) 2025 Aspose.Cells Cloud
+   Copyright (c) 2026 Aspose.Cells Cloud
  </copyright>
  <summary>
    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,14 @@ module AsposeCellsCloud
       @api_client.config.client_id = client_id
       @api_client.config.api_version = app_version
       @api_client.config.host = app_host
+    end
+
+    # Translates the entire spreadsheet to the specified target language.
+
+    def decompose_user_task( decompose_user_task_request, opts = {})
+
+       data, _status_code, _headers = decompose_user_task_request.create_http_request(@api_client,opts )
+       return data
     end
 
     # Translates the entire spreadsheet to the specified target language.
@@ -179,6 +187,21 @@ module AsposeCellsCloud
     def convert_worksheet_to_pdf( convert_worksheet_to_pdf_request, opts = {})
 
        data, _status_code, _headers = convert_worksheet_to_pdf_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a worksheet of spreadsheet on a local drive to the html file.
+
+    def convert_worksheet_to_html( convert_worksheet_to_html_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_html_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def convert_worksheet_to_html_table( convert_worksheet_to_html_table_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_html_table_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -339,6 +362,27 @@ module AsposeCellsCloud
     def import_data_into_spreadsheet( import_data_into_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = import_data_into_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def import_json_data_into_spreadsheet( import_json_data_into_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = import_json_data_into_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def import_xml_data_into_spreadsheet( import_xml_data_into_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = import_xml_data_into_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def import_csv_data_into_spreadsheet( import_csv_data_into_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = import_csv_data_into_spreadsheet_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -647,6 +691,13 @@ module AsposeCellsCloud
     def swap_range( swap_range_request, opts = {})
 
        data, _status_code, _headers = swap_range_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+
+    def flip_data( flip_data_request, opts = {})
+
+       data, _status_code, _headers = flip_data_request.create_http_request(@api_client,opts )
        return data
     end
 
