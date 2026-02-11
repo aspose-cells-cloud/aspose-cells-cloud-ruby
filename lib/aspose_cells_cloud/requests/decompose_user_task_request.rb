@@ -86,7 +86,6 @@ module AsposeCellsCloud
       local_var_path = "v4.0/cells/ai/task/decompose"
       # query parameters
       query_params = {}
-      query_params[:'TaskDescription'] = self.task_description if !self.task_description.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
@@ -100,6 +99,7 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
+      post_body = api_client.object_to_http_body(task_description) 
 
       #auth_names = []
       auth_names = ['JWT']

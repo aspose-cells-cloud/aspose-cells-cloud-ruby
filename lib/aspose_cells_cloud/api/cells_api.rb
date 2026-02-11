@@ -40,7 +40,7 @@ module AsposeCellsCloud
       @api_client.config.host = app_host
     end
 
-    # Translates the entire spreadsheet to the specified target language.
+    # AI task decomposition: Convert user objectives to sequential action plans with formatted file export.
 
     def decompose_user_task( decompose_user_task_request, opts = {})
 
@@ -50,12 +50,13 @@ module AsposeCellsCloud
 
     # Translates the entire spreadsheet to the specified target language.
 
-    def translation_spreadsheet( translation_spreadsheet_request, opts = {})
+    def translate_spreadsheet( translate_spreadsheet_request, opts = {})
 
-       data, _status_code, _headers = translation_spreadsheet_request.create_http_request(@api_client,opts )
+       data, _status_code, _headers = translate_spreadsheet_request.create_http_request(@api_client,opts )
        return data
     end
 
+    # Translates text file content to the specified target language.
 
     def translate_text_file( translate_text_file_request, opts = {})
 
@@ -159,6 +160,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Converts a spreadsheet on a local drive to the JSON file.
 
     def convert_spreadsheet_to_json( convert_spreadsheet_to_json_request, opts = {})
 
@@ -190,6 +192,22 @@ module AsposeCellsCloud
        return data
     end
 
+    # Converts a worksheet of spreadsheet on a local drive to the JSON file.
+
+    def convert_worksheet_to_json( convert_worksheet_to_json_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_json_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Converts a worksheet of spreadsheet on a local drive to the CSV file.
+
+    def convert_worksheet_to_csv( convert_worksheet_to_csv_request, opts = {})
+
+       data, _status_code, _headers = convert_worksheet_to_csv_request.create_http_request(@api_client,opts )
+       return data
+    end
+
     # Converts a worksheet of spreadsheet on a local drive to the html file.
 
     def convert_worksheet_to_html( convert_worksheet_to_html_request, opts = {})
@@ -198,6 +216,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Converts a worksheet of spreadsheet on a local drive to the HTML table file.
 
     def convert_worksheet_to_html_table( convert_worksheet_to_html_table_request, opts = {})
 
@@ -341,7 +360,7 @@ module AsposeCellsCloud
        return data
     end
 
-    # Split an Excel worksheet into multiple sheets by column value.
+    # Split an Excel worksheet tale into multiple sheets by column value.
 
     def split_table( split_table_request, opts = {})
 
@@ -365,6 +384,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Import JSON data file into the local spreadsheet.
 
     def import_json_data_into_spreadsheet( import_json_data_into_spreadsheet_request, opts = {})
 
@@ -372,6 +392,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Import XML data file into the local spreadsheet.
 
     def import_xml_data_into_spreadsheet( import_xml_data_into_spreadsheet_request, opts = {})
 
@@ -379,6 +400,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Import CSV data file into the local spreadsheet.
 
     def import_csv_data_into_spreadsheet( import_csv_data_into_spreadsheet_request, opts = {})
 
@@ -399,6 +421,14 @@ module AsposeCellsCloud
     def create_spreadsheet( create_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = create_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Fetches a complete list of worksheets from the currently active local spreadsheet.
+
+    def get_worksheets_with_local_spreadsheet( get_worksheets_with_local_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = get_worksheets_with_local_spreadsheet_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -442,10 +472,27 @@ module AsposeCellsCloud
        return data
     end
 
+    # The Web API endpoint allows users to repair a spreadsheet.
 
     def repair_spreadsheet( repair_spreadsheet_request, opts = {})
 
        data, _status_code, _headers = repair_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get all merged cell area form a remote spreadsheet worksheet.
+
+    def get_merged_cells_in_remoted_worksheet( get_merged_cells_in_remoted_worksheet_request, opts = {})
+
+       data, _status_code, _headers = get_merged_cells_in_remoted_worksheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get all merged cell area form a local spreadsheet worksheet.
+
+    def get_merged_cells_in_worksheet( get_merged_cells_in_worksheet_request, opts = {})
+
+       data, _status_code, _headers = get_merged_cells_in_worksheet_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -469,6 +516,22 @@ module AsposeCellsCloud
     def spreadsheet_digitalsignature( spreadsheet_digitalsignature_request, opts = {})
 
        data, _status_code, _headers = spreadsheet_digitalsignature_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get all text items in the remote spreadsheet.
+
+    def search_all_text_items_in_remote_spreadsheet( search_all_text_items_in_remote_spreadsheet_request, opts = {})
+
+       data, _status_code, _headers = search_all_text_items_in_remote_spreadsheet_request.create_http_request(@api_client,opts )
+       return data
+    end
+
+    # Get all text items in the remote spreadsheet.
+
+    def search_spreadsheet_all_text_items( search_spreadsheet_all_text_items_request, opts = {})
+
+       data, _status_code, _headers = search_spreadsheet_all_text_items_request.create_http_request(@api_client,opts )
        return data
     end
 
@@ -679,6 +742,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Removes duplicate values in the worksheet/range/table.
 
     def remove_duplicates( remove_duplicates_request, opts = {})
 
@@ -694,6 +758,7 @@ module AsposeCellsCloud
        return data
     end
 
+    # Transposes a specified data range (rows become columns, columns become rows).
 
     def flip_data( flip_data_request, opts = {})
 

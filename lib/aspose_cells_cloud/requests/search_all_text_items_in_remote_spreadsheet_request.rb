@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="PutWorksheetBackground_request.rb.cs">
+ <copyright company="Aspose" file="SearchAllTextItemsInRemoteSpreadsheet_request.rb.cs">
    Copyright (c) 2026 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,15 +29,13 @@
 require "uri"
 
 module AsposeCellsCloud
-  class PutWorksheetBackgroundRequest
+  class SearchAllTextItemsInRemoteSpreadsheetRequest
 
     attr_accessor :name  
-    attr_accessor :sheet_name  
-    attr_accessor :pic_path  
-    attr_accessor :image_adapt_option  
     attr_accessor :folder  
     attr_accessor :storage_name  
-    attr_accessor :file  
+    attr_accessor :region  
+    attr_accessor :password  
 
     def initialize(attributes = {})
       return unless attributes.is_a?(Hash)
@@ -49,18 +47,6 @@ module AsposeCellsCloud
           self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'sheetName')
-          self.sheet_name = attributes[:'sheetName']
-      end
-
-      if attributes.has_key?(:'picPath')
-          self.pic_path = attributes[:'picPath']
-      end
-
-      if attributes.has_key?(:'imageAdaptOption')
-          self.image_adapt_option = attributes[:'imageAdaptOption']
-      end
-
       if attributes.has_key?(:'folder')
           self.folder = attributes[:'folder']
       end
@@ -69,8 +55,12 @@ module AsposeCellsCloud
           self.storage_name = attributes[:'storageName']
       end
 
-      if attributes.has_key?(:'File')
-          self.file = attributes[:'File']
+      if attributes.has_key?(:'region')
+          self.region = attributes[:'region']
+      end
+
+      if attributes.has_key?(:'password')
+          self.password = attributes[:'password']
       end
 
     end    
@@ -78,12 +68,10 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'name' => :'name',
-        :'sheet_name' => :'sheetName',
-        :'pic_path' => :'picPath',
-        :'image_adapt_option' => :'imageAdaptOption',
         :'folder' => :'folder',
         :'storage_name' => :'storageName',
-        :'file' => :'File'
+        :'region' => :'region',
+        :'password' => :'password'
       }
     end
 
@@ -91,37 +79,35 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'name' => :'String',
-        :'sheet_name' => :'String',
-        :'pic_path' => :'String',
-        :'image_adapt_option' => :'String',
         :'folder' => :'String',
         :'storage_name' => :'String',
-        :'file' => :'Hash'
+        :'region' => :'String',
+        :'password' => :'String'
       }
     end
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.put_worksheet_background ..."
+        api_client.config.logger.debug "Calling API: CellsApi.search_all_text_items_in_remote_spreadsheet ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'name' is set
       if api_client.config.client_side_validation && name.nil?
-          fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.put_worksheet_background "
+          fail ArgumentError, "Missing the required parameter 'name' when calling CellsApi.search_all_text_items_in_remote_spreadsheet "
       end 
-      # verify the required parameter 'sheet_name' is set
-      if api_client.config.client_side_validation && sheet_name.nil?
-          fail ArgumentError, "Missing the required parameter 'sheet_name' when calling CellsApi.put_worksheet_background "
+      # verify the required parameter 'folder' is set
+      if api_client.config.client_side_validation && folder.nil?
+          fail ArgumentError, "Missing the required parameter 'folder' when calling CellsApi.search_all_text_items_in_remote_spreadsheet "
       end 
 
       # resource path
-      local_var_path = "v3.0/cells/{name}/worksheets/{sheetName}/background".sub('{' + 'name' + '}', name.to_s).sub('{' + 'sheetName' + '}', sheet_name.to_s)
+      local_var_path = "v4.0/cells/{name}/search/content/all-textitems".sub('{' + 'name' + '}', name.to_s)
       # query parameters
       query_params = {}
-      query_params[:'picPath'] = self.pic_path if !self.pic_path.nil? 
-      query_params[:'imageAdaptOption'] = self.image_adapt_option if !self.image_adapt_option.nil? 
       query_params[:'folder'] = self.folder if !self.folder.nil? 
       query_params[:'storageName'] = self.storage_name if !self.storage_name.nil? 
+      query_params[:'region'] = self.region if !self.region.nil? 
+      query_params[:'password'] = self.password if !self.password.nil? 
 
       # header parameters
       header_params = {}
@@ -133,12 +119,6 @@ module AsposeCellsCloud
       # form parameters
       form_params = {}
       post_body = nil 
-      if !file.nil?
-        header_params['Content-Type'] = api_client.select_header_content_type(['multipart/form-data'])
-        file.each do |filename , context|
-          form_params[File.basename(filename)]  = context
-        end
-      end
 
       #auth_names = []
       auth_names = ['JWT']
@@ -148,9 +128,9 @@ module AsposeCellsCloud
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'CellsCloudResponse')
+        :return_type => 'SearchResponse')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.put_worksheet_background\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.search_all_text_items_in_remote_spreadsheet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

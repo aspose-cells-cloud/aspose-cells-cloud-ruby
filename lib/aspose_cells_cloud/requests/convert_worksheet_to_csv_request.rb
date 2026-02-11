@@ -1,6 +1,6 @@
 =begin
 --------------------------------------------------------------------------------------------------------------------
- <copyright company="Aspose" file="TranslateTextFile_request.rb.cs">
+ <copyright company="Aspose" file="ConvertWorksheetToCsv_request.rb.cs">
    Copyright (c) 2026 Aspose.Cells Cloud
  </copyright>
  <summary>
@@ -29,10 +29,13 @@
 require "uri"
 
 module AsposeCellsCloud
-  class TranslateTextFileRequest
+  class ConvertWorksheetToCsvRequest
 
     attr_accessor :spreadsheet  
-    attr_accessor :target_language  
+    attr_accessor :worksheet  
+    attr_accessor :out_path  
+    attr_accessor :out_storage_name  
+    attr_accessor :fonts_location  
     attr_accessor :region  
     attr_accessor :password  
 
@@ -46,8 +49,20 @@ module AsposeCellsCloud
           self.spreadsheet = attributes[:'Spreadsheet']
       end
 
-      if attributes.has_key?(:'targetLanguage')
-          self.target_language = attributes[:'targetLanguage']
+      if attributes.has_key?(:'worksheet')
+          self.worksheet = attributes[:'worksheet']
+      end
+
+      if attributes.has_key?(:'outPath')
+          self.out_path = attributes[:'outPath']
+      end
+
+      if attributes.has_key?(:'outStorageName')
+          self.out_storage_name = attributes[:'outStorageName']
+      end
+
+      if attributes.has_key?(:'fontsLocation')
+          self.fonts_location = attributes[:'fontsLocation']
       end
 
       if attributes.has_key?(:'region')
@@ -63,7 +78,10 @@ module AsposeCellsCloud
     def self.attribute_map
       {
         :'spreadsheet' => :'Spreadsheet',
-        :'target_language' => :'targetLanguage',
+        :'worksheet' => :'worksheet',
+        :'out_path' => :'outPath',
+        :'out_storage_name' => :'outStorageName',
+        :'fonts_location' => :'fontsLocation',
         :'region' => :'region',
         :'password' => :'password'
       }
@@ -73,7 +91,10 @@ module AsposeCellsCloud
     def self.swagger_types
       {
         :'spreadsheet' => :'String',
-        :'target_language' => :'String',
+        :'worksheet' => :'String',
+        :'out_path' => :'String',
+        :'out_storage_name' => :'String',
+        :'fonts_location' => :'String',
         :'region' => :'String',
         :'password' => :'String'
       }
@@ -81,23 +102,26 @@ module AsposeCellsCloud
 
     def create_http_request(api_client,opts = {})
       if api_client.config.debugging
-        api_client.config.logger.debug "Calling API: CellsApi.translate_text_file ..."
+        api_client.config.logger.debug "Calling API: CellsApi.convert_worksheet_to_csv ..."
       end
       api_client.request_token_if_needed
       # verify the required parameter 'spreadsheet' is set
       if api_client.config.client_side_validation && spreadsheet.nil?
-          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.translate_text_file "
+          fail ArgumentError, "Missing the required parameter 'spreadsheet' when calling CellsApi.convert_worksheet_to_csv "
       end 
-      # verify the required parameter 'target_language' is set
-      if api_client.config.client_side_validation && target_language.nil?
-          fail ArgumentError, "Missing the required parameter 'target_language' when calling CellsApi.translate_text_file "
+      # verify the required parameter 'worksheet' is set
+      if api_client.config.client_side_validation && worksheet.nil?
+          fail ArgumentError, "Missing the required parameter 'worksheet' when calling CellsApi.convert_worksheet_to_csv "
       end 
 
       # resource path
-      local_var_path = "v4.0/cells/ai/translate/text-file"
+      local_var_path = "v4.0/cells/convert/worksheet/csv"
       # query parameters
       query_params = {}
-      query_params[:'targetLanguage'] = self.target_language if !self.target_language.nil? 
+      query_params[:'worksheet'] = self.worksheet if !self.worksheet.nil? 
+      query_params[:'outPath'] = self.out_path if !self.out_path.nil? 
+      query_params[:'outStorageName'] = self.out_storage_name if !self.out_storage_name.nil? 
+      query_params[:'fontsLocation'] = self.fonts_location if !self.fonts_location.nil? 
       query_params[:'region'] = self.region if !self.region.nil? 
       query_params[:'password'] = self.password if !self.password.nil? 
 
@@ -123,9 +147,10 @@ module AsposeCellsCloud
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names)
+        :auth_names => auth_names,
+        :return_type => 'File')
       if api_client.config.debugging
-        api_client.config.logger.debug "API called: Specification.Name>Api.translate_text_file\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        api_client.config.logger.debug "API called: Specification.Name>Api.convert_worksheet_to_csv\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
